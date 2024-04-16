@@ -4294,6 +4294,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189727563}
   m_CullTransparentMesh: 1
+--- !u!1 &191333788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 191333790}
+  - component: {fileID: 191333789}
+  m_Layer: 0
+  m_Name: dynamicGeneratoin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &191333789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191333788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f49e464bfcc5849a0715b61d30aaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headset: {fileID: 1936794499}
+  CrabPrefab: {fileID: 5539329455881767606, guid: 4a1af3ffd2d25cf4f872540061315f3e, type: 3}
+  CrabVFX: {fileID: 5539329455881767613, guid: 4a1af3ffd2d25cf4f872540061315f3e, type: 3}
+  crabb: []
+  crabs: []
+  SummonCrabsCount: 1
+  SummonPosOffset:
+  - {x: 2.11, y: 0, z: 0}
+  - {x: -0.98, y: 0.94, z: 0}
+  - {x: 1.05, y: -0.74, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  crabsFallSpeed:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.5
+  CrabScale:
+  - 1
+  - 2
+  - 3
+  particleRed:
+  - 50
+  - 500
+  - 2000
+--- !u!4 &191333790
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191333788}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 559380029}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &193268440
 GameObject:
   m_ObjectHideFlags: 0
@@ -10796,6 +10876,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1975131159}
+  - {fileID: 191333790}
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10815,7 +10896,8 @@ MonoBehaviour:
   crabposition: {fileID: 232873020}
   crabmanager: {fileID: 843922743}
   crabs: []
-  crabb: {fileID: 0}
+  crabb: []
+  SummonCrabs: {fileID: 191333789}
   crabfollow: 0
   onetime: 0
   crabcount: 0
@@ -18604,7 +18686,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7178975, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

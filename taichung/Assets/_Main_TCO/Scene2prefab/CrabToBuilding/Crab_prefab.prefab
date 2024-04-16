@@ -130,7 +130,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5539329455881767606}
-  m_LocalRotation: {x: -0, y: -0, z: -0.03440637, w: 0.99940795}
+  m_LocalRotation: {x: -0, y: -0, z: 0.02230315, w: 0.9997513}
   m_LocalPosition: {x: -9.28628e-40, y: 1.3e-44, z: 2.08095e-39}
   m_LocalScale: {x: 2.32, y: 2.32, z: 2.32}
   m_ConstrainProportionsScale: 1
@@ -138,7 +138,7 @@ Transform:
   - {fileID: 2348766998804399390}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.943}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.556}
 --- !u!2083052967 &5539329455881767613
 VisualEffect:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 1500
+      - m_Value: 50
         m_Name: amount(ora)
         m_Overridden: 1
       - m_Value: 2
@@ -356,7 +356,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!114 &8561226393270022719
 MonoBehaviour:
