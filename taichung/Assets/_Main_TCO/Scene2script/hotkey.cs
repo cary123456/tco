@@ -150,7 +150,7 @@ public class hotkey : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
-            maincamera.transform.position = new Vector3(0, 1.18f, 5.47f);
+            maincamera.transform.position = new Vector3(0, -1.27f, 5.47f);
             maincamera.transform.rotation = Quaternion.Euler(185, 0, 180);
         }
         if (Input.GetKeyDown(KeyCode.X))

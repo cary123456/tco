@@ -9,10 +9,19 @@ public class raycast : MonoBehaviour
     public GameObject build;
     public LineRenderer laserLineRenderer;
     public bool right;
+    public float scale;
     public void Update()
     {
         // 從本物件位置發出一條射線
-        Ray ray = new Ray(transform.position, transform.forward);
+        if (right)
+        {
+            scale = -1;
+        }
+        else
+        {
+            scale = 1;
+        }
+        Ray ray = new Ray(transform.position, transform.forward*scale);
         RaycastHit hit;
 
         // 如果射線擊中了東西
@@ -45,7 +54,7 @@ public class raycast : MonoBehaviour
             }
 
             laserLineRenderer.material.SetColor("_EmissionColor", Color.red);
-            build = null;
+            
         }
 
         // 繪製射線，將其顯示為紅色

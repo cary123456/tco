@@ -33,7 +33,8 @@ public class buildon : MonoBehaviour
 
     public void buildingup()
     {
-        GameObject buildings1 =  Instantiate(building, this.transform.position, Quaternion.Euler(-90f, 0f, 0f));
+        
+        GameObject buildings1 =  Instantiate(building,new Vector3( this.transform.position.x, -2.7f, this.transform.position.z), Quaternion.Euler(0f, 0f, 0f));
         buildings1.GetComponent<growvalue>().up = true;
 
         //buildings[0].GetComponent<growvalue>().up = true;

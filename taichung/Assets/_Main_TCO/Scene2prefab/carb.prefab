@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd186841afcf75458b41f7c7aa6870a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building: {fileID: 4762130590997798158, guid: 33181c3686978b041b79e3db3a118a6e, type: 3}
+  building: {fileID: 7580105981090206952, guid: b437dd2e8740e9041b040c19878e43a6, type: 3}
   buildings: []
   buildingposition: []
   crab: []

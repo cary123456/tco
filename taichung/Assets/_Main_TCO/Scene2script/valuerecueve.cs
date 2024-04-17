@@ -236,7 +236,7 @@ public class valuerecueve : NetworkBehaviour
                 }
                 onetimetrigger = true;
             }
-            crabb.transform.position = Vector3.Lerp(crabb.transform.position,new Vector3(righthand.transform.position.x,0 , righthand.transform.position.y), 0.05f);
+            crabb.transform.position = Vector3.Lerp(crabb.transform.position,new Vector3(righthand.transform.position.x, righthand.transform.position.y, righthand.transform.position.z), 0.05f);
         }
         else
         {

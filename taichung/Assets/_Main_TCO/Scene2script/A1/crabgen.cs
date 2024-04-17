@@ -47,7 +47,7 @@ public class crabgen : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         
-        if (other.tag == "thumb" && gesture.GetComponent<GestureDetector>().gesturesnumber == 2 && gesture.GetComponent<LGestureDetector>().gesturesnumber == 2)
+        if (other.tag == "thumb" && (gesture.GetComponent<GestureDetector>().gesturesnumber == 2 || gesture.GetComponent<LGestureDetector>().gesturesnumber == 2))
         {
             
             if (players.Length > 1)

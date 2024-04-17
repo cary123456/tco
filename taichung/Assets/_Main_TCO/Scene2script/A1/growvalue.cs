@@ -14,6 +14,7 @@ public class growvalue : MonoBehaviour
     public int number;
     public GameObject crabman;
     public float timer = 0f;
+    public GameObject UImanager;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class growvalue : MonoBehaviour
         shininess = -0.6f;
         // Use the Specular shader on the material
         //rend.material.shader = Shader.Find("grow");
+        UImanager = GameObject.FindGameObjectWithTag("uiman");
     }
 
     // Update is called once per frame
@@ -42,12 +44,16 @@ public class growvalue : MonoBehaviour
             shininess = 1.1f;
         }
         //visualEffect.SetFloat("Particle Edge", -shininess );
-        rend.material.SetFloat("_cut", shininess );
+        //rend.material.SetFloat("_cut", shininess );
 
         if (grow)
         {
-            this.transform.localScale = Vector3.Lerp(this.transform.localScale, new Vector3(6f, 6f, 6f), timer * 0.5f);
+            this.transform.localScale = Vector3.Lerp(this.transform.localScale, new Vector3(1f, 1.789382f, 1f), timer * 0.5f);
             timer += Time.deltaTime;
+        }
+        if(UImanager.GetComponent<UIManager>().VR == true)
+        {
+            this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
 
     }

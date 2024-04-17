@@ -8,7 +8,7 @@ public class crabfloat : MonoBehaviour
     public float m_Thrust ;
     public float maxTorque;
 
-
+    public float y;
 
     private Rigidbody rb;
 
@@ -24,9 +24,9 @@ public class crabfloat : MonoBehaviour
      void Update()
     {
         //ApplyRandomForce();
-        if(this.gameObject.transform.position.y <= 0)
+        if(this.gameObject.transform.position.y <= y )
         {
-            this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x,0, this.gameObject.transform.position.z);
+            this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, y , this.gameObject.transform.position.z);
         }
     }
 
