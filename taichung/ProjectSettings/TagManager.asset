@@ -30,6 +30,7 @@ TagManager:
   - Rray
   - Lray
   - uiman
+  - crabs
   layers:
   - Default
   - TransparentFX

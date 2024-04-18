@@ -5853,212 +5853,220 @@ struct valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF  : public NetworkB
 	NetworkVariable_1_tCB4418FFEA24AD2A98C0844C95D1DC715452D4C4* ___housetri_27;
 	// Unity.Netcode.NetworkVariable`1<System.Boolean> valuerecueve::fishmantri
 	NetworkVariable_1_tCB4418FFEA24AD2A98C0844C95D1DC715452D4C4* ___fishmantri_28;
+	// Unity.Netcode.NetworkVariable`1<System.Boolean> valuerecueve::destroy
+	NetworkVariable_1_tCB4418FFEA24AD2A98C0844C95D1DC715452D4C4* ___destroy_29;
 	// Unity.Netcode.NetworkVariable`1<System.Int32> valuerecueve::handRvalue
-	NetworkVariable_1_t72006E2365F7131BBF61213343C271666361F504* ___handRvalue_29;
+	NetworkVariable_1_t72006E2365F7131BBF61213343C271666361F504* ___handRvalue_30;
 	// Unity.Netcode.NetworkVariable`1<System.Int32> valuerecueve::handLvalue
-	NetworkVariable_1_t72006E2365F7131BBF61213343C271666361F504* ___handLvalue_30;
+	NetworkVariable_1_t72006E2365F7131BBF61213343C271666361F504* ___handLvalue_31;
 	// Unity.Netcode.NetworkVariable`1<System.Single> valuerecueve::handRx
-	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handRx_31;
+	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handRx_32;
 	// Unity.Netcode.NetworkVariable`1<System.Single> valuerecueve::handRy
-	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handRy_32;
+	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handRy_33;
 	// Unity.Netcode.NetworkVariable`1<System.Single> valuerecueve::handRz
-	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handRz_33;
+	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handRz_34;
 	// Unity.Netcode.NetworkVariable`1<System.Single> valuerecueve::handLx
-	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handLx_34;
+	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handLx_35;
 	// Unity.Netcode.NetworkVariable`1<System.Single> valuerecueve::handLy
-	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handLy_35;
+	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handLy_36;
 	// Unity.Netcode.NetworkVariable`1<System.Single> valuerecueve::handLz
-	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handLz_36;
+	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handLz_37;
 	// Unity.Netcode.NetworkVariable`1<System.Single> valuerecueve::headx
-	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___headx_37;
+	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___headx_38;
 	// Unity.Netcode.NetworkVariable`1<System.Single> valuerecueve::heady
-	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___heady_38;
+	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___heady_39;
 	// Unity.Netcode.NetworkVariable`1<System.Single> valuerecueve::headz
-	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___headz_39;
+	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___headz_40;
 	// Unity.Netcode.NetworkVariable`1<System.Single> valuerecueve::handRrox
-	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handRrox_40;
+	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handRrox_41;
 	// Unity.Netcode.NetworkVariable`1<System.Single> valuerecueve::handRroy
-	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handRroy_41;
+	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handRroy_42;
 	// Unity.Netcode.NetworkVariable`1<System.Single> valuerecueve::handRroz
-	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handRroz_42;
+	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handRroz_43;
 	// Unity.Netcode.NetworkVariable`1<System.Single> valuerecueve::handLrox
-	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handLrox_43;
+	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handLrox_44;
 	// Unity.Netcode.NetworkVariable`1<System.Single> valuerecueve::handLroy
-	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handLroy_44;
+	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handLroy_45;
 	// Unity.Netcode.NetworkVariable`1<System.Single> valuerecueve::handLroz
-	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handLroz_45;
+	NetworkVariable_1_t05568979F40C9FE47CC10A404849F6B415B333EB* ___handLroz_46;
 	// System.Collections.Generic.List`1<UnityEngine.GameObject> valuerecueve::center
-	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___center_46;
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___center_47;
 	// UnityEngine.GameObject[] valuerecueve::centerarray
-	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___centerarray_47;
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___centerarray_48;
 	// System.Boolean valuerecueve::onetime
-	bool ___onetime_48;
+	bool ___onetime_49;
 	// System.Boolean valuerecueve::onetime2
-	bool ___onetime2_49;
+	bool ___onetime2_50;
 	// System.Boolean valuerecueve::boolvalue
-	bool ___boolvalue_50;
+	bool ___boolvalue_51;
 	// System.Boolean valuerecueve::housevalue
-	bool ___housevalue_51;
+	bool ___housevalue_52;
 	// System.Boolean valuerecueve::fishmanvalue
-	bool ___fishmanvalue_52;
+	bool ___fishmanvalue_53;
+	// System.Boolean valuerecueve::destoryvalue
+	bool ___destoryvalue_54;
 	// System.Int32 valuerecueve::intvalue
-	int32_t ___intvalue_53;
+	int32_t ___intvalue_55;
 	// System.Int32 valuerecueve::intLvalue
-	int32_t ___intLvalue_54;
+	int32_t ___intLvalue_56;
 	// System.Int32 valuerecueve::ranvalue
-	int32_t ___ranvalue_55;
+	int32_t ___ranvalue_57;
 	// System.Single valuerecueve::handRxvalue
-	float ___handRxvalue_56;
+	float ___handRxvalue_58;
 	// System.Single valuerecueve::handRyvalue
-	float ___handRyvalue_57;
+	float ___handRyvalue_59;
 	// System.Single valuerecueve::handRzvalue
-	float ___handRzvalue_58;
+	float ___handRzvalue_60;
 	// System.Single valuerecueve::handLxvalue
-	float ___handLxvalue_59;
+	float ___handLxvalue_61;
 	// System.Single valuerecueve::handLyvalue
-	float ___handLyvalue_60;
+	float ___handLyvalue_62;
 	// System.Single valuerecueve::handLzvalue
-	float ___handLzvalue_61;
+	float ___handLzvalue_63;
 	// System.Single valuerecueve::headxvalue
-	float ___headxvalue_62;
+	float ___headxvalue_64;
 	// System.Single valuerecueve::headyvalue
-	float ___headyvalue_63;
+	float ___headyvalue_65;
 	// System.Single valuerecueve::headzvalue
-	float ___headzvalue_64;
+	float ___headzvalue_66;
 	// System.Single valuerecueve::handRroxvalue
-	float ___handRroxvalue_65;
+	float ___handRroxvalue_67;
 	// System.Single valuerecueve::handRroyvalue
-	float ___handRroyvalue_66;
+	float ___handRroyvalue_68;
 	// System.Single valuerecueve::handRrozvalue
-	float ___handRrozvalue_67;
+	float ___handRrozvalue_69;
 	// System.Single valuerecueve::handLroxvalue
-	float ___handLroxvalue_68;
+	float ___handLroxvalue_70;
 	// System.Single valuerecueve::handLroyvalue
-	float ___handLroyvalue_69;
+	float ___handLroyvalue_71;
 	// System.Single valuerecueve::handLrozvalue
-	float ___handLrozvalue_70;
+	float ___handLrozvalue_72;
 	// System.Boolean valuerecueve::netbool
-	bool ___netbool_71;
+	bool ___netbool_73;
 	// System.Boolean valuerecueve::nethousebool
-	bool ___nethousebool_72;
+	bool ___nethousebool_74;
 	// System.Boolean valuerecueve::netfishmanbool
-	bool ___netfishmanbool_73;
+	bool ___netfishmanbool_75;
+	// System.Boolean valuerecueve::netdestorybool
+	bool ___netdestorybool_76;
 	// System.Single valuerecueve::nethandRx
-	float ___nethandRx_74;
+	float ___nethandRx_77;
 	// System.Single valuerecueve::nethandRy
-	float ___nethandRy_75;
+	float ___nethandRy_78;
 	// System.Single valuerecueve::nethandRz
-	float ___nethandRz_76;
+	float ___nethandRz_79;
 	// System.Single valuerecueve::nethandLx
-	float ___nethandLx_77;
+	float ___nethandLx_80;
 	// System.Single valuerecueve::nethandLy
-	float ___nethandLy_78;
+	float ___nethandLy_81;
 	// System.Single valuerecueve::nethandLz
-	float ___nethandLz_79;
+	float ___nethandLz_82;
 	// System.Single valuerecueve::netheadx
-	float ___netheadx_80;
+	float ___netheadx_83;
 	// System.Single valuerecueve::netheady
-	float ___netheady_81;
+	float ___netheady_84;
 	// System.Single valuerecueve::netheadz
-	float ___netheadz_82;
+	float ___netheadz_85;
 	// System.Single valuerecueve::nethandRrox
-	float ___nethandRrox_83;
+	float ___nethandRrox_86;
 	// System.Single valuerecueve::nethandRroy
-	float ___nethandRroy_84;
+	float ___nethandRroy_87;
 	// System.Single valuerecueve::nethandRroz
-	float ___nethandRroz_85;
+	float ___nethandRroz_88;
 	// System.Single valuerecueve::nethandLrox
-	float ___nethandLrox_86;
+	float ___nethandLrox_89;
 	// System.Single valuerecueve::nethandLroy
-	float ___nethandLroy_87;
+	float ___nethandLroy_90;
 	// System.Single valuerecueve::nethandLroz
-	float ___nethandLroz_88;
+	float ___nethandLroz_91;
 	// System.Int32 valuerecueve::netint
-	int32_t ___netint_89;
+	int32_t ___netint_92;
 	// System.Int32 valuerecueve::netLint
-	int32_t ___netLint_90;
+	int32_t ___netLint_93;
 	// System.Boolean valuerecueve::oldinput
-	bool ___oldinput_91;
+	bool ___oldinput_94;
 	// System.Boolean valuerecueve::oldhouseinput
-	bool ___oldhouseinput_92;
+	bool ___oldhouseinput_95;
 	// System.Boolean valuerecueve::oldfishmaninput
-	bool ___oldfishmaninput_93;
+	bool ___oldfishmaninput_96;
+	// System.Boolean valuerecueve::olddestoryinput
+	bool ___olddestoryinput_97;
 	// System.Int32 valuerecueve::oldintinput
-	int32_t ___oldintinput_94;
+	int32_t ___oldintinput_98;
 	// System.Int32 valuerecueve::oldintLinput
-	int32_t ___oldintLinput_95;
+	int32_t ___oldintLinput_99;
 	// System.Single valuerecueve::oldhandRx
-	float ___oldhandRx_96;
+	float ___oldhandRx_100;
 	// System.Single valuerecueve::oldhandRy
-	float ___oldhandRy_97;
+	float ___oldhandRy_101;
 	// System.Single valuerecueve::oldhandRz
-	float ___oldhandRz_98;
+	float ___oldhandRz_102;
 	// System.Single valuerecueve::oldhandLx
-	float ___oldhandLx_99;
+	float ___oldhandLx_103;
 	// System.Single valuerecueve::oldhandLy
-	float ___oldhandLy_100;
+	float ___oldhandLy_104;
 	// System.Single valuerecueve::oldhandLz
-	float ___oldhandLz_101;
+	float ___oldhandLz_105;
 	// System.Single valuerecueve::oldheadx
-	float ___oldheadx_102;
+	float ___oldheadx_106;
 	// System.Single valuerecueve::oldheady
-	float ___oldheady_103;
+	float ___oldheady_107;
 	// System.Single valuerecueve::oldheadz
-	float ___oldheadz_104;
+	float ___oldheadz_108;
 	// System.Single valuerecueve::oldhandRrox
-	float ___oldhandRrox_105;
+	float ___oldhandRrox_109;
 	// System.Single valuerecueve::oldhandRroy
-	float ___oldhandRroy_106;
+	float ___oldhandRroy_110;
 	// System.Single valuerecueve::oldhandRroz
-	float ___oldhandRroz_107;
+	float ___oldhandRroz_111;
 	// System.Single valuerecueve::oldhandLrox
-	float ___oldhandLrox_108;
+	float ___oldhandLrox_112;
 	// System.Single valuerecueve::oldhandLroy
-	float ___oldhandLroy_109;
+	float ___oldhandLroy_113;
 	// System.Single valuerecueve::oldhandLroz
-	float ___oldhandLroz_110;
+	float ___oldhandLroz_114;
 	// UnityEngine.GameObject valuerecueve::building
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___building_111;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___building_115;
 	// UnityEngine.GameObject valuerecueve::lefthand
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___lefthand_112;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___lefthand_116;
 	// UnityEngine.GameObject valuerecueve::righthand
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___righthand_113;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___righthand_117;
 	// UnityEngine.GameObject valuerecueve::crab
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___crab_114;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___crab_118;
 	// System.Collections.Generic.List`1<UnityEngine.GameObject> valuerecueve::crabs
-	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___crabs_115;
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___crabs_119;
 	// System.Int32 valuerecueve::crabsamount
-	int32_t ___crabsamount_116;
+	int32_t ___crabsamount_120;
 	// System.Boolean valuerecueve::onetimetrigger
-	bool ___onetimetrigger_117;
+	bool ___onetimetrigger_121;
 	// UnityEngine.GameObject valuerecueve::crabman
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___crabman_118;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___crabman_122;
 	// UnityEngine.GameObject valuerecueve::crabb
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___crabb_119;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___crabb_123;
 	// System.Single valuerecueve::runtime
-	float ___runtime_120;
+	float ___runtime_124;
 	// System.Single valuerecueve::litime
-	float ___litime_121;
+	float ___litime_125;
 	// System.Boolean valuerecueve::countone
-	bool ___countone_122;
+	bool ___countone_126;
 	// UnityEngine.GameObject[] valuerecueve::mid
-	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___mid_123;
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___mid_127;
 	// UnityEngine.GameObject valuerecueve::cam
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___cam_124;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___cam_128;
 	// UnityEngine.GameObject valuerecueve::ui
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ui_125;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ui_129;
 	// UnityEngine.GameObject valuerecueve::headset
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___headset_126;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___headset_130;
 	// UnityEngine.GameObject valuerecueve::Rray
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Rray_127;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Rray_131;
 	// UnityEngine.GameObject valuerecueve::Lray
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Lray_128;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Lray_132;
 	// System.Boolean valuerecueve::buildR
-	bool ___buildR_129;
+	bool ___buildR_133;
 	// System.Boolean valuerecueve::buildL
-	bool ___buildL_130;
+	bool ___buildL_134;
 	// UnityEngine.GameObject valuerecueve::uiman
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___uiman_131;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___uiman_135;
 };
 
 // UnityEngine.UI.Button
@@ -10063,7 +10071,7 @@ IL_0027:
 		L_9 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_8, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		int32_t L_10 = __this->___gesturesnumber_12;
 		NullCheck(L_9);
-		L_9->___intvalue_53 = L_10;
+		L_9->___intvalue_55 = L_10;
 	}
 
 IL_0060:
@@ -10148,7 +10156,7 @@ IL_0060:
 		L_33 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_32, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		int32_t L_34 = __this->___gesturesnumber_12;
 		NullCheck(L_33);
-		L_33->___intvalue_53 = L_34;
+		L_33->___intvalue_55 = L_34;
 		goto IL_02d3;
 	}
 
@@ -10188,7 +10196,7 @@ IL_011f:
 		L_42 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_41, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		int32_t L_43 = __this->___gesturesnumber_12;
 		NullCheck(L_42);
-		L_42->___intvalue_53 = L_43;
+		L_42->___intvalue_55 = L_43;
 		goto IL_02d3;
 	}
 
@@ -10228,7 +10236,7 @@ IL_016a:
 		L_51 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_50, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		int32_t L_52 = __this->___gesturesnumber_12;
 		NullCheck(L_51);
-		L_51->___intvalue_53 = L_52;
+		L_51->___intvalue_55 = L_52;
 		goto IL_02d3;
 	}
 
@@ -10268,7 +10276,7 @@ IL_01b5:
 		L_60 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_59, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		int32_t L_61 = __this->___gesturesnumber_12;
 		NullCheck(L_60);
-		L_60->___intvalue_53 = L_61;
+		L_60->___intvalue_55 = L_61;
 		goto IL_02d3;
 	}
 
@@ -10308,7 +10316,7 @@ IL_0200:
 		L_69 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_68, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		int32_t L_70 = __this->___gesturesnumber_12;
 		NullCheck(L_69);
-		L_69->___intvalue_53 = L_70;
+		L_69->___intvalue_55 = L_70;
 		goto IL_02d3;
 	}
 
@@ -10348,7 +10356,7 @@ IL_024b:
 		L_78 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_77, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		int32_t L_79 = __this->___gesturesnumber_12;
 		NullCheck(L_78);
-		L_78->___intvalue_53 = L_79;
+		L_78->___intvalue_55 = L_79;
 		goto IL_02d3;
 	}
 
@@ -10388,7 +10396,7 @@ IL_0290:
 		L_87 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_86, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		int32_t L_88 = __this->___gesturesnumber_12;
 		NullCheck(L_87);
-		L_87->___intvalue_53 = L_88;
+		L_87->___intvalue_55 = L_88;
 	}
 
 IL_02d3:
@@ -11069,7 +11077,7 @@ IL_0027:
 		L_9 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_8, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		int32_t L_10 = __this->___gesturesnumber_12;
 		NullCheck(L_9);
-		L_9->___intLvalue_54 = L_10;
+		L_9->___intLvalue_56 = L_10;
 	}
 
 IL_0060:
@@ -11154,7 +11162,7 @@ IL_0060:
 		L_33 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_32, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		int32_t L_34 = __this->___gesturesnumber_12;
 		NullCheck(L_33);
-		L_33->___intLvalue_54 = L_34;
+		L_33->___intLvalue_56 = L_34;
 		goto IL_0288;
 	}
 
@@ -11194,7 +11202,7 @@ IL_011f:
 		L_42 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_41, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		int32_t L_43 = __this->___gesturesnumber_12;
 		NullCheck(L_42);
-		L_42->___intLvalue_54 = L_43;
+		L_42->___intLvalue_56 = L_43;
 		goto IL_0288;
 	}
 
@@ -11234,7 +11242,7 @@ IL_016a:
 		L_51 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_50, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		int32_t L_52 = __this->___gesturesnumber_12;
 		NullCheck(L_51);
-		L_51->___intLvalue_54 = L_52;
+		L_51->___intLvalue_56 = L_52;
 		goto IL_0288;
 	}
 
@@ -11274,7 +11282,7 @@ IL_01b5:
 		L_60 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_59, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		int32_t L_61 = __this->___gesturesnumber_12;
 		NullCheck(L_60);
-		L_60->___intLvalue_54 = L_61;
+		L_60->___intLvalue_56 = L_61;
 		goto IL_0288;
 	}
 
@@ -11314,7 +11322,7 @@ IL_0200:
 		L_69 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_68, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		int32_t L_70 = __this->___gesturesnumber_12;
 		NullCheck(L_69);
-		L_69->___intLvalue_54 = L_70;
+		L_69->___intLvalue_56 = L_70;
 		goto IL_0288;
 	}
 
@@ -11354,7 +11362,7 @@ IL_0245:
 		L_78 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_77, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		int32_t L_79 = __this->___gesturesnumber_12;
 		NullCheck(L_78);
-		L_78->___intLvalue_54 = L_79;
+		L_78->___intLvalue_56 = L_79;
 	}
 
 IL_0288:

@@ -23,6 +23,7 @@ public class hotkey : MonoBehaviour
     public GameObject Lvfx;
     public int vfxcount;
     public GameObject mainncamera;
+    public GameObject[] player;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,8 @@ public class hotkey : MonoBehaviour
     void Update()
     {
         crabs = GameObject.FindGameObjectsWithTag("crab");
+        player = GameObject.FindGameObjectsWithTag("Player");
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             crabfollow = true;
@@ -157,6 +160,32 @@ public class hotkey : MonoBehaviour
         {
             maincamera.transform.position = new Vector3(0, 5.57f, -0.32f);
             maincamera.transform.rotation = Quaternion.Euler(90, 0, 180);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(player.Length > 0)
+            {
+                player[0].GetComponent<valuerecueve>().destoryvalue = true;
+            }
+            if (GameObject.FindWithTag("crab") != null)
+            {
+                Destroy(GameObject.FindWithTag("crab"));
+            }
+            if (GameObject.FindWithTag("crabs") != null)
+            {
+                Destroy(GameObject.FindWithTag("crabs"));
+            }
+            if (GameObject.FindWithTag("building"))
+            {
+                Destroy(GameObject.FindWithTag("building"));
+            }
+        }
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            if (player.Length > 0)
+            {
+                player[0].GetComponent<valuerecueve>().destoryvalue = false;
+            }
         }
 
     }

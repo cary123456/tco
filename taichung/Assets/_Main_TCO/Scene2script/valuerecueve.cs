@@ -14,6 +14,8 @@ public class valuerecueve : NetworkBehaviour
     [SerializeField]
     private NetworkVariable<bool> fishmantri = new NetworkVariable<bool>();
     [SerializeField]
+    private NetworkVariable<bool> destroy = new NetworkVariable<bool>();
+    [SerializeField]
     private NetworkVariable<int> handRvalue = new NetworkVariable<int>();
     [SerializeField]
     private NetworkVariable<int> handLvalue = new NetworkVariable<int>();
@@ -61,6 +63,7 @@ public class valuerecueve : NetworkBehaviour
     public bool boolvalue;
     public bool housevalue;
     public bool fishmanvalue;
+    public bool destoryvalue;
     public int intvalue;
     public int intLvalue;
     public int ranvalue;
@@ -83,6 +86,7 @@ public class valuerecueve : NetworkBehaviour
     public bool netbool;
     public bool nethousebool;
     public bool netfishmanbool;
+    public bool netdestorybool;
     public float nethandRx;
     public float nethandRy;
     public float nethandRz;
@@ -105,6 +109,7 @@ public class valuerecueve : NetworkBehaviour
     public bool oldinput;
     public bool oldhouseinput;
     public bool oldfishmaninput;
+    public bool olddestoryinput;
     public int oldintinput;
     public int oldintLinput;
     public float oldhandRx;
@@ -297,7 +302,23 @@ public class valuerecueve : NetworkBehaviour
         {
             buildL = true;
         }
-
+        if(destroy.Value == true)
+        {
+            if(GameObject.FindWithTag("crab") != null)
+            {
+                Destroy(GameObject.FindWithTag("crab"));
+            }
+            if(GameObject.FindWithTag("crabs") != null)
+            {
+                Destroy(GameObject.FindWithTag("crabs"));
+            }
+            if (GameObject.FindWithTag("building"))
+            {
+                Destroy(GameObject.FindWithTag("building"));
+            }
+            
+            
+        }
 
     }
     private void UpdateServer()
@@ -305,6 +326,7 @@ public class valuerecueve : NetworkBehaviour
         netbool = seeornot.Value;
         nethousebool = housetri.Value;
         netfishmanbool = fishmantri.Value;
+        netdestorybool = destroy.Value;
         netint = handRvalue.Value;
         nethandRx = handRx.Value;
         nethandRy = handRy.Value;
@@ -329,11 +351,12 @@ public class valuerecueve : NetworkBehaviour
     {
         if (oldinput != boolvalue || oldhouseinput != housevalue || oldfishmaninput != fishmanvalue || oldintinput != intvalue || oldintLinput != intLvalue || oldhandRx != handRxvalue || oldhandRy != handRyvalue || oldhandRz != handRzvalue 
             || oldhandLx != handLxvalue || oldhandLy != handLyvalue || oldhandLz != handLzvalue || oldheadx != headxvalue || oldheady != headyvalue || oldheadz != headzvalue || oldhandRrox != handRroxvalue || oldhandRroy != handRroyvalue || oldhandRroz != handRrozvalue ||
-           oldhandLrox != handLroxvalue || oldhandLroy != handLroyvalue || oldhandLroz != handLrozvalue )
+           oldhandLrox != handLroxvalue || oldhandLroy != handLroyvalue || oldhandLroz != handLrozvalue || olddestoryinput != destoryvalue)
         {
             oldinput = boolvalue;
             oldhouseinput = housevalue;
             oldfishmaninput = fishmanvalue;
+            olddestoryinput = destoryvalue;
             oldintinput = intvalue;
             oldintLinput = intLvalue;
             oldhandRx = handRxvalue;
@@ -352,16 +375,17 @@ public class valuerecueve : NetworkBehaviour
             oldhandLroy = handLroyvalue;
             oldhandLroz = handLrozvalue;
             UpdateClientPositionAndRotationServerRpc(boolvalue , housevalue, fishmanvalue ,intvalue , intLvalue, handRxvalue, handRyvalue, handRzvalue, handLxvalue, handLyvalue, handLzvalue, headxvalue, headyvalue, headzvalue,
-                handRroxvalue, handRroyvalue, handRrozvalue, handLroxvalue, handLroyvalue, handLrozvalue);
+                handRroxvalue, handRroyvalue, handRrozvalue, handLroxvalue, handLroyvalue, handLrozvalue,destoryvalue);
 
         }
     }
     [ServerRpc]
-    public void UpdateClientPositionAndRotationServerRpc(bool value,bool houseval , bool fishval ,int invalue,int intLvalue, float hrx,float hry,float hrz, float hlx, float hly, float hlz, float hdx, float hdy, float hdz, float hrrox, float hrroy, float hrroz, float hlrox, float hlroy, float hlroz)
+    public void UpdateClientPositionAndRotationServerRpc(bool value,bool houseval , bool fishval ,int invalue,int intLvalue, float hrx,float hry,float hrz, float hlx, float hly, float hlz, float hdx, float hdy, float hdz, float hrrox, float hrroy, float hrroz, float hlrox, float hlroy, float hlroz,bool des)
     {
         seeornot.Value = value;
         housetri.Value = houseval;
         fishmantri.Value = fishval;
+        destroy.Value = des;
         handRvalue.Value = invalue;
         handLvalue.Value = intLvalue;
         handRx.Value = hrx;
