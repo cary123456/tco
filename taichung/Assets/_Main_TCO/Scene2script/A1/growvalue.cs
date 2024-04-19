@@ -53,7 +53,7 @@ public class growvalue : MonoBehaviour
         }
         if(UImanager.GetComponent<UIManager>().VR == true)
         {
-            this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.SetActive(false);
         }
 
     }

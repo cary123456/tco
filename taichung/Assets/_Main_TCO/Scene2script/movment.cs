@@ -34,7 +34,7 @@ public class movment : MonoBehaviour
         if (Input.GetKey(KeyCode.E)) { moveUpDown = 1f * currentSpeed * Time.deltaTime; }
 
 
-        transform.Translate(moveHorizontal, moveUpDown, moveVertical);
+        transform.Translate(moveHorizontal, moveUpDown, moveVertical,Space.World);
 
 
         if (Input.GetKey(KeyCode.J))

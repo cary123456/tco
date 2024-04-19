@@ -960,6 +960,7 @@ UnityEngine.Input::GetButton
 UnityEngine.Input::GetButtonDown
 UnityEngine.Input::GetButtonUp
 UnityEngine.Input::GetKeyDownInt
+UnityEngine.Input::GetKeyDownString
 UnityEngine.Input::GetKeyInt
 UnityEngine.Input::GetKeyUpInt
 UnityEngine.Input::GetMouseButton

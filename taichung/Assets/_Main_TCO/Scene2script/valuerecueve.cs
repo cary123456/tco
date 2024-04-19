@@ -233,20 +233,28 @@ public class valuerecueve : NetworkBehaviour
             if (!onetimetrigger)
             {
                 GameObject crabs =  Instantiate(crab, righthand.transform.position, Quaternion.Euler(new Vector3(0, 180, 180)));
-                crabb = crab;
-                if(uiman.GetComponent<UIManager>().VR == true)
+                crabb = crabs;
+                crabb.GetComponent<handtrack>().follow = true;
+                if (uiman.GetComponent<UIManager>().VR == true)
                 {
                     crabs.GetComponent<VisualEffect>().enabled = false;
                     crabs.transform.GetChild(0).gameObject.SetActive(true);
                 }
                 onetimetrigger = true;
             }
-            crabb.transform.position = Vector3.Lerp(crabb.transform.position,new Vector3(righthand.transform.position.x, righthand.transform.position.y, righthand.transform.position.z), 0.05f);
+           
+            
+            
         }
         else
         {
-            onetimetrigger = false;
+            if (crabb != null)
+            {              
+                crabb.GetComponent<handtrack>().follow = false;
+            }
+            
             crabb = null;
+            onetimetrigger = false;
         }
 
         if (housetri.Value)
@@ -272,7 +280,7 @@ public class valuerecueve : NetworkBehaviour
             
             if (buildR)
             {
-                if(Rray.GetComponent<raycast>().build != null)
+                if(Rray.GetComponent<raycast>().build != null && Rray.GetComponent<raycast>().build.GetComponent<growvalue>() != null)
                 {
                     Rray.GetComponent<raycast>().build.GetComponent<growvalue>().grow = true;
                 }
