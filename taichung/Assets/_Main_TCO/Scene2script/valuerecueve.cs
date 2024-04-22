@@ -147,8 +147,6 @@ public class valuerecueve : NetworkBehaviour
     public GameObject cam;
     public GameObject ui;
     public GameObject headset;
-    public GameObject Rray;
-    public GameObject Lray;
     public bool buildR;
     public bool buildL;
     public GameObject uiman;
@@ -166,9 +164,6 @@ public class valuerecueve : NetworkBehaviour
         ui = GameObject.FindGameObjectWithTag("start");
         lefthand = GameObject.FindGameObjectWithTag("hand");
         righthand = GameObject.FindGameObjectWithTag("Rhand");
-       
-        Rray = GameObject.FindGameObjectWithTag("Rray");
-        Lray = GameObject.FindGameObjectWithTag("Lray");
         uiman = GameObject.FindGameObjectWithTag("uiman");
     }
 
@@ -280,11 +275,12 @@ public class valuerecueve : NetworkBehaviour
             
             if (buildR)
             {
-                if(Rray.GetComponent<raycast>().build != null && Rray.GetComponent<raycast>().build.GetComponent<growvalue>() != null)
+
+                if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null || headset.GetComponent<nearest>().closestbuilding != null)
                 {
-                    Rray.GetComponent<raycast>().build.GetComponent<growvalue>().grow = true;
+                    headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
+
                 }
-                
                 buildR = false;
             }
             
@@ -297,11 +293,12 @@ public class valuerecueve : NetworkBehaviour
         {        
             if (buildL)
             {
-                if(Lray.GetComponent<raycast>().build != null)
+                if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null || headset.GetComponent<nearest>().closestbuilding != null)
                 {
-                    Lray.GetComponent<raycast>().build.GetComponent<growvalue>().grow = true;
+                    headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
+
                 }
-                
+
                 buildL = false;
             }
 
