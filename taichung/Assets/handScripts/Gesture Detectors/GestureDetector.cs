@@ -50,7 +50,7 @@ public class GestureDetector : MonoBehaviour
     // Add an event if you want to make happen when a gesture is not identified
     [Header("Not Recognized Event")]
     public UnityEvent notRecognize;
-
+    
     void Start()
     {
         // When the Oculus hand had his time to initialize hand, with a simple coroutine i start a delay of
@@ -90,17 +90,7 @@ public class GestureDetector : MonoBehaviour
             // Call the function for save the gesture
             Save();
         }
-        if (debugMode && Input.GetKeyDown(KeyCode.A))
-        {
-            if (player.Length >0) 
-            {
-                gesturesnumber = 4;
-                player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
-            }
-
-        }
-
-
+        
 
         //if the initialization was successful
         if (hasStarted.Equals(true))
@@ -119,6 +109,22 @@ public class GestureDetector : MonoBehaviour
                 done = true;
                 Debug.Log("New found :" + currentGesture.name);
                 text.text = currentGesture.name;
+                if (player.Length > 1)
+                {
+                    if(player[1].GetComponent<valuerecueve>().Rsuccess == true && text.text == "buildup")
+                    {
+                        text.text = currentGesture.name + " " + "success ";
+                    }
+
+                }
+                if (text.text == "fish")
+                {                  
+                    if (player.Length > 1)
+                    {
+                        text.text = currentGesture.name + " " + player[1].GetComponent<valuerecueve>().fishcount;
+
+                    }
+                }
                 
                 if (currentGesture.name == "defalt")
                 {

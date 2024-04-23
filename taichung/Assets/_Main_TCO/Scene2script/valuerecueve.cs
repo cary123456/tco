@@ -150,7 +150,15 @@ public class valuerecueve : NetworkBehaviour
     public bool buildR;
     public bool buildL;
     public GameObject uiman;
-    
+
+    public int fishcount;
+    public bool fishonetime;
+    private float Rbuildupfirstpositiony;
+    private bool Rfirsttime;
+    public bool Rsuccess;
+    private float Lbuildupfirstpositiony;
+    private bool Lfirsttime;
+    public bool Lsuccess;
     // Start is called before the first frame update
     void Start()
     {
@@ -165,6 +173,7 @@ public class valuerecueve : NetworkBehaviour
         lefthand = GameObject.FindGameObjectWithTag("hand");
         righthand = GameObject.FindGameObjectWithTag("Rhand");
         uiman = GameObject.FindGameObjectWithTag("uiman");
+        fishcount = 6;
     }
 
     // Update is called once per frame
@@ -258,6 +267,7 @@ public class valuerecueve : NetworkBehaviour
             {
                 if (headset.GetComponent<nearest>().closestEnemy.GetComponent<crabmove>() != null || headset.GetComponent<nearest>().closestEnemy != null)
                 {
+                    
                     headset.GetComponent<nearest>().closestEnemy.GetComponent<crabmove>().move = true;
 
                 }
@@ -275,11 +285,20 @@ public class valuerecueve : NetworkBehaviour
             
             if (buildR)
             {
-
-                if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
+                if (Rfirsttime)
                 {
-                    headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
-
+                    Rbuildupfirstpositiony = handRy.Value;
+                    Rfirsttime = false;
+                }
+               
+                if((handRy.Value - Rbuildupfirstpositiony) >= 6)
+                {
+                    if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
+                    {
+                        Rsuccess = true;
+                        headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
+                    }
+                    
                 }
                 buildR = false;
             }
@@ -287,15 +306,28 @@ public class valuerecueve : NetworkBehaviour
         }
         if (handRvalue.Value == 4)
         {
+            Rfirsttime = true;
+            Rsuccess = false;
             buildR = true;
+
         }
         if (handLvalue.Value == 3)
         {        
             if (buildL)
             {
-                if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
+                if (Lfirsttime)
                 {
-                    headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
+                    Lbuildupfirstpositiony = handLy.Value;
+                    Lfirsttime = false;
+                }
+
+                if ((handLy.Value - Lbuildupfirstpositiony) >= 6)
+                {
+                    if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
+                    {
+                        Lsuccess = true;
+                        headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
+                    }
 
                 }
 
@@ -305,9 +337,30 @@ public class valuerecueve : NetworkBehaviour
         }
         if (handLvalue.Value == 4)
         {
+            Lfirsttime = true;
+            Lsuccess = false;
             buildL = true;
+            
         }
-        if(destroy.Value == true)
+
+        if (handRvalue.Value == 5)
+        {
+            if (fishonetime)
+            {
+                fishcount -= 1;
+                fishonetime = false;
+            }
+        }
+        else
+        {
+            fishonetime = true;
+        }
+        if(fishcount <= 0)
+        {
+            //¥Í³½
+        }
+
+        if (destroy.Value == true)
         {
             if(GameObject.FindWithTag("crab") != null)
             {
@@ -320,9 +373,7 @@ public class valuerecueve : NetworkBehaviour
             if (GameObject.FindWithTag("building"))
             {
                 Destroy(GameObject.FindWithTag("building"));
-            }
-            
-            
+            }                     
         }
 
     }
