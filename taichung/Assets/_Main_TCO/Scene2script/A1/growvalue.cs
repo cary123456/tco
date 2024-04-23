@@ -50,10 +50,14 @@ public class growvalue : MonoBehaviour
         {
             this.transform.localScale = Vector3.Lerp(this.transform.localScale, new Vector3(1f, 1.789382f, 1f), timer * 0.5f);
             timer += Time.deltaTime;
+            this.gameObject.tag = "buildinglo";
         }
         if(UImanager.GetComponent<UIManager>().VR == true)
         {
+            this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.SetActive(false);
             this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(3).gameObject.SetActive(true);
         }
 
     }

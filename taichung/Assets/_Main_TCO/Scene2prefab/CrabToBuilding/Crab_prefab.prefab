@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2520923008033676420}
   - component: {fileID: 4373158248228413956}
   - component: {fileID: 9112918894796760261}
-  - component: {fileID: 8026805356312823387}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -84,19 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8026805356312823387
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100996060363141307}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
-  m_Center: {x: 0.00000011920928, y: 1.3552526e-20, z: 0.00000011920928}
 --- !u!1 &3417978646558679905
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,9 +425,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16470a2ba35d4cf4299176c63f1b948d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Thrust: 2.81
+  m_Thrust: 10
   maxTorque: 0.46
-  y: -2.73
+  ancor: {fileID: 0}
 --- !u!54 &3226724535283135757
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -451,8 +437,8 @@ Rigidbody:
   m_GameObject: {fileID: 5539329455881767606}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0.1
-  m_AngularDrag: 0.05
+  m_Drag: 0.15
+  m_AngularDrag: 0.075
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -507,7 +493,6 @@ GameObject:
   - component: {fileID: 2348766998804399390}
   - component: {fileID: 5983014476185197416}
   - component: {fileID: 1768765056896811272}
-  - component: {fileID: 5143528343836437209}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -581,16 +566,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5143528343836437209
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5625092494596317415}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

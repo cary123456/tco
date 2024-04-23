@@ -6057,16 +6057,12 @@ struct valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF  : public NetworkB
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ui_129;
 	// UnityEngine.GameObject valuerecueve::headset
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___headset_130;
-	// UnityEngine.GameObject valuerecueve::Rray
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Rray_131;
-	// UnityEngine.GameObject valuerecueve::Lray
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Lray_132;
 	// System.Boolean valuerecueve::buildR
-	bool ___buildR_133;
+	bool ___buildR_131;
 	// System.Boolean valuerecueve::buildL
-	bool ___buildL_134;
+	bool ___buildL_132;
 	// UnityEngine.GameObject valuerecueve::uiman
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___uiman_135;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___uiman_133;
 };
 
 // UnityEngine.UI.Button

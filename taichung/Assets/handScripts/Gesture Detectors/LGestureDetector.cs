@@ -109,6 +109,15 @@ public class LGestureDetector : MonoBehaviour
                 done = true;
                 Debug.Log("New found :" + currentGesture.name);
                 text.text = currentGesture.name;
+
+                if (player.Length > 1)
+                {
+                    if (player[1].GetComponent<valuerecueve>().Lsuccess == true && text.text == "buildup")
+                    {
+                        text.text = currentGesture.name + " " + "success ";
+                    }
+
+                }
                 if (currentGesture.name == "defalt")
                 {
                     gesturesnumber = 0;
