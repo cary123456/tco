@@ -11,12 +11,14 @@ public class crabfloat : MonoBehaviour
     public GameObject ancor;
 
     private Rigidbody rb;
-
+    public float speed ;
+    float timeCount = 0.0f;
+    public bool small;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        ApplyRandomForce();
+        
         ApplyRandomTorque();
 
         ancor = GameObject.FindGameObjectWithTag("crabancor");
@@ -24,16 +26,37 @@ public class crabfloat : MonoBehaviour
 
      void Update()
     {
-        //ApplyRandomForce();
-        if(this.gameObject.transform.position.y <= ancor.transform.position.y)
+        ApplyRandomForce();
+
+        if (small)
         {
-            this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, ancor.transform.position.y, this.gameObject.transform.position.z);
+            if (this.gameObject.transform.position.y <= ancor.transform.position.y)
+            {
+                Destroy(this.gameObject,5);
+                this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, ancor.transform.position.y, this.gameObject.transform.position.z);
+
+            }
         }
+        else
+        {
+            if (this.gameObject.transform.position.y <= ancor.transform.position.y)
+            {
+                this.gameObject.GetComponent<Animator>().SetBool("C2P", true);
+                this.gameObject.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.Euler(0, 0, 0), timeCount * speed);
+                this.gameObject.transform.GetChild(1).gameObject.SetActive(false);
+                timeCount = timeCount + Time.deltaTime;
+                this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, ancor.transform.position.y, this.gameObject.transform.position.z);
+
+            }
+        }
+
+       
+        
     }
 
     void ApplyRandomForce()
     {
-        rb.AddForce(transform.up * m_Thrust);
+        rb.AddForce(Vector3.down * m_Thrust);
     }
 
     void ApplyRandomTorque()

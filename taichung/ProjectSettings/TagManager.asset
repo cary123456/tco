@@ -32,6 +32,7 @@ TagManager:
   - uiman
   - crabs
   - crabancor
+  - fish
   layers:
   - Default
   - TransparentFX

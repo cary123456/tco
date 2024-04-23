@@ -159,6 +159,7 @@ public class valuerecueve : NetworkBehaviour
     private float Lbuildupfirstpositiony;
     private bool Lfirsttime;
     public bool Lsuccess;
+    public GameObject fishflok;
     // Start is called before the first frame update
     void Start()
     {
@@ -173,7 +174,8 @@ public class valuerecueve : NetworkBehaviour
         lefthand = GameObject.FindGameObjectWithTag("hand");
         righthand = GameObject.FindGameObjectWithTag("Rhand");
         uiman = GameObject.FindGameObjectWithTag("uiman");
-        fishcount = 6;
+        fishflok = GameObject.FindGameObjectWithTag("fish");
+        fishcount = 20;
     }
 
     // Update is called once per frame
@@ -291,16 +293,17 @@ public class valuerecueve : NetworkBehaviour
                     Rfirsttime = false;
                 }
                
-                if((handRy.Value - Rbuildupfirstpositiony) >= 6)
+                if((handRy.Value - Rbuildupfirstpositiony) >= 0.15f)
                 {
+                    Rsuccess = true;
                     if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
                     {
-                        Rsuccess = true;
+                        
                         headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
                     }
-                    
+                    buildR = false;
                 }
-                buildR = false;
+                
             }
             
         }
@@ -321,17 +324,18 @@ public class valuerecueve : NetworkBehaviour
                     Lfirsttime = false;
                 }
 
-                if ((handLy.Value - Lbuildupfirstpositiony) >= 6)
+                if ((handLy.Value - Lbuildupfirstpositiony) >= 0.15f)
                 {
+                    Lsuccess = true;
                     if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
                     {
                         Lsuccess = true;
                         headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
                     }
-
+                    buildL = false;
                 }
 
-                buildL = false;
+                
             }
 
         }
@@ -357,7 +361,7 @@ public class valuerecueve : NetworkBehaviour
         }
         if(fishcount <= 0)
         {
-            //¥Í³½
+            fishflok.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
 
         if (destroy.Value == true)

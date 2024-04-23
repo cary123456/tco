@@ -341,9 +341,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16470a2ba35d4cf4299176c63f1b948d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Thrust: 2.02
+  m_Thrust: 0.05
   maxTorque: 0.46
-  y: -1.15
+  ancor: {fileID: 0}
+  speed: 0.025
+  small: 1
 --- !u!54 &6571011605353225124
 Rigidbody:
   m_ObjectHideFlags: 0

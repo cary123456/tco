@@ -4,7 +4,6 @@ using UnityEngine.VFX;
 
 public class growvalue : MonoBehaviour
 {
-    public Renderer rend;
     public float shininess;
     public float vfxvalue;
     //public VisualEffect visualEffect;
@@ -12,7 +11,6 @@ public class growvalue : MonoBehaviour
     public bool up;
     public bool grow;
     public int number;
-    public GameObject crabman;
     public float timer = 0f;
     public GameObject UImanager;
     // Start is called before the first frame update
@@ -48,16 +46,16 @@ public class growvalue : MonoBehaviour
 
         if (grow)
         {
-            this.transform.localScale = Vector3.Lerp(this.transform.localScale, new Vector3(1f, 1.789382f, 1f), timer * 0.5f);
-            timer += Time.deltaTime;
+            this.transform.GetComponent<Animator>().SetBool("bool2",true);
+            //timer += Time.deltaTime;
             this.gameObject.tag = "buildinglo";
         }
         if(UImanager.GetComponent<UIManager>().VR == true)
         {
-            this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.SetActive(false);
-            this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.SetActive(false);
-            this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(3).gameObject.SetActive(true);
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(1).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(2).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(3).gameObject.SetActive(true);
         }
 
     }

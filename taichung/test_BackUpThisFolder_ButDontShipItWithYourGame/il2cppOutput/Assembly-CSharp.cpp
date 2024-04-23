@@ -874,6 +874,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral155B036AB9502432CB2CCD80790FF33D3227823D
 IL2CPP_EXTERN_C String_t* _stringLiteral1852DC882079398405902385F0F8D973ED296901;
 IL2CPP_EXTERN_C String_t* _stringLiteral1BCEF44404B72E947FEB7D6E2ABD031F8E530B73;
 IL2CPP_EXTERN_C String_t* _stringLiteral2308FD2DF18257BF4A6390ECBB7217343EEF19AD;
+IL2CPP_EXTERN_C String_t* _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745;
 IL2CPP_EXTERN_C String_t* _stringLiteral25508AFCE374521266718FDFEF47E69C35B9622F;
 IL2CPP_EXTERN_C String_t* _stringLiteral2622B3702FDA4D850E114991B3092DC70DF47738;
 IL2CPP_EXTERN_C String_t* _stringLiteral265E15F1F86F1C766555899D5771CF29055DE75A;
@@ -931,6 +932,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralEF8BAA8493613F0ED6A26C1B5710BAAE6FCD799C
 IL2CPP_EXTERN_C String_t* _stringLiteralF63DA000810321F2A1B6DF0F95027A9FAF2547F4;
 IL2CPP_EXTERN_C String_t* _stringLiteralFA5C50C12C8316E99F7A26EA6ED340CA2F30A4E1;
 IL2CPP_EXTERN_C String_t* _stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9;
+IL2CPP_EXTERN_C String_t* _stringLiteralFDFD1D8703EAEDE8C9230E7C98FFD6D8F6C0342F;
 IL2CPP_EXTERN_C const RuntimeMethod* CharacterCameraConstraint_CameraUpdate_mFFEEC8255955D8B6C35AAE1834C870EE7BFB35FC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponentInChildren_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_m16CFA6B8AD1C67BA8A7BCB3465E5C20064DEE5DB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponentInChildren_TisInputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140_mA10ABD60935B8A5B799813C7B5BA063335EA0E38_RuntimeMethod_var;
@@ -6057,16 +6059,30 @@ struct valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF  : public NetworkB
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ui_129;
 	// UnityEngine.GameObject valuerecueve::headset
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___headset_130;
-	// UnityEngine.GameObject valuerecueve::Rray
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Rray_131;
-	// UnityEngine.GameObject valuerecueve::Lray
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Lray_132;
 	// System.Boolean valuerecueve::buildR
-	bool ___buildR_133;
+	bool ___buildR_131;
 	// System.Boolean valuerecueve::buildL
-	bool ___buildL_134;
+	bool ___buildL_132;
 	// UnityEngine.GameObject valuerecueve::uiman
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___uiman_135;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___uiman_133;
+	// System.Int32 valuerecueve::fishcount
+	int32_t ___fishcount_134;
+	// System.Boolean valuerecueve::fishonetime
+	bool ___fishonetime_135;
+	// System.Single valuerecueve::Rbuildupfirstpositiony
+	float ___Rbuildupfirstpositiony_136;
+	// System.Boolean valuerecueve::Rfirsttime
+	bool ___Rfirsttime_137;
+	// System.Boolean valuerecueve::Rsuccess
+	bool ___Rsuccess_138;
+	// System.Single valuerecueve::Lbuildupfirstpositiony
+	float ___Lbuildupfirstpositiony_139;
+	// System.Boolean valuerecueve::Lfirsttime
+	bool ___Lfirsttime_140;
+	// System.Boolean valuerecueve::Lsuccess
+	bool ___Lsuccess_141;
+	// UnityEngine.GameObject valuerecueve::fishflok
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___fishflok_142;
 };
 
 // UnityEngine.UI.Button
@@ -7908,11 +7924,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Input_GetKeyDown_mB237DEA6244132670D38990BAB77D813FBB028D2 (int32_t ___key0, const RuntimeMethod* method) ;
 // System.Void GestureDetector::Save()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GestureDetector_Save_mD73738E4EEFE20D5AFD7EFF7F891F33F62F5C36E (GestureDetector_tCDB179CEC70931E9BC4672F7C1819073028DBFDB* __this, const RuntimeMethod* method) ;
-// T UnityEngine.GameObject::GetComponent<valuerecueve>()
-inline valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
-{
-	return ((  valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared)(__this, method);
-}
 // System.Boolean System.Boolean::Equals(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Boolean_Equals_mC020D5EB2F64274CD623E8449E8777A70BEC6CC9 (bool* __this, bool ___obj0, const RuntimeMethod* method) ;
 // Gesture GestureDetector::Recognize()
@@ -7921,8 +7932,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Gesture_t99843787CBE75CA35550D7CA86F9775D49A8
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ValueType_Equals_mCA5344597A8055EC544855AD60A983B10E0EE67D (RuntimeObject* __this, RuntimeObject* ___obj0, const RuntimeMethod* method) ;
 // System.String System.String::Concat(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m9E3155FB84015C823606188F53B47CB44C444991 (String_t* ___str00, String_t* ___str11, const RuntimeMethod* method) ;
+// T UnityEngine.GameObject::GetComponent<valuerecueve>()
+inline valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared)(__this, method);
+}
 // System.Boolean System.String::op_Equality(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1 (String_t* ___a0, String_t* ___b1, const RuntimeMethod* method) ;
+// System.String System.Int32::ToString()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5 (int32_t* __this, const RuntimeMethod* method) ;
+// System.String System.String::Concat(System.String,System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B (String_t* ___str00, String_t* ___str11, String_t* ___str22, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Events.UnityEvent::Invoke()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2 (UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* __this, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<UnityEngine.Vector3>::.ctor()
@@ -8125,8 +8145,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RectTransform_SetSizeWithCurrentAnchors_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIBuilder_PanelCentricRelayout_m9A6CA18FEF6724DC0F63D22D18A2A94C25ABD01D (DebugUIBuilder_tC18B19AE08445BA1378C7DABB0E4858217E02E71* __this, const RuntimeMethod* method) ;
 // System.Void DebugUIBuilder::StackedRelayout()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIBuilder_StackedRelayout_mD609EA007EAFD0B760E91B02FEF6760A206DEC0D (DebugUIBuilder_tC18B19AE08445BA1378C7DABB0E4858217E02E71* __this, const RuntimeMethod* method) ;
-// System.String System.Int32::ToString()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5 (int32_t* __this, const RuntimeMethod* method) ;
 // System.String System.String::Concat(System.String[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___values0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Transform::SetParent(UnityEngine.Transform,System.Boolean)
@@ -8398,8 +8416,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Physics_Raycast_mA782767AD4F149FBEA32C71
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m203319D1EA1274689B380A947B4ADC8445662B8F (Exception_t* __this, const RuntimeMethod* method) ;
 // System.Int32 UnityEngine.Time::get_frameCount()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Time_get_frameCount_m4A42E558A71301A216BDC49EC402D62F19C79667 (const RuntimeMethod* method) ;
-// System.String System.String::Concat(System.String,System.String,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B (String_t* ___str00, String_t* ___str11, String_t* ___str22, const RuntimeMethod* method) ;
 // T UnityEngine.Object::Instantiate<TeleportDestination>(T)
 inline TeleportDestination_t0E4A197756CFA0C14366ED74F65F78A418AEC767* Object_Instantiate_TisTeleportDestination_t0E4A197756CFA0C14366ED74F65F78A418AEC767_m444737A4D3037145C3D73229B6DDBB9E6EC297DC (TeleportDestination_t0E4A197756CFA0C14366ED74F65F78A418AEC767* ___original0, const RuntimeMethod* method)
 {
@@ -9989,6 +10005,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GestureDetector_Update_m8173C43DDD73C990
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral12C4A6F0B4F9EE4A6121FEE9C3844D940F9402F3);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1BCEF44404B72E947FEB7D6E2ABD031F8E530B73);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2308FD2DF18257BF4A6390ECBB7217343EEF19AD);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2AD47C03F7A83F82E3B2ADFE8A60F1727FD3BEFD);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2BF368E3102D505B8EB6D5C02F5C869B4FECE8D4);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral583B87F3DAC72F0B7A1F9B6616FE78947FAFD1D0);
@@ -9996,16 +10013,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GestureDetector_Update_m8173C43DDD73C990
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC1BFC58E20E04295A0D6494EC1CDCBB538F22667);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCAF8804297181FF007CA835529DD4477CFD94A70);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE53DC3766D9155A331BE51A616A0871154559F7A);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFDFD1D8703EAEDE8C9230E7C98FFD6D8F6C0342F);
 		s_Il2CppMethodInitialized = true;
 	}
 	Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B32_0 = NULL;
-	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B31_0 = NULL;
-	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B36_0 = NULL;
 	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B35_0 = NULL;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B34_0 = NULL;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B39_0 = NULL;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B38_0 = NULL;
 	{
 		// player = GameObject.FindGameObjectsWithTag("Player");
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_0;
@@ -10034,402 +10052,454 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GestureDetector_Update_m8173C43DDD73C990
 
 IL_0027:
 	{
-		// if (debugMode && Input.GetKeyDown(KeyCode.A))
-		bool L_3 = __this->___debugMode_8;
-		if (!L_3)
-		{
-			goto IL_0060;
-		}
-	}
-	{
+		// if (hasStarted.Equals(true))
+		bool* L_3 = (&__this->___hasStarted_9);
 		bool L_4;
-		L_4 = Input_GetKeyDown_mB237DEA6244132670D38990BAB77D813FBB028D2(((int32_t)97), NULL);
+		L_4 = Boolean_Equals_mC020D5EB2F64274CD623E8449E8777A70BEC6CC9(L_3, (bool)1, NULL);
 		if (!L_4)
 		{
-			goto IL_0060;
-		}
-	}
-	{
-		// if (player.Length >0)
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_5 = __this->___player_13;
-		NullCheck(L_5);
-		if (!(((RuntimeArray*)L_5)->max_length))
-		{
-			goto IL_0060;
-		}
-	}
-	{
-		// gesturesnumber = 4;
-		__this->___gesturesnumber_12 = 4;
-		// player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_6 = __this->___player_13;
-		NullCheck(L_6);
-		int32_t L_7 = 1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = (L_6)->GetAt(static_cast<il2cpp_array_size_t>(L_7));
-		NullCheck(L_8);
-		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_9;
-		L_9 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_8, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
-		int32_t L_10 = __this->___gesturesnumber_12;
-		NullCheck(L_9);
-		L_9->___intvalue_55 = L_10;
-	}
-
-IL_0060:
-	{
-		// if (hasStarted.Equals(true))
-		bool* L_11 = (&__this->___hasStarted_9);
-		bool L_12;
-		L_12 = Boolean_Equals_mC020D5EB2F64274CD623E8449E8777A70BEC6CC9(L_11, (bool)1, NULL);
-		if (!L_12)
-		{
-			goto IL_030d;
+			goto IL_0379;
 		}
 	}
 	{
 		// Gesture currentGesture = Recognize();
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_13;
-		L_13 = GestureDetector_Recognize_m0CC56A30A579836A916597D6F665E9BECADD0CB7(__this, NULL);
-		V_0 = L_13;
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_5;
+		L_5 = GestureDetector_Recognize_m0CC56A30A579836A916597D6F665E9BECADD0CB7(__this, NULL);
+		V_0 = L_5;
 		// hasRecognize = !currentGesture.Equals(new Gesture());
 		il2cpp_codegen_initobj((&V_1), sizeof(Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1));
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_14 = V_1;
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_15 = L_14;
-		RuntimeObject* L_16 = Box(Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1_il2cpp_TypeInfo_var, &L_15);
-		Il2CppFakeBox<Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1> L_17(Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1_il2cpp_TypeInfo_var, (&V_0));
-		bool L_18;
-		L_18 = ValueType_Equals_mCA5344597A8055EC544855AD60A983B10E0EE67D((ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F*)(&L_17), L_16, NULL);
-		__this->___hasRecognize_10 = (bool)((((int32_t)L_18) == ((int32_t)0))? 1 : 0);
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_6 = V_1;
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_7 = L_6;
+		RuntimeObject* L_8 = Box(Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1_il2cpp_TypeInfo_var, &L_7);
+		Il2CppFakeBox<Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1> L_9(Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1_il2cpp_TypeInfo_var, (&V_0));
+		bool L_10;
+		L_10 = ValueType_Equals_mCA5344597A8055EC544855AD60A983B10E0EE67D((ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F*)(&L_9), L_8, NULL);
+		__this->___hasRecognize_10 = (bool)((((int32_t)L_10) == ((int32_t)0))? 1 : 0);
 		// if (hasRecognize)
-		bool L_19 = __this->___hasRecognize_10;
-		if (!L_19)
+		bool L_11 = __this->___hasRecognize_10;
+		if (!L_11)
 		{
-			goto IL_02e4;
+			goto IL_0350;
 		}
 	}
 	{
 		// done = true;
 		__this->___done_11 = (bool)1;
 		// Debug.Log("New found :" + currentGesture.name);
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_20 = V_0;
-		String_t* L_21 = L_20.___name_0;
-		String_t* L_22;
-		L_22 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral1BCEF44404B72E947FEB7D6E2ABD031F8E530B73, L_21, NULL);
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_12 = V_0;
+		String_t* L_13 = L_12.___name_0;
+		String_t* L_14;
+		L_14 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral1BCEF44404B72E947FEB7D6E2ABD031F8E530B73, L_13, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_22, NULL);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_14, NULL);
 		// text.text = currentGesture.name;
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_23 = __this->___text_15;
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_24 = V_0;
-		String_t* L_25 = L_24.___name_0;
-		NullCheck(L_23);
-		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_23, L_25);
-		// if (currentGesture.name == "defalt")
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_26 = V_0;
-		String_t* L_27 = L_26.___name_0;
-		bool L_28;
-		L_28 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_27, _stringLiteral2308FD2DF18257BF4A6390ECBB7217343EEF19AD, NULL);
-		if (!L_28)
-		{
-			goto IL_011f;
-		}
-	}
-	{
-		// gesturesnumber = 0;
-		__this->___gesturesnumber_12 = 0;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_15 = __this->___text_15;
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_16 = V_0;
+		String_t* L_17 = L_16.___name_0;
+		NullCheck(L_15);
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_15, L_17);
 		// if (player.Length > 1)
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_29 = __this->___player_13;
-		NullCheck(L_29);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_29)->max_length))) <= ((int32_t)1)))
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_18 = __this->___player_13;
+		NullCheck(L_18);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_18)->max_length))) <= ((int32_t)1)))
 		{
-			goto IL_02d3;
+			goto IL_00ec;
 		}
 	}
 	{
-		// gesturesnumber = 0;
-		__this->___gesturesnumber_12 = 0;
-		// player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_30 = __this->___player_13;
-		NullCheck(L_30);
-		int32_t L_31 = 1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32 = (L_30)->GetAt(static_cast<il2cpp_array_size_t>(L_31));
-		NullCheck(L_32);
-		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_33;
-		L_33 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_32, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
-		int32_t L_34 = __this->___gesturesnumber_12;
-		NullCheck(L_33);
-		L_33->___intvalue_55 = L_34;
-		goto IL_02d3;
+		// if(player[1].GetComponent<valuerecueve>().Rsuccess == true && text.text == "buildup")
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_19 = __this->___player_13;
+		NullCheck(L_19);
+		int32_t L_20 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_21 = (L_19)->GetAt(static_cast<il2cpp_array_size_t>(L_20));
+		NullCheck(L_21);
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_22;
+		L_22 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_21, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		NullCheck(L_22);
+		bool L_23 = L_22->___Rsuccess_138;
+		if (!L_23)
+		{
+			goto IL_00ec;
+		}
+	}
+	{
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_24 = __this->___text_15;
+		NullCheck(L_24);
+		String_t* L_25;
+		L_25 = VirtualFuncInvoker0< String_t* >::Invoke(65 /* System.String TMPro.TMP_Text::get_text() */, L_24);
+		bool L_26;
+		L_26 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_25, _stringLiteral2BF368E3102D505B8EB6D5C02F5C869B4FECE8D4, NULL);
+		if (!L_26)
+		{
+			goto IL_00ec;
+		}
+	}
+	{
+		// text.text = currentGesture.name + " " + "success ";
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_27 = __this->___text_15;
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_28 = V_0;
+		String_t* L_29 = L_28.___name_0;
+		String_t* L_30;
+		L_30 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_29, _stringLiteralFDFD1D8703EAEDE8C9230E7C98FFD6D8F6C0342F, NULL);
+		NullCheck(L_27);
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_27, L_30);
 	}
 
-IL_011f:
+IL_00ec:
 	{
-		// else if (currentGesture.name == "house")
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_35 = V_0;
-		String_t* L_36 = L_35.___name_0;
-		bool L_37;
-		L_37 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_36, _stringLiteralE53DC3766D9155A331BE51A616A0871154559F7A, NULL);
-		if (!L_37)
+		// if (text.text == "fish")
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_31 = __this->___text_15;
+		NullCheck(L_31);
+		String_t* L_32;
+		L_32 = VirtualFuncInvoker0< String_t* >::Invoke(65 /* System.String TMPro.TMP_Text::get_text() */, L_31);
+		bool L_33;
+		L_33 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_32, _stringLiteral12C4A6F0B4F9EE4A6121FEE9C3844D940F9402F3, NULL);
+		if (!L_33)
 		{
-			goto IL_016a;
+			goto IL_0140;
 		}
 	}
 	{
-		// gesturesnumber = 1;
-		__this->___gesturesnumber_12 = 1;
 		// if (player.Length > 1)
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_34 = __this->___player_13;
+		NullCheck(L_34);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_34)->max_length))) <= ((int32_t)1)))
+		{
+			goto IL_0140;
+		}
+	}
+	{
+		// text.text = currentGesture.name + " " + player[1].GetComponent<valuerecueve>().fishcount;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_35 = __this->___text_15;
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_36 = V_0;
+		String_t* L_37 = L_36.___name_0;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_38 = __this->___player_13;
 		NullCheck(L_38);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_38)->max_length))) <= ((int32_t)1)))
+		int32_t L_39 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_40 = (L_38)->GetAt(static_cast<il2cpp_array_size_t>(L_39));
+		NullCheck(L_40);
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_41;
+		L_41 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_40, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		NullCheck(L_41);
+		int32_t* L_42 = (&L_41->___fishcount_134);
+		String_t* L_43;
+		L_43 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_42, NULL);
+		String_t* L_44;
+		L_44 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_37, _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745, L_43, NULL);
+		NullCheck(L_35);
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_35, L_44);
+	}
+
+IL_0140:
+	{
+		// if (currentGesture.name == "defalt")
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_45 = V_0;
+		String_t* L_46 = L_45.___name_0;
+		bool L_47;
+		L_47 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_46, _stringLiteral2308FD2DF18257BF4A6390ECBB7217343EEF19AD, NULL);
+		if (!L_47)
 		{
-			goto IL_02d3;
+			goto IL_018b;
+		}
+	}
+	{
+		// gesturesnumber = 0;
+		__this->___gesturesnumber_12 = 0;
+		// if (player.Length > 1)
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_48 = __this->___player_13;
+		NullCheck(L_48);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_48)->max_length))) <= ((int32_t)1)))
+		{
+			goto IL_033f;
+		}
+	}
+	{
+		// gesturesnumber = 0;
+		__this->___gesturesnumber_12 = 0;
+		// player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_49 = __this->___player_13;
+		NullCheck(L_49);
+		int32_t L_50 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_51 = (L_49)->GetAt(static_cast<il2cpp_array_size_t>(L_50));
+		NullCheck(L_51);
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_52;
+		L_52 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_51, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		int32_t L_53 = __this->___gesturesnumber_12;
+		NullCheck(L_52);
+		L_52->___intvalue_55 = L_53;
+		goto IL_033f;
+	}
+
+IL_018b:
+	{
+		// else if (currentGesture.name == "house")
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_54 = V_0;
+		String_t* L_55 = L_54.___name_0;
+		bool L_56;
+		L_56 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_55, _stringLiteralE53DC3766D9155A331BE51A616A0871154559F7A, NULL);
+		if (!L_56)
+		{
+			goto IL_01d6;
+		}
+	}
+	{
+		// gesturesnumber = 1;
+		__this->___gesturesnumber_12 = 1;
+		// if (player.Length > 1)
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_57 = __this->___player_13;
+		NullCheck(L_57);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_57)->max_length))) <= ((int32_t)1)))
+		{
+			goto IL_033f;
 		}
 	}
 	{
 		// gesturesnumber = 1;
 		__this->___gesturesnumber_12 = 1;
 		// player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_39 = __this->___player_13;
-		NullCheck(L_39);
-		int32_t L_40 = 1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_41 = (L_39)->GetAt(static_cast<il2cpp_array_size_t>(L_40));
-		NullCheck(L_41);
-		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_42;
-		L_42 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_41, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
-		int32_t L_43 = __this->___gesturesnumber_12;
-		NullCheck(L_42);
-		L_42->___intvalue_55 = L_43;
-		goto IL_02d3;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_58 = __this->___player_13;
+		NullCheck(L_58);
+		int32_t L_59 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_60 = (L_58)->GetAt(static_cast<il2cpp_array_size_t>(L_59));
+		NullCheck(L_60);
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_61;
+		L_61 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_60, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		int32_t L_62 = __this->___gesturesnumber_12;
+		NullCheck(L_61);
+		L_61->___intvalue_55 = L_62;
+		goto IL_033f;
 	}
 
-IL_016a:
+IL_01d6:
 	{
 		// else if (currentGesture.name == "Crab")
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_44 = V_0;
-		String_t* L_45 = L_44.___name_0;
-		bool L_46;
-		L_46 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_45, _stringLiteralC1BFC58E20E04295A0D6494EC1CDCBB538F22667, NULL);
-		if (!L_46)
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_63 = V_0;
+		String_t* L_64 = L_63.___name_0;
+		bool L_65;
+		L_65 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_64, _stringLiteralC1BFC58E20E04295A0D6494EC1CDCBB538F22667, NULL);
+		if (!L_65)
 		{
-			goto IL_01b5;
+			goto IL_0221;
 		}
 	}
 	{
 		// gesturesnumber = 2;
 		__this->___gesturesnumber_12 = 2;
 		// if (player.Length > 1)
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_47 = __this->___player_13;
-		NullCheck(L_47);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_47)->max_length))) <= ((int32_t)1)))
-		{
-			goto IL_02d3;
-		}
-	}
-	{
-		// gesturesnumber = 2;
-		__this->___gesturesnumber_12 = 2;
-		// player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_48 = __this->___player_13;
-		NullCheck(L_48);
-		int32_t L_49 = 1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_50 = (L_48)->GetAt(static_cast<il2cpp_array_size_t>(L_49));
-		NullCheck(L_50);
-		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_51;
-		L_51 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_50, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
-		int32_t L_52 = __this->___gesturesnumber_12;
-		NullCheck(L_51);
-		L_51->___intvalue_55 = L_52;
-		goto IL_02d3;
-	}
-
-IL_01b5:
-	{
-		// else if (currentGesture.name == "buildup")
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_53 = V_0;
-		String_t* L_54 = L_53.___name_0;
-		bool L_55;
-		L_55 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_54, _stringLiteral2BF368E3102D505B8EB6D5C02F5C869B4FECE8D4, NULL);
-		if (!L_55)
-		{
-			goto IL_0200;
-		}
-	}
-	{
-		// gesturesnumber = 3;
-		__this->___gesturesnumber_12 = 3;
-		// if (player.Length > 1)
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_56 = __this->___player_13;
-		NullCheck(L_56);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_56)->max_length))) <= ((int32_t)1)))
-		{
-			goto IL_02d3;
-		}
-	}
-	{
-		// gesturesnumber = 3;
-		__this->___gesturesnumber_12 = 3;
-		// player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_57 = __this->___player_13;
-		NullCheck(L_57);
-		int32_t L_58 = 1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_59 = (L_57)->GetAt(static_cast<il2cpp_array_size_t>(L_58));
-		NullCheck(L_59);
-		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_60;
-		L_60 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_59, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
-		int32_t L_61 = __this->___gesturesnumber_12;
-		NullCheck(L_60);
-		L_60->___intvalue_55 = L_61;
-		goto IL_02d3;
-	}
-
-IL_0200:
-	{
-		// else if (currentGesture.name == "buildoff")
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_62 = V_0;
-		String_t* L_63 = L_62.___name_0;
-		bool L_64;
-		L_64 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_63, _stringLiteralB1A5FEA8E4407503584345F68A0AC06862539008, NULL);
-		if (!L_64)
-		{
-			goto IL_024b;
-		}
-	}
-	{
-		// gesturesnumber = 4;
-		__this->___gesturesnumber_12 = 4;
-		// if (player.Length > 1)
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_65 = __this->___player_13;
-		NullCheck(L_65);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_65)->max_length))) <= ((int32_t)1)))
-		{
-			goto IL_02d3;
-		}
-	}
-	{
-		// gesturesnumber = 4;
-		__this->___gesturesnumber_12 = 4;
-		// player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_66 = __this->___player_13;
 		NullCheck(L_66);
-		int32_t L_67 = 1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_68 = (L_66)->GetAt(static_cast<il2cpp_array_size_t>(L_67));
-		NullCheck(L_68);
-		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_69;
-		L_69 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_68, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
-		int32_t L_70 = __this->___gesturesnumber_12;
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_66)->max_length))) <= ((int32_t)1)))
+		{
+			goto IL_033f;
+		}
+	}
+	{
+		// gesturesnumber = 2;
+		__this->___gesturesnumber_12 = 2;
+		// player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_67 = __this->___player_13;
+		NullCheck(L_67);
+		int32_t L_68 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_69 = (L_67)->GetAt(static_cast<il2cpp_array_size_t>(L_68));
 		NullCheck(L_69);
-		L_69->___intvalue_55 = L_70;
-		goto IL_02d3;
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_70;
+		L_70 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_69, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		int32_t L_71 = __this->___gesturesnumber_12;
+		NullCheck(L_70);
+		L_70->___intvalue_55 = L_71;
+		goto IL_033f;
 	}
 
-IL_024b:
+IL_0221:
 	{
-		// else if (currentGesture.name == "fish")
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_71 = V_0;
-		String_t* L_72 = L_71.___name_0;
-		bool L_73;
-		L_73 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_72, _stringLiteral12C4A6F0B4F9EE4A6121FEE9C3844D940F9402F3, NULL);
-		if (!L_73)
+		// else if (currentGesture.name == "buildup")
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_72 = V_0;
+		String_t* L_73 = L_72.___name_0;
+		bool L_74;
+		L_74 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_73, _stringLiteral2BF368E3102D505B8EB6D5C02F5C869B4FECE8D4, NULL);
+		if (!L_74)
 		{
-			goto IL_0290;
+			goto IL_026c;
 		}
 	}
 	{
-		// gesturesnumber = 5;
-		__this->___gesturesnumber_12 = 5;
+		// gesturesnumber = 3;
+		__this->___gesturesnumber_12 = 3;
 		// if (player.Length > 1)
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_74 = __this->___player_13;
-		NullCheck(L_74);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_74)->max_length))) <= ((int32_t)1)))
-		{
-			goto IL_02d3;
-		}
-	}
-	{
-		// gesturesnumber = 5;
-		__this->___gesturesnumber_12 = 5;
-		// player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_75 = __this->___player_13;
 		NullCheck(L_75);
-		int32_t L_76 = 1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_77 = (L_75)->GetAt(static_cast<il2cpp_array_size_t>(L_76));
-		NullCheck(L_77);
-		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_78;
-		L_78 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_77, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
-		int32_t L_79 = __this->___gesturesnumber_12;
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_75)->max_length))) <= ((int32_t)1)))
+		{
+			goto IL_033f;
+		}
+	}
+	{
+		// gesturesnumber = 3;
+		__this->___gesturesnumber_12 = 3;
+		// player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_76 = __this->___player_13;
+		NullCheck(L_76);
+		int32_t L_77 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_78 = (L_76)->GetAt(static_cast<il2cpp_array_size_t>(L_77));
 		NullCheck(L_78);
-		L_78->___intvalue_55 = L_79;
-		goto IL_02d3;
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_79;
+		L_79 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_78, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		int32_t L_80 = __this->___gesturesnumber_12;
+		NullCheck(L_79);
+		L_79->___intvalue_55 = L_80;
+		goto IL_033f;
 	}
 
-IL_0290:
+IL_026c:
+	{
+		// else if (currentGesture.name == "buildoff")
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_81 = V_0;
+		String_t* L_82 = L_81.___name_0;
+		bool L_83;
+		L_83 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_82, _stringLiteralB1A5FEA8E4407503584345F68A0AC06862539008, NULL);
+		if (!L_83)
+		{
+			goto IL_02b7;
+		}
+	}
+	{
+		// gesturesnumber = 4;
+		__this->___gesturesnumber_12 = 4;
+		// if (player.Length > 1)
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_84 = __this->___player_13;
+		NullCheck(L_84);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_84)->max_length))) <= ((int32_t)1)))
+		{
+			goto IL_033f;
+		}
+	}
+	{
+		// gesturesnumber = 4;
+		__this->___gesturesnumber_12 = 4;
+		// player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_85 = __this->___player_13;
+		NullCheck(L_85);
+		int32_t L_86 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_87 = (L_85)->GetAt(static_cast<il2cpp_array_size_t>(L_86));
+		NullCheck(L_87);
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_88;
+		L_88 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_87, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		int32_t L_89 = __this->___gesturesnumber_12;
+		NullCheck(L_88);
+		L_88->___intvalue_55 = L_89;
+		goto IL_033f;
+	}
+
+IL_02b7:
+	{
+		// else if (currentGesture.name == "fish")
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_90 = V_0;
+		String_t* L_91 = L_90.___name_0;
+		bool L_92;
+		L_92 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_91, _stringLiteral12C4A6F0B4F9EE4A6121FEE9C3844D940F9402F3, NULL);
+		if (!L_92)
+		{
+			goto IL_02fc;
+		}
+	}
+	{
+		// gesturesnumber = 5;
+		__this->___gesturesnumber_12 = 5;
+		// if (player.Length > 1)
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_93 = __this->___player_13;
+		NullCheck(L_93);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_93)->max_length))) <= ((int32_t)1)))
+		{
+			goto IL_033f;
+		}
+	}
+	{
+		// gesturesnumber = 5;
+		__this->___gesturesnumber_12 = 5;
+		// player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_94 = __this->___player_13;
+		NullCheck(L_94);
+		int32_t L_95 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_96 = (L_94)->GetAt(static_cast<il2cpp_array_size_t>(L_95));
+		NullCheck(L_96);
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_97;
+		L_97 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_96, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		int32_t L_98 = __this->___gesturesnumber_12;
+		NullCheck(L_97);
+		L_97->___intvalue_55 = L_98;
+		goto IL_033f;
+	}
+
+IL_02fc:
 	{
 		// else if (currentGesture.name == "start")
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_80 = V_0;
-		String_t* L_81 = L_80.___name_0;
-		bool L_82;
-		L_82 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_81, _stringLiteral2AD47C03F7A83F82E3B2ADFE8A60F1727FD3BEFD, NULL);
-		if (!L_82)
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_99 = V_0;
+		String_t* L_100 = L_99.___name_0;
+		bool L_101;
+		L_101 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_100, _stringLiteral2AD47C03F7A83F82E3B2ADFE8A60F1727FD3BEFD, NULL);
+		if (!L_101)
 		{
-			goto IL_02d3;
+			goto IL_033f;
 		}
 	}
 	{
 		// gesturesnumber = 6;
 		__this->___gesturesnumber_12 = 6;
 		// if (player.Length > 1)
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_83 = __this->___player_13;
-		NullCheck(L_83);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_83)->max_length))) <= ((int32_t)1)))
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_102 = __this->___player_13;
+		NullCheck(L_102);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_102)->max_length))) <= ((int32_t)1)))
 		{
-			goto IL_02d3;
+			goto IL_033f;
 		}
 	}
 	{
 		// gesturesnumber = 6;
 		__this->___gesturesnumber_12 = 6;
 		// player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_84 = __this->___player_13;
-		NullCheck(L_84);
-		int32_t L_85 = 1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_86 = (L_84)->GetAt(static_cast<il2cpp_array_size_t>(L_85));
-		NullCheck(L_86);
-		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_87;
-		L_87 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_86, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
-		int32_t L_88 = __this->___gesturesnumber_12;
-		NullCheck(L_87);
-		L_87->___intvalue_55 = L_88;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_103 = __this->___player_13;
+		NullCheck(L_103);
+		int32_t L_104 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_105 = (L_103)->GetAt(static_cast<il2cpp_array_size_t>(L_104));
+		NullCheck(L_105);
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_106;
+		L_106 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_105, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		int32_t L_107 = __this->___gesturesnumber_12;
+		NullCheck(L_106);
+		L_106->___intvalue_55 = L_107;
 	}
 
-IL_02d3:
+IL_033f:
 	{
 		// currentGesture.onRecognized?.Invoke();
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_89 = V_0;
-		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_90 = L_89.___onRecognized_2;
-		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_91 = L_90;
-		G_B31_0 = L_91;
-		if (L_91)
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_108 = V_0;
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_109 = L_108.___onRecognized_2;
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_110 = L_109;
+		G_B34_0 = L_110;
+		if (L_110)
 		{
-			G_B32_0 = L_91;
-			goto IL_02de;
+			G_B35_0 = L_110;
+			goto IL_034a;
 		}
 	}
 	{
 		return;
 	}
 
-IL_02de:
+IL_034a:
 	{
-		NullCheck(G_B32_0);
-		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(G_B32_0, NULL);
+		NullCheck(G_B35_0);
+		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(G_B35_0, NULL);
 		return;
 	}
 
-IL_02e4:
+IL_0350:
 	{
 		// if (done)
-		bool L_92 = __this->___done_11;
-		if (!L_92)
+		bool L_111 = __this->___done_11;
+		if (!L_111)
 		{
-			goto IL_030d;
+			goto IL_0379;
 		}
 	}
 	{
@@ -10439,26 +10509,26 @@ IL_02e4:
 		// done = false;
 		__this->___done_11 = (bool)0;
 		// notRecognize?.Invoke();
-		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_93 = __this->___notRecognize_16;
-		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_94 = L_93;
-		G_B35_0 = L_94;
-		if (L_94)
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_112 = __this->___notRecognize_16;
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_113 = L_112;
+		G_B38_0 = L_113;
+		if (L_113)
 		{
-			G_B36_0 = L_94;
-			goto IL_0308;
+			G_B39_0 = L_113;
+			goto IL_0374;
 		}
 	}
 	{
 		return;
 	}
 
-IL_0308:
+IL_0374:
 	{
-		NullCheck(G_B36_0);
-		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(G_B36_0, NULL);
+		NullCheck(G_B39_0);
+		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(G_B39_0, NULL);
 	}
 
-IL_030d:
+IL_0379:
 	{
 		// }
 		return;
@@ -11002,16 +11072,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LGestureDetector_Update_m5AEAD25F051A699
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCAF8804297181FF007CA835529DD4477CFD94A70);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE4DE096E0FCBB4FAEC390CA1ECCA822DD729EE1E);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE53DC3766D9155A331BE51A616A0871154559F7A);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFDFD1D8703EAEDE8C9230E7C98FFD6D8F6C0342F);
 		s_Il2CppMethodInitialized = true;
 	}
 	Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B29_0 = NULL;
-	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B28_0 = NULL;
 	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B33_0 = NULL;
 	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B32_0 = NULL;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B37_0 = NULL;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B36_0 = NULL;
 	{
 		// player = GameObject.FindGameObjectsWithTag("Player");
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_0;
@@ -11088,7 +11159,7 @@ IL_0060:
 		L_12 = Boolean_Equals_mC020D5EB2F64274CD623E8449E8777A70BEC6CC9(L_11, (bool)1, NULL);
 		if (!L_12)
 		{
-			goto IL_02c2;
+			goto IL_0313;
 		}
 	}
 	{
@@ -11109,7 +11180,7 @@ IL_0060:
 		bool L_19 = __this->___hasRecognize_10;
 		if (!L_19)
 		{
-			goto IL_0299;
+			goto IL_02ea;
 		}
 	}
 	{
@@ -11128,274 +11199,323 @@ IL_0060:
 		String_t* L_25 = L_24.___name_0;
 		NullCheck(L_23);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_23, L_25);
-		// if (currentGesture.name == "defalt")
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_26 = V_0;
-		String_t* L_27 = L_26.___name_0;
-		bool L_28;
-		L_28 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_27, _stringLiteral2308FD2DF18257BF4A6390ECBB7217343EEF19AD, NULL);
-		if (!L_28)
+		// if (player.Length > 1)
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_26 = __this->___player_13;
+		NullCheck(L_26);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_26)->max_length))) <= ((int32_t)1)))
 		{
-			goto IL_011f;
+			goto IL_0125;
+		}
+	}
+	{
+		// if (player[1].GetComponent<valuerecueve>().Lsuccess == true && text.text == "buildup")
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_27 = __this->___player_13;
+		NullCheck(L_27);
+		int32_t L_28 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_29 = (L_27)->GetAt(static_cast<il2cpp_array_size_t>(L_28));
+		NullCheck(L_29);
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_30;
+		L_30 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_29, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		NullCheck(L_30);
+		bool L_31 = L_30->___Lsuccess_141;
+		if (!L_31)
+		{
+			goto IL_0125;
+		}
+	}
+	{
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_32 = __this->___text_14;
+		NullCheck(L_32);
+		String_t* L_33;
+		L_33 = VirtualFuncInvoker0< String_t* >::Invoke(65 /* System.String TMPro.TMP_Text::get_text() */, L_32);
+		bool L_34;
+		L_34 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_33, _stringLiteral2BF368E3102D505B8EB6D5C02F5C869B4FECE8D4, NULL);
+		if (!L_34)
+		{
+			goto IL_0125;
+		}
+	}
+	{
+		// text.text = currentGesture.name + " " + "success ";
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_35 = __this->___text_14;
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_36 = V_0;
+		String_t* L_37 = L_36.___name_0;
+		String_t* L_38;
+		L_38 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_37, _stringLiteralFDFD1D8703EAEDE8C9230E7C98FFD6D8F6C0342F, NULL);
+		NullCheck(L_35);
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_35, L_38);
+	}
+
+IL_0125:
+	{
+		// if (currentGesture.name == "defalt")
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_39 = V_0;
+		String_t* L_40 = L_39.___name_0;
+		bool L_41;
+		L_41 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_40, _stringLiteral2308FD2DF18257BF4A6390ECBB7217343EEF19AD, NULL);
+		if (!L_41)
+		{
+			goto IL_0170;
 		}
 	}
 	{
 		// gesturesnumber = 0;
 		__this->___gesturesnumber_12 = 0;
 		// if (player.Length > 1)
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_29 = __this->___player_13;
-		NullCheck(L_29);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_29)->max_length))) <= ((int32_t)1)))
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_42 = __this->___player_13;
+		NullCheck(L_42);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_42)->max_length))) <= ((int32_t)1)))
 		{
-			goto IL_0288;
+			goto IL_02d9;
 		}
 	}
 	{
 		// gesturesnumber = 0;
 		__this->___gesturesnumber_12 = 0;
 		// player[1].GetComponent<valuerecueve>().intLvalue = gesturesnumber;
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_30 = __this->___player_13;
-		NullCheck(L_30);
-		int32_t L_31 = 1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32 = (L_30)->GetAt(static_cast<il2cpp_array_size_t>(L_31));
-		NullCheck(L_32);
-		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_33;
-		L_33 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_32, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
-		int32_t L_34 = __this->___gesturesnumber_12;
-		NullCheck(L_33);
-		L_33->___intLvalue_56 = L_34;
-		goto IL_0288;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_43 = __this->___player_13;
+		NullCheck(L_43);
+		int32_t L_44 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_45 = (L_43)->GetAt(static_cast<il2cpp_array_size_t>(L_44));
+		NullCheck(L_45);
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_46;
+		L_46 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_45, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		int32_t L_47 = __this->___gesturesnumber_12;
+		NullCheck(L_46);
+		L_46->___intLvalue_56 = L_47;
+		goto IL_02d9;
 	}
 
-IL_011f:
+IL_0170:
 	{
 		// else if (currentGesture.name == "house")
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_35 = V_0;
-		String_t* L_36 = L_35.___name_0;
-		bool L_37;
-		L_37 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_36, _stringLiteralE53DC3766D9155A331BE51A616A0871154559F7A, NULL);
-		if (!L_37)
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_48 = V_0;
+		String_t* L_49 = L_48.___name_0;
+		bool L_50;
+		L_50 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_49, _stringLiteralE53DC3766D9155A331BE51A616A0871154559F7A, NULL);
+		if (!L_50)
 		{
-			goto IL_016a;
+			goto IL_01bb;
 		}
 	}
 	{
 		// gesturesnumber = 1;
 		__this->___gesturesnumber_12 = 1;
 		// if (player.Length > 1)
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_38 = __this->___player_13;
-		NullCheck(L_38);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_38)->max_length))) <= ((int32_t)1)))
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_51 = __this->___player_13;
+		NullCheck(L_51);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_51)->max_length))) <= ((int32_t)1)))
 		{
-			goto IL_0288;
+			goto IL_02d9;
 		}
 	}
 	{
 		// gesturesnumber = 1;
 		__this->___gesturesnumber_12 = 1;
 		// player[1].GetComponent<valuerecueve>().intLvalue = gesturesnumber;
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_39 = __this->___player_13;
-		NullCheck(L_39);
-		int32_t L_40 = 1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_41 = (L_39)->GetAt(static_cast<il2cpp_array_size_t>(L_40));
-		NullCheck(L_41);
-		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_42;
-		L_42 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_41, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
-		int32_t L_43 = __this->___gesturesnumber_12;
-		NullCheck(L_42);
-		L_42->___intLvalue_56 = L_43;
-		goto IL_0288;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_52 = __this->___player_13;
+		NullCheck(L_52);
+		int32_t L_53 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_54 = (L_52)->GetAt(static_cast<il2cpp_array_size_t>(L_53));
+		NullCheck(L_54);
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_55;
+		L_55 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_54, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		int32_t L_56 = __this->___gesturesnumber_12;
+		NullCheck(L_55);
+		L_55->___intLvalue_56 = L_56;
+		goto IL_02d9;
 	}
 
-IL_016a:
+IL_01bb:
 	{
 		// else if (currentGesture.name == "Crab")
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_44 = V_0;
-		String_t* L_45 = L_44.___name_0;
-		bool L_46;
-		L_46 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_45, _stringLiteralC1BFC58E20E04295A0D6494EC1CDCBB538F22667, NULL);
-		if (!L_46)
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_57 = V_0;
+		String_t* L_58 = L_57.___name_0;
+		bool L_59;
+		L_59 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_58, _stringLiteralC1BFC58E20E04295A0D6494EC1CDCBB538F22667, NULL);
+		if (!L_59)
 		{
-			goto IL_01b5;
+			goto IL_0206;
 		}
 	}
 	{
 		// gesturesnumber = 2;
 		__this->___gesturesnumber_12 = 2;
 		// if (player.Length > 1)
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_47 = __this->___player_13;
-		NullCheck(L_47);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_47)->max_length))) <= ((int32_t)1)))
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_60 = __this->___player_13;
+		NullCheck(L_60);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_60)->max_length))) <= ((int32_t)1)))
 		{
-			goto IL_0288;
+			goto IL_02d9;
 		}
 	}
 	{
 		// gesturesnumber = 2;
 		__this->___gesturesnumber_12 = 2;
 		// player[1].GetComponent<valuerecueve>().intLvalue = gesturesnumber;
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_48 = __this->___player_13;
-		NullCheck(L_48);
-		int32_t L_49 = 1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_50 = (L_48)->GetAt(static_cast<il2cpp_array_size_t>(L_49));
-		NullCheck(L_50);
-		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_51;
-		L_51 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_50, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
-		int32_t L_52 = __this->___gesturesnumber_12;
-		NullCheck(L_51);
-		L_51->___intLvalue_56 = L_52;
-		goto IL_0288;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_61 = __this->___player_13;
+		NullCheck(L_61);
+		int32_t L_62 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_63 = (L_61)->GetAt(static_cast<il2cpp_array_size_t>(L_62));
+		NullCheck(L_63);
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_64;
+		L_64 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_63, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		int32_t L_65 = __this->___gesturesnumber_12;
+		NullCheck(L_64);
+		L_64->___intLvalue_56 = L_65;
+		goto IL_02d9;
 	}
 
-IL_01b5:
+IL_0206:
 	{
 		// else if (currentGesture.name == "buildup")
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_53 = V_0;
-		String_t* L_54 = L_53.___name_0;
-		bool L_55;
-		L_55 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_54, _stringLiteral2BF368E3102D505B8EB6D5C02F5C869B4FECE8D4, NULL);
-		if (!L_55)
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_66 = V_0;
+		String_t* L_67 = L_66.___name_0;
+		bool L_68;
+		L_68 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_67, _stringLiteral2BF368E3102D505B8EB6D5C02F5C869B4FECE8D4, NULL);
+		if (!L_68)
 		{
-			goto IL_0200;
+			goto IL_0251;
 		}
 	}
 	{
 		// gesturesnumber = 3;
 		__this->___gesturesnumber_12 = 3;
 		// if (player.Length > 1)
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_56 = __this->___player_13;
-		NullCheck(L_56);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_56)->max_length))) <= ((int32_t)1)))
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_69 = __this->___player_13;
+		NullCheck(L_69);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_69)->max_length))) <= ((int32_t)1)))
 		{
-			goto IL_0288;
+			goto IL_02d9;
 		}
 	}
 	{
 		// gesturesnumber = 3;
 		__this->___gesturesnumber_12 = 3;
 		// player[1].GetComponent<valuerecueve>().intLvalue = gesturesnumber;
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_57 = __this->___player_13;
-		NullCheck(L_57);
-		int32_t L_58 = 1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_59 = (L_57)->GetAt(static_cast<il2cpp_array_size_t>(L_58));
-		NullCheck(L_59);
-		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_60;
-		L_60 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_59, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
-		int32_t L_61 = __this->___gesturesnumber_12;
-		NullCheck(L_60);
-		L_60->___intLvalue_56 = L_61;
-		goto IL_0288;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_70 = __this->___player_13;
+		NullCheck(L_70);
+		int32_t L_71 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_72 = (L_70)->GetAt(static_cast<il2cpp_array_size_t>(L_71));
+		NullCheck(L_72);
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_73;
+		L_73 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_72, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		int32_t L_74 = __this->___gesturesnumber_12;
+		NullCheck(L_73);
+		L_73->___intLvalue_56 = L_74;
+		goto IL_02d9;
 	}
 
-IL_0200:
+IL_0251:
 	{
 		// else if (currentGesture.name == "buildoff")
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_62 = V_0;
-		String_t* L_63 = L_62.___name_0;
-		bool L_64;
-		L_64 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_63, _stringLiteralB1A5FEA8E4407503584345F68A0AC06862539008, NULL);
-		if (!L_64)
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_75 = V_0;
+		String_t* L_76 = L_75.___name_0;
+		bool L_77;
+		L_77 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_76, _stringLiteralB1A5FEA8E4407503584345F68A0AC06862539008, NULL);
+		if (!L_77)
 		{
-			goto IL_0245;
+			goto IL_0296;
 		}
 	}
 	{
 		// gesturesnumber = 4;
 		__this->___gesturesnumber_12 = 4;
 		// if (player.Length > 1)
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_65 = __this->___player_13;
-		NullCheck(L_65);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_65)->max_length))) <= ((int32_t)1)))
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_78 = __this->___player_13;
+		NullCheck(L_78);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_78)->max_length))) <= ((int32_t)1)))
 		{
-			goto IL_0288;
+			goto IL_02d9;
 		}
 	}
 	{
 		// gesturesnumber = 4;
 		__this->___gesturesnumber_12 = 4;
 		// player[1].GetComponent<valuerecueve>().intLvalue = gesturesnumber;
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_66 = __this->___player_13;
-		NullCheck(L_66);
-		int32_t L_67 = 1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_68 = (L_66)->GetAt(static_cast<il2cpp_array_size_t>(L_67));
-		NullCheck(L_68);
-		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_69;
-		L_69 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_68, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
-		int32_t L_70 = __this->___gesturesnumber_12;
-		NullCheck(L_69);
-		L_69->___intLvalue_56 = L_70;
-		goto IL_0288;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_79 = __this->___player_13;
+		NullCheck(L_79);
+		int32_t L_80 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_81 = (L_79)->GetAt(static_cast<il2cpp_array_size_t>(L_80));
+		NullCheck(L_81);
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_82;
+		L_82 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_81, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		int32_t L_83 = __this->___gesturesnumber_12;
+		NullCheck(L_82);
+		L_82->___intLvalue_56 = L_83;
+		goto IL_02d9;
 	}
 
-IL_0245:
+IL_0296:
 	{
 		// else if (currentGesture.name == "man")
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_71 = V_0;
-		String_t* L_72 = L_71.___name_0;
-		bool L_73;
-		L_73 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_72, _stringLiteralE4DE096E0FCBB4FAEC390CA1ECCA822DD729EE1E, NULL);
-		if (!L_73)
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_84 = V_0;
+		String_t* L_85 = L_84.___name_0;
+		bool L_86;
+		L_86 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_85, _stringLiteralE4DE096E0FCBB4FAEC390CA1ECCA822DD729EE1E, NULL);
+		if (!L_86)
 		{
-			goto IL_0288;
+			goto IL_02d9;
 		}
 	}
 	{
 		// gesturesnumber = 5;
 		__this->___gesturesnumber_12 = 5;
 		// if (player.Length > 1)
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_74 = __this->___player_13;
-		NullCheck(L_74);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_74)->max_length))) <= ((int32_t)1)))
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_87 = __this->___player_13;
+		NullCheck(L_87);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_87)->max_length))) <= ((int32_t)1)))
 		{
-			goto IL_0288;
+			goto IL_02d9;
 		}
 	}
 	{
 		// gesturesnumber = 5;
 		__this->___gesturesnumber_12 = 5;
 		// player[1].GetComponent<valuerecueve>().intLvalue = gesturesnumber;
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_75 = __this->___player_13;
-		NullCheck(L_75);
-		int32_t L_76 = 1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_77 = (L_75)->GetAt(static_cast<il2cpp_array_size_t>(L_76));
-		NullCheck(L_77);
-		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_78;
-		L_78 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_77, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
-		int32_t L_79 = __this->___gesturesnumber_12;
-		NullCheck(L_78);
-		L_78->___intLvalue_56 = L_79;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_88 = __this->___player_13;
+		NullCheck(L_88);
+		int32_t L_89 = 1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_90 = (L_88)->GetAt(static_cast<il2cpp_array_size_t>(L_89));
+		NullCheck(L_90);
+		valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF* L_91;
+		L_91 = GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2(L_90, GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
+		int32_t L_92 = __this->___gesturesnumber_12;
+		NullCheck(L_91);
+		L_91->___intLvalue_56 = L_92;
 	}
 
-IL_0288:
+IL_02d9:
 	{
 		// currentGesture.onRecognized?.Invoke();
-		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_80 = V_0;
-		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_81 = L_80.___onRecognized_2;
-		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_82 = L_81;
-		G_B28_0 = L_82;
-		if (L_82)
+		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_93 = V_0;
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_94 = L_93.___onRecognized_2;
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_95 = L_94;
+		G_B32_0 = L_95;
+		if (L_95)
 		{
-			G_B29_0 = L_82;
-			goto IL_0293;
+			G_B33_0 = L_95;
+			goto IL_02e4;
 		}
 	}
 	{
 		return;
 	}
 
-IL_0293:
+IL_02e4:
 	{
-		NullCheck(G_B29_0);
-		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(G_B29_0, NULL);
+		NullCheck(G_B33_0);
+		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(G_B33_0, NULL);
 		return;
 	}
 
-IL_0299:
+IL_02ea:
 	{
 		// if (done)
-		bool L_83 = __this->___done_11;
-		if (!L_83)
+		bool L_96 = __this->___done_11;
+		if (!L_96)
 		{
-			goto IL_02c2;
+			goto IL_0313;
 		}
 	}
 	{
@@ -11405,26 +11525,26 @@ IL_0299:
 		// done = false;
 		__this->___done_11 = (bool)0;
 		// notRecognize?.Invoke();
-		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_84 = __this->___notRecognize_15;
-		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_85 = L_84;
-		G_B32_0 = L_85;
-		if (L_85)
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_97 = __this->___notRecognize_15;
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_98 = L_97;
+		G_B36_0 = L_98;
+		if (L_98)
 		{
-			G_B33_0 = L_85;
-			goto IL_02bd;
+			G_B37_0 = L_98;
+			goto IL_030e;
 		}
 	}
 	{
 		return;
 	}
 
-IL_02bd:
+IL_030e:
 	{
-		NullCheck(G_B33_0);
-		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(G_B33_0, NULL);
+		NullCheck(G_B37_0);
+		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(G_B37_0, NULL);
 	}
 
-IL_02c2:
+IL_0313:
 	{
 		// }
 		return;

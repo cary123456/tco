@@ -214,8 +214,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5539329455881767606}
-  m_LocalRotation: {x: -0, y: -0, z: 0.02230315, w: 0.9997513}
-  m_LocalPosition: {x: -0.33505246, y: 1.2123804, z: 0.9636759}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.32, y: 2.32, z: 2.32}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -223,7 +223,7 @@ Transform:
   - {fileID: 4057913745774571882}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.556}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!2083052967 &5539329455881767613
 VisualEffect:
   m_ObjectHideFlags: 0
@@ -366,9 +366,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd186841afcf75458b41f7c7aa6870a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building: {fileID: 7588802738193915534, guid: 66fa6c2d31f58c84189d2d2e00e479c5, type: 3}
+  building: {fileID: 6459061649109031049, guid: fb876bb75fd577f4e8ab349d892d16a0, type: 3}
   buildings: []
   buildingposition: []
+  ancor: {fileID: 0}
   crab: []
   one: 0
 --- !u!114 &1838105135
@@ -425,9 +426,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16470a2ba35d4cf4299176c63f1b948d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Thrust: 10
+  m_Thrust: 0.05
   maxTorque: 0.46
   ancor: {fileID: 0}
+  speed: 0.025
+  small: 0
 --- !u!54 &3226724535283135757
 Rigidbody:
   m_ObjectHideFlags: 0

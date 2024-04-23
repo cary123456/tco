@@ -43,7 +43,7 @@ public class crabmove : MonoBehaviour
             */
             this.gameObject.tag = "crabsed";
             this.GetComponent<Animator>().enabled = true;
-            this.GetComponent<Animator>().SetBool("becomehouse", true);
+            this.GetComponent<Animator>().SetBool("C2B", true);
             if (one)
             {
                 headsetposition = new Vector3(VRheadset.transform.position.x, 0, VRheadset.transform.position.z);

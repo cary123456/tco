@@ -7,15 +7,15 @@ public class buildon : MonoBehaviour
     public GameObject building;
     public GameObject[] buildings;
     public GameObject[] buildingposition;
-
+    public GameObject ancor;
     public GameObject[] crab;
     public bool one;
     
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+
+        ancor = GameObject.FindGameObjectWithTag("crabancor");
         buildingposition = GameObject.FindGameObjectsWithTag("buildinglo");
     }
 
@@ -34,7 +34,7 @@ public class buildon : MonoBehaviour
     public void buildingup()
     {
         
-        GameObject buildings1 =  Instantiate(building,new Vector3( this.transform.position.x, -2.7f, this.transform.position.z), Quaternion.Euler(0f, 0f, 0f));
+        GameObject buildings1 =  Instantiate(building,new Vector3( this.transform.position.x, ancor.transform.position.y, this.transform.position.z), Quaternion.Euler(0f, 0f, 90f));
         buildings1.GetComponent<growvalue>().up = true;
 
         //buildings[0].GetComponent<growvalue>().up = true;

@@ -103,7 +103,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _Appear: -0.8
+    - _Appear: -1.84
     - _Blend: 2
     - _Boolean: 0
     - _BumpScale: 1

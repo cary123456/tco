@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
-using Meta.XR.BuildingBlocks.Editor;
+//using Meta.XR.BuildingBlocks.Editor;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -56,7 +56,7 @@ public class HouseArray : MonoBehaviour
 
                 if(buildarray[Xpos,Zpos] != 1)
                 {
-                    Instantiate(house, pos.position + new Vector3 (Xpos*k + houseoffset, -2.7f, Zpos*k), Quaternion.identity, pos);
+                    Instantiate(house, pos.position + new Vector3 (Xpos*k + houseoffset, 0, Zpos*k), Quaternion.Euler(0f, 0f, 90f), pos);
                     buildarray[Xpos,Zpos] = 1;
                     buildarraytemp.Add( new Vector2(Xpos,Zpos));
                     buildarraytemp.ToArray();
