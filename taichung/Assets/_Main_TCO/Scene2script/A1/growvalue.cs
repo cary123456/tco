@@ -50,6 +50,7 @@ public class growvalue : MonoBehaviour
         {
             this.transform.localScale = Vector3.Lerp(this.transform.localScale, new Vector3(1f, 1.789382f, 1f), timer * 0.5f);
             timer += Time.deltaTime;
+            this.gameObject.tag = "buildinglo";
         }
         if(UImanager.GetComponent<UIManager>().VR == true)
         {

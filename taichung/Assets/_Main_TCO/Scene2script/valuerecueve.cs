@@ -276,7 +276,7 @@ public class valuerecueve : NetworkBehaviour
             if (buildR)
             {
 
-                if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null || headset.GetComponent<nearest>().closestbuilding != null)
+                if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
                 {
                     headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
 
@@ -293,7 +293,7 @@ public class valuerecueve : NetworkBehaviour
         {        
             if (buildL)
             {
-                if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null || headset.GetComponent<nearest>().closestbuilding != null)
+                if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
                 {
                     headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
 
