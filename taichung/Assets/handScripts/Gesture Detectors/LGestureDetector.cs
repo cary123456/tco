@@ -114,6 +114,7 @@ public class LGestureDetector : MonoBehaviour
                 {
                     if (player[1].GetComponent<valuerecueve>().Lsuccess == true && text.text == "buildup")
                     {
+
                         text.text = currentGesture.name + " " + "success ";
                     }
 
