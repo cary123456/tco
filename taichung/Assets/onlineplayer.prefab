@@ -67,7 +67,11 @@ MonoBehaviour:
     m_InternalValue: 0
   housetri:
     m_InternalValue: 0
+  fishtri:
+    m_InternalValue: 0
   fishmantri:
+    m_InternalValue: 0
+  destroy:
     m_InternalValue: 0
   handRvalue:
     m_InternalValue: 0
@@ -109,7 +113,9 @@ MonoBehaviour:
   onetime2: 0
   boolvalue: 0
   housevalue: 0
+  fishvalue: 0
   fishmanvalue: 0
+  destoryvalue: 0
   intvalue: 0
   intLvalue: 0
   ranvalue: 0
@@ -131,6 +137,8 @@ MonoBehaviour:
   netbool: 0
   nethousebool: 0
   netfishmanbool: 0
+  netfishbool: 0
+  netdestorybool: 0
   nethandRx: 0
   nethandRy: 0
   nethandRz: 0
@@ -151,6 +159,8 @@ MonoBehaviour:
   oldinput: 0
   oldhouseinput: 0
   oldfishmaninput: 0
+  oldfishinput: 0
+  olddestoryinput: 0
   oldintinput: 0
   oldintLinput: 0
   oldhandRx: 0
@@ -171,7 +181,12 @@ MonoBehaviour:
   building: {fileID: 0}
   lefthand: {fileID: 0}
   righthand: {fileID: 0}
-  crab: {fileID: 5539329455881767606, guid: 4a1af3ffd2d25cf4f872540061315f3e, type: 3}
+  crab:
+  - {fileID: 123923147506414471, guid: 8cd5fc17e2c9a0f45bc8fdd41b9d1830, type: 3}
+  - {fileID: 2852902099044335350, guid: 63effbec7f9646f47a70be8a0cbb6570, type: 3}
+  - {fileID: 5792839285151883588, guid: 7b9dfd70c9e5fc247b6908a6a6440aee, type: 3}
+  - {fileID: 2655429697686084108, guid: 0b6836a29d6459743bda2150b59125ed, type: 3}
+  - {fileID: 6305365181422716240, guid: c464b05a4b24cf74eb953d8fd5562081, type: 3}
   crabs: []
   crabsamount: 0
   onetimetrigger: 0
@@ -184,10 +199,16 @@ MonoBehaviour:
   cam: {fileID: 0}
   ui: {fileID: 0}
   headset: {fileID: 0}
-  Rray: {fileID: 0}
-  Lray: {fileID: 0}
   buildR: 0
   buildL: 0
+  uiman: {fileID: 0}
+  fishcount: 0
+  fishonetime: 0
+  Rsuccess: 0
+  Lsuccess: 0
+  fishflok: {fileID: 0}
+  fishcolddownruntime: 0
+  fishtricube: {fileID: 5549924288004740092, guid: 2d0755e53e633754eae317f0de3eaede, type: 3}
 --- !u!114 &1072218067991891256
 MonoBehaviour:
   m_ObjectHideFlags: 0

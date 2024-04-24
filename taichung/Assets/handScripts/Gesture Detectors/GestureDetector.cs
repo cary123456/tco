@@ -107,8 +107,8 @@ public class GestureDetector : MonoBehaviour
             {
                 // we change another boolean to avoid a loop of event
                 done = true;
-                Debug.Log("New found :" + currentGesture.name);
-                text.text = currentGesture.name;
+                Debug.Log("New found :" + currentGesture.name + "  fishcount :" + player[1].GetComponent<valuerecueve>().fishcount);
+                text.text = currentGesture.name + "  fishcount :" + player[1].GetComponent<valuerecueve>().fishcount;
                 if (player.Length > 1)
                 {
                     if(player[1].GetComponent<valuerecueve>().Rsuccess == true && text.text == "buildup")
@@ -117,14 +117,7 @@ public class GestureDetector : MonoBehaviour
                     }
 
                 }
-                if (text.text == "fish")
-                {                  
-                    if (player.Length > 1)
-                    {
-                        text.text = currentGesture.name + " " + player[1].GetComponent<valuerecueve>().fishcount;
 
-                    }
-                }
                 
                 if (currentGesture.name == "defalt")
                 {

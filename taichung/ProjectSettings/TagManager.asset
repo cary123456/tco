@@ -33,6 +33,7 @@ TagManager:
   - crabs
   - crabancor
   - fish
+  - fishtrigger
   layers:
   - Default
   - TransparentFX
