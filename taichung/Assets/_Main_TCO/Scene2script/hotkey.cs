@@ -161,7 +161,7 @@ public class hotkey : MonoBehaviour
             maincamera.transform.position = new Vector3(0, 5.57f, -0.32f);
             maincamera.transform.rotation = Quaternion.Euler(90, 0, 180);
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape))
         {
             if(player.Length > 0)
             {
