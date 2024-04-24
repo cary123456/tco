@@ -36,7 +36,7 @@ public class HouseArray : MonoBehaviour
             }
         }
 
-        for (int _ =0; _ < blockhouseX.Length; _++)
+        for (int _ =0; _ < blockhouseZ.Length; _++)
         {    
             for(int j = 0; j < x; j++)
             {
@@ -76,12 +76,12 @@ public class HouseArray : MonoBehaviour
                 }
                 else 
                 {   
-                    if(housecount < x*z-blockhouseX.Length*x-blockhouseZ.Length*z+blockhouseX.Length+blockhouseZ.Length)
+                    if(housecount < x*z-blockhouseZ.Length*x-blockhouseX.Length*z+blockhouseX.Length*blockhouseZ.Length)
                         i--;
-                    if(housecount >= x*z-blockhouseX.Length*x-blockhouseZ.Length*z+blockhouseX.Length+blockhouseZ.Length)
+                    if(housecount >= x*z-blockhouseZ.Length*x-blockhouseX.Length*z+blockhouseX.Length*blockhouseZ.Length)
                         break;
                 }
-                Debug.Log( x*z-blockhouseX.Length*x-blockhouseZ.Length*z+blockhouseX.Length+blockhouseZ.Length);
+                Debug.Log( x*z-blockhouseZ.Length*x-blockhouseX.Length*z+blockhouseX.Length*blockhouseZ.Length);
             }
 
         }
