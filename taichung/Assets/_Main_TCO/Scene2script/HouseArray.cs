@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class HouseArray : MonoBehaviour
 {
-    public GameObject house;
+    public GameObject[] house;
     public bool houseenable =true;
     public GameObject crab;
     public bool crabenable =false;
@@ -17,24 +17,32 @@ public class HouseArray : MonoBehaviour
     public float k;
     [Range(1, 10)]    
     public int buildpertime = 1;
+    public float[] housescale;
     public int housecount;
     public float offset;
     public List<Vector2> buildarraytemp;
-    public int blockhouseX; 
-    public int blockhouseZ; 
+    public int[] blockhouseX; 
+    public int[] blockhouseZ; 
     int [,] buildarray;
 
     void Start() 
     {
         buildarray = new int[x+1,z+1];
-        for(int i = 0; i < z; i++)
+        for (int _ =0; _ < blockhouseX.Length; _++)
         {
-            buildarray[blockhouseX,i] = 1;
+            for(int i = 0; i < z; i++)
+            {
+                buildarray[blockhouseX[_],i] = 1;
+            }
         }
-        for(int j = 0; j < x; j++)
-        {
-            buildarray[j,blockhouseZ] = 1;
-        }  
+
+        for (int _ =0; _ < blockhouseX.Length; _++)
+        {    
+            for(int j = 0; j < x; j++)
+            {
+                buildarray[j,blockhouseZ[_]] = 1;
+            }  
+        }
        
         
     }
@@ -53,10 +61,14 @@ public class HouseArray : MonoBehaviour
                 float houseoffset = Random.Range(-offset, offset);
                 int Xpos = Random.Range(0,x);
                 int Zpos = Random.Range(0,z);
+                int rand = Random.Range(0,house.Length);
+                int h = Random.Range(0,housescale.Length);
+
+                house[rand].transform.localScale = new Vector3(housescale[h], housescale[h], housescale[h]);
 
                 if(buildarray[Xpos,Zpos] != 1)
                 {
-                    Instantiate(house, pos.position + new Vector3 (Xpos*k + houseoffset, 0, Zpos*k), Quaternion.Euler(0f, 0f, 90f), pos);
+                    Instantiate(house[rand], pos.position + new Vector3 (Xpos*k + houseoffset, 0, Zpos*k), Quaternion.identity, pos);
                     buildarray[Xpos,Zpos] = 1;
                     buildarraytemp.Add( new Vector2(Xpos,Zpos));
                     buildarraytemp.ToArray();
@@ -64,11 +76,12 @@ public class HouseArray : MonoBehaviour
                 }
                 else 
                 {   
-                    if(housecount < x*z-x-z+1)
+                    if(housecount < x*z-blockhouseX.Length*x-blockhouseZ.Length*z+blockhouseX.Length+blockhouseZ.Length)
                         i--;
-                    if(housecount >= x*z-x-z+1)
+                    if(housecount >= x*z-blockhouseX.Length*x-blockhouseZ.Length*z+blockhouseX.Length+blockhouseZ.Length)
                         break;
                 }
+                Debug.Log( x*z-blockhouseX.Length*x-blockhouseZ.Length*z+blockhouseX.Length+blockhouseZ.Length);
             }
 
         }
@@ -103,7 +116,7 @@ public class HouseArray : MonoBehaviour
 
         }
 
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape))
         {
             if(housecount > 0)
             {
@@ -111,7 +124,7 @@ public class HouseArray : MonoBehaviour
                 buildarray[(int)buildarraytemp[housecount].x,(int)buildarraytemp[housecount].y] = 0;
                 
                 buildarraytemp.RemoveAt(housecount);
-                
+
             }
                
         }
