@@ -38,7 +38,7 @@ public class fishmantrigger : MonoBehaviour
             if (players.Length > 1)
             {
                 players[1].GetComponent<valuerecueve>().fishvalue += 1;
-                this.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f, 0.34f);
+                
                 other.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f, 0.34f);
             }
             
@@ -46,15 +46,5 @@ public class fishmantrigger : MonoBehaviour
         }
 
     }
-    void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "fishtrigger")
-        {
-            this.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(1f, 0f, 0f, 0.34f);
-            other.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(1f, 0f, 0f, 0.34f);
-        }
 
-
-
-    }
 }

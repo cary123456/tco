@@ -211,6 +211,17 @@ struct GenericInterfaceFuncInvoker1
 		return ((Func)invokeData.methodPtr)(obj, p1, invokeData.method);
 	}
 };
+template <typename T1>
+struct InvokerActionInvoker1;
+template <typename T1>
+struct InvokerActionInvoker1<T1*>
+{
+	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1* p1)
+	{
+		void* params[1] = { p1 };
+		method->invoker_method(methodPtr, method, obj, params, params[0]);
+	}
+};
 template <typename R, typename T1>
 struct InvokerFuncInvoker1;
 template <typename R, typename T1>
@@ -255,16 +266,18 @@ struct InvokerFuncInvoker3<R, T1*, T2*, T3*>
 struct Action_1_tE8693FF0E67CDBA52BAFB211BFF1844D076ABAFB;
 // System.Action`1<System.Object>
 struct Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87;
+// System.Action`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99;
 // System.Threading.AsyncLocal`1<System.Globalization.CultureInfo>
 struct AsyncLocal_1_t1D3339EA4C8650D2DEDDF9553E5C932B3DC2CCFD;
 // System.Runtime.CompilerServices.ConditionalWeakTable`2<System.Threading.Tasks.TaskScheduler,System.Object>
 struct ConditionalWeakTable_2_t815A43BFBA64EC1F9F92AD042622E80EED65712E;
-// System.Converter`2<System.Object,System.Object>
-struct Converter_2_tC9AFAC88B7B2F2A78BE628A4D126535F0A4A1486;
 // System.Converter`2<Unity.Services.Qos.Internal.QosResult,Unity.Services.Qos.Runner.BaselibQosRunner/QosMeasurementImpl>
 struct Converter_2_tD1D4D50D6761B87586AB4ABD7BF84500196E937B;
 // System.Converter`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.Models.QosServer>
 struct Converter_2_t5413506A222E66B5EC98E2C4CAD1522C78FEB7A6;
+// System.Converter`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct Converter_2_t492BE36BDB9ACE2595DC3BFC0172171D1510E4CB;
 // System.Collections.Generic.Dictionary`2<System.Int32,System.Globalization.CultureInfo>
 struct Dictionary_2_t9FA6D82CAFC18769F7515BB51D1C56DAE09381C3;
 // System.Collections.Generic.Dictionary`2<System.Int32,System.Text.Encoding>
@@ -273,8 +286,6 @@ struct Dictionary_2_t87EDE08B2E48F793A22DE50D6B3CC2E7EBB2DB54;
 struct Dictionary_2_t403063CE4960B4F46C688912237C6A27E550FF55;
 // System.Collections.Generic.Dictionary`2<System.Int64,System.Boolean>
 struct Dictionary_2_tCF06E70C571839D7107A1DCD7514332D33872BFF;
-// System.Collections.Generic.Dictionary`2<System.Object,System.Object>
-struct Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA;
 // System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Unity.Services.Qos.V2.Http.IDeserializable>>
 struct Dictionary_2_t9CC4E21B838A9054BDCC5735A12A2D7F889A3AF4;
 // System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.Object>>
@@ -291,6 +302,8 @@ struct Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710;
 struct Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83;
 // System.Collections.Generic.Dictionary`2<System.String,System.Type>
 struct Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A;
+// System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E;
 // System.Collections.Generic.Dictionary`2<System.Text.RegularExpressions.Regex/CachedCodeEntryKey,System.Text.RegularExpressions.Regex/CachedCodeEntry>
 struct Dictionary_2_t5B5B38BB06341F50E1C75FB53208A2A66CAE57F7;
 // System.EventHandler`1<Newtonsoft.Json.Serialization.ErrorEventArgs>
@@ -303,14 +316,12 @@ struct Func_1_t951450D17F31277D24526D3476548479EA423E04;
 struct Func_1_t5B1FA69420E1813E09FF081214C5BB3BC0E6D3E4;
 // System.Func`1<Newtonsoft.Json.Serialization.IReferenceResolver>
 struct Func_1_t78E8B13F3C7D6CC3EB821B4F5D26999D062417E2;
-// System.Func`1<System.Object>
-struct Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4;
+// System.Func`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431;
 // System.Func`1<System.Threading.Tasks.Task/ContingentProperties>
 struct Func_1_tD59A12717D79BFB403BF973694B1BE5B85474BD1;
 // System.Func`2<System.Linq.IGrouping`2<System.String,Unity.Services.Qos.Runner.QosAnnotatedResult>,Unity.Services.Qos.IQosAnnotatedResult>
 struct Func_2_t6B95C68C8E9FF576287D80CDBC6DB7A55977BDDA;
-// System.Func`2<System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>,System.Object>
-struct Func_2_tF42287527472FA89789873F068A87C60A00EC7D3;
 // System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>,System.Collections.Generic.List`1<Unity.Services.Qos.V2.Http.IDeserializable>>
 struct Func_2_t2C1B78831395452A2C74E69135A2B40891A47599;
 // System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>,System.String>
@@ -325,12 +336,6 @@ struct Func_2_t5C7F8280287967E2C367F0DE237657C216A1678D;
 struct Func_2_tF028C7C145D3E150C13A8E51274D57A8AF2D632B;
 // System.Func`2<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>,Unity.Networking.QoS.UcgQosServer>
 struct Func_2_tAB6A23FC731FC9CA5DFAF41F7CDEDDA1F4DEBA9A;
-// System.Func`2<System.ValueTuple`2<System.Object,System.Object>,System.Boolean>
-struct Func_2_t852072CDFF0303D1154452D6964FAC8D36FAE7C4;
-// System.Func`2<System.ValueTuple`2<System.Object,System.Object>,System.Int32>
-struct Func_2_t0628A1BF337C31EEC0227EDFF1420E301156D17E;
-// System.Func`2<System.ValueTuple`2<System.Object,System.Object>,System.Single>
-struct Func_2_t18D3285E7B8BB290E064CE9D1D38362362D9AD9E;
 // System.Func`2<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>,System.Boolean>
 struct Func_2_tEC4BA47B80CD4B01B6A848A60F3A09F299879B63;
 // System.Func`2<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>,System.Int32>
@@ -343,20 +348,12 @@ struct Func_2_tAB321CFBA595CE84B39A4BBEFE8F7C1397AFFCD1;
 struct Func_2_tD28B6C1C1F06FBEBE5AB149CF9474B194BC0EF8D;
 // System.Func`2<System.Object,Unity.Services.Qos.V2.Http.IDeserializable>
 struct Func_2_t55F192B0114FA5D02374B5CC96B1B28B9CA50285;
-// System.Func`2<System.Object,System.Int32>
-struct Func_2_t9A0D493A82DCC47C9C819A3B045E02D9B5DDCE1B;
-// System.Func`2<System.Object,System.Object>
-struct Func_2_tACBF5A1656250800CE861707354491F0611F6624;
-// System.Func`2<System.Object,System.Single>
-struct Func_2_tB5C40A90702B6A6A2E315FD927EEFC9FB69F2B12;
 // System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>>
 struct Func_2_t02118949F7D2DA3805E9D29CC9485A919C5FB97B;
 // System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Boolean>
 struct Func_2_t6F7F809A2CFA36D87B0824064AE7E3627A3F0F47;
 // System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Int32>
 struct Func_2_t0596FD00E4993985015476D2AFEF668500E1213D;
-// System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Object>
-struct Func_2_t94A32F373F3E2DB4450FB3A4E23154278BF43C45;
 // System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Single>
 struct Func_2_tFE9857AB37D1E4D6DA9D12D52C5984F450447084;
 // System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.String>
@@ -365,8 +362,6 @@ struct Func_2_t698CE58DA2D8111B8B034A4E1E765E679BBE369E;
 struct Func_2_t192690214DFCAE2E69EEC64BCB4FA225CD8F59BC;
 // System.Func`2<Unity.Services.Qos.Internal.QosResult,System.Int32>
 struct Func_2_tD1C501C17092D1BC651648AF608F076CE51E810C;
-// System.Func`2<Unity.Services.Qos.Internal.QosResult,System.Object>
-struct Func_2_t89D9548C15273DC61D5CB695EB12E7D8F9277392;
 // System.Func`2<Unity.Services.Qos.Internal.QosResult,System.Single>
 struct Func_2_t44AC78B1DB233007BF6EF0B8A5E0BB471B744261;
 // System.Func`2<Unity.Services.Qos.Models.QosServer,System.Threading.Tasks.Task`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>>
@@ -375,22 +370,24 @@ struct Func_2_tA5D6FA972968917CA668A69D168A9418E8FD77BC;
 struct Func_2_t98ECD54006CAACCF31AB1A722FAF9BFDE504A843;
 // System.Func`2<Unity.Services.Qos.Models.QosServiceServer,System.Threading.Tasks.Task`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>>
 struct Func_2_t91FBCDCD791087247E4F3AEB6CDE18D257181889;
+// System.Func`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,System.Boolean>
+struct Func_2_t19E50C11C3E1F20B5A8FDB85D7DD353B6DFF868B;
+// System.Func`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0;
 // Newtonsoft.Json.IArrayPool`1<System.Char>
 struct IArrayPool_1_t5EA5B0C4FD1E47DB5E30F9B7802F3D7E181E10F6;
 // System.Collections.Generic.IDictionary`2<System.Int64,System.Boolean>
 struct IDictionary_2_t82577BC504E853384F0E2CEB9AC076A543599C23;
-// System.Collections.Generic.IDictionary`2<System.Object,System.Object>
-struct IDictionary_2_t823399AD16F88CDEB25958D8CB61771376A5ADED;
 // System.Collections.Generic.IDictionary`2<System.String,System.String>
 struct IDictionary_2_t51DBA2F8AFDC8E5CC588729B12034B8C4D30B0AF;
+// System.Collections.Generic.IDictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct IDictionary_2_t4D3B65115D85F2C21975A2BBF4A23860F8BCD02F;
 // System.Collections.Generic.IEnumerable`1<System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>>
 struct IEnumerable_1_t65851A18CAE3B8F4BE377252AC343217DCE6EC09;
-// System.Collections.Generic.IEnumerable`1<System.Linq.IGrouping`2<System.Object,Unity.Services.Qos.Runner.QosAnnotatedResult>>
-struct IEnumerable_1_tA6B1E8E1E46C4A791442F8853CEC3D8B506CFC0B;
 // System.Collections.Generic.IEnumerable`1<System.Linq.IGrouping`2<System.String,Unity.Services.Qos.Runner.QosAnnotatedResult>>
 struct IEnumerable_1_t75552E34575B1532C68218D1E6915262AC5C9BB5;
-// System.Collections.Generic.IEnumerable`1<System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>>
-struct IEnumerable_1_t60509816D8966320E2A9660FC756B6C440ADFC50;
+// System.Collections.Generic.IEnumerable`1<System.Linq.IGrouping`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>>
+struct IEnumerable_1_t4E5C0176531617CF80181682CECF00AA87D8600A;
 // System.Collections.Generic.IEnumerable`1<System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>>
 struct IEnumerable_1_tD1C6F697DB43B121B60D1B0D07A56EA43995E0EB;
 // System.Collections.Generic.IEnumerable`1<System.Collections.Generic.KeyValuePair`2<System.String,System.Object>>
@@ -403,8 +400,8 @@ struct IEnumerable_1_t411113C7F99EB07001B7B09E0ECA58EA6561E3BC;
 struct IEnumerable_1_tCE5339C7E758BB4D7E174A07CC67DCBE021FF2BB;
 // System.Collections.Generic.IEnumerable`1<System.Threading.Tasks.Task`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>>
 struct IEnumerable_1_t4C02E1C3F87B44D3CBFFD5A4FB7EC07517A89C45;
-// System.Collections.Generic.IEnumerable`1<System.ValueTuple`2<System.Object,System.Object>>
-struct IEnumerable_1_tF87C02535F5ADDDE139D4D2EE4BD06652C1791A4;
+// System.Collections.Generic.IEnumerable`1<System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>>
+struct IEnumerable_1_t10E71ADE91990F3EC0B97A4F8128E33EEA3AD4D5;
 // System.Collections.Generic.IEnumerable`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>
 struct IEnumerable_1_t65DC19CF4EC02262BECE90564CE76888159387BA;
 // System.Collections.Generic.IEnumerable`1<Unity.Services.Qos.V2.Http.IDeserializable>
@@ -435,6 +432,8 @@ struct IEnumerable_1_t352FDDEA001ABE8E1D67849D2E2F3D1D75B03D41;
 struct IEnumerable_1_t349E66EC5F09B881A8E52EE40A1AB9EC60E08E44;
 // System.Collections.Generic.IEnumerable`1<Unity.Networking.QoS.UcgQosServer>
 struct IEnumerable_1_tA19606DF784E6FFC51D7585A52AC4C3D0DBBBA95;
+// System.Collections.Generic.IEnumerable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct IEnumerable_1_t29E7244AE33B71FA0981E50D5BC73B7938F35C66;
 // System.Collections.Generic.IEqualityComparer`1<System.Int64>
 struct IEqualityComparer_1_tDBA96AAC21C7C21D26B68A9F19E6AE4E015D2316;
 // System.Collections.Generic.IEqualityComparer`1<System.String>
@@ -463,22 +462,18 @@ struct IList_1_t01DB329CEB48DEC1D7550DB82B8B11F3FE1C49CF;
 struct IList_1_t97B3B39CDB830632CF9A846DD5FD149D333D9EDB;
 // System.Collections.Generic.IList`1<Unity.Networking.QoS.UcgQosServer>
 struct IList_1_t26BBCB1A0E6722DE29E81A677C96A566D6CCFF56;
-// System.Linq.IOrderedEnumerable`1<System.ValueTuple`2<System.Object,System.Object>>
-struct IOrderedEnumerable_1_tDB09D3E81610AF7BBB3AFC5F03929A30C2A6F2BB;
 // System.Linq.IOrderedEnumerable`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>
 struct IOrderedEnumerable_1_tD35976FBCC5E8E24A37AAC38FDE12914ABFD2404;
 // System.Linq.IOrderedEnumerable`1<Unity.Services.Qos.IQosAnnotatedResult>
 struct IOrderedEnumerable_1_tFE6CB6775E932645B9CB01B8E1ADCA3B0D327C52;
-// System.Linq.IOrderedEnumerable`1<System.Object>
-struct IOrderedEnumerable_1_t0E680E8E1A4A676334F2A0C9A6F9B93135A65EAC;
 // System.Linq.IOrderedEnumerable`1<Unity.Services.Qos.Internal.QosResult>
 struct IOrderedEnumerable_1_t5D56C3ED44A8B7792AF40299F1ADFA9FE95F3103;
+// System.Linq.IOrderedEnumerable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct IOrderedEnumerable_1_tEC69DE4EAD0C8A8943156A96E6B44A96825EBBB2;
 // System.Collections.Generic.IReadOnlyCollection`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>
 struct IReadOnlyCollection_1_t0E147B611787994DB33E1D3B03474D760F350FFD;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.Int64,System.Boolean>
 struct KeyCollection_t9EF74C041A3EBB05C9706A36D5D7777041582F26;
-// System.Collections.Generic.Dictionary`2/KeyCollection<System.Object,System.Object>
-struct KeyCollection_tB45A861D090B15129521119AE48ED3813820A974;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.String,System.Collections.Generic.List`1<Unity.Services.Qos.V2.Http.IDeserializable>>
 struct KeyCollection_t4975CFCC024E5FE51868E4AFA4C1843192DC7CDA;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.String,System.Collections.Generic.List`1<System.Object>>
@@ -493,12 +488,12 @@ struct KeyCollection_tE66790F09E854C19C7F612BEAD203AE626E90A36;
 struct KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.String,System.Type>
 struct KeyCollection_t0E4390205378461F38BE857216C35DA687D245FA;
+// System.Collections.Generic.Dictionary`2/KeyCollection<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55;
 // System.Collections.Generic.List`1<System.Collections.Generic.List`1<Unity.Services.Qos.V2.Http.IDeserializable>>
 struct List_1_t76FF122784E0B8AE16C4CD15F111BF1D7802A63F;
 // System.Collections.Generic.List`1<System.Collections.Generic.List`1<System.Object>>
 struct List_1_t544747D4FFA45E0319EFC7BA6A043B4B5C2FD8F9;
-// System.Collections.Generic.List`1<System.ValueTuple`2<System.Object,System.Object>>
-struct List_1_tFD45D9C668A7B019127FE442DDD78CF33B7DEDBF;
 // System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>
 struct List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A;
 // System.Collections.Generic.List`1<Unity.Services.Qos.V2.ErrorMitigation.ExceptionPredicate>
@@ -535,26 +530,28 @@ struct List_1_t5C9BAB91258EDBB8377C2CFB47EB993237147C4F;
 struct List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD;
 // System.Collections.Generic.List`1<Unity.Networking.QoS.UcgQosServer>
 struct List_1_tAECA468ACA10E75BD5322C3076836F710B5C40BE;
+// System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A;
 // System.Collections.Generic.List`1<Unity.Services.Qos.Runner.BaselibQosRunner/QosMeasurementImpl>
 struct List_1_t20230A462C525DF305E7E612575A10E20377062F;
 // System.Predicate`1<System.Object>
 struct Predicate_1_t8342C85FF4E41CD1F7024AC0CDC3E5312A32CB12;
 // System.Predicate`1<System.Threading.Tasks.Task>
 struct Predicate_1_t7F48518B008C1472339EEEBABA3DE203FE1F26ED;
-// Unity.Services.Qos.Response`1<System.Object>
-struct Response_1_t67079F6E4F63FACFADE6AE83B5E8C8249BB3895D;
 // Unity.Services.Qos.Response`1<Unity.Services.Qos.Models.QosServersResponseBody>
 struct Response_1_t48C8DDEF4712E1CE837837B6DB6B5AABC66E6CFA;
 // Unity.Services.Qos.Response`1<Unity.Services.Qos.Models.QosServiceServersResponseBody>
 struct Response_1_t6CBD565DA6FB121320570C997933C523F1E5360B;
-// Unity.Services.Qos.V2.Response`1<System.Object>
-struct Response_1_t1DC86EEE7CDC58EAF9D58E332C29DA1D24AD5172;
+// Unity.Services.Qos.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct Response_1_t4B73EEA711E336B136237CB6557E9F99516BDB6A;
 // Unity.Services.Qos.V2.Response`1<Unity.Services.Qos.V2.Models.QosServersResponseBody>
 struct Response_1_tB9149A952A5FA3B43E8D3C70DF90AE5D0278324F;
+// Unity.Services.Qos.V2.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct Response_1_tE01D2CBFFA6377AB5ABD5A628829909B9DE01269;
 // System.Threading.Tasks.TaskCompletionSource`1<Unity.Services.Qos.V2.Http.HttpClientResponse>
 struct TaskCompletionSource_1_t79DCFFF6C8EF0B6443EB5DA7FFAA6B87C8D01E56;
-// System.Threading.Tasks.TaskCompletionSource`1<System.Object>
-struct TaskCompletionSource_1_tB4EF81F69CCF7C4F0D956F9B26127C0634A24A37;
+// System.Threading.Tasks.TaskCompletionSource`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970;
 // System.Threading.Tasks.TaskFactory`1<System.Collections.Generic.IList`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>
 struct TaskFactory_1_t32B8EDDFD2625737B2B0306EA76D82012870E1FB;
 // System.Threading.Tasks.TaskFactory`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>
@@ -593,8 +590,8 @@ struct TaskFactory_1_t77018BDA91AB0465CE4EBA777535BF2683707236;
 struct TaskFactory_1_tB4A3FB4240CE745C28D875D915FF3B1D19D7D398;
 // System.Threading.Tasks.TaskFactory`1<Unity.Services.Qos.Runner.IQosJob>
 struct TaskFactory_1_t55699A011CF30C4C746355947ACC65D959D18517;
-// System.Threading.Tasks.TaskFactory`1<System.Object>
-struct TaskFactory_1_t6F188FE70F3006B0386002E392B799D85100732B;
+// System.Threading.Tasks.TaskFactory`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct TaskFactory_1_tF4CDC5BDA20AE9BD3F65B6146CDCD3F753003E1D;
 // System.Threading.Tasks.Task`1<System.Collections.Generic.IList`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>
 struct Task_1_tEB34039AF8670B9F08E0D2B45707AC21A1C1903E;
 // System.Threading.Tasks.Task`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>
@@ -627,6 +624,8 @@ struct Task_1_tC2BA810061754D4934F6936C7D009FFC98766BDB;
 struct Task_1_tBEDAB4469E68C078783320977BCEB17B1C43399C;
 // System.Threading.Tasks.Task`1<System.Net.IPAddress[]>
 struct Task_1_tAC26C3CB300EB1DB608D4ADE41BFFBD5924E4670;
+// System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType[]>
+struct Task_1_tEA323ABE4B135A0CC68B2D7C3498CC3DA6B8D802;
 // System.Threading.Tasks.Task`1<Unity.Services.Qos.Http.HttpClientResponse>
 struct Task_1_tF6629688545A28BF7E92F5D42ABABC826D0C79D9;
 // System.Threading.Tasks.Task`1<Unity.Services.Qos.V2.Http.HttpClientResponse>
@@ -635,8 +634,8 @@ struct Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC228;
 struct Task_1_t1424CB78B756F2658609C2E29818DF1434D76836;
 // System.Threading.Tasks.Task`1<System.Int32>
 struct Task_1_t4C228DE57804012969575431CFF12D57C875552D;
-// System.Threading.Tasks.Task`1<System.Object>
-struct Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2;
+// System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.Int64,System.Boolean>
 struct ValueCollection_tD1BDCB78C7798257BAE7A6161EB6F235999D6CBA;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.String,System.Collections.Generic.List`1<Unity.Services.Qos.V2.Http.IDeserializable>>
@@ -677,8 +676,6 @@ struct List_1U5BU5D_tEBE1CC400A59BFE710FB7F54512BD515429D579C;
 struct List_1U5BU5D_tB40362575E2E5EBEFC13C380165A5E7D845985F0;
 // System.Nullable`1<Unity.Networking.QoS.UcgQosServer>[]
 struct Nullable_1U5BU5D_t4D26AA027DCC457C09504504BD0A524DF9E95B5C;
-// System.ValueTuple`2<System.Object,System.Object>[]
-struct ValueTuple_2U5BU5D_tDEEAFCC1B39456246D3A0D4D92FF7592CA9EC962;
 // System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>[]
 struct ValueTuple_2U5BU5D_t3E9F87654DEAE1291CE077B4E20E6BD112205D1E;
 // Newtonsoft.Json.JsonWriter/State[][]
@@ -737,6 +734,10 @@ struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
 struct UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83;
 // Unity.Networking.QoS.UcgQosServer[]
 struct UcgQosServerU5BU5D_t9006143503F370CB0C165211E5E531FDE02D9FA9;
+// Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType[]
+struct __Il2CppFullySharedGenericStructTypeU5BU5D_tF3B929B6E80D0A8C109178E11CE8FF9957B014C1;
+// Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType[]
+struct __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC;
 // Unity.Services.Qos.Runner.BaselibQosRunner/QosMeasurementImpl[]
 struct QosMeasurementImplU5BU5D_t7E474DF00AF1F38AABA176752C4D9C37FDBB9126;
 // System.Action
@@ -1854,16 +1855,14 @@ struct UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F_marshaled_pinvo
 struct UploadHandler_t7E504B1A83346248A0C8C4AF73A893226CB83EF6_marshaled_com;
 
 struct Nullable_1U5BU5D_t4D26AA027DCC457C09504504BD0A524DF9E95B5C;
-struct ValueTuple_2U5BU5D_tDEEAFCC1B39456246D3A0D4D92FF7592CA9EC962;
 struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
 struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
 struct IPAddressU5BU5D_t3AEDF3B94746C9023A4549F878AA47F702C9CD0D;
 struct JsonConverterU5BU5D_tF69203E66D4FCB82A6F64A24EF7785E26E9E957E;
 struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
-struct QosAnnotatedResultU5BU5D_tEE50D95C94A5B00517F4569D8949D530EBD602C5;
-struct QosResultU5BU5D_t75C4DCC436089DFBCEEED024EAD6D3586B05C21C;
 struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
 struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
+struct __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC;
 
 IL2CPP_EXTERN_C_BEGIN
 IL2CPP_EXTERN_C_END
@@ -2079,15 +2078,15 @@ struct Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A  : public RuntimeO
 	RuntimeObject* ____syncRoot_9;
 };
 
-// System.EmptyArray`1<System.Object>
-struct EmptyArray_1_tDF0DD7256B115243AA6BD5558417387A734240EE  : public RuntimeObject
+// System.EmptyArray`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct EmptyArray_1_tF69A5F6BAD1150A16C4C98B346D6122FE3751C80  : public RuntimeObject
 {
 };
 
-struct EmptyArray_1_tDF0DD7256B115243AA6BD5558417387A734240EE_StaticFields
+struct EmptyArray_1_tF69A5F6BAD1150A16C4C98B346D6122FE3751C80_StaticFields
 {
 	// T[] System.EmptyArray`1::Value
-	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___Value_0;
+	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___Value_0;
 };
 
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.String,System.String>
@@ -2133,25 +2132,6 @@ struct List_1_t544747D4FFA45E0319EFC7BA6A043B4B5C2FD8F9_StaticFields
 {
 	// T[] System.Collections.Generic.List`1::s_emptyArray
 	List_1U5BU5D_tB40362575E2E5EBEFC13C380165A5E7D845985F0* ___s_emptyArray_5;
-};
-
-// System.Collections.Generic.List`1<System.ValueTuple`2<System.Object,System.Object>>
-struct List_1_tFD45D9C668A7B019127FE442DDD78CF33B7DEDBF  : public RuntimeObject
-{
-	// T[] System.Collections.Generic.List`1::_items
-	ValueTuple_2U5BU5D_tDEEAFCC1B39456246D3A0D4D92FF7592CA9EC962* ____items_1;
-	// System.Int32 System.Collections.Generic.List`1::_size
-	int32_t ____size_2;
-	// System.Int32 System.Collections.Generic.List`1::_version
-	int32_t ____version_3;
-	// System.Object System.Collections.Generic.List`1::_syncRoot
-	RuntimeObject* ____syncRoot_4;
-};
-
-struct List_1_tFD45D9C668A7B019127FE442DDD78CF33B7DEDBF_StaticFields
-{
-	// T[] System.Collections.Generic.List`1::s_emptyArray
-	ValueTuple_2U5BU5D_tDEEAFCC1B39456246D3A0D4D92FF7592CA9EC962* ___s_emptyArray_5;
 };
 
 // System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>
@@ -2458,6 +2438,25 @@ struct List_1_tAECA468ACA10E75BD5322C3076836F710B5C40BE_StaticFields
 	UcgQosServerU5BU5D_t9006143503F370CB0C165211E5E531FDE02D9FA9* ___s_emptyArray_5;
 };
 
+// System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A  : public RuntimeObject
+{
+	// T[] System.Collections.Generic.List`1::_items
+	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ____items_1;
+	// System.Int32 System.Collections.Generic.List`1::_size
+	int32_t ____size_2;
+	// System.Int32 System.Collections.Generic.List`1::_version
+	int32_t ____version_3;
+	// System.Object System.Collections.Generic.List`1::_syncRoot
+	RuntimeObject* ____syncRoot_4;
+};
+
+struct List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A_StaticFields
+{
+	// T[] System.Collections.Generic.List`1::s_emptyArray
+	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___s_emptyArray_5;
+};
+
 // System.Collections.Generic.List`1<Unity.Services.Qos.Runner.BaselibQosRunner/QosMeasurementImpl>
 struct List_1_t20230A462C525DF305E7E612575A10E20377062F  : public RuntimeObject
 {
@@ -2484,11 +2483,11 @@ struct TaskCompletionSource_1_t79DCFFF6C8EF0B6443EB5DA7FFAA6B87C8D01E56  : publi
 	Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC228* ____task_0;
 };
 
-// System.Threading.Tasks.TaskCompletionSource`1<System.Object>
-struct TaskCompletionSource_1_tB4EF81F69CCF7C4F0D956F9B26127C0634A24A37  : public RuntimeObject
+// System.Threading.Tasks.TaskCompletionSource`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970  : public RuntimeObject
 {
 	// System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskCompletionSource`1::_task
-	Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* ____task_0;
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* ____task_0;
 };
 struct Il2CppArrayBounds;
 
@@ -3773,18 +3772,8 @@ struct Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1
 	String_t* ____current_3;
 };
 
-// System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.Object,System.Object>
-struct Enumerator_t65CC956745B1180C04CE6C6910FB27C5F32BB9FF 
-{
-	// System.Collections.Generic.Dictionary`2<TKey,TValue> System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator::_dictionary
-	Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* ____dictionary_0;
-	// System.Int32 System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator::_index
-	int32_t ____index_1;
-	// System.Int32 System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator::_version
-	int32_t ____version_2;
-	// TKey System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator::_currentKey
-	RuntimeObject* ____currentKey_3;
-};
+// System.Collections.Generic.List`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+typedef Il2CppFullySharedGenericStruct Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF;
 
 // System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.String,System.String>
 struct Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867 
@@ -3799,6 +3788,9 @@ struct Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867
 	String_t* ____currentKey_3;
 };
 
+// System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+typedef Il2CppFullySharedGenericStruct Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977;
+
 // System.Collections.Generic.KeyValuePair`2<System.Int64,System.Boolean>
 struct KeyValuePair_2_tB238689916B08B0CFF54232EB53E746022CA86A2 
 {
@@ -3806,15 +3798,6 @@ struct KeyValuePair_2_tB238689916B08B0CFF54232EB53E746022CA86A2
 	int64_t ___key_0;
 	// TValue System.Collections.Generic.KeyValuePair`2::value
 	bool ___value_1;
-};
-
-// System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>
-struct KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 
-{
-	// TKey System.Collections.Generic.KeyValuePair`2::key
-	RuntimeObject* ___key_0;
-	// TValue System.Collections.Generic.KeyValuePair`2::value
-	RuntimeObject* ___value_1;
 };
 
 // System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>
@@ -3844,6 +3827,9 @@ struct KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A
 	String_t* ___value_1;
 };
 
+// System.Collections.Generic.KeyValuePair`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+typedef Il2CppFullySharedGenericStruct KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669;
+
 // Unity.Collections.NativeArray`1<System.Byte>
 struct NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF 
 {
@@ -3857,6 +3843,17 @@ struct NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF
 
 // Unity.Collections.NativeArray`1<Unity.Networking.QoS.InternalQosResult>
 struct NativeArray_1_t14416F5A54963FFA0912C5FA738DEB565659C8EC 
+{
+	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
+	void* ___m_Buffer_0;
+	// System.Int32 Unity.Collections.NativeArray`1::m_Length
+	int32_t ___m_Length_1;
+	// Unity.Collections.Allocator Unity.Collections.NativeArray`1::m_AllocatorLabel
+	int32_t ___m_AllocatorLabel_2;
+};
+
+// Unity.Collections.NativeArray`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>
+struct NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 
 {
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
 	void* ___m_Buffer_0;
@@ -4048,13 +4045,6 @@ struct Nullable_1_tB85AB604017196E6A3D3B920121E8C3A255827F0
 	int32_t ___value_1;
 };
 
-// Unity.Services.Qos.Response`1<System.Object>
-struct Response_1_t67079F6E4F63FACFADE6AE83B5E8C8249BB3895D  : public Response_tED09A2076AA8C92E78644D690D96E3DE2BF4A278
-{
-	// T Unity.Services.Qos.Response`1::<Result>k__BackingField
-	RuntimeObject* ___U3CResultU3Ek__BackingField_2;
-};
-
 // Unity.Services.Qos.Response`1<Unity.Services.Qos.Models.QosServersResponseBody>
 struct Response_1_t48C8DDEF4712E1CE837837B6DB6B5AABC66E6CFA  : public Response_tED09A2076AA8C92E78644D690D96E3DE2BF4A278
 {
@@ -4069,12 +4059,8 @@ struct Response_1_t6CBD565DA6FB121320570C997933C523F1E5360B  : public Response_t
 	QosServiceServersResponseBody_tC8825C5246203AD733E8F238BFE41E76E32D582B* ___U3CResultU3Ek__BackingField_2;
 };
 
-// Unity.Services.Qos.V2.Response`1<System.Object>
-struct Response_1_t1DC86EEE7CDC58EAF9D58E332C29DA1D24AD5172  : public Response_t2EC1181D83520312AF34DF275F740ABE6DADBEBB
-{
-	// T Unity.Services.Qos.V2.Response`1::<Result>k__BackingField
-	RuntimeObject* ___U3CResultU3Ek__BackingField_2;
-};
+// Unity.Services.Qos.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct Response_1_t4B73EEA711E336B136237CB6557E9F99516BDB6A : public Response_tED09A2076AA8C92E78644D690D96E3DE2BF4A278 {};
 
 // Unity.Services.Qos.V2.Response`1<Unity.Services.Qos.V2.Models.QosServersResponseBody>
 struct Response_1_tB9149A952A5FA3B43E8D3C70DF90AE5D0278324F  : public Response_t2EC1181D83520312AF34DF275F740ABE6DADBEBB
@@ -4082,6 +4068,9 @@ struct Response_1_tB9149A952A5FA3B43E8D3C70DF90AE5D0278324F  : public Response_t
 	// T Unity.Services.Qos.V2.Response`1::<Result>k__BackingField
 	QosServersResponseBody_t3A0F56FD2909DE3657C21B92714F1EB6657F32BD* ___U3CResultU3Ek__BackingField_2;
 };
+
+// Unity.Services.Qos.V2.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct Response_1_tE01D2CBFFA6377AB5ABD5A628829909B9DE01269 : public Response_t2EC1181D83520312AF34DF275F740ABE6DADBEBB {};
 
 // System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>
 struct TaskAwaiter_1_t139C6FD901310978BB5DBDEB8E0B27D0D6383CF2 
@@ -4195,11 +4184,11 @@ struct TaskAwaiter_1_t16B2E191700F8AF45AB35E29E719CE2258040BBF
 	Task_1_t1424CB78B756F2658609C2E29818DF1434D76836* ___m_task_0;
 };
 
-// System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>
-struct TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA 
+// System.Runtime.CompilerServices.TaskAwaiter`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 
 {
 	// System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.TaskAwaiter`1::m_task
-	Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* ___m_task_0;
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* ___m_task_0;
 };
 
 // System.Threading.Tasks.Task`1<System.Collections.Generic.IList`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>
@@ -4436,17 +4425,13 @@ struct Task_1_t1424CB78B756F2658609C2E29818DF1434D76836_StaticFields
 	TaskFactory_1_t55699A011CF30C4C746355947ACC65D959D18517* ___s_defaultFactory_39;
 };
 
-// System.Threading.Tasks.Task`1<System.Object>
-struct Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2  : public Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572
-{
-	// TResult System.Threading.Tasks.Task`1::m_result
-	RuntimeObject* ___m_result_38;
-};
+// System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9 : public Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572 {};
 
-struct Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2_StaticFields
+struct Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9_StaticFields
 {
 	// System.Threading.Tasks.TaskFactory`1<TResult> System.Threading.Tasks.Task`1::s_defaultFactory
-	TaskFactory_1_t6F188FE70F3006B0386002E392B799D85100732B* ___s_defaultFactory_39;
+	TaskFactory_1_tF4CDC5BDA20AE9BD3F65B6146CDCD3F753003E1D* ___s_defaultFactory_39;
 };
 
 // System.ValueTuple`2<Unity.Networking.QoS.FcType,System.Byte>
@@ -4467,24 +4452,6 @@ struct ValueTuple_2_t973F7AB0EF5DD3619E518A966941F10D8098F52D
 	int32_t ___Item2_1;
 };
 
-// System.ValueTuple`2<System.Int32Enum,System.Byte>
-struct ValueTuple_2_t3493A483575961C965EC8BAF0666E67AA00011EB 
-{
-	// T1 System.ValueTuple`2::Item1
-	int32_t ___Item1_0;
-	// T2 System.ValueTuple`2::Item2
-	uint8_t ___Item2_1;
-};
-
-// System.ValueTuple`2<System.Object,System.Object>
-struct ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A 
-{
-	// T1 System.ValueTuple`2::Item1
-	RuntimeObject* ___Item1_0;
-	// T2 System.ValueTuple`2::Item2
-	RuntimeObject* ___Item2_1;
-};
-
 // System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>
 struct ValueTuple_2_t72ACF7A63A3F4DA79ACAFA9F4780AA107AD73E61 
 {
@@ -4502,6 +4469,9 @@ struct ValueTuple_2_tFFBDA26440901E0AA5635F430F88DB7796969481
 	// T2 System.ValueTuple`2::Item2
 	int32_t ___Item2_1;
 };
+
+// System.ValueTuple`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+typedef Il2CppFullySharedGenericStruct ValueTuple_2_tBAA1E1D7D97D80E0EBA7FE8773B1FF409AEA3829;
 
 // System.Runtime.CompilerServices.AsyncMethodBuilderCore
 struct AsyncMethodBuilderCore_tD5ABB3A2536319A3345B32A5481E37E23DD8CEDF 
@@ -6081,19 +6051,28 @@ struct AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735_Static
 	Task_1_t1424CB78B756F2658609C2E29818DF1434D76836* ___s_defaultResultTask_0;
 };
 
-// System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>
-struct AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0 
+// System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 
 {
 	// System.Runtime.CompilerServices.AsyncMethodBuilderCore System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1::m_coreState
 	AsyncMethodBuilderCore_tD5ABB3A2536319A3345B32A5481E37E23DD8CEDF ___m_coreState_1;
 	// System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1::m_task
-	Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* ___m_task_2;
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* ___m_task_2;
 };
 
-struct AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0_StaticFields
+struct AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4_StaticFields
 {
 	// System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1::s_defaultResultTask
-	Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* ___s_defaultResultTask_0;
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* ___s_defaultResultTask_0;
+};
+
+// Unity.Collections.NativeArray`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>
+struct Enumerator_t82F77221EB09A3A14061DC0C6965526D856BC405 
+{
+	// Unity.Collections.NativeArray`1<T> Unity.Collections.NativeArray`1/Enumerator::m_Array
+	NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 ___m_Array_0;
+	// System.Int32 Unity.Collections.NativeArray`1/Enumerator::m_Index
+	int32_t ___m_Index_1;
 };
 
 // Unity.Collections.NativeArray`1/Enumerator<Unity.Networking.QoS.QosJob/InternalQosServer>
@@ -6114,8 +6093,20 @@ struct Nullable_1_tC3E8E254B9DCF808C08AFA1FC2151C2BC0040F3A
 	StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 ___value_1;
 };
 
+// System.Nullable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>
+typedef Il2CppFullySharedGenericStruct Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339;
+
 // Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.Collections.FixedString64Bytes,System.Int32>
 struct UnsafeHashMap_2_t681BA4B1F6D1150DDD665BCB97218325AC18D03A 
+{
+	// Unity.Collections.LowLevel.Unsafe.UnsafeHashMapData* Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2::m_Buffer
+	UnsafeHashMapData_t82AA009E447306C927002C4EED80392BD8D8E5B4* ___m_Buffer_0;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2::m_AllocatorLabel
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___m_AllocatorLabel_1;
+};
+
+// Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>
+struct UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65 
 {
 	// Unity.Collections.LowLevel.Unsafe.UnsafeHashMapData* Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2::m_Buffer
 	UnsafeHashMapData_t82AA009E447306C927002C4EED80392BD8D8E5B4* ___m_Buffer_0;
@@ -7044,6 +7035,13 @@ struct NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434
 	UnsafeHashMap_2_t681BA4B1F6D1150DDD665BCB97218325AC18D03A ___m_HashMapData_0;
 };
 
+// Unity.Collections.NativeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>
+struct NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1 
+{
+	// Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<TKey,TValue> Unity.Collections.NativeHashMap`2::m_HashMapData
+	UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65 ___m_HashMapData_0;
+};
+
 // System.Nullable`1<Unity.Networking.QoS.UcgQosServer>
 struct Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022 
 {
@@ -7051,15 +7049,6 @@ struct Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022
 	bool ___hasValue_0;
 	// T System.Nullable`1::value
 	UcgQosServer_tB2AFA57F819F8A2EFB52F813E38521D31F765136 ___value_1;
-};
-
-// System.ValueTuple`2<Unity.Baselib.LowLevel.Binding/Baselib_Socket_Handle,System.Int32Enum>
-struct ValueTuple_2_t41B9FC5418CC7A0FCB6CB77E6213BF60525EA26C 
-{
-	// T1 System.ValueTuple`2::Item1
-	Baselib_Socket_Handle_t5BB40490AAC0DA7C5B3CAA9C93447B28D6474FA1 ___Item1_0;
-	// T2 System.ValueTuple`2::Item2
-	int32_t ___Item2_1;
 };
 
 // System.ValueTuple`2<Unity.Baselib.LowLevel.Binding/Baselib_Socket_Handle,Unity.Baselib.LowLevel.Binding/Baselib_ErrorCode>
@@ -8071,11 +8060,6 @@ struct Func_2_t55F192B0114FA5D02374B5CC96B1B28B9CA50285  : public MulticastDeleg
 {
 };
 
-// System.Func`2<System.Object,System.Object>
-struct Func_2_tACBF5A1656250800CE861707354491F0611F6624  : public MulticastDelegate_t
-{
-};
-
 // System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>>
 struct Func_2_t02118949F7D2DA3805E9D29CC9485A919C5FB97B  : public MulticastDelegate_t
 {
@@ -8128,6 +8112,11 @@ struct Func_2_t98ECD54006CAACCF31AB1A722FAF9BFDE504A843  : public MulticastDeleg
 
 // System.Func`2<Unity.Services.Qos.Models.QosServiceServer,System.Threading.Tasks.Task`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>>
 struct Func_2_t91FBCDCD791087247E4F3AEB6CDE18D257181889  : public MulticastDelegate_t
+{
+};
+
+// System.Func`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0  : public MulticastDelegate_t
 {
 };
 
@@ -8570,539 +8559,211 @@ struct IPAddressU5BU5D_t3AEDF3B94746C9023A4549F878AA47F702C9CD0D  : public Runti
 		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
 	}
 };
-// Unity.Services.Qos.Internal.QosResult[]
-struct QosResultU5BU5D_t75C4DCC436089DFBCEEED024EAD6D3586B05C21C  : public RuntimeArray
+// Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType[]
+struct __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC  : public RuntimeArray
 {
-	ALIGN_FIELD (8) QosResult_tA2296213032595430F8FE40418B3D5BA47E86D27 m_Items[1];
+	ALIGN_FIELD (8) uint8_t m_Items[1];
 
-	inline QosResult_tA2296213032595430F8FE40418B3D5BA47E86D27 GetAt(il2cpp_array_size_t index) const
+	inline uint8_t* GetAddressAt(il2cpp_array_size_t index)
 	{
 		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
+		return m_Items + il2cpp_array_calc_byte_offset(this, index);
 	}
-	inline QosResult_tA2296213032595430F8FE40418B3D5BA47E86D27* GetAddressAt(il2cpp_array_size_t index)
+	inline uint8_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
 	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, QosResult_tA2296213032595430F8FE40418B3D5BA47E86D27 value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___Region_0), (void*)NULL);
-	}
-	inline QosResult_tA2296213032595430F8FE40418B3D5BA47E86D27 GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline QosResult_tA2296213032595430F8FE40418B3D5BA47E86D27* GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, QosResult_tA2296213032595430F8FE40418B3D5BA47E86D27 value)
-	{
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___Region_0), (void*)NULL);
-	}
-};
-// Unity.Services.Qos.Runner.QosAnnotatedResult[]
-struct QosAnnotatedResultU5BU5D_tEE50D95C94A5B00517F4569D8949D530EBD602C5  : public RuntimeArray
-{
-	ALIGN_FIELD (8) QosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E m_Items[1];
-
-	inline QosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline QosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E* GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, QosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___Region_0), (void*)NULL);
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___Annotations_3), (void*)NULL);
-		#endif
-	}
-	inline QosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline QosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E* GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, QosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E value)
-	{
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___Region_0), (void*)NULL);
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___Annotations_3), (void*)NULL);
-		#endif
-	}
-};
-// System.ValueTuple`2<System.Object,System.Object>[]
-struct ValueTuple_2U5BU5D_tDEEAFCC1B39456246D3A0D4D92FF7592CA9EC962  : public RuntimeArray
-{
-	ALIGN_FIELD (8) ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A m_Items[1];
-
-	inline ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A* GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___Item1_0), (void*)NULL);
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___Item2_1), (void*)NULL);
-		#endif
-	}
-	inline ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A* GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A value)
-	{
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___Item1_0), (void*)NULL);
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___Item2_1), (void*)NULL);
-		#endif
+		return m_Items + il2cpp_array_calc_byte_offset(this, index);
 	}
 };
 
 
-// System.Void Unity.Collections.NativeHashMap`2<Unity.Collections.FixedString64Bytes,System.Int32>::.ctor(System.Int32,Unity.Collections.AllocatorManager/AllocatorHandle)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeHashMap_2__ctor_m9ADE704A14E350E2E06F3CA9A3165347E8661ED7_gshared (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434* __this, int32_t ___capacity0, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator1, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeArray`1<Unity.Networking.QoS.QosJob/InternalQosServer>::.ctor(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArrayOptions)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1__ctor_mE5E30A0AE630509D07C1A1C3AFC5872B16FED9AF_gshared (NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9* __this, int32_t ___length0, int32_t ___allocator1, int32_t ___options2, const RuntimeMethod* method) ;
-// System.Boolean Unity.Collections.NativeHashMap`2<Unity.Collections.FixedString64Bytes,System.Int32>::ContainsKey(TKey)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeHashMap_2_ContainsKey_m0C81565D8973C3996EBE9684901000E5F9F81D73_gshared (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434* __this, FixedString64Bytes_t0F1B6FFAFD8C15898CD77D91A79AB36AA078E0A5 ___key0, const RuntimeMethod* method) ;
-// TValue Unity.Collections.NativeHashMap`2<Unity.Collections.FixedString64Bytes,System.Int32>::get_Item(TKey)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeHashMap_2_get_Item_mC5FEEB66A06DDC0A9CC464FBBD076DB206F83430_gshared (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434* __this, FixedString64Bytes_t0F1B6FFAFD8C15898CD77D91A79AB36AA078E0A5 ___key0, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeHashMap`2<Unity.Collections.FixedString64Bytes,System.Int32>::Add(TKey,TValue)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeHashMap_2_Add_mD22279FDBAE61BB5B75BDF57030A1A536E8C752D_gshared (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434* __this, FixedString64Bytes_t0F1B6FFAFD8C15898CD77D91A79AB36AA078E0A5 ___key0, int32_t ___item1, const RuntimeMethod* method) ;
-// Unity.Collections.NativeArray`1<T> Unity.Collections.NativeArray`1<Unity.Networking.QoS.QosJob/InternalQosServer>::GetSubArray(System.Int32,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9 NativeArray_1_GetSubArray_m637B353B48A6D5F228C2FE3A3E2FF4B685D42C34_gshared (NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9* __this, int32_t ___start0, int32_t ___length1, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeArray`1<Unity.Networking.QoS.QosJob/InternalQosServer>::CopyTo(Unity.Collections.NativeArray`1<T>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_CopyTo_m531ABC72B9FB6F478E80A24D86526BD8AC216F37_gshared (NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9* __this, NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9 ___array0, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeArray`1<Unity.Networking.QoS.QosJob/InternalQosServer>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Dispose_m084917E78A9D5913C2228313ACDCA67E7B0EC4BD_gshared (NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9* __this, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeArray`1<Unity.Networking.QoS.InternalQosResult>::.ctor(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArrayOptions)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1__ctor_m19588523F75BE4785DB4633C841B64D5201AC778_gshared (NativeArray_1_t14416F5A54963FFA0912C5FA738DEB565659C8EC* __this, int32_t ___length0, int32_t ___allocator1, int32_t ___options2, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeArray`1<System.Byte>::.ctor(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArrayOptions)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1__ctor_m981CC7E27B6C9946024877F2696920951443B04F_gshared (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF* __this, int32_t ___length0, int32_t ___allocator1, int32_t ___options2, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeArray`1<System.Byte>::CopyFrom(T[])
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_CopyFrom_mFC94BEB654A8BD48A5A33C0B184821AECAAEED1D_gshared (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___array0, const RuntimeMethod* method) ;
-// System.Boolean Unity.Collections.NativeHashMap`2<Unity.Collections.FixedString64Bytes,System.Int32>::get_IsCreated()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeHashMap_2_get_IsCreated_m5DCC4DF9FD76E61313B0030BE86EE32173DD2018_gshared (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434* __this, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeHashMap`2<Unity.Collections.FixedString64Bytes,System.Int32>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeHashMap_2_Dispose_m7A2438F117EF9016CFF762281C50A6EE3F26656D_gshared (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434* __this, const RuntimeMethod* method) ;
-// Unity.Collections.NativeArray`1/Enumerator<T> Unity.Collections.NativeArray`1<Unity.Networking.QoS.QosJob/InternalQosServer>::GetEnumerator()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t272EDAB48AADBAFC4E828577113E06474364C3B2 NativeArray_1_GetEnumerator_m60B35E47F5AB1BC16C2420273E9ACAECFA3A4D5A_gshared (NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9* __this, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeArray`1/Enumerator<Unity.Networking.QoS.QosJob/InternalQosServer>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_m901A5B90ECB9709F3E2F9BE12C377050C4CC3784_gshared (Enumerator_t272EDAB48AADBAFC4E828577113E06474364C3B2* __this, const RuntimeMethod* method) ;
-// T Unity.Collections.NativeArray`1/Enumerator<Unity.Networking.QoS.QosJob/InternalQosServer>::get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR InternalQosServer_t56825CF99AB62B0FD12D69A5E5EB72FA463E687A Enumerator_get_Current_mC09C7682C579403F8AA1D7131765B5FAE4B935F2_gshared (Enumerator_t272EDAB48AADBAFC4E828577113E06474364C3B2* __this, const RuntimeMethod* method) ;
-// System.Boolean Unity.Collections.NativeArray`1/Enumerator<Unity.Networking.QoS.QosJob/InternalQosServer>::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m0CE557D93B5933FFCA76A9B996357C1EE91A9E29_gshared (Enumerator_t272EDAB48AADBAFC4E828577113E06474364C3B2* __this, const RuntimeMethod* method) ;
-// T[] Unity.Collections.NativeArray`1<System.Byte>::ToArray()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* NativeArray_1_ToArray_m2E1BCF853BB72AAB8C219A18582F0AB2FA05CF1F_gshared (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF* __this, const RuntimeMethod* method) ;
-// System.Boolean Unity.Collections.NativeHashMap`2<Unity.Collections.FixedString64Bytes,System.Int32>::TryGetValue(TKey,TValue&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeHashMap_2_TryGetValue_m2E43BFD6301B5BB0DCC60FC2A41F65E337004453_gshared (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434* __this, FixedString64Bytes_t0F1B6FFAFD8C15898CD77D91A79AB36AA078E0A5 ___key0, int32_t* ___item1, const RuntimeMethod* method) ;
-// System.Void System.ValueTuple`2<Unity.Baselib.LowLevel.Binding/Baselib_Socket_Handle,System.Int32Enum>::.ctor(T1,T2)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueTuple_2__ctor_m3B42D0C0C8DA2E9CD0CF699E7BE171852DD8B4EF_gshared (ValueTuple_2_t41B9FC5418CC7A0FCB6CB77E6213BF60525EA26C* __this, Baselib_Socket_Handle_t5BB40490AAC0DA7C5B3CAA9C93447B28D6474FA1 ___item10, int32_t ___item21, const RuntimeMethod* method) ;
-// System.Void System.ValueTuple`2<System.UInt32,System.Int32>::.ctor(T1,T2)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueTuple_2__ctor_m8ABEBB5D4E7A7063AF2E5CCC7E7EF47D331CD617_gshared (ValueTuple_2_tFFBDA26440901E0AA5635F430F88DB7796969481* __this, uint32_t ___item10, int32_t ___item21, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.LowLevel.Unsafe.UnsafeAppendBuffer::Add<System.Byte>(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeAppendBuffer_Add_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m77D1ED5AB6CFA9B6FF9CC1CFB2B72783A7828BF5_gshared (UnsafeAppendBuffer_t9EC160EA10485CD9DD96EDCBCEA06C7BCEF81500* __this, uint8_t ___value0, const RuntimeMethod* method) ;
-// System.Void System.ValueTuple`2<System.Int32,System.Int32>::.ctor(T1,T2)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueTuple_2__ctor_mF5D8FB18DBF2C4B2F879F8E8E12D8FB8FCDB5477_gshared (ValueTuple_2_t973F7AB0EF5DD3619E518A966941F10D8098F52D* __this, int32_t ___item10, int32_t ___item21, const RuntimeMethod* method) ;
-// System.Void System.ValueTuple`2<System.Int32Enum,System.Byte>::.ctor(T1,T2)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueTuple_2__ctor_m5628829652D74D43DC74CDAC686735796009040D_gshared (ValueTuple_2_t3493A483575961C965EC8BAF0666E67AA00011EB* __this, int32_t ___item10, uint8_t ___item21, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::.ctor(System.Collections.Generic.IDictionary`2<TKey,TValue>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m623BF34EB93B2B3A3B7D46743B508E2E2958939E_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___dictionary0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, const RuntimeMethod* method) ;
-// TKey System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>::get_Key()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) ;
-// TValue System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>::get_Value()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::set_Item(TKey,TValue)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___key0, RuntimeObject* ___value1, const RuntimeMethod* method) ;
-// System.Boolean System.Nullable`1<System.Int32>::get_HasValue()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) ;
-// Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CorePackageRegistry::Register<System.Object>(TPackage)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CorePackageRegistry_Register_TisRuntimeObject_mACE75710C5FF2E7568BD710F2658B3B344F2634D_gshared (CorePackageRegistry_t8A84619B4312955D3D73A62BDFF6042EBE1F0275* __this, RuntimeObject* ___package0, const RuntimeMethod* method) ;
-// Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistration::DependsOn<System.Object>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistration_DependsOn_TisRuntimeObject_m3400ECC31E4225994DD0AEDDC45B11A61E95559C_gshared (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581* __this, const RuntimeMethod* method) ;
-// Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistration::ProvidesComponent<System.Object>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistration_ProvidesComponent_TisRuntimeObject_mBB6FDBE4AAE276784D193AB900F392199F177650_gshared (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581* __this, const RuntimeMethod* method) ;
-// Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistry::RegisterPackage<System.Object>(TPackage)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistry_RegisterPackage_TisRuntimeObject_m5DF8BA5ABD5476A91872308A910C81D92F1FC6DD_gshared (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, RuntimeObject* ___package0, const RuntimeMethod* method) ;
-// TComponent Unity.Services.Core.Internal.CoreRegistry::GetServiceComponent<System.Object>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CoreRegistry_GetServiceComponent_TisRuntimeObject_m6C2601CB56CD9AE5154E543B9AA87E10AFCA875C_gshared (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, const RuntimeMethod* method) ;
-// System.Void System.Nullable`1<System.Int32>::.ctor(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703_gshared (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, int32_t ___value0, const RuntimeMethod* method) ;
-// System.Void Unity.Services.Core.Internal.CoreRegistry::RegisterService<System.Object>(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CoreRegistry_RegisterService_TisRuntimeObject_m7CEA2C7C313B0C96F684DF539445A942DAA1DBFA_gshared (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, RuntimeObject* ___service0, const RuntimeMethod* method) ;
-// System.Void Unity.Services.Core.Internal.CoreRegistry::RegisterServiceComponent<System.Object>(TComponent)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CoreRegistry_RegisterServiceComponent_TisRuntimeObject_m619D1536EFA7133E95AF878679EFDA3A9CFBC67F_gshared (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, RuntimeObject* ___component0, const RuntimeMethod* method) ;
-// System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Create()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0 AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared (const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.WrappedQosService/<GetSortedQosResultsAsync>d__18>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CGetSortedQosResultsAsyncU3Ed__18_tB8AD951812F00113235ACDA859DA52EA751E8A9A_m2E7DDAE5FDD4BC446E3BC5ECBABEDDDFB20A133B_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CGetSortedQosResultsAsyncU3Ed__18_tB8AD951812F00113235ACDA859DA52EA751E8A9A* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::get_Task()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.WrappedQosService/<GetSortedInternalQosResultsAsync>d__19>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA_m1B28419A68712375D00D40103B0AA31C1FE3AD84_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Func`2<Unity.Services.Qos.Internal.QosResult,System.Int32>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m34D53F79EB110F532DEB3662FCE7F14A055AE698_gshared (Func_2_tD1C501C17092D1BC651648AF608F076CE51E810C* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Linq.IOrderedEnumerable`1<TSource> System.Linq.Enumerable::OrderBy<Unity.Services.Qos.Internal.QosResult,System.Int32>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_OrderBy_TisQosResult_tA2296213032595430F8FE40418B3D5BA47E86D27_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mF53AA0808AFA5FA76F40DBC779F1DF51CB7522C9_gshared (RuntimeObject* ___source0, Func_2_tD1C501C17092D1BC651648AF608F076CE51E810C* ___keySelector1, const RuntimeMethod* method) ;
-// System.Void System.Func`2<Unity.Services.Qos.Internal.QosResult,System.Single>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_mA3038ECF2EF1BD15F9ABB13BBAF2221918B0D31C_gshared (Func_2_t44AC78B1DB233007BF6EF0B8A5E0BB471B744261* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Linq.IOrderedEnumerable`1<TSource> System.Linq.Enumerable::ThenBy<Unity.Services.Qos.Internal.QosResult,System.Single>(System.Linq.IOrderedEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_ThenBy_TisQosResult_tA2296213032595430F8FE40418B3D5BA47E86D27_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_m8FEA2115C43B69F993899739EDD2F67353095CCF_gshared (RuntimeObject* ___source0, Func_2_t44AC78B1DB233007BF6EF0B8A5E0BB471B744261* ___keySelector1, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<Unity.Services.Qos.Internal.QosResult>(System.Collections.Generic.IEnumerable`1<TSource>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* Enumerable_ToList_TisQosResult_tA2296213032595430F8FE40418B3D5BA47E86D27_mBFB794DAAAC924050AC41223BF89D821C7F6C462_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.WrappedQosService/<GetSortedRelayQosResultsAsync>d__21>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CGetSortedRelayQosResultsAsyncU3Ed__21_t835378428BD1ACCC0D022C47899EDA5FCEC5BEF1_m0538ED8CE809CCC7B9AB778EE2E6BE61863EEE77_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CGetSortedRelayQosResultsAsyncU3Ed__21_t835378428BD1ACCC0D022C47899EDA5FCEC5BEF1* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.WrappedQosService/<GetSortedMultiplayQosResultsAsync>d__22>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CGetSortedMultiplayQosResultsAsyncU3Ed__22_t798C9E6E5FB38762C945C379E57C6244CC519A78_mC3808A1DD41C47A8667049519205521F031036EA_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CGetSortedMultiplayQosResultsAsyncU3Ed__22_t798C9E6E5FB38762C945C379E57C6244CC519A78* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.WrappedQosService/<GetAllServersAsync>d__23>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CGetAllServersAsyncU3Ed__23_t7AFE6C96D8F04EFBC560FC3BCBC44A63D4D9015C_m2928EE70ADFEBDF36F884FC101539AFEDE9DD65B_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CGetAllServersAsyncU3Ed__23_t7AFE6C96D8F04EFBC560FC3BCBC44A63D4D9015C* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.WrappedQosService/<GetQosResultsAsync>d__24>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CGetQosResultsAsyncU3Ed__24_t558A8B004B2726B7EFE0A1111CCE038EEC82A10F_m59E412D75329B466D0FFCABDBAF3FBEECE524DD0_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CGetQosResultsAsyncU3Ed__24_t558A8B004B2726B7EFE0A1111CCE038EEC82A10F* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Func`2<System.Object,System.Object>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m7F8A01C0B02BC1D4063F4EB1E817F7A48562A398_gshared (Func_2_tACBF5A1656250800CE861707354491F0611F6624* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Void System.Func`2<System.ValueTuple`2<System.Object,System.Object>,System.Boolean>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m12AD13B34233DFD7C1397ABBFE261BB6C85FC753_gshared (Func_2_t852072CDFF0303D1154452D6964FAC8D36FAE7C4* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Collections.Generic.IEnumerable`1<TSource> System.Linq.Enumerable::Where<System.ValueTuple`2<System.Object,System.Object>>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Where_TisValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A_mED8ED73256F14936A3806B41A4741017378AA012_gshared (RuntimeObject* ___source0, Func_2_t852072CDFF0303D1154452D6964FAC8D36FAE7C4* ___predicate1, const RuntimeMethod* method) ;
-// System.Void System.Func`2<System.ValueTuple`2<System.Object,System.Object>,System.Int32>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_mC868057A64EED67F0D73A8314239C6CE3D52B1A3_gshared (Func_2_t0628A1BF337C31EEC0227EDFF1420E301156D17E* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Linq.IOrderedEnumerable`1<TSource> System.Linq.Enumerable::OrderBy<System.ValueTuple`2<System.Object,System.Object>,System.Int32>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_OrderBy_TisValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m9461C4266BD19F2B17DC839425EBCE1BAE8F7157_gshared (RuntimeObject* ___source0, Func_2_t0628A1BF337C31EEC0227EDFF1420E301156D17E* ___keySelector1, const RuntimeMethod* method) ;
-// System.Void System.Func`2<System.ValueTuple`2<System.Object,System.Object>,System.Single>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m8C55D823C3631D1CB33D72EDBA4F3EF0F8BA04F8_gshared (Func_2_t18D3285E7B8BB290E064CE9D1D38362362D9AD9E* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Linq.IOrderedEnumerable`1<TSource> System.Linq.Enumerable::ThenBy<System.ValueTuple`2<System.Object,System.Object>,System.Single>(System.Linq.IOrderedEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_ThenBy_TisValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_m4B6A455AF2D811FA986DCA23AC8C4F02A961340A_gshared (RuntimeObject* ___source0, Func_2_t18D3285E7B8BB290E064CE9D1D38362362D9AD9E* ___keySelector1, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<System.ValueTuple`2<System.Object,System.Object>>(System.Collections.Generic.IEnumerable`1<TSource>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tFD45D9C668A7B019127FE442DDD78CF33B7DEDBF* Enumerable_ToList_TisValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A_m08BFD55848B5CE982610D8DDE275E7D685216583_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
-// T System.Collections.Generic.List`1<System.ValueTuple`2<System.Object,System.Object>>::get_Item(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A List_1_get_Item_mDEEB92B35DD1643CAC7F2F8F7CF3B84C99C3DE42_gshared (List_1_tFD45D9C668A7B019127FE442DDD78CF33B7DEDBF* __this, int32_t ___index0, const RuntimeMethod* method) ;
-// TResult System.Func`2<System.Object,System.Object>::Invoke(T)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Func_2_Invoke_mDBA25DA5DA5B7E056FB9B026AF041F1385FB58A9_gshared_inline (Func_2_tACBF5A1656250800CE861707354491F0611F6624* __this, RuntimeObject* ___arg0, const RuntimeMethod* method) ;
-// T System.Collections.Generic.List`1<System.Object>::get_Item(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___index0, const RuntimeMethod* method) ;
-// System.Int32 System.Collections.Generic.List`1<System.ValueTuple`2<System.Object,System.Object>>::get_Count()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m1747175525F15736BD2C9209C7B090DC8164FE7A_gshared_inline (List_1_tFD45D9C668A7B019127FE442DDD78CF33B7DEDBF* __this, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.WrappedQosService/<GetSortedInternalServiceQosResultsAsync>d__27>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE_m637EA6608B39282E33ACDFE5A61567924BBCEBB6_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Boolean>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m5344FBAF64D5959B7625A878614920DF321DC6DB_gshared (Func_2_t6F7F809A2CFA36D87B0824064AE7E3627A3F0F47* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Collections.Generic.IEnumerable`1<TSource> System.Linq.Enumerable::Where<Unity.Services.Qos.Runner.QosAnnotatedResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Where_TisQosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E_m6A59E63DF772F67AF676654513B124388B594B50_gshared (RuntimeObject* ___source0, Func_2_t6F7F809A2CFA36D87B0824064AE7E3627A3F0F47* ___predicate1, const RuntimeMethod* method) ;
-// System.Void System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Object>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_mAFEB3EC0CDBAB215247C7C5A5A596235FBE5B540_gshared (Func_2_t94A32F373F3E2DB4450FB3A4E23154278BF43C45* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Collections.Generic.IEnumerable`1<System.Linq.IGrouping`2<TKey,TSource>> System.Linq.Enumerable::GroupBy<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Object>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_GroupBy_TisQosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E_TisRuntimeObject_mE1F3E1C1E78D613B973E451776FAE8BF8096A2BF_gshared (RuntimeObject* ___source0, Func_2_t94A32F373F3E2DB4450FB3A4E23154278BF43C45* ___keySelector1, const RuntimeMethod* method) ;
-// System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<System.Object,System.Object>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m67C538A5EBF57C4844107A8EF25DB2CAAFBAF8FB_gshared (RuntimeObject* ___source0, Func_2_tACBF5A1656250800CE861707354491F0611F6624* ___selector1, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* Enumerable_ToList_TisRuntimeObject_m6456D63764F29E6B5B2422C3DE25113577CF51EE_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
-// System.Void System.Func`2<System.Object,System.Int32>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_mEB7603EDE6D79A62E5BD74A896F030D2C9F2A821_gshared (Func_2_t9A0D493A82DCC47C9C819A3B045E02D9B5DDCE1B* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Linq.IOrderedEnumerable`1<TSource> System.Linq.Enumerable::OrderBy<System.Object,System.Int32>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_OrderBy_TisRuntimeObject_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m0CD0677A1278BFC7E13405D11D1EF30919C9E9A2_gshared (RuntimeObject* ___source0, Func_2_t9A0D493A82DCC47C9C819A3B045E02D9B5DDCE1B* ___keySelector1, const RuntimeMethod* method) ;
-// System.Void System.Func`2<System.Object,System.Single>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m04EB988C3F849C1BE164FC6656C2281DF47EEAA7_gshared (Func_2_tB5C40A90702B6A6A2E315FD927EEFC9FB69F2B12* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Linq.IOrderedEnumerable`1<TSource> System.Linq.Enumerable::ThenBy<System.Object,System.Single>(System.Linq.IOrderedEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_ThenBy_TisRuntimeObject_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_m97D324F5984C8AD4CC8BBA5E664A0CFDF8FA211F_gshared (RuntimeObject* ___source0, Func_2_tB5C40A90702B6A6A2E315FD927EEFC9FB69F2B12* ___keySelector1, const RuntimeMethod* method) ;
-// System.Boolean System.Collections.Generic.Dictionary`2<System.Object,System.Object>::TryGetValue(TKey,TValue&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___key0, RuntimeObject** ___value1, const RuntimeMethod* method) ;
-// System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Object>::GetAwaiter()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared (Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* __this, const RuntimeMethod* method) ;
-// System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>::get_IsCompleted()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared (TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* __this, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.WrappedQosService/<GetSortedQosResultsAsync>d__18>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetSortedQosResultsAsyncU3Ed__18_tB8AD951812F00113235ACDA859DA52EA751E8A9A_m0110077BE9114C7638A58C9E1CB2415CD36901D8_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CGetSortedQosResultsAsyncU3Ed__18_tB8AD951812F00113235ACDA859DA52EA751E8A9A* ___stateMachine1, const RuntimeMethod* method) ;
-// TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>::GetResult()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared (TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* __this, const RuntimeMethod* method) ;
-// System.Void System.Func`2<Unity.Services.Qos.Internal.QosResult,System.Object>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_mEAE85F7CB38FE1FBAF9D455BD5E989DD846722B6_gshared (Func_2_t89D9548C15273DC61D5CB695EB12E7D8F9277392* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<Unity.Services.Qos.Internal.QosResult,System.Object>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Select_TisQosResult_tA2296213032595430F8FE40418B3D5BA47E86D27_TisRuntimeObject_mB4B2474CD72EF53205FCEC5DBA04869091B09613_gshared (RuntimeObject* ___source0, Func_2_t89D9548C15273DC61D5CB695EB12E7D8F9277392* ___selector1, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::SetException(System.Exception)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, Exception_t* ___exception0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::SetResult(TResult)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, RuntimeObject* ___result0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<System.Object>::.ctor(System.Collections.Generic.IEnumerable`1<T>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_mE097DBD72433D1AFC11733F5678602603A756424_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___collection0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.WrappedQosService/<GetSortedInternalQosResultsAsync>d__19>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA_m9DC52C5C0ED9FBEAB8890BBD766210068FFA87A7_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA* ___stateMachine1, const RuntimeMethod* method) ;
-// T Unity.Services.Qos.Response`1<System.Object>::get_Result()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Response_1_get_Result_m9D68198F60A56507D31D65F9AC1DF1278BA89249_gshared_inline (Response_1_t67079F6E4F63FACFADE6AE83B5E8C8249BB3895D* __this, const RuntimeMethod* method) ;
-// System.Boolean System.Linq.Enumerable::Any<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerable_Any_TisRuntimeObject_m67CFBD544CF1D1C0C7E7457FDBDB81649DE26847_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m26621967056E90855218CD3B850F673A6DDE4661_gshared (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* __this, const RuntimeMethod* method) ;
-// System.Void System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Int32>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m68F0D2CBDAAB6BAB216514D50DC1CAFB0CD146D6_gshared (Func_2_t0596FD00E4993985015476D2AFEF668500E1213D* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Int32>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Select_TisQosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mBD1D03D5D1222BE97A350717CC25E89E56FE2EEC_gshared (RuntimeObject* ___source0, Func_2_t0596FD00E4993985015476D2AFEF668500E1213D* ___selector1, const RuntimeMethod* method) ;
-// System.Void System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Single>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_mD42E2A6BF65EE01397E167AEC8799B27B9B3EB54_gshared (Func_2_tFE9857AB37D1E4D6DA9D12D52C5984F450447084* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Single>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Select_TisQosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_mBDB2A0303791918057B21B45B0E8714A8B78DA4E_gshared (RuntimeObject* ___source0, Func_2_tFE9857AB37D1E4D6DA9D12D52C5984F450447084* ___selector1, const RuntimeMethod* method) ;
-// System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Object>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Select_TisQosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E_TisRuntimeObject_m59953AF9AA7754163835ED17CEF6255CCA533591_gshared (RuntimeObject* ___source0, Func_2_t94A32F373F3E2DB4450FB3A4E23154278BF43C45* ___selector1, const RuntimeMethod* method) ;
-// TSource System.Linq.Enumerable::First<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_First_TisRuntimeObject_mEFECF1B8C3201589C5AF34176DCBF8DD926642D6_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.WrappedQosService/<GetSortedRelayQosResultsAsync>d__21>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetSortedRelayQosResultsAsyncU3Ed__21_t835378428BD1ACCC0D022C47899EDA5FCEC5BEF1_m32D409A045C25EECDDB74271AA9E90C4CF8B513A_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CGetSortedRelayQosResultsAsyncU3Ed__21_t835378428BD1ACCC0D022C47899EDA5FCEC5BEF1* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.WrappedQosService/<GetSortedMultiplayQosResultsAsync>d__22>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetSortedMultiplayQosResultsAsyncU3Ed__22_t798C9E6E5FB38762C945C379E57C6244CC519A78_mD212E07EF0A44F45B15C003B4D2E50E13314D946_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CGetSortedMultiplayQosResultsAsyncU3Ed__22_t798C9E6E5FB38762C945C379E57C6244CC519A78* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::Add(TKey,TValue)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___key0, RuntimeObject* ___value1, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.WrappedQosService/<GetAllServersAsync>d__23>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetAllServersAsyncU3Ed__23_t7AFE6C96D8F04EFBC560FC3BCBC44A63D4D9015C_m34B693CFFF1FEC35191B11047D10720CFD471414_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CGetAllServersAsyncU3Ed__23_t7AFE6C96D8F04EFBC560FC3BCBC44A63D4D9015C* ___stateMachine1, const RuntimeMethod* method) ;
-// T Unity.Services.Qos.V2.Response`1<System.Object>::get_Result()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Response_1_get_Result_mDD07C8A8C9C0DB160AFF23A743B13D5C32DF42D6_gshared_inline (Response_1_t1DC86EEE7CDC58EAF9D58E332C29DA1D24AD5172* __this, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.WrappedQosService/<GetQosResultsAsync>d__24>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetQosResultsAsyncU3Ed__24_t558A8B004B2726B7EFE0A1111CCE038EEC82A10F_mEE8F63B317EA56A5EB46A33B0E5AC95D9B59F252_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CGetQosResultsAsyncU3Ed__24_t558A8B004B2726B7EFE0A1111CCE038EEC82A10F* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Int32 System.Collections.Generic.List`1<System.Object>::get_Count()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.WrappedQosService/<GetSortedInternalServiceQosResultsAsync>d__27>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE_m7DA3CFB48C7887D5F5E37D490C957AB49ED72560_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
-// System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Cast<System.Object>(System.Collections.IEnumerable)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Cast_TisRuntimeObject_m21250FA47CFF08469ACE158D6FA4E1FE11837D29_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.V2.Http.HttpClient/<MakeRequestAsync>d__1>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__1_tA36A27065647BC2070412BAAA84A31AA84C97205_mEA91176E11BE0F78BDAD69FC6A7048860670A26B_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CMakeRequestAsyncU3Ed__1_tA36A27065647BC2070412BAAA84A31AA84C97205* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.V2.Http.HttpClient/<MakeRequestAsync>d__2>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__2_t1A17D478FFF3CD5B437959A6FAA508DB165387D3_m6A8F75A30107EB51ACE1304E388956DC94176FF9_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CMakeRequestAsyncU3Ed__2_t1A17D478FFF3CD5B437959A6FAA508DB165387D3* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.V2.Http.HttpClient/<CreateWebRequestAsync>d__3>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__3_t1EFEB9E8267182C8D8BB5600FBA55A157336348E_mFCF2E92A390D3A72DC83518A1D036F64945F1B42_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CCreateWebRequestAsyncU3Ed__3_t1EFEB9E8267182C8D8BB5600FBA55A157336348E* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.V2.Http.HttpClient/<CreateHttpClientResponse>d__4>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44_mB0D9415B36228C861935537E67203ABAD5B984C1_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.V2.Http.HttpClient/<CreateWebRequestAsync>d__5>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B_m553F21E525373B6F26061D835F9D971F8D533ACC_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.V2.Http.HttpClient/<MakeRequestAsync>d__1>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMakeRequestAsyncU3Ed__1_tA36A27065647BC2070412BAAA84A31AA84C97205_mF6224C913A7EE818867FF944E8B695DD5B0403F4_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CMakeRequestAsyncU3Ed__1_tA36A27065647BC2070412BAAA84A31AA84C97205* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.V2.Http.HttpClient/<MakeRequestAsync>d__2>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMakeRequestAsyncU3Ed__2_t1A17D478FFF3CD5B437959A6FAA508DB165387D3_m88EFFD9EACC46A71D8E80A8E2B2AD9B4407EB667_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CMakeRequestAsyncU3Ed__2_t1A17D478FFF3CD5B437959A6FAA508DB165387D3* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.V2.Http.HttpClient/<CreateWebRequestAsync>d__3>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateWebRequestAsyncU3Ed__3_t1EFEB9E8267182C8D8BB5600FBA55A157336348E_mAB8A89C17C9A74689B809D88B9B04EB600FBF5F1_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CCreateWebRequestAsyncU3Ed__3_t1EFEB9E8267182C8D8BB5600FBA55A157336348E* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.V2.Http.HttpClient/<>c__DisplayClass4_0/<<CreateHttpClientResponse>b__0>d>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t1D65F104BFF072C0D23CAAE01EB5444198FE9A95_m155D5136A2245050B458D57DBCB9375C300A2A34_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t1D65F104BFF072C0D23CAAE01EB5444198FE9A95* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.V2.Http.HttpClient/<>c__DisplayClass4_0/<<CreateHttpClientResponse>b__0>d>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t1D65F104BFF072C0D23CAAE01EB5444198FE9A95_m38967C63149B3C6E268E04168F25DE29894A61AE_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t1D65F104BFF072C0D23CAAE01EB5444198FE9A95* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Func`1<System.Object>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_1__ctor_m663374A863E492A515BE9626B6F0E444991834E8_gshared (Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskFactory::StartNew<System.Object>(System.Func`1<TResult>,System.Threading.CancellationToken,System.Threading.Tasks.TaskCreationOptions,System.Threading.Tasks.TaskScheduler)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* TaskFactory_StartNew_TisRuntimeObject_m14FDB1694FEE097B11C3119BD89F3C350F7DE51B_gshared (TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0* __this, Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4* ___function0, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED ___cancellationToken1, int32_t ___creationOptions2, TaskScheduler_t3F0550EBEF7C41F74EC8C08FF4BED0D8CE66006E* ___scheduler3, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.V2.Http.HttpClient/<CreateHttpClientResponse>d__4>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44_m960654A6A6A3408C245C321A7EDDEA91FD58B88E_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.V2.Http.HttpClient/<>c__DisplayClass5_0/<<CreateWebRequestAsync>b__0>d>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t55210C5DB4EEFD02E45CB82DA63C5261E92D1E7B_m236635907C563B7251A270C36D01D858024F49A9_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t55210C5DB4EEFD02E45CB82DA63C5261E92D1E7B* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.V2.Http.HttpClient/<>c__DisplayClass5_0/<<CreateWebRequestAsync>b__0>d>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t55210C5DB4EEFD02E45CB82DA63C5261E92D1E7B_m90445EE3F4E9C13CAD7B95E9D92C1B1891BF55E1_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t55210C5DB4EEFD02E45CB82DA63C5261E92D1E7B* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.V2.Http.HttpClient/<CreateWebRequestAsync>d__5>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B_m5E71842BB36874ABA2FFB5FA6E7F2CFC7D2C00D8_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void Newtonsoft.Json.Utilities.AotHelper::EnsureType<System.Object>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotHelper_EnsureType_TisRuntimeObject_m8D3D63845F34DADDDC746C0C444E40309347F992_gshared (const RuntimeMethod* method) ;
-// System.Void System.Func`2<System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>,System.Object>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m60F64297108A01DFB5663C9BA121893957855907_gshared (Func_2_tF42287527472FA89789873F068A87C60A00EC7D3* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Collections.Generic.Dictionary`2<TKey,TElement> System.Linq.Enumerable::ToDictionary<System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>,System.Object,System.Object>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* Enumerable_ToDictionary_TisKeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230_TisRuntimeObject_TisRuntimeObject_mFAD38355767A6BC98DB0AF76ADAB9AEDE1A401CB_gshared (RuntimeObject* ___source0, Func_2_tF42287527472FA89789873F068A87C60A00EC7D3* ___keySelector1, Func_2_tF42287527472FA89789873F068A87C60A00EC7D3* ___elementSelector2, const RuntimeMethod* method) ;
-// T[] System.Array::Empty<System.Object>()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline (const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<System.Object>::GetEnumerator()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1/Enumerator<System.Object>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
-// T System.Collections.Generic.List`1/Enumerator<System.Object>::get_Current()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<System.Object>::Add(T)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___item0, const RuntimeMethod* method) ;
-// System.Boolean System.Collections.Generic.List`1/Enumerator<System.Object>::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
-// System.Boolean System.Collections.Generic.Dictionary`2<System.Object,System.Object>::ContainsKey(TKey)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_m703047C213F7AB55C9DC346596287773A1F670CD_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___key0, const RuntimeMethod* method) ;
-// TValue System.Collections.Generic.Dictionary`2<System.Object,System.Object>::get_Item(TKey)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Dictionary_2_get_Item_m4AAAECBE902A211BF2126E6AFA280AEF73A3E0D6_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___key0, const RuntimeMethod* method) ;
-// System.Void System.Threading.Tasks.TaskCompletionSource`1<System.Object>::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TaskCompletionSource_1__ctor_mBF9A903AD14C4E9CF044B227776C532BA9C40D60_gshared (TaskCompletionSource_1_tB4EF81F69CCF7C4F0D956F9B26127C0634A24A37* __this, const RuntimeMethod* method) ;
-// System.Void System.Action`1<System.Object>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m2E1DFA67718FC1A0B6E5DFEB78831FFE9C059EB4_gshared (Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskCompletionSource`1<System.Object>::get_Task()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* TaskCompletionSource_1_get_Task_mF44990297C25C7DBE1E65241C03D0120CB551552_gshared_inline (TaskCompletionSource_1_tB4EF81F69CCF7C4F0D956F9B26127C0634A24A37* __this, const RuntimeMethod* method) ;
-// System.Void System.Threading.Tasks.TaskCompletionSource`1<System.Object>::SetResult(TResult)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TaskCompletionSource_1_SetResult_m948378015A7A0E42647452EB7003466406B831A4_gshared (TaskCompletionSource_1_tB4EF81F69CCF7C4F0D956F9B26127C0634A24A37* __this, RuntimeObject* ___result0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.KeyValuePair`2<System.Int64,System.Boolean>::.ctor(TKey,TValue)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyValuePair_2__ctor_m4D69811DF1F96947FE72B76275A642FD26D84B5E_gshared (KeyValuePair_2_tB238689916B08B0CFF54232EB53E746022CA86A2* __this, int64_t ___key0, bool ___value1, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Dictionary`2<System.Int64,System.Boolean>::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_mC2E112E191D945753C30F6A2475DDB865FD83097_gshared (Dictionary_2_tCF06E70C571839D7107A1DCD7514332D33872BFF* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Dictionary`2<System.Int64,System.Boolean>::Add(TKey,TValue)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_m2FE794EFEAD72A5A0A0C15DC8B4D10002655FAC6_gshared (Dictionary_2_tCF06E70C571839D7107A1DCD7514332D33872BFF* __this, int64_t ___key0, bool ___value1, const RuntimeMethod* method) ;
-// System.Collections.Generic.Dictionary`2/KeyCollection<TKey,TValue> System.Collections.Generic.Dictionary`2<System.Object,System.Object>::get_Keys()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KeyCollection_tB45A861D090B15129521119AE48ED3813820A974* Dictionary_2_get_Keys_m72D290F90654BFD683FA7AA7C63D9F4F692218B6_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, const RuntimeMethod* method) ;
-// System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<TKey,TValue> System.Collections.Generic.Dictionary`2/KeyCollection<System.Object,System.Object>::GetEnumerator()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t65CC956745B1180C04CE6C6910FB27C5F32BB9FF KeyCollection_GetEnumerator_m7E77FBA7DE2D3876EC02F396712C4AA5B1D535A5_gshared (KeyCollection_tB45A861D090B15129521119AE48ED3813820A974* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.Object,System.Object>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mEB2A61F3F3F420C1B1DFD5C74EEFD4BD7761BCF7_gshared (Enumerator_t65CC956745B1180C04CE6C6910FB27C5F32BB9FF* __this, const RuntimeMethod* method) ;
-// TKey System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.Object,System.Object>::get_Current()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_mD6472FA27D28B9AE64A0FEF796C72ABBC2420EBF_gshared_inline (Enumerator_t65CC956745B1180C04CE6C6910FB27C5F32BB9FF* __this, const RuntimeMethod* method) ;
-// System.Boolean System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.Object,System.Object>::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mB5E00F11BCA3AC963F9BA72659FA76B107863F3C_gshared (Enumerator_t65CC956745B1180C04CE6C6910FB27C5F32BB9FF* __this, const RuntimeMethod* method) ;
-// System.Byte[] Unity.Services.Qos.V2.QosDiscovery.JsonSerialization::Serialize<System.Object>(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* JsonSerialization_Serialize_TisRuntimeObject_mD5493145A6A66AD77052A71BD047EDFAAF960B32_gshared (RuntimeObject* ___obj0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.V2.Apis.QosDiscovery.QosDiscoveryApiClient/<GetAllServersAsync>d__7>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CGetAllServersAsyncU3Ed__7_t2ED4A0AF92E03B5328838CEAD6458016E2766DBB_mFC4C95B8BF73DDF2F1FB1B0888980A7638D5AA9D_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CGetAllServersAsyncU3Ed__7_t2ED4A0AF92E03B5328838CEAD6458016E2766DBB* ___stateMachine0, const RuntimeMethod* method) ;
-// T System.Nullable`1<System.Int32>::GetValueOrDefault()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Nullable_1_GetValueOrDefault_m8D130DB7F2A1E694736B449176F9C26DB456597B_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.V2.Apis.QosDiscovery.QosDiscoveryApiClient/<GetAllServersAsync>d__7>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetAllServersAsyncU3Ed__7_t2ED4A0AF92E03B5328838CEAD6458016E2766DBB_mAB6DECAEABB70307DE24CD31FBDBE49B05192E03_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CGetAllServersAsyncU3Ed__7_t2ED4A0AF92E03B5328838CEAD6458016E2766DBB* ___stateMachine1, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::.ctor(System.Int32,Unity.Collections.AllocatorManager/AllocatorHandle)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeHashMap_2__ctor_mAA3C0AC3AEF5600B8C6DA242A9EDFE8B883FA23F_gshared (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1* __this, int32_t ___capacity0, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator1, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeArray`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::.ctor(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArrayOptions)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1__ctor_m788DE0F85C4051DDF092DDF96484DE655ACFB6F1_gshared (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18* __this, int32_t ___length0, int32_t ___allocator1, int32_t ___options2, const RuntimeMethod* method) ;
+// System.Boolean Unity.Collections.NativeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::ContainsKey(TKey)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeHashMap_2_ContainsKey_m13F9C6B811D40F652794DDC42417F29CF81D2DE5_gshared (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___key0, const RuntimeMethod* method) ;
+// TValue Unity.Collections.NativeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::get_Item(TKey)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeHashMap_2_get_Item_mE7FAFF8EA5437C2D39E450ECC94D4A5CA55D7FEC_gshared (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___key0, Il2CppFullySharedGenericStruct* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::Add(TKey,TValue)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeHashMap_2_Add_mE74E9833A58615B8A61692936F97AE77F1C21B0E_gshared (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___key0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___item1, const RuntimeMethod* method) ;
+// Unity.Collections.NativeArray`1<T> Unity.Collections.NativeArray`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::GetSubArray(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 NativeArray_1_GetSubArray_mB3D1C75BB777B0C93DF3FB3B297F748B41362959_gshared (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18* __this, int32_t ___start0, int32_t ___length1, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeArray`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::CopyTo(Unity.Collections.NativeArray`1<T>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_CopyTo_mCE5ACF49C2F1719FB011E7B9715D90315C6BB72C_gshared (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18* __this, NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 ___array0, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeArray`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Dispose_m365A262FA4CA431467F021D7732CECD68316AF80_gshared (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18* __this, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeArray`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::CopyFrom(T[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_CopyFrom_mA52B88617F4F7972D7275E97D2D52CF623754308_gshared (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18* __this, __Il2CppFullySharedGenericStructTypeU5BU5D_tF3B929B6E80D0A8C109178E11CE8FF9957B014C1* ___array0, const RuntimeMethod* method) ;
+// System.Boolean Unity.Collections.NativeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::get_IsCreated()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeHashMap_2_get_IsCreated_m0E18B56AC03D43981A74FB7C76091BB105AE0CFE_gshared (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1* __this, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeHashMap_2_Dispose_m870F88F2CA4E95C70D44708181BADD082451D1C6_gshared (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1* __this, const RuntimeMethod* method) ;
+// Unity.Collections.NativeArray`1/Enumerator<T> Unity.Collections.NativeArray`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::GetEnumerator()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t82F77221EB09A3A14061DC0C6965526D856BC405 NativeArray_1_GetEnumerator_mB8476B005B66C374A79CAA0F5887F98EDD4D8E32_gshared (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18* __this, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeArray`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_m97F29D6F80B478A97A6DA81F665E7DA693E17E64_gshared (Enumerator_t82F77221EB09A3A14061DC0C6965526D856BC405* __this, const RuntimeMethod* method) ;
+// T Unity.Collections.NativeArray`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_get_Current_mF9A198DACCE8ED0DC6FD097825D7A0F82D149DBA_gshared (Enumerator_t82F77221EB09A3A14061DC0C6965526D856BC405* __this, Il2CppFullySharedGenericStruct* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Boolean Unity.Collections.NativeArray`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mC9099E56E01AB33169AB4EE888BD9A2B752961DE_gshared (Enumerator_t82F77221EB09A3A14061DC0C6965526D856BC405* __this, const RuntimeMethod* method) ;
+// T[] Unity.Collections.NativeArray`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::ToArray()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR __Il2CppFullySharedGenericStructTypeU5BU5D_tF3B929B6E80D0A8C109178E11CE8FF9957B014C1* NativeArray_1_ToArray_m36734C0A577134F73463545CA7A587BCA1792002_gshared (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18* __this, const RuntimeMethod* method) ;
+// System.Boolean Unity.Collections.NativeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::TryGetValue(TKey,TValue&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeHashMap_2_TryGetValue_m76AEC24FD506266541AE43823590F7D44AAC3718_gshared (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___key0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct* ___item1, const RuntimeMethod* method) ;
+// System.Void System.ValueTuple`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(T1,T2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueTuple_2__ctor_mCAE8E725F680FA6BE2C23B9686C9F6056BB7E5CD_gshared (ValueTuple_2_tBAA1E1D7D97D80E0EBA7FE8773B1FF409AEA3829* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___item10, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___item21, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.LowLevel.Unsafe.UnsafeAppendBuffer::Add<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeAppendBuffer_Add_TisIl2CppFullySharedGenericStruct_mDDC9C1D1487BB5B9B776AD9F9B6581F838DA5C09_gshared (UnsafeAppendBuffer_t9EC160EA10485CD9DD96EDCBCEA06C7BCEF81500* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___value0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Collections.Generic.IDictionary`2<TKey,TValue>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m3CE78C81B3C997FF9C14675CFBBAD014EF68FE30_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, RuntimeObject* ___dictionary0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m7745B6ED71E47C95E1BFCE647C4F026A404C668F_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, const RuntimeMethod* method) ;
+// TKey System.Collections.Generic.KeyValuePair`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Key()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void KeyValuePair_2_get_Key_mBE75BF8983618BC1ACEC20F94C1BFF85C8AA50F1_gshared_inline (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// TValue System.Collections.Generic.KeyValuePair`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Value()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void KeyValuePair_2_get_Value_mFA1964BF56AA214EE0D491CC197F61BC9E5F1F7A_gshared_inline (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::set_Item(TKey,TValue)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_m4C6841170DD11AED683D2D71919F362A4CFF4A80_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___key0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___value1, const RuntimeMethod* method) ;
+// System.Boolean System.Nullable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::get_HasValue()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_m14F273FB376DF00D727434CDCD28AB4EDCC14C3C_gshared_inline (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339* __this, const RuntimeMethod* method) ;
+// Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CorePackageRegistry::Register<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(TPackage)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CorePackageRegistry_Register_TisIl2CppFullySharedGenericAny_m2720385A680E161C3ECC0EDB9FF721DA287E9523_gshared (CorePackageRegistry_t8A84619B4312955D3D73A62BDFF6042EBE1F0275* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___package0, const RuntimeMethod* method) ;
+// Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistration::DependsOn<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistration_DependsOn_TisIl2CppFullySharedGenericAny_m39B2F139D6183E40C4BF47E34CE79A07F637D6FC_gshared (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581* __this, const RuntimeMethod* method) ;
+// Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistration::ProvidesComponent<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistration_ProvidesComponent_TisIl2CppFullySharedGenericAny_mB57D4D1C16DCBF54BC3901928868F4A7336C2398_gshared (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581* __this, const RuntimeMethod* method) ;
+// Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistry::RegisterPackage<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(TPackage)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistry_RegisterPackage_TisIl2CppFullySharedGenericAny_mC0037D9C3D926AA642C1CCFE43EB1CF8F08B8A88_gshared (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___package0, const RuntimeMethod* method) ;
+// TComponent Unity.Services.Core.Internal.CoreRegistry::GetServiceComponent<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CoreRegistry_GetServiceComponent_TisIl2CppFullySharedGenericAny_m26E5A2A0666FCF9B47AB4CD6891285167234D99B_gshared (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Void System.Nullable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::.ctor(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Nullable_1__ctor_m4257D7FF23A495D1B204F20330FBDED58248E4CC_gshared (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___value0, const RuntimeMethod* method) ;
+// System.Void Unity.Services.Core.Internal.CoreRegistry::RegisterService<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CoreRegistry_RegisterService_TisIl2CppFullySharedGenericAny_m7A2580AAC9C2A8517E547AD6AB398DD1A7B3D25A_gshared (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___service0, const RuntimeMethod* method) ;
+// System.Void Unity.Services.Core.Internal.CoreRegistry::RegisterServiceComponent<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(TComponent)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CoreRegistry_RegisterServiceComponent_TisIl2CppFullySharedGenericAny_m746220ECD71433C98700667A9511A1B7DCC98400_gshared (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___component0, const RuntimeMethod* method) ;
+// System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Create()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared (const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Start<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Task()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4* __this, const RuntimeMethod* method) ;
+// System.Void System.Func`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// System.Linq.IOrderedEnumerable`1<TSource> System.Linq.Enumerable::OrderBy<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_OrderBy_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mCA0D4A157D5453421E5E883B0A9489E97328A9BC_gshared (RuntimeObject* ___source0, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0* ___keySelector1, const RuntimeMethod* method) ;
+// System.Linq.IOrderedEnumerable`1<TSource> System.Linq.Enumerable::ThenBy<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Linq.IOrderedEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_ThenBy_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m1495B48C677043AB0D847DE5D9B1D76175B4C750_gshared (RuntimeObject* ___source0, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0* ___keySelector1, const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<TSource>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* Enumerable_ToList_TisIl2CppFullySharedGenericAny_m191EA129E511F9B8304FF8826A2DA645E06CCBF0_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
+// System.Collections.Generic.IEnumerable`1<TSource> System.Linq.Enumerable::Where<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Where_TisIl2CppFullySharedGenericAny_m3F416675DC7A5572025B02ED373C41AD9ED8F6C4_gshared (RuntimeObject* ___source0, Func_2_t19E50C11C3E1F20B5A8FDB85D7DD353B6DFF868B* ___predicate1, const RuntimeMethod* method) ;
+// T System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Item(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_get_Item_m6E4BA37C1FB558E4A62AE4324212E45D09C5C937_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, int32_t ___index0, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// TResult System.Func`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Invoke(T)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Func_2_Invoke_m31CAC166FDC80DC5AE52A5AEFFEE2D9B27A1CA3F_gshared_inline (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___arg0, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Int32 System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Count()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, const RuntimeMethod* method) ;
+// System.Collections.Generic.IEnumerable`1<System.Linq.IGrouping`2<TKey,TSource>> System.Linq.Enumerable::GroupBy<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_GroupBy_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mB9E8C5C948502E9809A6BF8D0CA7AB2C34D175DA_gshared (RuntimeObject* ___source0, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0* ___keySelector1, const RuntimeMethod* method) ;
+// System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Select_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m5BBCA2BC02448D0B77D2201BB08B13BAB3BABA53_gshared (RuntimeObject* ___source0, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0* ___selector1, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::TryGetValue(TKey,TValue&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_TryGetValue_m7519D765EAF1E8A7D3137C2F1B7B3A01D15A1692_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___key0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny* ___value1, const RuntimeMethod* method) ;
+// System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::GetAwaiter()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* __this, const RuntimeMethod* method) ;
+// System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_IsCompleted()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8* __this, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::AwaitUnsafeOnCompleted<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny* ___awaiter0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny* ___stateMachine1, const RuntimeMethod* method) ;
+// TResult System.Runtime.CompilerServices.TaskAwaiter`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::GetResult()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::SetException(System.Exception)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4* __this, Exception_t* ___exception0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::SetResult(TResult)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___result0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Collections.Generic.IEnumerable`1<T>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_mACCB7726C2E9728AE336F99C68B334459F9F30FB_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, RuntimeObject* ___collection0, const RuntimeMethod* method) ;
+// T Unity.Services.Qos.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Result()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Response_1_get_Result_m149CD970003E5E66747C6795927991AC11FED47A_gshared_inline (/*Unity.Services.Qos.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_t4B73EEA711E336B136237CB6557E9F99516BDB6A* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Boolean System.Linq.Enumerable::Any<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<TSource>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerable_Any_TisIl2CppFullySharedGenericAny_m3499AC108A84D818DD8C221F8E60145246FC8A09_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m0AFBAEA7EC427E32CC9CA267B1930DC5DF67A374_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, const RuntimeMethod* method) ;
+// TSource System.Linq.Enumerable::First<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<TSource>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerable_First_TisIl2CppFullySharedGenericAny_mCFC88D63540FB5C7B03DD3E47157C18FD4AFE595_gshared (RuntimeObject* ___source0, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Add(TKey,TValue)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_m54D479280472DEA042DB3933AF547E666B017333_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___key0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___value1, const RuntimeMethod* method) ;
+// T Unity.Services.Qos.V2.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Result()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Response_1_get_Result_m471D36F95DF8916F85F881D9B25178856D9B7364_gshared_inline (/*Unity.Services.Qos.V2.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_tE01D2CBFFA6377AB5ABD5A628829909B9DE01269* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Cast<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.IEnumerable)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Cast_TisIl2CppFullySharedGenericAny_m1480F4A804D000C8613E5F669E3AB77411F468A5_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
+// System.Void System.Func`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_1__ctor_mC73A4FCEBBAB90CB7B7AB16321F3F98FBBF12596_gshared (Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskFactory::StartNew<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Func`1<TResult>,System.Threading.CancellationToken,System.Threading.Tasks.TaskCreationOptions,System.Threading.Tasks.TaskScheduler)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* TaskFactory_StartNew_TisIl2CppFullySharedGenericAny_m093A8AAFB7FEC0A2D65CEAEBE25DE0EB91469C36_gshared (TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0* __this, Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431* ___function0, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED ___cancellationToken1, int32_t ___creationOptions2, TaskScheduler_t3F0550EBEF7C41F74EC8C08FF4BED0D8CE66006E* ___scheduler3, const RuntimeMethod* method) ;
+// System.Void Newtonsoft.Json.Utilities.AotHelper::EnsureType<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotHelper_EnsureType_TisIl2CppFullySharedGenericAny_m8D94D34831BFD767668F5DE3953A46FD59601BA7_gshared (const RuntimeMethod* method) ;
+// System.Collections.Generic.Dictionary`2<TKey,TElement> System.Linq.Enumerable::ToDictionary<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* Enumerable_ToDictionary_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mCE400B0EBD8083C1E7287BC3E256BB27CF9CF2E0_gshared (RuntimeObject* ___source0, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0* ___keySelector1, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0* ___elementSelector2, const RuntimeMethod* method) ;
+// T[] System.Array::Empty<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* Array_Empty_TisIl2CppFullySharedGenericAny_m244E2A51B33F845A2093F0862FBCE502E4FDD868_gshared_inline (const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::GetEnumerator()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_GetEnumerator_m8B2A92ACD4FBA5FBDC3F6F4F5C23A0DDF491DA61_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mFE1EBE6F6425283FEAEAE7C79D02CDE4F9D367E8_gshared (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, const RuntimeMethod* method) ;
+// T System.Collections.Generic.List`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Current()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_gshared_inline (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Add(T)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___item0, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.List`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m8D8E5E878AF0A88A535AB1AB5BA4F23E151A678A_gshared (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::ContainsKey(TKey)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_mA268E9B914DCE838DD0CD9D879BAAEECD0C677AA_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___key0, const RuntimeMethod* method) ;
+// TValue System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Item(TKey)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_get_Item_m2E96908E9716367701CD737FA54C884EB2A8C3EA_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___key0, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Void System.Threading.Tasks.TaskCompletionSource`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TaskCompletionSource_1__ctor_mD6DB19F66035FC77675F1ED9FE696A65CF9C0F23_gshared (TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970* __this, const RuntimeMethod* method) ;
+// System.Void System.Action`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m685A441EC9FAC9D554B26FA83A08F4BEF96DFF0E_gshared (Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskCompletionSource`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Task()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* TaskCompletionSource_1_get_Task_m4994989AA2174905CF517397D0F6B082ADC29EE9_gshared_inline (TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970* __this, const RuntimeMethod* method) ;
+// System.Void System.Threading.Tasks.TaskCompletionSource`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::SetResult(TResult)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TaskCompletionSource_1_SetResult_m20A3A9EACC332D8ECC8AA9E690B90E6C56835CED_gshared (TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___result0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.KeyValuePair`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(TKey,TValue)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyValuePair_2__ctor_mD82E516936D2BDE6D46C8C45270250647986231E_gshared (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___key0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___value1, const RuntimeMethod* method) ;
+// System.Collections.Generic.Dictionary`2/KeyCollection<TKey,TValue> System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Keys()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55* Dictionary_2_get_Keys_mD82D6690B1A801E8EED43F1B1D310893C9D334CF_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, const RuntimeMethod* method) ;
+// System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<TKey,TValue> System.Collections.Generic.Dictionary`2/KeyCollection<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::GetEnumerator()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyCollection_GetEnumerator_m1624A44B07D62B8CC592FEAE7A521D9504E0ACB3_gshared (KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55* __this, Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_m3E0B734E98D35978EEE706FCEC2FE08FEA74FD35_gshared (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977* __this, const RuntimeMethod* method) ;
+// TKey System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Current()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m2D9E3398C2A3349E3F0F189A38E881D11DE5AA15_gshared_inline (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m21C503A713FDCA406492E2BE960D85320752E615_gshared (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977* __this, const RuntimeMethod* method) ;
+// System.Byte[] Unity.Services.Qos.V2.QosDiscovery.JsonSerialization::Serialize<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* JsonSerialization_Serialize_TisIl2CppFullySharedGenericAny_m4EFB6B0B9F643F1C44B930DBFE269C601E3DE3EA_gshared (/*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___obj0, const RuntimeMethod* method) ;
+// T System.Nullable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::GetValueOrDefault()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Nullable_1_GetValueOrDefault_mC057FBD944AF068B90EBDD0B496231A01B2A4228_gshared_inline (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339* __this, Il2CppFullySharedGenericStruct* il2cppRetVal, const RuntimeMethod* method) ;
 // T Unity.Services.Qos.V2.Http.ResponseHandler::HandleAsyncResponse<System.Object>(Unity.Services.Qos.V2.Http.HttpClientResponse,System.Collections.Generic.Dictionary`2<System.String,System.Type>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ResponseHandler_HandleAsyncResponse_TisRuntimeObject_m91C182456F754C5E10D289EE7BE3096B8AA8AA0C_gshared (HttpClientResponse_tD29473CE0C6CECC34988654F8EF1F3FE5BF593B3* ___response0, Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A* ___statusCodeToTypeMap1, const RuntimeMethod* method) ;
-// System.Void Unity.Services.Qos.V2.Response`1<System.Object>::.ctor(Unity.Services.Qos.V2.Http.HttpClientResponse,T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Response_1__ctor_m3A4F818D49EFB7EF322D2BFF85C34A7CCEE0B281_gshared (Response_1_t1DC86EEE7CDC58EAF9D58E332C29DA1D24AD5172* __this, HttpClientResponse_tD29473CE0C6CECC34988654F8EF1F3FE5BF593B3* ___httpResponse0, RuntimeObject* ___result1, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosAsync>d__3>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5_mD1FC8735731F188F340814977834A6F47E9F39ED_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosAsync>d__4>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51_mBF039F3D2174D62B0DFA33C335B185B2B7FA4D87_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosV2Async>d__6>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CMeasureQosV2AsyncU3Ed__6_t6FC1F1B006AF96555D9BDAD4C31998DF2E2A68AC_m23C182577EC16DA01801892CBE3FC584EE70739D_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CMeasureQosV2AsyncU3Ed__6_t6FC1F1B006AF96555D9BDAD4C31998DF2E2A68AC* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.Runner.BaselibQosRunner/<RunQosJob>d__7>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CRunQosJobU3Ed__7_tDF5FA8B02E62B66F9F42804975498035D853BE0A_mE611A75D9E4F183A4F26D9B705EA3F228B8B2E59_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CRunQosJobU3Ed__7_tDF5FA8B02E62B66F9F42804975498035D853BE0A* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::Create()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2 AsyncTaskMethodBuilder_1_Create_m99B55A15F456EC4B57B14FAA3DB020AC70E58EEA_gshared (const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::Start<Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__8>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CToUcgFormatU3Ed__8_tD726EF24EC12015309EA3722D016E6C942BD728D_m9A27A128D3D0DCF42692F756A8FD31B9CFA26351_gshared (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, U3CToUcgFormatU3Ed__8_tD726EF24EC12015309EA3722D016E6C942BD728D* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::get_Task()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7917F852B21E40F3B4F4E796C1D9E9131618863F* AsyncTaskMethodBuilder_1_get_Task_mD0D423B9DBA581224577B20336BEFB49774A5786_gshared (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::Start<Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__9>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CToUcgFormatU3Ed__9_t5E34F4BB113AE75E1225374AF4719E09BA4CC899_m12E0F54AB001409803DE5E3860C3CAC51BAC598D_gshared (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, U3CToUcgFormatU3Ed__9_t5E34F4BB113AE75E1225374AF4719E09BA4CC899* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::Start<Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__10>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CToUcgFormatU3Ed__10_t2AA2EF6FDC506A789BB527E3E60A1AF0EA822212_m252E986F7355BC2BC685B1EEB3091AB92912FA92_gshared (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, U3CToUcgFormatU3Ed__10_t2AA2EF6FDC506A789BB527E3E60A1AF0EA822212* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>::Add(T)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mD66CCD8D0F6870A2711F9329E4297A2CE4A1882F_gshared_inline (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* __this, QosResult_tA2296213032595430F8FE40418B3D5BA47E86D27 ___item0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_mED9BC57E19B835FE0AF4D56A25CD6F6E1CCED43A_gshared (List_1_t6A9BD83D1B75DA994D0814971281C937CF962FDA* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>::Add(T)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m14511AEB05E4C1AD82CEC16B3F038105B5F43753_gshared_inline (List_1_t6A9BD83D1B75DA994D0814971281C937CF962FDA* __this, QosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E ___item0, const RuntimeMethod* method) ;
-// System.Boolean System.Nullable`1<Unity.Networking.QoS.UcgQosServer>::get_HasValue()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_m0DFDFD4AF56FF28348507B43CB76CBC0302F0038_gshared_inline (Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022* __this, const RuntimeMethod* method) ;
-// T System.Nullable`1<Unity.Networking.QoS.UcgQosServer>::get_Value()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UcgQosServer_tB2AFA57F819F8A2EFB52F813E38521D31F765136 Nullable_1_get_Value_m5CE081F9633980C6E6AF9AA709BEFCC3C1F8EFF6_gshared (Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022* __this, const RuntimeMethod* method) ;
-// System.Threading.Tasks.Task`1<TResult[]> System.Threading.Tasks.Task::WhenAll<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>(System.Collections.Generic.IEnumerable`1<System.Threading.Tasks.Task`1<TResult>>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_tBEDAB4469E68C078783320977BCEB17B1C43399C* Task_WhenAll_TisNullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022_m081D5839F8F89236ACB8C37021906C132E27703A_gshared (RuntimeObject* ___tasks0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosAsync>d__3>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5_m7D64E09CEB5534049C09A9DE916FBA03CFDC86D8_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Func`2<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>,System.Boolean>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m2920439CD4CE5BEB395ACEA6DF160C1CEBD56D17_gshared (Func_2_tF028C7C145D3E150C13A8E51274D57A8AF2D632B* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Collections.Generic.IEnumerable`1<TSource> System.Linq.Enumerable::Where<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Where_TisNullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022_m8DE10F20FB8AEAE380E990B83AE6CC67761CC7CE_gshared (RuntimeObject* ___source0, Func_2_tF028C7C145D3E150C13A8E51274D57A8AF2D632B* ___predicate1, const RuntimeMethod* method) ;
-// System.Void System.Func`2<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>,Unity.Networking.QoS.UcgQosServer>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_mC1E0A4008208B784184700B7FA2B552925B09A02_gshared (Func_2_tAB6A23FC731FC9CA5DFAF41F7CDEDDA1F4DEBA9A* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>,Unity.Networking.QoS.UcgQosServer>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Select_TisNullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022_TisUcgQosServer_tB2AFA57F819F8A2EFB52F813E38521D31F765136_m930ACAE19F3A2C4B80A1481D5F4CB5CC0A80B40C_gshared (RuntimeObject* ___source0, Func_2_tAB6A23FC731FC9CA5DFAF41F7CDEDDA1F4DEBA9A* ___selector1, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<Unity.Networking.QoS.UcgQosServer>(System.Collections.Generic.IEnumerable`1<TSource>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tAECA468ACA10E75BD5322C3076836F710B5C40BE* Enumerable_ToList_TisUcgQosServer_tB2AFA57F819F8A2EFB52F813E38521D31F765136_m13A378BF5ED622174B7A30155A09B8F927413F9A_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
-// System.Int32 System.Linq.Enumerable::Count<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Enumerable_Count_TisRuntimeObject_mA9FCB8ECCFE8FABC5AA2F8D46F82ACD52279930B_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
-// System.Int32 System.Linq.Enumerable::Count<Unity.Networking.QoS.InternalQosResult>(System.Collections.Generic.IEnumerable`1<TSource>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Enumerable_Count_TisInternalQosResult_t524E2DACBC5C86A098DEECA90D8624BEF0A2C7CE_mC2C2521F482F100AD8DA7F498DA30AA60B912C03_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeArray`1<Unity.Networking.QoS.InternalQosResult>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Dispose_m1E5991CD2221DAB6F5930F3AD57454AAD6359460_gshared (NativeArray_1_t14416F5A54963FFA0912C5FA738DEB565659C8EC* __this, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosAsync>d__4>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51_m6458D3483A8958D53B28169FA933F55B665F173C_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Converter`2<System.Object,System.Object>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Converter_2__ctor_mB107CD0E28B613EFEB2F8599A3A56AFA1C4AD1B0_gshared (Converter_2_tC9AFAC88B7B2F2A78BE628A4D126535F0A4A1486* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1<TOutput> System.Collections.Generic.List`1<System.Object>::ConvertAll<System.Object>(System.Converter`2<T,TOutput>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* List_1_ConvertAll_TisRuntimeObject_m8B145AE4F761F7CEF799C90CA74FFDE44521B3F7_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, Converter_2_tC9AFAC88B7B2F2A78BE628A4D126535F0A4A1486* ___converter0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosV2Async>d__6>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMeasureQosV2AsyncU3Ed__6_t6FC1F1B006AF96555D9BDAD4C31998DF2E2A68AC_m973E18BF0BBABBF07302CF6F2078B735D5D3BD7F_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CMeasureQosV2AsyncU3Ed__6_t6FC1F1B006AF96555D9BDAD4C31998DF2E2A68AC* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Int32 System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>::get_Count()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mBBF44AA2423A8AF17C48430D7D112805D5AC67A8_gshared_inline (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<System.ValueTuple`2<System.Object,System.Object>>::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m118C02FE2F3E26904A4E130AF830A39BE8D2AACF_gshared (List_1_tFD45D9C668A7B019127FE442DDD78CF33B7DEDBF* __this, int32_t ___capacity0, const RuntimeMethod* method) ;
-// System.Void System.Converter`2<Unity.Services.Qos.Internal.QosResult,Unity.Services.Qos.Runner.BaselibQosRunner/QosMeasurementImpl>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Converter_2__ctor_m94E21E87A75A081668ED35377FA4FEED6E495716_gshared (Converter_2_tD1D4D50D6761B87586AB4ABD7BF84500196E937B* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1<TOutput> System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>::ConvertAll<Unity.Services.Qos.Runner.BaselibQosRunner/QosMeasurementImpl>(System.Converter`2<T,TOutput>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t20230A462C525DF305E7E612575A10E20377062F* List_1_ConvertAll_TisQosMeasurementImpl_t88572AAF369DEA6225BB121D2B4FAD1D0A91FCDF_m9D751B954DC211C8C1144AB75AB5547C2AA972FD_gshared (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* __this, Converter_2_tD1D4D50D6761B87586AB4ABD7BF84500196E937B* ___converter0, const RuntimeMethod* method) ;
-// T System.Collections.Generic.List`1<Unity.Services.Qos.Runner.BaselibQosRunner/QosMeasurementImpl>::get_Item(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR QosMeasurementImpl_t88572AAF369DEA6225BB121D2B4FAD1D0A91FCDF List_1_get_Item_mE6AEE721E057294FC1F0CE1B7C70EF5141346F15_gshared (List_1_t20230A462C525DF305E7E612575A10E20377062F* __this, int32_t ___index0, const RuntimeMethod* method) ;
-// System.Void System.ValueTuple`2<System.Object,System.Object>::.ctor(T1,T2)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueTuple_2__ctor_m4D25F4A0A0085EBE6559B6CC932AA5E267DB554D_gshared (ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A* __this, RuntimeObject* ___item10, RuntimeObject* ___item21, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<System.ValueTuple`2<System.Object,System.Object>>::Add(T)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m4C2118BF8009CA4F7AF89D8D9CB5586AE95C8A36_gshared_inline (List_1_tFD45D9C668A7B019127FE442DDD78CF33B7DEDBF* __this, ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A ___item0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.YieldAwaitable/YieldAwaiter,Unity.Services.Qos.Runner.BaselibQosRunner/<RunQosJob>d__7>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisYieldAwaiter_t5F0A81DC85227C01FFC38D53139B5C19D920B52A_TisU3CRunQosJobU3Ed__7_tDF5FA8B02E62B66F9F42804975498035D853BE0A_m1181EBAEF117E41559FB3080023D1E7DFEC6EBA9_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, YieldAwaiter_t5F0A81DC85227C01FFC38D53139B5C19D920B52A* ___awaiter0, U3CRunQosJobU3Ed__7_tDF5FA8B02E62B66F9F42804975498035D853BE0A* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::GetAwaiter()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39 Task_1_GetAwaiter_m6E1D56437EC37932A9FDB0A997C28F516B45A1E0_gshared (Task_1_t7917F852B21E40F3B4F4E796C1D9E9131618863F* __this, const RuntimeMethod* method) ;
-// System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::get_IsCompleted()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TaskAwaiter_1_get_IsCompleted_m787A98C893E4ADC52EB3A49E7E5CC0E3DE2DE025_gshared (TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39* __this, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>,Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__8>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39_TisU3CToUcgFormatU3Ed__8_tD726EF24EC12015309EA3722D016E6C942BD728D_m1CA1B6E652D11C985BDAAEC65F3956BE3EC203DC_gshared (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39* ___awaiter0, U3CToUcgFormatU3Ed__8_tD726EF24EC12015309EA3722D016E6C942BD728D* ___stateMachine1, const RuntimeMethod* method) ;
-// TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::GetResult()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022 TaskAwaiter_1_GetResult_m7A6333AE9B87999E4AF35B1EF3129FECDAF4723E_gshared (TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39* __this, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::SetException(System.Exception)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_SetException_m14F437BF19E6679032BE96F29C6C7ED0E9615201_gshared (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, Exception_t* ___exception0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::SetResult(TResult)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_SetResult_m9D721A9431C6D8DF5A0C4006A56C54AA11EE9F41_gshared (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022 ___result0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_SetStateMachine_m11D521413EED1447C03B68DE61E858DE9B6FDBB4_gshared (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>,Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__9>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39_TisU3CToUcgFormatU3Ed__9_t5E34F4BB113AE75E1225374AF4719E09BA4CC899_mE58E88548A12E2F9D0D29BD28F9FF53A4567BD1D_gshared (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39* ___awaiter0, U3CToUcgFormatU3Ed__9_t5E34F4BB113AE75E1225374AF4719E09BA4CC899* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__10>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CToUcgFormatU3Ed__10_t2AA2EF6FDC506A789BB527E3E60A1AF0EA822212_mD2009A95E7D7FDB36EA64AE1FB01830311D28CE9_gshared (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CToUcgFormatU3Ed__10_t2AA2EF6FDC506A789BB527E3E60A1AF0EA822212* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Nullable`1<Unity.Networking.QoS.UcgQosServer>::.ctor(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Nullable_1__ctor_m2DF86C972EB3A227416873C121FF47BE20AF26DD_gshared (Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022* __this, UcgQosServer_tB2AFA57F819F8A2EFB52F813E38521D31F765136 ___value0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.Http.HttpClient/<MakeRequestAsync>d__1>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__1_t41F49AE5F63D6D3CB0848BD2E8B88FECA012503D_m352A5BC6CF2C4DF4E167DE5EE595BD688137F062_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CMakeRequestAsyncU3Ed__1_t41F49AE5F63D6D3CB0848BD2E8B88FECA012503D* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.Http.HttpClient/<MakeRequestAsync>d__2>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__2_tAE6D4361E0DFB64736B1330C108FDFA9E24B3D85_mB9C81AA547AAA1406BE0B54C6ED7774AD7C1B5A7_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CMakeRequestAsyncU3Ed__2_tAE6D4361E0DFB64736B1330C108FDFA9E24B3D85* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.Http.HttpClient/<CreateWebRequestAsync>d__3>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__3_t11659934D02FB2DAEA1594629006F368DC8E57F8_m6E5EBCF388B90E3F0898BE69D0993338B136CAFE_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CCreateWebRequestAsyncU3Ed__3_t11659934D02FB2DAEA1594629006F368DC8E57F8* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.Http.HttpClient/<CreateHttpClientResponse>d__4>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA_mD90961C1E0CA6F7BCA2DE66247FB23918FAA8EFE_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.Http.HttpClient/<CreateWebRequestAsync>d__5>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__5_tA77D014B1E570E006E424FD46449DD2C654E199F_mDD23DB3537D15E0665AADAEE77A34BE92AE38DC5_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CCreateWebRequestAsyncU3Ed__5_tA77D014B1E570E006E424FD46449DD2C654E199F* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.Http.HttpClient/<MakeRequestAsync>d__1>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMakeRequestAsyncU3Ed__1_t41F49AE5F63D6D3CB0848BD2E8B88FECA012503D_m1A3ACA6F9C69A72A596F97679F3CC7AB32EDC456_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CMakeRequestAsyncU3Ed__1_t41F49AE5F63D6D3CB0848BD2E8B88FECA012503D* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.Http.HttpClient/<MakeRequestAsync>d__2>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMakeRequestAsyncU3Ed__2_tAE6D4361E0DFB64736B1330C108FDFA9E24B3D85_m7862F49DCAD0FD6A20E619DA88892B253416F785_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CMakeRequestAsyncU3Ed__2_tAE6D4361E0DFB64736B1330C108FDFA9E24B3D85* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.Http.HttpClient/<CreateWebRequestAsync>d__3>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateWebRequestAsyncU3Ed__3_t11659934D02FB2DAEA1594629006F368DC8E57F8_mB746A39A4B8B2DCA443D0A2621D22E6DEB8AB2BE_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CCreateWebRequestAsyncU3Ed__3_t11659934D02FB2DAEA1594629006F368DC8E57F8* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Qos.Http.HttpClient/<>c__DisplayClass4_0/<<CreateHttpClientResponse>b__0>d>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t7B5BC00B3928473DD0241DA12ED97CEE386D8302_mFB1B4B30276DAF94C8FDFABFA1A72F2D157FCA16_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t7B5BC00B3928473DD0241DA12ED97CEE386D8302* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.Http.HttpClient/<>c__DisplayClass4_0/<<CreateHttpClientResponse>b__0>d>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t7B5BC00B3928473DD0241DA12ED97CEE386D8302_m3C326595934A531A23AD67FDB0DE477B4E032E5B_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t7B5BC00B3928473DD0241DA12ED97CEE386D8302* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Qos.Http.HttpClient/<CreateHttpClientResponse>d__4>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA_mE55B54C7EDA9BBCCB72E0324C42862BE7311583B_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA* ___stateMachine1, const RuntimeMethod* method) ;
+// System.Void Unity.Services.Qos.V2.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(Unity.Services.Qos.V2.Http.HttpClientResponse,T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Response_1__ctor_m1C46C27ADB92D683EB8EC68CA7527F7B34638574_gshared (/*Unity.Services.Qos.V2.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_tE01D2CBFFA6377AB5ABD5A628829909B9DE01269* __this, HttpClientResponse_tD29473CE0C6CECC34988654F8EF1F3FE5BF593B3* ___httpResponse0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___result1, const RuntimeMethod* method) ;
+// T System.Nullable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::get_Value()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Nullable_1_get_Value_mA083C4D9192050DC38513BDD9D364C5C68A3A675_gshared (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339* __this, Il2CppFullySharedGenericStruct* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Threading.Tasks.Task`1<TResult[]> System.Threading.Tasks.Task::WhenAll<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<System.Threading.Tasks.Task`1<TResult>>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_tEA323ABE4B135A0CC68B2D7C3498CC3DA6B8D802* Task_WhenAll_TisIl2CppFullySharedGenericAny_m79EB571AB37D8718A817D3B9924FB6A28E74BFE5_gshared (RuntimeObject* ___tasks0, const RuntimeMethod* method) ;
+// System.Int32 System.Linq.Enumerable::Count<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<TSource>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Enumerable_Count_TisIl2CppFullySharedGenericAny_m4D64A1B2077BAD3CD94E5EEB5C56FA97409CBC6A_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
+// System.Void System.Converter`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Converter_2__ctor_m6AC601790CBA05AA79669611421A69A763F35DAD_gshared (Converter_2_t492BE36BDB9ACE2595DC3BFC0172171D1510E4CB* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1<TOutput> System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::ConvertAll<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Converter`2<T,TOutput>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* List_1_ConvertAll_TisIl2CppFullySharedGenericAny_m85C8E81103197F939BE495EFB1C84ED415F45E04_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, Converter_2_t492BE36BDB9ACE2595DC3BFC0172171D1510E4CB* ___converter0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m3069CACB5775E013107F559C825422266A09F9E8_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, int32_t ___capacity0, const RuntimeMethod* method) ;
 
 // System.UInt32 Unity.Networking.QoS.InternalQosResult::get_AverageLatencyMs()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t InternalQosResult_get_AverageLatencyMs_mC4DD63FA694AB15B32ECE7B95C391BF79250708B (InternalQosResult_t524E2DACBC5C86A098DEECA90D8624BEF0A2C7CE* __this, const RuntimeMethod* method) ;
@@ -9117,12 +8778,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C
 // System.Void Unity.Collections.NativeHashMap`2<Unity.Collections.FixedString64Bytes,System.Int32>::.ctor(System.Int32,Unity.Collections.AllocatorManager/AllocatorHandle)
 inline void NativeHashMap_2__ctor_m9ADE704A14E350E2E06F3CA9A3165347E8661ED7 (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434* __this, int32_t ___capacity0, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator1, const RuntimeMethod* method)
 {
-	((  void (*) (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434*, int32_t, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148, const RuntimeMethod*))NativeHashMap_2__ctor_m9ADE704A14E350E2E06F3CA9A3165347E8661ED7_gshared)(__this, ___capacity0, ___allocator1, method);
+	((  void (*) (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*, int32_t, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148, const RuntimeMethod*))NativeHashMap_2__ctor_mAA3C0AC3AEF5600B8C6DA242A9EDFE8B883FA23F_gshared)((NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*)__this, ___capacity0, ___allocator1, method);
 }
 // System.Void Unity.Collections.NativeArray`1<Unity.Networking.QoS.QosJob/InternalQosServer>::.ctor(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArrayOptions)
 inline void NativeArray_1__ctor_mE5E30A0AE630509D07C1A1C3AFC5872B16FED9AF (NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9* __this, int32_t ___length0, int32_t ___allocator1, int32_t ___options2, const RuntimeMethod* method)
 {
-	((  void (*) (NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9*, int32_t, int32_t, int32_t, const RuntimeMethod*))NativeArray_1__ctor_mE5E30A0AE630509D07C1A1C3AFC5872B16FED9AF_gshared)(__this, ___length0, ___allocator1, ___options2, method);
+	((  void (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*, int32_t, int32_t, int32_t, const RuntimeMethod*))NativeArray_1__ctor_m788DE0F85C4051DDF092DDF96484DE655ACFB6F1_gshared)((NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*)__this, ___length0, ___allocator1, ___options2, method);
 }
 // System.Boolean Unity.Networking.QoS.NetworkEndPoint::TryParse(System.String,System.UInt16,Unity.Networking.QoS.NetworkEndPoint&,Unity.Networking.QoS.NetworkFamily)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkEndPoint_TryParse_m290522A4D3F16227CB050DAAC84B0F7F9776E873 (String_t* ___address0, uint16_t ___port1, NetworkEndPoint_tD248F1CF54F01EF67B92B12963FC7060054C4CBC* ___endpoint2, int32_t ___family3, const RuntimeMethod* method) ;
@@ -9139,65 +8800,68 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FixedString64Bytes_t0F1B6FFAFD8C15898CD77D91A
 // System.Boolean Unity.Collections.NativeHashMap`2<Unity.Collections.FixedString64Bytes,System.Int32>::ContainsKey(TKey)
 inline bool NativeHashMap_2_ContainsKey_m0C81565D8973C3996EBE9684901000E5F9F81D73 (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434* __this, FixedString64Bytes_t0F1B6FFAFD8C15898CD77D91A79AB36AA078E0A5 ___key0, const RuntimeMethod* method)
 {
-	return ((  bool (*) (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434*, FixedString64Bytes_t0F1B6FFAFD8C15898CD77D91A79AB36AA078E0A5, const RuntimeMethod*))NativeHashMap_2_ContainsKey_m0C81565D8973C3996EBE9684901000E5F9F81D73_gshared)(__this, ___key0, method);
+	return ((  bool (*) (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, const RuntimeMethod*))NativeHashMap_2_ContainsKey_m13F9C6B811D40F652794DDC42417F29CF81D2DE5_gshared)((NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*)__this, (Il2CppFullySharedGenericStruct)&___key0, method);
 }
 // TValue Unity.Collections.NativeHashMap`2<Unity.Collections.FixedString64Bytes,System.Int32>::get_Item(TKey)
 inline int32_t NativeHashMap_2_get_Item_mC5FEEB66A06DDC0A9CC464FBBD076DB206F83430 (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434* __this, FixedString64Bytes_t0F1B6FFAFD8C15898CD77D91A79AB36AA078E0A5 ___key0, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434*, FixedString64Bytes_t0F1B6FFAFD8C15898CD77D91A79AB36AA078E0A5, const RuntimeMethod*))NativeHashMap_2_get_Item_mC5FEEB66A06DDC0A9CC464FBBD076DB206F83430_gshared)(__this, ___key0, method);
+	int32_t il2cppRetVal;
+	((  void (*) (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NativeHashMap_2_get_Item_mE7FAFF8EA5437C2D39E450ECC94D4A5CA55D7FEC_gshared)((NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*)__this, (Il2CppFullySharedGenericStruct)&___key0, (Il2CppFullySharedGenericStruct*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void Unity.Networking.QoS.QosJob/InternalQosServer::set_FirstIdx(System.Int32)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void InternalQosServer_set_FirstIdx_mEE8FDA205B7B8B2DE6E8C6F1D0BFF888C1434A28_inline (InternalQosServer_t56825CF99AB62B0FD12D69A5E5EB72FA463E687A* __this, int32_t ___value0, const RuntimeMethod* method) ;
 // System.Void Unity.Collections.NativeHashMap`2<Unity.Collections.FixedString64Bytes,System.Int32>::Add(TKey,TValue)
 inline void NativeHashMap_2_Add_mD22279FDBAE61BB5B75BDF57030A1A536E8C752D (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434* __this, FixedString64Bytes_t0F1B6FFAFD8C15898CD77D91A79AB36AA078E0A5 ___key0, int32_t ___item1, const RuntimeMethod* method)
 {
-	((  void (*) (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434*, FixedString64Bytes_t0F1B6FFAFD8C15898CD77D91A79AB36AA078E0A5, int32_t, const RuntimeMethod*))NativeHashMap_2_Add_mD22279FDBAE61BB5B75BDF57030A1A536E8C752D_gshared)(__this, ___key0, ___item1, method);
+	((  void (*) (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, const RuntimeMethod*))NativeHashMap_2_Add_mE74E9833A58615B8A61692936F97AE77F1C21B0E_gshared)((NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*)__this, (Il2CppFullySharedGenericStruct)&___key0, (Il2CppFullySharedGenericStruct)&___item1, method);
 }
 // System.Void Unity.Networking.QoS.QosJob::StoreServer(Unity.Networking.QoS.QosJob/InternalQosServer)
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void QosJob_StoreServer_m10EC014D95822A081040752A7F218E8C3A511A09 (QosJob_t508E11E9E80B0D79B1277DAA2B24B40809E5495C* IL2CPP_PARAMETER_RESTRICT __this, InternalQosServer_t56825CF99AB62B0FD12D69A5E5EB72FA463E687A ___server0, const RuntimeMethod* method) ;
 // Unity.Collections.NativeArray`1<T> Unity.Collections.NativeArray`1<Unity.Networking.QoS.QosJob/InternalQosServer>::GetSubArray(System.Int32,System.Int32)
 inline NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9 NativeArray_1_GetSubArray_m637B353B48A6D5F228C2FE3A3E2FF4B685D42C34 (NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9* __this, int32_t ___start0, int32_t ___length1, const RuntimeMethod* method)
 {
-	return ((  NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9 (*) (NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9*, int32_t, int32_t, const RuntimeMethod*))NativeArray_1_GetSubArray_m637B353B48A6D5F228C2FE3A3E2FF4B685D42C34_gshared)(__this, ___start0, ___length1, method);
+	NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 il2cppRetVal = ((  NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*, int32_t, int32_t, const RuntimeMethod*))NativeArray_1_GetSubArray_mB3D1C75BB777B0C93DF3FB3B297F748B41362959_gshared)((NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*)__this, ___start0, ___length1, method);
+	return il2cpp_codegen_cast_struct<NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9, NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18>(&il2cppRetVal);
 }
 // System.Void Unity.Collections.NativeArray`1<Unity.Networking.QoS.QosJob/InternalQosServer>::CopyTo(Unity.Collections.NativeArray`1<T>)
 inline void NativeArray_1_CopyTo_m531ABC72B9FB6F478E80A24D86526BD8AC216F37 (NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9* __this, NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9 ___array0, const RuntimeMethod* method)
 {
-	((  void (*) (NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9*, NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9, const RuntimeMethod*))NativeArray_1_CopyTo_m531ABC72B9FB6F478E80A24D86526BD8AC216F37_gshared)(__this, ___array0, method);
+	((  void (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*, NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18, const RuntimeMethod*))NativeArray_1_CopyTo_mCE5ACF49C2F1719FB011E7B9715D90315C6BB72C_gshared)((NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*)__this, il2cpp_codegen_cast_struct<NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18, NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9>(&___array0), method);
 }
 // System.Void Unity.Collections.NativeArray`1<Unity.Networking.QoS.QosJob/InternalQosServer>::Dispose()
 inline void NativeArray_1_Dispose_m084917E78A9D5913C2228313ACDCA67E7B0EC4BD (NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9* __this, const RuntimeMethod* method)
 {
-	((  void (*) (NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9*, const RuntimeMethod*))NativeArray_1_Dispose_m084917E78A9D5913C2228313ACDCA67E7B0EC4BD_gshared)(__this, method);
+	((  void (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*, const RuntimeMethod*))NativeArray_1_Dispose_m365A262FA4CA431467F021D7732CECD68316AF80_gshared)((NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*)__this, method);
 }
 // System.Void Unity.Collections.NativeArray`1<Unity.Networking.QoS.InternalQosResult>::.ctor(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArrayOptions)
 inline void NativeArray_1__ctor_m19588523F75BE4785DB4633C841B64D5201AC778 (NativeArray_1_t14416F5A54963FFA0912C5FA738DEB565659C8EC* __this, int32_t ___length0, int32_t ___allocator1, int32_t ___options2, const RuntimeMethod* method)
 {
-	((  void (*) (NativeArray_1_t14416F5A54963FFA0912C5FA738DEB565659C8EC*, int32_t, int32_t, int32_t, const RuntimeMethod*))NativeArray_1__ctor_m19588523F75BE4785DB4633C841B64D5201AC778_gshared)(__this, ___length0, ___allocator1, ___options2, method);
+	((  void (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*, int32_t, int32_t, int32_t, const RuntimeMethod*))NativeArray_1__ctor_m788DE0F85C4051DDF092DDF96484DE655ACFB6F1_gshared)((NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*)__this, ___length0, ___allocator1, ___options2, method);
 }
 // System.Text.Encoding System.Text.Encoding::get_UTF8()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9 (const RuntimeMethod* method) ;
 // System.Void Unity.Collections.NativeArray`1<System.Byte>::.ctor(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArrayOptions)
 inline void NativeArray_1__ctor_m981CC7E27B6C9946024877F2696920951443B04F (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF* __this, int32_t ___length0, int32_t ___allocator1, int32_t ___options2, const RuntimeMethod* method)
 {
-	((  void (*) (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF*, int32_t, int32_t, int32_t, const RuntimeMethod*))NativeArray_1__ctor_m981CC7E27B6C9946024877F2696920951443B04F_gshared)(__this, ___length0, ___allocator1, ___options2, method);
+	((  void (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*, int32_t, int32_t, int32_t, const RuntimeMethod*))NativeArray_1__ctor_m788DE0F85C4051DDF092DDF96484DE655ACFB6F1_gshared)((NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*)__this, ___length0, ___allocator1, ___options2, method);
 }
 // System.Void Unity.Collections.NativeArray`1<System.Byte>::CopyFrom(T[])
 inline void NativeArray_1_CopyFrom_mFC94BEB654A8BD48A5A33C0B184821AECAAEED1D (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___array0, const RuntimeMethod* method)
 {
-	((  void (*) (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, const RuntimeMethod*))NativeArray_1_CopyFrom_mFC94BEB654A8BD48A5A33C0B184821AECAAEED1D_gshared)(__this, ___array0, method);
+	((  void (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*, __Il2CppFullySharedGenericStructTypeU5BU5D_tF3B929B6E80D0A8C109178E11CE8FF9957B014C1*, const RuntimeMethod*))NativeArray_1_CopyFrom_mA52B88617F4F7972D7275E97D2D52CF623754308_gshared)((NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*)__this, (__Il2CppFullySharedGenericStructTypeU5BU5D_tF3B929B6E80D0A8C109178E11CE8FF9957B014C1*)___array0, method);
 }
 // System.Void Unity.Networking.QoS.QosJob::.ctor(System.Collections.Generic.IList`1<Unity.Networking.QoS.UcgQosServer>,System.String,System.UInt32,System.UInt64,System.UInt64,System.UInt32,System.UInt32,System.UInt32)
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void QosJob__ctor_mC7757F9FE843176A16749879A99C777DD191D4BB (QosJob_t508E11E9E80B0D79B1277DAA2B24B40809E5495C* IL2CPP_PARAMETER_RESTRICT __this, RuntimeObject* ___qosServers0, String_t* ___title1, uint32_t ___requestsPerEndpoint2, uint64_t ___timeoutMs3, uint64_t ___maxWaitMs4, uint32_t ___requestsBetweenPause5, uint32_t ___requestPauseMs6, uint32_t ___receiveWaitMs7, const RuntimeMethod* method) ;
 // System.Boolean Unity.Collections.NativeHashMap`2<Unity.Collections.FixedString64Bytes,System.Int32>::get_IsCreated()
 inline bool NativeHashMap_2_get_IsCreated_m5DCC4DF9FD76E61313B0030BE86EE32173DD2018 (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434*, const RuntimeMethod*))NativeHashMap_2_get_IsCreated_m5DCC4DF9FD76E61313B0030BE86EE32173DD2018_gshared)(__this, method);
+	return ((  bool (*) (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*, const RuntimeMethod*))NativeHashMap_2_get_IsCreated_m0E18B56AC03D43981A74FB7C76091BB105AE0CFE_gshared)((NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*)__this, method);
 }
 // System.Void Unity.Collections.NativeHashMap`2<Unity.Collections.FixedString64Bytes,System.Int32>::Dispose()
 inline void NativeHashMap_2_Dispose_m7A2438F117EF9016CFF762281C50A6EE3F26656D (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434* __this, const RuntimeMethod* method)
 {
-	((  void (*) (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434*, const RuntimeMethod*))NativeHashMap_2_Dispose_m7A2438F117EF9016CFF762281C50A6EE3F26656D_gshared)(__this, method);
+	((  void (*) (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*, const RuntimeMethod*))NativeHashMap_2_Dispose_m870F88F2CA4E95C70D44708181BADD082451D1C6_gshared)((NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*)__this, method);
 }
 // System.Void Unity.Networking.QoS.QosJob::Dispose()
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void QosJob_Dispose_m023B42665979401AB7384B2BAB21B090BDDD21DF (QosJob_t508E11E9E80B0D79B1277DAA2B24B40809E5495C* IL2CPP_PARAMETER_RESTRICT __this, const RuntimeMethod* method) ;
@@ -9218,17 +8882,20 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void QosJob_Execute_m6656985
 // Unity.Collections.NativeArray`1/Enumerator<T> Unity.Collections.NativeArray`1<Unity.Networking.QoS.QosJob/InternalQosServer>::GetEnumerator()
 inline Enumerator_t272EDAB48AADBAFC4E828577113E06474364C3B2 NativeArray_1_GetEnumerator_m60B35E47F5AB1BC16C2420273E9ACAECFA3A4D5A (NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9* __this, const RuntimeMethod* method)
 {
-	return ((  Enumerator_t272EDAB48AADBAFC4E828577113E06474364C3B2 (*) (NativeArray_1_tE1B72526B63B55CFCBF14E6B85775DED90C593C9*, const RuntimeMethod*))NativeArray_1_GetEnumerator_m60B35E47F5AB1BC16C2420273E9ACAECFA3A4D5A_gshared)(__this, method);
+	Enumerator_t82F77221EB09A3A14061DC0C6965526D856BC405 il2cppRetVal = ((  Enumerator_t82F77221EB09A3A14061DC0C6965526D856BC405 (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*, const RuntimeMethod*))NativeArray_1_GetEnumerator_mB8476B005B66C374A79CAA0F5887F98EDD4D8E32_gshared)((NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*)__this, method);
+	return il2cpp_codegen_cast_struct<Enumerator_t272EDAB48AADBAFC4E828577113E06474364C3B2, Enumerator_t82F77221EB09A3A14061DC0C6965526D856BC405>(&il2cppRetVal);
 }
 // System.Void Unity.Collections.NativeArray`1/Enumerator<Unity.Networking.QoS.QosJob/InternalQosServer>::Dispose()
 inline void Enumerator_Dispose_m901A5B90ECB9709F3E2F9BE12C377050C4CC3784 (Enumerator_t272EDAB48AADBAFC4E828577113E06474364C3B2* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Enumerator_t272EDAB48AADBAFC4E828577113E06474364C3B2*, const RuntimeMethod*))Enumerator_Dispose_m901A5B90ECB9709F3E2F9BE12C377050C4CC3784_gshared)(__this, method);
+	((  void (*) (Enumerator_t82F77221EB09A3A14061DC0C6965526D856BC405*, const RuntimeMethod*))Enumerator_Dispose_m97F29D6F80B478A97A6DA81F665E7DA693E17E64_gshared)((Enumerator_t82F77221EB09A3A14061DC0C6965526D856BC405*)__this, method);
 }
 // T Unity.Collections.NativeArray`1/Enumerator<Unity.Networking.QoS.QosJob/InternalQosServer>::get_Current()
 inline InternalQosServer_t56825CF99AB62B0FD12D69A5E5EB72FA463E687A Enumerator_get_Current_mC09C7682C579403F8AA1D7131765B5FAE4B935F2 (Enumerator_t272EDAB48AADBAFC4E828577113E06474364C3B2* __this, const RuntimeMethod* method)
 {
-	return ((  InternalQosServer_t56825CF99AB62B0FD12D69A5E5EB72FA463E687A (*) (Enumerator_t272EDAB48AADBAFC4E828577113E06474364C3B2*, const RuntimeMethod*))Enumerator_get_Current_mC09C7682C579403F8AA1D7131765B5FAE4B935F2_gshared)(__this, method);
+	InternalQosServer_t56825CF99AB62B0FD12D69A5E5EB72FA463E687A il2cppRetVal;
+	((  void (*) (Enumerator_t82F77221EB09A3A14061DC0C6965526D856BC405*, Il2CppFullySharedGenericStruct*, const RuntimeMethod*))Enumerator_get_Current_mF9A198DACCE8ED0DC6FD097825D7A0F82D149DBA_gshared)((Enumerator_t82F77221EB09A3A14061DC0C6965526D856BC405*)__this, (Il2CppFullySharedGenericStruct*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Boolean Unity.Networking.QoS.QosJob/InternalQosServer::get_Duplicate()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool InternalQosServer_get_Duplicate_mC9F0B30BEC3CEC496735613D59181989F13DEF2B (InternalQosServer_t56825CF99AB62B0FD12D69A5E5EB72FA463E687A* __this, const RuntimeMethod* method) ;
@@ -9239,7 +8906,7 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void QosJob_RecvQosResponses
 // System.Boolean Unity.Collections.NativeArray`1/Enumerator<Unity.Networking.QoS.QosJob/InternalQosServer>::MoveNext()
 inline bool Enumerator_MoveNext_m0CE557D93B5933FFCA76A9B996357C1EE91A9E29 (Enumerator_t272EDAB48AADBAFC4E828577113E06474364C3B2* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Enumerator_t272EDAB48AADBAFC4E828577113E06474364C3B2*, const RuntimeMethod*))Enumerator_MoveNext_m0CE557D93B5933FFCA76A9B996357C1EE91A9E29_gshared)(__this, method);
+	return ((  bool (*) (Enumerator_t82F77221EB09A3A14061DC0C6965526D856BC405*, const RuntimeMethod*))Enumerator_MoveNext_mC9099E56E01AB33169AB4EE888BD9A2B752961DE_gshared)((Enumerator_t82F77221EB09A3A14061DC0C6965526D856BC405*)__this, method);
 }
 // System.Boolean System.DateTime::op_LessThan(System.DateTime,System.DateTime)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DateTime_op_LessThan_m2A02FFF5F35E33417FB32CB9F948769CA15AED17 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___t10, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___t21, const RuntimeMethod* method) ;
@@ -9264,7 +8931,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QosRequest__ctor_m6DC94F804A906E394B0722
 // T[] Unity.Collections.NativeArray`1<System.Byte>::ToArray()
 inline ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* NativeArray_1_ToArray_m2E1BCF853BB72AAB8C219A18582F0AB2FA05CF1F (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF* __this, const RuntimeMethod* method)
 {
-	return ((  ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* (*) (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF*, const RuntimeMethod*))NativeArray_1_ToArray_m2E1BCF853BB72AAB8C219A18582F0AB2FA05CF1F_gshared)(__this, method);
+	__Il2CppFullySharedGenericStructTypeU5BU5D_tF3B929B6E80D0A8C109178E11CE8FF9957B014C1* il2cppRetVal = ((  __Il2CppFullySharedGenericStructTypeU5BU5D_tF3B929B6E80D0A8C109178E11CE8FF9957B014C1* (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*, const RuntimeMethod*))NativeArray_1_ToArray_m36734C0A577134F73463545CA7A587BCA1792002_gshared)((NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*)__this, method);
+	return (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cppRetVal;
 }
 // System.Void Unity.Networking.QoS.QosRequest::set_Title(System.Byte[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QosRequest_set_Title_m835EE28AF9C6C4C8B30DE80EB01A61DFB27E52C2 (QosRequest_t72D842A1DCFFCB12E27B656F0459E50194945A41* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___value0, const RuntimeMethod* method) ;
@@ -9309,7 +8977,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* NetworkEndPoint_get_Address_m1EB1D2
 // System.Boolean Unity.Collections.NativeHashMap`2<Unity.Collections.FixedString64Bytes,System.Int32>::TryGetValue(TKey,TValue&)
 inline bool NativeHashMap_2_TryGetValue_m2E43BFD6301B5BB0DCC60FC2A41F65E337004453 (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434* __this, FixedString64Bytes_t0F1B6FFAFD8C15898CD77D91A79AB36AA078E0A5 ___key0, int32_t* ___item1, const RuntimeMethod* method)
 {
-	return ((  bool (*) (NativeHashMap_2_tBE5967EFC4989A7C0226865ECEA5693FFFBA7434*, FixedString64Bytes_t0F1B6FFAFD8C15898CD77D91A79AB36AA078E0A5, int32_t*, const RuntimeMethod*))NativeHashMap_2_TryGetValue_m2E43BFD6301B5BB0DCC60FC2A41F65E337004453_gshared)(__this, ___key0, ___item1, method);
+	return ((  bool (*) (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NativeHashMap_2_TryGetValue_m76AEC24FD506266541AE43823590F7D44AAC3718_gshared)((NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*)__this, (Il2CppFullySharedGenericStruct)&___key0, (Il2CppFullySharedGenericStruct*)___item1, method);
 }
 // System.UInt16 Unity.Networking.QoS.QosResponse::get_Identifier()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint16_t QosResponse_get_Identifier_mCEB0525F3D9FF3579526AAFA0D7B225D70BE927B_inline (QosResponse_t98F432DBC7CF62ECE63C3AF62DC7B8365469E09E* __this, const RuntimeMethod* method) ;
@@ -9324,7 +8992,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Baselib_Socket_Handle_t5BB40490AAC0DA7C5B3CAA
 // System.Void System.ValueTuple`2<Unity.Baselib.LowLevel.Binding/Baselib_Socket_Handle,Unity.Baselib.LowLevel.Binding/Baselib_ErrorCode>::.ctor(T1,T2)
 inline void ValueTuple_2__ctor_mC1C1297869DD15E39A80516457983F698F890D08 (ValueTuple_2_tCFB0B6379DBA10A8B1598149FD5EEE35DB470A84* __this, Baselib_Socket_Handle_t5BB40490AAC0DA7C5B3CAA9C93447B28D6474FA1 ___item10, int32_t ___item21, const RuntimeMethod* method)
 {
-	((  void (*) (ValueTuple_2_tCFB0B6379DBA10A8B1598149FD5EEE35DB470A84*, Baselib_Socket_Handle_t5BB40490AAC0DA7C5B3CAA9C93447B28D6474FA1, int32_t, const RuntimeMethod*))ValueTuple_2__ctor_m3B42D0C0C8DA2E9CD0CF699E7BE171852DD8B4EF_gshared)(__this, ___item10, ___item21, method);
+	((  void (*) (ValueTuple_2_tBAA1E1D7D97D80E0EBA7FE8773B1FF409AEA3829*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))ValueTuple_2__ctor_mCAE8E725F680FA6BE2C23B9686C9F6056BB7E5CD_gshared)((ValueTuple_2_tBAA1E1D7D97D80E0EBA7FE8773B1FF409AEA3829*)__this, (Il2CppFullySharedGenericAny)&___item10, (Il2CppFullySharedGenericAny)&___item21, method);
 }
 // System.UInt16 Unity.Networking.QoS.NetworkEndPoint::get_Port()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint16_t NetworkEndPoint_get_Port_m251B69FEFF5FC2CF22A30DB9AA40348F340408CB (NetworkEndPoint_tD248F1CF54F01EF67B92B12963FC7060054C4CBC* __this, const RuntimeMethod* method) ;
@@ -9367,14 +9035,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeAppendBuffer_Dispose_m52B95662DC36
 // System.Void System.ValueTuple`2<System.UInt32,System.Int32>::.ctor(T1,T2)
 inline void ValueTuple_2__ctor_m8ABEBB5D4E7A7063AF2E5CCC7E7EF47D331CD617 (ValueTuple_2_tFFBDA26440901E0AA5635F430F88DB7796969481* __this, uint32_t ___item10, int32_t ___item21, const RuntimeMethod* method)
 {
-	((  void (*) (ValueTuple_2_tFFBDA26440901E0AA5635F430F88DB7796969481*, uint32_t, int32_t, const RuntimeMethod*))ValueTuple_2__ctor_m8ABEBB5D4E7A7063AF2E5CCC7E7EF47D331CD617_gshared)(__this, ___item10, ___item21, method);
+	((  void (*) (ValueTuple_2_tBAA1E1D7D97D80E0EBA7FE8773B1FF409AEA3829*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))ValueTuple_2__ctor_mCAE8E725F680FA6BE2C23B9686C9F6056BB7E5CD_gshared)((ValueTuple_2_tBAA1E1D7D97D80E0EBA7FE8773B1FF409AEA3829*)__this, (Il2CppFullySharedGenericAny)&___item10, (Il2CppFullySharedGenericAny)&___item21, method);
 }
 // System.Void Unity.Collections.LowLevel.Unsafe.UnsafeAppendBuffer::.ctor(System.Int32,System.Int32,Unity.Collections.AllocatorManager/AllocatorHandle)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeAppendBuffer__ctor_m2614D30B3BF230200402D324093DD96B30497F81 (UnsafeAppendBuffer_t9EC160EA10485CD9DD96EDCBCEA06C7BCEF81500* __this, int32_t ___initialCapacity0, int32_t ___alignment1, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator2, const RuntimeMethod* method) ;
 // System.Void Unity.Collections.LowLevel.Unsafe.UnsafeAppendBuffer::Add<System.Byte>(T)
 inline void UnsafeAppendBuffer_Add_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m77D1ED5AB6CFA9B6FF9CC1CFB2B72783A7828BF5 (UnsafeAppendBuffer_t9EC160EA10485CD9DD96EDCBCEA06C7BCEF81500* __this, uint8_t ___value0, const RuntimeMethod* method)
 {
-	((  void (*) (UnsafeAppendBuffer_t9EC160EA10485CD9DD96EDCBCEA06C7BCEF81500*, uint8_t, const RuntimeMethod*))UnsafeAppendBuffer_Add_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m77D1ED5AB6CFA9B6FF9CC1CFB2B72783A7828BF5_gshared)(__this, ___value0, method);
+	((  void (*) (UnsafeAppendBuffer_t9EC160EA10485CD9DD96EDCBCEA06C7BCEF81500*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, const RuntimeMethod*))UnsafeAppendBuffer_Add_TisIl2CppFullySharedGenericStruct_mDDC9C1D1487BB5B9B776AD9F9B6581F838DA5C09_gshared)((UnsafeAppendBuffer_t9EC160EA10485CD9DD96EDCBCEA06C7BCEF81500*)__this, (Il2CppFullySharedGenericStruct)&___value0, method);
 }
 // System.Void System.Object::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
@@ -9383,7 +9051,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Binding_Baselib_Socket_UDP_Recv_m291
 // System.Void System.ValueTuple`2<System.Int32,System.Int32>::.ctor(T1,T2)
 inline void ValueTuple_2__ctor_mF5D8FB18DBF2C4B2F879F8E8E12D8FB8FCDB5477 (ValueTuple_2_t973F7AB0EF5DD3619E518A966941F10D8098F52D* __this, int32_t ___item10, int32_t ___item21, const RuntimeMethod* method)
 {
-	((  void (*) (ValueTuple_2_t973F7AB0EF5DD3619E518A966941F10D8098F52D*, int32_t, int32_t, const RuntimeMethod*))ValueTuple_2__ctor_mF5D8FB18DBF2C4B2F879F8E8E12D8FB8FCDB5477_gshared)(__this, ___item10, ___item21, method);
+	((  void (*) (ValueTuple_2_tBAA1E1D7D97D80E0EBA7FE8773B1FF409AEA3829*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))ValueTuple_2__ctor_mCAE8E725F680FA6BE2C23B9686C9F6056BB7E5CD_gshared)((ValueTuple_2_tBAA1E1D7D97D80E0EBA7FE8773B1FF409AEA3829*)__this, (Il2CppFullySharedGenericAny)&___item10, (Il2CppFullySharedGenericAny)&___item21, method);
 }
 // System.Void Unity.Networking.QoS.QosResponse::Deserialize(System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QosResponse_Deserialize_m26C3F202F7E36B5EB7A910EA34E8131CE627F778 (QosResponse_t98F432DBC7CF62ECE63C3AF62DC7B8365469E09E* __this, intptr_t ___msgData0, const RuntimeMethod* method) ;
@@ -9404,7 +9072,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t QosResponse_get_FlowControl_mF09A6641
 // System.Void System.ValueTuple`2<Unity.Networking.QoS.FcType,System.Byte>::.ctor(T1,T2)
 inline void ValueTuple_2__ctor_m5C85EB35867897AF8CE77D05F8C79590B297F962 (ValueTuple_2_t6BACCF02E01EA5605AF541B0546039EFC2E2F287* __this, int32_t ___item10, uint8_t ___item21, const RuntimeMethod* method)
 {
-	((  void (*) (ValueTuple_2_t6BACCF02E01EA5605AF541B0546039EFC2E2F287*, int32_t, uint8_t, const RuntimeMethod*))ValueTuple_2__ctor_m5628829652D74D43DC74CDAC686735796009040D_gshared)(__this, ___item10, ___item21, method);
+	((  void (*) (ValueTuple_2_tBAA1E1D7D97D80E0EBA7FE8773B1FF409AEA3829*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))ValueTuple_2__ctor_mCAE8E725F680FA6BE2C23B9686C9F6056BB7E5CD_gshared)((ValueTuple_2_tBAA1E1D7D97D80E0EBA7FE8773B1FF409AEA3829*)__this, (Il2CppFullySharedGenericAny)&___item10, (Il2CppFullySharedGenericAny)&___item21, method);
 }
 // System.Boolean System.String::IsNullOrEmpty(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478 (String_t* ___value0, const RuntimeMethod* method) ;
@@ -9413,34 +9081,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UcgQosServer_ToString_mA7BEF62CE300
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.String>::.ctor(System.Collections.Generic.IDictionary`2<TKey,TValue>)
 inline void Dictionary_2__ctor_m1D3CFAA07F0EE9405CAF58853C2E25690A51D0F9 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, RuntimeObject* ___dictionary0, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, RuntimeObject*, const RuntimeMethod*))Dictionary_2__ctor_m623BF34EB93B2B3A3B7D46743B508E2E2958939E_gshared)(__this, ___dictionary0, method);
+	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, RuntimeObject*, const RuntimeMethod*))Dictionary_2__ctor_m3CE78C81B3C997FF9C14675CFBBAD014EF68FE30_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (RuntimeObject*)___dictionary0, method);
 }
 // System.Void Unity.Services.Qos.Configuration::.ctor(System.String,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>,System.Collections.Generic.IDictionary`2<System.String,System.String>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Configuration__ctor_mFF1BCF6303D8E5E362C3655F302DD9E8870BCD33 (Configuration_tA51F8073135AB7EBB0399F926FA5C42D1CF999DC* __this, String_t* ___basePath0, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___requestTimeout1, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___numRetries2, RuntimeObject* ___headers3, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.String>::.ctor()
 inline void Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, const RuntimeMethod*))Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared)(__this, method);
+	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, const RuntimeMethod*))Dictionary_2__ctor_m7745B6ED71E47C95E1BFCE647C4F026A404C668F_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, method);
 }
 // TKey System.Collections.Generic.KeyValuePair`2<System.String,System.String>::get_Key()
 inline String_t* KeyValuePair_2_get_Key_m654BCCAE2F20CB11D8E8C2D2C886A0C8A13EB1C4_inline (KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A* __this, const RuntimeMethod* method)
 {
-	return ((  String_t* (*) (KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A*, const RuntimeMethod*))KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline)(__this, method);
+	String_t* il2cppRetVal;
+	((  void (*) (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))KeyValuePair_2_get_Key_mBE75BF8983618BC1ACEC20F94C1BFF85C8AA50F1_gshared_inline)((KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // TValue System.Collections.Generic.KeyValuePair`2<System.String,System.String>::get_Value()
 inline String_t* KeyValuePair_2_get_Value_m7345512A32CB4DCAA0643050B18DC8DCD71B927A_inline (KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A* __this, const RuntimeMethod* method)
 {
-	return ((  String_t* (*) (KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A*, const RuntimeMethod*))KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline)(__this, method);
+	String_t* il2cppRetVal;
+	((  void (*) (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))KeyValuePair_2_get_Value_mFA1964BF56AA214EE0D491CC197F61BC9E5F1F7A_gshared_inline)((KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.String>::set_Item(TKey,TValue)
 inline void Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, String_t* ___key0, String_t* ___value1, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, String_t*, String_t*, const RuntimeMethod*))Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_gshared)(__this, ___key0, ___value1, method);
+	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_set_Item_m4C6841170DD11AED683D2D71919F362A4CFF4A80_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)___key0, (Il2CppFullySharedGenericAny)___value1, method);
 }
 // System.Boolean System.Nullable`1<System.Int32>::get_HasValue()
 inline bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*, const RuntimeMethod*))Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline)(__this, method);
+	return ((  bool (*) (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*, const RuntimeMethod*))Nullable_1_get_HasValue_m14F273FB376DF00D727434CDCD28AB4EDCC14C3C_gshared_inline)((Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*)__this, method);
 }
 // System.Threading.Tasks.Task`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>> Unity.Services.Qos.WrappedQosService::GetSortedInternalQosResultsAsync(System.String,System.Collections.Generic.IList`1<System.String>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t4A6397D54E9A2AC6B11B022C4E78657D6FF68D2A* WrappedQosService_GetSortedInternalQosResultsAsync_mA47A99113119329B564320BFAB1325B490670F57 (WrappedQosService_t2F9A993E356BE90E52C48C3E211D514BEC65654D* __this, String_t* ___service0, RuntimeObject* ___regions1, const RuntimeMethod* method) ;
@@ -9459,37 +9131,37 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QosPackageInitializer_Register_mAF0A91F3
 // Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CorePackageRegistry::Register<Unity.Services.Qos.QosPackageInitializer>(TPackage)
 inline CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CorePackageRegistry_Register_TisQosPackageInitializer_tDC97F6BE0684D00E3C83AD3BAA8F34D18E034903_mC473E708B2065AB27EA7C8B0783C0E4DED5A8AC9 (CorePackageRegistry_t8A84619B4312955D3D73A62BDFF6042EBE1F0275* __this, QosPackageInitializer_tDC97F6BE0684D00E3C83AD3BAA8F34D18E034903* ___package0, const RuntimeMethod* method)
 {
-	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CorePackageRegistry_t8A84619B4312955D3D73A62BDFF6042EBE1F0275*, QosPackageInitializer_tDC97F6BE0684D00E3C83AD3BAA8F34D18E034903*, const RuntimeMethod*))CorePackageRegistry_Register_TisRuntimeObject_mACE75710C5FF2E7568BD710F2658B3B344F2634D_gshared)(__this, ___package0, method);
+	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CorePackageRegistry_t8A84619B4312955D3D73A62BDFF6042EBE1F0275*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))CorePackageRegistry_Register_TisIl2CppFullySharedGenericAny_m2720385A680E161C3ECC0EDB9FF721DA287E9523_gshared)((CorePackageRegistry_t8A84619B4312955D3D73A62BDFF6042EBE1F0275*)__this, (Il2CppFullySharedGenericAny)___package0, method);
 }
 // Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistration::DependsOn<Unity.Services.Authentication.Internal.IAccessToken>()
 inline CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistration_DependsOn_TisIAccessToken_t8A8955010FD3200218D16D50699C60F922877720_mED54A8C5731A45129C329A211916483BC2DB35C2 (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581* __this, const RuntimeMethod* method)
 {
-	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_DependsOn_TisRuntimeObject_m3400ECC31E4225994DD0AEDDC45B11A61E95559C_gshared)(__this, method);
+	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_DependsOn_TisIl2CppFullySharedGenericAny_m39B2F139D6183E40C4BF47E34CE79A07F637D6FC_gshared)((CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*)__this, method);
 }
 // Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistration::DependsOn<Unity.Services.Core.Telemetry.Internal.IMetricsFactory>()
 inline CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistration_DependsOn_TisIMetricsFactory_t28787E894D3913155A7403F74BD62B562E3F906F_mAAAC4DFCA0707823134A60AAD6883345738C8543 (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581* __this, const RuntimeMethod* method)
 {
-	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_DependsOn_TisRuntimeObject_m3400ECC31E4225994DD0AEDDC45B11A61E95559C_gshared)(__this, method);
+	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_DependsOn_TisIl2CppFullySharedGenericAny_m39B2F139D6183E40C4BF47E34CE79A07F637D6FC_gshared)((CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*)__this, method);
 }
 // Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistration::DependsOn<Unity.Services.Core.Configuration.Internal.IProjectConfiguration>()
 inline CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistration_DependsOn_TisIProjectConfiguration_tB5A7516DEB869AD005431EC83C6E02221D2B60D2_mFE611D2FD196728ACC376EAB06D4F2664D8FDD10 (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581* __this, const RuntimeMethod* method)
 {
-	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_DependsOn_TisRuntimeObject_m3400ECC31E4225994DD0AEDDC45B11A61E95559C_gshared)(__this, method);
+	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_DependsOn_TisIl2CppFullySharedGenericAny_m39B2F139D6183E40C4BF47E34CE79A07F637D6FC_gshared)((CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*)__this, method);
 }
 // Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistration::ProvidesComponent<Unity.Services.Qos.Internal.IQosResults>()
 inline CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistration_ProvidesComponent_TisIQosResults_t398EE4833D6D9C7764C14DA29A29F3EAD313FAC4_mAE0C2334E55C193471498A86A1C64FAA582524E5 (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581* __this, const RuntimeMethod* method)
 {
-	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_ProvidesComponent_TisRuntimeObject_mBB6FDBE4AAE276784D193AB900F392199F177650_gshared)(__this, method);
+	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_ProvidesComponent_TisIl2CppFullySharedGenericAny_mB57D4D1C16DCBF54BC3901928868F4A7336C2398_gshared)((CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*)__this, method);
 }
 // Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistration::ProvidesComponent<Unity.Services.Qos.IQosServiceComponent>()
 inline CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistration_ProvidesComponent_TisIQosServiceComponent_tC7FAEF59173F4EA1F1487E3C57D09A86E6EF4CD6_m2C05349BB1A0202B9CF59FF0B43E190D8D27D744 (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581* __this, const RuntimeMethod* method)
 {
-	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_ProvidesComponent_TisRuntimeObject_mBB6FDBE4AAE276784D193AB900F392199F177650_gshared)(__this, method);
+	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_ProvidesComponent_TisIl2CppFullySharedGenericAny_mB57D4D1C16DCBF54BC3901928868F4A7336C2398_gshared)((CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*)__this, method);
 }
 // Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistry::RegisterPackage<Unity.Services.Qos.QosPackageInitializer>(TPackage)
 inline CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistry_RegisterPackage_TisQosPackageInitializer_tDC97F6BE0684D00E3C83AD3BAA8F34D18E034903_m839DEBD08FCBAE39E135D0718A66C0512F3854F4 (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, QosPackageInitializer_tDC97F6BE0684D00E3C83AD3BAA8F34D18E034903* ___package0, const RuntimeMethod* method)
 {
-	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, QosPackageInitializer_tDC97F6BE0684D00E3C83AD3BAA8F34D18E034903*, const RuntimeMethod*))CoreRegistry_RegisterPackage_TisRuntimeObject_m5DF8BA5ABD5476A91872308A910C81D92F1FC6DD_gshared)(__this, ___package0, method);
+	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))CoreRegistry_RegisterPackage_TisIl2CppFullySharedGenericAny_mC0037D9C3D926AA642C1CCFE43EB1CF8F08B8A88_gshared)((CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*)__this, (Il2CppFullySharedGenericAny)___package0, method);
 }
 // Unity.Services.Qos.IQosService Unity.Services.Qos.QosPackageInitializer::InitializeService(Unity.Services.Core.Internal.CoreRegistry)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* QosPackageInitializer_InitializeService_m014B6CA165415CDC6670245DA829E4F2D8DC1906 (QosPackageInitializer_tDC97F6BE0684D00E3C83AD3BAA8F34D18E034903* __this, CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* ___registry0, const RuntimeMethod* method) ;
@@ -9500,17 +9172,23 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Task_t751C4CC3ECD055BABA8A0B6A5DF
 // TComponent Unity.Services.Core.Internal.CoreRegistry::GetServiceComponent<Unity.Services.Core.Configuration.Internal.IProjectConfiguration>()
 inline RuntimeObject* CoreRegistry_GetServiceComponent_TisIProjectConfiguration_tB5A7516DEB869AD005431EC83C6E02221D2B60D2_mF70AFB94326EDB167066B7836231B13A52150312 (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, const RuntimeMethod*))CoreRegistry_GetServiceComponent_TisRuntimeObject_m6C2601CB56CD9AE5154E543B9AA87E10AFCA875C_gshared)(__this, method);
+	RuntimeObject* il2cppRetVal;
+	((  void (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))CoreRegistry_GetServiceComponent_TisIl2CppFullySharedGenericAny_m26E5A2A0666FCF9B47AB4CD6891285167234D99B_gshared)((CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // TComponent Unity.Services.Core.Internal.CoreRegistry::GetServiceComponent<Unity.Services.Authentication.Internal.IAccessToken>()
 inline RuntimeObject* CoreRegistry_GetServiceComponent_TisIAccessToken_t8A8955010FD3200218D16D50699C60F922877720_m4125AAF16E0C255FB3B1560FAEB5D04A1BFF1D66 (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, const RuntimeMethod*))CoreRegistry_GetServiceComponent_TisRuntimeObject_m6C2601CB56CD9AE5154E543B9AA87E10AFCA875C_gshared)(__this, method);
+	RuntimeObject* il2cppRetVal;
+	((  void (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))CoreRegistry_GetServiceComponent_TisIl2CppFullySharedGenericAny_m26E5A2A0666FCF9B47AB4CD6891285167234D99B_gshared)((CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // TComponent Unity.Services.Core.Internal.CoreRegistry::GetServiceComponent<Unity.Services.Core.Telemetry.Internal.IMetricsFactory>()
 inline RuntimeObject* CoreRegistry_GetServiceComponent_TisIMetricsFactory_t28787E894D3913155A7403F74BD62B562E3F906F_m9825DA2F6B0AE6ECF9D7DBCA69BF1EFBADFFA5FB (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, const RuntimeMethod*))CoreRegistry_GetServiceComponent_TisRuntimeObject_m6C2601CB56CD9AE5154E543B9AA87E10AFCA875C_gshared)(__this, method);
+	RuntimeObject* il2cppRetVal;
+	((  void (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))CoreRegistry_GetServiceComponent_TisIl2CppFullySharedGenericAny_m26E5A2A0666FCF9B47AB4CD6891285167234D99B_gshared)((CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void Unity.Services.Qos.Http.HttpClient::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HttpClient__ctor_m280356AE0B5577C3BF6544E6673E70C13458016A (HttpClient_t33C65C4AD210DC5BA7E9DA2E12485D3F71D25E02* __this, const RuntimeMethod* method) ;
@@ -9523,7 +9201,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HttpClient__ctor_m6269F1577077AE4EB9F96C
 // System.Void System.Nullable`1<System.Int32>::.ctor(T)
 inline void Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703 (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, int32_t ___value0, const RuntimeMethod* method)
 {
-	((  void (*) (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*, int32_t, const RuntimeMethod*))Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703_gshared)(__this, ___value0, method);
+	((  void (*) (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, const RuntimeMethod*))Nullable_1__ctor_m4257D7FF23A495D1B204F20330FBDED58248E4CC_gshared)((Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*)__this, (Il2CppFullySharedGenericStruct)&___value0, method);
 }
 // System.Void Unity.Services.Qos.V2.Configuration::.ctor(System.String,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>,System.Collections.Generic.IDictionary`2<System.String,System.String>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Configuration__ctor_mDF2C53A7F32A79585AA2D4D701741F1259B93250 (Configuration_tE845FBB1A4661A45CD91F4276EAA6E16E3DB89BD* __this, String_t* ___basePath0, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___requestTimeout1, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___numRetries2, RuntimeObject* ___headers3, const RuntimeMethod* method) ;
@@ -9538,21 +9216,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WrappedQosService__ctor_m154BD2060BFDD4A
 // System.Void Unity.Services.Core.Internal.CoreRegistry::RegisterService<Unity.Services.Qos.IQosService>(T)
 inline void CoreRegistry_RegisterService_TisIQosService_t80835642D3A85D031FB2F007B013223CFEF7ED97_mA369447BB05510FE451E3CB7A9099A9DB0585B22 (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, RuntimeObject* ___service0, const RuntimeMethod* method)
 {
-	((  void (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, RuntimeObject*, const RuntimeMethod*))CoreRegistry_RegisterService_TisRuntimeObject_m7CEA2C7C313B0C96F684DF539445A942DAA1DBFA_gshared)(__this, ___service0, method);
+	((  void (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))CoreRegistry_RegisterService_TisIl2CppFullySharedGenericAny_m7A2580AAC9C2A8517E547AD6AB398DD1A7B3D25A_gshared)((CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*)__this, (Il2CppFullySharedGenericAny)___service0, method);
 }
 // System.Void Unity.Services.Qos.QosResults::.ctor(Unity.Services.Qos.WrappedQosService)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QosResults__ctor_m6AD651FDED7000ABD5E4B91076A06D599A64F78B (QosResults_tECC992E8CB68BE2C9A27DE517528F341D7B1FB6A* __this, WrappedQosService_t2F9A993E356BE90E52C48C3E211D514BEC65654D* ___qosService0, const RuntimeMethod* method) ;
 // System.Void Unity.Services.Core.Internal.CoreRegistry::RegisterServiceComponent<Unity.Services.Qos.Internal.IQosResults>(TComponent)
 inline void CoreRegistry_RegisterServiceComponent_TisIQosResults_t398EE4833D6D9C7764C14DA29A29F3EAD313FAC4_m150CA7F722411753DC10E4D5A955143FFF798BAD (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, RuntimeObject* ___component0, const RuntimeMethod* method)
 {
-	((  void (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, RuntimeObject*, const RuntimeMethod*))CoreRegistry_RegisterServiceComponent_TisRuntimeObject_m619D1536EFA7133E95AF878679EFDA3A9CFBC67F_gshared)(__this, ___component0, method);
+	((  void (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))CoreRegistry_RegisterServiceComponent_TisIl2CppFullySharedGenericAny_m746220ECD71433C98700667A9511A1B7DCC98400_gshared)((CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*)__this, (Il2CppFullySharedGenericAny)___component0, method);
 }
 // System.Void Unity.Services.Qos.QosServiceComponent::.ctor(Unity.Services.Qos.IQosService)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QosServiceComponent__ctor_mBB5C02A323479F1A83A1F9B74C257E576EC0B9AF (QosServiceComponent_tCEAB656ACA361F0AB725CDF4A35294D44A381A15* __this, RuntimeObject* ___qos0, const RuntimeMethod* method) ;
 // System.Void Unity.Services.Core.Internal.CoreRegistry::RegisterServiceComponent<Unity.Services.Qos.IQosServiceComponent>(TComponent)
 inline void CoreRegistry_RegisterServiceComponent_TisIQosServiceComponent_tC7FAEF59173F4EA1F1487E3C57D09A86E6EF4CD6_m1BC54B7F0CA0C02C47A95FEC8229DE7944BA6906 (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, RuntimeObject* ___component0, const RuntimeMethod* method)
 {
-	((  void (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, RuntimeObject*, const RuntimeMethod*))CoreRegistry_RegisterServiceComponent_TisRuntimeObject_m619D1536EFA7133E95AF878679EFDA3A9CFBC67F_gshared)(__this, ___component0, method);
+	((  void (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))CoreRegistry_RegisterServiceComponent_TisIl2CppFullySharedGenericAny_m746220ECD71433C98700667A9511A1B7DCC98400_gshared)((CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*)__this, (Il2CppFullySharedGenericAny)___component0, method);
 }
 // System.Boolean System.String::op_Equality(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1 (String_t* ___a0, String_t* ___b1, const RuntimeMethod* method) ;
@@ -9567,112 +9245,125 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void InternalQosDiscoveryService_
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosResult>>::Create()
 inline AsyncTaskMethodBuilder_1_tC46D1A5977960A6E4714A06B6A58C1F9C35486F1 AsyncTaskMethodBuilder_1_Create_m8E417AE82132549A07C207F5FADD61559629ED02 (const RuntimeMethod* method)
 {
-	return ((  AsyncTaskMethodBuilder_1_tC46D1A5977960A6E4714A06B6A58C1F9C35486F1 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
+	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
+	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_tC46D1A5977960A6E4714A06B6A58C1F9C35486F1, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosResult>>::Start<Unity.Services.Qos.WrappedQosService/<GetSortedQosResultsAsync>d__18>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CGetSortedQosResultsAsyncU3Ed__18_tB8AD951812F00113235ACDA859DA52EA751E8A9A_m1F166BEE2773B9FC6F9189C8F4CF43D0BACAFA20 (AsyncTaskMethodBuilder_1_tC46D1A5977960A6E4714A06B6A58C1F9C35486F1* __this, U3CGetSortedQosResultsAsyncU3Ed__18_tB8AD951812F00113235ACDA859DA52EA751E8A9A* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tC46D1A5977960A6E4714A06B6A58C1F9C35486F1*, U3CGetSortedQosResultsAsyncU3Ed__18_tB8AD951812F00113235ACDA859DA52EA751E8A9A*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CGetSortedQosResultsAsyncU3Ed__18_tB8AD951812F00113235ACDA859DA52EA751E8A9A_m2E7DDAE5FDD4BC446E3BC5ECBABEDDDFB20A133B_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosResult>>::get_Task()
 inline Task_1_tFF4BEFBB4AFF6A0E6AECA5261E14E0E443F73292* AsyncTaskMethodBuilder_1_get_Task_m297490B98943F4124729D197C3790F41CE654DE5 (AsyncTaskMethodBuilder_1_tC46D1A5977960A6E4714A06B6A58C1F9C35486F1* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_tFF4BEFBB4AFF6A0E6AECA5261E14E0E443F73292* (*) (AsyncTaskMethodBuilder_1_tC46D1A5977960A6E4714A06B6A58C1F9C35486F1*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
+	return (Task_1_tFF4BEFBB4AFF6A0E6AECA5261E14E0E443F73292*)il2cppRetVal;
 }
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>::Create()
 inline AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A AsyncTaskMethodBuilder_1_Create_mDA9FCCCDB6FC28574814B7F1E22DF3AEAB0BB1C5 (const RuntimeMethod* method)
 {
-	return ((  AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
+	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
+	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>::Start<Unity.Services.Qos.WrappedQosService/<GetSortedInternalQosResultsAsync>d__19>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA_mB66EE8BB9055B132929A490D499F0747B6790919 (AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A* __this, U3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A*, U3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA_m1B28419A68712375D00D40103B0AA31C1FE3AD84_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>::get_Task()
 inline Task_1_t4A6397D54E9A2AC6B11B022C4E78657D6FF68D2A* AsyncTaskMethodBuilder_1_get_Task_m8D427B5A72E69431567A820AFE1809DB797F9DDA (AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_t4A6397D54E9A2AC6B11B022C4E78657D6FF68D2A* (*) (AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
+	return (Task_1_t4A6397D54E9A2AC6B11B022C4E78657D6FF68D2A*)il2cppRetVal;
 }
 // System.Void System.Func`2<Unity.Services.Qos.Internal.QosResult,System.Int32>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m34D53F79EB110F532DEB3662FCE7F14A055AE698 (Func_2_tD1C501C17092D1BC651648AF608F076CE51E810C* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_tD1C501C17092D1BC651648AF608F076CE51E810C*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m34D53F79EB110F532DEB3662FCE7F14A055AE698_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Linq.IOrderedEnumerable`1<TSource> System.Linq.Enumerable::OrderBy<Unity.Services.Qos.Internal.QosResult,System.Int32>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
 inline RuntimeObject* Enumerable_OrderBy_TisQosResult_tA2296213032595430F8FE40418B3D5BA47E86D27_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mF53AA0808AFA5FA76F40DBC779F1DF51CB7522C9 (RuntimeObject* ___source0, Func_2_tD1C501C17092D1BC651648AF608F076CE51E810C* ___keySelector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_tD1C501C17092D1BC651648AF608F076CE51E810C*, const RuntimeMethod*))Enumerable_OrderBy_TisQosResult_tA2296213032595430F8FE40418B3D5BA47E86D27_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mF53AA0808AFA5FA76F40DBC779F1DF51CB7522C9_gshared)(___source0, ___keySelector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_OrderBy_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mCA0D4A157D5453421E5E883B0A9489E97328A9BC_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___keySelector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Void System.Func`2<Unity.Services.Qos.Internal.QosResult,System.Single>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_mA3038ECF2EF1BD15F9ABB13BBAF2221918B0D31C (Func_2_t44AC78B1DB233007BF6EF0B8A5E0BB471B744261* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t44AC78B1DB233007BF6EF0B8A5E0BB471B744261*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_mA3038ECF2EF1BD15F9ABB13BBAF2221918B0D31C_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Linq.IOrderedEnumerable`1<TSource> System.Linq.Enumerable::ThenBy<Unity.Services.Qos.Internal.QosResult,System.Single>(System.Linq.IOrderedEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
 inline RuntimeObject* Enumerable_ThenBy_TisQosResult_tA2296213032595430F8FE40418B3D5BA47E86D27_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_m8FEA2115C43B69F993899739EDD2F67353095CCF (RuntimeObject* ___source0, Func_2_t44AC78B1DB233007BF6EF0B8A5E0BB471B744261* ___keySelector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t44AC78B1DB233007BF6EF0B8A5E0BB471B744261*, const RuntimeMethod*))Enumerable_ThenBy_TisQosResult_tA2296213032595430F8FE40418B3D5BA47E86D27_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_m8FEA2115C43B69F993899739EDD2F67353095CCF_gshared)(___source0, ___keySelector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_ThenBy_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m1495B48C677043AB0D847DE5D9B1D76175B4C750_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___keySelector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<Unity.Services.Qos.Internal.QosResult>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* Enumerable_ToList_TisQosResult_tA2296213032595430F8FE40418B3D5BA47E86D27_mBFB794DAAAC924050AC41223BF89D821C7F6C462 (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisQosResult_tA2296213032595430F8FE40418B3D5BA47E86D27_mBFB794DAAAC924050AC41223BF89D821C7F6C462_gshared)(___source0, method);
+	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* il2cppRetVal = ((  List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisIl2CppFullySharedGenericAny_m191EA129E511F9B8304FF8826A2DA645E06CCBF0_gshared)((RuntimeObject*)___source0, method);
+	return (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85*)il2cppRetVal;
 }
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>::Create()
 inline AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813 AsyncTaskMethodBuilder_1_Create_mD59A0FF55EAA773F42D7E5EDD75222E54D408649 (const RuntimeMethod* method)
 {
-	return ((  AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
+	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
+	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>::Start<Unity.Services.Qos.WrappedQosService/<GetSortedRelayQosResultsAsync>d__21>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CGetSortedRelayQosResultsAsyncU3Ed__21_t835378428BD1ACCC0D022C47899EDA5FCEC5BEF1_m908FA3AEA11EA2336D2DB38A73AF85F04C1CCE72 (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813* __this, U3CGetSortedRelayQosResultsAsyncU3Ed__21_t835378428BD1ACCC0D022C47899EDA5FCEC5BEF1* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813*, U3CGetSortedRelayQosResultsAsyncU3Ed__21_t835378428BD1ACCC0D022C47899EDA5FCEC5BEF1*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CGetSortedRelayQosResultsAsyncU3Ed__21_t835378428BD1ACCC0D022C47899EDA5FCEC5BEF1_m0538ED8CE809CCC7B9AB778EE2E6BE61863EEE77_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>::get_Task()
 inline Task_1_t987250F229B4B296C1DE2924BF5DC33993BC6332* AsyncTaskMethodBuilder_1_get_Task_m3B3E96C8328A7922B82A612AAEAF6FCEF20FADF3 (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_t987250F229B4B296C1DE2924BF5DC33993BC6332* (*) (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
+	return (Task_1_t987250F229B4B296C1DE2924BF5DC33993BC6332*)il2cppRetVal;
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>::Start<Unity.Services.Qos.WrappedQosService/<GetSortedMultiplayQosResultsAsync>d__22>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CGetSortedMultiplayQosResultsAsyncU3Ed__22_t798C9E6E5FB38762C945C379E57C6244CC519A78_m8DAB92713FD7D143FC14C0E7E864D135D1749E4D (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813* __this, U3CGetSortedMultiplayQosResultsAsyncU3Ed__22_t798C9E6E5FB38762C945C379E57C6244CC519A78* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813*, U3CGetSortedMultiplayQosResultsAsyncU3Ed__22_t798C9E6E5FB38762C945C379E57C6244CC519A78*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CGetSortedMultiplayQosResultsAsyncU3Ed__22_t798C9E6E5FB38762C945C379E57C6244CC519A78_mC3808A1DD41C47A8667049519205521F031036EA_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.V2.Models.QosServer>>::Create()
 inline AsyncTaskMethodBuilder_1_tD38C06EDB652630090171F110454BF09C08BF3AC AsyncTaskMethodBuilder_1_Create_m07B678EDC166BAAFBD93A24B7819E2C6E9CB576E (const RuntimeMethod* method)
 {
-	return ((  AsyncTaskMethodBuilder_1_tD38C06EDB652630090171F110454BF09C08BF3AC (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
+	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
+	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_tD38C06EDB652630090171F110454BF09C08BF3AC, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.V2.Models.QosServer>>::Start<Unity.Services.Qos.WrappedQosService/<GetAllServersAsync>d__23>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CGetAllServersAsyncU3Ed__23_t7AFE6C96D8F04EFBC560FC3BCBC44A63D4D9015C_m0A178C5072FBF329B75CF8DDA2A4A832B0B6FFF0 (AsyncTaskMethodBuilder_1_tD38C06EDB652630090171F110454BF09C08BF3AC* __this, U3CGetAllServersAsyncU3Ed__23_t7AFE6C96D8F04EFBC560FC3BCBC44A63D4D9015C* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tD38C06EDB652630090171F110454BF09C08BF3AC*, U3CGetAllServersAsyncU3Ed__23_t7AFE6C96D8F04EFBC560FC3BCBC44A63D4D9015C*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CGetAllServersAsyncU3Ed__23_t7AFE6C96D8F04EFBC560FC3BCBC44A63D4D9015C_m2928EE70ADFEBDF36F884FC101539AFEDE9DD65B_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.V2.Models.QosServer>>::get_Task()
 inline Task_1_t4C753ED1AC8C96D385B29926CF18A105A477DFF7* AsyncTaskMethodBuilder_1_get_Task_mF1DF2AF5C0A625C6ED12EA4406D0A9D6CE689DAE (AsyncTaskMethodBuilder_1_tD38C06EDB652630090171F110454BF09C08BF3AC* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_t4C753ED1AC8C96D385B29926CF18A105A477DFF7* (*) (AsyncTaskMethodBuilder_1_tD38C06EDB652630090171F110454BF09C08BF3AC*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
+	return (Task_1_t4C753ED1AC8C96D385B29926CF18A105A477DFF7*)il2cppRetVal;
 }
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::Create()
 inline AsyncTaskMethodBuilder_1_tD0937D37EA57D5DEBDA506F7F9EF957423F02605 AsyncTaskMethodBuilder_1_Create_m2F6851411C36822EED574F6FA88B43C29C75DB23 (const RuntimeMethod* method)
 {
-	return ((  AsyncTaskMethodBuilder_1_tD0937D37EA57D5DEBDA506F7F9EF957423F02605 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
+	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
+	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_tD0937D37EA57D5DEBDA506F7F9EF957423F02605, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::Start<Unity.Services.Qos.WrappedQosService/<GetQosResultsAsync>d__24>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CGetQosResultsAsyncU3Ed__24_t558A8B004B2726B7EFE0A1111CCE038EEC82A10F_mE8C9E68F9D7C6D3B7C344C0AA85B7B99B5965180 (AsyncTaskMethodBuilder_1_tD0937D37EA57D5DEBDA506F7F9EF957423F02605* __this, U3CGetQosResultsAsyncU3Ed__24_t558A8B004B2726B7EFE0A1111CCE038EEC82A10F* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tD0937D37EA57D5DEBDA506F7F9EF957423F02605*, U3CGetQosResultsAsyncU3Ed__24_t558A8B004B2726B7EFE0A1111CCE038EEC82A10F*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CGetQosResultsAsyncU3Ed__24_t558A8B004B2726B7EFE0A1111CCE038EEC82A10F_m59E412D75329B466D0FFCABDBAF3FBEECE524DD0_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::get_Task()
 inline Task_1_tEB34039AF8670B9F08E0D2B45707AC21A1C1903E* AsyncTaskMethodBuilder_1_get_Task_m65BA13F9789A41251EC287A986F367C7FFE636D1 (AsyncTaskMethodBuilder_1_tD0937D37EA57D5DEBDA506F7F9EF957423F02605* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_tEB34039AF8670B9F08E0D2B45707AC21A1C1903E* (*) (AsyncTaskMethodBuilder_1_tD0937D37EA57D5DEBDA506F7F9EF957423F02605*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
+	return (Task_1_tEB34039AF8670B9F08E0D2B45707AC21A1C1903E*)il2cppRetVal;
 }
 // System.Void System.Func`2<Unity.Services.Qos.V2.Models.QosServer,System.Collections.Generic.List`1<System.String>>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m04E2FA2FFC7CD28EA9E354489681E5110256A22B (Func_2_t98ECD54006CAACCF31AB1A722FAF9BFDE504A843* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t98ECD54006CAACCF31AB1A722FAF9BFDE504A843*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F8A01C0B02BC1D4063F4EB1E817F7A48562A398_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Void Unity.Services.Qos.WrappedQosService::SendResultsMetricsV2ForService(System.Collections.Generic.IReadOnlyCollection`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>,System.Func`2<Unity.Services.Qos.V2.Models.QosServer,System.Collections.Generic.List`1<System.String>>,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WrappedQosService_SendResultsMetricsV2ForService_mA6D289265D071C6C3D7DF4AC966659CE3C05773E (WrappedQosService_t2F9A993E356BE90E52C48C3E211D514BEC65654D* __this, RuntimeObject* ___allResults0, Func_2_t98ECD54006CAACCF31AB1A722FAF9BFDE504A843* ___regionGetter1, String_t* ___service2, const RuntimeMethod* method) ;
@@ -9681,180 +9372,201 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass26_0__ctor_m5D37BAC
 // System.Void System.Func`2<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>,System.Boolean>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m91EDC7E233F9597D956570DF95AFDB377B17DF76 (Func_2_tEC4BA47B80CD4B01B6A848A60F3A09F299879B63* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_tEC4BA47B80CD4B01B6A848A60F3A09F299879B63*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m12AD13B34233DFD7C1397ABBFE261BB6C85FC753_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TSource> System.Linq.Enumerable::Where<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
 inline RuntimeObject* Enumerable_Where_TisValueTuple_2_t72ACF7A63A3F4DA79ACAFA9F4780AA107AD73E61_m90B403978FC5E205C54F1DB24870A0838B531AC5 (RuntimeObject* ___source0, Func_2_tEC4BA47B80CD4B01B6A848A60F3A09F299879B63* ___predicate1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_tEC4BA47B80CD4B01B6A848A60F3A09F299879B63*, const RuntimeMethod*))Enumerable_Where_TisValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A_mED8ED73256F14936A3806B41A4741017378AA012_gshared)(___source0, ___predicate1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t19E50C11C3E1F20B5A8FDB85D7DD353B6DFF868B*, const RuntimeMethod*))Enumerable_Where_TisIl2CppFullySharedGenericAny_m3F416675DC7A5572025B02ED373C41AD9ED8F6C4_gshared)((RuntimeObject*)___source0, (Func_2_t19E50C11C3E1F20B5A8FDB85D7DD353B6DFF868B*)___predicate1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Void System.Func`2<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>,System.Int32>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_mCB42B1D69DA5A571819522B6ECCD0E002098B2FC (Func_2_t8315B143E7B99C400377414703F4E81AEADBB415* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t8315B143E7B99C400377414703F4E81AEADBB415*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_mC868057A64EED67F0D73A8314239C6CE3D52B1A3_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Linq.IOrderedEnumerable`1<TSource> System.Linq.Enumerable::OrderBy<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>,System.Int32>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
 inline RuntimeObject* Enumerable_OrderBy_TisValueTuple_2_t72ACF7A63A3F4DA79ACAFA9F4780AA107AD73E61_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m6FA088418F386962A72121863A4CE9F658F515FA (RuntimeObject* ___source0, Func_2_t8315B143E7B99C400377414703F4E81AEADBB415* ___keySelector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t8315B143E7B99C400377414703F4E81AEADBB415*, const RuntimeMethod*))Enumerable_OrderBy_TisValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m9461C4266BD19F2B17DC839425EBCE1BAE8F7157_gshared)(___source0, ___keySelector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_OrderBy_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mCA0D4A157D5453421E5E883B0A9489E97328A9BC_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___keySelector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Void System.Func`2<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>,System.Single>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m86FEA9268896C7D86A2DEB064FDCDAC7C2D466FB (Func_2_tBB70CDC58D25FACEC6B3308AA24C21A4E526CCF9* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_tBB70CDC58D25FACEC6B3308AA24C21A4E526CCF9*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m8C55D823C3631D1CB33D72EDBA4F3EF0F8BA04F8_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Linq.IOrderedEnumerable`1<TSource> System.Linq.Enumerable::ThenBy<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>,System.Single>(System.Linq.IOrderedEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
 inline RuntimeObject* Enumerable_ThenBy_TisValueTuple_2_t72ACF7A63A3F4DA79ACAFA9F4780AA107AD73E61_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_m9BD812E1C962AE9A1658E27D52D8F7DE2AAE860E (RuntimeObject* ___source0, Func_2_tBB70CDC58D25FACEC6B3308AA24C21A4E526CCF9* ___keySelector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_tBB70CDC58D25FACEC6B3308AA24C21A4E526CCF9*, const RuntimeMethod*))Enumerable_ThenBy_TisValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_m4B6A455AF2D811FA986DCA23AC8C4F02A961340A_gshared)(___source0, ___keySelector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_ThenBy_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m1495B48C677043AB0D847DE5D9B1D76175B4C750_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___keySelector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A* Enumerable_ToList_TisValueTuple_2_t72ACF7A63A3F4DA79ACAFA9F4780AA107AD73E61_mCE8605FEF463454FA5C2600D30DB45A20097A461 (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A_m08BFD55848B5CE982610D8DDE275E7D685216583_gshared)(___source0, method);
+	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* il2cppRetVal = ((  List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisIl2CppFullySharedGenericAny_m191EA129E511F9B8304FF8826A2DA645E06CCBF0_gshared)((RuntimeObject*)___source0, method);
+	return (List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A*)il2cppRetVal;
 }
 // T System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>::get_Item(System.Int32)
 inline ValueTuple_2_t72ACF7A63A3F4DA79ACAFA9F4780AA107AD73E61 List_1_get_Item_m5340EFA83431CE475728357421B68E66CDFA1BDB (List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A* __this, int32_t ___index0, const RuntimeMethod* method)
 {
-	return ((  ValueTuple_2_t72ACF7A63A3F4DA79ACAFA9F4780AA107AD73E61 (*) (List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A*, int32_t, const RuntimeMethod*))List_1_get_Item_mDEEB92B35DD1643CAC7F2F8F7CF3B84C99C3DE42_gshared)(__this, ___index0, method);
+	ValueTuple_2_t72ACF7A63A3F4DA79ACAFA9F4780AA107AD73E61 il2cppRetVal;
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, Il2CppFullySharedGenericAny*, const RuntimeMethod*))List_1_get_Item_m6E4BA37C1FB558E4A62AE4324212E45D09C5C937_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, ___index0, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // TResult System.Func`2<Unity.Services.Qos.V2.Models.QosServer,System.Collections.Generic.List`1<System.String>>::Invoke(T)
 inline List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* Func_2_Invoke_mF827FD83A58DB2269F3C329EC136209810DC9699_inline (Func_2_t98ECD54006CAACCF31AB1A722FAF9BFDE504A843* __this, QosServer_tB21FB1B10430033FA21C425FDFC33C49D61FF3F6* ___arg0, const RuntimeMethod* method)
 {
-	return ((  List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* (*) (Func_2_t98ECD54006CAACCF31AB1A722FAF9BFDE504A843*, QosServer_tB21FB1B10430033FA21C425FDFC33C49D61FF3F6*, const RuntimeMethod*))Func_2_Invoke_mDBA25DA5DA5B7E056FB9B026AF041F1385FB58A9_gshared_inline)(__this, ___arg0, method);
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* il2cppRetVal;
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Func_2_Invoke_m31CAC166FDC80DC5AE52A5AEFFEE2D9B27A1CA3F_gshared_inline)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, (Il2CppFullySharedGenericAny)___arg0, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // T System.Collections.Generic.List`1<System.String>::get_Item(System.Int32)
 inline String_t* List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8 (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, int32_t ___index0, const RuntimeMethod* method)
 {
-	return ((  String_t* (*) (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___index0, method);
+	String_t* il2cppRetVal;
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, Il2CppFullySharedGenericAny*, const RuntimeMethod*))List_1_get_Item_m6E4BA37C1FB558E4A62AE4324212E45D09C5C937_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, ___index0, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void Unity.Services.Qos.WrappedQosService::SendResultMetrics(System.String,System.String,System.String,System.String,System.Int32,System.Single,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WrappedQosService_SendResultMetrics_mE325FDA0D83A063733B876D92EB6E019BFD42BD7 (WrappedQosService_t2F9A993E356BE90E52C48C3E211D514BEC65654D* __this, String_t* ___service0, String_t* ___clientCountry1, String_t* ___clientRegion2, String_t* ___region3, int32_t ___averageLatencyMs4, float ___packetLossPercent5, bool ___isBest6, const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>::get_Count()
 inline int32_t List_1_get_Count_m7F04FDB50167D6988F1F6EED0C13E95E04B15162_inline (List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A*, const RuntimeMethod*))List_1_get_Count_m1747175525F15736BD2C9209C7B090DC8164FE7A_gshared_inline)(__this, method);
+	return ((  int32_t (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>::Start<Unity.Services.Qos.WrappedQosService/<GetSortedInternalServiceQosResultsAsync>d__27>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE_mA00A5A0A129DD66EA59936D442AE1D19D1C0931F (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813* __this, U3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813*, U3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE_m637EA6608B39282E33ACDFE5A61567924BBCEBB6_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Void System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Boolean>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m5344FBAF64D5959B7625A878614920DF321DC6DB (Func_2_t6F7F809A2CFA36D87B0824064AE7E3627A3F0F47* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t6F7F809A2CFA36D87B0824064AE7E3627A3F0F47*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m5344FBAF64D5959B7625A878614920DF321DC6DB_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TSource> System.Linq.Enumerable::Where<Unity.Services.Qos.Runner.QosAnnotatedResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
 inline RuntimeObject* Enumerable_Where_TisQosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E_m6A59E63DF772F67AF676654513B124388B594B50 (RuntimeObject* ___source0, Func_2_t6F7F809A2CFA36D87B0824064AE7E3627A3F0F47* ___predicate1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t6F7F809A2CFA36D87B0824064AE7E3627A3F0F47*, const RuntimeMethod*))Enumerable_Where_TisQosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E_m6A59E63DF772F67AF676654513B124388B594B50_gshared)(___source0, ___predicate1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t19E50C11C3E1F20B5A8FDB85D7DD353B6DFF868B*, const RuntimeMethod*))Enumerable_Where_TisIl2CppFullySharedGenericAny_m3F416675DC7A5572025B02ED373C41AD9ED8F6C4_gshared)((RuntimeObject*)___source0, (Func_2_t19E50C11C3E1F20B5A8FDB85D7DD353B6DFF868B*)___predicate1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Void System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.String>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_mC29E87003BA36C4F198197CBF76637980FFA3961 (Func_2_t698CE58DA2D8111B8B034A4E1E765E679BBE369E* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t698CE58DA2D8111B8B034A4E1E765E679BBE369E*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_mAFEB3EC0CDBAB215247C7C5A5A596235FBE5B540_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<System.Linq.IGrouping`2<TKey,TSource>> System.Linq.Enumerable::GroupBy<Unity.Services.Qos.Runner.QosAnnotatedResult,System.String>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
 inline RuntimeObject* Enumerable_GroupBy_TisQosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E_TisString_t_m8A534A898B6D3A39741AA709BCCB3DF866F4E5BE (RuntimeObject* ___source0, Func_2_t698CE58DA2D8111B8B034A4E1E765E679BBE369E* ___keySelector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t698CE58DA2D8111B8B034A4E1E765E679BBE369E*, const RuntimeMethod*))Enumerable_GroupBy_TisQosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E_TisRuntimeObject_mE1F3E1C1E78D613B973E451776FAE8BF8096A2BF_gshared)(___source0, ___keySelector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_GroupBy_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mB9E8C5C948502E9809A6BF8D0CA7AB2C34D175DA_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___keySelector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Void System.Func`2<System.Linq.IGrouping`2<System.String,Unity.Services.Qos.Runner.QosAnnotatedResult>,Unity.Services.Qos.IQosAnnotatedResult>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m06B14CD7955847472B2ACC78B848AAEEB5403DD1 (Func_2_t6B95C68C8E9FF576287D80CDBC6DB7A55977BDDA* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t6B95C68C8E9FF576287D80CDBC6DB7A55977BDDA*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F8A01C0B02BC1D4063F4EB1E817F7A48562A398_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<System.Linq.IGrouping`2<System.String,Unity.Services.Qos.Runner.QosAnnotatedResult>,Unity.Services.Qos.IQosAnnotatedResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
 inline RuntimeObject* Enumerable_Select_TisIGrouping_2_tDD449526A80CF62461BB9614092DFA728EFE430F_TisIQosAnnotatedResult_t4E640BCEC0FB1275CDE8EB73C59CCB27C5E3343A_m1D6E0392D6EDA3FC17065FAF868A950176B91834 (RuntimeObject* ___source0, Func_2_t6B95C68C8E9FF576287D80CDBC6DB7A55977BDDA* ___selector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t6B95C68C8E9FF576287D80CDBC6DB7A55977BDDA*, const RuntimeMethod*))Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m67C538A5EBF57C4844107A8EF25DB2CAAFBAF8FB_gshared)(___source0, ___selector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_Select_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m5BBCA2BC02448D0B77D2201BB08B13BAB3BABA53_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___selector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<Unity.Services.Qos.IQosAnnotatedResult>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline List_1_t079E7EC2FE6EFFDB535C5FF5EBC8DE7ED270A438* Enumerable_ToList_TisIQosAnnotatedResult_t4E640BCEC0FB1275CDE8EB73C59CCB27C5E3343A_mA5CB876D16B704A923564D552CBC7DC1E0A666CB (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  List_1_t079E7EC2FE6EFFDB535C5FF5EBC8DE7ED270A438* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisRuntimeObject_m6456D63764F29E6B5B2422C3DE25113577CF51EE_gshared)(___source0, method);
+	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* il2cppRetVal = ((  List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisIl2CppFullySharedGenericAny_m191EA129E511F9B8304FF8826A2DA645E06CCBF0_gshared)((RuntimeObject*)___source0, method);
+	return (List_1_t079E7EC2FE6EFFDB535C5FF5EBC8DE7ED270A438*)il2cppRetVal;
 }
 // System.Void System.Func`2<Unity.Services.Qos.IQosAnnotatedResult,System.Int32>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_mBEC63C58770B29633E0AA3DF79F18C91FB3D46C8 (Func_2_tAB321CFBA595CE84B39A4BBEFE8F7C1397AFFCD1* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_tAB321CFBA595CE84B39A4BBEFE8F7C1397AFFCD1*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_mEB7603EDE6D79A62E5BD74A896F030D2C9F2A821_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Linq.IOrderedEnumerable`1<TSource> System.Linq.Enumerable::OrderBy<Unity.Services.Qos.IQosAnnotatedResult,System.Int32>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
 inline RuntimeObject* Enumerable_OrderBy_TisIQosAnnotatedResult_t4E640BCEC0FB1275CDE8EB73C59CCB27C5E3343A_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m4930D3FC35194A0B41DAD9130A7BA4DFB3F5E41E (RuntimeObject* ___source0, Func_2_tAB321CFBA595CE84B39A4BBEFE8F7C1397AFFCD1* ___keySelector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_tAB321CFBA595CE84B39A4BBEFE8F7C1397AFFCD1*, const RuntimeMethod*))Enumerable_OrderBy_TisRuntimeObject_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m0CD0677A1278BFC7E13405D11D1EF30919C9E9A2_gshared)(___source0, ___keySelector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_OrderBy_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mCA0D4A157D5453421E5E883B0A9489E97328A9BC_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___keySelector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Void System.Func`2<Unity.Services.Qos.IQosAnnotatedResult,System.Single>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_mEE5A1751D585F4F0719E3428FBC284E2E578D6C8 (Func_2_tD28B6C1C1F06FBEBE5AB149CF9474B194BC0EF8D* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_tD28B6C1C1F06FBEBE5AB149CF9474B194BC0EF8D*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m04EB988C3F849C1BE164FC6656C2281DF47EEAA7_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Linq.IOrderedEnumerable`1<TSource> System.Linq.Enumerable::ThenBy<Unity.Services.Qos.IQosAnnotatedResult,System.Single>(System.Linq.IOrderedEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
 inline RuntimeObject* Enumerable_ThenBy_TisIQosAnnotatedResult_t4E640BCEC0FB1275CDE8EB73C59CCB27C5E3343A_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_mD1CD94677752BABE66CC917FE1474BF5A7B4E607 (RuntimeObject* ___source0, Func_2_tD28B6C1C1F06FBEBE5AB149CF9474B194BC0EF8D* ___keySelector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_tD28B6C1C1F06FBEBE5AB149CF9474B194BC0EF8D*, const RuntimeMethod*))Enumerable_ThenBy_TisRuntimeObject_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_m97D324F5984C8AD4CC8BBA5E664A0CFDF8FA211F_gshared)(___source0, ___keySelector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_ThenBy_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m1495B48C677043AB0D847DE5D9B1D76175B4C750_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___keySelector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Collections.Generic.Dictionary`2<System.String,System.String> Unity.Services.Qos.Response::get_Headers()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* Response_get_Headers_m61DA9ECA3129CE732D2359F5B59B9BFBA86E6744_inline (Response_tED09A2076AA8C92E78644D690D96E3DE2BF4A278* __this, const RuntimeMethod* method) ;
 // System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.String>::TryGetValue(TKey,TValue&)
 inline bool Dictionary_2_TryGetValue_mA86D965CB5F74CE8675B7995C61945BEB6E594CB (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, String_t* ___key0, String_t** ___value1, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, String_t*, String_t**, const RuntimeMethod*))Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_gshared)(__this, ___key0, ___value1, method);
+	return ((  bool (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))Dictionary_2_TryGetValue_m7519D765EAF1E8A7D3137C2F1B7B3A01D15A1692_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)___key0, (Il2CppFullySharedGenericAny*)___value1, method);
 }
 // System.Void Unity.Services.Qos.QosResult::.ctor(System.String,System.Int32,System.Single,System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QosResult__ctor_m31D35D73B4735FD2CC1A40EB2686BB785B9E461F (QosResult_t58EE88676B1760A9187977B3314CA3B42DEE9B71* __this, String_t* ___region0, int32_t ___averageLatencyMs1, float ___packetLossPercent2, Dictionary_2_t79BA378F246EFA4AD0AFFA017D788423CACA8638* ___annotations3, const RuntimeMethod* method) ;
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>::GetAwaiter()
 inline TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3 Task_1_GetAwaiter_mD69C66388D27FBC360C7E917ABE432EB7BE8B341 (Task_1_t4A6397D54E9A2AC6B11B022C4E78657D6FF68D2A* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3 (*) (Task_1_t4A6397D54E9A2AC6B11B022C4E78657D6FF68D2A*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_m13502EB5557180BEE07D711939BF5C92D25E8934 (TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosResult>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>,Unity.Services.Qos.WrappedQosService/<GetSortedQosResultsAsync>d__18>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3_TisU3CGetSortedQosResultsAsyncU3Ed__18_tB8AD951812F00113235ACDA859DA52EA751E8A9A_m67F28F953E7C00F14A8E811ED620E6BA62716E2D (AsyncTaskMethodBuilder_1_tC46D1A5977960A6E4714A06B6A58C1F9C35486F1* __this, TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3* ___awaiter0, U3CGetSortedQosResultsAsyncU3Ed__18_tB8AD951812F00113235ACDA859DA52EA751E8A9A* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tC46D1A5977960A6E4714A06B6A58C1F9C35486F1*, TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3*, U3CGetSortedQosResultsAsyncU3Ed__18_tB8AD951812F00113235ACDA859DA52EA751E8A9A*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetSortedQosResultsAsyncU3Ed__18_tB8AD951812F00113235ACDA859DA52EA751E8A9A_m0110077BE9114C7638A58C9E1CB2415CD36901D8_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>::GetResult()
 inline RuntimeObject* TaskAwaiter_1_GetResult_mD660D497F7A0DA63593CA05E7103336ED108885E (TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3* __this, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
+	RuntimeObject* il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Func`2<Unity.Services.Qos.Internal.QosResult,Unity.Services.Qos.IQosResult>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m25CA65EF136A3CA5392AF63DC9302B3E2B180BD7 (Func_2_t192690214DFCAE2E69EEC64BCB4FA225CD8F59BC* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t192690214DFCAE2E69EEC64BCB4FA225CD8F59BC*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_mEAE85F7CB38FE1FBAF9D455BD5E989DD846722B6_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<Unity.Services.Qos.Internal.QosResult,Unity.Services.Qos.IQosResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
 inline RuntimeObject* Enumerable_Select_TisQosResult_tA2296213032595430F8FE40418B3D5BA47E86D27_TisIQosResult_t1A06A3CC71432AB000F6720EE025DE3876BA0FD0_m9BE9DA7E36111C553A1B556E1F9C142A36E9BC87 (RuntimeObject* ___source0, Func_2_t192690214DFCAE2E69EEC64BCB4FA225CD8F59BC* ___selector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t192690214DFCAE2E69EEC64BCB4FA225CD8F59BC*, const RuntimeMethod*))Enumerable_Select_TisQosResult_tA2296213032595430F8FE40418B3D5BA47E86D27_TisRuntimeObject_mB4B2474CD72EF53205FCEC5DBA04869091B09613_gshared)(___source0, ___selector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_Select_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m5BBCA2BC02448D0B77D2201BB08B13BAB3BABA53_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___selector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<Unity.Services.Qos.IQosResult>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline List_1_t246B6DC3FCE96A34A98C042F1FF13EE71E991E6B* Enumerable_ToList_TisIQosResult_t1A06A3CC71432AB000F6720EE025DE3876BA0FD0_m78550B65C6AC398FDBA4314BA978841504976ECB (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  List_1_t246B6DC3FCE96A34A98C042F1FF13EE71E991E6B* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisRuntimeObject_m6456D63764F29E6B5B2422C3DE25113577CF51EE_gshared)(___source0, method);
+	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* il2cppRetVal = ((  List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisIl2CppFullySharedGenericAny_m191EA129E511F9B8304FF8826A2DA645E06CCBF0_gshared)((RuntimeObject*)___source0, method);
+	return (List_1_t246B6DC3FCE96A34A98C042F1FF13EE71E991E6B*)il2cppRetVal;
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosResult>>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_mE13A80BA0B28052CF9551448ADB569FEE8B6FA5D (AsyncTaskMethodBuilder_1_tC46D1A5977960A6E4714A06B6A58C1F9C35486F1* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tC46D1A5977960A6E4714A06B6A58C1F9C35486F1*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosResult>>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_mD16D78A0B92077D0A1718A491889F892B27AF747 (AsyncTaskMethodBuilder_1_tC46D1A5977960A6E4714A06B6A58C1F9C35486F1* __this, RuntimeObject* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tC46D1A5977960A6E4714A06B6A58C1F9C35486F1*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
 }
 // System.Void Unity.Services.Qos.WrappedQosService/<GetSortedQosResultsAsync>d__18::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetSortedQosResultsAsyncU3Ed__18_MoveNext_m1B7A01EFFF3FC50F91E6DB3759E58031163A07DD (U3CGetSortedQosResultsAsyncU3Ed__18_tB8AD951812F00113235ACDA859DA52EA751E8A9A* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosResult>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_m0447CC705077996A1B32B2BAD565077BAB336B8D (AsyncTaskMethodBuilder_1_tC46D1A5977960A6E4714A06B6A58C1F9C35486F1* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tC46D1A5977960A6E4714A06B6A58C1F9C35486F1*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Qos.WrappedQosService/<GetSortedQosResultsAsync>d__18::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetSortedQosResultsAsyncU3Ed__18_SetStateMachine_m04924AD392D4E58837A050E195DEDC109F8FC99A (U3CGetSortedQosResultsAsyncU3Ed__18_tB8AD951812F00113235ACDA859DA52EA751E8A9A* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -9863,34 +9575,39 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m9B2BD92CD68916245A75109
 // System.Void System.Collections.Generic.List`1<System.String>::.ctor(System.Collections.Generic.IEnumerable`1<T>)
 inline void List_1__ctor_m0BAB01B25B1D62E100CC97401B1A9972D6DEB6EC (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, RuntimeObject* ___collection0, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, RuntimeObject*, const RuntimeMethod*))List_1__ctor_mE097DBD72433D1AFC11733F5678602603A756424_gshared)(__this, ___collection0, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, RuntimeObject*, const RuntimeMethod*))List_1__ctor_mACCB7726C2E9728AE336F99C68B334459F9F30FB_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (RuntimeObject*)___collection0, method);
 }
 // System.Void Unity.Services.Qos.QosDiscovery.GetServersRequest::.ctor(System.Collections.Generic.List`1<System.String>,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GetServersRequest__ctor_m454773232F666315509CCB10A2B5A029BD2CB70D (GetServersRequest_tD0ACADC81DCE39A8910F3EF37389B610DEDA5D7A* __this, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___region0, String_t* ___service1, const RuntimeMethod* method) ;
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<Unity.Services.Qos.Response`1<Unity.Services.Qos.Models.QosServersResponseBody>>::GetAwaiter()
 inline TaskAwaiter_1_t802EE308FC150AEA20AD2B5CBC3DAE5542D61FF2 Task_1_GetAwaiter_m748AA443DA2C07FA7F14E988D1C0173DC5733A7D (Task_1_t3ACB2F1474F202DC1D1177836C7669963263F595* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_t802EE308FC150AEA20AD2B5CBC3DAE5542D61FF2 (*) (Task_1_t3ACB2F1474F202DC1D1177836C7669963263F595*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_t802EE308FC150AEA20AD2B5CBC3DAE5542D61FF2, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Response`1<Unity.Services.Qos.Models.QosServersResponseBody>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_m35AE80AF7C4E2D415C40D719B591900ED90FEB4B (TaskAwaiter_1_t802EE308FC150AEA20AD2B5CBC3DAE5542D61FF2* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t802EE308FC150AEA20AD2B5CBC3DAE5542D61FF2*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Response`1<Unity.Services.Qos.Models.QosServersResponseBody>>,Unity.Services.Qos.WrappedQosService/<GetSortedInternalQosResultsAsync>d__19>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t802EE308FC150AEA20AD2B5CBC3DAE5542D61FF2_TisU3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA_mD304C67685AEB66010A123F0B30727152868E617 (AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A* __this, TaskAwaiter_1_t802EE308FC150AEA20AD2B5CBC3DAE5542D61FF2* ___awaiter0, U3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A*, TaskAwaiter_1_t802EE308FC150AEA20AD2B5CBC3DAE5542D61FF2*, U3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA_m9DC52C5C0ED9FBEAB8890BBD766210068FFA87A7_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Response`1<Unity.Services.Qos.Models.QosServersResponseBody>>::GetResult()
 inline Response_1_t48C8DDEF4712E1CE837837B6DB6B5AABC66E6CFA* TaskAwaiter_1_GetResult_m1B13202F58412A5904F9DB95C00D7F3BD4BE444A (TaskAwaiter_1_t802EE308FC150AEA20AD2B5CBC3DAE5542D61FF2* __this, const RuntimeMethod* method)
 {
-	return ((  Response_1_t48C8DDEF4712E1CE837837B6DB6B5AABC66E6CFA* (*) (TaskAwaiter_1_t802EE308FC150AEA20AD2B5CBC3DAE5542D61FF2*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
+	Response_1_t48C8DDEF4712E1CE837837B6DB6B5AABC66E6CFA* il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // T Unity.Services.Qos.Response`1<Unity.Services.Qos.Models.QosServersResponseBody>::get_Result()
 inline QosServersResponseBody_t182A18B2B86B1E1DAAEBEA7D2E57692228D0F8CE* Response_1_get_Result_mE048B35AFAD58E1C4BE97F3C135176359C6AC259_inline (Response_1_t48C8DDEF4712E1CE837837B6DB6B5AABC66E6CFA* __this, const RuntimeMethod* method)
 {
-	return ((  QosServersResponseBody_t182A18B2B86B1E1DAAEBEA7D2E57692228D0F8CE* (*) (Response_1_t48C8DDEF4712E1CE837837B6DB6B5AABC66E6CFA*, const RuntimeMethod*))Response_1_get_Result_m9D68198F60A56507D31D65F9AC1DF1278BA89249_gshared_inline)(__this, method);
+	QosServersResponseBody_t182A18B2B86B1E1DAAEBEA7D2E57692228D0F8CE* il2cppRetVal;
+	((  void (*) (/*Unity.Services.Qos.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_t4B73EEA711E336B136237CB6557E9F99516BDB6A*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Response_1_get_Result_m149CD970003E5E66747C6795927991AC11FED47A_gshared_inline)((Response_1_t4B73EEA711E336B136237CB6557E9F99516BDB6A*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // Unity.Services.Qos.Models.QosServersList Unity.Services.Qos.Models.QosServersResponseBody::get_Data()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR QosServersList_t72F7A682056C825F0F93D9C47BC8536EF0650A23* QosServersResponseBody_get_Data_mE5664C85DA17FC35E4BB7FE93E65FDD046FE0E71_inline (QosServersResponseBody_t182A18B2B86B1E1DAAEBEA7D2E57692228D0F8CE* __this, const RuntimeMethod* method) ;
@@ -9899,32 +9616,35 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t775B950C1F00EAE0BA293A000
 // System.Boolean System.Linq.Enumerable::Any<Unity.Services.Qos.Models.QosServer>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline bool Enumerable_Any_TisQosServer_t414A8901638CE0E2E5B14B538665FAA718205057_mB0F19098B1F8702189BB8D7E30BC5ACF8B734262 (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  bool (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Any_TisRuntimeObject_m67CFBD544CF1D1C0C7E7457FDBDB81649DE26847_gshared)(___source0, method);
+	return ((  bool (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Any_TisIl2CppFullySharedGenericAny_m3499AC108A84D818DD8C221F8E60145246FC8A09_gshared)((RuntimeObject*)___source0, method);
 }
 // System.Void System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>::.ctor()
 inline void List_1__ctor_m26621967056E90855218CD3B850F673A6DDE4661 (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* __this, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85*, const RuntimeMethod*))List_1__ctor_m26621967056E90855218CD3B850F673A6DDE4661_gshared)(__this, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1__ctor_m0AFBAEA7EC427E32CC9CA267B1930DC5DF67A374_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
 }
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>>::GetAwaiter()
 inline TaskAwaiter_1_t3FA06CD6A32E3CEB3A93A94EFEB355ECD48F99D7 Task_1_GetAwaiter_m549DC4338DA4DAFA52C534BB4AA3A34089210B45 (Task_1_t5234BEF6F79CD7A196D4969509C30E3DCDE89BF6* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_t3FA06CD6A32E3CEB3A93A94EFEB355ECD48F99D7 (*) (Task_1_t5234BEF6F79CD7A196D4969509C30E3DCDE89BF6*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_t3FA06CD6A32E3CEB3A93A94EFEB355ECD48F99D7, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_m5A05AF54D8885CBB69EC9456F736C6C22BBC1812 (TaskAwaiter_1_t3FA06CD6A32E3CEB3A93A94EFEB355ECD48F99D7* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t3FA06CD6A32E3CEB3A93A94EFEB355ECD48F99D7*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>>,Unity.Services.Qos.WrappedQosService/<GetSortedInternalQosResultsAsync>d__19>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t3FA06CD6A32E3CEB3A93A94EFEB355ECD48F99D7_TisU3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA_m60B0EDB3EF9ABDBB0F2C21ABF0C98DC1559B12C3 (AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A* __this, TaskAwaiter_1_t3FA06CD6A32E3CEB3A93A94EFEB355ECD48F99D7* ___awaiter0, U3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A*, TaskAwaiter_1_t3FA06CD6A32E3CEB3A93A94EFEB355ECD48F99D7*, U3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA_m9DC52C5C0ED9FBEAB8890BBD766210068FFA87A7_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>>::GetResult()
 inline List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* TaskAwaiter_1_GetResult_m04A9593F0513AF99F8518D3534857F72473F19BF (TaskAwaiter_1_t3FA06CD6A32E3CEB3A93A94EFEB355ECD48F99D7* __this, const RuntimeMethod* method)
 {
-	return ((  List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* (*) (TaskAwaiter_1_t3FA06CD6A32E3CEB3A93A94EFEB355ECD48F99D7*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
+	List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult> Unity.Services.Qos.WrappedQosService::SortResults(System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* WrappedQosService_SortResults_m2AC6413067175DCF1399CF82570FEBEBFCD90890 (WrappedQosService_t2F9A993E356BE90E52C48C3E211D514BEC65654D* __this, RuntimeObject* ___results0, const RuntimeMethod* method) ;
@@ -9933,19 +9653,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WrappedQosService_SendResultsMetrics_m24
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_m265BD24F9DE6443AB6CB76816079FF253EB884A5 (AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_m587BDCC14DC04AA37E589C0D2479CE77B959D3D3 (AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A* __this, RuntimeObject* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
 }
 // System.Void Unity.Services.Qos.WrappedQosService/<GetSortedInternalQosResultsAsync>d__19::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetSortedInternalQosResultsAsyncU3Ed__19_MoveNext_m06370FBA36A699DE76F8B334ED146AB622752F7B (U3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_m10C761EEDAE8E20A0EE6DCA7AB57E8A5284B6597 (AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tE6A4AE88B0B3BF9E789A94CA7BED1F62C329659A*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Qos.WrappedQosService/<GetSortedInternalQosResultsAsync>d__19::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetSortedInternalQosResultsAsyncU3Ed__19_SetStateMachine_m9A88088CCD463A6A21969748304B2B8424D860F0 (U3CGetSortedInternalQosResultsAsyncU3Ed__19_t2D92417719B41624BFA0FD3F55A6F7AA14C7A8EA* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -9960,87 +9680,95 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tF470A3BE5C1B5B68E1325EF3F
 // System.Void System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Int32>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m68F0D2CBDAAB6BAB216514D50DC1CAFB0CD146D6 (Func_2_t0596FD00E4993985015476D2AFEF668500E1213D* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t0596FD00E4993985015476D2AFEF668500E1213D*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m68F0D2CBDAAB6BAB216514D50DC1CAFB0CD146D6_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Int32>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
 inline RuntimeObject* Enumerable_Select_TisQosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mBD1D03D5D1222BE97A350717CC25E89E56FE2EEC (RuntimeObject* ___source0, Func_2_t0596FD00E4993985015476D2AFEF668500E1213D* ___selector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t0596FD00E4993985015476D2AFEF668500E1213D*, const RuntimeMethod*))Enumerable_Select_TisQosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mBD1D03D5D1222BE97A350717CC25E89E56FE2EEC_gshared)(___source0, ___selector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_Select_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m5BBCA2BC02448D0B77D2201BB08B13BAB3BABA53_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___selector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Double System.Linq.Enumerable::Average(System.Collections.Generic.IEnumerable`1<System.Int32>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Enumerable_Average_mC6A740F049646E2AB613A9F7A96B4E41A4912CA8 (RuntimeObject* ___source0, const RuntimeMethod* method) ;
 // System.Void System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Single>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_mD42E2A6BF65EE01397E167AEC8799B27B9B3EB54 (Func_2_tFE9857AB37D1E4D6DA9D12D52C5984F450447084* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_tFE9857AB37D1E4D6DA9D12D52C5984F450447084*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_mD42E2A6BF65EE01397E167AEC8799B27B9B3EB54_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Single>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
 inline RuntimeObject* Enumerable_Select_TisQosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_mBDB2A0303791918057B21B45B0E8714A8B78DA4E (RuntimeObject* ___source0, Func_2_tFE9857AB37D1E4D6DA9D12D52C5984F450447084* ___selector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_tFE9857AB37D1E4D6DA9D12D52C5984F450447084*, const RuntimeMethod*))Enumerable_Select_TisQosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_mBDB2A0303791918057B21B45B0E8714A8B78DA4E_gshared)(___source0, ___selector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_Select_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m5BBCA2BC02448D0B77D2201BB08B13BAB3BABA53_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___selector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Single System.Linq.Enumerable::Average(System.Collections.Generic.IEnumerable`1<System.Single>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Enumerable_Average_m2DBF0BBC0642716C2296C5C3CC9AFF18F574C368 (RuntimeObject* ___source0, const RuntimeMethod* method) ;
 // System.Void System.Func`2<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m4638D0CF72B3D880F6FEFC8DAFC56E972F11624E (Func_2_t02118949F7D2DA3805E9D29CC9485A919C5FB97B* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t02118949F7D2DA3805E9D29CC9485A919C5FB97B*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_mAFEB3EC0CDBAB215247C7C5A5A596235FBE5B540_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<Unity.Services.Qos.Runner.QosAnnotatedResult,System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
 inline RuntimeObject* Enumerable_Select_TisQosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E_TisDictionary_2_t79BA378F246EFA4AD0AFFA017D788423CACA8638_mB59CB5EDAAA6267108F8C9D659949642CC5A7400 (RuntimeObject* ___source0, Func_2_t02118949F7D2DA3805E9D29CC9485A919C5FB97B* ___selector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t02118949F7D2DA3805E9D29CC9485A919C5FB97B*, const RuntimeMethod*))Enumerable_Select_TisQosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E_TisRuntimeObject_m59953AF9AA7754163835ED17CEF6255CCA533591_gshared)(___source0, ___selector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_Select_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m5BBCA2BC02448D0B77D2201BB08B13BAB3BABA53_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___selector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // TSource System.Linq.Enumerable::First<System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline Dictionary_2_t79BA378F246EFA4AD0AFFA017D788423CACA8638* Enumerable_First_TisDictionary_2_t79BA378F246EFA4AD0AFFA017D788423CACA8638_m649BE8362181D59EBE6C695FB266E7BF598B04BB (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  Dictionary_2_t79BA378F246EFA4AD0AFFA017D788423CACA8638* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_First_TisRuntimeObject_mEFECF1B8C3201589C5AF34176DCBF8DD926642D6_gshared)(___source0, method);
+	Dictionary_2_t79BA378F246EFA4AD0AFFA017D788423CACA8638* il2cppRetVal;
+	((  void (*) (RuntimeObject*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerable_First_TisIl2CppFullySharedGenericAny_mCFC88D63540FB5C7B03DD3E47157C18FD4AFE595_gshared)((RuntimeObject*)___source0, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Threading.Tasks.Task`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>> Unity.Services.Qos.WrappedQosService::GetSortedInternalServiceQosResultsAsync(System.String,System.Collections.Generic.IList`1<System.String>,System.Collections.Generic.IList`1<System.String>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t987250F229B4B296C1DE2924BF5DC33993BC6332* WrappedQosService_GetSortedInternalServiceQosResultsAsync_m52F7335596090087C1F7D059751EC00E9A7B1344 (WrappedQosService_t2F9A993E356BE90E52C48C3E211D514BEC65654D* __this, String_t* ___service0, RuntimeObject* ___regions1, RuntimeObject* ___fleet2, const RuntimeMethod* method) ;
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>::GetAwaiter()
 inline TaskAwaiter_1_t139C6FD901310978BB5DBDEB8E0B27D0D6383CF2 Task_1_GetAwaiter_m505015FC37088765F2BB4E2BE86A82D987C0DCBC (Task_1_t987250F229B4B296C1DE2924BF5DC33993BC6332* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_t139C6FD901310978BB5DBDEB8E0B27D0D6383CF2 (*) (Task_1_t987250F229B4B296C1DE2924BF5DC33993BC6332*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_t139C6FD901310978BB5DBDEB8E0B27D0D6383CF2, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_mBCE55FDC6EDC448A598175843541EAAD4DDBF84F (TaskAwaiter_1_t139C6FD901310978BB5DBDEB8E0B27D0D6383CF2* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t139C6FD901310978BB5DBDEB8E0B27D0D6383CF2*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>,Unity.Services.Qos.WrappedQosService/<GetSortedRelayQosResultsAsync>d__21>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t139C6FD901310978BB5DBDEB8E0B27D0D6383CF2_TisU3CGetSortedRelayQosResultsAsyncU3Ed__21_t835378428BD1ACCC0D022C47899EDA5FCEC5BEF1_m24D839B8A2CC26C4834390807307A047D189BD8C (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813* __this, TaskAwaiter_1_t139C6FD901310978BB5DBDEB8E0B27D0D6383CF2* ___awaiter0, U3CGetSortedRelayQosResultsAsyncU3Ed__21_t835378428BD1ACCC0D022C47899EDA5FCEC5BEF1* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813*, TaskAwaiter_1_t139C6FD901310978BB5DBDEB8E0B27D0D6383CF2*, U3CGetSortedRelayQosResultsAsyncU3Ed__21_t835378428BD1ACCC0D022C47899EDA5FCEC5BEF1*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetSortedRelayQosResultsAsyncU3Ed__21_t835378428BD1ACCC0D022C47899EDA5FCEC5BEF1_m32D409A045C25EECDDB74271AA9E90C4CF8B513A_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>::GetResult()
 inline RuntimeObject* TaskAwaiter_1_GetResult_mEF24444151FC8F821BE69D64E80EF71FBC05F30D (TaskAwaiter_1_t139C6FD901310978BB5DBDEB8E0B27D0D6383CF2* __this, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (TaskAwaiter_1_t139C6FD901310978BB5DBDEB8E0B27D0D6383CF2*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
+	RuntimeObject* il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_mA090AF1245D696419698B6D3E1218C235531176F (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_mFF5E5EF85A71233E805D237EBEE32AC6EC830280 (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813* __this, RuntimeObject* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
 }
 // System.Void Unity.Services.Qos.WrappedQosService/<GetSortedRelayQosResultsAsync>d__21::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetSortedRelayQosResultsAsyncU3Ed__21_MoveNext_m9CACDD2FA29D4886978ED6D197FA3A399681CA88 (U3CGetSortedRelayQosResultsAsyncU3Ed__21_t835378428BD1ACCC0D022C47899EDA5FCEC5BEF1* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_m5E2AA8E6303A5B3E85B01B8EC6CFA2A84300FA50 (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Qos.WrappedQosService/<GetSortedRelayQosResultsAsync>d__21::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetSortedRelayQosResultsAsyncU3Ed__21_SetStateMachine_m0F99F468B6974334BD26BF000C603B026A99D160 (U3CGetSortedRelayQosResultsAsyncU3Ed__21_t835378428BD1ACCC0D022C47899EDA5FCEC5BEF1* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>,Unity.Services.Qos.WrappedQosService/<GetSortedMultiplayQosResultsAsync>d__22>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t139C6FD901310978BB5DBDEB8E0B27D0D6383CF2_TisU3CGetSortedMultiplayQosResultsAsyncU3Ed__22_t798C9E6E5FB38762C945C379E57C6244CC519A78_mCA3CA6D484B9D9135854444EB0B263DBD9219B5C (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813* __this, TaskAwaiter_1_t139C6FD901310978BB5DBDEB8E0B27D0D6383CF2* ___awaiter0, U3CGetSortedMultiplayQosResultsAsyncU3Ed__22_t798C9E6E5FB38762C945C379E57C6244CC519A78* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813*, TaskAwaiter_1_t139C6FD901310978BB5DBDEB8E0B27D0D6383CF2*, U3CGetSortedMultiplayQosResultsAsyncU3Ed__22_t798C9E6E5FB38762C945C379E57C6244CC519A78*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetSortedMultiplayQosResultsAsyncU3Ed__22_t798C9E6E5FB38762C945C379E57C6244CC519A78_mD212E07EF0A44F45B15C003B4D2E50E13314D946_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Void Unity.Services.Qos.WrappedQosService/<GetSortedMultiplayQosResultsAsync>d__22::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetSortedMultiplayQosResultsAsyncU3Ed__22_MoveNext_mD98B7EDB6111B94640E9C9CD31AA111A2A6053B7 (U3CGetSortedMultiplayQosResultsAsyncU3Ed__22_t798C9E6E5FB38762C945C379E57C6244CC519A78* __this, const RuntimeMethod* method) ;
@@ -10051,34 +9779,39 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GetAllServersRequest__ctor_mC32348019422
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.String>::Add(TKey,TValue)
 inline void Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, String_t* ___key0, String_t* ___value1, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, String_t*, String_t*, const RuntimeMethod*))Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_gshared)(__this, ___key0, ___value1, method);
+	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_Add_m54D479280472DEA042DB3933AF547E666B017333_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)___key0, (Il2CppFullySharedGenericAny)___value1, method);
 }
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<Unity.Services.Qos.V2.Response`1<Unity.Services.Qos.V2.Models.QosServersResponseBody>>::GetAwaiter()
 inline TaskAwaiter_1_t0E550657A32DD3C7889109B6C1E671977BEA727F Task_1_GetAwaiter_m22CE9946B4E917A0B24D2A0926B1487741C83FC1 (Task_1_t34479C646BCDACDD7E8810575701ECDBD632E104* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_t0E550657A32DD3C7889109B6C1E671977BEA727F (*) (Task_1_t34479C646BCDACDD7E8810575701ECDBD632E104*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_t0E550657A32DD3C7889109B6C1E671977BEA727F, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.V2.Response`1<Unity.Services.Qos.V2.Models.QosServersResponseBody>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_mFA8B2B136D1ABDB3F0DBAC073C6F5C81302B1397 (TaskAwaiter_1_t0E550657A32DD3C7889109B6C1E671977BEA727F* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t0E550657A32DD3C7889109B6C1E671977BEA727F*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.V2.Models.QosServer>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.V2.Response`1<Unity.Services.Qos.V2.Models.QosServersResponseBody>>,Unity.Services.Qos.WrappedQosService/<GetAllServersAsync>d__23>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0E550657A32DD3C7889109B6C1E671977BEA727F_TisU3CGetAllServersAsyncU3Ed__23_t7AFE6C96D8F04EFBC560FC3BCBC44A63D4D9015C_m9107872F6D1D495022BE7273B78B1B2E12FBEFE4 (AsyncTaskMethodBuilder_1_tD38C06EDB652630090171F110454BF09C08BF3AC* __this, TaskAwaiter_1_t0E550657A32DD3C7889109B6C1E671977BEA727F* ___awaiter0, U3CGetAllServersAsyncU3Ed__23_t7AFE6C96D8F04EFBC560FC3BCBC44A63D4D9015C* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tD38C06EDB652630090171F110454BF09C08BF3AC*, TaskAwaiter_1_t0E550657A32DD3C7889109B6C1E671977BEA727F*, U3CGetAllServersAsyncU3Ed__23_t7AFE6C96D8F04EFBC560FC3BCBC44A63D4D9015C*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetAllServersAsyncU3Ed__23_t7AFE6C96D8F04EFBC560FC3BCBC44A63D4D9015C_m34B693CFFF1FEC35191B11047D10720CFD471414_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.V2.Response`1<Unity.Services.Qos.V2.Models.QosServersResponseBody>>::GetResult()
 inline Response_1_tB9149A952A5FA3B43E8D3C70DF90AE5D0278324F* TaskAwaiter_1_GetResult_m5C0F62D305BF931857692A51E53A3335F8106D6F (TaskAwaiter_1_t0E550657A32DD3C7889109B6C1E671977BEA727F* __this, const RuntimeMethod* method)
 {
-	return ((  Response_1_tB9149A952A5FA3B43E8D3C70DF90AE5D0278324F* (*) (TaskAwaiter_1_t0E550657A32DD3C7889109B6C1E671977BEA727F*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
+	Response_1_tB9149A952A5FA3B43E8D3C70DF90AE5D0278324F* il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Collections.Generic.Dictionary`2<System.String,System.String> Unity.Services.Qos.V2.Response::get_Headers()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* Response_get_Headers_m68A6E9FB59894B0A1983BB7C803E63094A8C13CF_inline (Response_t2EC1181D83520312AF34DF275F740ABE6DADBEBB* __this, const RuntimeMethod* method) ;
 // T Unity.Services.Qos.V2.Response`1<Unity.Services.Qos.V2.Models.QosServersResponseBody>::get_Result()
 inline QosServersResponseBody_t3A0F56FD2909DE3657C21B92714F1EB6657F32BD* Response_1_get_Result_m86A678EDDEB6091A9DF1351739B67365776B7017_inline (Response_1_tB9149A952A5FA3B43E8D3C70DF90AE5D0278324F* __this, const RuntimeMethod* method)
 {
-	return ((  QosServersResponseBody_t3A0F56FD2909DE3657C21B92714F1EB6657F32BD* (*) (Response_1_tB9149A952A5FA3B43E8D3C70DF90AE5D0278324F*, const RuntimeMethod*))Response_1_get_Result_mDD07C8A8C9C0DB160AFF23A743B13D5C32DF42D6_gshared_inline)(__this, method);
+	QosServersResponseBody_t3A0F56FD2909DE3657C21B92714F1EB6657F32BD* il2cppRetVal;
+	((  void (*) (/*Unity.Services.Qos.V2.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_tE01D2CBFFA6377AB5ABD5A628829909B9DE01269*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Response_1_get_Result_m471D36F95DF8916F85F881D9B25178856D9B7364_gshared_inline)((Response_1_tE01D2CBFFA6377AB5ABD5A628829909B9DE01269*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // Unity.Services.Qos.V2.Models.QosServersList Unity.Services.Qos.V2.Models.QosServersResponseBody::get_Data()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR QosServersList_t4FEBE8373329ECCA5028793B139C8DAAC1F22368* QosServersResponseBody_get_Data_m1CBDB2644D1888443FF6A36DE2B5F19B1973F9A0_inline (QosServersResponseBody_t3A0F56FD2909DE3657C21B92714F1EB6657F32BD* __this, const RuntimeMethod* method) ;
@@ -10089,94 +9822,102 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int64_t HttpClientResponse_get_St
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.V2.Models.QosServer>>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_m15868C22B1357E8DFB699788AF1639744452496D (AsyncTaskMethodBuilder_1_tD38C06EDB652630090171F110454BF09C08BF3AC* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tD38C06EDB652630090171F110454BF09C08BF3AC*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.V2.Models.QosServer>>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_m7BEACC95130A106B107E47C0EC954AAF3A6F60A7 (AsyncTaskMethodBuilder_1_tD38C06EDB652630090171F110454BF09C08BF3AC* __this, RuntimeObject* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tD38C06EDB652630090171F110454BF09C08BF3AC*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
 }
 // System.Void Unity.Services.Qos.WrappedQosService/<GetAllServersAsync>d__23::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetAllServersAsyncU3Ed__23_MoveNext_mB9D12572B7AFCEC927D9B04A856611B039CFF569 (U3CGetAllServersAsyncU3Ed__23_t7AFE6C96D8F04EFBC560FC3BCBC44A63D4D9015C* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.V2.Models.QosServer>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_m277C965EA5E92E2D3495EFC4CC079DA831FFC27B (AsyncTaskMethodBuilder_1_tD38C06EDB652630090171F110454BF09C08BF3AC* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tD38C06EDB652630090171F110454BF09C08BF3AC*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Qos.WrappedQosService/<GetAllServersAsync>d__23::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetAllServersAsyncU3Ed__23_SetStateMachine_mA4276B7879D3F288E14D8C02C33035F135F004B2 (U3CGetAllServersAsyncU3Ed__23_t7AFE6C96D8F04EFBC560FC3BCBC44A63D4D9015C* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::GetAwaiter()
 inline TaskAwaiter_1_tA4D8E9E33BCAA1F76915BE678761815314CFECAD Task_1_GetAwaiter_mC1290C66AFCE7F0BEC481C4670C5AA8D26B2D4E8 (Task_1_t28EC52D5932F460BB6A746D3B17ABB1C824B1981* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_tA4D8E9E33BCAA1F76915BE678761815314CFECAD (*) (Task_1_t28EC52D5932F460BB6A746D3B17ABB1C824B1981*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_tA4D8E9E33BCAA1F76915BE678761815314CFECAD, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_mAC937BF4B0FD0AA82580ACD48E1648F274F761A7 (TaskAwaiter_1_tA4D8E9E33BCAA1F76915BE678761815314CFECAD* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_tA4D8E9E33BCAA1F76915BE678761815314CFECAD*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>,Unity.Services.Qos.WrappedQosService/<GetQosResultsAsync>d__24>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tA4D8E9E33BCAA1F76915BE678761815314CFECAD_TisU3CGetQosResultsAsyncU3Ed__24_t558A8B004B2726B7EFE0A1111CCE038EEC82A10F_mCAECC668EB03DFEC07A06097AEF4CA8B8A208FBE (AsyncTaskMethodBuilder_1_tD0937D37EA57D5DEBDA506F7F9EF957423F02605* __this, TaskAwaiter_1_tA4D8E9E33BCAA1F76915BE678761815314CFECAD* ___awaiter0, U3CGetQosResultsAsyncU3Ed__24_t558A8B004B2726B7EFE0A1111CCE038EEC82A10F* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tD0937D37EA57D5DEBDA506F7F9EF957423F02605*, TaskAwaiter_1_tA4D8E9E33BCAA1F76915BE678761815314CFECAD*, U3CGetQosResultsAsyncU3Ed__24_t558A8B004B2726B7EFE0A1111CCE038EEC82A10F*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetQosResultsAsyncU3Ed__24_t558A8B004B2726B7EFE0A1111CCE038EEC82A10F_mEE8F63B317EA56A5EB46A33B0E5AC95D9B59F252_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::GetResult()
 inline List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A* TaskAwaiter_1_GetResult_mF667C312E74E61C3CDCBCF8CED45F2B7D8D739B5 (TaskAwaiter_1_tA4D8E9E33BCAA1F76915BE678761815314CFECAD* __this, const RuntimeMethod* method)
 {
-	return ((  List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A* (*) (TaskAwaiter_1_tA4D8E9E33BCAA1F76915BE678761815314CFECAD*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
+	List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A* il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void Unity.Services.Qos.WrappedQosService::SendResultsMetricsV2(System.Collections.Generic.IReadOnlyCollection`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WrappedQosService_SendResultsMetricsV2_m25368E9E4C800FA76E9B6ACD12536CE93E9986FF (WrappedQosService_t2F9A993E356BE90E52C48C3E211D514BEC65654D* __this, RuntimeObject* ___qosResults0, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_m10D8AFAE9C3BD386FE0D9711A7907636399118FF (AsyncTaskMethodBuilder_1_tD0937D37EA57D5DEBDA506F7F9EF957423F02605* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tD0937D37EA57D5DEBDA506F7F9EF957423F02605*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_m3F55946C5F65B0C1970722A3D5797C2405F3DF4A (AsyncTaskMethodBuilder_1_tD0937D37EA57D5DEBDA506F7F9EF957423F02605* __this, RuntimeObject* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tD0937D37EA57D5DEBDA506F7F9EF957423F02605*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
 }
 // System.Void Unity.Services.Qos.WrappedQosService/<GetQosResultsAsync>d__24::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetQosResultsAsyncU3Ed__24_MoveNext_m88979B3256A288A1C468A29E0A89F9557AE4211A (U3CGetQosResultsAsyncU3Ed__24_t558A8B004B2726B7EFE0A1111CCE038EEC82A10F* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_m23B510059E96D29ED7FAC650FF257227F9468639 (AsyncTaskMethodBuilder_1_tD0937D37EA57D5DEBDA506F7F9EF957423F02605* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tD0937D37EA57D5DEBDA506F7F9EF957423F02605*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Qos.WrappedQosService/<GetQosResultsAsync>d__24::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetQosResultsAsyncU3Ed__24_SetStateMachine_mE640816313D24620C6B7880FFA35F7BD45FD6FDE (U3CGetQosResultsAsyncU3Ed__24_t558A8B004B2726B7EFE0A1111CCE038EEC82A10F* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.List`1<System.String>::get_Count()
 inline int32_t List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
+	return ((  int32_t (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
 }
 // System.Void Unity.Services.Qos.QosDiscovery.GetServiceServersRequest::.ctor(System.String,System.Collections.Generic.List`1<System.String>,System.Collections.Generic.List`1<System.String>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GetServiceServersRequest__ctor_m99AD02EF36C866615FFEE6BD9982DAA47D863E45 (GetServiceServersRequest_t06D34EDD6E905F2C25AFD43CBD559598DD5E7AB6* __this, String_t* ___serviceId0, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___region1, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___fleet2, const RuntimeMethod* method) ;
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<Unity.Services.Qos.Response`1<Unity.Services.Qos.Models.QosServiceServersResponseBody>>::GetAwaiter()
 inline TaskAwaiter_1_t00238BB775015C41F096BC8EF81D395EFA97C3A4 Task_1_GetAwaiter_m36CD669C3EC38C261781CCAFD5A7B3711610720E (Task_1_tDAC25724227FDF2BAD68608CF2408FED59281FA0* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_t00238BB775015C41F096BC8EF81D395EFA97C3A4 (*) (Task_1_tDAC25724227FDF2BAD68608CF2408FED59281FA0*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_t00238BB775015C41F096BC8EF81D395EFA97C3A4, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Response`1<Unity.Services.Qos.Models.QosServiceServersResponseBody>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_mE7BC21A97CFCCA572852E16236222B796408959F (TaskAwaiter_1_t00238BB775015C41F096BC8EF81D395EFA97C3A4* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t00238BB775015C41F096BC8EF81D395EFA97C3A4*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Response`1<Unity.Services.Qos.Models.QosServiceServersResponseBody>>,Unity.Services.Qos.WrappedQosService/<GetSortedInternalServiceQosResultsAsync>d__27>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t00238BB775015C41F096BC8EF81D395EFA97C3A4_TisU3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE_m12E3994148A783D1CB97A25A66D1DFC927C225D0 (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813* __this, TaskAwaiter_1_t00238BB775015C41F096BC8EF81D395EFA97C3A4* ___awaiter0, U3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813*, TaskAwaiter_1_t00238BB775015C41F096BC8EF81D395EFA97C3A4*, U3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE_m7DA3CFB48C7887D5F5E37D490C957AB49ED72560_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Response`1<Unity.Services.Qos.Models.QosServiceServersResponseBody>>::GetResult()
 inline Response_1_t6CBD565DA6FB121320570C997933C523F1E5360B* TaskAwaiter_1_GetResult_m401248152C1D1483086394DE94AD5FD5D0EDF6BA (TaskAwaiter_1_t00238BB775015C41F096BC8EF81D395EFA97C3A4* __this, const RuntimeMethod* method)
 {
-	return ((  Response_1_t6CBD565DA6FB121320570C997933C523F1E5360B* (*) (TaskAwaiter_1_t00238BB775015C41F096BC8EF81D395EFA97C3A4*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
+	Response_1_t6CBD565DA6FB121320570C997933C523F1E5360B* il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // T Unity.Services.Qos.Response`1<Unity.Services.Qos.Models.QosServiceServersResponseBody>::get_Result()
 inline QosServiceServersResponseBody_tC8825C5246203AD733E8F238BFE41E76E32D582B* Response_1_get_Result_m68FEEF5D1570C687E865B647088BE291DF245E9B_inline (Response_1_t6CBD565DA6FB121320570C997933C523F1E5360B* __this, const RuntimeMethod* method)
 {
-	return ((  QosServiceServersResponseBody_tC8825C5246203AD733E8F238BFE41E76E32D582B* (*) (Response_1_t6CBD565DA6FB121320570C997933C523F1E5360B*, const RuntimeMethod*))Response_1_get_Result_m9D68198F60A56507D31D65F9AC1DF1278BA89249_gshared_inline)(__this, method);
+	QosServiceServersResponseBody_tC8825C5246203AD733E8F238BFE41E76E32D582B* il2cppRetVal;
+	((  void (*) (/*Unity.Services.Qos.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_t4B73EEA711E336B136237CB6557E9F99516BDB6A*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Response_1_get_Result_m149CD970003E5E66747C6795927991AC11FED47A_gshared_inline)((Response_1_t4B73EEA711E336B136237CB6557E9F99516BDB6A*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // Unity.Services.Qos.Models.QosServiceServersList Unity.Services.Qos.Models.QosServiceServersResponseBody::get_Data()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR QosServiceServersList_t23E98A2F526DF577081813318A6D8DED35508DB3* QosServiceServersResponseBody_get_Data_mD382212CA12835CDFEDD7F6FE9952E8B83D36DAF_inline (QosServiceServersResponseBody_tC8825C5246203AD733E8F238BFE41E76E32D582B* __this, const RuntimeMethod* method) ;
@@ -10185,39 +9926,43 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t5C9BAB91258EDBB8377C2CFB4
 // System.Boolean System.Linq.Enumerable::Any<Unity.Services.Qos.Models.QosServiceServer>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline bool Enumerable_Any_TisQosServiceServer_t3AD1836689CA51D25FD0775EB1944A6D4A54277F_m341B2DE9BC2D437184A9FD19AE4E6EBBD8CCEEC6 (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  bool (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Any_TisRuntimeObject_m67CFBD544CF1D1C0C7E7457FDBDB81649DE26847_gshared)(___source0, method);
+	return ((  bool (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Any_TisIl2CppFullySharedGenericAny_m3499AC108A84D818DD8C221F8E60145246FC8A09_gshared)((RuntimeObject*)___source0, method);
 }
 // System.Void System.Collections.Generic.List`1<Unity.Services.Qos.IQosAnnotatedResult>::.ctor()
 inline void List_1__ctor_m576E370DD912B66B11BD30B85AA49AC70FCECB09 (List_1_t079E7EC2FE6EFFDB535C5FF5EBC8DE7ED270A438* __this, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t079E7EC2FE6EFFDB535C5FF5EBC8DE7ED270A438*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1__ctor_m0AFBAEA7EC427E32CC9CA267B1930DC5DF67A374_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
 }
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>>::GetAwaiter()
 inline TaskAwaiter_1_t8B62CA945786602113E43481D8AC000696A81024 Task_1_GetAwaiter_mC5731C3F55690A79FCDD43183F76795CA74FA7A2 (Task_1_t3E946A208A82A5E598A9B4A5599E951A5359ED54* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_t8B62CA945786602113E43481D8AC000696A81024 (*) (Task_1_t3E946A208A82A5E598A9B4A5599E951A5359ED54*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_t8B62CA945786602113E43481D8AC000696A81024, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_mD22E326AF328D5319077EB9A6FC99A9463B6BBE7 (TaskAwaiter_1_t8B62CA945786602113E43481D8AC000696A81024* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t8B62CA945786602113E43481D8AC000696A81024*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.IList`1<Unity.Services.Qos.IQosAnnotatedResult>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>>,Unity.Services.Qos.WrappedQosService/<GetSortedInternalServiceQosResultsAsync>d__27>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8B62CA945786602113E43481D8AC000696A81024_TisU3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE_mBD119426A16C3B85E99C459FB49CFE5B3FE5F633 (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813* __this, TaskAwaiter_1_t8B62CA945786602113E43481D8AC000696A81024* ___awaiter0, U3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9E32DD4A3DE964507DD9807695424E13C680D813*, TaskAwaiter_1_t8B62CA945786602113E43481D8AC000696A81024*, U3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetSortedInternalServiceQosResultsAsyncU3Ed__27_t6EA97077F680BDEC58521F34732120E172F7BFDE_m7DA3CFB48C7887D5F5E37D490C957AB49ED72560_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>>::GetResult()
 inline List_1_t6A9BD83D1B75DA994D0814971281C937CF962FDA* TaskAwaiter_1_GetResult_mB3DAA7CEB009ECB33DC55DDFFF025B11D2813199 (TaskAwaiter_1_t8B62CA945786602113E43481D8AC000696A81024* __this, const RuntimeMethod* method)
 {
-	return ((  List_1_t6A9BD83D1B75DA994D0814971281C937CF962FDA* (*) (TaskAwaiter_1_t8B62CA945786602113E43481D8AC000696A81024*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
+	List_1_t6A9BD83D1B75DA994D0814971281C937CF962FDA* il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Collections.Generic.List`1<Unity.Services.Qos.IQosAnnotatedResult> Unity.Services.Qos.WrappedQosService::SortServiceResults(System.Collections.Generic.IList`1<Unity.Services.Qos.Runner.QosAnnotatedResult>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t079E7EC2FE6EFFDB535C5FF5EBC8DE7ED270A438* WrappedQosService_SortServiceResults_m3A7952B4A800940710C300ABD1BE61B8FE496240 (WrappedQosService_t2F9A993E356BE90E52C48C3E211D514BEC65654D* __this, RuntimeObject* ___results0, const RuntimeMethod* method) ;
 // System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Cast<Unity.Services.Qos.IQosResult>(System.Collections.IEnumerable)
 inline RuntimeObject* Enumerable_Cast_TisIQosResult_t1A06A3CC71432AB000F6720EE025DE3876BA0FD0_m52022CA41A6A2E71138FDBA594FBB45FBE450C98 (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Cast_TisRuntimeObject_m21250FA47CFF08469ACE158D6FA4E1FE11837D29_gshared)(___source0, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Cast_TisIl2CppFullySharedGenericAny_m1480F4A804D000C8613E5F669E3AB77411F468A5_gshared)(___source0, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Void Unity.Services.Qos.WrappedQosService::SendResultsMetrics(System.Collections.Generic.IList`1<Unity.Services.Qos.IQosResult>,System.String,Unity.Services.Qos.Response)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WrappedQosService_SendResultsMetrics_m48455B559ACCB6F32C8D53272E57BF42BD1DCBDB (WrappedQosService_t2F9A993E356BE90E52C48C3E211D514BEC65654D* __this, RuntimeObject* ___sortedResults0, String_t* ___service1, Response_tED09A2076AA8C92E78644D690D96E3DE2BF4A278* ___discoveryResponse2, const RuntimeMethod* method) ;
@@ -10228,7 +9973,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetSortedInternalServiceQosResultsAsy
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>::.ctor()
 inline void Dictionary_2__ctor_m79EA54A4C736FED8607D6E97BD54974D340AEA82 (Dictionary_2_t79BA378F246EFA4AD0AFFA017D788423CACA8638* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t79BA378F246EFA4AD0AFFA017D788423CACA8638*, const RuntimeMethod*))Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared)(__this, method);
+	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, const RuntimeMethod*))Dictionary_2__ctor_m7745B6ED71E47C95E1BFCE647C4F026A404C668F_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, method);
 }
 // System.Void System.Exception::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m203319D1EA1274689B380A947B4ADC8445662B8F (Exception_t* __this, const RuntimeMethod* method) ;
@@ -10281,42 +10026,44 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m9BC141AAB08F47C34B7ED40
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::Create()
 inline AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5 AsyncTaskMethodBuilder_1_Create_m14DA1839DE871A6A10A50BE3C4F87247BA87A73C (const RuntimeMethod* method)
 {
-	return ((  AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
+	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
+	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::Start<Unity.Services.Qos.V2.Http.HttpClient/<MakeRequestAsync>d__1>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__1_tA36A27065647BC2070412BAAA84A31AA84C97205_mB12003FB74C56A961932C91B7FA485972EB20FEA (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, U3CMakeRequestAsyncU3Ed__1_tA36A27065647BC2070412BAAA84A31AA84C97205* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, U3CMakeRequestAsyncU3Ed__1_tA36A27065647BC2070412BAAA84A31AA84C97205*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__1_tA36A27065647BC2070412BAAA84A31AA84C97205_mEA91176E11BE0F78BDAD69FC6A7048860670A26B_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::get_Task()
 inline Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC228* AsyncTaskMethodBuilder_1_get_Task_m8E91D4189F397D0681179AD5B00E167D1965D003 (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC228* (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
+	return (Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC228*)il2cppRetVal;
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::Start<Unity.Services.Qos.V2.Http.HttpClient/<MakeRequestAsync>d__2>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__2_t1A17D478FFF3CD5B437959A6FAA508DB165387D3_mBE0A2AC4DF6FB49CED13E2C9E4C009A638352500 (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, U3CMakeRequestAsyncU3Ed__2_t1A17D478FFF3CD5B437959A6FAA508DB165387D3* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, U3CMakeRequestAsyncU3Ed__2_t1A17D478FFF3CD5B437959A6FAA508DB165387D3*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__2_t1A17D478FFF3CD5B437959A6FAA508DB165387D3_m6A8F75A30107EB51ACE1304E388956DC94176FF9_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::Start<Unity.Services.Qos.V2.Http.HttpClient/<CreateWebRequestAsync>d__3>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__3_t1EFEB9E8267182C8D8BB5600FBA55A157336348E_mC1826DB0196BCF0CC2013F18C60C16EECD0DAB2C (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, U3CCreateWebRequestAsyncU3Ed__3_t1EFEB9E8267182C8D8BB5600FBA55A157336348E* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, U3CCreateWebRequestAsyncU3Ed__3_t1EFEB9E8267182C8D8BB5600FBA55A157336348E*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__3_t1EFEB9E8267182C8D8BB5600FBA55A157336348E_mFCF2E92A390D3A72DC83518A1D036F64945F1B42_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::Start<Unity.Services.Qos.V2.Http.HttpClient/<CreateHttpClientResponse>d__4>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44_m21254BE8EC0A1CE54C51C5FB475BDA058191FFBA (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, U3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, U3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44_mB0D9415B36228C861935537E67203ABAD5B984C1_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::Start<Unity.Services.Qos.V2.Http.HttpClient/<CreateWebRequestAsync>d__5>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B_m7D63052F78791DAB56DDD430FDD45C4D07185866 (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, U3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, U3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B_m553F21E525373B6F26061D835F9D971F8D533ACC_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Int32 System.Collections.Generic.List`1<UnityEngine.Networking.IMultipartFormSection>::get_Count()
 inline int32_t List_1_get_Count_m0C23D34F33EBEF620CA00054786CC1B6F684CE21_inline (List_1_tCB1A627DDECC594C7E63E3CA2A397D5ABBFAA48D* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (List_1_tCB1A627DDECC594C7E63E3CA2A397D5ABBFAA48D*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
+	return ((  int32_t (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
 }
 // System.Byte[] UnityEngine.Networking.UnityWebRequest::SerializeFormSections(System.Collections.Generic.List`1<UnityEngine.Networking.IMultipartFormSection>,System.Byte[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* UnityWebRequest_SerializeFormSections_mC0691C6F240272DD5C0A2C4C06DF5DE93BE354B3 (List_1_tCB1A627DDECC594C7E63E3CA2A397D5ABBFAA48D* ___multipartFormSections0, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___boundary1, const RuntimeMethod* method) ;
@@ -10339,39 +10086,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::GetAwaiter()
 inline TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845 Task_1_GetAwaiter_m6349D5DBD62DC9945D2E90CB486347C82085D9C9 (Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC228* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845 (*) (Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC228*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_mF0E3AB031E08E4BDF833642828A2DFC56A686F25 (TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.V2.Http.HttpClientResponse>,Unity.Services.Qos.V2.Http.HttpClient/<MakeRequestAsync>d__1>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845_TisU3CMakeRequestAsyncU3Ed__1_tA36A27065647BC2070412BAAA84A31AA84C97205_mFFA1C1FDDEC90854347E4D32A6CAB8FC393AB3DF (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845* ___awaiter0, U3CMakeRequestAsyncU3Ed__1_tA36A27065647BC2070412BAAA84A31AA84C97205* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845*, U3CMakeRequestAsyncU3Ed__1_tA36A27065647BC2070412BAAA84A31AA84C97205*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMakeRequestAsyncU3Ed__1_tA36A27065647BC2070412BAAA84A31AA84C97205_mF6224C913A7EE818867FF944E8B695DD5B0403F4_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::GetResult()
 inline HttpClientResponse_tD29473CE0C6CECC34988654F8EF1F3FE5BF593B3* TaskAwaiter_1_GetResult_mE41D7ACC73F2AE8B2FE74B47567DBCFBCBDECE7E (TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845* __this, const RuntimeMethod* method)
 {
-	return ((  HttpClientResponse_tD29473CE0C6CECC34988654F8EF1F3FE5BF593B3* (*) (TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
+	HttpClientResponse_tD29473CE0C6CECC34988654F8EF1F3FE5BF593B3* il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_m21C8B495F440D946FAF602CD9479785F324C4CC5 (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_m2764069C9C982CEDB4981D4E0F23FBBC310D489D (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, HttpClientResponse_tD29473CE0C6CECC34988654F8EF1F3FE5BF593B3* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, HttpClientResponse_tD29473CE0C6CECC34988654F8EF1F3FE5BF593B3*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
 }
 // System.Void Unity.Services.Qos.V2.Http.HttpClient/<MakeRequestAsync>d__1::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMakeRequestAsyncU3Ed__1_MoveNext_m7F3210082204B92C2FEDFC53A3D426B378ABED3D (U3CMakeRequestAsyncU3Ed__1_tA36A27065647BC2070412BAAA84A31AA84C97205* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_mA3B7FC6B77E9AA0910FA56DD3DA35BBA3F1853B9 (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Qos.V2.Http.HttpClient/<MakeRequestAsync>d__1::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMakeRequestAsyncU3Ed__1_SetStateMachine_mA5C6BFE8BC5074371B6017C675D032140576CD80 (U3CMakeRequestAsyncU3Ed__1_tA36A27065647BC2070412BAAA84A31AA84C97205* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -10380,7 +10130,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.V2.Http.HttpClientResponse>,Unity.Services.Qos.V2.Http.HttpClient/<MakeRequestAsync>d__2>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845_TisU3CMakeRequestAsyncU3Ed__2_t1A17D478FFF3CD5B437959A6FAA508DB165387D3_m8EFAB48583421BDD9AC6DF8A6280B84CD7B5EC5A (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845* ___awaiter0, U3CMakeRequestAsyncU3Ed__2_t1A17D478FFF3CD5B437959A6FAA508DB165387D3* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845*, U3CMakeRequestAsyncU3Ed__2_t1A17D478FFF3CD5B437959A6FAA508DB165387D3*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMakeRequestAsyncU3Ed__2_t1A17D478FFF3CD5B437959A6FAA508DB165387D3_m88EFFD9EACC46A71D8E80A8E2B2AD9B4407EB667_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Void Unity.Services.Qos.V2.Http.HttpClient/<MakeRequestAsync>d__2::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMakeRequestAsyncU3Ed__2_MoveNext_mA874CB4672E8B2808E3FB49D85AC0AA5DD02E902 (U3CMakeRequestAsyncU3Ed__2_t1A17D478FFF3CD5B437959A6FAA508DB165387D3* __this, const RuntimeMethod* method) ;
@@ -10391,7 +10141,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.V2.Http.HttpClientResponse>,Unity.Services.Qos.V2.Http.HttpClient/<CreateWebRequestAsync>d__3>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845_TisU3CCreateWebRequestAsyncU3Ed__3_t1EFEB9E8267182C8D8BB5600FBA55A157336348E_m3A9C79D1C8F8CC041DB9623C509306040C831AF0 (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845* ___awaiter0, U3CCreateWebRequestAsyncU3Ed__3_t1EFEB9E8267182C8D8BB5600FBA55A157336348E* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845*, U3CCreateWebRequestAsyncU3Ed__3_t1EFEB9E8267182C8D8BB5600FBA55A157336348E*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateWebRequestAsyncU3Ed__3_t1EFEB9E8267182C8D8BB5600FBA55A157336348E_mAB8A89C17C9A74689B809D88B9B04EB600FBF5F1_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Void Unity.Services.Qos.V2.Http.HttpClient/<CreateWebRequestAsync>d__3::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateWebRequestAsyncU3Ed__3_MoveNext_m6D46A744D6CC569EE2916F05C8020DFDC9E2DD91 (U3CCreateWebRequestAsyncU3Ed__3_t1EFEB9E8267182C8D8BB5600FBA55A157336348E* __this, const RuntimeMethod* method) ;
@@ -10400,7 +10150,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateWebRequestAsyncU3Ed__3_SetState
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::Start<Unity.Services.Qos.V2.Http.HttpClient/<>c__DisplayClass4_0/<<CreateHttpClientResponse>b__0>d>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t1D65F104BFF072C0D23CAAE01EB5444198FE9A95_m8F1F63F835E6A2A6D89853EBB93CCEAA4650EF35 (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t1D65F104BFF072C0D23CAAE01EB5444198FE9A95* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t1D65F104BFF072C0D23CAAE01EB5444198FE9A95*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t1D65F104BFF072C0D23CAAE01EB5444198FE9A95_m155D5136A2245050B458D57DBCB9375C300A2A34_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Void UnityEngine.Networking.UnityWebRequest::.ctor(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityWebRequest__ctor_mD4739B0BF1C4937479A83B24B531C6B819712A3E (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* __this, String_t* ___url0, String_t* ___method1, const RuntimeMethod* method) ;
@@ -10415,7 +10165,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.V2.Http.HttpClientResponse>,Unity.Services.Qos.V2.Http.HttpClient/<>c__DisplayClass4_0/<<CreateHttpClientResponse>b__0>d>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t1D65F104BFF072C0D23CAAE01EB5444198FE9A95_m119C7969533F0ADCA2D288FB1B6EAB1969D8E29D (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845* ___awaiter0, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t1D65F104BFF072C0D23CAAE01EB5444198FE9A95* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845*, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t1D65F104BFF072C0D23CAAE01EB5444198FE9A95*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t1D65F104BFF072C0D23CAAE01EB5444198FE9A95_m38967C63149B3C6E268E04168F25DE29894A61AE_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Void Unity.Services.Qos.V2.Http.HttpClient/<>c__DisplayClass4_0/<<CreateHttpClientResponse>b__0>d::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_MoveNext_mC0207A7FC14105EBC2A7C725112C86AF9D4BD28E (U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t1D65F104BFF072C0D23CAAE01EB5444198FE9A95* __this, const RuntimeMethod* method) ;
@@ -10428,7 +10178,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TaskFactory_tF781BD37BE23917412AD
 // System.Void System.Func`1<System.Threading.Tasks.Task`1<Unity.Services.Qos.V2.Http.HttpClientResponse>>::.ctor(System.Object,System.IntPtr)
 inline void Func_1__ctor_m5F4B66F023015640EE1D56A2052ED11ACE3B7A3C (Func_1_t5B1FA69420E1813E09FF081214C5BB3BC0E6D3E4* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_1_t5B1FA69420E1813E09FF081214C5BB3BC0E6D3E4*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_1__ctor_m663374A863E492A515BE9626B6F0E444991834E8_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_1__ctor_mC73A4FCEBBAB90CB7B7AB16321F3F98FBBF12596_gshared)((Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431*)__this, ___object0, ___method1, method);
 }
 // System.Threading.CancellationToken System.Threading.CancellationToken::get_None()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED CancellationToken_get_None_mB0E2D3427C25F09ACEBB2D060F82088EEC00BA53 (const RuntimeMethod* method) ;
@@ -10437,32 +10187,36 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TaskScheduler_t3F0550EBEF7C41F74E
 // System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskFactory::StartNew<System.Threading.Tasks.Task`1<Unity.Services.Qos.V2.Http.HttpClientResponse>>(System.Func`1<TResult>,System.Threading.CancellationToken,System.Threading.Tasks.TaskCreationOptions,System.Threading.Tasks.TaskScheduler)
 inline Task_1_tC2BA810061754D4934F6936C7D009FFC98766BDB* TaskFactory_StartNew_TisTask_1_t7295E82389AD3C06B82BA5915D52D0058A6EC228_mFC5B690511CE412E9672D35EE0191E93C907C034 (TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0* __this, Func_1_t5B1FA69420E1813E09FF081214C5BB3BC0E6D3E4* ___function0, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED ___cancellationToken1, int32_t ___creationOptions2, TaskScheduler_t3F0550EBEF7C41F74EC8C08FF4BED0D8CE66006E* ___scheduler3, const RuntimeMethod* method)
 {
-	return ((  Task_1_tC2BA810061754D4934F6936C7D009FFC98766BDB* (*) (TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0*, Func_1_t5B1FA69420E1813E09FF081214C5BB3BC0E6D3E4*, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED, int32_t, TaskScheduler_t3F0550EBEF7C41F74EC8C08FF4BED0D8CE66006E*, const RuntimeMethod*))TaskFactory_StartNew_TisRuntimeObject_m14FDB1694FEE097B11C3119BD89F3C350F7DE51B_gshared)(__this, ___function0, ___cancellationToken1, ___creationOptions2, ___scheduler3, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0*, Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431*, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED, int32_t, TaskScheduler_t3F0550EBEF7C41F74EC8C08FF4BED0D8CE66006E*, const RuntimeMethod*))TaskFactory_StartNew_TisIl2CppFullySharedGenericAny_m093A8AAFB7FEC0A2D65CEAEBE25DE0EB91469C36_gshared)((TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0*)__this, (Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431*)___function0, ___cancellationToken1, ___creationOptions2, ___scheduler3, method);
+	return (Task_1_tC2BA810061754D4934F6936C7D009FFC98766BDB*)il2cppRetVal;
 }
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Threading.Tasks.Task`1<Unity.Services.Qos.V2.Http.HttpClientResponse>>::GetAwaiter()
 inline TaskAwaiter_1_t6F2A808E8755AC1E613C0895EFB536DF89512DAA Task_1_GetAwaiter_mB5A9FEB83C3C0FC3935F1B4694693ABD3CB137A5 (Task_1_tC2BA810061754D4934F6936C7D009FFC98766BDB* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_t6F2A808E8755AC1E613C0895EFB536DF89512DAA (*) (Task_1_tC2BA810061754D4934F6936C7D009FFC98766BDB*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_t6F2A808E8755AC1E613C0895EFB536DF89512DAA, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task`1<Unity.Services.Qos.V2.Http.HttpClientResponse>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_mC29A9C17B3C9DBD9DDCB0A999E1FF7AD4BFC9DD4 (TaskAwaiter_1_t6F2A808E8755AC1E613C0895EFB536DF89512DAA* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t6F2A808E8755AC1E613C0895EFB536DF89512DAA*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task`1<Unity.Services.Qos.V2.Http.HttpClientResponse>>,Unity.Services.Qos.V2.Http.HttpClient/<CreateHttpClientResponse>d__4>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t6F2A808E8755AC1E613C0895EFB536DF89512DAA_TisU3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44_m2A9EA3C0771B4E8553AC83BD4A58E1BAE2E336EF (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, TaskAwaiter_1_t6F2A808E8755AC1E613C0895EFB536DF89512DAA* ___awaiter0, U3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, TaskAwaiter_1_t6F2A808E8755AC1E613C0895EFB536DF89512DAA*, U3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44_m960654A6A6A3408C245C321A7EDDEA91FD58B88E_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task`1<Unity.Services.Qos.V2.Http.HttpClientResponse>>::GetResult()
 inline Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC228* TaskAwaiter_1_GetResult_m764D7AF67B4C3BAC7CBA1F3E628295A2C379B2E2 (TaskAwaiter_1_t6F2A808E8755AC1E613C0895EFB536DF89512DAA* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC228* (*) (TaskAwaiter_1_t6F2A808E8755AC1E613C0895EFB536DF89512DAA*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
+	Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC228* il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.V2.Http.HttpClientResponse>,Unity.Services.Qos.V2.Http.HttpClient/<CreateHttpClientResponse>d__4>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845_TisU3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44_m5973DA5109D685E1C13276D72F44ECB555253D74 (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845* ___awaiter0, U3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845*, U3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44_m960654A6A6A3408C245C321A7EDDEA91FD58B88E_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Void Unity.Services.Qos.V2.Http.HttpClient/<CreateHttpClientResponse>d__4::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateHttpClientResponseU3Ed__4_MoveNext_m4C58464EB99BB66AD3562116F66BD290D7043C35 (U3CCreateHttpClientResponseU3Ed__4_tCEC093FD01706161CB05534CF3049AEA35AEDC44* __this, const RuntimeMethod* method) ;
@@ -10471,7 +10225,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateHttpClientResponseU3Ed__4_SetSt
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::Start<Unity.Services.Qos.V2.Http.HttpClient/<>c__DisplayClass5_0/<<CreateWebRequestAsync>b__0>d>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t55210C5DB4EEFD02E45CB82DA63C5261E92D1E7B_m7DBC5F1B2BB24A2384B1F71FDB4EC8A86D4B4746 (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t55210C5DB4EEFD02E45CB82DA63C5261E92D1E7B* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t55210C5DB4EEFD02E45CB82DA63C5261E92D1E7B*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t55210C5DB4EEFD02E45CB82DA63C5261E92D1E7B_m236635907C563B7251A270C36D01D858024F49A9_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Text.Encoding System.Text.Encoding::get_Default()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* Encoding_get_Default_mB48FC92A61D1153AC33C2C59F01D7266DF7D155C (const RuntimeMethod* method) ;
@@ -10482,7 +10236,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UnityWebRequest_t6233B8E22992FC2364A831C1ACB0
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.V2.Http.HttpClientResponse>,Unity.Services.Qos.V2.Http.HttpClient/<>c__DisplayClass5_0/<<CreateWebRequestAsync>b__0>d>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845_TisU3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t55210C5DB4EEFD02E45CB82DA63C5261E92D1E7B_m21598D0A5B856D6DBB27FEC1EB85DB53B9A3C035 (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845* ___awaiter0, U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t55210C5DB4EEFD02E45CB82DA63C5261E92D1E7B* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845*, U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t55210C5DB4EEFD02E45CB82DA63C5261E92D1E7B*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t55210C5DB4EEFD02E45CB82DA63C5261E92D1E7B_m90445EE3F4E9C13CAD7B95E9D92C1B1891BF55E1_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Void Unity.Services.Qos.V2.Http.HttpClient/<>c__DisplayClass5_0/<<CreateWebRequestAsync>b__0>d::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_MoveNext_mEAAB4A8D3CDC061D871F427D95AE86D46F4FD510 (U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t55210C5DB4EEFD02E45CB82DA63C5261E92D1E7B* __this, const RuntimeMethod* method) ;
@@ -10493,12 +10247,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_m1FA11457
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task`1<Unity.Services.Qos.V2.Http.HttpClientResponse>>,Unity.Services.Qos.V2.Http.HttpClient/<CreateWebRequestAsync>d__5>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t6F2A808E8755AC1E613C0895EFB536DF89512DAA_TisU3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B_m76E85B93DC266355409E672DA1C76448462CFB63 (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, TaskAwaiter_1_t6F2A808E8755AC1E613C0895EFB536DF89512DAA* ___awaiter0, U3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, TaskAwaiter_1_t6F2A808E8755AC1E613C0895EFB536DF89512DAA*, U3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B_m5E71842BB36874ABA2FFB5FA6E7F2CFC7D2C00D8_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.V2.Http.HttpClientResponse>,Unity.Services.Qos.V2.Http.HttpClient/<CreateWebRequestAsync>d__5>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845_TisU3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B_mBDFE21719EE97ED519BE0D85D382749005E9ECC1 (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5* __this, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845* ___awaiter0, U3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tF14B891D52C6D73B84F4EF72CCD5EBB5DD3825C5*, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845*, U3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B_m5E71842BB36874ABA2FFB5FA6E7F2CFC7D2C00D8_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Void Unity.Services.Qos.V2.Http.HttpClient/<CreateWebRequestAsync>d__5::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateWebRequestAsyncU3Ed__5_MoveNext_m9B76DED94CBA564ED5CB8665D40C0C46AD2CC3D4 (U3CCreateWebRequestAsyncU3Ed__5_t511EAE14963D57327722A7C44002D3C9B2E65D8B* __this, const RuntimeMethod* method) ;
@@ -10535,12 +10289,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializer_Deserialize_m07
 // System.Void Newtonsoft.Json.Utilities.AotHelper::EnsureType<Newtonsoft.Json.Converters.StringEnumConverter>()
 inline void AotHelper_EnsureType_TisStringEnumConverter_t7C66875DF7AB0719190AEEF8924A99F49C480184_m6A1C428F1F47D693B537597E785391C4D42AD480 (const RuntimeMethod* method)
 {
-	((  void (*) (const RuntimeMethod*))AotHelper_EnsureType_TisRuntimeObject_m8D3D63845F34DADDDC746C0C444E40309347F992_gshared)(method);
+	((  void (*) (const RuntimeMethod*))AotHelper_EnsureType_TisIl2CppFullySharedGenericAny_m8D94D34831BFD767668F5DE3953A46FD59601BA7_gshared)(method);
 }
 // System.Void Newtonsoft.Json.Utilities.AotHelper::EnsureType<Unity.Services.Qos.V2.Http.JsonObjectConverter>()
 inline void AotHelper_EnsureType_TisJsonObjectConverter_t016986AC2486034C3835C2B6B26D09C92B5B8D33_mA014EB92F53C90642DF03DB976A8F19E4D707806 (const RuntimeMethod* method)
 {
-	((  void (*) (const RuntimeMethod*))AotHelper_EnsureType_TisRuntimeObject_m8D3D63845F34DADDDC746C0C444E40309347F992_gshared)(method);
+	((  void (*) (const RuntimeMethod*))AotHelper_EnsureType_TisIl2CppFullySharedGenericAny_m8D94D34831BFD767668F5DE3953A46FD59601BA7_gshared)(method);
 }
 // System.Type System.Object::GetType()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3 (RuntimeObject* __this, const RuntimeMethod* method) ;
@@ -10555,91 +10309,106 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonObject__ctor_m76BBEB84518544E890BEE4
 // System.Void System.Func`2<System.Object,Unity.Services.Qos.V2.Http.IDeserializable>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m317912AA5552B725CD4050C53AF16BC52D35F305 (Func_2_t55F192B0114FA5D02374B5CC96B1B28B9CA50285* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t55F192B0114FA5D02374B5CC96B1B28B9CA50285*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F8A01C0B02BC1D4063F4EB1E817F7A48562A398_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<System.Object,Unity.Services.Qos.V2.Http.IDeserializable>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
 inline RuntimeObject* Enumerable_Select_TisRuntimeObject_TisIDeserializable_t9C53C000E90A7332CFF042B0E5EDEA2B14C95C96_m27E7369743A9BD940FF60646A1A02C358347E46B (RuntimeObject* ___source0, Func_2_t55F192B0114FA5D02374B5CC96B1B28B9CA50285* ___selector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t55F192B0114FA5D02374B5CC96B1B28B9CA50285*, const RuntimeMethod*))Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m67C538A5EBF57C4844107A8EF25DB2CAAFBAF8FB_gshared)(___source0, ___selector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_Select_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m5BBCA2BC02448D0B77D2201BB08B13BAB3BABA53_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___selector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<Unity.Services.Qos.V2.Http.IDeserializable>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline List_1_t2038C91D98C912588BF8CB95FC6B7BDFA490D550* Enumerable_ToList_TisIDeserializable_t9C53C000E90A7332CFF042B0E5EDEA2B14C95C96_m8E6CD92E4F8AF7F6D28B8E1344EA48487C65F0C4 (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  List_1_t2038C91D98C912588BF8CB95FC6B7BDFA490D550* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisRuntimeObject_m6456D63764F29E6B5B2422C3DE25113577CF51EE_gshared)(___source0, method);
+	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* il2cppRetVal = ((  List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisIl2CppFullySharedGenericAny_m191EA129E511F9B8304FF8826A2DA645E06CCBF0_gshared)((RuntimeObject*)___source0, method);
+	return (List_1_t2038C91D98C912588BF8CB95FC6B7BDFA490D550*)il2cppRetVal;
 }
 // System.Void System.Func`2<System.Collections.Generic.List`1<System.Object>,System.Collections.Generic.List`1<Unity.Services.Qos.V2.Http.IDeserializable>>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_mE0158F15321CF9B49B81C1C02F2A4BBD31F3E2DA (Func_2_t5C7F8280287967E2C367F0DE237657C216A1678D* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t5C7F8280287967E2C367F0DE237657C216A1678D*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F8A01C0B02BC1D4063F4EB1E817F7A48562A398_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<System.Collections.Generic.List`1<System.Object>,System.Collections.Generic.List`1<Unity.Services.Qos.V2.Http.IDeserializable>>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
 inline RuntimeObject* Enumerable_Select_TisList_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D_TisList_1_t2038C91D98C912588BF8CB95FC6B7BDFA490D550_m056C5EDC1AF339DCC58CCCEFF8E23FDAC5E12961 (RuntimeObject* ___source0, Func_2_t5C7F8280287967E2C367F0DE237657C216A1678D* ___selector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t5C7F8280287967E2C367F0DE237657C216A1678D*, const RuntimeMethod*))Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m67C538A5EBF57C4844107A8EF25DB2CAAFBAF8FB_gshared)(___source0, ___selector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_Select_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m5BBCA2BC02448D0B77D2201BB08B13BAB3BABA53_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___selector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<System.Collections.Generic.List`1<Unity.Services.Qos.V2.Http.IDeserializable>>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline List_1_t76FF122784E0B8AE16C4CD15F111BF1D7802A63F* Enumerable_ToList_TisList_1_t2038C91D98C912588BF8CB95FC6B7BDFA490D550_mBD40F20C545EFBE3B2CA8E09839CF707137ACC14 (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  List_1_t76FF122784E0B8AE16C4CD15F111BF1D7802A63F* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisRuntimeObject_m6456D63764F29E6B5B2422C3DE25113577CF51EE_gshared)(___source0, method);
+	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* il2cppRetVal = ((  List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisIl2CppFullySharedGenericAny_m191EA129E511F9B8304FF8826A2DA645E06CCBF0_gshared)((RuntimeObject*)___source0, method);
+	return (List_1_t76FF122784E0B8AE16C4CD15F111BF1D7802A63F*)il2cppRetVal;
 }
 // System.Void System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Object>,System.String>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m4F049E2C488DF6CAE688DA027C6FC95F6174AC4C (Func_2_tCB5E9F24E1D4A5E6665E1C163977F878E203DD5B* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_tCB5E9F24E1D4A5E6665E1C163977F878E203DD5B*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m60F64297108A01DFB5663C9BA121893957855907_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Void System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Object>,Unity.Services.Qos.V2.Http.IDeserializable>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m8EDFDF0B6527300EBDF973D0F996C1CA45E99C4E (Func_2_tC92C75B4F4CCC84BD3088FA815307812F9CF7324* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_tC92C75B4F4CCC84BD3088FA815307812F9CF7324*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m60F64297108A01DFB5663C9BA121893957855907_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.Dictionary`2<TKey,TElement> System.Linq.Enumerable::ToDictionary<System.Collections.Generic.KeyValuePair`2<System.String,System.Object>,System.String,Unity.Services.Qos.V2.Http.IDeserializable>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>)
 inline Dictionary_2_tC1912B852C6D4B2362D4CB9610246BB16F5BC162* Enumerable_ToDictionary_TisKeyValuePair_2_tBEE55F2A4574C64393155C322376FD98C7BFC7B9_TisString_t_TisIDeserializable_t9C53C000E90A7332CFF042B0E5EDEA2B14C95C96_m775F52D5753ACC8D81DA3042FD6F234BD658FCE6 (RuntimeObject* ___source0, Func_2_tCB5E9F24E1D4A5E6665E1C163977F878E203DD5B* ___keySelector1, Func_2_tC92C75B4F4CCC84BD3088FA815307812F9CF7324* ___elementSelector2, const RuntimeMethod* method)
 {
-	return ((  Dictionary_2_tC1912B852C6D4B2362D4CB9610246BB16F5BC162* (*) (RuntimeObject*, Func_2_tCB5E9F24E1D4A5E6665E1C163977F878E203DD5B*, Func_2_tC92C75B4F4CCC84BD3088FA815307812F9CF7324*, const RuntimeMethod*))Enumerable_ToDictionary_TisKeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230_TisRuntimeObject_TisRuntimeObject_mFAD38355767A6BC98DB0AF76ADAB9AEDE1A401CB_gshared)(___source0, ___keySelector1, ___elementSelector2, method);
+	Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* il2cppRetVal = ((  Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_ToDictionary_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mCE400B0EBD8083C1E7287BC3E256BB27CF9CF2E0_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___keySelector1, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___elementSelector2, method);
+	return (Dictionary_2_tC1912B852C6D4B2362D4CB9610246BB16F5BC162*)il2cppRetVal;
 }
 // System.Void System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>,System.String>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_mBBCB2C4390040071351394228DA494BDF3DD2A31 (Func_2_tEED63335B20AD9587C01CA6994AAC5C004611398* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_tEED63335B20AD9587C01CA6994AAC5C004611398*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m60F64297108A01DFB5663C9BA121893957855907_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Void System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>,System.Collections.Generic.List`1<Unity.Services.Qos.V2.Http.IDeserializable>>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_mD2597B1A60D4973958268CAA72E44E38D176E98C (Func_2_t2C1B78831395452A2C74E69135A2B40891A47599* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t2C1B78831395452A2C74E69135A2B40891A47599*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m60F64297108A01DFB5663C9BA121893957855907_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.Dictionary`2<TKey,TElement> System.Linq.Enumerable::ToDictionary<System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>,System.String,System.Collections.Generic.List`1<Unity.Services.Qos.V2.Http.IDeserializable>>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>)
 inline Dictionary_2_t9CC4E21B838A9054BDCC5735A12A2D7F889A3AF4* Enumerable_ToDictionary_TisKeyValuePair_2_t06B7A84C0CEF1673FA8D1C870C2E16670C5C233C_TisString_t_TisList_1_t2038C91D98C912588BF8CB95FC6B7BDFA490D550_m0D1FD180C7B9731121BC21AA237551A9A0975AD9 (RuntimeObject* ___source0, Func_2_tEED63335B20AD9587C01CA6994AAC5C004611398* ___keySelector1, Func_2_t2C1B78831395452A2C74E69135A2B40891A47599* ___elementSelector2, const RuntimeMethod* method)
 {
-	return ((  Dictionary_2_t9CC4E21B838A9054BDCC5735A12A2D7F889A3AF4* (*) (RuntimeObject*, Func_2_tEED63335B20AD9587C01CA6994AAC5C004611398*, Func_2_t2C1B78831395452A2C74E69135A2B40891A47599*, const RuntimeMethod*))Enumerable_ToDictionary_TisKeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230_TisRuntimeObject_TisRuntimeObject_mFAD38355767A6BC98DB0AF76ADAB9AEDE1A401CB_gshared)(___source0, ___keySelector1, ___elementSelector2, method);
+	Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* il2cppRetVal = ((  Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_ToDictionary_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mCE400B0EBD8083C1E7287BC3E256BB27CF9CF2E0_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___keySelector1, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___elementSelector2, method);
+	return (Dictionary_2_t9CC4E21B838A9054BDCC5735A12A2D7F889A3AF4*)il2cppRetVal;
 }
 // System.Void Unity.Services.Qos.V2.Http.JsonObject/<>c::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mE38D4922153966099178C97D34082D683E443117 (U3CU3Ec_t0F5865404EEC5E96D8D75C3B8E1FC1C53302592C* __this, const RuntimeMethod* method) ;
 // TKey System.Collections.Generic.KeyValuePair`2<System.String,System.Object>::get_Key()
 inline String_t* KeyValuePair_2_get_Key_mA64FF29A08423140758B0276333D1A89C71B793A_inline (KeyValuePair_2_tBEE55F2A4574C64393155C322376FD98C7BFC7B9* __this, const RuntimeMethod* method)
 {
-	return ((  String_t* (*) (KeyValuePair_2_tBEE55F2A4574C64393155C322376FD98C7BFC7B9*, const RuntimeMethod*))KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline)(__this, method);
+	String_t* il2cppRetVal;
+	((  void (*) (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))KeyValuePair_2_get_Key_mBE75BF8983618BC1ACEC20F94C1BFF85C8AA50F1_gshared_inline)((KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // TValue System.Collections.Generic.KeyValuePair`2<System.String,System.Object>::get_Value()
 inline RuntimeObject* KeyValuePair_2_get_Value_m2052BF44A3FDE623D98B0E6B6E227B2900034235_inline (KeyValuePair_2_tBEE55F2A4574C64393155C322376FD98C7BFC7B9* __this, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (KeyValuePair_2_tBEE55F2A4574C64393155C322376FD98C7BFC7B9*, const RuntimeMethod*))KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline)(__this, method);
+	RuntimeObject* il2cppRetVal;
+	((  void (*) (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))KeyValuePair_2_get_Value_mFA1964BF56AA214EE0D491CC197F61BC9E5F1F7A_gshared_inline)((KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // TKey System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>::get_Key()
 inline String_t* KeyValuePair_2_get_Key_m013CA52885A4357DB3C5ECEFC57E30CE6ED29021_inline (KeyValuePair_2_t06B7A84C0CEF1673FA8D1C870C2E16670C5C233C* __this, const RuntimeMethod* method)
 {
-	return ((  String_t* (*) (KeyValuePair_2_t06B7A84C0CEF1673FA8D1C870C2E16670C5C233C*, const RuntimeMethod*))KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline)(__this, method);
+	String_t* il2cppRetVal;
+	((  void (*) (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))KeyValuePair_2_get_Key_mBE75BF8983618BC1ACEC20F94C1BFF85C8AA50F1_gshared_inline)((KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // TValue System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>::get_Value()
 inline List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* KeyValuePair_2_get_Value_m9C6326BFB9569F4BBCA997EDCA12C152F30B27A0_inline (KeyValuePair_2_t06B7A84C0CEF1673FA8D1C870C2E16670C5C233C* __this, const RuntimeMethod* method)
 {
-	return ((  List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* (*) (KeyValuePair_2_t06B7A84C0CEF1673FA8D1C870C2E16670C5C233C*, const RuntimeMethod*))KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline)(__this, method);
+	List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* il2cppRetVal;
+	((  void (*) (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))KeyValuePair_2_get_Value_mFA1964BF56AA214EE0D491CC197F61BC9E5F1F7A_gshared_inline)((KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // Newtonsoft.Json.Linq.JToken Newtonsoft.Json.Linq.JToken::FromObject(System.Object,Newtonsoft.Json.JsonSerializer)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* JToken_FromObject_m70D337F9DB45E840744BF9C16B5578DB6C96D198 (RuntimeObject* ___o0, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___jsonSerializer1, const RuntimeMethod* method) ;
 // T[] System.Array::Empty<Newtonsoft.Json.JsonConverter>()
 inline JsonConverterU5BU5D_tF69203E66D4FCB82A6F64A24EF7785E26E9E957E* Array_Empty_TisJsonConverter_tE765D011CD34CDF28759E6D58FDBF05AA5EA0F16_mFA4697517835E4E1FFADA62370BB78401E0C99F0_inline (const RuntimeMethod* method)
 {
-	return ((  JsonConverterU5BU5D_tF69203E66D4FCB82A6F64A24EF7785E26E9E957E* (*) (const RuntimeMethod*))Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline)(method);
+	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* il2cppRetVal = ((  __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* (*) (const RuntimeMethod*))Array_Empty_TisIl2CppFullySharedGenericAny_m244E2A51B33F845A2093F0862FBCE502E4FDD868_gshared_inline)(method);
+	return (JsonConverterU5BU5D_tF69203E66D4FCB82A6F64A24EF7785E26E9E957E*)il2cppRetVal;
 }
 // Newtonsoft.Json.Linq.JObject Newtonsoft.Json.Linq.JObject::Load(Newtonsoft.Json.JsonReader)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JObject_t22BBBA7A90517B7E66E8C9D8D16DE84CB5054DE1* JObject_Load_m44DE042F4F4752D15D54259823A74B609650E9EF (JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___reader0, const RuntimeMethod* method) ;
@@ -10654,42 +10423,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E
 // System.Void System.Collections.Generic.List`1<Unity.Services.Qos.V2.Http.JsonObject>::.ctor()
 inline void List_1__ctor_m7ECF8E1A8FB405833020FBED1AD896AB2DAC3CD9 (List_1_tD073B141E9EEAF975997362587D42D5F24DF156C* __this, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_tD073B141E9EEAF975997362587D42D5F24DF156C*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1__ctor_m0AFBAEA7EC427E32CC9CA267B1930DC5DF67A374_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
 }
 // System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<System.Object>::GetEnumerator()
 inline Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method)
 {
-	return ((  Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A (*) (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
+	Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A il2cppRetVal;
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))List_1_GetEnumerator_m8B2A92ACD4FBA5FBDC3F6F4F5C23A0DDF491DA61_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Collections.Generic.List`1/Enumerator<System.Object>::Dispose()
 inline void Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419 (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
+	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_Dispose_mFE1EBE6F6425283FEAEAE7C79D02CDE4F9D367E8_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
 }
 // T System.Collections.Generic.List`1/Enumerator<System.Object>::get_Current()
 inline RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
+	RuntimeObject* il2cppRetVal;
+	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_gshared_inline)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Collections.Generic.List`1<Unity.Services.Qos.V2.Http.JsonObject>::Add(T)
 inline void List_1_Add_mD33893A17F8F0CFEFF51831AF97901D025CFB8BF_inline (List_1_tD073B141E9EEAF975997362587D42D5F24DF156C* __this, JsonObject_t6823207BE23EA1762F28FD507C671488B692F89A* ___item0, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_tD073B141E9EEAF975997362587D42D5F24DF156C*, JsonObject_t6823207BE23EA1762F28FD507C671488B692F89A*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)___item0, method);
 }
 // System.Boolean System.Collections.Generic.List`1/Enumerator<System.Object>::MoveNext()
 inline bool Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
+	return ((  bool (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_MoveNext_m8D8E5E878AF0A88A535AB1AB5BA4F23E151A678A_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
 }
 // System.Void System.Collections.Generic.List`1<Unity.Services.Qos.V2.Http.IDeserializable>::.ctor()
 inline void List_1__ctor_mA17B18F1B0C399C5879ADC3D44137E54B0D6855F (List_1_t2038C91D98C912588BF8CB95FC6B7BDFA490D550* __this, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t2038C91D98C912588BF8CB95FC6B7BDFA490D550*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1__ctor_m0AFBAEA7EC427E32CC9CA267B1930DC5DF67A374_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
 }
 // System.Void System.Collections.Generic.List`1<Unity.Services.Qos.V2.Http.IDeserializable>::Add(T)
 inline void List_1_Add_m9BB0FCC537EDC0DAA621E8EBB064C06726CE1594_inline (List_1_t2038C91D98C912588BF8CB95FC6B7BDFA490D550* __this, RuntimeObject* ___item0, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t2038C91D98C912588BF8CB95FC6B7BDFA490D550*, RuntimeObject*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)___item0, method);
 }
 // System.Void Newtonsoft.Json.JsonSerializerSettings::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializerSettings__ctor_mE1C9A90375BA88DF7F6911F1F96AEEC6A98CD22F (JsonSerializerSettings_t152F58F4E62A8349D748C945AF1699F84546D3FF* __this, const RuntimeMethod* method) ;
@@ -10708,12 +10481,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int64_ToString_m284E4E55662818E3865
 // System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Type>::ContainsKey(TKey)
 inline bool Dictionary_2_ContainsKey_m4EC9A321B5DBDCB0E9249FFE9074D45472E5D933 (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A* __this, String_t* ___key0, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A*, String_t*, const RuntimeMethod*))Dictionary_2_ContainsKey_m703047C213F7AB55C9DC346596287773A1F670CD_gshared)(__this, ___key0, method);
+	return ((  bool (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_ContainsKey_mA268E9B914DCE838DD0CD9D879BAAEECD0C677AA_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)___key0, method);
 }
 // TValue System.Collections.Generic.Dictionary`2<System.String,System.Type>::get_Item(TKey)
 inline Type_t* Dictionary_2_get_Item_mEE2A06608BDDA14C7170B0039FF13E2DCE84EEE9 (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A* __this, String_t* ___key0, const RuntimeMethod* method)
 {
-	return ((  Type_t* (*) (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A*, String_t*, const RuntimeMethod*))Dictionary_2_get_Item_m4AAAECBE902A211BF2126E6AFA280AEF73A3E0D6_gshared)(__this, ___key0, method);
+	Type_t* il2cppRetVal;
+	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Dictionary_2_get_Item_m2E96908E9716367701CD737FA54C884EB2A8C3EA_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)___key0, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Boolean System.Type::op_Inequality(System.Type,System.Type)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Type_op_Inequality_m83209C7BB3C05DFBEA3B6199B0BEFE8037301172 (Type_t* ___left0, Type_t* ___right1, const RuntimeMethod* method) ;
@@ -10746,19 +10521,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass0_0__ctor_mC77E42F2
 // System.Void System.Threading.Tasks.TaskCompletionSource`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::.ctor()
 inline void TaskCompletionSource_1__ctor_m3CD6FE838DA2AC8F6FCAA9F18E2AB95378A5402B (TaskCompletionSource_1_t79DCFFF6C8EF0B6443EB5DA7FFAA6B87C8D01E56* __this, const RuntimeMethod* method)
 {
-	((  void (*) (TaskCompletionSource_1_t79DCFFF6C8EF0B6443EB5DA7FFAA6B87C8D01E56*, const RuntimeMethod*))TaskCompletionSource_1__ctor_mBF9A903AD14C4E9CF044B227776C532BA9C40D60_gshared)(__this, method);
+	((  void (*) (TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970*, const RuntimeMethod*))TaskCompletionSource_1__ctor_mD6DB19F66035FC77675F1ED9FE696A65CF9C0F23_gshared)((TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970*)__this, method);
 }
 // System.Void System.Action`1<UnityEngine.AsyncOperation>::.ctor(System.Object,System.IntPtr)
 inline void Action_1__ctor_m33ABB7530487276910BEFB499A97D33FB2E06D7D (Action_1_tE8693FF0E67CDBA52BAFB211BFF1844D076ABAFB* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Action_1_tE8693FF0E67CDBA52BAFB211BFF1844D076ABAFB*, RuntimeObject*, intptr_t, const RuntimeMethod*))Action_1__ctor_m2E1DFA67718FC1A0B6E5DFEB78831FFE9C059EB4_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99*, RuntimeObject*, intptr_t, const RuntimeMethod*))Action_1__ctor_m685A441EC9FAC9D554B26FA83A08F4BEF96DFF0E_gshared)((Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99*)__this, ___object0, ___method1, method);
 }
 // System.Void UnityEngine.AsyncOperation::add_completed(System.Action`1<UnityEngine.AsyncOperation>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncOperation_add_completed_mD6F21BA8127D6D4B7ABDEFAA995A7A347A20A793 (AsyncOperation_tD2789250E4B098DEDA92B366A577E500A92D2D3C* __this, Action_1_tE8693FF0E67CDBA52BAFB211BFF1844D076ABAFB* ___value0, const RuntimeMethod* method) ;
 // System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskCompletionSource`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::get_Task()
 inline Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC228* TaskCompletionSource_1_get_Task_mB945099D1795B140A544AEDBE4ACAF13FE0BED38_inline (TaskCompletionSource_1_t79DCFFF6C8EF0B6443EB5DA7FFAA6B87C8D01E56* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC228* (*) (TaskCompletionSource_1_t79DCFFF6C8EF0B6443EB5DA7FFAA6B87C8D01E56*, const RuntimeMethod*))TaskCompletionSource_1_get_Task_mF44990297C25C7DBE1E65241C03D0120CB551552_gshared_inline)(__this, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970*, const RuntimeMethod*))TaskCompletionSource_1_get_Task_m4994989AA2174905CF517397D0F6B082ADC29EE9_gshared_inline)((TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970*)__this, method);
+	return (Task_1_t7295E82389AD3C06B82BA5915D52D0058A6EC228*)il2cppRetVal;
 }
 // UnityEngine.Networking.UnityWebRequest UnityEngine.Networking.UnityWebRequestAsyncOperation::get_webRequest()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* UnityWebRequestAsyncOperation_get_webRequest_mF67D15420C7C1C4DCA1BD6F839048A0542998BC3_inline (UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* __this, const RuntimeMethod* method) ;
@@ -10781,78 +10557,86 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HttpClientResponse_tD29473CE0C6CECC34988654F8
 // System.Void System.Threading.Tasks.TaskCompletionSource`1<Unity.Services.Qos.V2.Http.HttpClientResponse>::SetResult(TResult)
 inline void TaskCompletionSource_1_SetResult_m4FAC27118CAEFFDAA9C5C4B55FC07011377980CB (TaskCompletionSource_1_t79DCFFF6C8EF0B6443EB5DA7FFAA6B87C8D01E56* __this, HttpClientResponse_tD29473CE0C6CECC34988654F8EF1F3FE5BF593B3* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (TaskCompletionSource_1_t79DCFFF6C8EF0B6443EB5DA7FFAA6B87C8D01E56*, HttpClientResponse_tD29473CE0C6CECC34988654F8EF1F3FE5BF593B3*, const RuntimeMethod*))TaskCompletionSource_1_SetResult_m948378015A7A0E42647452EB7003466406B831A4_gshared)(__this, ___result0, method);
+	((  void (*) (TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))TaskCompletionSource_1_SetResult_m20A3A9EACC332D8ECC8AA9E690B90E6C56835CED_gshared)((TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970*)__this, (Il2CppFullySharedGenericAny)___result0, method);
 }
 // System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline (float ___value0, float ___min1, float ___max2, const RuntimeMethod* method) ;
 // System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<Unity.Services.Qos.V2.ErrorMitigation.ExceptionPredicate>::GetEnumerator()
 inline Enumerator_tD8C78883B796BEA5C2CA0512A91DD1F70C931A66 List_1_GetEnumerator_mC5DE4F1FE06AB030CE15661F3FEB50E419449652 (List_1_t4B608913DD9628CD9CE167B2D172AC1559D4543A* __this, const RuntimeMethod* method)
 {
-	return ((  Enumerator_tD8C78883B796BEA5C2CA0512A91DD1F70C931A66 (*) (List_1_t4B608913DD9628CD9CE167B2D172AC1559D4543A*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
+	Enumerator_tD8C78883B796BEA5C2CA0512A91DD1F70C931A66 il2cppRetVal;
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))List_1_GetEnumerator_m8B2A92ACD4FBA5FBDC3F6F4F5C23A0DDF491DA61_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Collections.Generic.List`1/Enumerator<Unity.Services.Qos.V2.ErrorMitigation.ExceptionPredicate>::Dispose()
 inline void Enumerator_Dispose_m88F23D80366CA6FD7892A114483AE6642F218083 (Enumerator_tD8C78883B796BEA5C2CA0512A91DD1F70C931A66* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Enumerator_tD8C78883B796BEA5C2CA0512A91DD1F70C931A66*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
+	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_Dispose_mFE1EBE6F6425283FEAEAE7C79D02CDE4F9D367E8_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
 }
 // T System.Collections.Generic.List`1/Enumerator<Unity.Services.Qos.V2.ErrorMitigation.ExceptionPredicate>::get_Current()
 inline ExceptionPredicate_t2842BB012BD7A7BEA650DB5450327BD5B18CB4A5* Enumerator_get_Current_mB78ABA8239B873609A6873AB53EAD205B18B25A2_inline (Enumerator_tD8C78883B796BEA5C2CA0512A91DD1F70C931A66* __this, const RuntimeMethod* method)
 {
-	return ((  ExceptionPredicate_t2842BB012BD7A7BEA650DB5450327BD5B18CB4A5* (*) (Enumerator_tD8C78883B796BEA5C2CA0512A91DD1F70C931A66*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
+	ExceptionPredicate_t2842BB012BD7A7BEA650DB5450327BD5B18CB4A5* il2cppRetVal;
+	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_gshared_inline)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Exception Unity.Services.Qos.V2.ErrorMitigation.ExceptionPredicate::Invoke(System.Exception)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Exception_t* ExceptionPredicate_Invoke_mC841BF056636E4D49E4F918360E4E58E7C48BF96_inline (ExceptionPredicate_t2842BB012BD7A7BEA650DB5450327BD5B18CB4A5* __this, Exception_t* ___ex0, const RuntimeMethod* method) ;
 // System.Boolean System.Collections.Generic.List`1/Enumerator<Unity.Services.Qos.V2.ErrorMitigation.ExceptionPredicate>::MoveNext()
 inline bool Enumerator_MoveNext_m259614684A06C139ED99ABA099027EE9C50F3FAC (Enumerator_tD8C78883B796BEA5C2CA0512A91DD1F70C931A66* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Enumerator_tD8C78883B796BEA5C2CA0512A91DD1F70C931A66*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
+	return ((  bool (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_MoveNext_m8D8E5E878AF0A88A535AB1AB5BA4F23E151A678A_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
 }
 // System.Void System.Collections.Generic.List`1<Unity.Services.Qos.V2.ErrorMitigation.ExceptionPredicate>::.ctor()
 inline void List_1__ctor_m1D2BC3B9C1BA331C8156A54B5834C9574111E36B (List_1_t4B608913DD9628CD9CE167B2D172AC1559D4543A* __this, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t4B608913DD9628CD9CE167B2D172AC1559D4543A*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1__ctor_m0AFBAEA7EC427E32CC9CA267B1930DC5DF67A374_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
 }
 // System.Void System.Collections.Generic.KeyValuePair`2<System.Int64,System.Boolean>::.ctor(TKey,TValue)
 inline void KeyValuePair_2__ctor_m4D69811DF1F96947FE72B76275A642FD26D84B5E (KeyValuePair_2_tB238689916B08B0CFF54232EB53E746022CA86A2* __this, int64_t ___key0, bool ___value1, const RuntimeMethod* method)
 {
-	((  void (*) (KeyValuePair_2_tB238689916B08B0CFF54232EB53E746022CA86A2*, int64_t, bool, const RuntimeMethod*))KeyValuePair_2__ctor_m4D69811DF1F96947FE72B76275A642FD26D84B5E_gshared)(__this, ___key0, ___value1, method);
+	((  void (*) (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))KeyValuePair_2__ctor_mD82E516936D2BDE6D46C8C45270250647986231E_gshared)((KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*)__this, (Il2CppFullySharedGenericAny)&___key0, (Il2CppFullySharedGenericAny)&___value1, method);
 }
 // System.Void System.Collections.Generic.Dictionary`2<System.Int64,System.Boolean>::.ctor()
 inline void Dictionary_2__ctor_mC2E112E191D945753C30F6A2475DDB865FD83097 (Dictionary_2_tCF06E70C571839D7107A1DCD7514332D33872BFF* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_tCF06E70C571839D7107A1DCD7514332D33872BFF*, const RuntimeMethod*))Dictionary_2__ctor_mC2E112E191D945753C30F6A2475DDB865FD83097_gshared)(__this, method);
+	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, const RuntimeMethod*))Dictionary_2__ctor_m7745B6ED71E47C95E1BFCE647C4F026A404C668F_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, method);
 }
 // System.Void System.Collections.Generic.Dictionary`2<System.Int64,System.Boolean>::Add(TKey,TValue)
 inline void Dictionary_2_Add_m2FE794EFEAD72A5A0A0C15DC8B4D10002655FAC6 (Dictionary_2_tCF06E70C571839D7107A1DCD7514332D33872BFF* __this, int64_t ___key0, bool ___value1, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_tCF06E70C571839D7107A1DCD7514332D33872BFF*, int64_t, bool, const RuntimeMethod*))Dictionary_2_Add_m2FE794EFEAD72A5A0A0C15DC8B4D10002655FAC6_gshared)(__this, ___key0, ___value1, method);
+	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_Add_m54D479280472DEA042DB3933AF547E666B017333_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___key0, (Il2CppFullySharedGenericAny)&___value1, method);
 }
 // System.String UnityEngine.Networking.UnityWebRequest::EscapeURL(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityWebRequest_EscapeURL_m1B819655E6FFE468B9DE9D101A17398F3E1A4F27 (String_t* ___s0, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.String>::Add(T)
 inline void List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, String_t* ___item0, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, String_t*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)___item0, method);
 }
 // System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<System.String>::GetEnumerator()
 inline Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1 List_1_GetEnumerator_m7692B5F182858B7D5C72C920D09AD48738D1E70D (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, const RuntimeMethod* method)
 {
-	return ((  Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1 (*) (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
+	Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1 il2cppRetVal;
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))List_1_GetEnumerator_m8B2A92ACD4FBA5FBDC3F6F4F5C23A0DDF491DA61_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Collections.Generic.List`1/Enumerator<System.String>::Dispose()
 inline void Enumerator_Dispose_m592BCCE7B7933454DED2130C810F059F8D85B1D7 (Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
+	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_Dispose_mFE1EBE6F6425283FEAEAE7C79D02CDE4F9D367E8_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
 }
 // T System.Collections.Generic.List`1/Enumerator<System.String>::get_Current()
 inline String_t* Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_inline (Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1* __this, const RuntimeMethod* method)
 {
-	return ((  String_t* (*) (Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
+	String_t* il2cppRetVal;
+	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_gshared_inline)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Boolean System.Collections.Generic.List`1/Enumerator<System.String>::MoveNext()
 inline bool Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED (Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
+	return ((  bool (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_MoveNext_m8D8E5E878AF0A88A535AB1AB5BA4F23E151A678A_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
 }
 // System.Int32 System.String::get_Length()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline (String_t* __this, const RuntimeMethod* method) ;
@@ -10861,39 +10645,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Remove_m8266E0BF5D8565D4CDC8
 // System.Collections.Generic.Dictionary`2/KeyCollection<TKey,TValue> System.Collections.Generic.Dictionary`2<System.String,System.String>::get_Keys()
 inline KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342* Dictionary_2_get_Keys_m0014C8E91B9B4377ACFBD26A9175A7E5C016D9E9 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, const RuntimeMethod* method)
 {
-	return ((  KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342* (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, const RuntimeMethod*))Dictionary_2_get_Keys_m72D290F90654BFD683FA7AA7C63D9F4F692218B6_gshared)(__this, method);
+	KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55* il2cppRetVal = ((  KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55* (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, const RuntimeMethod*))Dictionary_2_get_Keys_mD82D6690B1A801E8EED43F1B1D310893C9D334CF_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, method);
+	return (KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342*)il2cppRetVal;
 }
 // System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<TKey,TValue> System.Collections.Generic.Dictionary`2/KeyCollection<System.String,System.String>::GetEnumerator()
 inline Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867 KeyCollection_GetEnumerator_m6B09BC0C54723DE1DB3E62395E41B76F419BAC22 (KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342* __this, const RuntimeMethod* method)
 {
-	return ((  Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867 (*) (KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342*, const RuntimeMethod*))KeyCollection_GetEnumerator_m7E77FBA7DE2D3876EC02F396712C4AA5B1D535A5_gshared)(__this, method);
+	Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867 il2cppRetVal;
+	((  void (*) (KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55*, Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*, const RuntimeMethod*))KeyCollection_GetEnumerator_m1624A44B07D62B8CC592FEAE7A521D9504E0ACB3_gshared)((KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55*)__this, (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.String,System.String>::Dispose()
 inline void Enumerator_Dispose_m6C974325ADBDD3ECEBAA290D7940AC282C56386A (Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867*, const RuntimeMethod*))Enumerator_Dispose_mEB2A61F3F3F420C1B1DFD5C74EEFD4BD7761BCF7_gshared)(__this, method);
+	((  void (*) (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*, const RuntimeMethod*))Enumerator_Dispose_m3E0B734E98D35978EEE706FCEC2FE08FEA74FD35_gshared)((Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*)__this, method);
 }
 // TKey System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.String,System.String>::get_Current()
 inline String_t* Enumerator_get_Current_m4620EF2C1DF7D94D5A511226C42A3A42040B1C9E_inline (Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867* __this, const RuntimeMethod* method)
 {
-	return ((  String_t* (*) (Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867*, const RuntimeMethod*))Enumerator_get_Current_mD6472FA27D28B9AE64A0FEF796C72ABBC2420EBF_gshared_inline)(__this, method);
+	String_t* il2cppRetVal;
+	((  void (*) (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerator_get_Current_m2D9E3398C2A3349E3F0F189A38E881D11DE5AA15_gshared_inline)((Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // TValue System.Collections.Generic.Dictionary`2<System.String,System.String>::get_Item(TKey)
 inline String_t* Dictionary_2_get_Item_mB13DFB3E7499031847CF544977D4EFB1AC0157AB (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, String_t* ___key0, const RuntimeMethod* method)
 {
-	return ((  String_t* (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, String_t*, const RuntimeMethod*))Dictionary_2_get_Item_m4AAAECBE902A211BF2126E6AFA280AEF73A3E0D6_gshared)(__this, ___key0, method);
+	String_t* il2cppRetVal;
+	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Dictionary_2_get_Item_m2E96908E9716367701CD737FA54C884EB2A8C3EA_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)___key0, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Boolean System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.String,System.String>::MoveNext()
 inline bool Enumerator_MoveNext_mE8FB9EBD177219F5AC0BF48642FB47D3E186C283 (Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867*, const RuntimeMethod*))Enumerator_MoveNext_mB5E00F11BCA3AC963F9BA72659FA76B107863F3C_gshared)(__this, method);
+	return ((  bool (*) (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*, const RuntimeMethod*))Enumerator_MoveNext_m21C503A713FDCA406492E2BE960D85320752E615_gshared)((Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*)__this, method);
 }
 // System.Void System.IO.Stream::CopyTo(System.IO.Stream)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Stream_CopyTo_m61DC54FF3708C2B8AB5C5D63D300AA57ADA01999 (Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* __this, Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* ___destination0, const RuntimeMethod* method) ;
 // System.Byte[] Unity.Services.Qos.V2.QosDiscovery.JsonSerialization::Serialize<System.Object>(T)
 inline ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* JsonSerialization_Serialize_TisRuntimeObject_mD5493145A6A66AD77052A71BD047EDFAAF960B32 (RuntimeObject* ___obj0, const RuntimeMethod* method)
 {
-	return ((  ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* (*) (RuntimeObject*, const RuntimeMethod*))JsonSerialization_Serialize_TisRuntimeObject_mD5493145A6A66AD77052A71BD047EDFAAF960B32_gshared)(___obj0, method);
+	return ((  ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* (*) (/*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))JsonSerialization_Serialize_TisIl2CppFullySharedGenericAny_m4EFB6B0B9F643F1C44B930DBFE269C601E3DE3EA_gshared)((Il2CppFullySharedGenericAny)___obj0, method);
 }
 // System.Boolean System.String::Equals(System.String,System.String,System.StringComparison)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_Equals_mCC34895D0DB2AD440C9D8767032215BC86B5C48B (String_t* ___a0, String_t* ___b1, int32_t ___comparisonType2, const RuntimeMethod* method) ;
@@ -10940,27 +10731,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseApiClient__ctor_m0FC102F5D8B8DF3AF96
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Response`1<Unity.Services.Qos.V2.Models.QosServersResponseBody>>::Create()
 inline AsyncTaskMethodBuilder_1_t8D0F42E2AF7BA2391CAF73BEC2BF0C924858AA65 AsyncTaskMethodBuilder_1_Create_m92A2DD9EE073BE00B7104D8A4728ACF9DA4CF6CB (const RuntimeMethod* method)
 {
-	return ((  AsyncTaskMethodBuilder_1_t8D0F42E2AF7BA2391CAF73BEC2BF0C924858AA65 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
+	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
+	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_t8D0F42E2AF7BA2391CAF73BEC2BF0C924858AA65, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Response`1<Unity.Services.Qos.V2.Models.QosServersResponseBody>>::Start<Unity.Services.Qos.V2.Apis.QosDiscovery.QosDiscoveryApiClient/<GetAllServersAsync>d__7>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CGetAllServersAsyncU3Ed__7_t2ED4A0AF92E03B5328838CEAD6458016E2766DBB_mC97C34CC0F06C0B62CA230F2D834D138034AF9DD (AsyncTaskMethodBuilder_1_t8D0F42E2AF7BA2391CAF73BEC2BF0C924858AA65* __this, U3CGetAllServersAsyncU3Ed__7_t2ED4A0AF92E03B5328838CEAD6458016E2766DBB* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t8D0F42E2AF7BA2391CAF73BEC2BF0C924858AA65*, U3CGetAllServersAsyncU3Ed__7_t2ED4A0AF92E03B5328838CEAD6458016E2766DBB*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CGetAllServersAsyncU3Ed__7_t2ED4A0AF92E03B5328838CEAD6458016E2766DBB_mFC4C95B8BF73DDF2F1FB1B0888980A7638D5AA9D_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Response`1<Unity.Services.Qos.V2.Models.QosServersResponseBody>>::get_Task()
 inline Task_1_t34479C646BCDACDD7E8810575701ECDBD632E104* AsyncTaskMethodBuilder_1_get_Task_mF5AA35D653D086F2F80A063523F7C660772F70C4 (AsyncTaskMethodBuilder_1_t8D0F42E2AF7BA2391CAF73BEC2BF0C924858AA65* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_t34479C646BCDACDD7E8810575701ECDBD632E104* (*) (AsyncTaskMethodBuilder_1_t8D0F42E2AF7BA2391CAF73BEC2BF0C924858AA65*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
+	return (Task_1_t34479C646BCDACDD7E8810575701ECDBD632E104*)il2cppRetVal;
 }
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.Type>::.ctor()
 inline void Dictionary_2__ctor_m552A02EB796CECBF0D6B1D2F5BCA4434A2AC9428 (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A*, const RuntimeMethod*))Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared)(__this, method);
+	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, const RuntimeMethod*))Dictionary_2__ctor_m7745B6ED71E47C95E1BFCE647C4F026A404C668F_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, method);
 }
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.Type>::Add(TKey,TValue)
 inline void Dictionary_2_Add_m71BE3D798D6EC6F9B3BEF764C46AA0E005F49887 (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A* __this, String_t* ___key0, Type_t* ___value1, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A*, String_t*, Type_t*, const RuntimeMethod*))Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_gshared)(__this, ___key0, ___value1, method);
+	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_Add_m54D479280472DEA042DB3933AF547E666B017333_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)___key0, (Il2CppFullySharedGenericAny)___value1, method);
 }
 // Unity.Services.Qos.V2.Configuration Unity.Services.Qos.V2.Apis.QosDiscovery.QosDiscoveryApiClient::get_Configuration()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Configuration_tE845FBB1A4661A45CD91F4276EAA6E16E3DB89BD* QosDiscoveryApiClient_get_Configuration_m5DD394B3D852735DA0A6C7793A6CF4808A11AC41 (QosDiscoveryApiClient_tFB90002EF8E4565B89794C8EC74DDB69BD3AD603* __this, const RuntimeMethod* method) ;
@@ -10973,12 +10766,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t46B2DB028096FA2B828359E52F37F31
 // T System.Nullable`1<System.Int32>::GetValueOrDefault()
 inline int32_t Nullable_1_GetValueOrDefault_m8D130DB7F2A1E694736B449176F9C26DB456597B_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*, const RuntimeMethod*))Nullable_1_GetValueOrDefault_m8D130DB7F2A1E694736B449176F9C26DB456597B_gshared_inline)(__this, method);
+	int32_t il2cppRetVal;
+	((  void (*) (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*, Il2CppFullySharedGenericStruct*, const RuntimeMethod*))Nullable_1_GetValueOrDefault_mC057FBD944AF068B90EBDD0B496231A01B2A4228_gshared_inline)((Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*)__this, (Il2CppFullySharedGenericStruct*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Response`1<Unity.Services.Qos.V2.Models.QosServersResponseBody>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.V2.Http.HttpClientResponse>,Unity.Services.Qos.V2.Apis.QosDiscovery.QosDiscoveryApiClient/<GetAllServersAsync>d__7>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845_TisU3CGetAllServersAsyncU3Ed__7_t2ED4A0AF92E03B5328838CEAD6458016E2766DBB_mA400289B3163265622F3BDBFA4D2C9893DD792B0 (AsyncTaskMethodBuilder_1_t8D0F42E2AF7BA2391CAF73BEC2BF0C924858AA65* __this, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845* ___awaiter0, U3CGetAllServersAsyncU3Ed__7_t2ED4A0AF92E03B5328838CEAD6458016E2766DBB* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t8D0F42E2AF7BA2391CAF73BEC2BF0C924858AA65*, TaskAwaiter_1_t4BC8098FA95F518DC1625CD1F733D2F371F1C845*, U3CGetAllServersAsyncU3Ed__7_t2ED4A0AF92E03B5328838CEAD6458016E2766DBB*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetAllServersAsyncU3Ed__7_t2ED4A0AF92E03B5328838CEAD6458016E2766DBB_mAB6DECAEABB70307DE24CD31FBDBE49B05192E03_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // T Unity.Services.Qos.V2.Http.ResponseHandler::HandleAsyncResponse<Unity.Services.Qos.V2.Models.QosServersResponseBody>(Unity.Services.Qos.V2.Http.HttpClientResponse,System.Collections.Generic.Dictionary`2<System.String,System.Type>)
 inline QosServersResponseBody_t3A0F56FD2909DE3657C21B92714F1EB6657F32BD* ResponseHandler_HandleAsyncResponse_TisQosServersResponseBody_t3A0F56FD2909DE3657C21B92714F1EB6657F32BD_m06583EF28C634109B077BAA1FEDB156387F46D38 (HttpClientResponse_tD29473CE0C6CECC34988654F8EF1F3FE5BF593B3* ___response0, Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A* ___statusCodeToTypeMap1, const RuntimeMethod* method)
@@ -10988,24 +10783,24 @@ inline QosServersResponseBody_t3A0F56FD2909DE3657C21B92714F1EB6657F32BD* Respons
 // System.Void Unity.Services.Qos.V2.Response`1<Unity.Services.Qos.V2.Models.QosServersResponseBody>::.ctor(Unity.Services.Qos.V2.Http.HttpClientResponse,T)
 inline void Response_1__ctor_m29A81F4C335618A81D2E44EB017CFE3C50CA978B (Response_1_tB9149A952A5FA3B43E8D3C70DF90AE5D0278324F* __this, HttpClientResponse_tD29473CE0C6CECC34988654F8EF1F3FE5BF593B3* ___httpResponse0, QosServersResponseBody_t3A0F56FD2909DE3657C21B92714F1EB6657F32BD* ___result1, const RuntimeMethod* method)
 {
-	((  void (*) (Response_1_tB9149A952A5FA3B43E8D3C70DF90AE5D0278324F*, HttpClientResponse_tD29473CE0C6CECC34988654F8EF1F3FE5BF593B3*, QosServersResponseBody_t3A0F56FD2909DE3657C21B92714F1EB6657F32BD*, const RuntimeMethod*))Response_1__ctor_m3A4F818D49EFB7EF322D2BFF85C34A7CCEE0B281_gshared)(__this, ___httpResponse0, ___result1, method);
+	((  void (*) (/*Unity.Services.Qos.V2.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_tE01D2CBFFA6377AB5ABD5A628829909B9DE01269*, HttpClientResponse_tD29473CE0C6CECC34988654F8EF1F3FE5BF593B3*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Response_1__ctor_m1C46C27ADB92D683EB8EC68CA7527F7B34638574_gshared)((Response_1_tE01D2CBFFA6377AB5ABD5A628829909B9DE01269*)__this, ___httpResponse0, (Il2CppFullySharedGenericAny)___result1, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Response`1<Unity.Services.Qos.V2.Models.QosServersResponseBody>>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_mA9A16B0FEFD3EBA9301BC8BD43C5459FD9289470 (AsyncTaskMethodBuilder_1_t8D0F42E2AF7BA2391CAF73BEC2BF0C924858AA65* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t8D0F42E2AF7BA2391CAF73BEC2BF0C924858AA65*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Response`1<Unity.Services.Qos.V2.Models.QosServersResponseBody>>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_mEF0B09F59C6A5B2D102B3A2A4F292DF78F5B0E95 (AsyncTaskMethodBuilder_1_t8D0F42E2AF7BA2391CAF73BEC2BF0C924858AA65* __this, Response_1_tB9149A952A5FA3B43E8D3C70DF90AE5D0278324F* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t8D0F42E2AF7BA2391CAF73BEC2BF0C924858AA65*, Response_1_tB9149A952A5FA3B43E8D3C70DF90AE5D0278324F*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
 }
 // System.Void Unity.Services.Qos.V2.Apis.QosDiscovery.QosDiscoveryApiClient/<GetAllServersAsync>d__7::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetAllServersAsyncU3Ed__7_MoveNext_mF6D563EAA5ADCD3AD468BE6E4E53155B24B51117 (U3CGetAllServersAsyncU3Ed__7_t2ED4A0AF92E03B5328838CEAD6458016E2766DBB* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.V2.Response`1<Unity.Services.Qos.V2.Models.QosServersResponseBody>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_m9B81CFE91497C5E1DB38FED14F04EB94C7E991FD (AsyncTaskMethodBuilder_1_t8D0F42E2AF7BA2391CAF73BEC2BF0C924858AA65* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t8D0F42E2AF7BA2391CAF73BEC2BF0C924858AA65*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Qos.V2.Apis.QosDiscovery.QosDiscoveryApiClient/<GetAllServersAsync>d__7::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetAllServersAsyncU3Ed__7_SetStateMachine_m1DE222CE63529BB3B0DB974ED3A14A425D91792E (U3CGetAllServersAsyncU3Ed__7_t2ED4A0AF92E03B5328838CEAD6458016E2766DBB* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -11016,99 +10811,109 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DnsResolver__ctor_m8190EBA2601E2FE2EB896
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>>::Create()
 inline AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099 AsyncTaskMethodBuilder_1_Create_m595EA00BA24037A163208B1F43E29F00AC9C1F77 (const RuntimeMethod* method)
 {
-	return ((  AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
+	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
+	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>>::Start<Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosAsync>d__3>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5_m9AD1C74DB5AC9523F5149D8BEED104786CFCFE30 (AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099* __this, U3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099*, U3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5_mD1FC8735731F188F340814977834A6F47E9F39ED_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>>::get_Task()
 inline Task_1_t5234BEF6F79CD7A196D4969509C30E3DCDE89BF6* AsyncTaskMethodBuilder_1_get_Task_mC819DA883DF2E7FEB2E212CDDAA979CD4C7873D8 (AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_t5234BEF6F79CD7A196D4969509C30E3DCDE89BF6* (*) (AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
+	return (Task_1_t5234BEF6F79CD7A196D4969509C30E3DCDE89BF6*)il2cppRetVal;
 }
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>>::Create()
 inline AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2 AsyncTaskMethodBuilder_1_Create_m0DCD2E416842543B95C15B8C29853EB4884CF38B (const RuntimeMethod* method)
 {
-	return ((  AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
+	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
+	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>>::Start<Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosAsync>d__4>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51_m2D36D556E5DDDD76DE3F35C85FC0010C91F05443 (AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2* __this, U3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2*, U3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51_mBF039F3D2174D62B0DFA33C335B185B2B7FA4D87_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>>::get_Task()
 inline Task_1_t3E946A208A82A5E598A9B4A5599E951A5359ED54* AsyncTaskMethodBuilder_1_get_Task_m88751DB622699116F61B4995D90ABC1E6C0AD1F9 (AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_t3E946A208A82A5E598A9B4A5599E951A5359ED54* (*) (AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
+	return (Task_1_t3E946A208A82A5E598A9B4A5599E951A5359ED54*)il2cppRetVal;
 }
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::Create()
 inline AsyncTaskMethodBuilder_1_tB9468483A091800D30CE4B5CD4C1F16D01086EA0 AsyncTaskMethodBuilder_1_Create_mF3A7FB140682373CEB322FC5EB46D82499B4DD6F (const RuntimeMethod* method)
 {
-	return ((  AsyncTaskMethodBuilder_1_tB9468483A091800D30CE4B5CD4C1F16D01086EA0 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
+	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
+	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_tB9468483A091800D30CE4B5CD4C1F16D01086EA0, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::Start<Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosV2Async>d__6>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CMeasureQosV2AsyncU3Ed__6_t6FC1F1B006AF96555D9BDAD4C31998DF2E2A68AC_m44406EFE013B4E8128AF06321AA018076A01EE6E (AsyncTaskMethodBuilder_1_tB9468483A091800D30CE4B5CD4C1F16D01086EA0* __this, U3CMeasureQosV2AsyncU3Ed__6_t6FC1F1B006AF96555D9BDAD4C31998DF2E2A68AC* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tB9468483A091800D30CE4B5CD4C1F16D01086EA0*, U3CMeasureQosV2AsyncU3Ed__6_t6FC1F1B006AF96555D9BDAD4C31998DF2E2A68AC*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CMeasureQosV2AsyncU3Ed__6_t6FC1F1B006AF96555D9BDAD4C31998DF2E2A68AC_m23C182577EC16DA01801892CBE3FC584EE70739D_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::get_Task()
 inline Task_1_t28EC52D5932F460BB6A746D3B17ABB1C824B1981* AsyncTaskMethodBuilder_1_get_Task_m6053F65A8EDB1081961289B57181B1882F253593 (AsyncTaskMethodBuilder_1_tB9468483A091800D30CE4B5CD4C1F16D01086EA0* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_t28EC52D5932F460BB6A746D3B17ABB1C824B1981* (*) (AsyncTaskMethodBuilder_1_tB9468483A091800D30CE4B5CD4C1F16D01086EA0*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
+	return (Task_1_t28EC52D5932F460BB6A746D3B17ABB1C824B1981*)il2cppRetVal;
 }
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Runner.IQosJob>::Create()
 inline AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735 AsyncTaskMethodBuilder_1_Create_mE6D57A2B3F70702355D426A890BD0F3918C51FA5 (const RuntimeMethod* method)
 {
-	return ((  AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
+	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
+	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Runner.IQosJob>::Start<Unity.Services.Qos.Runner.BaselibQosRunner/<RunQosJob>d__7>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CRunQosJobU3Ed__7_tDF5FA8B02E62B66F9F42804975498035D853BE0A_m476F2FB5C0D0411D8883187B2E4C55CEF5F69124 (AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735* __this, U3CRunQosJobU3Ed__7_tDF5FA8B02E62B66F9F42804975498035D853BE0A* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735*, U3CRunQosJobU3Ed__7_tDF5FA8B02E62B66F9F42804975498035D853BE0A*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CRunQosJobU3Ed__7_tDF5FA8B02E62B66F9F42804975498035D853BE0A_mE611A75D9E4F183A4F26D9B705EA3F228B8B2E59_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Runner.IQosJob>::get_Task()
 inline Task_1_t1424CB78B756F2658609C2E29818DF1434D76836* AsyncTaskMethodBuilder_1_get_Task_mDA52BD1EB84CA700E98418FDCBCB264D8D054ADF (AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_t1424CB78B756F2658609C2E29818DF1434D76836* (*) (AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
+	return (Task_1_t1424CB78B756F2658609C2E29818DF1434D76836*)il2cppRetVal;
 }
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::Create()
 inline AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2 AsyncTaskMethodBuilder_1_Create_m99B55A15F456EC4B57B14FAA3DB020AC70E58EEA (const RuntimeMethod* method)
 {
-	return ((  AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m99B55A15F456EC4B57B14FAA3DB020AC70E58EEA_gshared)(method);
+	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
+	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::Start<Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__8>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CToUcgFormatU3Ed__8_tD726EF24EC12015309EA3722D016E6C942BD728D_m9A27A128D3D0DCF42692F756A8FD31B9CFA26351 (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, U3CToUcgFormatU3Ed__8_tD726EF24EC12015309EA3722D016E6C942BD728D* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2*, U3CToUcgFormatU3Ed__8_tD726EF24EC12015309EA3722D016E6C942BD728D*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CToUcgFormatU3Ed__8_tD726EF24EC12015309EA3722D016E6C942BD728D_m9A27A128D3D0DCF42692F756A8FD31B9CFA26351_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::get_Task()
 inline Task_1_t7917F852B21E40F3B4F4E796C1D9E9131618863F* AsyncTaskMethodBuilder_1_get_Task_mD0D423B9DBA581224577B20336BEFB49774A5786 (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_t7917F852B21E40F3B4F4E796C1D9E9131618863F* (*) (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mD0D423B9DBA581224577B20336BEFB49774A5786_gshared)(__this, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
+	return (Task_1_t7917F852B21E40F3B4F4E796C1D9E9131618863F*)il2cppRetVal;
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::Start<Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__9>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CToUcgFormatU3Ed__9_t5E34F4BB113AE75E1225374AF4719E09BA4CC899_m12E0F54AB001409803DE5E3860C3CAC51BAC598D (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, U3CToUcgFormatU3Ed__9_t5E34F4BB113AE75E1225374AF4719E09BA4CC899* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2*, U3CToUcgFormatU3Ed__9_t5E34F4BB113AE75E1225374AF4719E09BA4CC899*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CToUcgFormatU3Ed__9_t5E34F4BB113AE75E1225374AF4719E09BA4CC899_m12E0F54AB001409803DE5E3860C3CAC51BAC598D_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::Start<Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__10>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CToUcgFormatU3Ed__10_t2AA2EF6FDC506A789BB527E3E60A1AF0EA822212_m252E986F7355BC2BC685B1EEB3091AB92912FA92 (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, U3CToUcgFormatU3Ed__10_t2AA2EF6FDC506A789BB527E3E60A1AF0EA822212* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2*, U3CToUcgFormatU3Ed__10_t2AA2EF6FDC506A789BB527E3E60A1AF0EA822212*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CToUcgFormatU3Ed__10_t2AA2EF6FDC506A789BB527E3E60A1AF0EA822212_m252E986F7355BC2BC685B1EEB3091AB92912FA92_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.String Unity.Services.Qos.Models.QosServer::get_Region()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* QosServer_get_Region_mD34E1FEF6D71BA6B31A8E1670F01E516FF173141_inline (QosServer_t414A8901638CE0E2E5B14B538665FAA718205057* __this, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>::Add(T)
 inline void List_1_Add_mD66CCD8D0F6870A2711F9329E4297A2CE4A1882F_inline (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* __this, QosResult_tA2296213032595430F8FE40418B3D5BA47E86D27 ___item0, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85*, QosResult_tA2296213032595430F8FE40418B3D5BA47E86D27, const RuntimeMethod*))List_1_Add_mD66CCD8D0F6870A2711F9329E4297A2CE4A1882F_gshared_inline)(__this, ___item0, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)&___item0, method);
 }
 // System.Void System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>::.ctor()
 inline void List_1__ctor_mED9BC57E19B835FE0AF4D56A25CD6F6E1CCED43A (List_1_t6A9BD83D1B75DA994D0814971281C937CF962FDA* __this, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t6A9BD83D1B75DA994D0814971281C937CF962FDA*, const RuntimeMethod*))List_1__ctor_mED9BC57E19B835FE0AF4D56A25CD6F6E1CCED43A_gshared)(__this, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1__ctor_m0AFBAEA7EC427E32CC9CA267B1930DC5DF67A374_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
 }
 // System.String Unity.Services.Qos.Models.QosServiceServer::get_Region()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* QosServiceServer_get_Region_mC75EB3A7D95E19EFECE65C4601E118DB8598E1D5_inline (QosServiceServer_t3AD1836689CA51D25FD0775EB1944A6D4A54277F* __this, const RuntimeMethod* method) ;
@@ -11117,7 +10922,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Dictionary_2_t79BA378F246EFA4AD0A
 // System.Void System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>::Add(T)
 inline void List_1_Add_m14511AEB05E4C1AD82CEC16B3F038105B5F43753_inline (List_1_t6A9BD83D1B75DA994D0814971281C937CF962FDA* __this, QosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E ___item0, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t6A9BD83D1B75DA994D0814971281C937CF962FDA*, QosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E, const RuntimeMethod*))List_1_Add_m14511AEB05E4C1AD82CEC16B3F038105B5F43753_gshared_inline)(__this, ___item0, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)&___item0, method);
 }
 // System.Void Unity.Services.Qos.Runner.BaselibQosRunner/QosMeasurementImpl::.ctor(System.Int32,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QosMeasurementImpl__ctor_mA5AD384D44EDEF7B31FC83C56E78C560DE56BA18 (QosMeasurementImpl_t88572AAF369DEA6225BB121D2B4FAD1D0A91FCDF* __this, int32_t ___averageLatencyMs0, float ___packetLossPercent1, const RuntimeMethod* method) ;
@@ -11130,252 +10935,271 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m53A1925C62020D1466BB7427B
 // System.Boolean System.Nullable`1<Unity.Networking.QoS.UcgQosServer>::get_HasValue()
 inline bool Nullable_1_get_HasValue_m0DFDFD4AF56FF28348507B43CB76CBC0302F0038_inline (Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022*, const RuntimeMethod*))Nullable_1_get_HasValue_m0DFDFD4AF56FF28348507B43CB76CBC0302F0038_gshared_inline)(__this, method);
+	return ((  bool (*) (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*, const RuntimeMethod*))Nullable_1_get_HasValue_m14F273FB376DF00D727434CDCD28AB4EDCC14C3C_gshared_inline)((Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*)__this, method);
 }
 // T System.Nullable`1<Unity.Networking.QoS.UcgQosServer>::get_Value()
 inline UcgQosServer_tB2AFA57F819F8A2EFB52F813E38521D31F765136 Nullable_1_get_Value_m5CE081F9633980C6E6AF9AA709BEFCC3C1F8EFF6 (Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022* __this, const RuntimeMethod* method)
 {
-	return ((  UcgQosServer_tB2AFA57F819F8A2EFB52F813E38521D31F765136 (*) (Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022*, const RuntimeMethod*))Nullable_1_get_Value_m5CE081F9633980C6E6AF9AA709BEFCC3C1F8EFF6_gshared)(__this, method);
+	UcgQosServer_tB2AFA57F819F8A2EFB52F813E38521D31F765136 il2cppRetVal;
+	((  void (*) (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*, Il2CppFullySharedGenericStruct*, const RuntimeMethod*))Nullable_1_get_Value_mA083C4D9192050DC38513BDD9D364C5C68A3A675_gshared)((Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*)__this, (Il2CppFullySharedGenericStruct*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void Unity.Services.Qos.Models.QosServer::.ctor(System.Collections.Generic.List`1<System.String>,System.String,System.Collections.Generic.List`1<System.String>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QosServer__ctor_mC629272624FD8B341620B53A52EF8C535E3535DC (QosServer_t414A8901638CE0E2E5B14B538665FAA718205057* __this, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___endpoints0, String_t* ___region1, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___services2, const RuntimeMethod* method) ;
 // System.Void System.Func`2<Unity.Services.Qos.Models.QosServer,System.Threading.Tasks.Task`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_mB078E13695D29CB04B44DADE8E01BC4B677B7201 (Func_2_tA5D6FA972968917CA668A69D168A9418E8FD77BC* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_tA5D6FA972968917CA668A69D168A9418E8FD77BC*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F8A01C0B02BC1D4063F4EB1E817F7A48562A398_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<Unity.Services.Qos.Models.QosServer,System.Threading.Tasks.Task`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
 inline RuntimeObject* Enumerable_Select_TisQosServer_t414A8901638CE0E2E5B14B538665FAA718205057_TisTask_1_t7917F852B21E40F3B4F4E796C1D9E9131618863F_mC8F2F4431F8700389DADFBAC799C4FD0C7D47346 (RuntimeObject* ___source0, Func_2_tA5D6FA972968917CA668A69D168A9418E8FD77BC* ___selector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_tA5D6FA972968917CA668A69D168A9418E8FD77BC*, const RuntimeMethod*))Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m67C538A5EBF57C4844107A8EF25DB2CAAFBAF8FB_gshared)(___source0, ___selector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_Select_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m5BBCA2BC02448D0B77D2201BB08B13BAB3BABA53_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___selector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Threading.Tasks.Task`1<TResult[]> System.Threading.Tasks.Task::WhenAll<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>(System.Collections.Generic.IEnumerable`1<System.Threading.Tasks.Task`1<TResult>>)
 inline Task_1_tBEDAB4469E68C078783320977BCEB17B1C43399C* Task_WhenAll_TisNullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022_m081D5839F8F89236ACB8C37021906C132E27703A (RuntimeObject* ___tasks0, const RuntimeMethod* method)
 {
-	return ((  Task_1_tBEDAB4469E68C078783320977BCEB17B1C43399C* (*) (RuntimeObject*, const RuntimeMethod*))Task_WhenAll_TisNullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022_m081D5839F8F89236ACB8C37021906C132E27703A_gshared)(___tasks0, method);
+	Task_1_tEA323ABE4B135A0CC68B2D7C3498CC3DA6B8D802* il2cppRetVal = ((  Task_1_tEA323ABE4B135A0CC68B2D7C3498CC3DA6B8D802* (*) (RuntimeObject*, const RuntimeMethod*))Task_WhenAll_TisIl2CppFullySharedGenericAny_m79EB571AB37D8718A817D3B9924FB6A28E74BFE5_gshared)((RuntimeObject*)___tasks0, method);
+	return (Task_1_tBEDAB4469E68C078783320977BCEB17B1C43399C*)il2cppRetVal;
 }
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>[]>::GetAwaiter()
 inline TaskAwaiter_1_tC23BCA3CF117E074BB2DD78C172972D7C3E221D2 Task_1_GetAwaiter_mF4206FC3C7EE13E41E8E8AFD3A92D699421F911D (Task_1_tBEDAB4469E68C078783320977BCEB17B1C43399C* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_tC23BCA3CF117E074BB2DD78C172972D7C3E221D2 (*) (Task_1_tBEDAB4469E68C078783320977BCEB17B1C43399C*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_tC23BCA3CF117E074BB2DD78C172972D7C3E221D2, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>[]>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_m5E12828A19E410791C7C13166379FAD290034938 (TaskAwaiter_1_tC23BCA3CF117E074BB2DD78C172972D7C3E221D2* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_tC23BCA3CF117E074BB2DD78C172972D7C3E221D2*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>[]>,Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosAsync>d__3>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tC23BCA3CF117E074BB2DD78C172972D7C3E221D2_TisU3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5_m88DFBE4246ACE57E42DFA5B514FA15D990A3A5D7 (AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099* __this, TaskAwaiter_1_tC23BCA3CF117E074BB2DD78C172972D7C3E221D2* ___awaiter0, U3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099*, TaskAwaiter_1_tC23BCA3CF117E074BB2DD78C172972D7C3E221D2*, U3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5_m7D64E09CEB5534049C09A9DE916FBA03CFDC86D8_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>[]>::GetResult()
 inline Nullable_1U5BU5D_t4D26AA027DCC457C09504504BD0A524DF9E95B5C* TaskAwaiter_1_GetResult_mC2F4049F3BA562658B89C179982EF070978F64ED (TaskAwaiter_1_tC23BCA3CF117E074BB2DD78C172972D7C3E221D2* __this, const RuntimeMethod* method)
 {
-	return ((  Nullable_1U5BU5D_t4D26AA027DCC457C09504504BD0A524DF9E95B5C* (*) (TaskAwaiter_1_tC23BCA3CF117E074BB2DD78C172972D7C3E221D2*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
+	Nullable_1U5BU5D_t4D26AA027DCC457C09504504BD0A524DF9E95B5C* il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Func`2<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>,System.Boolean>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m2920439CD4CE5BEB395ACEA6DF160C1CEBD56D17 (Func_2_tF028C7C145D3E150C13A8E51274D57A8AF2D632B* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_tF028C7C145D3E150C13A8E51274D57A8AF2D632B*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m2920439CD4CE5BEB395ACEA6DF160C1CEBD56D17_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TSource> System.Linq.Enumerable::Where<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
 inline RuntimeObject* Enumerable_Where_TisNullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022_m8DE10F20FB8AEAE380E990B83AE6CC67761CC7CE (RuntimeObject* ___source0, Func_2_tF028C7C145D3E150C13A8E51274D57A8AF2D632B* ___predicate1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_tF028C7C145D3E150C13A8E51274D57A8AF2D632B*, const RuntimeMethod*))Enumerable_Where_TisNullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022_m8DE10F20FB8AEAE380E990B83AE6CC67761CC7CE_gshared)(___source0, ___predicate1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t19E50C11C3E1F20B5A8FDB85D7DD353B6DFF868B*, const RuntimeMethod*))Enumerable_Where_TisIl2CppFullySharedGenericAny_m3F416675DC7A5572025B02ED373C41AD9ED8F6C4_gshared)((RuntimeObject*)___source0, (Func_2_t19E50C11C3E1F20B5A8FDB85D7DD353B6DFF868B*)___predicate1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Void System.Func`2<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>,Unity.Networking.QoS.UcgQosServer>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_mC1E0A4008208B784184700B7FA2B552925B09A02 (Func_2_tAB6A23FC731FC9CA5DFAF41F7CDEDDA1F4DEBA9A* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_tAB6A23FC731FC9CA5DFAF41F7CDEDDA1F4DEBA9A*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_mC1E0A4008208B784184700B7FA2B552925B09A02_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>,Unity.Networking.QoS.UcgQosServer>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
 inline RuntimeObject* Enumerable_Select_TisNullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022_TisUcgQosServer_tB2AFA57F819F8A2EFB52F813E38521D31F765136_m930ACAE19F3A2C4B80A1481D5F4CB5CC0A80B40C (RuntimeObject* ___source0, Func_2_tAB6A23FC731FC9CA5DFAF41F7CDEDDA1F4DEBA9A* ___selector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_tAB6A23FC731FC9CA5DFAF41F7CDEDDA1F4DEBA9A*, const RuntimeMethod*))Enumerable_Select_TisNullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022_TisUcgQosServer_tB2AFA57F819F8A2EFB52F813E38521D31F765136_m930ACAE19F3A2C4B80A1481D5F4CB5CC0A80B40C_gshared)(___source0, ___selector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_Select_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m5BBCA2BC02448D0B77D2201BB08B13BAB3BABA53_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___selector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<Unity.Networking.QoS.UcgQosServer>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline List_1_tAECA468ACA10E75BD5322C3076836F710B5C40BE* Enumerable_ToList_TisUcgQosServer_tB2AFA57F819F8A2EFB52F813E38521D31F765136_m13A378BF5ED622174B7A30155A09B8F927413F9A (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  List_1_tAECA468ACA10E75BD5322C3076836F710B5C40BE* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisUcgQosServer_tB2AFA57F819F8A2EFB52F813E38521D31F765136_m13A378BF5ED622174B7A30155A09B8F927413F9A_gshared)(___source0, method);
+	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* il2cppRetVal = ((  List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisIl2CppFullySharedGenericAny_m191EA129E511F9B8304FF8826A2DA645E06CCBF0_gshared)((RuntimeObject*)___source0, method);
+	return (List_1_tAECA468ACA10E75BD5322C3076836F710B5C40BE*)il2cppRetVal;
 }
 // System.Threading.Tasks.Task`1<Unity.Services.Qos.Runner.IQosJob> Unity.Services.Qos.Runner.BaselibQosRunner::RunQosJob(System.Collections.Generic.List`1<Unity.Networking.QoS.UcgQosServer>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t1424CB78B756F2658609C2E29818DF1434D76836* BaselibQosRunner_RunQosJob_m8A871B7A0A39749A0C0AB9EF248CCBFAFF8D3446 (BaselibQosRunner_t0A56087CAD33166C33159D2EB5C68E2B554C4B77* __this, List_1_tAECA468ACA10E75BD5322C3076836F710B5C40BE* ___convertedServers0, const RuntimeMethod* method) ;
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<Unity.Services.Qos.Runner.IQosJob>::GetAwaiter()
 inline TaskAwaiter_1_t16B2E191700F8AF45AB35E29E719CE2258040BBF Task_1_GetAwaiter_m0268129DACA52C82C33D4B9200D0B19D480BAD45 (Task_1_t1424CB78B756F2658609C2E29818DF1434D76836* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_t16B2E191700F8AF45AB35E29E719CE2258040BBF (*) (Task_1_t1424CB78B756F2658609C2E29818DF1434D76836*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_t16B2E191700F8AF45AB35E29E719CE2258040BBF, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Runner.IQosJob>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_mECBB3EDF372F394780A36D4695B7E670B0793990 (TaskAwaiter_1_t16B2E191700F8AF45AB35E29E719CE2258040BBF* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t16B2E191700F8AF45AB35E29E719CE2258040BBF*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Runner.IQosJob>,Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosAsync>d__3>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t16B2E191700F8AF45AB35E29E719CE2258040BBF_TisU3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5_m7B07CCCFC9739EBC79B0F56C4A6434637E3EFE76 (AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099* __this, TaskAwaiter_1_t16B2E191700F8AF45AB35E29E719CE2258040BBF* ___awaiter0, U3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099*, TaskAwaiter_1_t16B2E191700F8AF45AB35E29E719CE2258040BBF*, U3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5_m7D64E09CEB5534049C09A9DE916FBA03CFDC86D8_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Runner.IQosJob>::GetResult()
 inline RuntimeObject* TaskAwaiter_1_GetResult_m83ECD7A4ECE22557572E792D6BC37E440CB15F1C (TaskAwaiter_1_t16B2E191700F8AF45AB35E29E719CE2258040BBF* __this, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (TaskAwaiter_1_t16B2E191700F8AF45AB35E29E719CE2258040BBF*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
+	RuntimeObject* il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Int32 System.Linq.Enumerable::Count<Unity.Services.Qos.Models.QosServer>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline int32_t Enumerable_Count_TisQosServer_t414A8901638CE0E2E5B14B538665FAA718205057_m2883D70F0BA39874EFDAB681AB6761DD2B640E3B (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Count_TisRuntimeObject_mA9FCB8ECCFE8FABC5AA2F8D46F82ACD52279930B_gshared)(___source0, method);
+	return ((  int32_t (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Count_TisIl2CppFullySharedGenericAny_m4D64A1B2077BAD3CD94E5EEB5C56FA97409CBC6A_gshared)((RuntimeObject*)___source0, method);
 }
 // System.Int32 System.Linq.Enumerable::Count<Unity.Networking.QoS.InternalQosResult>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline int32_t Enumerable_Count_TisInternalQosResult_t524E2DACBC5C86A098DEECA90D8624BEF0A2C7CE_mC2C2521F482F100AD8DA7F498DA30AA60B912C03 (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Count_TisInternalQosResult_t524E2DACBC5C86A098DEECA90D8624BEF0A2C7CE_mC2C2521F482F100AD8DA7F498DA30AA60B912C03_gshared)(___source0, method);
+	return ((  int32_t (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Count_TisIl2CppFullySharedGenericAny_m4D64A1B2077BAD3CD94E5EEB5C56FA97409CBC6A_gshared)((RuntimeObject*)___source0, method);
 }
 // System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult> Unity.Services.Qos.Runner.BaselibQosRunner::ParseResults(System.Collections.Generic.IEnumerable`1<Unity.Networking.QoS.InternalQosResult>,System.Collections.Generic.IEnumerable`1<Unity.Services.Qos.Models.QosServer>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* BaselibQosRunner_ParseResults_mF971BD8AA0A60F083F10C21B1FBB6322B23FA80A (RuntimeObject* ___ucgResults0, RuntimeObject* ___servers1, const RuntimeMethod* method) ;
 // System.Void Unity.Collections.NativeArray`1<Unity.Networking.QoS.InternalQosResult>::Dispose()
 inline void NativeArray_1_Dispose_m1E5991CD2221DAB6F5930F3AD57454AAD6359460 (NativeArray_1_t14416F5A54963FFA0912C5FA738DEB565659C8EC* __this, const RuntimeMethod* method)
 {
-	((  void (*) (NativeArray_1_t14416F5A54963FFA0912C5FA738DEB565659C8EC*, const RuntimeMethod*))NativeArray_1_Dispose_m1E5991CD2221DAB6F5930F3AD57454AAD6359460_gshared)(__this, method);
+	((  void (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*, const RuntimeMethod*))NativeArray_1_Dispose_m365A262FA4CA431467F021D7732CECD68316AF80_gshared)((NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_m572C3CEDDED1E7F41E8C7B7C1C04DE6EB80C7F1B (AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_mF8EEB763E0912BA4BEABAB0F3DE84CEADED29635 (AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099* __this, List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099*, List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
 }
 // System.Void Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosAsync>d__3::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMeasureQosAsyncU3Ed__3_MoveNext_mDCDD25826B3494B3AE4241AE8A3AD5F8DFB2A29C (U3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_mA869FA142C8EAD059A3B284DFBC05ED5E95AEA8D (AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tB884E261285DC3DE0453CFC3B44E076818095099*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosAsync>d__3::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMeasureQosAsyncU3Ed__3_SetStateMachine_m1D0DB6B0A212BD39D5B0D6E603F6DD02825170EE (U3CMeasureQosAsyncU3Ed__3_tFC58200052DFB54A8C4A01FBBBDBE3399686C9A5* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
 // System.Void System.Func`2<Unity.Services.Qos.Models.QosServiceServer,System.Threading.Tasks.Task`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_mF5061AEC6D1F09DEE09AD7FEA9CFDB6C199CE99D (Func_2_t91FBCDCD791087247E4F3AEB6CDE18D257181889* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t91FBCDCD791087247E4F3AEB6CDE18D257181889*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F8A01C0B02BC1D4063F4EB1E817F7A48562A398_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<Unity.Services.Qos.Models.QosServiceServer,System.Threading.Tasks.Task`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
 inline RuntimeObject* Enumerable_Select_TisQosServiceServer_t3AD1836689CA51D25FD0775EB1944A6D4A54277F_TisTask_1_t7917F852B21E40F3B4F4E796C1D9E9131618863F_m9B83107E19AFA6B558B0BE666EDC4435EE2FE2AC (RuntimeObject* ___source0, Func_2_t91FBCDCD791087247E4F3AEB6CDE18D257181889* ___selector1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t91FBCDCD791087247E4F3AEB6CDE18D257181889*, const RuntimeMethod*))Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m67C538A5EBF57C4844107A8EF25DB2CAAFBAF8FB_gshared)(___source0, ___selector1, method);
+	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_Select_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m5BBCA2BC02448D0B77D2201BB08B13BAB3BABA53_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___selector1, method);
+	return (RuntimeObject*)il2cppRetVal;
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>[]>,Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosAsync>d__4>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tC23BCA3CF117E074BB2DD78C172972D7C3E221D2_TisU3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51_m3B9E38C0A2FBBF0122A84E25704383BBC53FC321 (AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2* __this, TaskAwaiter_1_tC23BCA3CF117E074BB2DD78C172972D7C3E221D2* ___awaiter0, U3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2*, TaskAwaiter_1_tC23BCA3CF117E074BB2DD78C172972D7C3E221D2*, U3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51_m6458D3483A8958D53B28169FA933F55B665F173C_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Runner.IQosJob>,Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosAsync>d__4>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t16B2E191700F8AF45AB35E29E719CE2258040BBF_TisU3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51_m1EC5BE190E8DA1C9450610B227A93F89378E4ABA (AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2* __this, TaskAwaiter_1_t16B2E191700F8AF45AB35E29E719CE2258040BBF* ___awaiter0, U3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2*, TaskAwaiter_1_t16B2E191700F8AF45AB35E29E719CE2258040BBF*, U3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51_m6458D3483A8958D53B28169FA933F55B665F173C_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Int32 System.Linq.Enumerable::Count<Unity.Services.Qos.Models.QosServiceServer>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline int32_t Enumerable_Count_TisQosServiceServer_t3AD1836689CA51D25FD0775EB1944A6D4A54277F_mBBFA4D6A96EE09DD9DC56F2C9CBC79D811387814 (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Count_TisRuntimeObject_mA9FCB8ECCFE8FABC5AA2F8D46F82ACD52279930B_gshared)(___source0, method);
+	return ((  int32_t (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Count_TisIl2CppFullySharedGenericAny_m4D64A1B2077BAD3CD94E5EEB5C56FA97409CBC6A_gshared)((RuntimeObject*)___source0, method);
 }
 // System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult> Unity.Services.Qos.Runner.BaselibQosRunner::ParseResults(System.Collections.Generic.IEnumerable`1<Unity.Networking.QoS.InternalQosResult>,System.Collections.Generic.IEnumerable`1<Unity.Services.Qos.Models.QosServiceServer>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t6A9BD83D1B75DA994D0814971281C937CF962FDA* BaselibQosRunner_ParseResults_mCDA26B980021BDC0A3C6AA8FC17EA3E8E2C90BD6 (RuntimeObject* ___ucgResults0, RuntimeObject* ___servers1, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_m87D6F328C781621F5656CF9F67F5188293A6D4CD (AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_mF263F7726B482654ED41A687A60ED8348ADC82C2 (AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2* __this, List_1_t6A9BD83D1B75DA994D0814971281C937CF962FDA* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2*, List_1_t6A9BD83D1B75DA994D0814971281C937CF962FDA*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
 }
 // System.Void Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosAsync>d__4::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMeasureQosAsyncU3Ed__4_MoveNext_mD588B05CEC27001ADD67D1B2822C60223F175A62 (U3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Qos.Runner.QosAnnotatedResult>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_m15E050640E090A899252CF3191A5EE442F9C61E9 (AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t5056204ECAD7CCA06907AA5E17A92281561D6EA2*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosAsync>d__4::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMeasureQosAsyncU3Ed__4_SetStateMachine_m441DBB95C27491AB06BF872810D871A8B5FD14C0 (U3CMeasureQosAsyncU3Ed__4_tE1F3880AA664FFB633B75B41638F19D4BF67EF51* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
 // System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<Unity.Services.Qos.V2.Models.QosServer>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline List_1_t62E197178482914147E844D104DF8E52974851F8* Enumerable_ToList_TisQosServer_tB21FB1B10430033FA21C425FDFC33C49D61FF3F6_m04E5B6E7842BBEEBBED838E33FA89C204F814B45 (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  List_1_t62E197178482914147E844D104DF8E52974851F8* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisRuntimeObject_m6456D63764F29E6B5B2422C3DE25113577CF51EE_gshared)(___source0, method);
+	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* il2cppRetVal = ((  List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisIl2CppFullySharedGenericAny_m191EA129E511F9B8304FF8826A2DA645E06CCBF0_gshared)((RuntimeObject*)___source0, method);
+	return (List_1_t62E197178482914147E844D104DF8E52974851F8*)il2cppRetVal;
 }
 // System.Void System.Converter`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.Models.QosServer>::.ctor(System.Object,System.IntPtr)
 inline void Converter_2__ctor_m5BD6F9459220830497C674479C14978A58F3C727 (Converter_2_t5413506A222E66B5EC98E2C4CAD1522C78FEB7A6* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Converter_2_t5413506A222E66B5EC98E2C4CAD1522C78FEB7A6*, RuntimeObject*, intptr_t, const RuntimeMethod*))Converter_2__ctor_mB107CD0E28B613EFEB2F8599A3A56AFA1C4AD1B0_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Converter_2_t492BE36BDB9ACE2595DC3BFC0172171D1510E4CB*, RuntimeObject*, intptr_t, const RuntimeMethod*))Converter_2__ctor_m6AC601790CBA05AA79669611421A69A763F35DAD_gshared)((Converter_2_t492BE36BDB9ACE2595DC3BFC0172171D1510E4CB*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.List`1<TOutput> System.Collections.Generic.List`1<Unity.Services.Qos.V2.Models.QosServer>::ConvertAll<Unity.Services.Qos.Models.QosServer>(System.Converter`2<T,TOutput>)
 inline List_1_t775B950C1F00EAE0BA293A0006C5D55D9AE677DF* List_1_ConvertAll_TisQosServer_t414A8901638CE0E2E5B14B538665FAA718205057_mA4A8A7FC3754C2B23BB5BDCB2EC36003C6778EB7 (List_1_t62E197178482914147E844D104DF8E52974851F8* __this, Converter_2_t5413506A222E66B5EC98E2C4CAD1522C78FEB7A6* ___converter0, const RuntimeMethod* method)
 {
-	return ((  List_1_t775B950C1F00EAE0BA293A0006C5D55D9AE677DF* (*) (List_1_t62E197178482914147E844D104DF8E52974851F8*, Converter_2_t5413506A222E66B5EC98E2C4CAD1522C78FEB7A6*, const RuntimeMethod*))List_1_ConvertAll_TisRuntimeObject_m8B145AE4F761F7CEF799C90CA74FFDE44521B3F7_gshared)(__this, ___converter0, method);
+	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* il2cppRetVal = ((  List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, Converter_2_t492BE36BDB9ACE2595DC3BFC0172171D1510E4CB*, const RuntimeMethod*))List_1_ConvertAll_TisIl2CppFullySharedGenericAny_m85C8E81103197F939BE495EFB1C84ED415F45E04_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Converter_2_t492BE36BDB9ACE2595DC3BFC0172171D1510E4CB*)___converter0, method);
+	return (List_1_t775B950C1F00EAE0BA293A0006C5D55D9AE677DF*)il2cppRetVal;
 }
 // System.Threading.Tasks.Task`1<System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>> Unity.Services.Qos.Runner.BaselibQosRunner::MeasureQosAsync(System.Collections.Generic.IList`1<Unity.Services.Qos.Models.QosServer>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t5234BEF6F79CD7A196D4969509C30E3DCDE89BF6* BaselibQosRunner_MeasureQosAsync_m6EDEEF2BA140E318C908BF8DF5CC1BA194AF6DB8 (BaselibQosRunner_t0A56087CAD33166C33159D2EB5C68E2B554C4B77* __this, RuntimeObject* ___servers0, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>>,Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosV2Async>d__6>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t3FA06CD6A32E3CEB3A93A94EFEB355ECD48F99D7_TisU3CMeasureQosV2AsyncU3Ed__6_t6FC1F1B006AF96555D9BDAD4C31998DF2E2A68AC_m3257732C09679A30FDC31759401ADFD4F525293A (AsyncTaskMethodBuilder_1_tB9468483A091800D30CE4B5CD4C1F16D01086EA0* __this, TaskAwaiter_1_t3FA06CD6A32E3CEB3A93A94EFEB355ECD48F99D7* ___awaiter0, U3CMeasureQosV2AsyncU3Ed__6_t6FC1F1B006AF96555D9BDAD4C31998DF2E2A68AC* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tB9468483A091800D30CE4B5CD4C1F16D01086EA0*, TaskAwaiter_1_t3FA06CD6A32E3CEB3A93A94EFEB355ECD48F99D7*, U3CMeasureQosV2AsyncU3Ed__6_t6FC1F1B006AF96555D9BDAD4C31998DF2E2A68AC*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMeasureQosV2AsyncU3Ed__6_t6FC1F1B006AF96555D9BDAD4C31998DF2E2A68AC_m973E18BF0BBABBF07302CF6F2078B735D5D3BD7F_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Int32 System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>::get_Count()
 inline int32_t List_1_get_Count_mBBF44AA2423A8AF17C48430D7D112805D5AC67A8_inline (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85*, const RuntimeMethod*))List_1_get_Count_mBBF44AA2423A8AF17C48430D7D112805D5AC67A8_gshared_inline)(__this, method);
+	return ((  int32_t (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
 }
 // System.Void System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>::.ctor(System.Int32)
 inline void List_1__ctor_m87C44A956131E851C0FC2E8878E0D9DDD378D056 (List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A* __this, int32_t ___capacity0, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A*, int32_t, const RuntimeMethod*))List_1__ctor_m118C02FE2F3E26904A4E130AF830A39BE8D2AACF_gshared)(__this, ___capacity0, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, const RuntimeMethod*))List_1__ctor_m3069CACB5775E013107F559C825422266A09F9E8_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, ___capacity0, method);
 }
 // System.Void System.Converter`2<Unity.Services.Qos.Internal.QosResult,Unity.Services.Qos.Runner.BaselibQosRunner/QosMeasurementImpl>::.ctor(System.Object,System.IntPtr)
 inline void Converter_2__ctor_m94E21E87A75A081668ED35377FA4FEED6E495716 (Converter_2_tD1D4D50D6761B87586AB4ABD7BF84500196E937B* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Converter_2_tD1D4D50D6761B87586AB4ABD7BF84500196E937B*, RuntimeObject*, intptr_t, const RuntimeMethod*))Converter_2__ctor_m94E21E87A75A081668ED35377FA4FEED6E495716_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Converter_2_t492BE36BDB9ACE2595DC3BFC0172171D1510E4CB*, RuntimeObject*, intptr_t, const RuntimeMethod*))Converter_2__ctor_m6AC601790CBA05AA79669611421A69A763F35DAD_gshared)((Converter_2_t492BE36BDB9ACE2595DC3BFC0172171D1510E4CB*)__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.List`1<TOutput> System.Collections.Generic.List`1<Unity.Services.Qos.Internal.QosResult>::ConvertAll<Unity.Services.Qos.Runner.BaselibQosRunner/QosMeasurementImpl>(System.Converter`2<T,TOutput>)
 inline List_1_t20230A462C525DF305E7E612575A10E20377062F* List_1_ConvertAll_TisQosMeasurementImpl_t88572AAF369DEA6225BB121D2B4FAD1D0A91FCDF_m9D751B954DC211C8C1144AB75AB5547C2AA972FD (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* __this, Converter_2_tD1D4D50D6761B87586AB4ABD7BF84500196E937B* ___converter0, const RuntimeMethod* method)
 {
-	return ((  List_1_t20230A462C525DF305E7E612575A10E20377062F* (*) (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85*, Converter_2_tD1D4D50D6761B87586AB4ABD7BF84500196E937B*, const RuntimeMethod*))List_1_ConvertAll_TisQosMeasurementImpl_t88572AAF369DEA6225BB121D2B4FAD1D0A91FCDF_m9D751B954DC211C8C1144AB75AB5547C2AA972FD_gshared)(__this, ___converter0, method);
+	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* il2cppRetVal = ((  List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, Converter_2_t492BE36BDB9ACE2595DC3BFC0172171D1510E4CB*, const RuntimeMethod*))List_1_ConvertAll_TisIl2CppFullySharedGenericAny_m85C8E81103197F939BE495EFB1C84ED415F45E04_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Converter_2_t492BE36BDB9ACE2595DC3BFC0172171D1510E4CB*)___converter0, method);
+	return (List_1_t20230A462C525DF305E7E612575A10E20377062F*)il2cppRetVal;
 }
 // T System.Collections.Generic.List`1<Unity.Services.Qos.Runner.BaselibQosRunner/QosMeasurementImpl>::get_Item(System.Int32)
 inline QosMeasurementImpl_t88572AAF369DEA6225BB121D2B4FAD1D0A91FCDF List_1_get_Item_mE6AEE721E057294FC1F0CE1B7C70EF5141346F15 (List_1_t20230A462C525DF305E7E612575A10E20377062F* __this, int32_t ___index0, const RuntimeMethod* method)
 {
-	return ((  QosMeasurementImpl_t88572AAF369DEA6225BB121D2B4FAD1D0A91FCDF (*) (List_1_t20230A462C525DF305E7E612575A10E20377062F*, int32_t, const RuntimeMethod*))List_1_get_Item_mE6AEE721E057294FC1F0CE1B7C70EF5141346F15_gshared)(__this, ___index0, method);
+	QosMeasurementImpl_t88572AAF369DEA6225BB121D2B4FAD1D0A91FCDF il2cppRetVal;
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, Il2CppFullySharedGenericAny*, const RuntimeMethod*))List_1_get_Item_m6E4BA37C1FB558E4A62AE4324212E45D09C5C937_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, ___index0, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>::.ctor(T1,T2)
 inline void ValueTuple_2__ctor_m58D4181293567F116B10C9C71AA95F9E2A27BA22 (ValueTuple_2_t72ACF7A63A3F4DA79ACAFA9F4780AA107AD73E61* __this, QosServer_tB21FB1B10430033FA21C425FDFC33C49D61FF3F6* ___item10, RuntimeObject* ___item21, const RuntimeMethod* method)
 {
-	((  void (*) (ValueTuple_2_t72ACF7A63A3F4DA79ACAFA9F4780AA107AD73E61*, QosServer_tB21FB1B10430033FA21C425FDFC33C49D61FF3F6*, RuntimeObject*, const RuntimeMethod*))ValueTuple_2__ctor_m4D25F4A0A0085EBE6559B6CC932AA5E267DB554D_gshared)(__this, ___item10, ___item21, method);
+	((  void (*) (ValueTuple_2_tBAA1E1D7D97D80E0EBA7FE8773B1FF409AEA3829*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))ValueTuple_2__ctor_mCAE8E725F680FA6BE2C23B9686C9F6056BB7E5CD_gshared)((ValueTuple_2_tBAA1E1D7D97D80E0EBA7FE8773B1FF409AEA3829*)__this, (Il2CppFullySharedGenericAny)___item10, (Il2CppFullySharedGenericAny)___item21, method);
 }
 // System.Void System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>::Add(T)
 inline void List_1_Add_mD396D265FD9988331322E5CB42FA8E179546DE09_inline (List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A* __this, ValueTuple_2_t72ACF7A63A3F4DA79ACAFA9F4780AA107AD73E61 ___item0, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A*, ValueTuple_2_t72ACF7A63A3F4DA79ACAFA9F4780AA107AD73E61, const RuntimeMethod*))List_1_Add_m4C2118BF8009CA4F7AF89D8D9CB5586AE95C8A36_gshared_inline)(__this, ___item0, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)&___item0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_mE05F9FBED14A1D65E7A61985497104BD0E0A6380 (AsyncTaskMethodBuilder_1_tB9468483A091800D30CE4B5CD4C1F16D01086EA0* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tB9468483A091800D30CE4B5CD4C1F16D01086EA0*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_m6EC6771476E73B213CEA8FF3E4E4385038261731 (AsyncTaskMethodBuilder_1_tB9468483A091800D30CE4B5CD4C1F16D01086EA0* __this, List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tB9468483A091800D30CE4B5CD4C1F16D01086EA0*, List_1_t9F13942F46CA8BAB4C416B99B8098CFAED913E1A*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
 }
 // System.Void Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosV2Async>d__6::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMeasureQosV2AsyncU3Ed__6_MoveNext_m16650CBDB2BC9B65229C044365F621A2871A8616 (U3CMeasureQosV2AsyncU3Ed__6_t6FC1F1B006AF96555D9BDAD4C31998DF2E2A68AC* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<System.ValueTuple`2<Unity.Services.Qos.V2.Models.QosServer,Unity.Services.Qos.IQosMeasurements>>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_m6E1DB56AE74F4BFEFCFAF9400C4065653E8C0DF6 (AsyncTaskMethodBuilder_1_tB9468483A091800D30CE4B5CD4C1F16D01086EA0* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tB9468483A091800D30CE4B5CD4C1F16D01086EA0*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Qos.Runner.BaselibQosRunner/<MeasureQosV2Async>d__6::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMeasureQosV2AsyncU3Ed__6_SetStateMachine_m621A5637354BDE7CB90F1462C6AFFD2F8D933345 (U3CMeasureQosV2AsyncU3Ed__6_t6FC1F1B006AF96555D9BDAD4C31998DF2E2A68AC* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -11390,7 +11214,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool YieldAwaiter_get_IsCompleted_m783B6E6765
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Runner.IQosJob>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.YieldAwaitable/YieldAwaiter,Unity.Services.Qos.Runner.BaselibQosRunner/<RunQosJob>d__7>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisYieldAwaiter_t5F0A81DC85227C01FFC38D53139B5C19D920B52A_TisU3CRunQosJobU3Ed__7_tDF5FA8B02E62B66F9F42804975498035D853BE0A_mB06FD65433BB5DCD219ED522D4E3409272F9E3DA (AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735* __this, YieldAwaiter_t5F0A81DC85227C01FFC38D53139B5C19D920B52A* ___awaiter0, U3CRunQosJobU3Ed__7_tDF5FA8B02E62B66F9F42804975498035D853BE0A* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735*, YieldAwaiter_t5F0A81DC85227C01FFC38D53139B5C19D920B52A*, U3CRunQosJobU3Ed__7_tDF5FA8B02E62B66F9F42804975498035D853BE0A*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisYieldAwaiter_t5F0A81DC85227C01FFC38D53139B5C19D920B52A_TisU3CRunQosJobU3Ed__7_tDF5FA8B02E62B66F9F42804975498035D853BE0A_m1181EBAEF117E41559FB3080023D1E7DFEC6EBA9_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Void System.Runtime.CompilerServices.YieldAwaitable/YieldAwaiter::GetResult()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void YieldAwaiter_GetResult_m83C9B35D4BBEB09AC5B560912436454D69794F07 (YieldAwaiter_t5F0A81DC85227C01FFC38D53139B5C19D920B52A* __this, const RuntimeMethod* method) ;
@@ -11401,19 +11225,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobHandle_Complete_mDCED35A125AAB37EDDAB
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Runner.IQosJob>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_m703F135CFCA7D4027C293DF772C1C8E8F6D05695 (AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Runner.IQosJob>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_mAEBF5277A71896519A72B65D0BF3EE79839EB80D (AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735* __this, RuntimeObject* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
 }
 // System.Void Unity.Services.Qos.Runner.BaselibQosRunner/<RunQosJob>d__7::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunQosJobU3Ed__7_MoveNext_m6D7367F4C787189E87FE14DB22A65E61FB200F8F (U3CRunQosJobU3Ed__7_tDF5FA8B02E62B66F9F42804975498035D853BE0A* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Runner.IQosJob>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_mFDC5B758378E641B145CD649C811719050C67D03 (AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_tFCB2F42BB341B63831C39A6A767A5ECC0AC94735*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Qos.Runner.BaselibQosRunner/<RunQosJob>d__7::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunQosJobU3Ed__7_SetStateMachine_m6CE58755D03AA344F86F67DCFE3C18B6EBB5DAD7 (U3CRunQosJobU3Ed__7_tDF5FA8B02E62B66F9F42804975498035D853BE0A* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -11424,39 +11248,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7917F852B21E40F3B4F4E796C1D9E91316188
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::GetAwaiter()
 inline TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39 Task_1_GetAwaiter_m6E1D56437EC37932A9FDB0A997C28F516B45A1E0 (Task_1_t7917F852B21E40F3B4F4E796C1D9E9131618863F* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39 (*) (Task_1_t7917F852B21E40F3B4F4E796C1D9E9131618863F*, const RuntimeMethod*))Task_1_GetAwaiter_m6E1D56437EC37932A9FDB0A997C28F516B45A1E0_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_m787A98C893E4ADC52EB3A49E7E5CC0E3DE2DE025 (TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m787A98C893E4ADC52EB3A49E7E5CC0E3DE2DE025_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>,Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__8>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39_TisU3CToUcgFormatU3Ed__8_tD726EF24EC12015309EA3722D016E6C942BD728D_m1CA1B6E652D11C985BDAAEC65F3956BE3EC203DC (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39* ___awaiter0, U3CToUcgFormatU3Ed__8_tD726EF24EC12015309EA3722D016E6C942BD728D* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2*, TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39*, U3CToUcgFormatU3Ed__8_tD726EF24EC12015309EA3722D016E6C942BD728D*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39_TisU3CToUcgFormatU3Ed__8_tD726EF24EC12015309EA3722D016E6C942BD728D_m1CA1B6E652D11C985BDAAEC65F3956BE3EC203DC_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::GetResult()
 inline Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022 TaskAwaiter_1_GetResult_m7A6333AE9B87999E4AF35B1EF3129FECDAF4723E (TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39* __this, const RuntimeMethod* method)
 {
-	return ((  Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022 (*) (TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39*, const RuntimeMethod*))TaskAwaiter_1_GetResult_m7A6333AE9B87999E4AF35B1EF3129FECDAF4723E_gshared)(__this, method);
+	Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022 il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_m14F437BF19E6679032BE96F29C6C7ED0E9615201 (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m14F437BF19E6679032BE96F29C6C7ED0E9615201_gshared)(__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_m9D721A9431C6D8DF5A0C4006A56C54AA11EE9F41 (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022 ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2*, Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m9D721A9431C6D8DF5A0C4006A56C54AA11EE9F41_gshared)(__this, ___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)&___result0, method);
 }
 // System.Void Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__8::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CToUcgFormatU3Ed__8_MoveNext_m26ED24613375D59369F99DD4DE40340D539B2178 (U3CToUcgFormatU3Ed__8_tD726EF24EC12015309EA3722D016E6C942BD728D* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_m11D521413EED1447C03B68DE61E858DE9B6FDBB4 (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m11D521413EED1447C03B68DE61E858DE9B6FDBB4_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__8::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CToUcgFormatU3Ed__8_SetStateMachine_m028D60346CDECA21D321AAA8BA625B2A05C628A7 (U3CToUcgFormatU3Ed__8_tD726EF24EC12015309EA3722D016E6C942BD728D* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -11465,7 +11292,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tF470A3BE5C1B5B68E1325EF3F
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>,Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__9>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39_TisU3CToUcgFormatU3Ed__9_t5E34F4BB113AE75E1225374AF4719E09BA4CC899_mE58E88548A12E2F9D0D29BD28F9FF53A4567BD1D (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39* ___awaiter0, U3CToUcgFormatU3Ed__9_t5E34F4BB113AE75E1225374AF4719E09BA4CC899* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2*, TaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39*, U3CToUcgFormatU3Ed__9_t5E34F4BB113AE75E1225374AF4719E09BA4CC899*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tC0F770E7762318859118A3BD4E6A3A5FB7BBCF39_TisU3CToUcgFormatU3Ed__9_t5E34F4BB113AE75E1225374AF4719E09BA4CC899_mE58E88548A12E2F9D0D29BD28F9FF53A4567BD1D_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Void Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__9::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CToUcgFormatU3Ed__9_MoveNext_m003A1E79E46FEDFDD87BF5009F24AE2443960F1E (U3CToUcgFormatU3Ed__9_t5E34F4BB113AE75E1225374AF4719E09BA4CC899* __this, const RuntimeMethod* method) ;
@@ -11482,22 +11309,25 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Task_1_tAC26C3CB300EB1DB608D4ADE4
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Net.IPAddress[]>::GetAwaiter()
 inline TaskAwaiter_1_t894583ED7AA29E04C0AF85F0E3C9F45716A46EDF Task_1_GetAwaiter_m29DDC28169C6B6C7390F47320DBA359CE864FFBB (Task_1_tAC26C3CB300EB1DB608D4ADE41BFFBD5924E4670* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_t894583ED7AA29E04C0AF85F0E3C9F45716A46EDF (*) (Task_1_tAC26C3CB300EB1DB608D4ADE41BFFBD5924E4670*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_t894583ED7AA29E04C0AF85F0E3C9F45716A46EDF, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Net.IPAddress[]>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_m0E876AB5624966FACD0DE5737373A95BA10DB61A (TaskAwaiter_1_t894583ED7AA29E04C0AF85F0E3C9F45716A46EDF* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t894583ED7AA29E04C0AF85F0E3C9F45716A46EDF*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Nullable`1<Unity.Networking.QoS.UcgQosServer>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Net.IPAddress[]>,Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__10>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t894583ED7AA29E04C0AF85F0E3C9F45716A46EDF_TisU3CToUcgFormatU3Ed__10_t2AA2EF6FDC506A789BB527E3E60A1AF0EA822212_mDA662C15FB8BF4C5EFA6A244776E46472F49D65B (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2* __this, TaskAwaiter_1_t894583ED7AA29E04C0AF85F0E3C9F45716A46EDF* ___awaiter0, U3CToUcgFormatU3Ed__10_t2AA2EF6FDC506A789BB527E3E60A1AF0EA822212* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t881BEC5678E8AF069C7627B417BF7237246CDCC2*, TaskAwaiter_1_t894583ED7AA29E04C0AF85F0E3C9F45716A46EDF*, U3CToUcgFormatU3Ed__10_t2AA2EF6FDC506A789BB527E3E60A1AF0EA822212*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CToUcgFormatU3Ed__10_t2AA2EF6FDC506A789BB527E3E60A1AF0EA822212_mD2009A95E7D7FDB36EA64AE1FB01830311D28CE9_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Net.IPAddress[]>::GetResult()
 inline IPAddressU5BU5D_t3AEDF3B94746C9023A4549F878AA47F702C9CD0D* TaskAwaiter_1_GetResult_m18BC7A5795509C90CAC30D09F189BFB15847A302 (TaskAwaiter_1_t894583ED7AA29E04C0AF85F0E3C9F45716A46EDF* __this, const RuntimeMethod* method)
 {
-	return ((  IPAddressU5BU5D_t3AEDF3B94746C9023A4549F878AA47F702C9CD0D* (*) (TaskAwaiter_1_t894583ED7AA29E04C0AF85F0E3C9F45716A46EDF*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
+	IPAddressU5BU5D_t3AEDF3B94746C9023A4549F878AA47F702C9CD0D* il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.UInt16 System.Convert::ToUInt16(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint16_t Convert_ToUInt16_mA3ABC9268BA473D6F1C7801248D3200734180B2B (int32_t ___value0, const RuntimeMethod* method) ;
@@ -11506,7 +11336,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t IPAddress_get_AddressFamily_m1CE4BCCE
 // System.Void System.Nullable`1<Unity.Networking.QoS.UcgQosServer>::.ctor(T)
 inline void Nullable_1__ctor_m2DF86C972EB3A227416873C121FF47BE20AF26DD (Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022* __this, UcgQosServer_tB2AFA57F819F8A2EFB52F813E38521D31F765136 ___value0, const RuntimeMethod* method)
 {
-	((  void (*) (Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022*, UcgQosServer_tB2AFA57F819F8A2EFB52F813E38521D31F765136, const RuntimeMethod*))Nullable_1__ctor_m2DF86C972EB3A227416873C121FF47BE20AF26DD_gshared)(__this, ___value0, method);
+	((  void (*) (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, const RuntimeMethod*))Nullable_1__ctor_m4257D7FF23A495D1B204F20330FBDED58248E4CC_gshared)((Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*)__this, (Il2CppFullySharedGenericStruct)&___value0, method);
 }
 // System.Void Unity.Services.Qos.Runner.BaselibQosRunner/<ToUcgFormat>d__10::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CToUcgFormatU3Ed__10_MoveNext_m2CB11B7F42D80B586C86AAE8E2B76EE42002920A (U3CToUcgFormatU3Ed__10_t2AA2EF6FDC506A789BB527E3E60A1AF0EA822212* __this, const RuntimeMethod* method) ;
@@ -11533,76 +11363,81 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tF470A3BE5C1B5B68E1325EF3F
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::Create()
 inline AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E AsyncTaskMethodBuilder_1_Create_m568941266A566D96A1396704C4A64B3ADC24A1EA (const RuntimeMethod* method)
 {
-	return ((  AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
+	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
+	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::Start<Unity.Services.Qos.Http.HttpClient/<MakeRequestAsync>d__1>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__1_t41F49AE5F63D6D3CB0848BD2E8B88FECA012503D_mD70A218E57F031B0E4B46B2931C3F40D69493A5F (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, U3CMakeRequestAsyncU3Ed__1_t41F49AE5F63D6D3CB0848BD2E8B88FECA012503D* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, U3CMakeRequestAsyncU3Ed__1_t41F49AE5F63D6D3CB0848BD2E8B88FECA012503D*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__1_t41F49AE5F63D6D3CB0848BD2E8B88FECA012503D_m352A5BC6CF2C4DF4E167DE5EE595BD688137F062_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::get_Task()
 inline Task_1_tF6629688545A28BF7E92F5D42ABABC826D0C79D9* AsyncTaskMethodBuilder_1_get_Task_mF5A71A7C5A0AA70BEA3D2F332FC21402C62A7AB9 (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_tF6629688545A28BF7E92F5D42ABABC826D0C79D9* (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
+	return (Task_1_tF6629688545A28BF7E92F5D42ABABC826D0C79D9*)il2cppRetVal;
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::Start<Unity.Services.Qos.Http.HttpClient/<MakeRequestAsync>d__2>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__2_tAE6D4361E0DFB64736B1330C108FDFA9E24B3D85_mC5439BB8F7476CFD0B444B30E204576D395FA198 (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, U3CMakeRequestAsyncU3Ed__2_tAE6D4361E0DFB64736B1330C108FDFA9E24B3D85* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, U3CMakeRequestAsyncU3Ed__2_tAE6D4361E0DFB64736B1330C108FDFA9E24B3D85*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__2_tAE6D4361E0DFB64736B1330C108FDFA9E24B3D85_mB9C81AA547AAA1406BE0B54C6ED7774AD7C1B5A7_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::Start<Unity.Services.Qos.Http.HttpClient/<CreateWebRequestAsync>d__3>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__3_t11659934D02FB2DAEA1594629006F368DC8E57F8_mAEA24F7F5A319FB5F4A71CBC700C2FA70A319F77 (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, U3CCreateWebRequestAsyncU3Ed__3_t11659934D02FB2DAEA1594629006F368DC8E57F8* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, U3CCreateWebRequestAsyncU3Ed__3_t11659934D02FB2DAEA1594629006F368DC8E57F8*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__3_t11659934D02FB2DAEA1594629006F368DC8E57F8_m6E5EBCF388B90E3F0898BE69D0993338B136CAFE_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::Start<Unity.Services.Qos.Http.HttpClient/<CreateHttpClientResponse>d__4>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA_mD7218F2EEBA5AB60ED2FA9BC10C5EB1D4AC252EB (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, U3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, U3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA_mD90961C1E0CA6F7BCA2DE66247FB23918FAA8EFE_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::Start<Unity.Services.Qos.Http.HttpClient/<CreateWebRequestAsync>d__5>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__5_tA77D014B1E570E006E424FD46449DD2C654E199F_mE4639106BBB5CBA382969D45E1DBD9138D8D2CDA (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, U3CCreateWebRequestAsyncU3Ed__5_tA77D014B1E570E006E424FD46449DD2C654E199F* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, U3CCreateWebRequestAsyncU3Ed__5_tA77D014B1E570E006E424FD46449DD2C654E199F*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__5_tA77D014B1E570E006E424FD46449DD2C654E199F_mDD23DB3537D15E0665AADAEE77A34BE92AE38DC5_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<Unity.Services.Qos.Http.HttpClientResponse> Unity.Services.Qos.Http.HttpClient::CreateWebRequestAsync(System.String,System.String,System.Byte[],System.Collections.Generic.IDictionary`2<System.String,System.String>,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_tF6629688545A28BF7E92F5D42ABABC826D0C79D9* HttpClient_CreateWebRequestAsync_mE29C3A2AD414500FB9B360CEA834FA802957E413 (HttpClient_t33C65C4AD210DC5BA7E9DA2E12485D3F71D25E02* __this, String_t* ___method0, String_t* ___url1, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___body2, RuntimeObject* ___headers3, int32_t ___requestTimeout4, const RuntimeMethod* method) ;
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<Unity.Services.Qos.Http.HttpClientResponse>::GetAwaiter()
 inline TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5 Task_1_GetAwaiter_m38D5F434B2FA5B1A3C16B4A4DA8F6C0E7471F0B9 (Task_1_tF6629688545A28BF7E92F5D42ABABC826D0C79D9* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5 (*) (Task_1_tF6629688545A28BF7E92F5D42ABABC826D0C79D9*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Http.HttpClientResponse>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_m1B15F36E7838C9E25ECE7A30ADB1CC1B4F6D925E (TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Http.HttpClientResponse>,Unity.Services.Qos.Http.HttpClient/<MakeRequestAsync>d__1>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5_TisU3CMakeRequestAsyncU3Ed__1_t41F49AE5F63D6D3CB0848BD2E8B88FECA012503D_mF12A4A24DC0B7D8C1A5D9870E126C22A0653834E (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5* ___awaiter0, U3CMakeRequestAsyncU3Ed__1_t41F49AE5F63D6D3CB0848BD2E8B88FECA012503D* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5*, U3CMakeRequestAsyncU3Ed__1_t41F49AE5F63D6D3CB0848BD2E8B88FECA012503D*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMakeRequestAsyncU3Ed__1_t41F49AE5F63D6D3CB0848BD2E8B88FECA012503D_m1A3ACA6F9C69A72A596F97679F3CC7AB32EDC456_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Http.HttpClientResponse>::GetResult()
 inline HttpClientResponse_tBCF4C3C18FED540C76B60400A62394ADC67AD3B5* TaskAwaiter_1_GetResult_m171C64685E0C5BABA3B642C7D5EFB0386995A516 (TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5* __this, const RuntimeMethod* method)
 {
-	return ((  HttpClientResponse_tBCF4C3C18FED540C76B60400A62394ADC67AD3B5* (*) (TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
+	HttpClientResponse_tBCF4C3C18FED540C76B60400A62394ADC67AD3B5* il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_m17572A422367948A382BFB373E011DCEBEB87E39 (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_mA5C55821BD5C6765B11AFD769FA6470580EAB7C9 (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, HttpClientResponse_tBCF4C3C18FED540C76B60400A62394ADC67AD3B5* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, HttpClientResponse_tBCF4C3C18FED540C76B60400A62394ADC67AD3B5*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
 }
 // System.Void Unity.Services.Qos.Http.HttpClient/<MakeRequestAsync>d__1::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMakeRequestAsyncU3Ed__1_MoveNext_m79FE0A0172C1A9B02BFFD7376FA295A1E27170B2 (U3CMakeRequestAsyncU3Ed__1_t41F49AE5F63D6D3CB0848BD2E8B88FECA012503D* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_m22CE53F12FF052326897A6609302F1F59FA297F3 (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Qos.Http.HttpClient/<MakeRequestAsync>d__1::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMakeRequestAsyncU3Ed__1_SetStateMachine_mED0F1C7F72F9240EFE00BFFB80D53FD5FAF61540 (U3CMakeRequestAsyncU3Ed__1_t41F49AE5F63D6D3CB0848BD2E8B88FECA012503D* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -11611,7 +11446,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_tF6629688545A28BF7E92F5D42ABABC826D0C7
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Http.HttpClientResponse>,Unity.Services.Qos.Http.HttpClient/<MakeRequestAsync>d__2>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5_TisU3CMakeRequestAsyncU3Ed__2_tAE6D4361E0DFB64736B1330C108FDFA9E24B3D85_mBD2C51AF189C727D8C5C901E463E2DC0C12C2532 (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5* ___awaiter0, U3CMakeRequestAsyncU3Ed__2_tAE6D4361E0DFB64736B1330C108FDFA9E24B3D85* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5*, U3CMakeRequestAsyncU3Ed__2_tAE6D4361E0DFB64736B1330C108FDFA9E24B3D85*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMakeRequestAsyncU3Ed__2_tAE6D4361E0DFB64736B1330C108FDFA9E24B3D85_m7862F49DCAD0FD6A20E619DA88892B253416F785_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Void Unity.Services.Qos.Http.HttpClient/<MakeRequestAsync>d__2::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMakeRequestAsyncU3Ed__2_MoveNext_m66640452B0587066B569B1FC54EF18E56BAB7722 (U3CMakeRequestAsyncU3Ed__2_tAE6D4361E0DFB64736B1330C108FDFA9E24B3D85* __this, const RuntimeMethod* method) ;
@@ -11622,7 +11457,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_tF6629688545A28BF7E92F5D42ABABC826D0C7
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Http.HttpClientResponse>,Unity.Services.Qos.Http.HttpClient/<CreateWebRequestAsync>d__3>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5_TisU3CCreateWebRequestAsyncU3Ed__3_t11659934D02FB2DAEA1594629006F368DC8E57F8_mFA334F38639496D36453CCF03376D202CB7CE65F (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5* ___awaiter0, U3CCreateWebRequestAsyncU3Ed__3_t11659934D02FB2DAEA1594629006F368DC8E57F8* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5*, U3CCreateWebRequestAsyncU3Ed__3_t11659934D02FB2DAEA1594629006F368DC8E57F8*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateWebRequestAsyncU3Ed__3_t11659934D02FB2DAEA1594629006F368DC8E57F8_mB746A39A4B8B2DCA443D0A2621D22E6DEB8AB2BE_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Void Unity.Services.Qos.Http.HttpClient/<CreateWebRequestAsync>d__3::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateWebRequestAsyncU3Ed__3_MoveNext_m090F79DD1136CFFB71763CAC5CB40E82F9B085B2 (U3CCreateWebRequestAsyncU3Ed__3_t11659934D02FB2DAEA1594629006F368DC8E57F8* __this, const RuntimeMethod* method) ;
@@ -11631,7 +11466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateWebRequestAsyncU3Ed__3_SetState
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::Start<Unity.Services.Qos.Http.HttpClient/<>c__DisplayClass4_0/<<CreateHttpClientResponse>b__0>d>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t7B5BC00B3928473DD0241DA12ED97CEE386D8302_mFDDEB03D1EDFD37134646721E3282AF534F2F278 (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t7B5BC00B3928473DD0241DA12ED97CEE386D8302* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t7B5BC00B3928473DD0241DA12ED97CEE386D8302*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t7B5BC00B3928473DD0241DA12ED97CEE386D8302_mFB1B4B30276DAF94C8FDFABFA1A72F2D157FCA16_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
 }
 // UnityEngine.Networking.UnityWebRequestAsyncOperation Unity.Services.Qos.Http.HttpClient::SendWebRequest(UnityEngine.Networking.UnityWebRequest)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* HttpClient_SendWebRequest_m2D838D76A68C3AAB0F5EE58D82D10860B61C2B8B (HttpClient_t33C65C4AD210DC5BA7E9DA2E12485D3F71D25E02* __this, UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* ___request0, const RuntimeMethod* method) ;
@@ -11640,7 +11475,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Http.HttpClientResponse>,Unity.Services.Qos.Http.HttpClient/<>c__DisplayClass4_0/<<CreateHttpClientResponse>b__0>d>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t7B5BC00B3928473DD0241DA12ED97CEE386D8302_m848F5C4849593E77C4F776F39ABB6EABF80B78A0 (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5* ___awaiter0, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t7B5BC00B3928473DD0241DA12ED97CEE386D8302* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5*, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t7B5BC00B3928473DD0241DA12ED97CEE386D8302*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t7B5BC00B3928473DD0241DA12ED97CEE386D8302_m3C326595934A531A23AD67FDB0DE477B4E032E5B_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Void Unity.Services.Qos.Http.HttpClient/<>c__DisplayClass4_0/<<CreateHttpClientResponse>b__0>d::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_MoveNext_mA03BE170E9A572255312982AE52F01375400D8DE (U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t7B5BC00B3928473DD0241DA12ED97CEE386D8302* __this, const RuntimeMethod* method) ;
@@ -11651,39 +11486,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0__ctor_mB9949717
 // System.Void System.Func`1<System.Threading.Tasks.Task`1<Unity.Services.Qos.Http.HttpClientResponse>>::.ctor(System.Object,System.IntPtr)
 inline void Func_1__ctor_m6AF38DBC9D609C6BF3D7D36F10099569197EE7E8 (Func_1_t951450D17F31277D24526D3476548479EA423E04* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_1_t951450D17F31277D24526D3476548479EA423E04*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_1__ctor_m663374A863E492A515BE9626B6F0E444991834E8_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_1__ctor_mC73A4FCEBBAB90CB7B7AB16321F3F98FBBF12596_gshared)((Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431*)__this, ___object0, ___method1, method);
 }
 // System.Threading.Tasks.TaskScheduler Unity.Services.Qos.Scheduler.ThreadHelper::get_TaskScheduler()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TaskScheduler_t3F0550EBEF7C41F74EC8C08FF4BED0D8CE66006E* ThreadHelper_get_TaskScheduler_mE4BB459B45461BD9314E69B218A9D3F021E98672_inline (const RuntimeMethod* method) ;
 // System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskFactory::StartNew<System.Threading.Tasks.Task`1<Unity.Services.Qos.Http.HttpClientResponse>>(System.Func`1<TResult>,System.Threading.CancellationToken,System.Threading.Tasks.TaskCreationOptions,System.Threading.Tasks.TaskScheduler)
 inline Task_1_tFD4D83E09A0B2DA998E9E2957AD742748E683BC3* TaskFactory_StartNew_TisTask_1_tF6629688545A28BF7E92F5D42ABABC826D0C79D9_m6DD844F4B1EC627E0DF2DF98605FAAA3490D8818 (TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0* __this, Func_1_t951450D17F31277D24526D3476548479EA423E04* ___function0, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED ___cancellationToken1, int32_t ___creationOptions2, TaskScheduler_t3F0550EBEF7C41F74EC8C08FF4BED0D8CE66006E* ___scheduler3, const RuntimeMethod* method)
 {
-	return ((  Task_1_tFD4D83E09A0B2DA998E9E2957AD742748E683BC3* (*) (TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0*, Func_1_t951450D17F31277D24526D3476548479EA423E04*, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED, int32_t, TaskScheduler_t3F0550EBEF7C41F74EC8C08FF4BED0D8CE66006E*, const RuntimeMethod*))TaskFactory_StartNew_TisRuntimeObject_m14FDB1694FEE097B11C3119BD89F3C350F7DE51B_gshared)(__this, ___function0, ___cancellationToken1, ___creationOptions2, ___scheduler3, method);
+	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0*, Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431*, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED, int32_t, TaskScheduler_t3F0550EBEF7C41F74EC8C08FF4BED0D8CE66006E*, const RuntimeMethod*))TaskFactory_StartNew_TisIl2CppFullySharedGenericAny_m093A8AAFB7FEC0A2D65CEAEBE25DE0EB91469C36_gshared)((TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0*)__this, (Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431*)___function0, ___cancellationToken1, ___creationOptions2, ___scheduler3, method);
+	return (Task_1_tFD4D83E09A0B2DA998E9E2957AD742748E683BC3*)il2cppRetVal;
 }
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Threading.Tasks.Task`1<Unity.Services.Qos.Http.HttpClientResponse>>::GetAwaiter()
 inline TaskAwaiter_1_t37EC27AA58021553FF8951310BD167BB7000B5C1 Task_1_GetAwaiter_m3943D3360E5E23B9A4BB692F1E1B927BB580F4C4 (Task_1_tFD4D83E09A0B2DA998E9E2957AD742748E683BC3* __this, const RuntimeMethod* method)
 {
-	return ((  TaskAwaiter_1_t37EC27AA58021553FF8951310BD167BB7000B5C1 (*) (Task_1_tFD4D83E09A0B2DA998E9E2957AD742748E683BC3*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
+	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
+	return il2cpp_codegen_cast_struct<TaskAwaiter_1_t37EC27AA58021553FF8951310BD167BB7000B5C1, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task`1<Unity.Services.Qos.Http.HttpClientResponse>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_mEFFE04FBAFA4052E44F00F8DC3F35323AA96F442 (TaskAwaiter_1_t37EC27AA58021553FF8951310BD167BB7000B5C1* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t37EC27AA58021553FF8951310BD167BB7000B5C1*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task`1<Unity.Services.Qos.Http.HttpClientResponse>>,Unity.Services.Qos.Http.HttpClient/<CreateHttpClientResponse>d__4>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t37EC27AA58021553FF8951310BD167BB7000B5C1_TisU3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA_m032235EDB41E0D30995F1838FE7B3A5372B36B53 (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, TaskAwaiter_1_t37EC27AA58021553FF8951310BD167BB7000B5C1* ___awaiter0, U3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, TaskAwaiter_1_t37EC27AA58021553FF8951310BD167BB7000B5C1*, U3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA_mE55B54C7EDA9BBCCB72E0324C42862BE7311583B_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task`1<Unity.Services.Qos.Http.HttpClientResponse>>::GetResult()
 inline Task_1_tF6629688545A28BF7E92F5D42ABABC826D0C79D9* TaskAwaiter_1_GetResult_mDC79D5C0C0C04C17BA5981590E024B8482994BEC (TaskAwaiter_1_t37EC27AA58021553FF8951310BD167BB7000B5C1* __this, const RuntimeMethod* method)
 {
-	return ((  Task_1_tF6629688545A28BF7E92F5D42ABABC826D0C79D9* (*) (TaskAwaiter_1_t37EC27AA58021553FF8951310BD167BB7000B5C1*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
+	Task_1_tF6629688545A28BF7E92F5D42ABABC826D0C79D9* il2cppRetVal;
+	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Qos.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Qos.Http.HttpClientResponse>,Unity.Services.Qos.Http.HttpClient/<CreateHttpClientResponse>d__4>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5_TisU3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA_m06A0B28E2A162C3BD4CA22BA1CB3FD143B448A1F (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E* __this, TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5* ___awaiter0, U3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t407957A2F4FD9D0A272035DD4C2D3F67FE10AB6E*, TaskAwaiter_1_t9FC51538154C38A6323BF4F36C1482D276A4DDD5*, U3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA_mE55B54C7EDA9BBCCB72E0324C42862BE7311583B_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
 }
 // System.Void Unity.Services.Qos.Http.HttpClient/<CreateHttpClientResponse>d__4::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateHttpClientResponseU3Ed__4_MoveNext_m8B66DA73AF928840C73E8466784F1AEE92326DE9 (U3CCreateHttpClientResponseU3Ed__4_t147E1776E8EFCF24457F43AA20BBFB39D0BFFDDA* __this, const RuntimeMethod* method) ;
@@ -36781,90 +36620,114 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TaskScheduler_t3F0550EBEF7C41F74E
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void KeyValuePair_2_get_Key_mBE75BF8983618BC1ACEC20F94C1BFF85C8AA50F1_gshared_inline (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	// sizeof(TKey)
+	const uint32_t SizeOf_TKey_tAE1541CEBE7E523E393A46E588568F4BD8337859 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0));
+	// TKey
+	const Il2CppFullySharedGenericAny L_0 = alloca(SizeOf_TKey_tAE1541CEBE7E523E393A46E588568F4BD8337859);
+	{
+		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1),0)), SizeOf_TKey_tAE1541CEBE7E523E393A46E588568F4BD8337859);
+		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_TKey_tAE1541CEBE7E523E393A46E588568F4BD8337859);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void KeyValuePair_2_get_Value_mFA1964BF56AA214EE0D491CC197F61BC9E5F1F7A_gshared_inline (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	// sizeof(TValue)
+	const uint32_t SizeOf_TValue_tAEA6D09BCD56B8A100F4F042BC143BC0266C28B7 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
+	// TValue
+	const Il2CppFullySharedGenericAny L_0 = alloca(SizeOf_TValue_tAEA6D09BCD56B8A100F4F042BC143BC0266C28B7);
+	{
+		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1),1)), SizeOf_TValue_tAEA6D09BCD56B8A100F4F042BC143BC0266C28B7);
+		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_TValue_tAEA6D09BCD56B8A100F4F042BC143BC0266C28B7);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_m14F273FB376DF00D727434CDCD28AB4EDCC14C3C_gshared_inline (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339* __this, const RuntimeMethod* method) 
 {
 	{
-		RuntimeObject* L_0 = (RuntimeObject*)__this->___key_0;
+		bool L_0 = *(bool*)il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1),0));
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Func_2_Invoke_m31CAC166FDC80DC5AE52A5AEFFEE2D9B27A1CA3F_gshared_inline (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___arg0, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
 {
-	{
-		RuntimeObject* L_0 = (RuntimeObject*)__this->___value_1;
-		return L_0;
-	}
+	typedef void (*FunctionPointerType) (RuntimeObject*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___arg0, il2cppRetVal, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) 
-{
-	{
-		bool L_0 = (bool)__this->___hasValue_0;
-		return L_0;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Func_2_Invoke_mDBA25DA5DA5B7E056FB9B026AF041F1385FB58A9_gshared_inline (Func_2_tACBF5A1656250800CE861707354491F0611F6624* __this, RuntimeObject* ___arg0, const RuntimeMethod* method) 
-{
-	typedef RuntimeObject* (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
-	return ((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___arg0, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m1747175525F15736BD2C9209C7B090DC8164FE7A_gshared_inline (List_1_tFD45D9C668A7B019127FE442DDD78CF33B7DEDBF* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, const RuntimeMethod* method) 
 {
 	{
 		int32_t L_0 = (int32_t)__this->____size_2;
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Response_1_get_Result_m9D68198F60A56507D31D65F9AC1DF1278BA89249_gshared_inline (Response_1_t67079F6E4F63FACFADE6AE83B5E8C8249BB3895D* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Response_1_get_Result_m149CD970003E5E66747C6795927991AC11FED47A_gshared_inline (/*Unity.Services.Qos.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_t4B73EEA711E336B136237CB6557E9F99516BDB6A* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
 {
+	// sizeof(T)
+	const uint32_t SizeOf_T_tD51BE557C9BED751CA50E49CAE26F4B6DE46390E = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->klass->rgctx_data, 1));
+	// T
+	const Il2CppFullySharedGenericAny L_0 = alloca(SizeOf_T_tD51BE557C9BED751CA50E49CAE26F4B6DE46390E);
 	{
 		// public T Result { get; }
-		RuntimeObject* L_0 = (RuntimeObject*)__this->___U3CResultU3Ek__BackingField_2;
-		return L_0;
+		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(method->klass->rgctx_data, 0),0)), SizeOf_T_tD51BE557C9BED751CA50E49CAE26F4B6DE46390E);
+		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_T_tD51BE557C9BED751CA50E49CAE26F4B6DE46390E);
+		return;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Response_1_get_Result_mDD07C8A8C9C0DB160AFF23A743B13D5C32DF42D6_gshared_inline (Response_1_t1DC86EEE7CDC58EAF9D58E332C29DA1D24AD5172* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Response_1_get_Result_m471D36F95DF8916F85F881D9B25178856D9B7364_gshared_inline (/*Unity.Services.Qos.V2.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_tE01D2CBFFA6377AB5ABD5A628829909B9DE01269* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
 {
+	// sizeof(T)
+	const uint32_t SizeOf_T_tD440444C15C85BC7559B0F5D7D20E4292BDBDD6F = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->klass->rgctx_data, 1));
+	// T
+	const Il2CppFullySharedGenericAny L_0 = alloca(SizeOf_T_tD440444C15C85BC7559B0F5D7D20E4292BDBDD6F);
 	{
 		// public T Result { get; }
-		RuntimeObject* L_0 = (RuntimeObject*)__this->___U3CResultU3Ek__BackingField_2;
-		return L_0;
+		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(method->klass->rgctx_data, 0),0)), SizeOf_T_tD440444C15C85BC7559B0F5D7D20E4292BDBDD6F);
+		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_T_tD440444C15C85BC7559B0F5D7D20E4292BDBDD6F);
+		return;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* Array_Empty_TisIl2CppFullySharedGenericAny_m244E2A51B33F845A2093F0862FBCE502E4FDD868_gshared_inline (const RuntimeMethod* method) 
 {
+	il2cpp_rgctx_method_init(method);
 	{
-		int32_t L_0 = (int32_t)__this->____size_2;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->rgctx_data, 2));
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_0 = ((EmptyArray_1_tF69A5F6BAD1150A16C4C98B346D6122FE3751C80_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->rgctx_data, 2)))->___Value_0;
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline (const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_gshared_inline (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
 {
+	// sizeof(T)
+	const uint32_t SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
+	// T
+	const Il2CppFullySharedGenericAny L_0 = alloca(SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1);
 	{
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->rgctx_data, 0));
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_0 = ((EmptyArray_1_tDF0DD7256B115243AA6BD5558417387A734240EE_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->rgctx_data, 0)))->___Value_0;
-		return L_0;
+		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1),3)), SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1);
+		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1);
+		return;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___item0, const RuntimeMethod* method) 
 {
-	{
-		RuntimeObject* L_0 = (RuntimeObject*)__this->____current_3;
-		return L_0;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___item0, const RuntimeMethod* method) 
-{
-	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
+	// sizeof(T)
+	const uint32_t SizeOf_T_t664E2061A913AF1FEE499655BC64F0FDE10D2A5E = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->klass->rgctx_data, 9));
+	// T
+	const Il2CppFullySharedGenericAny L_8 = alloca(SizeOf_T_t664E2061A913AF1FEE499655BC64F0FDE10D2A5E);
+	const Il2CppFullySharedGenericAny L_9 = L_8;
+	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* V_0 = NULL;
 	int32_t V_1 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->____version_3;
 		__this->____version_3 = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)__this->____items_1;
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_1 = (__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC*)__this->____items_1;
 		V_0 = L_1;
 		int32_t L_2 = (int32_t)__this->____size_2;
 		V_1 = L_2;
 		int32_t L_3 = V_1;
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = V_0;
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_4 = V_0;
 		NullCheck(L_4);
 		if ((!(((uint32_t)L_3) < ((uint32_t)((int32_t)(((RuntimeArray*)L_4)->max_length))))))
 		{
@@ -36874,164 +36737,50 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631
 	{
 		int32_t L_5 = V_1;
 		__this->____size_2 = ((int32_t)il2cpp_codegen_add(L_5, 1));
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6 = V_0;
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_6 = V_0;
 		int32_t L_7 = V_1;
-		RuntimeObject* L_8 = ___item0;
+		il2cpp_codegen_memcpy(L_8, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->klass->rgctx_data, 9)) ? ___item0 : &___item0), SizeOf_T_t664E2061A913AF1FEE499655BC64F0FDE10D2A5E);
 		NullCheck(L_6);
-		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (RuntimeObject*)L_8);
+		il2cpp_codegen_memcpy((L_6)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_7)), L_8, SizeOf_T_t664E2061A913AF1FEE499655BC64F0FDE10D2A5E);
+		Il2CppCodeGenWriteBarrierForClass(il2cpp_rgctx_data(method->klass->rgctx_data, 9), (void**)(L_6)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_7)), (void*)L_8);
 		return;
 	}
 
 IL_0034:
 	{
-		RuntimeObject* L_9 = ___item0;
-		((  void (*) (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*, RuntimeObject*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 11)))(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 11));
+		il2cpp_codegen_memcpy(L_9, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->klass->rgctx_data, 9)) ? ___item0 : &___item0), SizeOf_T_t664E2061A913AF1FEE499655BC64F0FDE10D2A5E);
+		InvokerActionInvoker1< Il2CppFullySharedGenericAny >::Invoke(il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 14)), il2cpp_rgctx_method(method->klass->rgctx_data, 14), __this, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->klass->rgctx_data, 9)) ? L_9: *(void**)L_9));
 		return;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* TaskCompletionSource_1_get_Task_mF44990297C25C7DBE1E65241C03D0120CB551552_gshared_inline (TaskCompletionSource_1_tB4EF81F69CCF7C4F0D956F9B26127C0634A24A37* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* TaskCompletionSource_1_get_Task_m4994989AA2174905CF517397D0F6B082ADC29EE9_gshared_inline (TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970* __this, const RuntimeMethod* method) 
 {
 	{
-		Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* L_0 = (Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2*)__this->____task_0;
+		Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* L_0 = (Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this->____task_0;
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_mD6472FA27D28B9AE64A0FEF796C72ABBC2420EBF_gshared_inline (Enumerator_t65CC956745B1180C04CE6C6910FB27C5F32BB9FF* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m2D9E3398C2A3349E3F0F189A38E881D11DE5AA15_gshared_inline (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
 {
+	// sizeof(TKey)
+	const uint32_t SizeOf_TKey_tD6F5EEADA0A8791813A4EF1C80C94030B153E4B0 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
+	// TKey
+	const Il2CppFullySharedGenericAny L_0 = alloca(SizeOf_TKey_tD6F5EEADA0A8791813A4EF1C80C94030B153E4B0);
 	{
-		RuntimeObject* L_0 = (RuntimeObject*)__this->____currentKey_3;
-		return L_0;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Nullable_1_GetValueOrDefault_m8D130DB7F2A1E694736B449176F9C26DB456597B_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) 
-{
-	{
-		int32_t L_0 = (int32_t)__this->___value_1;
-		return L_0;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mD66CCD8D0F6870A2711F9329E4297A2CE4A1882F_gshared_inline (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* __this, QosResult_tA2296213032595430F8FE40418B3D5BA47E86D27 ___item0, const RuntimeMethod* method) 
-{
-	QosResultU5BU5D_t75C4DCC436089DFBCEEED024EAD6D3586B05C21C* V_0 = NULL;
-	int32_t V_1 = 0;
-	{
-		int32_t L_0 = (int32_t)__this->____version_3;
-		__this->____version_3 = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		QosResultU5BU5D_t75C4DCC436089DFBCEEED024EAD6D3586B05C21C* L_1 = (QosResultU5BU5D_t75C4DCC436089DFBCEEED024EAD6D3586B05C21C*)__this->____items_1;
-		V_0 = L_1;
-		int32_t L_2 = (int32_t)__this->____size_2;
-		V_1 = L_2;
-		int32_t L_3 = V_1;
-		QosResultU5BU5D_t75C4DCC436089DFBCEEED024EAD6D3586B05C21C* L_4 = V_0;
-		NullCheck(L_4);
-		if ((!(((uint32_t)L_3) < ((uint32_t)((int32_t)(((RuntimeArray*)L_4)->max_length))))))
-		{
-			goto IL_0034;
-		}
-	}
-	{
-		int32_t L_5 = V_1;
-		__this->____size_2 = ((int32_t)il2cpp_codegen_add(L_5, 1));
-		QosResultU5BU5D_t75C4DCC436089DFBCEEED024EAD6D3586B05C21C* L_6 = V_0;
-		int32_t L_7 = V_1;
-		QosResult_tA2296213032595430F8FE40418B3D5BA47E86D27 L_8 = ___item0;
-		NullCheck(L_6);
-		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (QosResult_tA2296213032595430F8FE40418B3D5BA47E86D27)L_8);
-		return;
-	}
-
-IL_0034:
-	{
-		QosResult_tA2296213032595430F8FE40418B3D5BA47E86D27 L_9 = ___item0;
-		((  void (*) (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85*, QosResult_tA2296213032595430F8FE40418B3D5BA47E86D27, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 11)))(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 11));
+		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1),3)), SizeOf_TKey_tD6F5EEADA0A8791813A4EF1C80C94030B153E4B0);
+		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_TKey_tD6F5EEADA0A8791813A4EF1C80C94030B153E4B0);
 		return;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m14511AEB05E4C1AD82CEC16B3F038105B5F43753_gshared_inline (List_1_t6A9BD83D1B75DA994D0814971281C937CF962FDA* __this, QosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E ___item0, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Nullable_1_GetValueOrDefault_mC057FBD944AF068B90EBDD0B496231A01B2A4228_gshared_inline (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339* __this, Il2CppFullySharedGenericStruct* il2cppRetVal, const RuntimeMethod* method) 
 {
-	QosAnnotatedResultU5BU5D_tEE50D95C94A5B00517F4569D8949D530EBD602C5* V_0 = NULL;
-	int32_t V_1 = 0;
+	// sizeof(T)
+	const uint32_t SizeOf_T_tF1352992D99D495C6F2BE3DC43F8A00BAD6B2EAA = il2cpp_codegen_sizeof(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0));
+	// T
+	const Il2CppFullySharedGenericStruct L_0 = alloca(SizeOf_T_tF1352992D99D495C6F2BE3DC43F8A00BAD6B2EAA);
 	{
-		int32_t L_0 = (int32_t)__this->____version_3;
-		__this->____version_3 = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		QosAnnotatedResultU5BU5D_tEE50D95C94A5B00517F4569D8949D530EBD602C5* L_1 = (QosAnnotatedResultU5BU5D_tEE50D95C94A5B00517F4569D8949D530EBD602C5*)__this->____items_1;
-		V_0 = L_1;
-		int32_t L_2 = (int32_t)__this->____size_2;
-		V_1 = L_2;
-		int32_t L_3 = V_1;
-		QosAnnotatedResultU5BU5D_tEE50D95C94A5B00517F4569D8949D530EBD602C5* L_4 = V_0;
-		NullCheck(L_4);
-		if ((!(((uint32_t)L_3) < ((uint32_t)((int32_t)(((RuntimeArray*)L_4)->max_length))))))
-		{
-			goto IL_0034;
-		}
-	}
-	{
-		int32_t L_5 = V_1;
-		__this->____size_2 = ((int32_t)il2cpp_codegen_add(L_5, 1));
-		QosAnnotatedResultU5BU5D_tEE50D95C94A5B00517F4569D8949D530EBD602C5* L_6 = V_0;
-		int32_t L_7 = V_1;
-		QosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E L_8 = ___item0;
-		NullCheck(L_6);
-		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (QosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E)L_8);
-		return;
-	}
-
-IL_0034:
-	{
-		QosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E L_9 = ___item0;
-		((  void (*) (List_1_t6A9BD83D1B75DA994D0814971281C937CF962FDA*, QosAnnotatedResult_t2F0763833C23391C808B785CD5CC9886F6C82A4E, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 11)))(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 11));
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_m0DFDFD4AF56FF28348507B43CB76CBC0302F0038_gshared_inline (Nullable_1_t9EAB4070BB57AF52492D59610E8652118CDA4022* __this, const RuntimeMethod* method) 
-{
-	{
-		bool L_0 = (bool)__this->___hasValue_0;
-		return L_0;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mBBF44AA2423A8AF17C48430D7D112805D5AC67A8_gshared_inline (List_1_t1732F298A130BA40F8F13EC6E948A1550532AA85* __this, const RuntimeMethod* method) 
-{
-	{
-		int32_t L_0 = (int32_t)__this->____size_2;
-		return L_0;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m4C2118BF8009CA4F7AF89D8D9CB5586AE95C8A36_gshared_inline (List_1_tFD45D9C668A7B019127FE442DDD78CF33B7DEDBF* __this, ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A ___item0, const RuntimeMethod* method) 
-{
-	ValueTuple_2U5BU5D_tDEEAFCC1B39456246D3A0D4D92FF7592CA9EC962* V_0 = NULL;
-	int32_t V_1 = 0;
-	{
-		int32_t L_0 = (int32_t)__this->____version_3;
-		__this->____version_3 = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		ValueTuple_2U5BU5D_tDEEAFCC1B39456246D3A0D4D92FF7592CA9EC962* L_1 = (ValueTuple_2U5BU5D_tDEEAFCC1B39456246D3A0D4D92FF7592CA9EC962*)__this->____items_1;
-		V_0 = L_1;
-		int32_t L_2 = (int32_t)__this->____size_2;
-		V_1 = L_2;
-		int32_t L_3 = V_1;
-		ValueTuple_2U5BU5D_tDEEAFCC1B39456246D3A0D4D92FF7592CA9EC962* L_4 = V_0;
-		NullCheck(L_4);
-		if ((!(((uint32_t)L_3) < ((uint32_t)((int32_t)(((RuntimeArray*)L_4)->max_length))))))
-		{
-			goto IL_0034;
-		}
-	}
-	{
-		int32_t L_5 = V_1;
-		__this->____size_2 = ((int32_t)il2cpp_codegen_add(L_5, 1));
-		ValueTuple_2U5BU5D_tDEEAFCC1B39456246D3A0D4D92FF7592CA9EC962* L_6 = V_0;
-		int32_t L_7 = V_1;
-		ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A L_8 = ___item0;
-		NullCheck(L_6);
-		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A)L_8);
-		return;
-	}
-
-IL_0034:
-	{
-		ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A L_9 = ___item0;
-		((  void (*) (List_1_tFD45D9C668A7B019127FE442DDD78CF33B7DEDBF*, ValueTuple_2_tC3717D4552EE1E5FC27BFBA3F5155741BC04557A, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 11)))(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 11));
+		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1),1)), SizeOf_T_tF1352992D99D495C6F2BE3DC43F8A00BAD6B2EAA);
+		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_T_tF1352992D99D495C6F2BE3DC43F8A00BAD6B2EAA);
 		return;
 	}
 }
