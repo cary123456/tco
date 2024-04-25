@@ -179,6 +179,10 @@ public class hotkey : MonoBehaviour
             {
                 Destroy(GameObject.FindWithTag("building"));
             }
+            if (GameObject.FindWithTag("ball"))
+            {
+                Destroy(GameObject.FindWithTag("ball"));
+            }
         }
         if (Input.GetKeyUp(KeyCode.Escape))
         {

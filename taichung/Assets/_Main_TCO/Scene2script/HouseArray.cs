@@ -9,8 +9,10 @@ public class HouseArray : MonoBehaviour
 {
     public GameObject[] house;
     public bool houseenable =true;
-    public GameObject crab;
+    public GameObject[] crab;
     public bool crabenable =false;
+    public GameObject[] bubble;
+    public bool bubbleenable =false;
     public Transform pos;
     public int x;
     public int z;
@@ -18,6 +20,8 @@ public class HouseArray : MonoBehaviour
     [Range(1, 10)]    
     public int buildpertime = 1;
     public float[] housescale;
+    public float[] crabscale;
+    public float[] bubblescale;
     public int housecount;
     public float offset;
     public List<Vector2> buildarraytemp;
@@ -96,10 +100,11 @@ public class HouseArray : MonoBehaviour
                 float houseoffset = Random.Range(-offset, offset);
                 int Xpos = Random.Range(0,x);
                 int Zpos = Random.Range(0,z);
+                int rand = Random.Range(0,crab.Length);
 
                 if(buildarray[Xpos,Zpos] != 1)
                 {
-                    Instantiate(crab, pos.localPosition + new Vector3 (Xpos*k + houseoffset, Zpos*k, -2.7f ), Quaternion.identity, pos);
+                    Instantiate(crab[rand], pos.localPosition + new Vector3 (Xpos*k + houseoffset, Zpos*k, -2.7f ), Quaternion.identity, pos);
                     buildarray[Xpos,Zpos] = 1;
                     buildarraytemp.Add( new Vector2(Xpos,Zpos));
                     buildarraytemp.ToArray();
@@ -107,9 +112,43 @@ public class HouseArray : MonoBehaviour
                 }
                 else 
                 {   
-                    if(housecount < x*z-x-z+1)
+                    if(housecount < x*z)
                         i--;
-                    if(housecount >= x*z-x-z+1)
+                    if(housecount >= x*z)
+                        break;
+                }
+            }
+
+        }
+
+        if(Input.GetKeyDown("u") &&　flag && bubbleenable)
+        {
+            for(int i = 0; i < buildpertime; i++) 
+            {
+                
+                flag = false;
+
+                float houseoffset = Random.Range(-offset, offset);
+                int Xpos = Random.Range(0,x);
+                int Zpos = Random.Range(0,z);
+                int rand = Random.Range(0,bubble.Length);
+                int s = Random.Range(0,bubblescale.Length);
+
+                if(buildarray[Xpos,Zpos] != 1)
+                {
+                    GameObject bubbles =Instantiate(bubble[rand], pos.localPosition + new Vector3 (Xpos*k + houseoffset, Zpos*k, -2.7f ), Quaternion.identity, pos);
+                    bubbles.GetComponent<Rigidbody>().AddForce(new Vector3(0, -rand*10, 0));
+                    bubbles.transform.localScale = new Vector3(bubblescale[s], bubblescale[s], bubblescale[s]);
+                    buildarray[Xpos,Zpos] = 1;
+                    buildarraytemp.Add( new Vector2(Xpos,Zpos));
+                    buildarraytemp.ToArray();
+                    housecount++;
+                }
+                else 
+                {   
+                    if(housecount < x*z)
+                        i--;
+                    if(housecount >= x*z)
                         break;
                 }
             }
