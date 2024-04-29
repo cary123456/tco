@@ -160,9 +160,11 @@ public class valuerecueve : NetworkBehaviour
     public bool fishonetime;
     private float Rbuildupfirstpositiony;
     private bool Rfirsttime;
+    private float Rruntime;
     public bool Rsuccess;
     private float Lbuildupfirstpositiony;
     private bool Lfirsttime;
+    private float Lruntime;
     public bool Lsuccess;
     public GameObject fishflok;
     public float fishcolddownruntime;
@@ -292,7 +294,7 @@ public class valuerecueve : NetworkBehaviour
 
         if(handRvalue.Value == 3)
         {
-            
+            Rruntime += Time.deltaTime;
             if (buildR)
             {
                 if (Rfirsttime)
@@ -301,7 +303,7 @@ public class valuerecueve : NetworkBehaviour
                     Rfirsttime = false;
                 }
                
-                if((handRy.Value - Rbuildupfirstpositiony) >= 0.15f)
+                if((handRy.Value - Rbuildupfirstpositiony) >= 0.15f && Rruntime <= 1)
                 {
                     Rsuccess = true;
                     if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
@@ -318,12 +320,14 @@ public class valuerecueve : NetworkBehaviour
         if (handRvalue.Value == 4)
         {
             Rfirsttime = true;
+            Rruntime = 0;
             Rsuccess = false;
             buildR = true;
 
         }
         if (handLvalue.Value == 3)
-        {        
+        {
+            Lruntime += Time.deltaTime;
             if (buildL)
             {
                 if (Lfirsttime)
@@ -332,7 +336,7 @@ public class valuerecueve : NetworkBehaviour
                     Lfirsttime = false;
                 }
 
-                if ((handLy.Value - Lbuildupfirstpositiony) >= 0.15f)
+                if ((handLy.Value - Lbuildupfirstpositiony) >= 0.15f && Lruntime <= 1)
                 {
                     Lsuccess = true;
                     if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
@@ -352,7 +356,7 @@ public class valuerecueve : NetworkBehaviour
             Lfirsttime = true;
             Lsuccess = false;
             buildL = true;
-            
+            Lruntime = 0;
         }
 
         if (handRvalue.Value == 5)
@@ -405,7 +409,11 @@ public class valuerecueve : NetworkBehaviour
             if (GameObject.FindWithTag("building"))
             {
                 Destroy(GameObject.FindWithTag("building"));
-            }                     
+            }
+            if (GameObject.FindWithTag("buildinglo"))
+            {
+                Destroy(GameObject.FindWithTag("buildinglo"));
+            }
         }
 
     }
