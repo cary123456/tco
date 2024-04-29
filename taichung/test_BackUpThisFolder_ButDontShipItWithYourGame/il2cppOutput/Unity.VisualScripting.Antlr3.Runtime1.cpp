@@ -144,14 +144,10 @@ struct Dictionary_2_t5B5B38BB06341F50E1C75FB53208A2A66CAE57F7;
 struct IList_1_tD3E9B3A85068432AAB5C8D67C8B4E4B1FD9EE2DC;
 // System.Collections.Generic.IList`1<System.Object>
 struct IList_1_t6EE90D273EFCF5E7E4C37FAB712E70BB6F1B4BFF;
-// System.Collections.Generic.IList`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct IList_1_t8AC59FFD0F90EC2DAD4C3FA39B2A5851F9D2987A;
 // Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.VisualScripting.Antlr3.Runtime.IToken>
 struct RewriteRuleElementStream_1_t8EDC675AA1FBF4804CEDD8FB0964D889A107F908;
 // Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<System.Object>
 struct RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58;
-// Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC;
 // System.WeakReference`1<System.Text.RegularExpressions.RegexReplacement>
 struct WeakReference_1_tDC6E83496181D1BAFA3B89CBC00BCD0B64450257;
 // Unity.VisualScripting.Antlr3.Runtime.BitSet[]
@@ -1141,18 +1137,18 @@ struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248  : public RuntimeA
 };
 
 
-// System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RewriteRuleElementStream_1__ctor_mBAE723C9B1BCA16F0B413DF94F43C014C8EE2BF5_gshared (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, const RuntimeMethod* method) ;
-// System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String,T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RewriteRuleElementStream_1__ctor_mF18971872CD45CB40F95F19935ECF7CFFB3020BD_gshared (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___oneElement2, const RuntimeMethod* method) ;
-// System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String,System.Collections.Generic.IList`1<T>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RewriteRuleElementStream_1__ctor_mA3D9E7EA941AFDF33BC493EFE0FB3C252B38CA04_gshared (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, RuntimeObject* ___elements2, const RuntimeMethod* method) ;
-// System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String,System.Collections.IList)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RewriteRuleElementStream_1__ctor_m72B0EB696C8091519DEFD72422E4848E6147E74F_gshared (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, RuntimeObject* ___elements2, const RuntimeMethod* method) ;
-// System.Object Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::_Next()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RewriteRuleElementStream_1__Next_mA7313E1AB55A0FDDB471F892A124D89DD73D694F_gshared (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC* __this, const RuntimeMethod* method) ;
-// System.Int32 Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Count()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RewriteRuleElementStream_1_get_Count_mF9F7A337572B46D525DE2DDE920D219E4C81385B_gshared (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC* __this, const RuntimeMethod* method) ;
+// System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<System.Object>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RewriteRuleElementStream_1__ctor_m183EA8306A2421FFA71B1ACD18D942B4E64C6B42_gshared (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, const RuntimeMethod* method) ;
+// System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<System.Object>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String,T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RewriteRuleElementStream_1__ctor_m49126BC51F1EECAB950A29F8068B471E02114CBE_gshared (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, RuntimeObject* ___oneElement2, const RuntimeMethod* method) ;
+// System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<System.Object>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String,System.Collections.Generic.IList`1<T>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RewriteRuleElementStream_1__ctor_mFD5E9B5CED50BED7746C1978ED2E74E43B83B0E6_gshared (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, RuntimeObject* ___elements2, const RuntimeMethod* method) ;
+// System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<System.Object>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String,System.Collections.IList)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RewriteRuleElementStream_1__ctor_mFFEF779612E220BFB4FF9AFC0A1DDEE837D7A900_gshared (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, RuntimeObject* ___elements2, const RuntimeMethod* method) ;
+// System.Object Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<System.Object>::_Next()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RewriteRuleElementStream_1__Next_m47F177E6301C3202A0BAC568890430873A3D0675_gshared (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58* __this, const RuntimeMethod* method) ;
+// System.Int32 Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<System.Object>::get_Count()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RewriteRuleElementStream_1_get_Count_mB061A82734562491F2E1C06AA267C4BF1C7AFB93_gshared (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58* __this, const RuntimeMethod* method) ;
 
 // System.Void System.Object::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
@@ -1177,22 +1173,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReplaceOp__ctor_m79D2EA24E0EE76F2E4678D1
 // System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<System.Object>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String)
 inline void RewriteRuleElementStream_1__ctor_m183EA8306A2421FFA71B1ACD18D942B4E64C6B42 (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, const RuntimeMethod* method)
 {
-	((  void (*) (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*, RuntimeObject*, String_t*, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_mBAE723C9B1BCA16F0B413DF94F43C014C8EE2BF5_gshared)((RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*)__this, ___adaptor0, ___elementDescription1, method);
+	((  void (*) (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58*, RuntimeObject*, String_t*, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_m183EA8306A2421FFA71B1ACD18D942B4E64C6B42_gshared)(__this, ___adaptor0, ___elementDescription1, method);
 }
 // System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<System.Object>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String,T)
 inline void RewriteRuleElementStream_1__ctor_m49126BC51F1EECAB950A29F8068B471E02114CBE (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, RuntimeObject* ___oneElement2, const RuntimeMethod* method)
 {
-	((  void (*) (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*, RuntimeObject*, String_t*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_mF18971872CD45CB40F95F19935ECF7CFFB3020BD_gshared)((RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*)__this, ___adaptor0, ___elementDescription1, (Il2CppFullySharedGenericAny)___oneElement2, method);
+	((  void (*) (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58*, RuntimeObject*, String_t*, RuntimeObject*, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_m49126BC51F1EECAB950A29F8068B471E02114CBE_gshared)(__this, ___adaptor0, ___elementDescription1, ___oneElement2, method);
 }
 // System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<System.Object>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String,System.Collections.Generic.IList`1<T>)
 inline void RewriteRuleElementStream_1__ctor_mFD5E9B5CED50BED7746C1978ED2E74E43B83B0E6 (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, RuntimeObject* ___elements2, const RuntimeMethod* method)
 {
-	((  void (*) (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*, RuntimeObject*, String_t*, RuntimeObject*, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_mA3D9E7EA941AFDF33BC493EFE0FB3C252B38CA04_gshared)((RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*)__this, ___adaptor0, ___elementDescription1, (RuntimeObject*)___elements2, method);
+	((  void (*) (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58*, RuntimeObject*, String_t*, RuntimeObject*, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_mFD5E9B5CED50BED7746C1978ED2E74E43B83B0E6_gshared)(__this, ___adaptor0, ___elementDescription1, ___elements2, method);
 }
 // System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<System.Object>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String,System.Collections.IList)
 inline void RewriteRuleElementStream_1__ctor_mFFEF779612E220BFB4FF9AFC0A1DDEE837D7A900 (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, RuntimeObject* ___elements2, const RuntimeMethod* method)
 {
-	((  void (*) (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*, RuntimeObject*, String_t*, RuntimeObject*, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_m72B0EB696C8091519DEFD72422E4848E6147E74F_gshared)((RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*)__this, ___adaptor0, ___elementDescription1, ___elements2, method);
+	((  void (*) (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58*, RuntimeObject*, String_t*, RuntimeObject*, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_mFFEF779612E220BFB4FF9AFC0A1DDEE837D7A900_gshared)(__this, ___adaptor0, ___elementDescription1, ___elements2, method);
 }
 // System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleSubtreeStream/ProcessHandler::.ctor(System.Object,System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcessHandler__ctor_m84789C054378ED9ECF54610B85831E692FC144A8 (ProcessHandler_t998EC2E63E9F33809DC2A10E945796B4A384F402* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
@@ -1203,14 +1199,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RewriteRuleSubtreeStream_RequiresDuplica
 // System.Object Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<System.Object>::_Next()
 inline RuntimeObject* RewriteRuleElementStream_1__Next_m47F177E6301C3202A0BAC568890430873A3D0675 (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58* __this, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*, const RuntimeMethod*))RewriteRuleElementStream_1__Next_mA7313E1AB55A0FDDB471F892A124D89DD73D694F_gshared)((RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*)__this, method);
+	return ((  RuntimeObject* (*) (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58*, const RuntimeMethod*))RewriteRuleElementStream_1__Next_m47F177E6301C3202A0BAC568890430873A3D0675_gshared)(__this, method);
 }
 // System.Object Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleSubtreeStream/ProcessHandler::Invoke(System.Object)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* ProcessHandler_Invoke_mD0D7D6FDE173A7DE2C5ECBCFDB863000188E00F4_inline (ProcessHandler_t998EC2E63E9F33809DC2A10E945796B4A384F402* __this, RuntimeObject* ___o0, const RuntimeMethod* method) ;
 // System.Int32 Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<System.Object>::get_Count()
 inline int32_t RewriteRuleElementStream_1_get_Count_mB061A82734562491F2E1C06AA267C4BF1C7AFB93 (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*, const RuntimeMethod*))RewriteRuleElementStream_1_get_Count_mF9F7A337572B46D525DE2DDE920D219E4C81385B_gshared)((RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*)__this, method);
+	return ((  int32_t (*) (RewriteRuleElementStream_1_t190254BBE557374B160D7ECB71F1A23264F16D58*, const RuntimeMethod*))RewriteRuleElementStream_1_get_Count_mB061A82734562491F2E1C06AA267C4BF1C7AFB93_gshared)(__this, method);
 }
 // System.Object Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleSubtreeStream::Dup(System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RewriteRuleSubtreeStream_Dup_m99A1C61ED6D9BCC40C125AE7D685164D490BE10A (RewriteRuleSubtreeStream_t4793D69FEBEFC9D5CF762AB98EDEE8C2BC21CC78* __this, RuntimeObject* ___el0, const RuntimeMethod* method) ;
@@ -1253,27 +1249,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Regex__ctor_mE3996C71B04A4A6845745D01C93
 // System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.VisualScripting.Antlr3.Runtime.IToken>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String)
 inline void RewriteRuleElementStream_1__ctor_m4D0205C3A7FB4E480ECA7D5B64AB069C75AAEC4A (RewriteRuleElementStream_1_t8EDC675AA1FBF4804CEDD8FB0964D889A107F908* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, const RuntimeMethod* method)
 {
-	((  void (*) (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*, RuntimeObject*, String_t*, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_mBAE723C9B1BCA16F0B413DF94F43C014C8EE2BF5_gshared)((RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*)__this, ___adaptor0, ___elementDescription1, method);
+	((  void (*) (RewriteRuleElementStream_1_t8EDC675AA1FBF4804CEDD8FB0964D889A107F908*, RuntimeObject*, String_t*, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_m183EA8306A2421FFA71B1ACD18D942B4E64C6B42_gshared)(__this, ___adaptor0, ___elementDescription1, method);
 }
 // System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.VisualScripting.Antlr3.Runtime.IToken>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String,T)
 inline void RewriteRuleElementStream_1__ctor_m61FA582637EE1FED9AF128C0F0AA0457A15D8C19 (RewriteRuleElementStream_1_t8EDC675AA1FBF4804CEDD8FB0964D889A107F908* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, RuntimeObject* ___oneElement2, const RuntimeMethod* method)
 {
-	((  void (*) (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*, RuntimeObject*, String_t*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_mF18971872CD45CB40F95F19935ECF7CFFB3020BD_gshared)((RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*)__this, ___adaptor0, ___elementDescription1, (Il2CppFullySharedGenericAny)___oneElement2, method);
+	((  void (*) (RewriteRuleElementStream_1_t8EDC675AA1FBF4804CEDD8FB0964D889A107F908*, RuntimeObject*, String_t*, RuntimeObject*, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_m49126BC51F1EECAB950A29F8068B471E02114CBE_gshared)(__this, ___adaptor0, ___elementDescription1, ___oneElement2, method);
 }
 // System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.VisualScripting.Antlr3.Runtime.IToken>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String,System.Collections.Generic.IList`1<T>)
 inline void RewriteRuleElementStream_1__ctor_mC9219E8EE031B3BA80B3E884F7DC4D088A03A962 (RewriteRuleElementStream_1_t8EDC675AA1FBF4804CEDD8FB0964D889A107F908* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, RuntimeObject* ___elements2, const RuntimeMethod* method)
 {
-	((  void (*) (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*, RuntimeObject*, String_t*, RuntimeObject*, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_mA3D9E7EA941AFDF33BC493EFE0FB3C252B38CA04_gshared)((RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*)__this, ___adaptor0, ___elementDescription1, (RuntimeObject*)___elements2, method);
+	((  void (*) (RewriteRuleElementStream_1_t8EDC675AA1FBF4804CEDD8FB0964D889A107F908*, RuntimeObject*, String_t*, RuntimeObject*, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_mFD5E9B5CED50BED7746C1978ED2E74E43B83B0E6_gshared)(__this, ___adaptor0, ___elementDescription1, ___elements2, method);
 }
 // System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.VisualScripting.Antlr3.Runtime.IToken>::.ctor(Unity.VisualScripting.Antlr3.Runtime.Tree.ITreeAdaptor,System.String,System.Collections.IList)
 inline void RewriteRuleElementStream_1__ctor_m6EF1D42ED24F3E6758E8C56C428E50BB167FDB87 (RewriteRuleElementStream_1_t8EDC675AA1FBF4804CEDD8FB0964D889A107F908* __this, RuntimeObject* ___adaptor0, String_t* ___elementDescription1, RuntimeObject* ___elements2, const RuntimeMethod* method)
 {
-	((  void (*) (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*, RuntimeObject*, String_t*, RuntimeObject*, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_m72B0EB696C8091519DEFD72422E4848E6147E74F_gshared)((RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*)__this, ___adaptor0, ___elementDescription1, ___elements2, method);
+	((  void (*) (RewriteRuleElementStream_1_t8EDC675AA1FBF4804CEDD8FB0964D889A107F908*, RuntimeObject*, String_t*, RuntimeObject*, const RuntimeMethod*))RewriteRuleElementStream_1__ctor_mFFEF779612E220BFB4FF9AFC0A1DDEE837D7A900_gshared)(__this, ___adaptor0, ___elementDescription1, ___elements2, method);
 }
 // System.Object Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.VisualScripting.Antlr3.Runtime.IToken>::_Next()
 inline RuntimeObject* RewriteRuleElementStream_1__Next_m359F8DFAD0DBEC93EEF35635A619C977C3A2859A (RewriteRuleElementStream_1_t8EDC675AA1FBF4804CEDD8FB0964D889A107F908* __this, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (/*Unity.VisualScripting.Antlr3.Runtime.Tree.RewriteRuleElementStream`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*, const RuntimeMethod*))RewriteRuleElementStream_1__Next_mA7313E1AB55A0FDDB471F892A124D89DD73D694F_gshared)((RewriteRuleElementStream_1_tB57537798EF73FEDA2BCCE90886C21B396C24AAC*)__this, method);
+	return ((  RuntimeObject* (*) (RewriteRuleElementStream_1_t8EDC675AA1FBF4804CEDD8FB0964D889A107F908*, const RuntimeMethod*))RewriteRuleElementStream_1__Next_m47F177E6301C3202A0BAC568890430873A3D0675_gshared)(__this, method);
 }
 // System.Void Unity.VisualScripting.Antlr3.Runtime.Tree.BaseTree::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseTree__ctor_m9BBF12D742E39E6AB8F68D47E5DB68CC882A37DF (BaseTree_t93C88620BBC74C7117CD89A87723D83057772909* __this, const RuntimeMethod* method) ;

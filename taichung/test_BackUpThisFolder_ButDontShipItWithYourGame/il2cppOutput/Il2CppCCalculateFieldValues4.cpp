@@ -41697,16 +41697,16 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable12603[4] =
 	static_cast<int32_t>(offsetof(IPCNetworkInterface_t1BB234D77DF8EE2C53817E1A38050E99BC391FC9, ___m_LocalEndPoint_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(IPCNetworkInterface_t1BB234D77DF8EE2C53817E1A38050E99BC391FC9_StaticFields, ___BeginSendMessageFunctionPointer_1)),static_cast<int32_t>(offsetof(IPCNetworkInterface_t1BB234D77DF8EE2C53817E1A38050E99BC391FC9_StaticFields, ___EndSendMessageFunctionPointer_2)),static_cast<int32_t>(offsetof(IPCNetworkInterface_t1BB234D77DF8EE2C53817E1A38050E99BC391FC9_StaticFields, ___AbortSendMessageFunctionPointer_3)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable12604[1] = 
 {
-	static_cast<int32_t>(offsetof(U3CdecodeTableU3Ee__FixedBuffer_tCA6EAC94A7B20B70126671A845A784BF07CC7B63, ___FixedElementField_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
+	static_cast<int32_t>(offsetof(U3CbucketSizesU3Ee__FixedBuffer_t3FBB39E540F50C5666952D5954C68072D6416ADB, ___FixedElementField_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable12605[1] = 
 {
 	static_cast<int32_t>(offsetof(U3CbucketOffsetsU3Ee__FixedBuffer_tA490148A243E7BC4B93C953521B4318ABC0763D1, ___FixedElementField_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable12606[1] = 
 {
-	static_cast<int32_t>(offsetof(U3CbucketSizesU3Ee__FixedBuffer_t3FBB39E540F50C5666952D5954C68072D6416ADB, ___FixedElementField_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
+	static_cast<int32_t>(offsetof(U3CencodeTableU3Ee__FixedBuffer_t3C9EB9210A639D1E74F17615C4B55D748C39D6B8, ___FixedElementField_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable12607[1] = 
 {
-	static_cast<int32_t>(offsetof(U3CencodeTableU3Ee__FixedBuffer_t3C9EB9210A639D1E74F17615C4B55D748C39D6B8, ___FixedElementField_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
+	static_cast<int32_t>(offsetof(U3CdecodeTableU3Ee__FixedBuffer_tCA6EAC94A7B20B70126671A845A784BF07CC7B63, ___FixedElementField_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable12608[11] = 
 {
 	static_cast<int32_t>(offsetof(NetworkCompressionModel_t753CD51D584E267C32A8C0680B5144201106F043_StaticFields, ___k_BucketSizes_0)),static_cast<int32_t>(offsetof(NetworkCompressionModel_t753CD51D584E267C32A8C0680B5144201106F043_StaticFields, ___k_BucketOffsets_1)),static_cast<int32_t>(offsetof(NetworkCompressionModel_t753CD51D584E267C32A8C0680B5144201106F043_StaticFields, ___k_FirstBucketCandidate_2)),static_cast<int32_t>(offsetof(NetworkCompressionModel_t753CD51D584E267C32A8C0680B5144201106F043_StaticFields, ___k_DefaultModelData_3)),0,0,0,static_cast<int32_t>(offsetof(NetworkCompressionModel_t753CD51D584E267C32A8C0680B5144201106F043, ___encodeTable_7)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(NetworkCompressionModel_t753CD51D584E267C32A8C0680B5144201106F043, ___decodeTable_8)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(NetworkCompressionModel_t753CD51D584E267C32A8C0680B5144201106F043, ___bucketSizes_9)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(NetworkCompressionModel_t753CD51D584E267C32A8C0680B5144201106F043, ___bucketOffsets_10)) + static_cast<int32_t>(sizeof(RuntimeObject)),};

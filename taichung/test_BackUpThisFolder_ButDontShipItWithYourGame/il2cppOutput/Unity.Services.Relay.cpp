@@ -187,17 +187,6 @@ struct GenericInterfaceFuncInvoker0
 		return ((Func)invokeData.methodPtr)(obj, invokeData.method);
 	}
 };
-template <typename T1>
-struct InvokerActionInvoker1;
-template <typename T1>
-struct InvokerActionInvoker1<T1*>
-{
-	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1* p1)
-	{
-		void* params[1] = { p1 };
-		method->invoker_method(methodPtr, method, obj, params, params[0]);
-	}
-};
 template <typename R, typename T1>
 struct InvokerFuncInvoker1;
 template <typename R, typename T1>
@@ -229,8 +218,6 @@ struct InvokerFuncInvoker2<R, T1*, T2*>
 struct Action_1_tE8693FF0E67CDBA52BAFB211BFF1844D076ABAFB;
 // System.Action`1<System.Object>
 struct Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87;
-// System.Action`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99;
 // System.Threading.AsyncLocal`1<System.Globalization.CultureInfo>
 struct AsyncLocal_1_t1D3339EA4C8650D2DEDDF9553E5C932B3DC2CCFD;
 // System.Runtime.CompilerServices.ConditionalWeakTable`2<System.Threading.Tasks.TaskScheduler,System.Object>
@@ -241,6 +228,8 @@ struct Dictionary_2_t87EDE08B2E48F793A22DE50D6B3CC2E7EBB2DB54;
 struct Dictionary_2_t403063CE4960B4F46C688912237C6A27E550FF55;
 // System.Collections.Generic.Dictionary`2<System.Int64,System.Boolean>
 struct Dictionary_2_tCF06E70C571839D7107A1DCD7514332D33872BFF;
+// System.Collections.Generic.Dictionary`2<System.Object,System.Object>
+struct Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA;
 // System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Unity.Services.Relay.Http.IDeserializable>>
 struct Dictionary_2_t66CFF37FE2B1E7DF99AEE687B22CC41C6ECA1CD7;
 // System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.Object>>
@@ -253,8 +242,6 @@ struct Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710;
 struct Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83;
 // System.Collections.Generic.Dictionary`2<System.String,System.Type>
 struct Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A;
-// System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E;
 // System.Collections.Generic.Dictionary`2<System.Text.RegularExpressions.Regex/CachedCodeEntryKey,System.Text.RegularExpressions.Regex/CachedCodeEntry>
 struct Dictionary_2_t5B5B38BB06341F50E1C75FB53208A2A66CAE57F7;
 // System.EventHandler`1<Newtonsoft.Json.Serialization.ErrorEventArgs>
@@ -265,10 +252,12 @@ struct EventHandler_1_tE698654C3F437D97ABCCA3FD0AD8F86E776DC77A;
 struct Func_1_t0B92800573CA611EC5FA295A7D39AFC5C1E69EF5;
 // System.Func`1<Newtonsoft.Json.Serialization.IReferenceResolver>
 struct Func_1_t78E8B13F3C7D6CC3EB821B4F5D26999D062417E2;
-// System.Func`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431;
+// System.Func`1<System.Object>
+struct Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4;
 // System.Func`1<System.Threading.Tasks.Task/ContingentProperties>
 struct Func_1_tD59A12717D79BFB403BF973694B1BE5B85474BD1;
+// System.Func`2<System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>,System.Object>
+struct Func_2_tF42287527472FA89789873F068A87C60A00EC7D3;
 // System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>,System.Collections.Generic.List`1<Unity.Services.Relay.Http.IDeserializable>>
 struct Func_2_t6CE3293A1CAC114E2E4F0CB65D4E6AA63C88BA9E;
 // System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>,System.String>
@@ -281,16 +270,18 @@ struct Func_2_tCB5E9F24E1D4A5E6665E1C163977F878E203DD5B;
 struct Func_2_t3DFD6601F8126DAA0E5F41892EDA93908FB09733;
 // System.Func`2<System.Object,Unity.Services.Relay.Http.IDeserializable>
 struct Func_2_tC578F1D6EE4934C7DBF8135A0B659C18B2EBF9B6;
+// System.Func`2<System.Object,System.Object>
+struct Func_2_tACBF5A1656250800CE861707354491F0611F6624;
 // System.Func`2<Unity.Services.Relay.Models.Region,System.String>
 struct Func_2_t57C70FF13576866310EBB708D0C027912FDBEFA5;
-// System.Func`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0;
 // System.Collections.Generic.IDictionary`2<System.Int64,System.Boolean>
 struct IDictionary_2_t82577BC504E853384F0E2CEB9AC076A543599C23;
+// System.Collections.Generic.IDictionary`2<System.Object,System.Object>
+struct IDictionary_2_t823399AD16F88CDEB25958D8CB61771376A5ADED;
 // System.Collections.Generic.IDictionary`2<System.String,System.String>
 struct IDictionary_2_t51DBA2F8AFDC8E5CC588729B12034B8C4D30B0AF;
-// System.Collections.Generic.IDictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct IDictionary_2_t4D3B65115D85F2C21975A2BBF4A23860F8BCD02F;
+// System.Collections.Generic.IEnumerable`1<System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>>
+struct IEnumerable_1_t60509816D8966320E2A9660FC756B6C440ADFC50;
 // System.Collections.Generic.IEnumerable`1<System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>>
 struct IEnumerable_1_tD1C6F697DB43B121B60D1B0D07A56EA43995E0EB;
 // System.Collections.Generic.IEnumerable`1<System.Collections.Generic.KeyValuePair`2<System.String,System.Object>>
@@ -311,8 +302,6 @@ struct IEnumerable_1_tF0D2B63EE243D378F248B44B99CA8DA6152A01A0;
 struct IEnumerable_1_t92D621C321849A3DA518F081C4BE77A04B65C96B;
 // System.Collections.Generic.IEnumerable`1<System.String>
 struct IEnumerable_1_t349E66EC5F09B881A8E52EE40A1AB9EC60E08E44;
-// System.Collections.Generic.IEnumerable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct IEnumerable_1_t29E7244AE33B71FA0981E50D5BC73B7938F35C66;
 // System.Collections.Generic.IEqualityComparer`1<System.Int64>
 struct IEqualityComparer_1_tDBA96AAC21C7C21D26B68A9F19E6AE4E015D2316;
 // System.Collections.Generic.IEqualityComparer`1<System.String>
@@ -323,6 +312,8 @@ struct IList_1_t106D4C1340745E38431865BBEA6AE170A4713431;
 struct IList_1_t8B8BA2D7CD2450579F5F6BCDE9C164F15F8BAB7D;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.Int64,System.Boolean>
 struct KeyCollection_t9EF74C041A3EBB05C9706A36D5D7777041582F26;
+// System.Collections.Generic.Dictionary`2/KeyCollection<System.Object,System.Object>
+struct KeyCollection_tB45A861D090B15129521119AE48ED3813820A974;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.String,System.Collections.Generic.List`1<Unity.Services.Relay.Http.IDeserializable>>
 struct KeyCollection_t1B199A2B8D009C4986D17226771888F2C4785AEA;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.String,System.Collections.Generic.List`1<System.Object>>
@@ -335,8 +326,6 @@ struct KeyCollection_tE66790F09E854C19C7F612BEAD203AE626E90A36;
 struct KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.String,System.Type>
 struct KeyCollection_t0E4390205378461F38BE857216C35DA687D245FA;
-// System.Collections.Generic.Dictionary`2/KeyCollection<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55;
 // System.Collections.Generic.List`1<System.Collections.Generic.List`1<Unity.Services.Relay.Http.IDeserializable>>
 struct List_1_t4D908A8C4666E33EC21E759B65F30DBB8139E306;
 // System.Collections.Generic.List`1<System.Collections.Generic.List`1<System.Object>>
@@ -363,30 +352,28 @@ struct List_1_tDCF1E8D495EC3802AF7326575AF3416A95214ECF;
 struct List_1_t2312067CBBF8C43EDBB74AEE23EC8CE452741A8D;
 // System.Collections.Generic.List`1<System.String>
 struct List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD;
-// System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A;
 // System.Predicate`1<System.Object>
 struct Predicate_1_t8342C85FF4E41CD1F7024AC0CDC3E5312A32CB12;
 // System.Predicate`1<System.Threading.Tasks.Task>
 struct Predicate_1_t7F48518B008C1472339EEEBABA3DE203FE1F26ED;
 // System.Collections.Generic.Queue`1<System.Action>
 struct Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA;
-// System.Collections.Generic.Queue`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41;
+// System.Collections.Generic.Queue`1<System.Object>
+struct Queue_1_tE9EF546915795972C3BFD68FBB8FA859D3BAF3B5;
 // Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.AllocateResponseBody>
 struct Response_1_t4486EDA0C78BD630292FD1F8B9445CADF7522AFE;
 // Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinCodeResponseBody>
 struct Response_1_t0C013828111EA0F4BA3208D342FA2F3E0696C213;
 // Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinResponseBody>
 struct Response_1_t0A619C882664621AF7A8CAC8C0B372E738E01563;
+// Unity.Services.Relay.Response`1<System.Object>
+struct Response_1_t435DDF1DF675362E151493577E6F0183A5DFEEA0;
 // Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.RegionsResponseBody>
 struct Response_1_t4F809C3ADBA3A59F1BE5090F3D36B53190C0D7D9;
-// Unity.Services.Relay.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E;
 // System.Threading.Tasks.TaskCompletionSource`1<Unity.Services.Relay.Http.HttpClientResponse>
 struct TaskCompletionSource_1_tC556D57B117C2B8E8D3A0C766743A712D974ECCE;
-// System.Threading.Tasks.TaskCompletionSource`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970;
+// System.Threading.Tasks.TaskCompletionSource`1<System.Object>
+struct TaskCompletionSource_1_tB4EF81F69CCF7C4F0D956F9B26127C0634A24A37;
 // System.Threading.Tasks.TaskFactory`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>
 struct TaskFactory_1_t6CAD101A44E01F66006F7FEFE2C83B27D927AA50;
 // System.Threading.Tasks.TaskFactory`1<System.Collections.Generic.List`1<Unity.Services.Relay.Models.Region>>
@@ -407,10 +394,10 @@ struct TaskFactory_1_t71911D19BDC8CCC1B4259616223540952640D028;
 struct TaskFactory_1_t6805EED440F501468101C0EDAB76109EC6D8AE71;
 // System.Threading.Tasks.TaskFactory`1<Unity.Services.Relay.Models.JoinAllocation>
 struct TaskFactory_1_tB8E1155F824A4E3EDE35919801D9EC3CBAD71ADE;
+// System.Threading.Tasks.TaskFactory`1<System.Object>
+struct TaskFactory_1_t6F188FE70F3006B0386002E392B799D85100732B;
 // System.Threading.Tasks.TaskFactory`1<System.String>
 struct TaskFactory_1_t7ABCD7F9503486A075E0B072E6EB95956CFE3106;
-// System.Threading.Tasks.TaskFactory`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct TaskFactory_1_tF4CDC5BDA20AE9BD3F65B6146CDCD3F753003E1D;
 // System.Threading.Tasks.Task`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>
 struct Task_1_t4A6397D54E9A2AC6B11B022C4E78657D6FF68D2A;
 // System.Threading.Tasks.Task`1<System.Collections.Generic.List`1<Unity.Services.Relay.Models.Region>>
@@ -433,10 +420,10 @@ struct Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043D70;
 struct Task_1_t4C228DE57804012969575431CFF12D57C875552D;
 // System.Threading.Tasks.Task`1<Unity.Services.Relay.Models.JoinAllocation>
 struct Task_1_t50529E0258FC07E21B5B77E4D74251F095B976FC;
+// System.Threading.Tasks.Task`1<System.Object>
+struct Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2;
 // System.Threading.Tasks.Task`1<System.String>
 struct Task_1_t3D7638C82ED289AF156EDBAE76842D8DF4C4A9E0;
-// System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.Int64,System.Boolean>
 struct ValueCollection_tD1BDCB78C7798257BAE7A6161EB6F235999D6CBA;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.String,System.Collections.Generic.List`1<Unity.Services.Relay.Http.IDeserializable>>
@@ -511,8 +498,6 @@ struct StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF;
 struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
 // System.Type[]
 struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
-// Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType[]
-struct __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC;
 // System.Action
 struct Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07;
 // System.ComponentModel.AddingNewEventHandler
@@ -1333,7 +1318,6 @@ struct JsonConverterU5BU5D_tF69203E66D4FCB82A6F64A24EF7785E26E9E957E;
 struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
 struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
 struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
-struct __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC;
 
 IL2CPP_EXTERN_C_BEGIN
 IL2CPP_EXTERN_C_END
@@ -1524,15 +1508,15 @@ struct Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A  : public RuntimeO
 	RuntimeObject* ____syncRoot_9;
 };
 
-// System.EmptyArray`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct EmptyArray_1_tF69A5F6BAD1150A16C4C98B346D6122FE3751C80  : public RuntimeObject
+// System.EmptyArray`1<System.Object>
+struct EmptyArray_1_tDF0DD7256B115243AA6BD5558417387A734240EE  : public RuntimeObject
 {
 };
 
-struct EmptyArray_1_tF69A5F6BAD1150A16C4C98B346D6122FE3751C80_StaticFields
+struct EmptyArray_1_tDF0DD7256B115243AA6BD5558417387A734240EE_StaticFields
 {
 	// T[] System.EmptyArray`1::Value
-	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___Value_0;
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___Value_0;
 };
 
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.String,System.String>
@@ -1751,25 +1735,6 @@ struct List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_StaticFields
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___s_emptyArray_5;
 };
 
-// System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A  : public RuntimeObject
-{
-	// T[] System.Collections.Generic.List`1::_items
-	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ____items_1;
-	// System.Int32 System.Collections.Generic.List`1::_size
-	int32_t ____size_2;
-	// System.Int32 System.Collections.Generic.List`1::_version
-	int32_t ____version_3;
-	// System.Object System.Collections.Generic.List`1::_syncRoot
-	RuntimeObject* ____syncRoot_4;
-};
-
-struct List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A_StaticFields
-{
-	// T[] System.Collections.Generic.List`1::s_emptyArray
-	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___s_emptyArray_5;
-};
-
 // System.Collections.Generic.Queue`1<System.Action>
 struct Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA  : public RuntimeObject
 {
@@ -1787,11 +1752,11 @@ struct Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA  : public RuntimeObject
 	RuntimeObject* ____syncRoot_5;
 };
 
-// System.Collections.Generic.Queue`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41  : public RuntimeObject
+// System.Collections.Generic.Queue`1<System.Object>
+struct Queue_1_tE9EF546915795972C3BFD68FBB8FA859D3BAF3B5  : public RuntimeObject
 {
 	// T[] System.Collections.Generic.Queue`1::_array
-	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ____array_0;
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ____array_0;
 	// System.Int32 System.Collections.Generic.Queue`1::_head
 	int32_t ____head_1;
 	// System.Int32 System.Collections.Generic.Queue`1::_tail
@@ -1811,11 +1776,11 @@ struct TaskCompletionSource_1_tC556D57B117C2B8E8D3A0C766743A712D974ECCE  : publi
 	Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043D70* ____task_0;
 };
 
-// System.Threading.Tasks.TaskCompletionSource`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970  : public RuntimeObject
+// System.Threading.Tasks.TaskCompletionSource`1<System.Object>
+struct TaskCompletionSource_1_tB4EF81F69CCF7C4F0D956F9B26127C0634A24A37  : public RuntimeObject
 {
 	// System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskCompletionSource`1::_task
-	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* ____task_0;
+	Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* ____task_0;
 };
 
 // Unity.Services.Relay.Models.AllocateResponseBody
@@ -2639,6 +2604,19 @@ struct Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A
 	RuntimeObject* ____current_3;
 };
 
+// System.Collections.Generic.Queue`1/Enumerator<System.Object>
+struct Enumerator_t30E3290EE12437374037B3CF0EE4D614F96D030A 
+{
+	// System.Collections.Generic.Queue`1<T> System.Collections.Generic.Queue`1/Enumerator::_q
+	Queue_1_tE9EF546915795972C3BFD68FBB8FA859D3BAF3B5* ____q_0;
+	// System.Int32 System.Collections.Generic.Queue`1/Enumerator::_version
+	int32_t ____version_1;
+	// System.Int32 System.Collections.Generic.Queue`1/Enumerator::_index
+	int32_t ____index_2;
+	// T System.Collections.Generic.Queue`1/Enumerator::_currentElement
+	RuntimeObject* ____currentElement_3;
+};
+
 // System.Collections.Generic.List`1/Enumerator<System.String>
 struct Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1 
 {
@@ -2652,11 +2630,18 @@ struct Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1
 	String_t* ____current_3;
 };
 
-// System.Collections.Generic.List`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-typedef Il2CppFullySharedGenericStruct Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF;
-
-// System.Collections.Generic.Queue`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-typedef Il2CppFullySharedGenericStruct Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C;
+// System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.Object,System.Object>
+struct Enumerator_t65CC956745B1180C04CE6C6910FB27C5F32BB9FF 
+{
+	// System.Collections.Generic.Dictionary`2<TKey,TValue> System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator::_dictionary
+	Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* ____dictionary_0;
+	// System.Int32 System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator::_index
+	int32_t ____index_1;
+	// System.Int32 System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator::_version
+	int32_t ____version_2;
+	// TKey System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator::_currentKey
+	RuntimeObject* ____currentKey_3;
+};
 
 // System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.String,System.String>
 struct Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867 
@@ -2671,9 +2656,6 @@ struct Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867
 	String_t* ____currentKey_3;
 };
 
-// System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-typedef Il2CppFullySharedGenericStruct Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977;
-
 // System.Collections.Generic.KeyValuePair`2<System.Int64,System.Boolean>
 struct KeyValuePair_2_tB238689916B08B0CFF54232EB53E746022CA86A2 
 {
@@ -2681,6 +2663,15 @@ struct KeyValuePair_2_tB238689916B08B0CFF54232EB53E746022CA86A2
 	int64_t ___key_0;
 	// TValue System.Collections.Generic.KeyValuePair`2::value
 	bool ___value_1;
+};
+
+// System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>
+struct KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 
+{
+	// TKey System.Collections.Generic.KeyValuePair`2::key
+	RuntimeObject* ___key_0;
+	// TValue System.Collections.Generic.KeyValuePair`2::value
+	RuntimeObject* ___value_1;
 };
 
 // System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>
@@ -2709,9 +2700,6 @@ struct KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A
 	// TValue System.Collections.Generic.KeyValuePair`2::value
 	String_t* ___value_1;
 };
-
-// System.Collections.Generic.KeyValuePair`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-typedef Il2CppFullySharedGenericStruct KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669;
 
 // Unity.Collections.NativeArray`1<System.Byte>
 struct NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF 
@@ -2916,15 +2904,19 @@ struct Response_1_t0A619C882664621AF7A8CAC8C0B372E738E01563  : public Response_t
 	JoinResponseBody_t454EADE5E5AEB2A51D686C3BE77266CAEBD7A9E3* ___U3CResultU3Ek__BackingField_2;
 };
 
+// Unity.Services.Relay.Response`1<System.Object>
+struct Response_1_t435DDF1DF675362E151493577E6F0183A5DFEEA0  : public Response_t14B8A8926CB1FF6DD3BA439E9FD475C017880AFE
+{
+	// T Unity.Services.Relay.Response`1::<Result>k__BackingField
+	RuntimeObject* ___U3CResultU3Ek__BackingField_2;
+};
+
 // Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.RegionsResponseBody>
 struct Response_1_t4F809C3ADBA3A59F1BE5090F3D36B53190C0D7D9  : public Response_t14B8A8926CB1FF6DD3BA439E9FD475C017880AFE
 {
 	// T Unity.Services.Relay.Response`1::<Result>k__BackingField
 	RegionsResponseBody_t2DA18B97B6F7FAE523697E1C492D434E909AA5E1* ___U3CResultU3Ek__BackingField_2;
 };
-
-// Unity.Services.Relay.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E : public Response_t14B8A8926CB1FF6DD3BA439E9FD475C017880AFE {};
 
 // System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>
 struct TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3 
@@ -2982,11 +2974,11 @@ struct TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E
 	Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043D70* ___m_task_0;
 };
 
-// System.Runtime.CompilerServices.TaskAwaiter`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 
+// System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>
+struct TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA 
 {
 	// System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.TaskAwaiter`1::m_task
-	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* ___m_task_0;
+	Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* ___m_task_0;
 };
 
 // System.Threading.Tasks.Task`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>
@@ -3119,6 +3111,19 @@ struct Task_1_t50529E0258FC07E21B5B77E4D74251F095B976FC_StaticFields
 	TaskFactory_1_tB8E1155F824A4E3EDE35919801D9EC3CBAD71ADE* ___s_defaultFactory_39;
 };
 
+// System.Threading.Tasks.Task`1<System.Object>
+struct Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2  : public Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572
+{
+	// TResult System.Threading.Tasks.Task`1::m_result
+	RuntimeObject* ___m_result_38;
+};
+
+struct Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2_StaticFields
+{
+	// System.Threading.Tasks.TaskFactory`1<TResult> System.Threading.Tasks.Task`1::s_defaultFactory
+	TaskFactory_1_t6F188FE70F3006B0386002E392B799D85100732B* ___s_defaultFactory_39;
+};
+
 // System.Threading.Tasks.Task`1<System.String>
 struct Task_1_t3D7638C82ED289AF156EDBAE76842D8DF4C4A9E0  : public Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572
 {
@@ -3130,15 +3135,6 @@ struct Task_1_t3D7638C82ED289AF156EDBAE76842D8DF4C4A9E0_StaticFields
 {
 	// System.Threading.Tasks.TaskFactory`1<TResult> System.Threading.Tasks.Task`1::s_defaultFactory
 	TaskFactory_1_t7ABCD7F9503486A075E0B072E6EB95956CFE3106* ___s_defaultFactory_39;
-};
-
-// System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9 : public Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572 {};
-
-struct Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9_StaticFields
-{
-	// System.Threading.Tasks.TaskFactory`1<TResult> System.Threading.Tasks.Task`1::s_defaultFactory
-	TaskFactory_1_tF4CDC5BDA20AE9BD3F65B6146CDCD3F753003E1D* ___s_defaultFactory_39;
 };
 
 // System.Runtime.CompilerServices.AsyncMethodBuilderCore
@@ -3677,6 +3673,21 @@ struct AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771_Static
 	Task_1_t50529E0258FC07E21B5B77E4D74251F095B976FC* ___s_defaultResultTask_0;
 };
 
+// System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>
+struct AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0 
+{
+	// System.Runtime.CompilerServices.AsyncMethodBuilderCore System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1::m_coreState
+	AsyncMethodBuilderCore_tD5ABB3A2536319A3345B32A5481E37E23DD8CEDF ___m_coreState_1;
+	// System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1::m_task
+	Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* ___m_task_2;
+};
+
+struct AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0_StaticFields
+{
+	// System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1::s_defaultResultTask
+	Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* ___s_defaultResultTask_0;
+};
+
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String>
 struct AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E 
 {
@@ -3692,21 +3703,6 @@ struct AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E_Static
 	Task_1_t3D7638C82ED289AF156EDBAE76842D8DF4C4A9E0* ___s_defaultResultTask_0;
 };
 
-// System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 
-{
-	// System.Runtime.CompilerServices.AsyncMethodBuilderCore System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1::m_coreState
-	AsyncMethodBuilderCore_tD5ABB3A2536319A3345B32A5481E37E23DD8CEDF ___m_coreState_1;
-	// System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1::m_task
-	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* ___m_task_2;
-};
-
-struct AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4_StaticFields
-{
-	// System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1::s_defaultResultTask
-	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* ___s_defaultResultTask_0;
-};
-
 // System.Nullable`1<System.Runtime.Serialization.StreamingContext>
 struct Nullable_1_tC3E8E254B9DCF808C08AFA1FC2151C2BC0040F3A 
 {
@@ -3715,9 +3711,6 @@ struct Nullable_1_tC3E8E254B9DCF808C08AFA1FC2151C2BC0040F3A
 	// T System.Nullable`1::value
 	StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 ___value_1;
 };
-
-// System.Nullable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>
-typedef Il2CppFullySharedGenericStruct Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339;
 
 // Unity.Services.Relay.Models.Allocation
 struct Allocation_t485155861D9DF79FCFE5C4C5F93C9889D041C430  : public RuntimeObject
@@ -5242,193 +5235,236 @@ struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771  : public Runtim
 		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
 	}
 };
-// Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType[]
-struct __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC  : public RuntimeArray
-{
-	ALIGN_FIELD (8) uint8_t m_Items[1];
-
-	inline uint8_t* GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + il2cpp_array_calc_byte_offset(this, index);
-	}
-	inline uint8_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + il2cpp_array_calc_byte_offset(this, index);
-	}
-};
 
 
-// System.Void System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Collections.Generic.IDictionary`2<TKey,TValue>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m3CE78C81B3C997FF9C14675CFBBAD014EF68FE30_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, RuntimeObject* ___dictionary0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m7745B6ED71E47C95E1BFCE647C4F026A404C668F_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, const RuntimeMethod* method) ;
-// TKey System.Collections.Generic.KeyValuePair`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Key()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void KeyValuePair_2_get_Key_mBE75BF8983618BC1ACEC20F94C1BFF85C8AA50F1_gshared_inline (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
-// TValue System.Collections.Generic.KeyValuePair`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Value()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void KeyValuePair_2_get_Value_mFA1964BF56AA214EE0D491CC197F61BC9E5F1F7A_gshared_inline (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::set_Item(TKey,TValue)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_m4C6841170DD11AED683D2D71919F362A4CFF4A80_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___key0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___value1, const RuntimeMethod* method) ;
-// System.Boolean System.Nullable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::get_HasValue()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_m14F273FB376DF00D727434CDCD28AB4EDCC14C3C_gshared_inline (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339* __this, const RuntimeMethod* method) ;
-// Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistry::RegisterPackage<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(TPackage)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistry_RegisterPackage_TisIl2CppFullySharedGenericAny_mC0037D9C3D926AA642C1CCFE43EB1CF8F08B8A88_gshared (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___package0, const RuntimeMethod* method) ;
-// Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistration::DependsOn<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistration_DependsOn_TisIl2CppFullySharedGenericAny_m39B2F139D6183E40C4BF47E34CE79A07F637D6FC_gshared (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581* __this, const RuntimeMethod* method) ;
-// TComponent Unity.Services.Core.Internal.CoreRegistry::GetServiceComponent<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CoreRegistry_GetServiceComponent_TisIl2CppFullySharedGenericAny_m26E5A2A0666FCF9B47AB4CD6891285167234D99B_gshared (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
-// System.Void System.Nullable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::.ctor(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Nullable_1__ctor_m4257D7FF23A495D1B204F20330FBDED58248E4CC_gshared (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___value0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m0AFBAEA7EC427E32CC9CA267B1930DC5DF67A374_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::GetEnumerator()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_GetEnumerator_m8B2A92ACD4FBA5FBDC3F6F4F5C23A0DDF491DA61_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* il2cppRetVal, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mFE1EBE6F6425283FEAEAE7C79D02CDE4F9D367E8_gshared (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, const RuntimeMethod* method) ;
-// T System.Collections.Generic.List`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Current()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_gshared_inline (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
-// System.Boolean System.Collections.Generic.List`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m8D8E5E878AF0A88A535AB1AB5BA4F23E151A678A_gshared (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, const RuntimeMethod* method) ;
-// System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Create()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared (const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Start<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny* ___stateMachine0, const RuntimeMethod* method) ;
-// System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Task()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4* __this, const RuntimeMethod* method) ;
-// System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::GetAwaiter()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* __this, const RuntimeMethod* method) ;
-// System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_IsCompleted()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8* __this, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::AwaitUnsafeOnCompleted<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny* ___awaiter0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny* ___stateMachine1, const RuntimeMethod* method) ;
-// TResult System.Runtime.CompilerServices.TaskAwaiter`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::GetResult()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
-// System.Void System.Func`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Select_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m5BBCA2BC02448D0B77D2201BB08B13BAB3BABA53_gshared (RuntimeObject* ___source0, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0* ___selector1, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<TSource>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* Enumerable_ToList_TisIl2CppFullySharedGenericAny_m191EA129E511F9B8304FF8826A2DA645E06CCBF0_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
-// System.Boolean System.Linq.Enumerable::Any<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<TSource>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerable_Any_TisIl2CppFullySharedGenericAny_m3499AC108A84D818DD8C221F8E60145246FC8A09_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
-// T Unity.Services.Relay.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Result()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Response_1_get_Result_m5C557F3EFAE79505C058B404E8D6AD8F9A142598_gshared_inline (/*Unity.Services.Relay.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::SetException(System.Exception)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4* __this, Exception_t* ___exception0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::SetResult(TResult)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___result0, const RuntimeMethod* method) ;
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::.ctor(System.Collections.Generic.IDictionary`2<TKey,TValue>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m623BF34EB93B2B3A3B7D46743B508E2E2958939E_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___dictionary0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, const RuntimeMethod* method) ;
+// TKey System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>::get_Key()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) ;
+// TValue System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>::get_Value()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::set_Item(TKey,TValue)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___key0, RuntimeObject* ___value1, const RuntimeMethod* method) ;
+// System.Boolean System.Nullable`1<System.Int32>::get_HasValue()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) ;
+// Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistry::RegisterPackage<System.Object>(TPackage)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistry_RegisterPackage_TisRuntimeObject_m5DF8BA5ABD5476A91872308A910C81D92F1FC6DD_gshared (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, RuntimeObject* ___package0, const RuntimeMethod* method) ;
+// Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistration::DependsOn<System.Object>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistration_DependsOn_TisRuntimeObject_m3400ECC31E4225994DD0AEDDC45B11A61E95559C_gshared (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581* __this, const RuntimeMethod* method) ;
+// TComponent Unity.Services.Core.Internal.CoreRegistry::GetServiceComponent<System.Object>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CoreRegistry_GetServiceComponent_TisRuntimeObject_m6C2601CB56CD9AE5154E543B9AA87E10AFCA875C_gshared (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, const RuntimeMethod* method) ;
+// System.Void System.Nullable`1<System.Int32>::.ctor(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703_gshared (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, int32_t ___value0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<System.Object>::GetEnumerator()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1/Enumerator<System.Object>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+// T System.Collections.Generic.List`1/Enumerator<System.Object>::get_Current()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.List`1/Enumerator<System.Object>::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+// System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Create()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0 AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared (const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Relay.WrappedRelayService/<CreateAllocationAsync>d__6>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D_m2A3BE0F03B409CDCE64D61D1A36AAB4EB7285EFF_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::get_Task()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Relay.WrappedRelayService/<GetJoinCodeAsync>d__7>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CGetJoinCodeAsyncU3Ed__7_t999AF656CC2534DF9961B15A27757CAF208F9B1A_mA77A80ED1B13A64B3922FA71D4A6D64803FAD2D7_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CGetJoinCodeAsyncU3Ed__7_t999AF656CC2534DF9961B15A27757CAF208F9B1A* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Relay.WrappedRelayService/<JoinAllocationAsync>d__8>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CJoinAllocationAsyncU3Ed__8_t9F4A81459BE6CA4A74C03B370556C1592DF39A60_m7673AB7E2B6293A4971386D461421BCFCA2A996C_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CJoinAllocationAsyncU3Ed__8_t9F4A81459BE6CA4A74C03B370556C1592DF39A60* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Relay.WrappedRelayService/<ListRegionsAsync>d__9>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CListRegionsAsyncU3Ed__9_tB00F1FB992D5649007F3C7776506AC9782DF9A91_m69ADA3E7BBF371AD8F300C17E99D4DB7025FB553_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CListRegionsAsyncU3Ed__9_tB00F1FB992D5649007F3C7776506AC9782DF9A91* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Object>::GetAwaiter()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared (Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* __this, const RuntimeMethod* method) ;
+// System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>::get_IsCompleted()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared (TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* __this, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Relay.WrappedRelayService/<CreateAllocationAsync>d__6>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D_m552528D37034CD2EF381FDED4DEC24E687867E23_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D* ___stateMachine1, const RuntimeMethod* method) ;
+// TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>::GetResult()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared (TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* __this, const RuntimeMethod* method) ;
+// System.Void System.Func`2<System.Object,System.Object>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m7F8A01C0B02BC1D4063F4EB1E817F7A48562A398_gshared (Func_2_tACBF5A1656250800CE861707354491F0611F6624* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<System.Object,System.Object>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m67C538A5EBF57C4844107A8EF25DB2CAAFBAF8FB_gshared (RuntimeObject* ___source0, Func_2_tACBF5A1656250800CE861707354491F0611F6624* ___selector1, const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* Enumerable_ToList_TisRuntimeObject_m6456D63764F29E6B5B2422C3DE25113577CF51EE_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
+// System.Boolean System.Linq.Enumerable::Any<Unity.Services.Qos.Internal.QosResult>(System.Collections.Generic.IEnumerable`1<TSource>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerable_Any_TisQosResult_tA2296213032595430F8FE40418B3D5BA47E86D27_m70355466317907BCF0F2C9480DBDAC0DC0BF5EE5_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
+// T Unity.Services.Relay.Response`1<System.Object>::get_Result()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Response_1_get_Result_m748D935F0C9D59C5E322905E9E5EB091E05BB17A_gshared_inline (Response_1_t435DDF1DF675362E151493577E6F0183A5DFEEA0* __this, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::SetException(System.Exception)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, Exception_t* ___exception0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::SetResult(TResult)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, RuntimeObject* ___result0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Relay.WrappedRelayService/<GetJoinCodeAsync>d__7>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetJoinCodeAsyncU3Ed__7_t999AF656CC2534DF9961B15A27757CAF208F9B1A_mA77D27F6345A772CA2C4DA62162179901A67B3DB_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CGetJoinCodeAsyncU3Ed__7_t999AF656CC2534DF9961B15A27757CAF208F9B1A* ___stateMachine1, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Relay.WrappedRelayService/<JoinAllocationAsync>d__8>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CJoinAllocationAsyncU3Ed__8_t9F4A81459BE6CA4A74C03B370556C1592DF39A60_m2E6DF5A47F611B617D663A440FE6FEF49E9E510C_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CJoinAllocationAsyncU3Ed__8_t9F4A81459BE6CA4A74C03B370556C1592DF39A60* ___stateMachine1, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Relay.WrappedRelayService/<ListRegionsAsync>d__9>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CListRegionsAsyncU3Ed__9_tB00F1FB992D5649007F3C7776506AC9782DF9A91_m826C781B8C6223EC9BA252C5F44BE294F108E60F_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CListRegionsAsyncU3Ed__9_tB00F1FB992D5649007F3C7776506AC9782DF9A91* ___stateMachine1, const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::AddComponent<System.Object>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Queue`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Enqueue(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1_Enqueue_m9159DC6A9BC5528A3444329C408F4101004CF652_gshared (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___item0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Queue`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Collections.Generic.IEnumerable`1<T>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1__ctor_mA9E2AFA0F31EE75EBB6CB8F76A0088DEA2719DA8_gshared (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41* __this, RuntimeObject* ___collection0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Queue`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Clear()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1_Clear_mF3F6BB3C909C58BB9407AA3FFA131CC73E1287AA_gshared (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41* __this, const RuntimeMethod* method) ;
-// System.Collections.Generic.Queue`1/Enumerator<T> System.Collections.Generic.Queue`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::GetEnumerator()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1_GetEnumerator_m6C532F76552CCD7154B74816F66DA3CE367BD90D_gshared (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41* __this, Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C* il2cppRetVal, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Queue`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mA25DFE205338DF12128791E990699B49B335B759_gshared (Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C* __this, const RuntimeMethod* method) ;
-// T System.Collections.Generic.Queue`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_get_Current_m2DDD9E2B36A595D40708EBE84125C065CCF6F11D_gshared (Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
-// System.Boolean System.Collections.Generic.Queue`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mA6D24403558EA8BFEE5028D75AC049EC8677F637_gshared (Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Queue`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1__ctor_m657BFA58DFD6AB5B1B4B69AA6E963CD569637EAD_gshared (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41* __this, const RuntimeMethod* method) ;
-// System.Int32 System.Collections.Generic.Queue`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Count()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Queue_1_get_Count_mE6103188ACDEC07F90F2D2986554730D18029750_gshared_inline (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41* __this, const RuntimeMethod* method) ;
-// T System.Collections.Generic.Queue`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Dequeue()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1_Dequeue_m80C152387A53656EC4AEF450BCBA9087DC51EEE3_gshared (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Add(TKey,TValue)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_m54D479280472DEA042DB3933AF547E666B017333_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___key0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___value1, const RuntimeMethod* method) ;
-// System.Int32 System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Count()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, const RuntimeMethod* method) ;
-// System.Void System.Func`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_1__ctor_mC73A4FCEBBAB90CB7B7AB16321F3F98FBBF12596_gshared (Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskFactory::StartNew<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Func`1<TResult>,System.Threading.CancellationToken,System.Threading.Tasks.TaskCreationOptions,System.Threading.Tasks.TaskScheduler)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* TaskFactory_StartNew_TisIl2CppFullySharedGenericAny_m093A8AAFB7FEC0A2D65CEAEBE25DE0EB91469C36_gshared (TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0* __this, Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431* ___function0, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED ___cancellationToken1, int32_t ___creationOptions2, TaskScheduler_t3F0550EBEF7C41F74EC8C08FF4BED0D8CE66006E* ___scheduler3, const RuntimeMethod* method) ;
-// System.Void Newtonsoft.Json.Utilities.AotHelper::EnsureType<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotHelper_EnsureType_TisIl2CppFullySharedGenericAny_m8D94D34831BFD767668F5DE3953A46FD59601BA7_gshared (const RuntimeMethod* method) ;
-// System.Collections.Generic.Dictionary`2<TKey,TElement> System.Linq.Enumerable::ToDictionary<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* Enumerable_ToDictionary_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mCE400B0EBD8083C1E7287BC3E256BB27CF9CF2E0_gshared (RuntimeObject* ___source0, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0* ___keySelector1, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0* ___elementSelector2, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Add(T)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___item0, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1<System.String> Unity.Services.Relay.Http.JsonObject::ValidateObject<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(T,System.Collections.Generic.List`1<System.String>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* JsonObject_ValidateObject_TisIl2CppFullySharedGenericAny_mBB27D35E04E7863F337F065B1F0DF4620CA66452_gshared (JsonObject_tE2017F7EFA889E0447B1D43B39A30070057E0B73* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___objectToCheck0, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___errors1, const RuntimeMethod* method) ;
-// T[] System.Array::Empty<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* Array_Empty_TisIl2CppFullySharedGenericAny_m244E2A51B33F845A2093F0862FBCE502E4FDD868_gshared_inline (const RuntimeMethod* method) ;
-// System.Boolean System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::ContainsKey(TKey)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_mA268E9B914DCE838DD0CD9D879BAAEECD0C677AA_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___key0, const RuntimeMethod* method) ;
-// TValue System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Item(TKey)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_get_Item_m2E96908E9716367701CD737FA54C884EB2A8C3EA_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___key0, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
-// System.Void System.Threading.Tasks.TaskCompletionSource`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TaskCompletionSource_1__ctor_mD6DB19F66035FC77675F1ED9FE696A65CF9C0F23_gshared (TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970* __this, const RuntimeMethod* method) ;
-// System.Void System.Action`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m685A441EC9FAC9D554B26FA83A08F4BEF96DFF0E_gshared (Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskCompletionSource`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Task()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* TaskCompletionSource_1_get_Task_m4994989AA2174905CF517397D0F6B082ADC29EE9_gshared_inline (TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970* __this, const RuntimeMethod* method) ;
-// System.Void System.Threading.Tasks.TaskCompletionSource`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::SetResult(TResult)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TaskCompletionSource_1_SetResult_m20A3A9EACC332D8ECC8AA9E690B90E6C56835CED_gshared (TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___result0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.KeyValuePair`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(TKey,TValue)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyValuePair_2__ctor_mD82E516936D2BDE6D46C8C45270250647986231E_gshared (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___key0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___value1, const RuntimeMethod* method) ;
-// System.Collections.Generic.Dictionary`2/KeyCollection<TKey,TValue> System.Collections.Generic.Dictionary`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Keys()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55* Dictionary_2_get_Keys_mD82D6690B1A801E8EED43F1B1D310893C9D334CF_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, const RuntimeMethod* method) ;
-// System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<TKey,TValue> System.Collections.Generic.Dictionary`2/KeyCollection<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::GetEnumerator()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyCollection_GetEnumerator_m1624A44B07D62B8CC592FEAE7A521D9504E0ACB3_gshared (KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55* __this, Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977* il2cppRetVal, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_m3E0B734E98D35978EEE706FCEC2FE08FEA74FD35_gshared (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977* __this, const RuntimeMethod* method) ;
-// TKey System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Current()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m2D9E3398C2A3349E3F0F189A38E881D11DE5AA15_gshared_inline (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
-// System.Boolean System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m21C503A713FDCA406492E2BE960D85320752E615_gshared (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977* __this, const RuntimeMethod* method) ;
-// System.Byte[] Unity.Services.Relay.RelayAllocations.JsonSerialization::Serialize<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* JsonSerialization_Serialize_TisIl2CppFullySharedGenericAny_m8C3FC3A6F43D0126C53871817C5DD472BCEAB4A5_gshared (/*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___obj0, const RuntimeMethod* method) ;
-// T System.Nullable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::GetValueOrDefault()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Nullable_1_GetValueOrDefault_mC057FBD944AF068B90EBDD0B496231A01B2A4228_gshared_inline (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339* __this, Il2CppFullySharedGenericStruct* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Queue`1<System.Object>::Enqueue(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1_Enqueue_m5CB8CF3906F1289F92036F0973EC5BE3450402EF_gshared (Queue_1_tE9EF546915795972C3BFD68FBB8FA859D3BAF3B5* __this, RuntimeObject* ___item0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Queue`1<System.Object>::.ctor(System.Collections.Generic.IEnumerable`1<T>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1__ctor_mDFB3CD7FACAF85AFE5750DED2E3222107C996168_gshared (Queue_1_tE9EF546915795972C3BFD68FBB8FA859D3BAF3B5* __this, RuntimeObject* ___collection0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Queue`1<System.Object>::Clear()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1_Clear_m70861E24CF43ECFF3BC5C2AD4EE55963D54D8711_gshared (Queue_1_tE9EF546915795972C3BFD68FBB8FA859D3BAF3B5* __this, const RuntimeMethod* method) ;
+// System.Collections.Generic.Queue`1/Enumerator<T> System.Collections.Generic.Queue`1<System.Object>::GetEnumerator()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t30E3290EE12437374037B3CF0EE4D614F96D030A Queue_1_GetEnumerator_mBF0033C4BCEA408644D24F0B28A81F9145FB97C9_gshared (Queue_1_tE9EF546915795972C3BFD68FBB8FA859D3BAF3B5* __this, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Queue`1/Enumerator<System.Object>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_m680926A5EFC7099ECBCE9DEF68F8DED03C103955_gshared (Enumerator_t30E3290EE12437374037B3CF0EE4D614F96D030A* __this, const RuntimeMethod* method) ;
+// T System.Collections.Generic.Queue`1/Enumerator<System.Object>::get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m5F2338F4C35E898DB7231D7E30F30155498FA9D7_gshared (Enumerator_t30E3290EE12437374037B3CF0EE4D614F96D030A* __this, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.Queue`1/Enumerator<System.Object>::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mABD92CBE05B031E50E316375DDC8B2BDAD3F6F84_gshared (Enumerator_t30E3290EE12437374037B3CF0EE4D614F96D030A* __this, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Queue`1<System.Object>::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1__ctor_m6E2A5A8173E0CC524496D5155C737DF8FD10D0EB_gshared (Queue_1_tE9EF546915795972C3BFD68FBB8FA859D3BAF3B5* __this, const RuntimeMethod* method) ;
+// System.Int32 System.Collections.Generic.Queue`1<System.Object>::get_Count()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Queue_1_get_Count_m1768ADA9855B7CDA14C9C42E098A287F1A39C3A2_gshared_inline (Queue_1_tE9EF546915795972C3BFD68FBB8FA859D3BAF3B5* __this, const RuntimeMethod* method) ;
+// T System.Collections.Generic.Queue`1<System.Object>::Dequeue()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Queue_1_Dequeue_m86B243DF9EC238316EC3D27DF3E0AB8DB0987E84_gshared (Queue_1_tE9EF546915795972C3BFD68FBB8FA859D3BAF3B5* __this, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::Add(TKey,TValue)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___key0, RuntimeObject* ___value1, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Relay.Http.HttpClient/<MakeRequestAsync>d__1>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__1_t92742A73A1CD0A55BB93B33F32330F4F8696A37D_mC157084D0C27170A2DB393F2E4C8FBB1B4E71E36_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CMakeRequestAsyncU3Ed__1_t92742A73A1CD0A55BB93B33F32330F4F8696A37D* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Relay.Http.HttpClient/<MakeRequestAsync>d__2>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__2_tA4F507AF617429B3FE6E16743491571F13398D18_m58950B0B424CABEE474B014CC49A9F265EFC7937_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CMakeRequestAsyncU3Ed__2_tA4F507AF617429B3FE6E16743491571F13398D18* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Relay.Http.HttpClient/<CreateWebRequestAsync>d__3>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__3_t927910A4CF5BCDBF14773FA44244CA080E15B560_m594B2D5DF2EDD66200FF6AB2552F2B35A91636FD_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CCreateWebRequestAsyncU3Ed__3_t927910A4CF5BCDBF14773FA44244CA080E15B560* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Relay.Http.HttpClient/<CreateHttpClientResponse>d__4>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407_mA207C48948853A9796A5E1A7B0D2FFFC419D7AF3_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Relay.Http.HttpClient/<CreateWebRequestAsync>d__5>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5_m20CD262F7963CC4A1115C2E3F54FCAA0A34B7D85_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Int32 System.Collections.Generic.List`1<System.Object>::get_Count()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Relay.Http.HttpClient/<MakeRequestAsync>d__1>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMakeRequestAsyncU3Ed__1_t92742A73A1CD0A55BB93B33F32330F4F8696A37D_m13E44CB44639168D0D9CA59DA28881C44C8B1BD4_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CMakeRequestAsyncU3Ed__1_t92742A73A1CD0A55BB93B33F32330F4F8696A37D* ___stateMachine1, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Relay.Http.HttpClient/<MakeRequestAsync>d__2>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMakeRequestAsyncU3Ed__2_tA4F507AF617429B3FE6E16743491571F13398D18_m308C0318423667680E09B35CDF08974CF73C7E79_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CMakeRequestAsyncU3Ed__2_tA4F507AF617429B3FE6E16743491571F13398D18* ___stateMachine1, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Relay.Http.HttpClient/<CreateWebRequestAsync>d__3>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateWebRequestAsyncU3Ed__3_t927910A4CF5BCDBF14773FA44244CA080E15B560_mC7F67521737FB6E6995CC9135EAF7A72C884785E_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CCreateWebRequestAsyncU3Ed__3_t927910A4CF5BCDBF14773FA44244CA080E15B560* ___stateMachine1, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Relay.Http.HttpClient/<>c__DisplayClass4_0/<<CreateHttpClientResponse>b__0>d>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t2252D0F74F8F6F297966619A728A6DED1EF3D133_m83FE8AE299CAEA3A6EE6F2863BA66FA6E4FF7A24_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t2252D0F74F8F6F297966619A728A6DED1EF3D133* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Relay.Http.HttpClient/<>c__DisplayClass4_0/<<CreateHttpClientResponse>b__0>d>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t2252D0F74F8F6F297966619A728A6DED1EF3D133_mA35E0FFE00FEFB077DCBD15D352DB66F22A71D48_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t2252D0F74F8F6F297966619A728A6DED1EF3D133* ___stateMachine1, const RuntimeMethod* method) ;
+// System.Void System.Func`1<System.Object>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_1__ctor_m663374A863E492A515BE9626B6F0E444991834E8_gshared (Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskFactory::StartNew<System.Object>(System.Func`1<TResult>,System.Threading.CancellationToken,System.Threading.Tasks.TaskCreationOptions,System.Threading.Tasks.TaskScheduler)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* TaskFactory_StartNew_TisRuntimeObject_m14FDB1694FEE097B11C3119BD89F3C350F7DE51B_gshared (TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0* __this, Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4* ___function0, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED ___cancellationToken1, int32_t ___creationOptions2, TaskScheduler_t3F0550EBEF7C41F74EC8C08FF4BED0D8CE66006E* ___scheduler3, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Relay.Http.HttpClient/<CreateHttpClientResponse>d__4>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407_mE471D88BC23CAD6433E2960CFC46172EBC6DAD69_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407* ___stateMachine1, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Relay.Http.HttpClient/<>c__DisplayClass5_0/<<CreateWebRequestAsync>b__0>d>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t4A8E08D76914A96DC127E1FC934545D5B279B52B_m381479ABABBE003480A6C5B4F824019E1AA127CD_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t4A8E08D76914A96DC127E1FC934545D5B279B52B* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Relay.Http.HttpClient/<>c__DisplayClass5_0/<<CreateWebRequestAsync>b__0>d>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t4A8E08D76914A96DC127E1FC934545D5B279B52B_m3C20CEEB150251DF1A48848DEDBD54641F561FAC_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t4A8E08D76914A96DC127E1FC934545D5B279B52B* ___stateMachine1, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Relay.Http.HttpClient/<CreateWebRequestAsync>d__5>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5_m9DC222D3738CF277D1F2B7A2EBB609B7A70AE76A_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5* ___stateMachine1, const RuntimeMethod* method) ;
+// System.Void Newtonsoft.Json.Utilities.AotHelper::EnsureType<System.Object>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotHelper_EnsureType_TisRuntimeObject_m8D3D63845F34DADDDC746C0C444E40309347F992_gshared (const RuntimeMethod* method) ;
+// System.Void System.Func`2<System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>,System.Object>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m60F64297108A01DFB5663C9BA121893957855907_gshared (Func_2_tF42287527472FA89789873F068A87C60A00EC7D3* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// System.Collections.Generic.Dictionary`2<TKey,TElement> System.Linq.Enumerable::ToDictionary<System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>,System.Object,System.Object>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* Enumerable_ToDictionary_TisKeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230_TisRuntimeObject_TisRuntimeObject_mFAD38355767A6BC98DB0AF76ADAB9AEDE1A401CB_gshared (RuntimeObject* ___source0, Func_2_tF42287527472FA89789873F068A87C60A00EC7D3* ___keySelector1, Func_2_tF42287527472FA89789873F068A87C60A00EC7D3* ___elementSelector2, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<System.Object>::Add(T)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___item0, const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1<System.String> Unity.Services.Relay.Http.JsonObject::ValidateObject<System.Object>(T,System.Collections.Generic.List`1<System.String>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* JsonObject_ValidateObject_TisRuntimeObject_m811517DDE15B6E1616699BF18468D28D5F113673_gshared (JsonObject_tE2017F7EFA889E0447B1D43B39A30070057E0B73* __this, RuntimeObject* ___objectToCheck0, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___errors1, const RuntimeMethod* method) ;
+// T[] System.Array::Empty<System.Object>()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline (const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.Dictionary`2<System.Object,System.Object>::ContainsKey(TKey)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_m703047C213F7AB55C9DC346596287773A1F670CD_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___key0, const RuntimeMethod* method) ;
+// TValue System.Collections.Generic.Dictionary`2<System.Object,System.Object>::get_Item(TKey)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Dictionary_2_get_Item_m4AAAECBE902A211BF2126E6AFA280AEF73A3E0D6_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___key0, const RuntimeMethod* method) ;
+// System.Void System.Threading.Tasks.TaskCompletionSource`1<System.Object>::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TaskCompletionSource_1__ctor_mBF9A903AD14C4E9CF044B227776C532BA9C40D60_gshared (TaskCompletionSource_1_tB4EF81F69CCF7C4F0D956F9B26127C0634A24A37* __this, const RuntimeMethod* method) ;
+// System.Void System.Action`1<System.Object>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m2E1DFA67718FC1A0B6E5DFEB78831FFE9C059EB4_gshared (Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskCompletionSource`1<System.Object>::get_Task()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* TaskCompletionSource_1_get_Task_mF44990297C25C7DBE1E65241C03D0120CB551552_gshared_inline (TaskCompletionSource_1_tB4EF81F69CCF7C4F0D956F9B26127C0634A24A37* __this, const RuntimeMethod* method) ;
+// System.Void System.Threading.Tasks.TaskCompletionSource`1<System.Object>::SetResult(TResult)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TaskCompletionSource_1_SetResult_m948378015A7A0E42647452EB7003466406B831A4_gshared (TaskCompletionSource_1_tB4EF81F69CCF7C4F0D956F9B26127C0634A24A37* __this, RuntimeObject* ___result0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.KeyValuePair`2<System.Int64,System.Boolean>::.ctor(TKey,TValue)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyValuePair_2__ctor_m4D69811DF1F96947FE72B76275A642FD26D84B5E_gshared (KeyValuePair_2_tB238689916B08B0CFF54232EB53E746022CA86A2* __this, int64_t ___key0, bool ___value1, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Dictionary`2<System.Int64,System.Boolean>::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_mC2E112E191D945753C30F6A2475DDB865FD83097_gshared (Dictionary_2_tCF06E70C571839D7107A1DCD7514332D33872BFF* __this, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Dictionary`2<System.Int64,System.Boolean>::Add(TKey,TValue)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_m2FE794EFEAD72A5A0A0C15DC8B4D10002655FAC6_gshared (Dictionary_2_tCF06E70C571839D7107A1DCD7514332D33872BFF* __this, int64_t ___key0, bool ___value1, const RuntimeMethod* method) ;
+// System.Collections.Generic.Dictionary`2/KeyCollection<TKey,TValue> System.Collections.Generic.Dictionary`2<System.Object,System.Object>::get_Keys()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KeyCollection_tB45A861D090B15129521119AE48ED3813820A974* Dictionary_2_get_Keys_m72D290F90654BFD683FA7AA7C63D9F4F692218B6_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, const RuntimeMethod* method) ;
+// System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<TKey,TValue> System.Collections.Generic.Dictionary`2/KeyCollection<System.Object,System.Object>::GetEnumerator()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t65CC956745B1180C04CE6C6910FB27C5F32BB9FF KeyCollection_GetEnumerator_m7E77FBA7DE2D3876EC02F396712C4AA5B1D535A5_gshared (KeyCollection_tB45A861D090B15129521119AE48ED3813820A974* __this, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.Object,System.Object>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mEB2A61F3F3F420C1B1DFD5C74EEFD4BD7761BCF7_gshared (Enumerator_t65CC956745B1180C04CE6C6910FB27C5F32BB9FF* __this, const RuntimeMethod* method) ;
+// TKey System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.Object,System.Object>::get_Current()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_mD6472FA27D28B9AE64A0FEF796C72ABBC2420EBF_gshared_inline (Enumerator_t65CC956745B1180C04CE6C6910FB27C5F32BB9FF* __this, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.Object,System.Object>::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mB5E00F11BCA3AC963F9BA72659FA76B107863F3C_gshared (Enumerator_t65CC956745B1180C04CE6C6910FB27C5F32BB9FF* __this, const RuntimeMethod* method) ;
+// System.Byte[] Unity.Services.Relay.RelayAllocations.JsonSerialization::Serialize<System.Object>(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* JsonSerialization_Serialize_TisRuntimeObject_m8B09FF8D82DECF89A2F87A7FAB09708AD3A61772_gshared (RuntimeObject* ___obj0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<CreateAllocationAsync>d__7>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CCreateAllocationAsyncU3Ed__7_t1B4C5D4DB88CFDDAD350B61D1A25AE058725BF1D_m086097F4D527D27219A546FFA5AC8BD9BE73270B_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CCreateAllocationAsyncU3Ed__7_t1B4C5D4DB88CFDDAD350B61D1A25AE058725BF1D* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<CreateJoincodeAsync>d__8>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CCreateJoincodeAsyncU3Ed__8_t3D4979FB94DDB39F09B1819D0B9D6051320A28A6_m5264D2651B937879DE5B725812B38254AE963B43_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CCreateJoincodeAsyncU3Ed__8_t3D4979FB94DDB39F09B1819D0B9D6051320A28A6* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<JoinRelayAsync>d__9>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CJoinRelayAsyncU3Ed__9_tFF14373CFEF79467E5D3227F104A043D9117F420_m38D85567539683EF553C1CC9A36ABECE93AA7B1E_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CJoinRelayAsyncU3Ed__9_tFF14373CFEF79467E5D3227F104A043D9117F420* ___stateMachine0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::Start<Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<ListRegionsAsync>d__10>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisU3CListRegionsAsyncU3Ed__10_t40CEF1251EEE01362A1CF3E261F9E6240FDCB351_m1467D198A07550FDA1EB914A1917E32F1426C3D9_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, U3CListRegionsAsyncU3Ed__10_t40CEF1251EEE01362A1CF3E261F9E6240FDCB351* ___stateMachine0, const RuntimeMethod* method) ;
+// T System.Nullable`1<System.Int32>::GetValueOrDefault()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Nullable_1_GetValueOrDefault_m8D130DB7F2A1E694736B449176F9C26DB456597B_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<CreateAllocationAsync>d__7>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateAllocationAsyncU3Ed__7_t1B4C5D4DB88CFDDAD350B61D1A25AE058725BF1D_mB7B802C22A23DD76080D67864596FC00A702ABAE_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CCreateAllocationAsyncU3Ed__7_t1B4C5D4DB88CFDDAD350B61D1A25AE058725BF1D* ___stateMachine1, const RuntimeMethod* method) ;
 // T Unity.Services.Relay.Http.ResponseHandler::HandleAsyncResponse<System.Object>(Unity.Services.Relay.Http.HttpClientResponse,System.Collections.Generic.Dictionary`2<System.String,System.Type>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ResponseHandler_HandleAsyncResponse_TisRuntimeObject_m6291862E6F8B96D4040CF442C26862A4D609F3E0_gshared (HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* ___response0, Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A* ___statusCodeToTypeMap1, const RuntimeMethod* method) ;
-// System.Void Unity.Services.Relay.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(Unity.Services.Relay.Http.HttpClientResponse,T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Response_1__ctor_mDA533D8B3170D4265954675A4FF8A7F612D8B68A_gshared (/*Unity.Services.Relay.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E* __this, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* ___httpResponse0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___result1, const RuntimeMethod* method) ;
+// System.Void Unity.Services.Relay.Response`1<System.Object>::.ctor(Unity.Services.Relay.Http.HttpClientResponse,T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Response_1__ctor_m1D0BBB8C2DAD374864DB26575886860FC4F5A206_gshared (Response_1_t435DDF1DF675362E151493577E6F0183A5DFEEA0* __this, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* ___httpResponse0, RuntimeObject* ___result1, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<CreateJoincodeAsync>d__8>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateJoincodeAsyncU3Ed__8_t3D4979FB94DDB39F09B1819D0B9D6051320A28A6_m6A177E875F12108511E2D6E0E151298DDAB80C2B_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CCreateJoincodeAsyncU3Ed__8_t3D4979FB94DDB39F09B1819D0B9D6051320A28A6* ___stateMachine1, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<JoinRelayAsync>d__9>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CJoinRelayAsyncU3Ed__9_tFF14373CFEF79467E5D3227F104A043D9117F420_mCD187B91820D7B7220618B65598D06DAC052DA28_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CJoinRelayAsyncU3Ed__9_tFF14373CFEF79467E5D3227F104A043D9117F420* ___stateMachine1, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Object>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<ListRegionsAsync>d__10>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CListRegionsAsyncU3Ed__10_t40CEF1251EEE01362A1CF3E261F9E6240FDCB351_mDA6B7CCA9CB1D8E622936CB8D520821D3F8FBFA9_gshared (AsyncTaskMethodBuilder_1_tE810F083929D7952F192036D298085BD4B048AD0* __this, TaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA* ___awaiter0, U3CListRegionsAsyncU3Ed__10_t40CEF1251EEE01362A1CF3E261F9E6240FDCB351* ___stateMachine1, const RuntimeMethod* method) ;
 
 // System.Void System.Object::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.String>::.ctor(System.Collections.Generic.IDictionary`2<TKey,TValue>)
 inline void Dictionary_2__ctor_m1D3CFAA07F0EE9405CAF58853C2E25690A51D0F9 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, RuntimeObject* ___dictionary0, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, RuntimeObject*, const RuntimeMethod*))Dictionary_2__ctor_m3CE78C81B3C997FF9C14675CFBBAD014EF68FE30_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (RuntimeObject*)___dictionary0, method);
+	((  void (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, RuntimeObject*, const RuntimeMethod*))Dictionary_2__ctor_m623BF34EB93B2B3A3B7D46743B508E2E2958939E_gshared)(__this, ___dictionary0, method);
 }
 // System.Void Unity.Services.Relay.Configuration::.ctor(System.String,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>,System.Collections.Generic.IDictionary`2<System.String,System.String>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Configuration__ctor_mD2D72633D0D67FF6EDF8272AD386C67C5FADD7B4 (Configuration_t1DC8AB17340F59973783F52D34CE152364535008* __this, String_t* ___basePath0, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___requestTimeout1, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___numRetries2, RuntimeObject* ___headers3, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.String>::.ctor()
 inline void Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, const RuntimeMethod*))Dictionary_2__ctor_m7745B6ED71E47C95E1BFCE647C4F026A404C668F_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, method);
+	((  void (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, const RuntimeMethod*))Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared)(__this, method);
 }
 // TKey System.Collections.Generic.KeyValuePair`2<System.String,System.String>::get_Key()
 inline String_t* KeyValuePair_2_get_Key_m654BCCAE2F20CB11D8E8C2D2C886A0C8A13EB1C4_inline (KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A* __this, const RuntimeMethod* method)
 {
-	String_t* il2cppRetVal;
-	((  void (*) (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))KeyValuePair_2_get_Key_mBE75BF8983618BC1ACEC20F94C1BFF85C8AA50F1_gshared_inline)((KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  String_t* (*) (KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A*, const RuntimeMethod*))KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline)(__this, method);
 }
 // TValue System.Collections.Generic.KeyValuePair`2<System.String,System.String>::get_Value()
 inline String_t* KeyValuePair_2_get_Value_m7345512A32CB4DCAA0643050B18DC8DCD71B927A_inline (KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A* __this, const RuntimeMethod* method)
 {
-	String_t* il2cppRetVal;
-	((  void (*) (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))KeyValuePair_2_get_Value_mFA1964BF56AA214EE0D491CC197F61BC9E5F1F7A_gshared_inline)((KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  String_t* (*) (KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A*, const RuntimeMethod*))KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline)(__this, method);
 }
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.String>::set_Item(TKey,TValue)
 inline void Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, String_t* ___key0, String_t* ___value1, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_set_Item_m4C6841170DD11AED683D2D71919F362A4CFF4A80_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)___key0, (Il2CppFullySharedGenericAny)___value1, method);
+	((  void (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, String_t*, String_t*, const RuntimeMethod*))Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_gshared)(__this, ___key0, ___value1, method);
 }
 // System.Boolean System.Nullable`1<System.Int32>::get_HasValue()
 inline bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*, const RuntimeMethod*))Nullable_1_get_HasValue_m14F273FB376DF00D727434CDCD28AB4EDCC14C3C_gshared_inline)((Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*)__this, method);
+	return ((  bool (*) (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*, const RuntimeMethod*))Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline)(__this, method);
 }
 // System.Collections.Generic.Dictionary`2<System.String,System.String> Unity.Services.Relay.Http.HttpClientResponse::get_Headers()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* HttpClientResponse_get_Headers_mD970B192FF4A14A74B1D75D68EFB44C079A2ED4A_inline (HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* __this, const RuntimeMethod* method) ;
@@ -5443,45 +5479,39 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RelayServiceProvider__ctor_mA9935456248C
 // Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistry::RegisterPackage<Unity.Services.Relay.RelayServiceProvider>(TPackage)
 inline CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistry_RegisterPackage_TisRelayServiceProvider_t6BCAAACEAE78D84D647994E55D5E9077BE99C765_mBEC314F0C1770D7BBCD786A5B0740FC94994B627 (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, RelayServiceProvider_t6BCAAACEAE78D84D647994E55D5E9077BE99C765* ___package0, const RuntimeMethod* method)
 {
-	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))CoreRegistry_RegisterPackage_TisIl2CppFullySharedGenericAny_mC0037D9C3D926AA642C1CCFE43EB1CF8F08B8A88_gshared)((CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*)__this, (Il2CppFullySharedGenericAny)___package0, method);
+	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, RelayServiceProvider_t6BCAAACEAE78D84D647994E55D5E9077BE99C765*, const RuntimeMethod*))CoreRegistry_RegisterPackage_TisRuntimeObject_m5DF8BA5ABD5476A91872308A910C81D92F1FC6DD_gshared)(__this, ___package0, method);
 }
 // Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistration::DependsOn<Unity.Services.Authentication.Internal.IAccessToken>()
 inline CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistration_DependsOn_TisIAccessToken_t8A8955010FD3200218D16D50699C60F922877720_mED54A8C5731A45129C329A211916483BC2DB35C2 (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581* __this, const RuntimeMethod* method)
 {
-	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_DependsOn_TisIl2CppFullySharedGenericAny_m39B2F139D6183E40C4BF47E34CE79A07F637D6FC_gshared)((CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*)__this, method);
+	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_DependsOn_TisRuntimeObject_m3400ECC31E4225994DD0AEDDC45B11A61E95559C_gshared)(__this, method);
 }
 // Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistration::DependsOn<Unity.Services.Core.Configuration.Internal.IProjectConfiguration>()
 inline CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistration_DependsOn_TisIProjectConfiguration_tB5A7516DEB869AD005431EC83C6E02221D2B60D2_mFE611D2FD196728ACC376EAB06D4F2664D8FDD10 (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581* __this, const RuntimeMethod* method)
 {
-	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_DependsOn_TisIl2CppFullySharedGenericAny_m39B2F139D6183E40C4BF47E34CE79A07F637D6FC_gshared)((CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*)__this, method);
+	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_DependsOn_TisRuntimeObject_m3400ECC31E4225994DD0AEDDC45B11A61E95559C_gshared)(__this, method);
 }
 // Unity.Services.Core.Internal.CoreRegistration Unity.Services.Core.Internal.CoreRegistration::DependsOn<Unity.Services.Qos.Internal.IQosResults>()
 inline CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 CoreRegistration_DependsOn_TisIQosResults_t398EE4833D6D9C7764C14DA29A29F3EAD313FAC4_mD74FEDB1340A169BA98C0F16F22E9C0350F1A966 (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581* __this, const RuntimeMethod* method)
 {
-	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_DependsOn_TisIl2CppFullySharedGenericAny_m39B2F139D6183E40C4BF47E34CE79A07F637D6FC_gshared)((CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*)__this, method);
+	return ((  CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581 (*) (CoreRegistration_tD2BD53556CAA48BD5E0D32CB92C6494C0EB85581*, const RuntimeMethod*))CoreRegistration_DependsOn_TisRuntimeObject_m3400ECC31E4225994DD0AEDDC45B11A61E95559C_gshared)(__this, method);
 }
 // System.Void Unity.Services.Relay.Http.HttpClient::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HttpClient__ctor_m69CBCA649A5E6315F907A35C99F26483C4FD4F37 (HttpClient_t383B05421C6E442B5D0D91F67761D33E5ED525A4* __this, const RuntimeMethod* method) ;
 // TComponent Unity.Services.Core.Internal.CoreRegistry::GetServiceComponent<Unity.Services.Authentication.Internal.IAccessToken>()
 inline RuntimeObject* CoreRegistry_GetServiceComponent_TisIAccessToken_t8A8955010FD3200218D16D50699C60F922877720_m4125AAF16E0C255FB3B1560FAEB5D04A1BFF1D66 (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, const RuntimeMethod* method)
 {
-	RuntimeObject* il2cppRetVal;
-	((  void (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))CoreRegistry_GetServiceComponent_TisIl2CppFullySharedGenericAny_m26E5A2A0666FCF9B47AB4CD6891285167234D99B_gshared)((CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  RuntimeObject* (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, const RuntimeMethod*))CoreRegistry_GetServiceComponent_TisRuntimeObject_m6C2601CB56CD9AE5154E543B9AA87E10AFCA875C_gshared)(__this, method);
 }
 // TComponent Unity.Services.Core.Internal.CoreRegistry::GetServiceComponent<Unity.Services.Core.Configuration.Internal.IProjectConfiguration>()
 inline RuntimeObject* CoreRegistry_GetServiceComponent_TisIProjectConfiguration_tB5A7516DEB869AD005431EC83C6E02221D2B60D2_mF70AFB94326EDB167066B7836231B13A52150312 (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, const RuntimeMethod* method)
 {
-	RuntimeObject* il2cppRetVal;
-	((  void (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))CoreRegistry_GetServiceComponent_TisIl2CppFullySharedGenericAny_m26E5A2A0666FCF9B47AB4CD6891285167234D99B_gshared)((CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  RuntimeObject* (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, const RuntimeMethod*))CoreRegistry_GetServiceComponent_TisRuntimeObject_m6C2601CB56CD9AE5154E543B9AA87E10AFCA875C_gshared)(__this, method);
 }
 // TComponent Unity.Services.Core.Internal.CoreRegistry::GetServiceComponent<Unity.Services.Qos.Internal.IQosResults>()
 inline RuntimeObject* CoreRegistry_GetServiceComponent_TisIQosResults_t398EE4833D6D9C7764C14DA29A29F3EAD313FAC4_m6FCE463FF9B280F3DC3FA33CD70C10D6BBCFB321 (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA* __this, const RuntimeMethod* method)
 {
-	RuntimeObject* il2cppRetVal;
-	((  void (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))CoreRegistry_GetServiceComponent_TisIl2CppFullySharedGenericAny_m26E5A2A0666FCF9B47AB4CD6891285167234D99B_gshared)((CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  RuntimeObject* (*) (CoreRegistry_t7B61538793CE940CE3A391364C163F1078C9F2BA*, const RuntimeMethod*))CoreRegistry_GetServiceComponent_TisRuntimeObject_m6C2601CB56CD9AE5154E543B9AA87E10AFCA875C_gshared)(__this, method);
 }
 // System.Void Unity.Services.Relay.InternalRelayService::.ctor(Unity.Services.Relay.Http.HttpClient,Unity.Services.Core.Configuration.Internal.IProjectConfiguration,Unity.Services.Authentication.Internal.IAccessToken,Unity.Services.Qos.Internal.IQosResults)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InternalRelayService__ctor_mE063D7054113D1D25E1195152333A5D9C90E2268 (InternalRelayService_t911D0A2CAC990FC6DAFE983464BD1EA9D5CF77B7* __this, HttpClient_t383B05421C6E442B5D0D91F67761D33E5ED525A4* ___httpClient0, RuntimeObject* ___projectConfiguration1, RuntimeObject* ___accessToken2, RuntimeObject* ___qosResults3, const RuntimeMethod* method) ;
@@ -5498,7 +5528,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InternalRelayService_GetHost_m6A6F7
 // System.Void System.Nullable`1<System.Int32>::.ctor(T)
 inline void Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703 (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, int32_t ___value0, const RuntimeMethod* method)
 {
-	((  void (*) (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, const RuntimeMethod*))Nullable_1__ctor_m4257D7FF23A495D1B204F20330FBDED58248E4CC_gshared)((Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*)__this, (Il2CppFullySharedGenericStruct)&___value0, method);
+	((  void (*) (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*, int32_t, const RuntimeMethod*))Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703_gshared)(__this, ___value0, method);
 }
 // System.Void Unity.Services.Relay.InternalRelayService::set_Configuration(Unity.Services.Relay.Configuration)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void InternalRelayService_set_Configuration_mEB997480B4097BAED8A74F6F5100FBD417303C19_inline (InternalRelayService_t911D0A2CAC990FC6DAFE983464BD1EA9D5CF77B7* __this, Configuration_t1DC8AB17340F59973783F52D34CE152364535008* ___value0, const RuntimeMethod* method) ;
@@ -5531,26 +5561,22 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tBF3F59523A2221B86EA8FCB98
 // System.Void System.Collections.Generic.List`1<Unity.Services.Relay.Models.KeyValuePair>::.ctor()
 inline void List_1__ctor_m5FBFF7E75B439334796ACCF7C6D1D3A94C3889D3 (List_1_tBF3F59523A2221B86EA8FCB98E9B7A1F34EDD0B2* __this, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1__ctor_m0AFBAEA7EC427E32CC9CA267B1930DC5DF67A374_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
+	((  void (*) (List_1_tBF3F59523A2221B86EA8FCB98E9B7A1F34EDD0B2*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
 }
 // System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<Unity.Services.Relay.Models.KeyValuePair>::GetEnumerator()
 inline Enumerator_t17A4D4B2C8A4EF2D86A94B7A5E5865CB0D52771D List_1_GetEnumerator_m337CEFD2D5966F82EA4437432D49488FC12F9C9E (List_1_tBF3F59523A2221B86EA8FCB98E9B7A1F34EDD0B2* __this, const RuntimeMethod* method)
 {
-	Enumerator_t17A4D4B2C8A4EF2D86A94B7A5E5865CB0D52771D il2cppRetVal;
-	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))List_1_GetEnumerator_m8B2A92ACD4FBA5FBDC3F6F4F5C23A0DDF491DA61_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  Enumerator_t17A4D4B2C8A4EF2D86A94B7A5E5865CB0D52771D (*) (List_1_tBF3F59523A2221B86EA8FCB98E9B7A1F34EDD0B2*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.List`1/Enumerator<Unity.Services.Relay.Models.KeyValuePair>::Dispose()
 inline void Enumerator_Dispose_m0A27A8415DF36E3F40B142BFC6BC18F9367F1A62 (Enumerator_t17A4D4B2C8A4EF2D86A94B7A5E5865CB0D52771D* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_Dispose_mFE1EBE6F6425283FEAEAE7C79D02CDE4F9D367E8_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
+	((  void (*) (Enumerator_t17A4D4B2C8A4EF2D86A94B7A5E5865CB0D52771D*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
 }
 // T System.Collections.Generic.List`1/Enumerator<Unity.Services.Relay.Models.KeyValuePair>::get_Current()
 inline KeyValuePair_t3CA7CB9F73F470F30DE76359A6D9383217C5B4B5* Enumerator_get_Current_mDDE79C842760A999980C7C4E7C38D3F92FED3A6C_inline (Enumerator_t17A4D4B2C8A4EF2D86A94B7A5E5865CB0D52771D* __this, const RuntimeMethod* method)
 {
-	KeyValuePair_t3CA7CB9F73F470F30DE76359A6D9383217C5B4B5* il2cppRetVal;
-	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_gshared_inline)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  KeyValuePair_t3CA7CB9F73F470F30DE76359A6D9383217C5B4B5* (*) (Enumerator_t17A4D4B2C8A4EF2D86A94B7A5E5865CB0D52771D*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
 }
 // System.String Unity.Services.Relay.Models.KeyValuePair::get_Key()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* KeyValuePair_get_Key_mA657361BA6547B1EE827BD26AB3E4303FF8D3DC1_inline (KeyValuePair_t3CA7CB9F73F470F30DE76359A6D9383217C5B4B5* __this, const RuntimeMethod* method) ;
@@ -5561,7 +5587,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m647EBF831F54B6DF7D5A
 // System.Boolean System.Collections.Generic.List`1/Enumerator<Unity.Services.Relay.Models.KeyValuePair>::MoveNext()
 inline bool Enumerator_MoveNext_m3FD4F0A09BD0C36C3BD399534163A583ACECD837 (Enumerator_t17A4D4B2C8A4EF2D86A94B7A5E5865CB0D52771D* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_MoveNext_m8D8E5E878AF0A88A535AB1AB5BA4F23E151A678A_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
+	return ((  bool (*) (Enumerator_t17A4D4B2C8A4EF2D86A94B7A5E5865CB0D52771D*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
 }
 // System.Exception System.Exception::get_InnerException()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Exception_t* Exception_get_InnerException_m0C1BDB339C786BA4DA7D2C1AD214571CFBBB1410_inline (Exception_t* __this, const RuntimeMethod* method) ;
@@ -5584,70 +5610,62 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void WrappedRelayService_set_m_Re
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.Allocation>::Create()
 inline AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12 AsyncTaskMethodBuilder_1_Create_mD74F6D890D1EFF4CE1FCF1C872EA6602271D4598 (const RuntimeMethod* method)
 {
-	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
-	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
+	return ((  AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.Allocation>::Start<Unity.Services.Relay.WrappedRelayService/<CreateAllocationAsync>d__6>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D_mEB140E6EB04B360936F66C6FBB1DBAF82F51FB8F (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12* __this, U3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12*, U3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D_m2A3BE0F03B409CDCE64D61D1A36AAB4EB7285EFF_gshared)(__this, ___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.Allocation>::get_Task()
 inline Task_1_t1E77B39C23C2ACAE3B2AC948EF69F6D888B24615* AsyncTaskMethodBuilder_1_get_Task_mF0C064E600E18FBE8FA81DD1AC7BEE8378085860 (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12* __this, const RuntimeMethod* method)
 {
-	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
-	return (Task_1_t1E77B39C23C2ACAE3B2AC948EF69F6D888B24615*)il2cppRetVal;
+	return ((  Task_1_t1E77B39C23C2ACAE3B2AC948EF69F6D888B24615* (*) (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
 }
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String>::Create()
 inline AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E AsyncTaskMethodBuilder_1_Create_mDEA9352DE851695421F6488EC71FDD8FA221422D (const RuntimeMethod* method)
 {
-	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
-	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
+	return ((  AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String>::Start<Unity.Services.Relay.WrappedRelayService/<GetJoinCodeAsync>d__7>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CGetJoinCodeAsyncU3Ed__7_t999AF656CC2534DF9961B15A27757CAF208F9B1A_m94826C5CC05C3B7E009333B6D00A8D1C2CD38471 (AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E* __this, U3CGetJoinCodeAsyncU3Ed__7_t999AF656CC2534DF9961B15A27757CAF208F9B1A* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E*, U3CGetJoinCodeAsyncU3Ed__7_t999AF656CC2534DF9961B15A27757CAF208F9B1A*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CGetJoinCodeAsyncU3Ed__7_t999AF656CC2534DF9961B15A27757CAF208F9B1A_mA77A80ED1B13A64B3922FA71D4A6D64803FAD2D7_gshared)(__this, ___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String>::get_Task()
 inline Task_1_t3D7638C82ED289AF156EDBAE76842D8DF4C4A9E0* AsyncTaskMethodBuilder_1_get_Task_m01EB243CF4396C9A2645F71572B47CF12151974E (AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E* __this, const RuntimeMethod* method)
 {
-	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
-	return (Task_1_t3D7638C82ED289AF156EDBAE76842D8DF4C4A9E0*)il2cppRetVal;
+	return ((  Task_1_t3D7638C82ED289AF156EDBAE76842D8DF4C4A9E0* (*) (AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
 }
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.JoinAllocation>::Create()
 inline AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771 AsyncTaskMethodBuilder_1_Create_m801E398CBD085A7776D3D65FC41964E98E05D281 (const RuntimeMethod* method)
 {
-	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
-	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
+	return ((  AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.JoinAllocation>::Start<Unity.Services.Relay.WrappedRelayService/<JoinAllocationAsync>d__8>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CJoinAllocationAsyncU3Ed__8_t9F4A81459BE6CA4A74C03B370556C1592DF39A60_mE15BDB7C9113A562E981FD833268F6AD79FAE9BA (AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771* __this, U3CJoinAllocationAsyncU3Ed__8_t9F4A81459BE6CA4A74C03B370556C1592DF39A60* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771*, U3CJoinAllocationAsyncU3Ed__8_t9F4A81459BE6CA4A74C03B370556C1592DF39A60*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CJoinAllocationAsyncU3Ed__8_t9F4A81459BE6CA4A74C03B370556C1592DF39A60_m7673AB7E2B6293A4971386D461421BCFCA2A996C_gshared)(__this, ___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.JoinAllocation>::get_Task()
 inline Task_1_t50529E0258FC07E21B5B77E4D74251F095B976FC* AsyncTaskMethodBuilder_1_get_Task_m0D74C088429D33A295E602DBD6F8F7A7B36EF300 (AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771* __this, const RuntimeMethod* method)
 {
-	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
-	return (Task_1_t50529E0258FC07E21B5B77E4D74251F095B976FC*)il2cppRetVal;
+	return ((  Task_1_t50529E0258FC07E21B5B77E4D74251F095B976FC* (*) (AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
 }
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Relay.Models.Region>>::Create()
 inline AsyncTaskMethodBuilder_1_tFAF089716F367370BDCEEF686272DB2204085BA5 AsyncTaskMethodBuilder_1_Create_m67AD6A3B34CCD2EFD449B8F757C8F854B1D00DBE (const RuntimeMethod* method)
 {
-	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
-	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_tFAF089716F367370BDCEEF686272DB2204085BA5, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
+	return ((  AsyncTaskMethodBuilder_1_tFAF089716F367370BDCEEF686272DB2204085BA5 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Relay.Models.Region>>::Start<Unity.Services.Relay.WrappedRelayService/<ListRegionsAsync>d__9>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CListRegionsAsyncU3Ed__9_tB00F1FB992D5649007F3C7776506AC9782DF9A91_m95AEDE88E35CEE6B6F84341A18CDFBFCE889FF74 (AsyncTaskMethodBuilder_1_tFAF089716F367370BDCEEF686272DB2204085BA5* __this, U3CListRegionsAsyncU3Ed__9_tB00F1FB992D5649007F3C7776506AC9782DF9A91* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tFAF089716F367370BDCEEF686272DB2204085BA5*, U3CListRegionsAsyncU3Ed__9_tB00F1FB992D5649007F3C7776506AC9782DF9A91*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CListRegionsAsyncU3Ed__9_tB00F1FB992D5649007F3C7776506AC9782DF9A91_m69ADA3E7BBF371AD8F300C17E99D4DB7025FB553_gshared)(__this, ___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Relay.Models.Region>>::get_Task()
 inline Task_1_t9EA43CDB86186C0B6EC82C7943940B94C9048C25* AsyncTaskMethodBuilder_1_get_Task_m05F72A1C02B6DBF625E0B6EFF44ECC5C3E45C647 (AsyncTaskMethodBuilder_1_tFAF089716F367370BDCEEF686272DB2204085BA5* __this, const RuntimeMethod* method)
 {
-	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
-	return (Task_1_t9EA43CDB86186C0B6EC82C7943940B94C9048C25*)il2cppRetVal;
+	return ((  Task_1_t9EA43CDB86186C0B6EC82C7943940B94C9048C25* (*) (AsyncTaskMethodBuilder_1_tFAF089716F367370BDCEEF686272DB2204085BA5*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
 }
 // Unity.Services.Relay.IRelayServiceSdk Unity.Services.Relay.WrappedRelayService::get_m_RelayService()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* WrappedRelayService_get_m_RelayService_m9B4D30A3CB81B678435907CA424F32E6C18B24ED_inline (WrappedRelayService_tE65D9916F51E396D071916C9BB0FC2B43B9A6B12* __this, const RuntimeMethod* method) ;
@@ -5670,70 +5688,62 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t9EA43CDB86186C0B6EC82C7943940B94C9048
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Collections.Generic.List`1<Unity.Services.Relay.Models.Region>>::GetAwaiter()
 inline TaskAwaiter_1_tE2D47EDFA7C55174A8E4E70A4C0BA8A6939E0223 Task_1_GetAwaiter_m624249C9B5A42F8334515D3FED7E8E7715ACC4D6 (Task_1_t9EA43CDB86186C0B6EC82C7943940B94C9048C25* __this, const RuntimeMethod* method)
 {
-	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
-	return il2cpp_codegen_cast_struct<TaskAwaiter_1_tE2D47EDFA7C55174A8E4E70A4C0BA8A6939E0223, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
+	return ((  TaskAwaiter_1_tE2D47EDFA7C55174A8E4E70A4C0BA8A6939E0223 (*) (Task_1_t9EA43CDB86186C0B6EC82C7943940B94C9048C25*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.List`1<Unity.Services.Relay.Models.Region>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_mF23A5CCE2F6EAD6A29D28080E2A0F98B803085D6 (TaskAwaiter_1_tE2D47EDFA7C55174A8E4E70A4C0BA8A6939E0223* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
+	return ((  bool (*) (TaskAwaiter_1_tE2D47EDFA7C55174A8E4E70A4C0BA8A6939E0223*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.Allocation>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.List`1<Unity.Services.Relay.Models.Region>>,Unity.Services.Relay.WrappedRelayService/<CreateAllocationAsync>d__6>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tE2D47EDFA7C55174A8E4E70A4C0BA8A6939E0223_TisU3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D_mED598E1DF3B82EB597B7CA111CCF4E6568163A83 (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12* __this, TaskAwaiter_1_tE2D47EDFA7C55174A8E4E70A4C0BA8A6939E0223* ___awaiter0, U3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12*, TaskAwaiter_1_tE2D47EDFA7C55174A8E4E70A4C0BA8A6939E0223*, U3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D_m552528D37034CD2EF381FDED4DEC24E687867E23_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.List`1<Unity.Services.Relay.Models.Region>>::GetResult()
 inline List_1_tDCF1E8D495EC3802AF7326575AF3416A95214ECF* TaskAwaiter_1_GetResult_m0D33C69F676613BE46EF2C371CC82AA1BAE5C8AB (TaskAwaiter_1_tE2D47EDFA7C55174A8E4E70A4C0BA8A6939E0223* __this, const RuntimeMethod* method)
 {
-	List_1_tDCF1E8D495EC3802AF7326575AF3416A95214ECF* il2cppRetVal;
-	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  List_1_tDCF1E8D495EC3802AF7326575AF3416A95214ECF* (*) (TaskAwaiter_1_tE2D47EDFA7C55174A8E4E70A4C0BA8A6939E0223*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
 }
 // System.Void System.Func`2<Unity.Services.Relay.Models.Region,System.String>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m3B96CDAD4CA55D33692876D886FE910F8F0A9496 (Func_2_t57C70FF13576866310EBB708D0C027912FDBEFA5* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t57C70FF13576866310EBB708D0C027912FDBEFA5*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F8A01C0B02BC1D4063F4EB1E817F7A48562A398_gshared)(__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<Unity.Services.Relay.Models.Region,System.String>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
 inline RuntimeObject* Enumerable_Select_TisRegion_t8172769DB65850A4297B1E224084B92E63E49C22_TisString_t_mE8649EA72A079FDF5FEA386DC8B3D12B970E059F (RuntimeObject* ___source0, Func_2_t57C70FF13576866310EBB708D0C027912FDBEFA5* ___selector1, const RuntimeMethod* method)
 {
-	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_Select_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m5BBCA2BC02448D0B77D2201BB08B13BAB3BABA53_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___selector1, method);
-	return (RuntimeObject*)il2cppRetVal;
+	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t57C70FF13576866310EBB708D0C027912FDBEFA5*, const RuntimeMethod*))Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m67C538A5EBF57C4844107A8EF25DB2CAAFBAF8FB_gshared)(___source0, ___selector1, method);
 }
 // System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<System.String>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* Enumerable_ToList_TisString_t_m86360148F90DE6EA1A8363F38B7C2A88FD139131 (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* il2cppRetVal = ((  List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisIl2CppFullySharedGenericAny_m191EA129E511F9B8304FF8826A2DA645E06CCBF0_gshared)((RuntimeObject*)___source0, method);
-	return (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*)il2cppRetVal;
+	return ((  List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisRuntimeObject_m6456D63764F29E6B5B2422C3DE25113577CF51EE_gshared)(___source0, method);
 }
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>::GetAwaiter()
 inline TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3 Task_1_GetAwaiter_mD69C66388D27FBC360C7E917ABE432EB7BE8B341 (Task_1_t4A6397D54E9A2AC6B11B022C4E78657D6FF68D2A* __this, const RuntimeMethod* method)
 {
-	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
-	return il2cpp_codegen_cast_struct<TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
+	return ((  TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3 (*) (Task_1_t4A6397D54E9A2AC6B11B022C4E78657D6FF68D2A*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_m13502EB5557180BEE07D711939BF5C92D25E8934 (TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
+	return ((  bool (*) (TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.Allocation>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>,Unity.Services.Relay.WrappedRelayService/<CreateAllocationAsync>d__6>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3_TisU3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D_m3686F078E9E3A5D77DD7163B2FFB509A2C05474F (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12* __this, TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3* ___awaiter0, U3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12*, TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3*, U3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D_m552528D37034CD2EF381FDED4DEC24E687867E23_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.IList`1<Unity.Services.Qos.Internal.QosResult>>::GetResult()
 inline RuntimeObject* TaskAwaiter_1_GetResult_mD660D497F7A0DA63593CA05E7103336ED108885E (TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3* __this, const RuntimeMethod* method)
 {
-	RuntimeObject* il2cppRetVal;
-	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  RuntimeObject* (*) (TaskAwaiter_1_tD28EC56D9D6C837B331A280A0DB6AE090ACEC4A3*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
 }
 // System.Boolean System.Linq.Enumerable::Any<Unity.Services.Qos.Internal.QosResult>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline bool Enumerable_Any_TisQosResult_tA2296213032595430F8FE40418B3D5BA47E86D27_m70355466317907BCF0F2C9480DBDAC0DC0BF5EE5 (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	return ((  bool (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Any_TisIl2CppFullySharedGenericAny_m3499AC108A84D818DD8C221F8E60145246FC8A09_gshared)((RuntimeObject*)___source0, method);
+	return ((  bool (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Any_TisQosResult_tA2296213032595430F8FE40418B3D5BA47E86D27_m70355466317907BCF0F2C9480DBDAC0DC0BF5EE5_gshared)(___source0, method);
 }
 // System.String System.String::Concat(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m9E3155FB84015C823606188F53B47CB44C444991 (String_t* ___str00, String_t* ___str11, const RuntimeMethod* method) ;
@@ -5752,32 +5762,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CreateAllocationRequest__ctor_mE80297348
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.AllocateResponseBody>>::GetAwaiter()
 inline TaskAwaiter_1_tCE0527CCF0A3F5812811ED4B85DA1101270D607C Task_1_GetAwaiter_m5B9796878DF5862AA579A9C2B155C104AF7CB276 (Task_1_t7BB0CFF66B21675985BFFEB47E2273CA88705CDD* __this, const RuntimeMethod* method)
 {
-	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
-	return il2cpp_codegen_cast_struct<TaskAwaiter_1_tCE0527CCF0A3F5812811ED4B85DA1101270D607C, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
+	return ((  TaskAwaiter_1_tCE0527CCF0A3F5812811ED4B85DA1101270D607C (*) (Task_1_t7BB0CFF66B21675985BFFEB47E2273CA88705CDD*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.AllocateResponseBody>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_m51FEA38AF32B97CF28AB2B0A77A6B7F96963107B (TaskAwaiter_1_tCE0527CCF0A3F5812811ED4B85DA1101270D607C* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
+	return ((  bool (*) (TaskAwaiter_1_tCE0527CCF0A3F5812811ED4B85DA1101270D607C*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.Allocation>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.AllocateResponseBody>>,Unity.Services.Relay.WrappedRelayService/<CreateAllocationAsync>d__6>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tCE0527CCF0A3F5812811ED4B85DA1101270D607C_TisU3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D_m116DC0CB319F4BCF7F0184DC335689732765907C (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12* __this, TaskAwaiter_1_tCE0527CCF0A3F5812811ED4B85DA1101270D607C* ___awaiter0, U3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12*, TaskAwaiter_1_tCE0527CCF0A3F5812811ED4B85DA1101270D607C*, U3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D_m552528D37034CD2EF381FDED4DEC24E687867E23_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.AllocateResponseBody>>::GetResult()
 inline Response_1_t4486EDA0C78BD630292FD1F8B9445CADF7522AFE* TaskAwaiter_1_GetResult_m6D98D07BA15C9B3F736BC3E708187E9E2D0B0B20 (TaskAwaiter_1_tCE0527CCF0A3F5812811ED4B85DA1101270D607C* __this, const RuntimeMethod* method)
 {
-	Response_1_t4486EDA0C78BD630292FD1F8B9445CADF7522AFE* il2cppRetVal;
-	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  Response_1_t4486EDA0C78BD630292FD1F8B9445CADF7522AFE* (*) (TaskAwaiter_1_tCE0527CCF0A3F5812811ED4B85DA1101270D607C*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
 }
 // T Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.AllocateResponseBody>::get_Result()
 inline AllocateResponseBody_t684F383C2805576A9B08FBCDBCDFB8C52D6FB0BF* Response_1_get_Result_m975BDCB666B522A50E7025B6DE22AECF2E6BA721_inline (Response_1_t4486EDA0C78BD630292FD1F8B9445CADF7522AFE* __this, const RuntimeMethod* method)
 {
-	AllocateResponseBody_t684F383C2805576A9B08FBCDBCDFB8C52D6FB0BF* il2cppRetVal;
-	((  void (*) (/*Unity.Services.Relay.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Response_1_get_Result_m5C557F3EFAE79505C058B404E8D6AD8F9A142598_gshared_inline)((Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  AllocateResponseBody_t684F383C2805576A9B08FBCDBCDFB8C52D6FB0BF* (*) (Response_1_t4486EDA0C78BD630292FD1F8B9445CADF7522AFE*, const RuntimeMethod*))Response_1_get_Result_m748D935F0C9D59C5E322905E9E5EB091E05BB17A_gshared_inline)(__this, method);
 }
 // Unity.Services.Relay.Models.AllocationData Unity.Services.Relay.Models.AllocateResponseBody::get_Data()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AllocationData_tB5D05E9ACDA46580C3DFF23E25A69945071E80BF* AllocateResponseBody_get_Data_m8F81519F87833135C93F9C87879E050F7AE33714_inline (AllocateResponseBody_t684F383C2805576A9B08FBCDBCDFB8C52D6FB0BF* __this, const RuntimeMethod* method) ;
@@ -5796,19 +5801,19 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* HttpClientResponse_get_
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.Allocation>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_mDE77C042A6806DC351ADFFBD6E0EE04ECFF4763A (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.Allocation>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_m4D5D65D3007290853274F8CD5164420B2F2A29E7 (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12* __this, Allocation_t485155861D9DF79FCFE5C4C5F93C9889D041C430* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12*, Allocation_t485155861D9DF79FCFE5C4C5F93C9889D041C430*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
 }
 // System.Void Unity.Services.Relay.WrappedRelayService/<CreateAllocationAsync>d__6::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateAllocationAsyncU3Ed__6_MoveNext_mD83769A9301DEB6935D7581100A3AADEAA02D0A5 (U3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.Allocation>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_mB4425F81BFE6999EF99DE881C195AE6992AE82DA (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t7CFFC8CB4F8BA027D31B8B2292D90E0120D99F12*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Relay.WrappedRelayService/<CreateAllocationAsync>d__6::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateAllocationAsyncU3Ed__6_SetStateMachine_m8938E731E773951C097FB0F05EA32841E8679BF2 (U3CCreateAllocationAsyncU3Ed__6_tE114ABE8BD38349A2CFFEDF79B13E8CA65ACA07D* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -5823,32 +5828,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CreateJoincodeRequest__ctor_m72A3FA14205
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinCodeResponseBody>>::GetAwaiter()
 inline TaskAwaiter_1_t528369FEF142D2818D8C91ED8CA8CB07778D0885 Task_1_GetAwaiter_m0FDD7336561647DA5F570801F2242261896EAA0D (Task_1_tE4185912DE54D4A8EB40BC0482302372DF258D00* __this, const RuntimeMethod* method)
 {
-	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
-	return il2cpp_codegen_cast_struct<TaskAwaiter_1_t528369FEF142D2818D8C91ED8CA8CB07778D0885, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
+	return ((  TaskAwaiter_1_t528369FEF142D2818D8C91ED8CA8CB07778D0885 (*) (Task_1_tE4185912DE54D4A8EB40BC0482302372DF258D00*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinCodeResponseBody>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_mE8247623FA6F4F638286D2595FAE8CE36FC16E2E (TaskAwaiter_1_t528369FEF142D2818D8C91ED8CA8CB07778D0885* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t528369FEF142D2818D8C91ED8CA8CB07778D0885*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinCodeResponseBody>>,Unity.Services.Relay.WrappedRelayService/<GetJoinCodeAsync>d__7>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t528369FEF142D2818D8C91ED8CA8CB07778D0885_TisU3CGetJoinCodeAsyncU3Ed__7_t999AF656CC2534DF9961B15A27757CAF208F9B1A_m4567EA3D3267408CE517FA2259D5172BF8E3ED51 (AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E* __this, TaskAwaiter_1_t528369FEF142D2818D8C91ED8CA8CB07778D0885* ___awaiter0, U3CGetJoinCodeAsyncU3Ed__7_t999AF656CC2534DF9961B15A27757CAF208F9B1A* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E*, TaskAwaiter_1_t528369FEF142D2818D8C91ED8CA8CB07778D0885*, U3CGetJoinCodeAsyncU3Ed__7_t999AF656CC2534DF9961B15A27757CAF208F9B1A*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CGetJoinCodeAsyncU3Ed__7_t999AF656CC2534DF9961B15A27757CAF208F9B1A_mA77D27F6345A772CA2C4DA62162179901A67B3DB_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinCodeResponseBody>>::GetResult()
 inline Response_1_t0C013828111EA0F4BA3208D342FA2F3E0696C213* TaskAwaiter_1_GetResult_mB314689BD7DB2D3E164941A6A47385F145B9AF14 (TaskAwaiter_1_t528369FEF142D2818D8C91ED8CA8CB07778D0885* __this, const RuntimeMethod* method)
 {
-	Response_1_t0C013828111EA0F4BA3208D342FA2F3E0696C213* il2cppRetVal;
-	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  Response_1_t0C013828111EA0F4BA3208D342FA2F3E0696C213* (*) (TaskAwaiter_1_t528369FEF142D2818D8C91ED8CA8CB07778D0885*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
 }
 // T Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinCodeResponseBody>::get_Result()
 inline JoinCodeResponseBody_t0DA591BD07E19E39AB3B968371BFC7230A120495* Response_1_get_Result_m2201CA8175E3E5B4C6D7C53A4940A8BA88BEF812_inline (Response_1_t0C013828111EA0F4BA3208D342FA2F3E0696C213* __this, const RuntimeMethod* method)
 {
-	JoinCodeResponseBody_t0DA591BD07E19E39AB3B968371BFC7230A120495* il2cppRetVal;
-	((  void (*) (/*Unity.Services.Relay.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Response_1_get_Result_m5C557F3EFAE79505C058B404E8D6AD8F9A142598_gshared_inline)((Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  JoinCodeResponseBody_t0DA591BD07E19E39AB3B968371BFC7230A120495* (*) (Response_1_t0C013828111EA0F4BA3208D342FA2F3E0696C213*, const RuntimeMethod*))Response_1_get_Result_m748D935F0C9D59C5E322905E9E5EB091E05BB17A_gshared_inline)(__this, method);
 }
 // Unity.Services.Relay.Models.JoinCodeData Unity.Services.Relay.Models.JoinCodeResponseBody::get_Data()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR JoinCodeData_t502A8800879A4996318A858BA9F8F39FD7ECDA75* JoinCodeResponseBody_get_Data_mD6B4155734505E76E39A1C4BF98497A8A333699F_inline (JoinCodeResponseBody_t0DA591BD07E19E39AB3B968371BFC7230A120495* __this, const RuntimeMethod* method) ;
@@ -5857,19 +5857,19 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* JoinCodeData_get_JoinCo
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_m897218C2DB8D7BA446EB263573085805B8F0638C (AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_mB79121C0ACAC704500FAA7350ED0FE6604DDA05E (AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E* __this, String_t* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E*, String_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
 }
 // System.Void Unity.Services.Relay.WrappedRelayService/<GetJoinCodeAsync>d__7::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetJoinCodeAsyncU3Ed__7_MoveNext_mBB836C880BD19F68D4CC863F00520BB69BF85596 (U3CGetJoinCodeAsyncU3Ed__7_t999AF656CC2534DF9961B15A27757CAF208F9B1A* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_mE4D48B78E50CA2A3650A856ACF86A3CFBA249C30 (AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tA28B0962049DC249BEC0054E2394B1962E28E90E*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Relay.WrappedRelayService/<GetJoinCodeAsync>d__7::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetJoinCodeAsyncU3Ed__7_SetStateMachine_mD61088B8D4066AC7B395BCF38A38B8C8E7BC1643 (U3CGetJoinCodeAsyncU3Ed__7_t999AF656CC2534DF9961B15A27757CAF208F9B1A* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -5882,32 +5882,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JoinRelayRequest__ctor_mD232960F064822A9
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinResponseBody>>::GetAwaiter()
 inline TaskAwaiter_1_t5F8E95CC5BF8B65F9BD12FE1DF3F96F4DBC94C43 Task_1_GetAwaiter_mF32C5A5DAC3E7CCAA23A2EA8E2AD44E5E224ADA3 (Task_1_t3D18D71AED03BED1C1C9EE51F97F8665912AA2BA* __this, const RuntimeMethod* method)
 {
-	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
-	return il2cpp_codegen_cast_struct<TaskAwaiter_1_t5F8E95CC5BF8B65F9BD12FE1DF3F96F4DBC94C43, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
+	return ((  TaskAwaiter_1_t5F8E95CC5BF8B65F9BD12FE1DF3F96F4DBC94C43 (*) (Task_1_t3D18D71AED03BED1C1C9EE51F97F8665912AA2BA*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinResponseBody>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_mF07915C54BF7C284F8B1968A275DEB6FF87C8E0C (TaskAwaiter_1_t5F8E95CC5BF8B65F9BD12FE1DF3F96F4DBC94C43* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t5F8E95CC5BF8B65F9BD12FE1DF3F96F4DBC94C43*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.JoinAllocation>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinResponseBody>>,Unity.Services.Relay.WrappedRelayService/<JoinAllocationAsync>d__8>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t5F8E95CC5BF8B65F9BD12FE1DF3F96F4DBC94C43_TisU3CJoinAllocationAsyncU3Ed__8_t9F4A81459BE6CA4A74C03B370556C1592DF39A60_m120226D64F2E29FFA9562FEDF0481F563296EF5A (AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771* __this, TaskAwaiter_1_t5F8E95CC5BF8B65F9BD12FE1DF3F96F4DBC94C43* ___awaiter0, U3CJoinAllocationAsyncU3Ed__8_t9F4A81459BE6CA4A74C03B370556C1592DF39A60* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771*, TaskAwaiter_1_t5F8E95CC5BF8B65F9BD12FE1DF3F96F4DBC94C43*, U3CJoinAllocationAsyncU3Ed__8_t9F4A81459BE6CA4A74C03B370556C1592DF39A60*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CJoinAllocationAsyncU3Ed__8_t9F4A81459BE6CA4A74C03B370556C1592DF39A60_m2E6DF5A47F611B617D663A440FE6FEF49E9E510C_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinResponseBody>>::GetResult()
 inline Response_1_t0A619C882664621AF7A8CAC8C0B372E738E01563* TaskAwaiter_1_GetResult_mF8964C349C28158994D4B60E88A2D8348E013C5A (TaskAwaiter_1_t5F8E95CC5BF8B65F9BD12FE1DF3F96F4DBC94C43* __this, const RuntimeMethod* method)
 {
-	Response_1_t0A619C882664621AF7A8CAC8C0B372E738E01563* il2cppRetVal;
-	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  Response_1_t0A619C882664621AF7A8CAC8C0B372E738E01563* (*) (TaskAwaiter_1_t5F8E95CC5BF8B65F9BD12FE1DF3F96F4DBC94C43*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
 }
 // T Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinResponseBody>::get_Result()
 inline JoinResponseBody_t454EADE5E5AEB2A51D686C3BE77266CAEBD7A9E3* Response_1_get_Result_mF07B3E55C6B3BE2F03B18EFD0DFCB6B80B59DED9_inline (Response_1_t0A619C882664621AF7A8CAC8C0B372E738E01563* __this, const RuntimeMethod* method)
 {
-	JoinResponseBody_t454EADE5E5AEB2A51D686C3BE77266CAEBD7A9E3* il2cppRetVal;
-	((  void (*) (/*Unity.Services.Relay.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Response_1_get_Result_m5C557F3EFAE79505C058B404E8D6AD8F9A142598_gshared_inline)((Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  JoinResponseBody_t454EADE5E5AEB2A51D686C3BE77266CAEBD7A9E3* (*) (Response_1_t0A619C882664621AF7A8CAC8C0B372E738E01563*, const RuntimeMethod*))Response_1_get_Result_m748D935F0C9D59C5E322905E9E5EB091E05BB17A_gshared_inline)(__this, method);
 }
 // Unity.Services.Relay.Models.JoinData Unity.Services.Relay.Models.JoinResponseBody::get_Data()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR JoinData_t67EF5BB56CE0219C51B6849EA28FAB4344032692* JoinResponseBody_get_Data_mDAE2DCB1275BC7CE827F98732B91F6D52E9BACD0_inline (JoinResponseBody_t454EADE5E5AEB2A51D686C3BE77266CAEBD7A9E3* __this, const RuntimeMethod* method) ;
@@ -5916,19 +5911,19 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR JoinAllocation_t4CEDE85146B9D5F26
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.JoinAllocation>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_mF239616FE7D98BF9C7A0A8B6E122346EA8D57D27 (AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.JoinAllocation>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_m096450B47F6859FC11E5F91433776513CADD67B4 (AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771* __this, JoinAllocation_t4CEDE85146B9D5F2697A0DFFBF81C6FB6FAD7A3A* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771*, JoinAllocation_t4CEDE85146B9D5F2697A0DFFBF81C6FB6FAD7A3A*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
 }
 // System.Void Unity.Services.Relay.WrappedRelayService/<JoinAllocationAsync>d__8::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CJoinAllocationAsyncU3Ed__8_MoveNext_m29F5680FBC7E4977C1E018CDAE27EDDE356A0433 (U3CJoinAllocationAsyncU3Ed__8_t9F4A81459BE6CA4A74C03B370556C1592DF39A60* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Models.JoinAllocation>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_m25C7244280E880F59DDB0490E1E12970D0E60680 (AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tB7AE4918BE88CB9A2454731B3D63DA9E346AC771*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Relay.WrappedRelayService/<JoinAllocationAsync>d__8::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CJoinAllocationAsyncU3Ed__8_SetStateMachine_m6D948D15CD63B38112F3D9A9D20A7A5F13EF7C32 (U3CJoinAllocationAsyncU3Ed__8_t9F4A81459BE6CA4A74C03B370556C1592DF39A60* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -5937,32 +5932,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListRegionsRequest__ctor_m510A5EAB6D1FC9
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.RegionsResponseBody>>::GetAwaiter()
 inline TaskAwaiter_1_tB7865982EF712ED5B39EEEA0B2A90A2530ED3B9A Task_1_GetAwaiter_m04E1504F3EF3E361B80BBAE706EC1771BDD310F8 (Task_1_t7897C7C93D2A1348952FFBF47F7B7D43AB1D25AA* __this, const RuntimeMethod* method)
 {
-	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
-	return il2cpp_codegen_cast_struct<TaskAwaiter_1_tB7865982EF712ED5B39EEEA0B2A90A2530ED3B9A, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
+	return ((  TaskAwaiter_1_tB7865982EF712ED5B39EEEA0B2A90A2530ED3B9A (*) (Task_1_t7897C7C93D2A1348952FFBF47F7B7D43AB1D25AA*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.RegionsResponseBody>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_m2EFF49B3203D75AE1D8A38FD1EC2122C153F4A72 (TaskAwaiter_1_tB7865982EF712ED5B39EEEA0B2A90A2530ED3B9A* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
+	return ((  bool (*) (TaskAwaiter_1_tB7865982EF712ED5B39EEEA0B2A90A2530ED3B9A*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Relay.Models.Region>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.RegionsResponseBody>>,Unity.Services.Relay.WrappedRelayService/<ListRegionsAsync>d__9>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tB7865982EF712ED5B39EEEA0B2A90A2530ED3B9A_TisU3CListRegionsAsyncU3Ed__9_tB00F1FB992D5649007F3C7776506AC9782DF9A91_mD3BC7DB6873634566F5846B981BA8BA93D0E58FF (AsyncTaskMethodBuilder_1_tFAF089716F367370BDCEEF686272DB2204085BA5* __this, TaskAwaiter_1_tB7865982EF712ED5B39EEEA0B2A90A2530ED3B9A* ___awaiter0, U3CListRegionsAsyncU3Ed__9_tB00F1FB992D5649007F3C7776506AC9782DF9A91* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tFAF089716F367370BDCEEF686272DB2204085BA5*, TaskAwaiter_1_tB7865982EF712ED5B39EEEA0B2A90A2530ED3B9A*, U3CListRegionsAsyncU3Ed__9_tB00F1FB992D5649007F3C7776506AC9782DF9A91*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CListRegionsAsyncU3Ed__9_tB00F1FB992D5649007F3C7776506AC9782DF9A91_m826C781B8C6223EC9BA252C5F44BE294F108E60F_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.RegionsResponseBody>>::GetResult()
 inline Response_1_t4F809C3ADBA3A59F1BE5090F3D36B53190C0D7D9* TaskAwaiter_1_GetResult_mD786225F6FEE5F476798FCAC1B7EE5B2C3A7F5FE (TaskAwaiter_1_tB7865982EF712ED5B39EEEA0B2A90A2530ED3B9A* __this, const RuntimeMethod* method)
 {
-	Response_1_t4F809C3ADBA3A59F1BE5090F3D36B53190C0D7D9* il2cppRetVal;
-	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  Response_1_t4F809C3ADBA3A59F1BE5090F3D36B53190C0D7D9* (*) (TaskAwaiter_1_tB7865982EF712ED5B39EEEA0B2A90A2530ED3B9A*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
 }
 // T Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.RegionsResponseBody>::get_Result()
 inline RegionsResponseBody_t2DA18B97B6F7FAE523697E1C492D434E909AA5E1* Response_1_get_Result_m84A843EFB26703577A5C5543D0F2923DD450CD7B_inline (Response_1_t4F809C3ADBA3A59F1BE5090F3D36B53190C0D7D9* __this, const RuntimeMethod* method)
 {
-	RegionsResponseBody_t2DA18B97B6F7FAE523697E1C492D434E909AA5E1* il2cppRetVal;
-	((  void (*) (/*Unity.Services.Relay.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Response_1_get_Result_m5C557F3EFAE79505C058B404E8D6AD8F9A142598_gshared_inline)((Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  RegionsResponseBody_t2DA18B97B6F7FAE523697E1C492D434E909AA5E1* (*) (Response_1_t4F809C3ADBA3A59F1BE5090F3D36B53190C0D7D9*, const RuntimeMethod*))Response_1_get_Result_m748D935F0C9D59C5E322905E9E5EB091E05BB17A_gshared_inline)(__this, method);
 }
 // Unity.Services.Relay.Models.RegionsData Unity.Services.Relay.Models.RegionsResponseBody::get_Data()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RegionsData_tD0D4D640D6BC4D2FD599C84EB58EFC2BF4BF1E33* RegionsResponseBody_get_Data_m1EE816B8E932FD2DBD08ECB90F0AF02D791BA007_inline (RegionsResponseBody_t2DA18B97B6F7FAE523697E1C492D434E909AA5E1* __this, const RuntimeMethod* method) ;
@@ -5971,19 +5961,19 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tDCF1E8D495EC3802AF7326575
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Relay.Models.Region>>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_m7C1252CA4019078B16393A4F3095939AC7D4980A (AsyncTaskMethodBuilder_1_tFAF089716F367370BDCEEF686272DB2204085BA5* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tFAF089716F367370BDCEEF686272DB2204085BA5*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Relay.Models.Region>>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_mF2206508C59CF25BF1DBC19BAE9A5FD472DAFD92 (AsyncTaskMethodBuilder_1_tFAF089716F367370BDCEEF686272DB2204085BA5* __this, List_1_tDCF1E8D495EC3802AF7326575AF3416A95214ECF* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tFAF089716F367370BDCEEF686272DB2204085BA5*, List_1_tDCF1E8D495EC3802AF7326575AF3416A95214ECF*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
 }
 // System.Void Unity.Services.Relay.WrappedRelayService/<ListRegionsAsync>d__9::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CListRegionsAsyncU3Ed__9_MoveNext_m194A993847EA230365F43AA1FE9CC97A8FDBA959 (U3CListRegionsAsyncU3Ed__9_tB00F1FB992D5649007F3C7776506AC9782DF9A91* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Collections.Generic.List`1<Unity.Services.Relay.Models.Region>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_m8C79DDD6C5682B05DE317EC599ADFC01AE877516 (AsyncTaskMethodBuilder_1_tFAF089716F367370BDCEEF686272DB2204085BA5* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tFAF089716F367370BDCEEF686272DB2204085BA5*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Relay.WrappedRelayService/<ListRegionsAsync>d__9::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CListRegionsAsyncU3Ed__9_SetStateMachine_m8D7F0C055E76CC7CC6F2EB7C7239771411C093F1 (U3CListRegionsAsyncU3Ed__9_tB00F1FB992D5649007F3C7776506AC9782DF9A91* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -6021,60 +6011,54 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Monitor_Enter_m3CDB589DA1300B513D55FDCFB
 // System.Void System.Collections.Generic.Queue`1<System.Action>::Enqueue(T)
 inline void Queue_1_Enqueue_m9B59C0455EACB768D8D74CA1F57E003C91F6E3D4 (Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* __this, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___item0, const RuntimeMethod* method)
 {
-	((  void (*) (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Queue_1_Enqueue_m9159DC6A9BC5528A3444329C408F4101004CF652_gshared)((Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*)__this, (Il2CppFullySharedGenericAny)___item0, method);
+	((  void (*) (Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA*, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*, const RuntimeMethod*))Queue_1_Enqueue_m5CB8CF3906F1289F92036F0973EC5BE3450402EF_gshared)(__this, ___item0, method);
 }
 // System.Void System.Collections.Generic.Queue`1<System.Action>::.ctor(System.Collections.Generic.IEnumerable`1<T>)
 inline void Queue_1__ctor_m57B60B88680E0EC16D767498A48A09F090A0E0E1 (Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* __this, RuntimeObject* ___collection0, const RuntimeMethod* method)
 {
-	((  void (*) (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*, RuntimeObject*, const RuntimeMethod*))Queue_1__ctor_mA9E2AFA0F31EE75EBB6CB8F76A0088DEA2719DA8_gshared)((Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*)__this, (RuntimeObject*)___collection0, method);
+	((  void (*) (Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA*, RuntimeObject*, const RuntimeMethod*))Queue_1__ctor_mDFB3CD7FACAF85AFE5750DED2E3222107C996168_gshared)(__this, ___collection0, method);
 }
 // System.Void System.Collections.Generic.Queue`1<System.Action>::Clear()
 inline void Queue_1_Clear_mF64267E0006F20E5E3029290482ABD8CDF9ADD5F (Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*, const RuntimeMethod*))Queue_1_Clear_mF3F6BB3C909C58BB9407AA3FFA131CC73E1287AA_gshared)((Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*)__this, method);
+	((  void (*) (Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA*, const RuntimeMethod*))Queue_1_Clear_m70861E24CF43ECFF3BC5C2AD4EE55963D54D8711_gshared)(__this, method);
 }
 // System.Collections.Generic.Queue`1/Enumerator<T> System.Collections.Generic.Queue`1<System.Action>::GetEnumerator()
 inline Enumerator_t2B907489CB376FB1607C6C506557992598106DC0 Queue_1_GetEnumerator_mC7436D5B3AC0B74A05DFFED89CCD42C44240236B (Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* __this, const RuntimeMethod* method)
 {
-	Enumerator_t2B907489CB376FB1607C6C506557992598106DC0 il2cppRetVal;
-	((  void (*) (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*, Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C*, const RuntimeMethod*))Queue_1_GetEnumerator_m6C532F76552CCD7154B74816F66DA3CE367BD90D_gshared)((Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*)__this, (Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  Enumerator_t2B907489CB376FB1607C6C506557992598106DC0 (*) (Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA*, const RuntimeMethod*))Queue_1_GetEnumerator_mBF0033C4BCEA408644D24F0B28A81F9145FB97C9_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.Queue`1/Enumerator<System.Action>::Dispose()
 inline void Enumerator_Dispose_mF8F0785FC6D4056FF4C0B07D35DF0DCB5A8D4DA5 (Enumerator_t2B907489CB376FB1607C6C506557992598106DC0* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C*, const RuntimeMethod*))Enumerator_Dispose_mA25DFE205338DF12128791E990699B49B335B759_gshared)((Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C*)__this, method);
+	((  void (*) (Enumerator_t2B907489CB376FB1607C6C506557992598106DC0*, const RuntimeMethod*))Enumerator_Dispose_m680926A5EFC7099ECBCE9DEF68F8DED03C103955_gshared)(__this, method);
 }
 // T System.Collections.Generic.Queue`1/Enumerator<System.Action>::get_Current()
 inline Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* Enumerator_get_Current_m04D69CA3DDA91EE1E6D430757D08F864ABFF14FD (Enumerator_t2B907489CB376FB1607C6C506557992598106DC0* __this, const RuntimeMethod* method)
 {
-	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* il2cppRetVal;
-	((  void (*) (Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerator_get_Current_m2DDD9E2B36A595D40708EBE84125C065CCF6F11D_gshared)((Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* (*) (Enumerator_t2B907489CB376FB1607C6C506557992598106DC0*, const RuntimeMethod*))Enumerator_get_Current_m5F2338F4C35E898DB7231D7E30F30155498FA9D7_gshared)(__this, method);
 }
 // System.Boolean System.Collections.Generic.Queue`1/Enumerator<System.Action>::MoveNext()
 inline bool Enumerator_MoveNext_m3A3C3D75A988D5B5F80EAF6703658CFA53A10FCF (Enumerator_t2B907489CB376FB1607C6C506557992598106DC0* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C*, const RuntimeMethod*))Enumerator_MoveNext_mA6D24403558EA8BFEE5028D75AC049EC8677F637_gshared)((Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C*)__this, method);
+	return ((  bool (*) (Enumerator_t2B907489CB376FB1607C6C506557992598106DC0*, const RuntimeMethod*))Enumerator_MoveNext_mABD92CBE05B031E50E316375DDC8B2BDAD3F6F84_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.Queue`1<System.Action>::.ctor()
 inline void Queue_1__ctor_mCB1D86FC102A8C3B82A02702CAEDAE815FE04272 (Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*, const RuntimeMethod*))Queue_1__ctor_m657BFA58DFD6AB5B1B4B69AA6E963CD569637EAD_gshared)((Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*)__this, method);
+	((  void (*) (Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA*, const RuntimeMethod*))Queue_1__ctor_m6E2A5A8173E0CC524496D5155C737DF8FD10D0EB_gshared)(__this, method);
 }
 // System.Void Unity.Services.Relay.Scheduler.TaskScheduler::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TaskScheduler__ctor_m3EB2821F3124E90E0CB71C30CC19DF8BF3BDEA03 (TaskScheduler_tD1FC071B7E2DC84D9AA7412A6DFC45FBB49F3990* __this, const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.Queue`1<System.Action>::get_Count()
 inline int32_t Queue_1_get_Count_mB986A63C8D68BD8606522BF24176D36503CFD9C3_inline (Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*, const RuntimeMethod*))Queue_1_get_Count_mE6103188ACDEC07F90F2D2986554730D18029750_gshared_inline)((Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*)__this, method);
+	return ((  int32_t (*) (Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA*, const RuntimeMethod*))Queue_1_get_Count_m1768ADA9855B7CDA14C9C42E098A287F1A39C3A2_gshared_inline)(__this, method);
 }
 // T System.Collections.Generic.Queue`1<System.Action>::Dequeue()
 inline Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* Queue_1_Dequeue_m67206C56B5CF9749EFAEF48FAA0D82E2AD8D960E (Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* __this, const RuntimeMethod* method)
 {
-	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* il2cppRetVal;
-	((  void (*) (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Queue_1_Dequeue_m80C152387A53656EC4AEF450BCBA9087DC51EEE3_gshared)((Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* (*) (Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA*, const RuntimeMethod*))Queue_1_Dequeue_m86B243DF9EC238316EC3D27DF3E0AB8DB0987E84_gshared)(__this, method);
 }
 // System.Threading.SynchronizationContext System.Threading.SynchronizationContext::get_Current()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SynchronizationContext_tCDB842BBE53B050802CBBB59C6E6DC45B5B06DC0* SynchronizationContext_get_Current_m8DE6D3020745B7955249A2470A23EC0ECBB02A82 (const RuntimeMethod* method) ;
@@ -6107,7 +6091,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Allocation_get_Region_m
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.String>::Add(TKey,TValue)
 inline void Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, String_t* ___key0, String_t* ___value1, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_Add_m54D479280472DEA042DB3933AF547E666B017333_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)___key0, (Il2CppFullySharedGenericAny)___value1, method);
+	((  void (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, String_t*, String_t*, const RuntimeMethod*))Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_gshared)(__this, ___key0, ___value1, method);
 }
 // System.Int32 Unity.Services.Relay.Models.AllocationRequest::get_MaxConnections()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AllocationRequest_get_MaxConnections_mF8BA7BD304F15D0906123E6EB1B4BBBE4FD9CCDD_inline (AllocationRequest_t43A100566472A847D2DD786EA58A6D49F52AAD22* __this, const RuntimeMethod* method) ;
@@ -6178,44 +6162,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m9BC141AAB08F47C34B7ED40
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::Create()
 inline AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065 AsyncTaskMethodBuilder_1_Create_m7D038471174623FEA1EEAC6060F791462E61CD15 (const RuntimeMethod* method)
 {
-	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
-	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
+	return ((  AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::Start<Unity.Services.Relay.Http.HttpClient/<MakeRequestAsync>d__1>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__1_t92742A73A1CD0A55BB93B33F32330F4F8696A37D_mD75EC4039AF20CA8938480C9CC300E42DA6A4FAA (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, U3CMakeRequestAsyncU3Ed__1_t92742A73A1CD0A55BB93B33F32330F4F8696A37D* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, U3CMakeRequestAsyncU3Ed__1_t92742A73A1CD0A55BB93B33F32330F4F8696A37D*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__1_t92742A73A1CD0A55BB93B33F32330F4F8696A37D_mC157084D0C27170A2DB393F2E4C8FBB1B4E71E36_gshared)(__this, ___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::get_Task()
 inline Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043D70* AsyncTaskMethodBuilder_1_get_Task_mBB745D298A85A591DAAE45FF4DA6F718F34E9E68 (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, const RuntimeMethod* method)
 {
-	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
-	return (Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043D70*)il2cppRetVal;
+	return ((  Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043D70* (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::Start<Unity.Services.Relay.Http.HttpClient/<MakeRequestAsync>d__2>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__2_tA4F507AF617429B3FE6E16743491571F13398D18_mF7E8B7E129DD698B32FD747444929BBB1108051D (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, U3CMakeRequestAsyncU3Ed__2_tA4F507AF617429B3FE6E16743491571F13398D18* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, U3CMakeRequestAsyncU3Ed__2_tA4F507AF617429B3FE6E16743491571F13398D18*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CMakeRequestAsyncU3Ed__2_tA4F507AF617429B3FE6E16743491571F13398D18_m58950B0B424CABEE474B014CC49A9F265EFC7937_gshared)(__this, ___stateMachine0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::Start<Unity.Services.Relay.Http.HttpClient/<CreateWebRequestAsync>d__3>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__3_t927910A4CF5BCDBF14773FA44244CA080E15B560_m6990BBD2F425DF30708EAF91EC95C5C861900D09 (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, U3CCreateWebRequestAsyncU3Ed__3_t927910A4CF5BCDBF14773FA44244CA080E15B560* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, U3CCreateWebRequestAsyncU3Ed__3_t927910A4CF5BCDBF14773FA44244CA080E15B560*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__3_t927910A4CF5BCDBF14773FA44244CA080E15B560_m594B2D5DF2EDD66200FF6AB2552F2B35A91636FD_gshared)(__this, ___stateMachine0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::Start<Unity.Services.Relay.Http.HttpClient/<CreateHttpClientResponse>d__4>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407_mB3CBBC8FCD051EF7774BC3A9FA00B765A0C130A8 (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, U3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, U3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407_mA207C48948853A9796A5E1A7B0D2FFFC419D7AF3_gshared)(__this, ___stateMachine0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::Start<Unity.Services.Relay.Http.HttpClient/<CreateWebRequestAsync>d__5>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5_mC955EA176E71A4B1771DD5309AD23BC1B49C5566 (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, U3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, U3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5_m20CD262F7963CC4A1115C2E3F54FCAA0A34B7D85_gshared)(__this, ___stateMachine0, method);
 }
 // System.Int32 System.Collections.Generic.List`1<UnityEngine.Networking.IMultipartFormSection>::get_Count()
 inline int32_t List_1_get_Count_m0C23D34F33EBEF620CA00054786CC1B6F684CE21_inline (List_1_tCB1A627DDECC594C7E63E3CA2A397D5ABBFAA48D* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
+	return ((  int32_t (*) (List_1_tCB1A627DDECC594C7E63E3CA2A397D5ABBFAA48D*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
 }
 // System.Byte[] UnityEngine.Networking.UnityWebRequest::SerializeFormSections(System.Collections.Generic.List`1<UnityEngine.Networking.IMultipartFormSection>,System.Byte[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* UnityWebRequest_SerializeFormSections_mC0691C6F240272DD5C0A2C4C06DF5DE93BE354B3 (List_1_tCB1A627DDECC594C7E63E3CA2A397D5ABBFAA48D* ___multipartFormSections0, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___boundary1, const RuntimeMethod* method) ;
@@ -6240,42 +6222,39 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<Unity.Services.Relay.Http.HttpClientResponse>::GetAwaiter()
 inline TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E Task_1_GetAwaiter_mBA96EE0923C6E31C4BC07B6E016E6E1F99BF75DC (Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043D70* __this, const RuntimeMethod* method)
 {
-	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
-	return il2cpp_codegen_cast_struct<TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
+	return ((  TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E (*) (Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043D70*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Http.HttpClientResponse>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_mE256CFFB935FE4DC3D1125E278F6E98C2707EA43 (TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
+	return ((  bool (*) (TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Http.HttpClientResponse>,Unity.Services.Relay.Http.HttpClient/<MakeRequestAsync>d__1>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E_TisU3CMakeRequestAsyncU3Ed__1_t92742A73A1CD0A55BB93B33F32330F4F8696A37D_mAD41CFB09E898806F604B2EF60E7889CD405F5F9 (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E* ___awaiter0, U3CMakeRequestAsyncU3Ed__1_t92742A73A1CD0A55BB93B33F32330F4F8696A37D* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E*, U3CMakeRequestAsyncU3Ed__1_t92742A73A1CD0A55BB93B33F32330F4F8696A37D*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMakeRequestAsyncU3Ed__1_t92742A73A1CD0A55BB93B33F32330F4F8696A37D_m13E44CB44639168D0D9CA59DA28881C44C8B1BD4_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Http.HttpClientResponse>::GetResult()
 inline HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* TaskAwaiter_1_GetResult_m201E8EF159FA20F61D81CDA23295963D530DEE4F (TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E* __this, const RuntimeMethod* method)
 {
-	HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* il2cppRetVal;
-	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* (*) (TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_mE901AF8B155D297195AB3F7AE7C625B40B21C602 (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_mA78554C57E9ACF0AF93121CD6002B5FA65512522 (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
 }
 // System.Void Unity.Services.Relay.Http.HttpClient/<MakeRequestAsync>d__1::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMakeRequestAsyncU3Ed__1_MoveNext_mD2F652D8AB5F7741909E20DE48AF838AF1A10793 (U3CMakeRequestAsyncU3Ed__1_t92742A73A1CD0A55BB93B33F32330F4F8696A37D* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_mB5F2EC5AC33124CD6759F2A6C99F2E1782FF5DDE (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Relay.Http.HttpClient/<MakeRequestAsync>d__1::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMakeRequestAsyncU3Ed__1_SetStateMachine_mDAFDFA2B40792638808E1D91061B90B6637A4240 (U3CMakeRequestAsyncU3Ed__1_t92742A73A1CD0A55BB93B33F32330F4F8696A37D* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -6284,7 +6263,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Http.HttpClientResponse>,Unity.Services.Relay.Http.HttpClient/<MakeRequestAsync>d__2>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E_TisU3CMakeRequestAsyncU3Ed__2_tA4F507AF617429B3FE6E16743491571F13398D18_m436AF3713B9FD33617BF21FB05A8D1FB701C4790 (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E* ___awaiter0, U3CMakeRequestAsyncU3Ed__2_tA4F507AF617429B3FE6E16743491571F13398D18* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E*, U3CMakeRequestAsyncU3Ed__2_tA4F507AF617429B3FE6E16743491571F13398D18*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CMakeRequestAsyncU3Ed__2_tA4F507AF617429B3FE6E16743491571F13398D18_m308C0318423667680E09B35CDF08974CF73C7E79_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // System.Void Unity.Services.Relay.Http.HttpClient/<MakeRequestAsync>d__2::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMakeRequestAsyncU3Ed__2_MoveNext_m31F044290D759FF6DA7099D234E4254025C95D3A (U3CMakeRequestAsyncU3Ed__2_tA4F507AF617429B3FE6E16743491571F13398D18* __this, const RuntimeMethod* method) ;
@@ -6295,7 +6274,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Http.HttpClientResponse>,Unity.Services.Relay.Http.HttpClient/<CreateWebRequestAsync>d__3>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E_TisU3CCreateWebRequestAsyncU3Ed__3_t927910A4CF5BCDBF14773FA44244CA080E15B560_mD3EB1B7FEB5B0DCA33E10F969753ABBB5F71C9FE (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E* ___awaiter0, U3CCreateWebRequestAsyncU3Ed__3_t927910A4CF5BCDBF14773FA44244CA080E15B560* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E*, U3CCreateWebRequestAsyncU3Ed__3_t927910A4CF5BCDBF14773FA44244CA080E15B560*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateWebRequestAsyncU3Ed__3_t927910A4CF5BCDBF14773FA44244CA080E15B560_mC7F67521737FB6E6995CC9135EAF7A72C884785E_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // System.Void Unity.Services.Relay.Http.HttpClient/<CreateWebRequestAsync>d__3::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateWebRequestAsyncU3Ed__3_MoveNext_mA25CC97587CE21D65A8B112FBBB4029A820FC7F5 (U3CCreateWebRequestAsyncU3Ed__3_t927910A4CF5BCDBF14773FA44244CA080E15B560* __this, const RuntimeMethod* method) ;
@@ -6304,7 +6283,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateWebRequestAsyncU3Ed__3_SetState
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::Start<Unity.Services.Relay.Http.HttpClient/<>c__DisplayClass4_0/<<CreateHttpClientResponse>b__0>d>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t2252D0F74F8F6F297966619A728A6DED1EF3D133_m3DB71ABCB50F80D0F0B2FA946162DA22FDF1C461 (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t2252D0F74F8F6F297966619A728A6DED1EF3D133* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t2252D0F74F8F6F297966619A728A6DED1EF3D133*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t2252D0F74F8F6F297966619A728A6DED1EF3D133_m83FE8AE299CAEA3A6EE6F2863BA66FA6E4FF7A24_gshared)(__this, ___stateMachine0, method);
 }
 // System.Void UnityEngine.Networking.UnityWebRequest::.ctor(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityWebRequest__ctor_mD4739B0BF1C4937479A83B24B531C6B819712A3E (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* __this, String_t* ___url0, String_t* ___method1, const RuntimeMethod* method) ;
@@ -6319,7 +6298,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B84
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Http.HttpClientResponse>,Unity.Services.Relay.Http.HttpClient/<>c__DisplayClass4_0/<<CreateHttpClientResponse>b__0>d>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t2252D0F74F8F6F297966619A728A6DED1EF3D133_m353A6E5386E15114D61C856489ADD79B929D9449 (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E* ___awaiter0, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t2252D0F74F8F6F297966619A728A6DED1EF3D133* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E*, U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t2252D0F74F8F6F297966619A728A6DED1EF3D133*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t2252D0F74F8F6F297966619A728A6DED1EF3D133_mA35E0FFE00FEFB077DCBD15D352DB66F22A71D48_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // System.Void Unity.Services.Relay.Http.HttpClient/<>c__DisplayClass4_0/<<CreateHttpClientResponse>b__0>d::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_MoveNext_m3B59ADAF12A3718E05A89BA5ED6DB7131725FB73 (U3CU3CCreateHttpClientResponseU3Eb__0U3Ed_t2252D0F74F8F6F297966619A728A6DED1EF3D133* __this, const RuntimeMethod* method) ;
@@ -6332,7 +6311,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TaskFactory_tF781BD37BE23917412AD
 // System.Void System.Func`1<System.Threading.Tasks.Task`1<Unity.Services.Relay.Http.HttpClientResponse>>::.ctor(System.Object,System.IntPtr)
 inline void Func_1__ctor_m9B0FB68D23B5799985BAFF91EC51ABE39D5DF8F1 (Func_1_t0B92800573CA611EC5FA295A7D39AFC5C1E69EF5* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_1__ctor_mC73A4FCEBBAB90CB7B7AB16321F3F98FBBF12596_gshared)((Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431*)__this, ___object0, ___method1, method);
+	((  void (*) (Func_1_t0B92800573CA611EC5FA295A7D39AFC5C1E69EF5*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_1__ctor_m663374A863E492A515BE9626B6F0E444991834E8_gshared)(__this, ___object0, ___method1, method);
 }
 // System.Threading.CancellationToken System.Threading.CancellationToken::get_None()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED CancellationToken_get_None_mB0E2D3427C25F09ACEBB2D060F82088EEC00BA53 (const RuntimeMethod* method) ;
@@ -6341,36 +6320,32 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TaskScheduler_t3F0550EBEF7C41F74E
 // System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskFactory::StartNew<System.Threading.Tasks.Task`1<Unity.Services.Relay.Http.HttpClientResponse>>(System.Func`1<TResult>,System.Threading.CancellationToken,System.Threading.Tasks.TaskCreationOptions,System.Threading.Tasks.TaskScheduler)
 inline Task_1_t4E7DDE33FF51D0E6044E2F99B50BFA096A4C23DE* TaskFactory_StartNew_TisTask_1_tDFC6C03AEB4539F506AD3CC196C771643A043D70_mD13859D99E112B6D5B8EB0013A8ED04D627DCE44 (TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0* __this, Func_1_t0B92800573CA611EC5FA295A7D39AFC5C1E69EF5* ___function0, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED ___cancellationToken1, int32_t ___creationOptions2, TaskScheduler_t3F0550EBEF7C41F74EC8C08FF4BED0D8CE66006E* ___scheduler3, const RuntimeMethod* method)
 {
-	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0*, Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431*, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED, int32_t, TaskScheduler_t3F0550EBEF7C41F74EC8C08FF4BED0D8CE66006E*, const RuntimeMethod*))TaskFactory_StartNew_TisIl2CppFullySharedGenericAny_m093A8AAFB7FEC0A2D65CEAEBE25DE0EB91469C36_gshared)((TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0*)__this, (Func_1_tBB8824FA8746333BFFF3AB3CE4A41B58450AF431*)___function0, ___cancellationToken1, ___creationOptions2, ___scheduler3, method);
-	return (Task_1_t4E7DDE33FF51D0E6044E2F99B50BFA096A4C23DE*)il2cppRetVal;
+	return ((  Task_1_t4E7DDE33FF51D0E6044E2F99B50BFA096A4C23DE* (*) (TaskFactory_tF781BD37BE23917412AD83424D1497C7C1509DF0*, Func_1_t0B92800573CA611EC5FA295A7D39AFC5C1E69EF5*, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED, int32_t, TaskScheduler_t3F0550EBEF7C41F74EC8C08FF4BED0D8CE66006E*, const RuntimeMethod*))TaskFactory_StartNew_TisRuntimeObject_m14FDB1694FEE097B11C3119BD89F3C350F7DE51B_gshared)(__this, ___function0, ___cancellationToken1, ___creationOptions2, ___scheduler3, method);
 }
 // System.Runtime.CompilerServices.TaskAwaiter`1<TResult> System.Threading.Tasks.Task`1<System.Threading.Tasks.Task`1<Unity.Services.Relay.Http.HttpClientResponse>>::GetAwaiter()
 inline TaskAwaiter_1_t9861AD5145A8151E66C2FE2AA7261F44E588B4B6 Task_1_GetAwaiter_m1F789EBCE0091020CFBABF4DAED366AAE5202A2B (Task_1_t4E7DDE33FF51D0E6044E2F99B50BFA096A4C23DE* __this, const RuntimeMethod* method)
 {
-	TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 il2cppRetVal = ((  TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8 (*) (/*System.Threading.Tasks.Task`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*, const RuntimeMethod*))Task_1_GetAwaiter_mADB36AF74C602F4C81E4752994696EA21CB0C0B6_gshared)((Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this, method);
-	return il2cpp_codegen_cast_struct<TaskAwaiter_1_t9861AD5145A8151E66C2FE2AA7261F44E588B4B6, TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8>(&il2cppRetVal);
+	return ((  TaskAwaiter_1_t9861AD5145A8151E66C2FE2AA7261F44E588B4B6 (*) (Task_1_t4E7DDE33FF51D0E6044E2F99B50BFA096A4C23DE*, const RuntimeMethod*))Task_1_GetAwaiter_mD80ED263BF3F1F8DBDBD177BA3401A0AAAFA38E3_gshared)(__this, method);
 }
 // System.Boolean System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task`1<Unity.Services.Relay.Http.HttpClientResponse>>::get_IsCompleted()
 inline bool TaskAwaiter_1_get_IsCompleted_m8F03DCDDADC7619697103EBAD4095114AB636BFC (TaskAwaiter_1_t9861AD5145A8151E66C2FE2AA7261F44E588B4B6* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_m7F153D4DF6456F60BABB1E7663CDDF3EFE172007_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, method);
+	return ((  bool (*) (TaskAwaiter_1_t9861AD5145A8151E66C2FE2AA7261F44E588B4B6*, const RuntimeMethod*))TaskAwaiter_1_get_IsCompleted_mEEBB09E26F4165A0F864D92E1890CFCD2C8CFD54_gshared)(__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task`1<Unity.Services.Relay.Http.HttpClientResponse>>,Unity.Services.Relay.Http.HttpClient/<CreateHttpClientResponse>d__4>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t9861AD5145A8151E66C2FE2AA7261F44E588B4B6_TisU3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407_m9C5AC6EDA64FBDA87CE542892AC4E09A33F80858 (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, TaskAwaiter_1_t9861AD5145A8151E66C2FE2AA7261F44E588B4B6* ___awaiter0, U3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, TaskAwaiter_1_t9861AD5145A8151E66C2FE2AA7261F44E588B4B6*, U3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407_mE471D88BC23CAD6433E2960CFC46172EBC6DAD69_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task`1<Unity.Services.Relay.Http.HttpClientResponse>>::GetResult()
 inline Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043D70* TaskAwaiter_1_GetResult_m931058D4D9FBE5EA42AE4A3A8CDD623B594E5DFD (TaskAwaiter_1_t9861AD5145A8151E66C2FE2AA7261F44E588B4B6* __this, const RuntimeMethod* method)
 {
-	Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043D70* il2cppRetVal;
-	((  void (*) (TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA0FDEC1F33CAC08401C6F3B9E5A5C6F1B4503EEB_gshared)((TaskAwaiter_1_t274550A5F4BB61F8D62C9C83AF92995FCCE549C8*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043D70* (*) (TaskAwaiter_1_t9861AD5145A8151E66C2FE2AA7261F44E588B4B6*, const RuntimeMethod*))TaskAwaiter_1_GetResult_mA4A8A1F43A456B40DDA251D00026C60919AED85B_gshared)(__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Http.HttpClientResponse>,Unity.Services.Relay.Http.HttpClient/<CreateHttpClientResponse>d__4>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E_TisU3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407_m72C3EA1095CE44D885771C2DF542CDB2A9CAE93D (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E* ___awaiter0, U3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E*, U3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407_mE471D88BC23CAD6433E2960CFC46172EBC6DAD69_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // System.Void Unity.Services.Relay.Http.HttpClient/<CreateHttpClientResponse>d__4::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateHttpClientResponseU3Ed__4_MoveNext_mA719C6D7E1E72D817F3E67E1A97BD3FADFED2419 (U3CCreateHttpClientResponseU3Ed__4_t4E080BC03346A89983A24437C1563927E1C5B407* __this, const RuntimeMethod* method) ;
@@ -6379,7 +6354,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateHttpClientResponseU3Ed__4_SetSt
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::Start<Unity.Services.Relay.Http.HttpClient/<>c__DisplayClass5_0/<<CreateWebRequestAsync>b__0>d>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t4A8E08D76914A96DC127E1FC934545D5B279B52B_m2D6E9FA2B1EF0679F755030BD356593C207092D5 (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t4A8E08D76914A96DC127E1FC934545D5B279B52B* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t4A8E08D76914A96DC127E1FC934545D5B279B52B*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t4A8E08D76914A96DC127E1FC934545D5B279B52B_m381479ABABBE003480A6C5B4F824019E1AA127CD_gshared)(__this, ___stateMachine0, method);
 }
 // System.Text.Encoding System.Text.Encoding::get_Default()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* Encoding_get_Default_mB48FC92A61D1153AC33C2C59F01D7266DF7D155C (const RuntimeMethod* method) ;
@@ -6390,7 +6365,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UnityWebRequest_t6233B8E22992FC2364A831C1ACB0
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Http.HttpClientResponse>,Unity.Services.Relay.Http.HttpClient/<>c__DisplayClass5_0/<<CreateWebRequestAsync>b__0>d>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E_TisU3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t4A8E08D76914A96DC127E1FC934545D5B279B52B_mF0AAAC618FCA106D94BA28FA0589512A71B87B44 (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E* ___awaiter0, U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t4A8E08D76914A96DC127E1FC934545D5B279B52B* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E*, U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t4A8E08D76914A96DC127E1FC934545D5B279B52B*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t4A8E08D76914A96DC127E1FC934545D5B279B52B_m3C20CEEB150251DF1A48848DEDBD54641F561FAC_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // System.Void Unity.Services.Relay.Http.HttpClient/<>c__DisplayClass5_0/<<CreateWebRequestAsync>b__0>d::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_MoveNext_mC372908BF64194C658D9CEEE1613C3A429AAC7D9 (U3CU3CCreateWebRequestAsyncU3Eb__0U3Ed_t4A8E08D76914A96DC127E1FC934545D5B279B52B* __this, const RuntimeMethod* method) ;
@@ -6401,12 +6376,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_m97295019
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task`1<Unity.Services.Relay.Http.HttpClientResponse>>,Unity.Services.Relay.Http.HttpClient/<CreateWebRequestAsync>d__5>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t9861AD5145A8151E66C2FE2AA7261F44E588B4B6_TisU3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5_mE8037BB6973C388D03AB33F462AF7BF2F74CCA7F (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, TaskAwaiter_1_t9861AD5145A8151E66C2FE2AA7261F44E588B4B6* ___awaiter0, U3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, TaskAwaiter_1_t9861AD5145A8151E66C2FE2AA7261F44E588B4B6*, U3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5_m9DC222D3738CF277D1F2B7A2EBB609B7A70AE76A_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Http.HttpClientResponse>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Http.HttpClientResponse>,Unity.Services.Relay.Http.HttpClient/<CreateWebRequestAsync>d__5>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E_TisU3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5_m96114911557568682CAF028438E2F2C2C45379D0 (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065* __this, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E* ___awaiter0, U3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5EF2B065E013D0CF82C8458CF373615106ACF065*, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E*, U3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5_m9DC222D3738CF277D1F2B7A2EBB609B7A70AE76A_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // System.Void Unity.Services.Relay.Http.HttpClient/<CreateWebRequestAsync>d__5::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateWebRequestAsyncU3Ed__5_MoveNext_m8D449E9423AE668EC47EB33D1E3FFE81C33C7C95 (U3CCreateWebRequestAsyncU3Ed__5_tD130020C98B883AAE451464AAB6D59A749CB4CB5* __this, const RuntimeMethod* method) ;
@@ -6417,12 +6392,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mFB7DA489BD99F4670881
 // System.Void Newtonsoft.Json.Utilities.AotHelper::EnsureType<Newtonsoft.Json.Converters.StringEnumConverter>()
 inline void AotHelper_EnsureType_TisStringEnumConverter_t7C66875DF7AB0719190AEEF8924A99F49C480184_m6A1C428F1F47D693B537597E785391C4D42AD480 (const RuntimeMethod* method)
 {
-	((  void (*) (const RuntimeMethod*))AotHelper_EnsureType_TisIl2CppFullySharedGenericAny_m8D94D34831BFD767668F5DE3953A46FD59601BA7_gshared)(method);
+	((  void (*) (const RuntimeMethod*))AotHelper_EnsureType_TisRuntimeObject_m8D3D63845F34DADDDC746C0C444E40309347F992_gshared)(method);
 }
 // System.Void Newtonsoft.Json.Utilities.AotHelper::EnsureType<Unity.Services.Relay.Http.JsonObjectConverter>()
 inline void AotHelper_EnsureType_TisJsonObjectConverter_t197A1A3CC6A8818310CB98332525E80649769D78_mD5AC1A6FCB35D5FC8F833F5FD84D515AE3F5DF41 (const RuntimeMethod* method)
 {
-	((  void (*) (const RuntimeMethod*))AotHelper_EnsureType_TisIl2CppFullySharedGenericAny_m8D94D34831BFD767668F5DE3953A46FD59601BA7_gshared)(method);
+	((  void (*) (const RuntimeMethod*))AotHelper_EnsureType_TisRuntimeObject_m8D3D63845F34DADDDC746C0C444E40309347F992_gshared)(method);
 }
 // System.Type System.Object::GetType()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3 (RuntimeObject* __this, const RuntimeMethod* method) ;
@@ -6435,108 +6410,94 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonObject__ctor_m938500AD612F81FB64E4E7
 // System.Void System.Func`2<System.Object,Unity.Services.Relay.Http.IDeserializable>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m14E1309A835FEF40CF6077B3F3119F64DC046E85 (Func_2_tC578F1D6EE4934C7DBF8135A0B659C18B2EBF9B6* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_tC578F1D6EE4934C7DBF8135A0B659C18B2EBF9B6*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F8A01C0B02BC1D4063F4EB1E817F7A48562A398_gshared)(__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<System.Object,Unity.Services.Relay.Http.IDeserializable>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
 inline RuntimeObject* Enumerable_Select_TisRuntimeObject_TisIDeserializable_tEAB95F06F3E3E1DFEDC9F038F901A30226EF8E2F_m7A9964DBC0CA2F771051332C685089DDA827456D (RuntimeObject* ___source0, Func_2_tC578F1D6EE4934C7DBF8135A0B659C18B2EBF9B6* ___selector1, const RuntimeMethod* method)
 {
-	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_Select_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m5BBCA2BC02448D0B77D2201BB08B13BAB3BABA53_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___selector1, method);
-	return (RuntimeObject*)il2cppRetVal;
+	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_tC578F1D6EE4934C7DBF8135A0B659C18B2EBF9B6*, const RuntimeMethod*))Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m67C538A5EBF57C4844107A8EF25DB2CAAFBAF8FB_gshared)(___source0, ___selector1, method);
 }
 // System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<Unity.Services.Relay.Http.IDeserializable>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline List_1_t272C79B8020019685D0CE2340133BBF5FB5B7192* Enumerable_ToList_TisIDeserializable_tEAB95F06F3E3E1DFEDC9F038F901A30226EF8E2F_m91692CE0EFC7D207B05FE4945C02DAB5992658DB (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* il2cppRetVal = ((  List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisIl2CppFullySharedGenericAny_m191EA129E511F9B8304FF8826A2DA645E06CCBF0_gshared)((RuntimeObject*)___source0, method);
-	return (List_1_t272C79B8020019685D0CE2340133BBF5FB5B7192*)il2cppRetVal;
+	return ((  List_1_t272C79B8020019685D0CE2340133BBF5FB5B7192* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisRuntimeObject_m6456D63764F29E6B5B2422C3DE25113577CF51EE_gshared)(___source0, method);
 }
 // System.Void System.Func`2<System.Collections.Generic.List`1<System.Object>,System.Collections.Generic.List`1<Unity.Services.Relay.Http.IDeserializable>>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m96BB575AE6DDC8E30C2B1B2A7ABAD61B8A7060A7 (Func_2_t3DFD6601F8126DAA0E5F41892EDA93908FB09733* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t3DFD6601F8126DAA0E5F41892EDA93908FB09733*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F8A01C0B02BC1D4063F4EB1E817F7A48562A398_gshared)(__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.IEnumerable`1<TResult> System.Linq.Enumerable::Select<System.Collections.Generic.List`1<System.Object>,System.Collections.Generic.List`1<Unity.Services.Relay.Http.IDeserializable>>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
 inline RuntimeObject* Enumerable_Select_TisList_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D_TisList_1_t272C79B8020019685D0CE2340133BBF5FB5B7192_m81081E7316E907E32C0EF9316F209F723C9DD16D (RuntimeObject* ___source0, Func_2_t3DFD6601F8126DAA0E5F41892EDA93908FB09733* ___selector1, const RuntimeMethod* method)
 {
-	RuntimeObject* il2cppRetVal = ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_Select_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m5BBCA2BC02448D0B77D2201BB08B13BAB3BABA53_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___selector1, method);
-	return (RuntimeObject*)il2cppRetVal;
+	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_t3DFD6601F8126DAA0E5F41892EDA93908FB09733*, const RuntimeMethod*))Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m67C538A5EBF57C4844107A8EF25DB2CAAFBAF8FB_gshared)(___source0, ___selector1, method);
 }
 // System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<System.Collections.Generic.List`1<Unity.Services.Relay.Http.IDeserializable>>(System.Collections.Generic.IEnumerable`1<TSource>)
 inline List_1_t4D908A8C4666E33EC21E759B65F30DBB8139E306* Enumerable_ToList_TisList_1_t272C79B8020019685D0CE2340133BBF5FB5B7192_mA85962B5EAB287D5F919EC6C918599DF515675D0 (RuntimeObject* ___source0, const RuntimeMethod* method)
 {
-	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* il2cppRetVal = ((  List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisIl2CppFullySharedGenericAny_m191EA129E511F9B8304FF8826A2DA645E06CCBF0_gshared)((RuntimeObject*)___source0, method);
-	return (List_1_t4D908A8C4666E33EC21E759B65F30DBB8139E306*)il2cppRetVal;
+	return ((  List_1_t4D908A8C4666E33EC21E759B65F30DBB8139E306* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisRuntimeObject_m6456D63764F29E6B5B2422C3DE25113577CF51EE_gshared)(___source0, method);
 }
 // System.Void System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Object>,System.String>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m4F049E2C488DF6CAE688DA027C6FC95F6174AC4C (Func_2_tCB5E9F24E1D4A5E6665E1C163977F878E203DD5B* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_tCB5E9F24E1D4A5E6665E1C163977F878E203DD5B*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m60F64297108A01DFB5663C9BA121893957855907_gshared)(__this, ___object0, ___method1, method);
 }
 // System.Void System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Object>,Unity.Services.Relay.Http.IDeserializable>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m87B083BB81A08B3AA3B8503701CEE81ED1782DD6 (Func_2_t75F7C586C3A8D40E4929FA0CECD9AB938DC623B3* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t75F7C586C3A8D40E4929FA0CECD9AB938DC623B3*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m60F64297108A01DFB5663C9BA121893957855907_gshared)(__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.Dictionary`2<TKey,TElement> System.Linq.Enumerable::ToDictionary<System.Collections.Generic.KeyValuePair`2<System.String,System.Object>,System.String,Unity.Services.Relay.Http.IDeserializable>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>)
 inline Dictionary_2_t6D7A6B7B271103893FA4FD121D52FCAEF72B0DF2* Enumerable_ToDictionary_TisKeyValuePair_2_tBEE55F2A4574C64393155C322376FD98C7BFC7B9_TisString_t_TisIDeserializable_tEAB95F06F3E3E1DFEDC9F038F901A30226EF8E2F_mED4517BE143745CB3137D3CFE0CB7668C366280D (RuntimeObject* ___source0, Func_2_tCB5E9F24E1D4A5E6665E1C163977F878E203DD5B* ___keySelector1, Func_2_t75F7C586C3A8D40E4929FA0CECD9AB938DC623B3* ___elementSelector2, const RuntimeMethod* method)
 {
-	Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* il2cppRetVal = ((  Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_ToDictionary_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mCE400B0EBD8083C1E7287BC3E256BB27CF9CF2E0_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___keySelector1, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___elementSelector2, method);
-	return (Dictionary_2_t6D7A6B7B271103893FA4FD121D52FCAEF72B0DF2*)il2cppRetVal;
+	return ((  Dictionary_2_t6D7A6B7B271103893FA4FD121D52FCAEF72B0DF2* (*) (RuntimeObject*, Func_2_tCB5E9F24E1D4A5E6665E1C163977F878E203DD5B*, Func_2_t75F7C586C3A8D40E4929FA0CECD9AB938DC623B3*, const RuntimeMethod*))Enumerable_ToDictionary_TisKeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230_TisRuntimeObject_TisRuntimeObject_mFAD38355767A6BC98DB0AF76ADAB9AEDE1A401CB_gshared)(___source0, ___keySelector1, ___elementSelector2, method);
 }
 // System.Void System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>,System.String>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_mBBCB2C4390040071351394228DA494BDF3DD2A31 (Func_2_tEED63335B20AD9587C01CA6994AAC5C004611398* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_tEED63335B20AD9587C01CA6994AAC5C004611398*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m60F64297108A01DFB5663C9BA121893957855907_gshared)(__this, ___object0, ___method1, method);
 }
 // System.Void System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>,System.Collections.Generic.List`1<Unity.Services.Relay.Http.IDeserializable>>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m7AF8CD560A13DDDD4589FE6AFE777DB22CA7FF68 (Func_2_t6CE3293A1CAC114E2E4F0CB65D4E6AA63C88BA9E* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t6CE3293A1CAC114E2E4F0CB65D4E6AA63C88BA9E*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m60F64297108A01DFB5663C9BA121893957855907_gshared)(__this, ___object0, ___method1, method);
 }
 // System.Collections.Generic.Dictionary`2<TKey,TElement> System.Linq.Enumerable::ToDictionary<System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>,System.String,System.Collections.Generic.List`1<Unity.Services.Relay.Http.IDeserializable>>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>)
 inline Dictionary_2_t66CFF37FE2B1E7DF99AEE687B22CC41C6ECA1CD7* Enumerable_ToDictionary_TisKeyValuePair_2_t06B7A84C0CEF1673FA8D1C870C2E16670C5C233C_TisString_t_TisList_1_t272C79B8020019685D0CE2340133BBF5FB5B7192_m7FF4215A45E04670D7FD0657A694D9A80A31814F (RuntimeObject* ___source0, Func_2_tEED63335B20AD9587C01CA6994AAC5C004611398* ___keySelector1, Func_2_t6CE3293A1CAC114E2E4F0CB65D4E6AA63C88BA9E* ___elementSelector2, const RuntimeMethod* method)
 {
-	Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* il2cppRetVal = ((  Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* (*) (RuntimeObject*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, const RuntimeMethod*))Enumerable_ToDictionary_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mCE400B0EBD8083C1E7287BC3E256BB27CF9CF2E0_gshared)((RuntimeObject*)___source0, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___keySelector1, (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)___elementSelector2, method);
-	return (Dictionary_2_t66CFF37FE2B1E7DF99AEE687B22CC41C6ECA1CD7*)il2cppRetVal;
+	return ((  Dictionary_2_t66CFF37FE2B1E7DF99AEE687B22CC41C6ECA1CD7* (*) (RuntimeObject*, Func_2_tEED63335B20AD9587C01CA6994AAC5C004611398*, Func_2_t6CE3293A1CAC114E2E4F0CB65D4E6AA63C88BA9E*, const RuntimeMethod*))Enumerable_ToDictionary_TisKeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230_TisRuntimeObject_TisRuntimeObject_mFAD38355767A6BC98DB0AF76ADAB9AEDE1A401CB_gshared)(___source0, ___keySelector1, ___elementSelector2, method);
 }
 // System.Void System.Collections.Generic.List`1<System.String>::Add(T)
 inline void List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, String_t* ___item0, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)___item0, method);
+	((  void (*) (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, String_t*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
 }
 // System.Collections.Generic.List`1<System.String> Unity.Services.Relay.Http.JsonObject::ValidateObject<System.Object>(T,System.Collections.Generic.List`1<System.String>)
 inline List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* JsonObject_ValidateObject_TisRuntimeObject_m811517DDE15B6E1616699BF18468D28D5F113673 (JsonObject_tE2017F7EFA889E0447B1D43B39A30070057E0B73* __this, RuntimeObject* ___objectToCheck0, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___errors1, const RuntimeMethod* method)
 {
-	return ((  List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* (*) (JsonObject_tE2017F7EFA889E0447B1D43B39A30070057E0B73*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, const RuntimeMethod*))JsonObject_ValidateObject_TisIl2CppFullySharedGenericAny_mBB27D35E04E7863F337F065B1F0DF4620CA66452_gshared)((JsonObject_tE2017F7EFA889E0447B1D43B39A30070057E0B73*)__this, (Il2CppFullySharedGenericAny)___objectToCheck0, ___errors1, method);
+	return ((  List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* (*) (JsonObject_tE2017F7EFA889E0447B1D43B39A30070057E0B73*, RuntimeObject*, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, const RuntimeMethod*))JsonObject_ValidateObject_TisRuntimeObject_m811517DDE15B6E1616699BF18468D28D5F113673_gshared)(__this, ___objectToCheck0, ___errors1, method);
 }
 // System.Void Unity.Services.Relay.Http.JsonObject/<>c::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mFEA65EA805EA9B86FB7561546B74F01CA8A1B8AC (U3CU3Ec_tAD35D9B9555DABBDD29629921B54DD2E546DE695* __this, const RuntimeMethod* method) ;
 // TKey System.Collections.Generic.KeyValuePair`2<System.String,System.Object>::get_Key()
 inline String_t* KeyValuePair_2_get_Key_mA64FF29A08423140758B0276333D1A89C71B793A_inline (KeyValuePair_2_tBEE55F2A4574C64393155C322376FD98C7BFC7B9* __this, const RuntimeMethod* method)
 {
-	String_t* il2cppRetVal;
-	((  void (*) (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))KeyValuePair_2_get_Key_mBE75BF8983618BC1ACEC20F94C1BFF85C8AA50F1_gshared_inline)((KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  String_t* (*) (KeyValuePair_2_tBEE55F2A4574C64393155C322376FD98C7BFC7B9*, const RuntimeMethod*))KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline)(__this, method);
 }
 // TValue System.Collections.Generic.KeyValuePair`2<System.String,System.Object>::get_Value()
 inline RuntimeObject* KeyValuePair_2_get_Value_m2052BF44A3FDE623D98B0E6B6E227B2900034235_inline (KeyValuePair_2_tBEE55F2A4574C64393155C322376FD98C7BFC7B9* __this, const RuntimeMethod* method)
 {
-	RuntimeObject* il2cppRetVal;
-	((  void (*) (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))KeyValuePair_2_get_Value_mFA1964BF56AA214EE0D491CC197F61BC9E5F1F7A_gshared_inline)((KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  RuntimeObject* (*) (KeyValuePair_2_tBEE55F2A4574C64393155C322376FD98C7BFC7B9*, const RuntimeMethod*))KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline)(__this, method);
 }
 // TKey System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>::get_Key()
 inline String_t* KeyValuePair_2_get_Key_m013CA52885A4357DB3C5ECEFC57E30CE6ED29021_inline (KeyValuePair_2_t06B7A84C0CEF1673FA8D1C870C2E16670C5C233C* __this, const RuntimeMethod* method)
 {
-	String_t* il2cppRetVal;
-	((  void (*) (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))KeyValuePair_2_get_Key_mBE75BF8983618BC1ACEC20F94C1BFF85C8AA50F1_gshared_inline)((KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  String_t* (*) (KeyValuePair_2_t06B7A84C0CEF1673FA8D1C870C2E16670C5C233C*, const RuntimeMethod*))KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline)(__this, method);
 }
 // TValue System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.List`1<System.Object>>::get_Value()
 inline List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* KeyValuePair_2_get_Value_m9C6326BFB9569F4BBCA997EDCA12C152F30B27A0_inline (KeyValuePair_2_t06B7A84C0CEF1673FA8D1C870C2E16670C5C233C* __this, const RuntimeMethod* method)
 {
-	List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* il2cppRetVal;
-	((  void (*) (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))KeyValuePair_2_get_Value_mFA1964BF56AA214EE0D491CC197F61BC9E5F1F7A_gshared_inline)((KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* (*) (KeyValuePair_2_t06B7A84C0CEF1673FA8D1C870C2E16670C5C233C*, const RuntimeMethod*))KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline)(__this, method);
 }
 // System.Collections.Generic.List`1<Unity.Services.Relay.Http.IDeserializable> Unity.Services.Relay.Http.JsonObject::GetNewJsonObjectResponse(System.Collections.Generic.List`1<System.Object>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t272C79B8020019685D0CE2340133BBF5FB5B7192* JsonObject_GetNewJsonObjectResponse_mF5ED42FA1230086ABD89AAADF8F7BEE072523E74 (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___o0, const RuntimeMethod* method) ;
@@ -6545,8 +6506,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E
 // T[] System.Array::Empty<Newtonsoft.Json.JsonConverter>()
 inline JsonConverterU5BU5D_tF69203E66D4FCB82A6F64A24EF7785E26E9E957E* Array_Empty_TisJsonConverter_tE765D011CD34CDF28759E6D58FDBF05AA5EA0F16_mFA4697517835E4E1FFADA62370BB78401E0C99F0_inline (const RuntimeMethod* method)
 {
-	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* il2cppRetVal = ((  __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* (*) (const RuntimeMethod*))Array_Empty_TisIl2CppFullySharedGenericAny_m244E2A51B33F845A2093F0862FBCE502E4FDD868_gshared_inline)(method);
-	return (JsonConverterU5BU5D_tF69203E66D4FCB82A6F64A24EF7785E26E9E957E*)il2cppRetVal;
+	return ((  JsonConverterU5BU5D_tF69203E66D4FCB82A6F64A24EF7785E26E9E957E* (*) (const RuntimeMethod*))Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline)(method);
 }
 // Newtonsoft.Json.Linq.JObject Newtonsoft.Json.Linq.JObject::Load(Newtonsoft.Json.JsonReader)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JObject_t22BBBA7A90517B7E66E8C9D8D16DE84CB5054DE1* JObject_Load_m44DE042F4F4752D15D54259823A74B609650E9EF (JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___reader0, const RuntimeMethod* method) ;
@@ -6559,46 +6519,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonConverter__ctor_m47F59D2FF8CFBA449BD
 // System.Void System.Collections.Generic.List`1<Unity.Services.Relay.Http.JsonObject>::.ctor()
 inline void List_1__ctor_mA7926B03933EB4501B47F8549BC5D7B82978127A (List_1_tC7C396AB4C0307B2F8A053D7A7BE89EAA74D7265* __this, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1__ctor_m0AFBAEA7EC427E32CC9CA267B1930DC5DF67A374_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
+	((  void (*) (List_1_tC7C396AB4C0307B2F8A053D7A7BE89EAA74D7265*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
 }
 // System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<System.Object>::GetEnumerator()
 inline Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method)
 {
-	Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A il2cppRetVal;
-	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))List_1_GetEnumerator_m8B2A92ACD4FBA5FBDC3F6F4F5C23A0DDF491DA61_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A (*) (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.List`1/Enumerator<System.Object>::Dispose()
 inline void Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419 (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_Dispose_mFE1EBE6F6425283FEAEAE7C79D02CDE4F9D367E8_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
+	((  void (*) (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
 }
 // T System.Collections.Generic.List`1/Enumerator<System.Object>::get_Current()
 inline RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method)
 {
-	RuntimeObject* il2cppRetVal;
-	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_gshared_inline)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  RuntimeObject* (*) (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
 }
 // System.Void System.Collections.Generic.List`1<Unity.Services.Relay.Http.JsonObject>::Add(T)
 inline void List_1_Add_m6AEE43D9F09ADFEF10DB22B9FD202F47B994FAF5_inline (List_1_tC7C396AB4C0307B2F8A053D7A7BE89EAA74D7265* __this, JsonObject_tE2017F7EFA889E0447B1D43B39A30070057E0B73* ___item0, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)___item0, method);
+	((  void (*) (List_1_tC7C396AB4C0307B2F8A053D7A7BE89EAA74D7265*, JsonObject_tE2017F7EFA889E0447B1D43B39A30070057E0B73*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
 }
 // System.Boolean System.Collections.Generic.List`1/Enumerator<System.Object>::MoveNext()
 inline bool Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_MoveNext_m8D8E5E878AF0A88A535AB1AB5BA4F23E151A678A_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
+	return ((  bool (*) (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.List`1<Unity.Services.Relay.Http.IDeserializable>::.ctor()
 inline void List_1__ctor_m71B2717C772D236CB16C265D1DDC8893F0A136B7 (List_1_t272C79B8020019685D0CE2340133BBF5FB5B7192* __this, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1__ctor_m0AFBAEA7EC427E32CC9CA267B1930DC5DF67A374_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
+	((  void (*) (List_1_t272C79B8020019685D0CE2340133BBF5FB5B7192*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.List`1<Unity.Services.Relay.Http.IDeserializable>::Add(T)
 inline void List_1_Add_m7389C9AA005A10EDE2931B44239DCC27F3FBE01A_inline (List_1_t272C79B8020019685D0CE2340133BBF5FB5B7192* __this, RuntimeObject* ___item0, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)___item0, method);
+	((  void (*) (List_1_t272C79B8020019685D0CE2340133BBF5FB5B7192*, RuntimeObject*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
 }
 // System.Void Newtonsoft.Json.JsonSerializerSettings::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializerSettings__ctor_mE1C9A90375BA88DF7F6911F1F96AEEC6A98CD22F (JsonSerializerSettings_t152F58F4E62A8349D748C945AF1699F84546D3FF* __this, const RuntimeMethod* method) ;
@@ -6619,14 +6575,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int64_ToString_m284E4E55662818E3865
 // System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Type>::ContainsKey(TKey)
 inline bool Dictionary_2_ContainsKey_m4EC9A321B5DBDCB0E9249FFE9074D45472E5D933 (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A* __this, String_t* ___key0, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_ContainsKey_mA268E9B914DCE838DD0CD9D879BAAEECD0C677AA_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)___key0, method);
+	return ((  bool (*) (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A*, String_t*, const RuntimeMethod*))Dictionary_2_ContainsKey_m703047C213F7AB55C9DC346596287773A1F670CD_gshared)(__this, ___key0, method);
 }
 // TValue System.Collections.Generic.Dictionary`2<System.String,System.Type>::get_Item(TKey)
 inline Type_t* Dictionary_2_get_Item_mEE2A06608BDDA14C7170B0039FF13E2DCE84EEE9 (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A* __this, String_t* ___key0, const RuntimeMethod* method)
 {
-	Type_t* il2cppRetVal;
-	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Dictionary_2_get_Item_m2E96908E9716367701CD737FA54C884EB2A8C3EA_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)___key0, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  Type_t* (*) (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A*, String_t*, const RuntimeMethod*))Dictionary_2_get_Item_m4AAAECBE902A211BF2126E6AFA280AEF73A3E0D6_gshared)(__this, ___key0, method);
 }
 // System.Boolean System.Type::op_Inequality(System.Type,System.Type)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Type_op_Inequality_m83209C7BB3C05DFBEA3B6199B0BEFE8037301172 (Type_t* ___left0, Type_t* ___right1, const RuntimeMethod* method) ;
@@ -6651,20 +6605,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass0_0__ctor_m43D756DF
 // System.Void System.Threading.Tasks.TaskCompletionSource`1<Unity.Services.Relay.Http.HttpClientResponse>::.ctor()
 inline void TaskCompletionSource_1__ctor_mFC133E1A0F0BB5A74D9CEADE8B0089011239FCA4 (TaskCompletionSource_1_tC556D57B117C2B8E8D3A0C766743A712D974ECCE* __this, const RuntimeMethod* method)
 {
-	((  void (*) (TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970*, const RuntimeMethod*))TaskCompletionSource_1__ctor_mD6DB19F66035FC77675F1ED9FE696A65CF9C0F23_gshared)((TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970*)__this, method);
+	((  void (*) (TaskCompletionSource_1_tC556D57B117C2B8E8D3A0C766743A712D974ECCE*, const RuntimeMethod*))TaskCompletionSource_1__ctor_mBF9A903AD14C4E9CF044B227776C532BA9C40D60_gshared)(__this, method);
 }
 // System.Void System.Action`1<UnityEngine.AsyncOperation>::.ctor(System.Object,System.IntPtr)
 inline void Action_1__ctor_m33ABB7530487276910BEFB499A97D33FB2E06D7D (Action_1_tE8693FF0E67CDBA52BAFB211BFF1844D076ABAFB* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99*, RuntimeObject*, intptr_t, const RuntimeMethod*))Action_1__ctor_m685A441EC9FAC9D554B26FA83A08F4BEF96DFF0E_gshared)((Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99*)__this, ___object0, ___method1, method);
+	((  void (*) (Action_1_tE8693FF0E67CDBA52BAFB211BFF1844D076ABAFB*, RuntimeObject*, intptr_t, const RuntimeMethod*))Action_1__ctor_m2E1DFA67718FC1A0B6E5DFEB78831FFE9C059EB4_gshared)(__this, ___object0, ___method1, method);
 }
 // System.Void UnityEngine.AsyncOperation::add_completed(System.Action`1<UnityEngine.AsyncOperation>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncOperation_add_completed_mD6F21BA8127D6D4B7ABDEFAA995A7A347A20A793 (AsyncOperation_tD2789250E4B098DEDA92B366A577E500A92D2D3C* __this, Action_1_tE8693FF0E67CDBA52BAFB211BFF1844D076ABAFB* ___value0, const RuntimeMethod* method) ;
 // System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskCompletionSource`1<Unity.Services.Relay.Http.HttpClientResponse>::get_Task()
 inline Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043D70* TaskCompletionSource_1_get_Task_mC27FF46427B15FBA39CC4ADE328CE8B799343080_inline (TaskCompletionSource_1_tC556D57B117C2B8E8D3A0C766743A712D974ECCE* __this, const RuntimeMethod* method)
 {
-	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970*, const RuntimeMethod*))TaskCompletionSource_1_get_Task_m4994989AA2174905CF517397D0F6B082ADC29EE9_gshared_inline)((TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970*)__this, method);
-	return (Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043D70*)il2cppRetVal;
+	return ((  Task_1_tDFC6C03AEB4539F506AD3CC196C771643A043D70* (*) (TaskCompletionSource_1_tC556D57B117C2B8E8D3A0C766743A712D974ECCE*, const RuntimeMethod*))TaskCompletionSource_1_get_Task_mF44990297C25C7DBE1E65241C03D0120CB551552_gshared_inline)(__this, method);
 }
 // UnityEngine.Networking.UnityWebRequest UnityEngine.Networking.UnityWebRequestAsyncOperation::get_webRequest()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* UnityWebRequestAsyncOperation_get_webRequest_mF67D15420C7C1C4DCA1BD6F839048A0542998BC3_inline (UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* __this, const RuntimeMethod* method) ;
@@ -6687,81 +6640,73 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HttpClientResponse_t794B5DCDDC092F2B631BF5FF2
 // System.Void System.Threading.Tasks.TaskCompletionSource`1<Unity.Services.Relay.Http.HttpClientResponse>::SetResult(TResult)
 inline void TaskCompletionSource_1_SetResult_m7EA36990C7D1D33B89523893E5D7838624638EBC (TaskCompletionSource_1_tC556D57B117C2B8E8D3A0C766743A712D974ECCE* __this, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))TaskCompletionSource_1_SetResult_m20A3A9EACC332D8ECC8AA9E690B90E6C56835CED_gshared)((TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970*)__this, (Il2CppFullySharedGenericAny)___result0, method);
+	((  void (*) (TaskCompletionSource_1_tC556D57B117C2B8E8D3A0C766743A712D974ECCE*, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5*, const RuntimeMethod*))TaskCompletionSource_1_SetResult_m948378015A7A0E42647452EB7003466406B831A4_gshared)(__this, ___result0, method);
 }
 // System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline (float ___value0, float ___min1, float ___max2, const RuntimeMethod* method) ;
 // System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<Unity.Services.Relay.ErrorMitigation.ExceptionPredicate>::GetEnumerator()
 inline Enumerator_t8EB3EB11B885920B79A9017030AADD19630B2907 List_1_GetEnumerator_mAC7118C09D3606FC57EF23B18749FB2E521C3EF5 (List_1_tBF01CB91F33B65DF4F337B585F7C3C2BF9FC9046* __this, const RuntimeMethod* method)
 {
-	Enumerator_t8EB3EB11B885920B79A9017030AADD19630B2907 il2cppRetVal;
-	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))List_1_GetEnumerator_m8B2A92ACD4FBA5FBDC3F6F4F5C23A0DDF491DA61_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  Enumerator_t8EB3EB11B885920B79A9017030AADD19630B2907 (*) (List_1_tBF01CB91F33B65DF4F337B585F7C3C2BF9FC9046*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.List`1/Enumerator<Unity.Services.Relay.ErrorMitigation.ExceptionPredicate>::Dispose()
 inline void Enumerator_Dispose_mCE246AB2A96FC10852F654F879B406EF7FDEBB09 (Enumerator_t8EB3EB11B885920B79A9017030AADD19630B2907* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_Dispose_mFE1EBE6F6425283FEAEAE7C79D02CDE4F9D367E8_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
+	((  void (*) (Enumerator_t8EB3EB11B885920B79A9017030AADD19630B2907*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
 }
 // T System.Collections.Generic.List`1/Enumerator<Unity.Services.Relay.ErrorMitigation.ExceptionPredicate>::get_Current()
 inline ExceptionPredicate_tC47EF5B08D15A312E9889AC32DC2261C4A01EA5D* Enumerator_get_Current_m049F014E3E41C4779FC02A161B85DAB40F805468_inline (Enumerator_t8EB3EB11B885920B79A9017030AADD19630B2907* __this, const RuntimeMethod* method)
 {
-	ExceptionPredicate_tC47EF5B08D15A312E9889AC32DC2261C4A01EA5D* il2cppRetVal;
-	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_gshared_inline)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  ExceptionPredicate_tC47EF5B08D15A312E9889AC32DC2261C4A01EA5D* (*) (Enumerator_t8EB3EB11B885920B79A9017030AADD19630B2907*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
 }
 // System.Exception Unity.Services.Relay.ErrorMitigation.ExceptionPredicate::Invoke(System.Exception)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Exception_t* ExceptionPredicate_Invoke_m2C073FF0AC9915D9756E64974D7DC2CB51E4B330_inline (ExceptionPredicate_tC47EF5B08D15A312E9889AC32DC2261C4A01EA5D* __this, Exception_t* ___ex0, const RuntimeMethod* method) ;
 // System.Boolean System.Collections.Generic.List`1/Enumerator<Unity.Services.Relay.ErrorMitigation.ExceptionPredicate>::MoveNext()
 inline bool Enumerator_MoveNext_m9E8BEB328786B5BDAD809C03C56B8682A26B8082 (Enumerator_t8EB3EB11B885920B79A9017030AADD19630B2907* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_MoveNext_m8D8E5E878AF0A88A535AB1AB5BA4F23E151A678A_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
+	return ((  bool (*) (Enumerator_t8EB3EB11B885920B79A9017030AADD19630B2907*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.List`1<Unity.Services.Relay.ErrorMitigation.ExceptionPredicate>::.ctor()
 inline void List_1__ctor_m619E44BA1FD736D9D8791B8C80EF19B2B5C643CF (List_1_tBF01CB91F33B65DF4F337B585F7C3C2BF9FC9046* __this, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1__ctor_m0AFBAEA7EC427E32CC9CA267B1930DC5DF67A374_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
+	((  void (*) (List_1_tBF01CB91F33B65DF4F337B585F7C3C2BF9FC9046*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.KeyValuePair`2<System.Int64,System.Boolean>::.ctor(TKey,TValue)
 inline void KeyValuePair_2__ctor_m4D69811DF1F96947FE72B76275A642FD26D84B5E (KeyValuePair_2_tB238689916B08B0CFF54232EB53E746022CA86A2* __this, int64_t ___key0, bool ___value1, const RuntimeMethod* method)
 {
-	((  void (*) (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))KeyValuePair_2__ctor_mD82E516936D2BDE6D46C8C45270250647986231E_gshared)((KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669*)__this, (Il2CppFullySharedGenericAny)&___key0, (Il2CppFullySharedGenericAny)&___value1, method);
+	((  void (*) (KeyValuePair_2_tB238689916B08B0CFF54232EB53E746022CA86A2*, int64_t, bool, const RuntimeMethod*))KeyValuePair_2__ctor_m4D69811DF1F96947FE72B76275A642FD26D84B5E_gshared)(__this, ___key0, ___value1, method);
 }
 // System.Void System.Collections.Generic.Dictionary`2<System.Int64,System.Boolean>::.ctor()
 inline void Dictionary_2__ctor_mC2E112E191D945753C30F6A2475DDB865FD83097 (Dictionary_2_tCF06E70C571839D7107A1DCD7514332D33872BFF* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, const RuntimeMethod*))Dictionary_2__ctor_m7745B6ED71E47C95E1BFCE647C4F026A404C668F_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, method);
+	((  void (*) (Dictionary_2_tCF06E70C571839D7107A1DCD7514332D33872BFF*, const RuntimeMethod*))Dictionary_2__ctor_mC2E112E191D945753C30F6A2475DDB865FD83097_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.Dictionary`2<System.Int64,System.Boolean>::Add(TKey,TValue)
 inline void Dictionary_2_Add_m2FE794EFEAD72A5A0A0C15DC8B4D10002655FAC6 (Dictionary_2_tCF06E70C571839D7107A1DCD7514332D33872BFF* __this, int64_t ___key0, bool ___value1, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_Add_m54D479280472DEA042DB3933AF547E666B017333_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___key0, (Il2CppFullySharedGenericAny)&___value1, method);
+	((  void (*) (Dictionary_2_tCF06E70C571839D7107A1DCD7514332D33872BFF*, int64_t, bool, const RuntimeMethod*))Dictionary_2_Add_m2FE794EFEAD72A5A0A0C15DC8B4D10002655FAC6_gshared)(__this, ___key0, ___value1, method);
 }
 // System.String UnityEngine.Networking.UnityWebRequest::EscapeURL(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityWebRequest_EscapeURL_m1B819655E6FFE468B9DE9D101A17398F3E1A4F27 (String_t* ___s0, const RuntimeMethod* method) ;
 // System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<System.String>::GetEnumerator()
 inline Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1 List_1_GetEnumerator_m7692B5F182858B7D5C72C920D09AD48738D1E70D (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, const RuntimeMethod* method)
 {
-	Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1 il2cppRetVal;
-	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))List_1_GetEnumerator_m8B2A92ACD4FBA5FBDC3F6F4F5C23A0DDF491DA61_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1 (*) (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.List`1/Enumerator<System.String>::Dispose()
 inline void Enumerator_Dispose_m592BCCE7B7933454DED2130C810F059F8D85B1D7 (Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_Dispose_mFE1EBE6F6425283FEAEAE7C79D02CDE4F9D367E8_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
+	((  void (*) (Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
 }
 // T System.Collections.Generic.List`1/Enumerator<System.String>::get_Current()
 inline String_t* Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_inline (Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1* __this, const RuntimeMethod* method)
 {
-	String_t* il2cppRetVal;
-	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_gshared_inline)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  String_t* (*) (Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
 }
 // System.Boolean System.Collections.Generic.List`1/Enumerator<System.String>::MoveNext()
 inline bool Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED (Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_MoveNext_m8D8E5E878AF0A88A535AB1AB5BA4F23E151A678A_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
+	return ((  bool (*) (Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
 }
 // System.Int32 System.String::get_Length()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline (String_t* __this, const RuntimeMethod* method) ;
@@ -6770,46 +6715,39 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Remove_m8266E0BF5D8565D4CDC8
 // System.Collections.Generic.Dictionary`2/KeyCollection<TKey,TValue> System.Collections.Generic.Dictionary`2<System.String,System.String>::get_Keys()
 inline KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342* Dictionary_2_get_Keys_m0014C8E91B9B4377ACFBD26A9175A7E5C016D9E9 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, const RuntimeMethod* method)
 {
-	KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55* il2cppRetVal = ((  KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55* (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, const RuntimeMethod*))Dictionary_2_get_Keys_mD82D6690B1A801E8EED43F1B1D310893C9D334CF_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, method);
-	return (KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342*)il2cppRetVal;
+	return ((  KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342* (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, const RuntimeMethod*))Dictionary_2_get_Keys_m72D290F90654BFD683FA7AA7C63D9F4F692218B6_gshared)(__this, method);
 }
 // System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<TKey,TValue> System.Collections.Generic.Dictionary`2/KeyCollection<System.String,System.String>::GetEnumerator()
 inline Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867 KeyCollection_GetEnumerator_m6B09BC0C54723DE1DB3E62395E41B76F419BAC22 (KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342* __this, const RuntimeMethod* method)
 {
-	Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867 il2cppRetVal;
-	((  void (*) (KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55*, Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*, const RuntimeMethod*))KeyCollection_GetEnumerator_m1624A44B07D62B8CC592FEAE7A521D9504E0ACB3_gshared)((KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55*)__this, (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867 (*) (KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342*, const RuntimeMethod*))KeyCollection_GetEnumerator_m7E77FBA7DE2D3876EC02F396712C4AA5B1D535A5_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.String,System.String>::Dispose()
 inline void Enumerator_Dispose_m6C974325ADBDD3ECEBAA290D7940AC282C56386A (Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*, const RuntimeMethod*))Enumerator_Dispose_m3E0B734E98D35978EEE706FCEC2FE08FEA74FD35_gshared)((Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*)__this, method);
+	((  void (*) (Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867*, const RuntimeMethod*))Enumerator_Dispose_mEB2A61F3F3F420C1B1DFD5C74EEFD4BD7761BCF7_gshared)(__this, method);
 }
 // TKey System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.String,System.String>::get_Current()
 inline String_t* Enumerator_get_Current_m4620EF2C1DF7D94D5A511226C42A3A42040B1C9E_inline (Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867* __this, const RuntimeMethod* method)
 {
-	String_t* il2cppRetVal;
-	((  void (*) (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerator_get_Current_m2D9E3398C2A3349E3F0F189A38E881D11DE5AA15_gshared_inline)((Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  String_t* (*) (Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867*, const RuntimeMethod*))Enumerator_get_Current_mD6472FA27D28B9AE64A0FEF796C72ABBC2420EBF_gshared_inline)(__this, method);
 }
 // TValue System.Collections.Generic.Dictionary`2<System.String,System.String>::get_Item(TKey)
 inline String_t* Dictionary_2_get_Item_mB13DFB3E7499031847CF544977D4EFB1AC0157AB (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, String_t* ___key0, const RuntimeMethod* method)
 {
-	String_t* il2cppRetVal;
-	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Dictionary_2_get_Item_m2E96908E9716367701CD737FA54C884EB2A8C3EA_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)___key0, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  String_t* (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, String_t*, const RuntimeMethod*))Dictionary_2_get_Item_m4AAAECBE902A211BF2126E6AFA280AEF73A3E0D6_gshared)(__this, ___key0, method);
 }
 // System.Boolean System.Collections.Generic.Dictionary`2/KeyCollection/Enumerator<System.String,System.String>::MoveNext()
 inline bool Enumerator_MoveNext_mE8FB9EBD177219F5AC0BF48642FB47D3E186C283 (Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*, const RuntimeMethod*))Enumerator_MoveNext_m21C503A713FDCA406492E2BE960D85320752E615_gshared)((Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*)__this, method);
+	return ((  bool (*) (Enumerator_t84BD4D6D35ABE5554A430614BF2F7588BC152867*, const RuntimeMethod*))Enumerator_MoveNext_mB5E00F11BCA3AC963F9BA72659FA76B107863F3C_gshared)(__this, method);
 }
 // System.Void System.IO.Stream::CopyTo(System.IO.Stream)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Stream_CopyTo_m61DC54FF3708C2B8AB5C5D63D300AA57ADA01999 (Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* __this, Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* ___destination0, const RuntimeMethod* method) ;
 // System.Byte[] Unity.Services.Relay.RelayAllocations.JsonSerialization::Serialize<System.Object>(T)
 inline ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* JsonSerialization_Serialize_TisRuntimeObject_m8B09FF8D82DECF89A2F87A7FAB09708AD3A61772 (RuntimeObject* ___obj0, const RuntimeMethod* method)
 {
-	return ((  ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* (*) (/*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))JsonSerialization_Serialize_TisIl2CppFullySharedGenericAny_m8C3FC3A6F43D0126C53871817C5DD472BCEAB4A5_gshared)((Il2CppFullySharedGenericAny)___obj0, method);
+	return ((  ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* (*) (RuntimeObject*, const RuntimeMethod*))JsonSerialization_Serialize_TisRuntimeObject_m8B09FF8D82DECF89A2F87A7FAB09708AD3A61772_gshared)(___obj0, method);
 }
 // System.Boolean System.String::Equals(System.String,System.String,System.StringComparison)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_Equals_mCC34895D0DB2AD440C9D8767032215BC86B5C48B (String_t* ___a0, String_t* ___b1, int32_t ___comparisonType2, const RuntimeMethod* method) ;
@@ -6852,80 +6790,72 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseApiClient__ctor_mD9D5EEAFFA3BDD72200
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.AllocateResponseBody>>::Create()
 inline AsyncTaskMethodBuilder_1_t21F246E0379CDE18C389C202EC64F3D719FC12FE AsyncTaskMethodBuilder_1_Create_mD3F0091C37E7AFFC9D01ED66669B087E654A18D9 (const RuntimeMethod* method)
 {
-	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
-	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_t21F246E0379CDE18C389C202EC64F3D719FC12FE, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
+	return ((  AsyncTaskMethodBuilder_1_t21F246E0379CDE18C389C202EC64F3D719FC12FE (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.AllocateResponseBody>>::Start<Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<CreateAllocationAsync>d__7>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CCreateAllocationAsyncU3Ed__7_t1B4C5D4DB88CFDDAD350B61D1A25AE058725BF1D_mD6FC6A563F823F4461ABA5CD0B5D0F8D56BD0A28 (AsyncTaskMethodBuilder_1_t21F246E0379CDE18C389C202EC64F3D719FC12FE* __this, U3CCreateAllocationAsyncU3Ed__7_t1B4C5D4DB88CFDDAD350B61D1A25AE058725BF1D* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t21F246E0379CDE18C389C202EC64F3D719FC12FE*, U3CCreateAllocationAsyncU3Ed__7_t1B4C5D4DB88CFDDAD350B61D1A25AE058725BF1D*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CCreateAllocationAsyncU3Ed__7_t1B4C5D4DB88CFDDAD350B61D1A25AE058725BF1D_m086097F4D527D27219A546FFA5AC8BD9BE73270B_gshared)(__this, ___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.AllocateResponseBody>>::get_Task()
 inline Task_1_t7BB0CFF66B21675985BFFEB47E2273CA88705CDD* AsyncTaskMethodBuilder_1_get_Task_m64974787D87E8864E4DDF6B7D3D1B7F8B08C1177 (AsyncTaskMethodBuilder_1_t21F246E0379CDE18C389C202EC64F3D719FC12FE* __this, const RuntimeMethod* method)
 {
-	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
-	return (Task_1_t7BB0CFF66B21675985BFFEB47E2273CA88705CDD*)il2cppRetVal;
+	return ((  Task_1_t7BB0CFF66B21675985BFFEB47E2273CA88705CDD* (*) (AsyncTaskMethodBuilder_1_t21F246E0379CDE18C389C202EC64F3D719FC12FE*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
 }
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinCodeResponseBody>>::Create()
 inline AsyncTaskMethodBuilder_1_t5F70E72E3F3FDAFE445BEE9F04E8E25B5DB5079F AsyncTaskMethodBuilder_1_Create_m32A142BF16EAD9CFDD8F6223BCDB33AB3838056F (const RuntimeMethod* method)
 {
-	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
-	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_t5F70E72E3F3FDAFE445BEE9F04E8E25B5DB5079F, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
+	return ((  AsyncTaskMethodBuilder_1_t5F70E72E3F3FDAFE445BEE9F04E8E25B5DB5079F (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinCodeResponseBody>>::Start<Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<CreateJoincodeAsync>d__8>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CCreateJoincodeAsyncU3Ed__8_t3D4979FB94DDB39F09B1819D0B9D6051320A28A6_mC63ABF4ABFE565CAC31416C1CE8B817AD1301867 (AsyncTaskMethodBuilder_1_t5F70E72E3F3FDAFE445BEE9F04E8E25B5DB5079F* __this, U3CCreateJoincodeAsyncU3Ed__8_t3D4979FB94DDB39F09B1819D0B9D6051320A28A6* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5F70E72E3F3FDAFE445BEE9F04E8E25B5DB5079F*, U3CCreateJoincodeAsyncU3Ed__8_t3D4979FB94DDB39F09B1819D0B9D6051320A28A6*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CCreateJoincodeAsyncU3Ed__8_t3D4979FB94DDB39F09B1819D0B9D6051320A28A6_m5264D2651B937879DE5B725812B38254AE963B43_gshared)(__this, ___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinCodeResponseBody>>::get_Task()
 inline Task_1_tE4185912DE54D4A8EB40BC0482302372DF258D00* AsyncTaskMethodBuilder_1_get_Task_m6021EA6597A9F9DCFA1C9D12ED1D1327E756587D (AsyncTaskMethodBuilder_1_t5F70E72E3F3FDAFE445BEE9F04E8E25B5DB5079F* __this, const RuntimeMethod* method)
 {
-	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
-	return (Task_1_tE4185912DE54D4A8EB40BC0482302372DF258D00*)il2cppRetVal;
+	return ((  Task_1_tE4185912DE54D4A8EB40BC0482302372DF258D00* (*) (AsyncTaskMethodBuilder_1_t5F70E72E3F3FDAFE445BEE9F04E8E25B5DB5079F*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
 }
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinResponseBody>>::Create()
 inline AsyncTaskMethodBuilder_1_tFF8C5A90DDDB5FAD97E46EC50F8706A0D8CD45D5 AsyncTaskMethodBuilder_1_Create_m858C4F8A05FE386F62BAF209546172913A6364E3 (const RuntimeMethod* method)
 {
-	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
-	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_tFF8C5A90DDDB5FAD97E46EC50F8706A0D8CD45D5, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
+	return ((  AsyncTaskMethodBuilder_1_tFF8C5A90DDDB5FAD97E46EC50F8706A0D8CD45D5 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinResponseBody>>::Start<Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<JoinRelayAsync>d__9>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CJoinRelayAsyncU3Ed__9_tFF14373CFEF79467E5D3227F104A043D9117F420_m414AB7BC09153A0D041F19DF632C87FC1241E266 (AsyncTaskMethodBuilder_1_tFF8C5A90DDDB5FAD97E46EC50F8706A0D8CD45D5* __this, U3CJoinRelayAsyncU3Ed__9_tFF14373CFEF79467E5D3227F104A043D9117F420* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tFF8C5A90DDDB5FAD97E46EC50F8706A0D8CD45D5*, U3CJoinRelayAsyncU3Ed__9_tFF14373CFEF79467E5D3227F104A043D9117F420*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CJoinRelayAsyncU3Ed__9_tFF14373CFEF79467E5D3227F104A043D9117F420_m38D85567539683EF553C1CC9A36ABECE93AA7B1E_gshared)(__this, ___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinResponseBody>>::get_Task()
 inline Task_1_t3D18D71AED03BED1C1C9EE51F97F8665912AA2BA* AsyncTaskMethodBuilder_1_get_Task_m6785595F8C1D803C850453E3EC2DCC98A73840F1 (AsyncTaskMethodBuilder_1_tFF8C5A90DDDB5FAD97E46EC50F8706A0D8CD45D5* __this, const RuntimeMethod* method)
 {
-	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
-	return (Task_1_t3D18D71AED03BED1C1C9EE51F97F8665912AA2BA*)il2cppRetVal;
+	return ((  Task_1_t3D18D71AED03BED1C1C9EE51F97F8665912AA2BA* (*) (AsyncTaskMethodBuilder_1_tFF8C5A90DDDB5FAD97E46EC50F8706A0D8CD45D5*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
 }
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.RegionsResponseBody>>::Create()
 inline AsyncTaskMethodBuilder_1_t3D595912240C3A616BFB7DFCDB1CA328C3EDC96F AsyncTaskMethodBuilder_1_Create_mD3A90A9FD74EC5008BCEBE2D98B5C0890858D0E2 (const RuntimeMethod* method)
 {
-	AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 il2cppRetVal = ((  AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4 (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m852C283F3EAD7381A0CC8D14204899C192BDC20A_gshared)(method);
-	return il2cpp_codegen_cast_struct<AsyncTaskMethodBuilder_1_t3D595912240C3A616BFB7DFCDB1CA328C3EDC96F, AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4>(&il2cppRetVal);
+	return ((  AsyncTaskMethodBuilder_1_t3D595912240C3A616BFB7DFCDB1CA328C3EDC96F (*) (const RuntimeMethod*))AsyncTaskMethodBuilder_1_Create_m6A59453D00C0143F178809ADFD98C90E8C291ABB_gshared)(method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.RegionsResponseBody>>::Start<Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<ListRegionsAsync>d__10>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_Start_TisU3CListRegionsAsyncU3Ed__10_t40CEF1251EEE01362A1CF3E261F9E6240FDCB351_m097220BE90CB7EB0A096609E18EDE2BB073E31BC (AsyncTaskMethodBuilder_1_t3D595912240C3A616BFB7DFCDB1CA328C3EDC96F* __this, U3CListRegionsAsyncU3Ed__10_t40CEF1251EEE01362A1CF3E261F9E6240FDCB351* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisIl2CppFullySharedGenericAny_m81177143E3D9118AF316E4C8E5D2AB2BF16C4E80_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t3D595912240C3A616BFB7DFCDB1CA328C3EDC96F*, U3CListRegionsAsyncU3Ed__10_t40CEF1251EEE01362A1CF3E261F9E6240FDCB351*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_Start_TisU3CListRegionsAsyncU3Ed__10_t40CEF1251EEE01362A1CF3E261F9E6240FDCB351_m1467D198A07550FDA1EB914A1917E32F1426C3D9_gshared)(__this, ___stateMachine0, method);
 }
 // System.Threading.Tasks.Task`1<TResult> System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.RegionsResponseBody>>::get_Task()
 inline Task_1_t7897C7C93D2A1348952FFBF47F7B7D43AB1D25AA* AsyncTaskMethodBuilder_1_get_Task_m1837753C97ADFE58781975F2E08C4CF84FA55D0D (AsyncTaskMethodBuilder_1_t3D595912240C3A616BFB7DFCDB1CA328C3EDC96F* __this, const RuntimeMethod* method)
 {
-	Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* il2cppRetVal = ((  Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_m90B072626CA4BF0F567616D4A035739B97F46D8B_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, method);
-	return (Task_1_t7897C7C93D2A1348952FFBF47F7B7D43AB1D25AA*)il2cppRetVal;
+	return ((  Task_1_t7897C7C93D2A1348952FFBF47F7B7D43AB1D25AA* (*) (AsyncTaskMethodBuilder_1_t3D595912240C3A616BFB7DFCDB1CA328C3EDC96F*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_get_Task_mEA092EC6F1324A9D694CF6056FA8583F2A2BDC89_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.Type>::.ctor()
 inline void Dictionary_2__ctor_m552A02EB796CECBF0D6B1D2F5BCA4434A2AC9428 (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, const RuntimeMethod*))Dictionary_2__ctor_m7745B6ED71E47C95E1BFCE647C4F026A404C668F_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, method);
+	((  void (*) (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A*, const RuntimeMethod*))Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.Type>::Add(TKey,TValue)
 inline void Dictionary_2_Add_m71BE3D798D6EC6F9B3BEF764C46AA0E005F49887 (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A* __this, String_t* ___key0, Type_t* ___value1, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_Add_m54D479280472DEA042DB3933AF547E666B017333_gshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)___key0, (Il2CppFullySharedGenericAny)___value1, method);
+	((  void (*) (Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A*, String_t*, Type_t*, const RuntimeMethod*))Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_gshared)(__this, ___key0, ___value1, method);
 }
 // Unity.Services.Relay.Configuration Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient::get_Configuration()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Configuration_t1DC8AB17340F59973783F52D34CE152364535008* RelayAllocationsApiClient_get_Configuration_m00B975FBDD2E15C5D47E1018ABEC014A9CC51531 (RelayAllocationsApiClient_t1B6323F08B5FAC938EDD73C24D029991A4E2AABE* __this, const RuntimeMethod* method) ;
@@ -6938,14 +6868,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t46B2DB028096FA2B828359E52F37F31
 // T System.Nullable`1<System.Int32>::GetValueOrDefault()
 inline int32_t Nullable_1_GetValueOrDefault_m8D130DB7F2A1E694736B449176F9C26DB456597B_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method)
 {
-	int32_t il2cppRetVal;
-	((  void (*) (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*, Il2CppFullySharedGenericStruct*, const RuntimeMethod*))Nullable_1_GetValueOrDefault_mC057FBD944AF068B90EBDD0B496231A01B2A4228_gshared_inline)((Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339*)__this, (Il2CppFullySharedGenericStruct*)&il2cppRetVal, method);
-	return il2cppRetVal;
+	return ((  int32_t (*) (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*, const RuntimeMethod*))Nullable_1_GetValueOrDefault_m8D130DB7F2A1E694736B449176F9C26DB456597B_gshared_inline)(__this, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.AllocateResponseBody>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Http.HttpClientResponse>,Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<CreateAllocationAsync>d__7>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E_TisU3CCreateAllocationAsyncU3Ed__7_t1B4C5D4DB88CFDDAD350B61D1A25AE058725BF1D_m0B45D534F51B0D9321DF62849656218A2FDD7D4A (AsyncTaskMethodBuilder_1_t21F246E0379CDE18C389C202EC64F3D719FC12FE* __this, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E* ___awaiter0, U3CCreateAllocationAsyncU3Ed__7_t1B4C5D4DB88CFDDAD350B61D1A25AE058725BF1D* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t21F246E0379CDE18C389C202EC64F3D719FC12FE*, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E*, U3CCreateAllocationAsyncU3Ed__7_t1B4C5D4DB88CFDDAD350B61D1A25AE058725BF1D*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateAllocationAsyncU3Ed__7_t1B4C5D4DB88CFDDAD350B61D1A25AE058725BF1D_mB7B802C22A23DD76080D67864596FC00A702ABAE_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // T Unity.Services.Relay.Http.ResponseHandler::HandleAsyncResponse<Unity.Services.Relay.Models.AllocateResponseBody>(Unity.Services.Relay.Http.HttpClientResponse,System.Collections.Generic.Dictionary`2<System.String,System.Type>)
 inline AllocateResponseBody_t684F383C2805576A9B08FBCDBCDFB8C52D6FB0BF* ResponseHandler_HandleAsyncResponse_TisAllocateResponseBody_t684F383C2805576A9B08FBCDBCDFB8C52D6FB0BF_mCC40DFD1C652B1BE41ABE8A511137D83D0231A9A (HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* ___response0, Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A* ___statusCodeToTypeMap1, const RuntimeMethod* method)
@@ -6955,24 +6883,24 @@ inline AllocateResponseBody_t684F383C2805576A9B08FBCDBCDFB8C52D6FB0BF* ResponseH
 // System.Void Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.AllocateResponseBody>::.ctor(Unity.Services.Relay.Http.HttpClientResponse,T)
 inline void Response_1__ctor_mBADB63AF792117A43DF8D9BE1BD6ADE2112055C6 (Response_1_t4486EDA0C78BD630292FD1F8B9445CADF7522AFE* __this, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* ___httpResponse0, AllocateResponseBody_t684F383C2805576A9B08FBCDBCDFB8C52D6FB0BF* ___result1, const RuntimeMethod* method)
 {
-	((  void (*) (/*Unity.Services.Relay.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Response_1__ctor_mDA533D8B3170D4265954675A4FF8A7F612D8B68A_gshared)((Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*)__this, ___httpResponse0, (Il2CppFullySharedGenericAny)___result1, method);
+	((  void (*) (Response_1_t4486EDA0C78BD630292FD1F8B9445CADF7522AFE*, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5*, AllocateResponseBody_t684F383C2805576A9B08FBCDBCDFB8C52D6FB0BF*, const RuntimeMethod*))Response_1__ctor_m1D0BBB8C2DAD374864DB26575886860FC4F5A206_gshared)(__this, ___httpResponse0, ___result1, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.AllocateResponseBody>>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_mB97A2BDDB1AAA052ADC2C00C7254E66D60177D7D (AsyncTaskMethodBuilder_1_t21F246E0379CDE18C389C202EC64F3D719FC12FE* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t21F246E0379CDE18C389C202EC64F3D719FC12FE*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.AllocateResponseBody>>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_m438364BAFB63A9164A8C227A0E72188235993D9B (AsyncTaskMethodBuilder_1_t21F246E0379CDE18C389C202EC64F3D719FC12FE* __this, Response_1_t4486EDA0C78BD630292FD1F8B9445CADF7522AFE* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t21F246E0379CDE18C389C202EC64F3D719FC12FE*, Response_1_t4486EDA0C78BD630292FD1F8B9445CADF7522AFE*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
 }
 // System.Void Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<CreateAllocationAsync>d__7::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateAllocationAsyncU3Ed__7_MoveNext_mBEED5FAB6B8C1077B539C204F1281CDE6482EEC5 (U3CCreateAllocationAsyncU3Ed__7_t1B4C5D4DB88CFDDAD350B61D1A25AE058725BF1D* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.AllocateResponseBody>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_m60881D27DD4540CA6A493FF0DEB7E503636A9C01 (AsyncTaskMethodBuilder_1_t21F246E0379CDE18C389C202EC64F3D719FC12FE* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t21F246E0379CDE18C389C202EC64F3D719FC12FE*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<CreateAllocationAsync>d__7::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateAllocationAsyncU3Ed__7_SetStateMachine_m431E6DE31255F9F02397BFE32616DD4173FE46C0 (U3CCreateAllocationAsyncU3Ed__7_t1B4C5D4DB88CFDDAD350B61D1A25AE058725BF1D* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -6985,7 +6913,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t46B2DB028096FA2B828359E52F37F31
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinCodeResponseBody>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Http.HttpClientResponse>,Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<CreateJoincodeAsync>d__8>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E_TisU3CCreateJoincodeAsyncU3Ed__8_t3D4979FB94DDB39F09B1819D0B9D6051320A28A6_m09623C4DC2487A977B7217502D27EA09AB386C9C (AsyncTaskMethodBuilder_1_t5F70E72E3F3FDAFE445BEE9F04E8E25B5DB5079F* __this, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E* ___awaiter0, U3CCreateJoincodeAsyncU3Ed__8_t3D4979FB94DDB39F09B1819D0B9D6051320A28A6* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5F70E72E3F3FDAFE445BEE9F04E8E25B5DB5079F*, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E*, U3CCreateJoincodeAsyncU3Ed__8_t3D4979FB94DDB39F09B1819D0B9D6051320A28A6*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CCreateJoincodeAsyncU3Ed__8_t3D4979FB94DDB39F09B1819D0B9D6051320A28A6_m6A177E875F12108511E2D6E0E151298DDAB80C2B_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // T Unity.Services.Relay.Http.ResponseHandler::HandleAsyncResponse<Unity.Services.Relay.Models.JoinCodeResponseBody>(Unity.Services.Relay.Http.HttpClientResponse,System.Collections.Generic.Dictionary`2<System.String,System.Type>)
 inline JoinCodeResponseBody_t0DA591BD07E19E39AB3B968371BFC7230A120495* ResponseHandler_HandleAsyncResponse_TisJoinCodeResponseBody_t0DA591BD07E19E39AB3B968371BFC7230A120495_m12CE93F2662E67FD03D9CCC69E2CA9A79F03D24A (HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* ___response0, Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A* ___statusCodeToTypeMap1, const RuntimeMethod* method)
@@ -6995,24 +6923,24 @@ inline JoinCodeResponseBody_t0DA591BD07E19E39AB3B968371BFC7230A120495* ResponseH
 // System.Void Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinCodeResponseBody>::.ctor(Unity.Services.Relay.Http.HttpClientResponse,T)
 inline void Response_1__ctor_m96724DA4920DFC1EA1D292481AACBE1ACE7A4ED0 (Response_1_t0C013828111EA0F4BA3208D342FA2F3E0696C213* __this, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* ___httpResponse0, JoinCodeResponseBody_t0DA591BD07E19E39AB3B968371BFC7230A120495* ___result1, const RuntimeMethod* method)
 {
-	((  void (*) (/*Unity.Services.Relay.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Response_1__ctor_mDA533D8B3170D4265954675A4FF8A7F612D8B68A_gshared)((Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*)__this, ___httpResponse0, (Il2CppFullySharedGenericAny)___result1, method);
+	((  void (*) (Response_1_t0C013828111EA0F4BA3208D342FA2F3E0696C213*, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5*, JoinCodeResponseBody_t0DA591BD07E19E39AB3B968371BFC7230A120495*, const RuntimeMethod*))Response_1__ctor_m1D0BBB8C2DAD374864DB26575886860FC4F5A206_gshared)(__this, ___httpResponse0, ___result1, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinCodeResponseBody>>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_m5FB6C186619F2ADD85C540C15EC2061F018A8B52 (AsyncTaskMethodBuilder_1_t5F70E72E3F3FDAFE445BEE9F04E8E25B5DB5079F* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5F70E72E3F3FDAFE445BEE9F04E8E25B5DB5079F*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinCodeResponseBody>>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_m75DE9F53A66138480C5D5C6753A2D6BFAEFF79B9 (AsyncTaskMethodBuilder_1_t5F70E72E3F3FDAFE445BEE9F04E8E25B5DB5079F* __this, Response_1_t0C013828111EA0F4BA3208D342FA2F3E0696C213* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5F70E72E3F3FDAFE445BEE9F04E8E25B5DB5079F*, Response_1_t0C013828111EA0F4BA3208D342FA2F3E0696C213*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
 }
 // System.Void Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<CreateJoincodeAsync>d__8::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateJoincodeAsyncU3Ed__8_MoveNext_m3F63D9BEAE4D32A73085701B2AFFB7D1F72C6EE8 (U3CCreateJoincodeAsyncU3Ed__8_t3D4979FB94DDB39F09B1819D0B9D6051320A28A6* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinCodeResponseBody>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_m4C7BFF925EBB4D190FB36CFCAB9D8AB4A099C593 (AsyncTaskMethodBuilder_1_t5F70E72E3F3FDAFE445BEE9F04E8E25B5DB5079F* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t5F70E72E3F3FDAFE445BEE9F04E8E25B5DB5079F*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<CreateJoincodeAsync>d__8::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateJoincodeAsyncU3Ed__8_SetStateMachine_mA5D8964BFB60F744FE739FED1EFE92E5E4621AD9 (U3CCreateJoincodeAsyncU3Ed__8_t3D4979FB94DDB39F09B1819D0B9D6051320A28A6* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -7025,7 +6953,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t46B2DB028096FA2B828359E52F37F31
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinResponseBody>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Http.HttpClientResponse>,Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<JoinRelayAsync>d__9>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E_TisU3CJoinRelayAsyncU3Ed__9_tFF14373CFEF79467E5D3227F104A043D9117F420_m60C7F5B7316420A6E81449857C75C8EF41582C5D (AsyncTaskMethodBuilder_1_tFF8C5A90DDDB5FAD97E46EC50F8706A0D8CD45D5* __this, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E* ___awaiter0, U3CJoinRelayAsyncU3Ed__9_tFF14373CFEF79467E5D3227F104A043D9117F420* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tFF8C5A90DDDB5FAD97E46EC50F8706A0D8CD45D5*, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E*, U3CJoinRelayAsyncU3Ed__9_tFF14373CFEF79467E5D3227F104A043D9117F420*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CJoinRelayAsyncU3Ed__9_tFF14373CFEF79467E5D3227F104A043D9117F420_mCD187B91820D7B7220618B65598D06DAC052DA28_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // T Unity.Services.Relay.Http.ResponseHandler::HandleAsyncResponse<Unity.Services.Relay.Models.JoinResponseBody>(Unity.Services.Relay.Http.HttpClientResponse,System.Collections.Generic.Dictionary`2<System.String,System.Type>)
 inline JoinResponseBody_t454EADE5E5AEB2A51D686C3BE77266CAEBD7A9E3* ResponseHandler_HandleAsyncResponse_TisJoinResponseBody_t454EADE5E5AEB2A51D686C3BE77266CAEBD7A9E3_m324F3263FE10F9B2873832D1891A8B9D409BCF72 (HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* ___response0, Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A* ___statusCodeToTypeMap1, const RuntimeMethod* method)
@@ -7035,24 +6963,24 @@ inline JoinResponseBody_t454EADE5E5AEB2A51D686C3BE77266CAEBD7A9E3* ResponseHandl
 // System.Void Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinResponseBody>::.ctor(Unity.Services.Relay.Http.HttpClientResponse,T)
 inline void Response_1__ctor_mE9DAD3C5C264FF3C3E4CD8912E2498821079C3A3 (Response_1_t0A619C882664621AF7A8CAC8C0B372E738E01563* __this, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* ___httpResponse0, JoinResponseBody_t454EADE5E5AEB2A51D686C3BE77266CAEBD7A9E3* ___result1, const RuntimeMethod* method)
 {
-	((  void (*) (/*Unity.Services.Relay.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Response_1__ctor_mDA533D8B3170D4265954675A4FF8A7F612D8B68A_gshared)((Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*)__this, ___httpResponse0, (Il2CppFullySharedGenericAny)___result1, method);
+	((  void (*) (Response_1_t0A619C882664621AF7A8CAC8C0B372E738E01563*, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5*, JoinResponseBody_t454EADE5E5AEB2A51D686C3BE77266CAEBD7A9E3*, const RuntimeMethod*))Response_1__ctor_m1D0BBB8C2DAD374864DB26575886860FC4F5A206_gshared)(__this, ___httpResponse0, ___result1, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinResponseBody>>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_mA0ED0904AAFB51118BC6A1A4E0D29398A48D38B6 (AsyncTaskMethodBuilder_1_tFF8C5A90DDDB5FAD97E46EC50F8706A0D8CD45D5* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tFF8C5A90DDDB5FAD97E46EC50F8706A0D8CD45D5*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinResponseBody>>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_m2A593DFF887A9E78B9978AE2988348EE557FD3D9 (AsyncTaskMethodBuilder_1_tFF8C5A90DDDB5FAD97E46EC50F8706A0D8CD45D5* __this, Response_1_t0A619C882664621AF7A8CAC8C0B372E738E01563* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tFF8C5A90DDDB5FAD97E46EC50F8706A0D8CD45D5*, Response_1_t0A619C882664621AF7A8CAC8C0B372E738E01563*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
 }
 // System.Void Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<JoinRelayAsync>d__9::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CJoinRelayAsyncU3Ed__9_MoveNext_m7D3B2DF48161D024EC6E362718709CDE36F82D07 (U3CJoinRelayAsyncU3Ed__9_tFF14373CFEF79467E5D3227F104A043D9117F420* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.JoinResponseBody>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_mB03358ED5273C8C5852E5F42664CB9FC67C56A78 (AsyncTaskMethodBuilder_1_tFF8C5A90DDDB5FAD97E46EC50F8706A0D8CD45D5* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_tFF8C5A90DDDB5FAD97E46EC50F8706A0D8CD45D5*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<JoinRelayAsync>d__9::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CJoinRelayAsyncU3Ed__9_SetStateMachine_m09505BA573673979AC956463FDFF430D624569D4 (U3CJoinRelayAsyncU3Ed__9_tFF14373CFEF79467E5D3227F104A043D9117F420* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -7065,7 +6993,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t46B2DB028096FA2B828359E52F37F31
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.RegionsResponseBody>>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<Unity.Services.Relay.Http.HttpClientResponse>,Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<ListRegionsAsync>d__10>(TAwaiter&,TStateMachine&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E_TisU3CListRegionsAsyncU3Ed__10_t40CEF1251EEE01362A1CF3E261F9E6240FDCB351_m0BCD77A5FAE3A27B36B12CE3BD876801EEBB4A07 (AsyncTaskMethodBuilder_1_t3D595912240C3A616BFB7DFCDB1CA328C3EDC96F* __this, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E* ___awaiter0, U3CListRegionsAsyncU3Ed__10_t40CEF1251EEE01362A1CF3E261F9E6240FDCB351* ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m0B984271E33D944D547FB29917733016C411E5EB_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny*)___awaiter0, (Il2CppFullySharedGenericAny*)___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t3D595912240C3A616BFB7DFCDB1CA328C3EDC96F*, TaskAwaiter_1_tD7400A3126C0CD72B6D73470397B841EB789E53E*, U3CListRegionsAsyncU3Ed__10_t40CEF1251EEE01362A1CF3E261F9E6240FDCB351*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t0B808409CD8201F13AAC85F29D646518C4857BEA_TisU3CListRegionsAsyncU3Ed__10_t40CEF1251EEE01362A1CF3E261F9E6240FDCB351_mDA6B7CCA9CB1D8E622936CB8D520821D3F8FBFA9_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // T Unity.Services.Relay.Http.ResponseHandler::HandleAsyncResponse<Unity.Services.Relay.Models.RegionsResponseBody>(Unity.Services.Relay.Http.HttpClientResponse,System.Collections.Generic.Dictionary`2<System.String,System.Type>)
 inline RegionsResponseBody_t2DA18B97B6F7FAE523697E1C492D434E909AA5E1* ResponseHandler_HandleAsyncResponse_TisRegionsResponseBody_t2DA18B97B6F7FAE523697E1C492D434E909AA5E1_m015D3D83C86166A2D763B3241987824C2E0A736F (HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* ___response0, Dictionary_2_t0E98B58821A879161B744DA2602DA878A7E5C58A* ___statusCodeToTypeMap1, const RuntimeMethod* method)
@@ -7075,24 +7003,24 @@ inline RegionsResponseBody_t2DA18B97B6F7FAE523697E1C492D434E909AA5E1* ResponseHa
 // System.Void Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.RegionsResponseBody>::.ctor(Unity.Services.Relay.Http.HttpClientResponse,T)
 inline void Response_1__ctor_m9479FAEA34F3AA032D3639FD735E22D6CA7B34C8 (Response_1_t4F809C3ADBA3A59F1BE5090F3D36B53190C0D7D9* __this, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5* ___httpResponse0, RegionsResponseBody_t2DA18B97B6F7FAE523697E1C492D434E909AA5E1* ___result1, const RuntimeMethod* method)
 {
-	((  void (*) (/*Unity.Services.Relay.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Response_1__ctor_mDA533D8B3170D4265954675A4FF8A7F612D8B68A_gshared)((Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E*)__this, ___httpResponse0, (Il2CppFullySharedGenericAny)___result1, method);
+	((  void (*) (Response_1_t4F809C3ADBA3A59F1BE5090F3D36B53190C0D7D9*, HttpClientResponse_t794B5DCDDC092F2B631BF5FF290486A618F0F6A5*, RegionsResponseBody_t2DA18B97B6F7FAE523697E1C492D434E909AA5E1*, const RuntimeMethod*))Response_1__ctor_m1D0BBB8C2DAD374864DB26575886860FC4F5A206_gshared)(__this, ___httpResponse0, ___result1, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.RegionsResponseBody>>::SetException(System.Exception)
 inline void AsyncTaskMethodBuilder_1_SetException_m2CBCB41D3116DE150CDB1219BE97F418F70DA1EC (AsyncTaskMethodBuilder_1_t3D595912240C3A616BFB7DFCDB1CA328C3EDC96F* __this, Exception_t* ___exception0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_m25948BB842FBF253D89FE8399CCB2325B491EE34_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___exception0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t3D595912240C3A616BFB7DFCDB1CA328C3EDC96F*, Exception_t*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetException_mC2F74B26F5303F9F960965220E2866D777F1A5C6_gshared)(__this, ___exception0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.RegionsResponseBody>>::SetResult(TResult)
 inline void AsyncTaskMethodBuilder_1_SetResult_mFD10694A7C560E5FE21153B1406D86806C0137CD (AsyncTaskMethodBuilder_1_t3D595912240C3A616BFB7DFCDB1CA328C3EDC96F* __this, Response_1_t4F809C3ADBA3A59F1BE5090F3D36B53190C0D7D9* ___result0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_mC5A4FB0746878FC882C792D8BCAF5277E1F24778_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, (Il2CppFullySharedGenericAny)___result0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t3D595912240C3A616BFB7DFCDB1CA328C3EDC96F*, Response_1_t4F809C3ADBA3A59F1BE5090F3D36B53190C0D7D9*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetResult_m0D83195F995F9825D7A6DCDC3835D6917C43B5A6_gshared)(__this, ___result0, method);
 }
 // System.Void Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<ListRegionsAsync>d__10::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CListRegionsAsyncU3Ed__10_MoveNext_m7CE2D83926A0C4ED26DF3A4F0C9999CA21FD90BA (U3CListRegionsAsyncU3Ed__10_t40CEF1251EEE01362A1CF3E261F9E6240FDCB351* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Services.Relay.Response`1<Unity.Services.Relay.Models.RegionsResponseBody>>::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 inline void AsyncTaskMethodBuilder_1_SetStateMachine_m63266EDD8EDF629168BC037FE7BCBDD11E7EE82C (AsyncTaskMethodBuilder_1_t3D595912240C3A616BFB7DFCDB1CA328C3EDC96F* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m7EF377C3A25FB4388DAF14ECAFC18E1C9F3EEA4A_gshared)((AsyncTaskMethodBuilder_1_t9A3ADCFF6503F4230FFD38F6C333EBCF1A034AF4*)__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t3D595912240C3A616BFB7DFCDB1CA328C3EDC96F*, RuntimeObject*, const RuntimeMethod*))AsyncTaskMethodBuilder_1_SetStateMachine_m3BE54983634ABF5BE05200C7894AD0F9F20BDD65_gshared)(__this, ___stateMachine0, method);
 }
 // System.Void Unity.Services.Relay.Apis.RelayAllocations.RelayAllocationsApiClient/<ListRegionsAsync>d__10::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CListRegionsAsyncU3Ed__10_SetStateMachine_m9DD3E4FD7ADE57888C4FD9F4F64C1DD4F62CBACC (U3CListRegionsAsyncU3Ed__10_t40CEF1251EEE01362A1CF3E261F9E6240FDCB351* __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method) ;
@@ -25293,94 +25221,69 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR JoinRequest_t3A5805D6AF1CEF1C9148
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void KeyValuePair_2_get_Key_mBE75BF8983618BC1ACEC20F94C1BFF85C8AA50F1_gshared_inline (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
-{
-	// sizeof(TKey)
-	const uint32_t SizeOf_TKey_tAE1541CEBE7E523E393A46E588568F4BD8337859 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0));
-	// TKey
-	const Il2CppFullySharedGenericAny L_0 = alloca(SizeOf_TKey_tAE1541CEBE7E523E393A46E588568F4BD8337859);
-	{
-		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1),0)), SizeOf_TKey_tAE1541CEBE7E523E393A46E588568F4BD8337859);
-		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_TKey_tAE1541CEBE7E523E393A46E588568F4BD8337859);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void KeyValuePair_2_get_Value_mFA1964BF56AA214EE0D491CC197F61BC9E5F1F7A_gshared_inline (KeyValuePair_2_t28EF90BF7804CE5D7F99A364266351E7DC652669* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
-{
-	// sizeof(TValue)
-	const uint32_t SizeOf_TValue_tAEA6D09BCD56B8A100F4F042BC143BC0266C28B7 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
-	// TValue
-	const Il2CppFullySharedGenericAny L_0 = alloca(SizeOf_TValue_tAEA6D09BCD56B8A100F4F042BC143BC0266C28B7);
-	{
-		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1),1)), SizeOf_TValue_tAEA6D09BCD56B8A100F4F042BC143BC0266C28B7);
-		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_TValue_tAEA6D09BCD56B8A100F4F042BC143BC0266C28B7);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_m14F273FB376DF00D727434CDCD28AB4EDCC14C3C_gshared_inline (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) 
 {
 	{
-		bool L_0 = *(bool*)il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1),0));
+		RuntimeObject* L_0 = (RuntimeObject*)__this->___key_0;
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_gshared_inline (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) 
 {
-	// sizeof(T)
-	const uint32_t SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
-	// T
-	const Il2CppFullySharedGenericAny L_0 = alloca(SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1);
 	{
-		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1),3)), SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1);
-		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1);
-		return;
+		RuntimeObject* L_0 = (RuntimeObject*)__this->___value_1;
+		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Response_1_get_Result_m5C557F3EFAE79505C058B404E8D6AD8F9A142598_gshared_inline (/*Unity.Services.Relay.Response`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>*/Response_1_t47BD1E35613A266E42AA19E04B6FCCEAABDF728E* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) 
 {
-	// sizeof(T)
-	const uint32_t SizeOf_T_t1D2EC666D3CF9DA5E837CD07C71A452B9DF27A40 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->klass->rgctx_data, 1));
-	// T
-	const Il2CppFullySharedGenericAny L_0 = alloca(SizeOf_T_t1D2EC666D3CF9DA5E837CD07C71A452B9DF27A40);
+	{
+		bool L_0 = (bool)__this->___hasValue_0;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = (RuntimeObject*)__this->____current_3;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Response_1_get_Result_m748D935F0C9D59C5E322905E9E5EB091E05BB17A_gshared_inline (Response_1_t435DDF1DF675362E151493577E6F0183A5DFEEA0* __this, const RuntimeMethod* method) 
+{
 	{
 		// public T Result { get; }
-		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(method->klass->rgctx_data, 0),0)), SizeOf_T_t1D2EC666D3CF9DA5E837CD07C71A452B9DF27A40);
-		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_T_t1D2EC666D3CF9DA5E837CD07C71A452B9DF27A40);
-		return;
+		RuntimeObject* L_0 = (RuntimeObject*)__this->___U3CResultU3Ek__BackingField_2;
+		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Queue_1_get_Count_mE6103188ACDEC07F90F2D2986554730D18029750_gshared_inline (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Queue_1_get_Count_m1768ADA9855B7CDA14C9C42E098A287F1A39C3A2_gshared_inline (Queue_1_tE9EF546915795972C3BFD68FBB8FA859D3BAF3B5* __this, const RuntimeMethod* method) 
 {
 	{
 		int32_t L_0 = (int32_t)__this->____size_3;
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	{
 		int32_t L_0 = (int32_t)__this->____size_2;
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___item0, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___item0, const RuntimeMethod* method) 
 {
-	// sizeof(T)
-	const uint32_t SizeOf_T_t664E2061A913AF1FEE499655BC64F0FDE10D2A5E = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->klass->rgctx_data, 9));
-	// T
-	const Il2CppFullySharedGenericAny L_8 = alloca(SizeOf_T_t664E2061A913AF1FEE499655BC64F0FDE10D2A5E);
-	const Il2CppFullySharedGenericAny L_9 = L_8;
-	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* V_0 = NULL;
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
 	int32_t V_1 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->____version_3;
 		__this->____version_3 = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_1 = (__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC*)__this->____items_1;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)__this->____items_1;
 		V_0 = L_1;
 		int32_t L_2 = (int32_t)__this->____size_2;
 		V_1 = L_2;
 		int32_t L_3 = V_1;
-		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_4 = V_0;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = V_0;
 		NullCheck(L_4);
 		if ((!(((uint32_t)L_3) < ((uint32_t)((int32_t)(((RuntimeArray*)L_4)->max_length))))))
 		{
@@ -25390,59 +25293,47 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mD4F3498FBD3BDD3F
 	{
 		int32_t L_5 = V_1;
 		__this->____size_2 = ((int32_t)il2cpp_codegen_add(L_5, 1));
-		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_6 = V_0;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6 = V_0;
 		int32_t L_7 = V_1;
-		il2cpp_codegen_memcpy(L_8, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->klass->rgctx_data, 9)) ? ___item0 : &___item0), SizeOf_T_t664E2061A913AF1FEE499655BC64F0FDE10D2A5E);
+		RuntimeObject* L_8 = ___item0;
 		NullCheck(L_6);
-		il2cpp_codegen_memcpy((L_6)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_7)), L_8, SizeOf_T_t664E2061A913AF1FEE499655BC64F0FDE10D2A5E);
-		Il2CppCodeGenWriteBarrierForClass(il2cpp_rgctx_data(method->klass->rgctx_data, 9), (void**)(L_6)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_7)), (void*)L_8);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (RuntimeObject*)L_8);
 		return;
 	}
 
 IL_0034:
 	{
-		il2cpp_codegen_memcpy(L_9, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->klass->rgctx_data, 9)) ? ___item0 : &___item0), SizeOf_T_t664E2061A913AF1FEE499655BC64F0FDE10D2A5E);
-		InvokerActionInvoker1< Il2CppFullySharedGenericAny >::Invoke(il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 14)), il2cpp_rgctx_method(method->klass->rgctx_data, 14), __this, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->klass->rgctx_data, 9)) ? L_9: *(void**)L_9));
+		RuntimeObject* L_9 = ___item0;
+		((  void (*) (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*, RuntimeObject*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 11)))(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 11));
 		return;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* Array_Empty_TisIl2CppFullySharedGenericAny_m244E2A51B33F845A2093F0862FBCE502E4FDD868_gshared_inline (const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline (const RuntimeMethod* method) 
 {
-	il2cpp_rgctx_method_init(method);
 	{
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->rgctx_data, 2));
-		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_0 = ((EmptyArray_1_tF69A5F6BAD1150A16C4C98B346D6122FE3751C80_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->rgctx_data, 2)))->___Value_0;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->rgctx_data, 0));
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_0 = ((EmptyArray_1_tDF0DD7256B115243AA6BD5558417387A734240EE_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->rgctx_data, 0)))->___Value_0;
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* TaskCompletionSource_1_get_Task_m4994989AA2174905CF517397D0F6B082ADC29EE9_gshared_inline (TaskCompletionSource_1_t8A40BE53A167B6D71D5640881A7A894D8DA94970* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* TaskCompletionSource_1_get_Task_mF44990297C25C7DBE1E65241C03D0120CB551552_gshared_inline (TaskCompletionSource_1_tB4EF81F69CCF7C4F0D956F9B26127C0634A24A37* __this, const RuntimeMethod* method) 
 {
 	{
-		Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9* L_0 = (Task_1_tDF1FF540D7D2248A08580387A39717B7FB7A9CF9*)__this->____task_0;
+		Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* L_0 = (Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2*)__this->____task_0;
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m2D9E3398C2A3349E3F0F189A38E881D11DE5AA15_gshared_inline (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_mD6472FA27D28B9AE64A0FEF796C72ABBC2420EBF_gshared_inline (Enumerator_t65CC956745B1180C04CE6C6910FB27C5F32BB9FF* __this, const RuntimeMethod* method) 
 {
-	// sizeof(TKey)
-	const uint32_t SizeOf_TKey_tD6F5EEADA0A8791813A4EF1C80C94030B153E4B0 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
-	// TKey
-	const Il2CppFullySharedGenericAny L_0 = alloca(SizeOf_TKey_tD6F5EEADA0A8791813A4EF1C80C94030B153E4B0);
 	{
-		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1),3)), SizeOf_TKey_tD6F5EEADA0A8791813A4EF1C80C94030B153E4B0);
-		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_TKey_tD6F5EEADA0A8791813A4EF1C80C94030B153E4B0);
-		return;
+		RuntimeObject* L_0 = (RuntimeObject*)__this->____currentKey_3;
+		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Nullable_1_GetValueOrDefault_mC057FBD944AF068B90EBDD0B496231A01B2A4228_gshared_inline (Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339* __this, Il2CppFullySharedGenericStruct* il2cppRetVal, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Nullable_1_GetValueOrDefault_m8D130DB7F2A1E694736B449176F9C26DB456597B_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) 
 {
-	// sizeof(T)
-	const uint32_t SizeOf_T_tF1352992D99D495C6F2BE3DC43F8A00BAD6B2EAA = il2cpp_codegen_sizeof(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0));
-	// T
-	const Il2CppFullySharedGenericStruct L_0 = alloca(SizeOf_T_tF1352992D99D495C6F2BE3DC43F8A00BAD6B2EAA);
 	{
-		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1),1)), SizeOf_T_tF1352992D99D495C6F2BE3DC43F8A00BAD6B2EAA);
-		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_T_tF1352992D99D495C6F2BE3DC43F8A00BAD6B2EAA);
-		return;
+		int32_t L_0 = (int32_t)__this->___value_1;
+		return L_0;
 	}
 }
