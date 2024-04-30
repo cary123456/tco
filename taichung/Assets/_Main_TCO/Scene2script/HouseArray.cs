@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class HouseArray : MonoBehaviour
 {
+    public KeyCode HouseKey;
+    public KeyCode CrabKey;
+    public KeyCode BubbleKey;
     public GameObject[] house;
     public bool houseenable =true;
     public GameObject[] crab;
@@ -17,7 +20,7 @@ public class HouseArray : MonoBehaviour
     public int x;
     public int z;
     public float k;
-    [Range(1, 10)]    
+    [Range(1, 100)]    
     public int buildpertime = 1;
     public float[] housescale;
     public float[] crabscale;
@@ -55,7 +58,7 @@ public class HouseArray : MonoBehaviour
     {
         bool flag = true;
 
-        if(Input.GetKeyDown("p") &&　flag && houseenable)
+        if(Input.GetKeyDown(HouseKey) &&　flag && houseenable)
         {
             for(int i = 0; i < buildpertime; i++) 
             {
@@ -90,7 +93,7 @@ public class HouseArray : MonoBehaviour
 
         }
 
-        if(Input.GetKeyDown("o") &&　flag && crabenable)
+        if(Input.GetKeyDown(CrabKey) &&　flag && crabenable)
         {
             for(int i = 0; i < buildpertime; i++) 
             {
@@ -121,7 +124,7 @@ public class HouseArray : MonoBehaviour
 
         }
 
-        if(Input.GetKeyDown("u") &&　flag && bubbleenable)
+        if(Input.GetKeyDown(BubbleKey) &&　flag && bubbleenable)
         {
             for(int i = 0; i < buildpertime; i++) 
             {
@@ -137,7 +140,7 @@ public class HouseArray : MonoBehaviour
                 if(buildarray[Xpos,Zpos] != 1)
                 {
                     GameObject bubbles =Instantiate(bubble[rand], pos.localPosition + new Vector3 (Xpos*k + houseoffset, Zpos*k, -2.7f ), Quaternion.identity, pos);
-                    bubbles.GetComponent<Rigidbody>().AddForce(new Vector3(0, -rand*10, 0));
+                    bubbles.GetComponent<Rigidbody>().AddForce(new Vector3(0, rand+1, 0));
                     bubbles.transform.localScale = new Vector3(bubblescale[s], bubblescale[s], bubblescale[s]);
                     buildarray[Xpos,Zpos] = 1;
                     buildarraytemp.Add( new Vector2(Xpos,Zpos));
