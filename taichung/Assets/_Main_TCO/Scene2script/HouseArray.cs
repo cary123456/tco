@@ -10,12 +10,16 @@ public class HouseArray : MonoBehaviour
     public KeyCode HouseKey;
     public KeyCode CrabKey;
     public KeyCode BubbleKey;
+    public KeyCode FishKey;
+
     public GameObject[] house;
     public bool houseenable =true;
     public GameObject[] crab;
     public bool crabenable =false;
     public GameObject[] bubble;
     public bool bubbleenable =false;
+    public GameObject[] fish;
+    public bool fishenable = false;
     public Transform pos;
     public int x;
     public int z;
@@ -25,12 +29,15 @@ public class HouseArray : MonoBehaviour
     public float[] housescale;
     public float[] crabscale;
     public float[] bubblescale;
+    public float fishspeed;
+    public float fishlifetime;
     public int housecount;
     public float offset;
     public List<Vector2> buildarraytemp;
     public int[] blockhouseX; 
     public int[] blockhouseZ; 
     int [,] buildarray;
+    public bool gesturetigger = false;
 
     void Start() 
     {
@@ -89,6 +96,40 @@ public class HouseArray : MonoBehaviour
                         break;
                 }
                 Debug.Log( x*z-blockhouseZ.Length*x-blockhouseX.Length*z+blockhouseX.Length*blockhouseZ.Length);
+            }
+
+        }
+
+        if((Input.GetKeyDown(FishKey) &&　flag && fishenable) || gesturetigger)
+        {
+            for(int i = 0; i < buildpertime; i++) 
+            {
+                
+                flag = false;
+                gesturetigger = false;
+
+                float houseoffset = Random.Range(-offset, offset);
+                int Xpos = Random.Range(0,x);
+                int Zpos = Random.Range(0,z);
+                int rand = Random.Range(0,fish.Length);
+                int speed = Random.Range(1,3);
+                
+                if(buildarray[Xpos,Zpos] != 0)
+                {
+                    GameObject fishman = Instantiate(fish[rand], pos.position + new Vector3 (Xpos*k + houseoffset, 0, Zpos*k), Quaternion.identity, pos);
+                    //buildarray[Xpos,Zpos] = 0;
+                    //housecount++;
+                    fishman.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, speed * fishspeed);
+                    Destroy(fishman, fishlifetime);
+                    
+                }
+                else 
+                {   
+                    if(housecount < blockhouseZ.Length*x+blockhouseX.Length*z-blockhouseX.Length*blockhouseZ.Length)
+                        i--;
+                    if(housecount >= blockhouseZ.Length*x+blockhouseX.Length*z-blockhouseX.Length*blockhouseZ.Length)
+                        break;
+                }
             }
 
         }
