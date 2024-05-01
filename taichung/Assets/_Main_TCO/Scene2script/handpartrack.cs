@@ -6,6 +6,7 @@ public class handpartrack : MonoBehaviour
 {
     public GameObject Rhand;
     public GameObject Lhand;
+    
     public bool R;
     // Start is called before the first frame update
     void Start()

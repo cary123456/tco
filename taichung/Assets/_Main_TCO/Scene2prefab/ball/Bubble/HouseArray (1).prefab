@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7560462082760531156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7560462082760531159}
+  - component: {fileID: 7560462082760531158}
+  m_Layer: 0
+  m_Name: HouseArray (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7560462082760531159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7560462082760531156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.21, y: -10.1, z: -21.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7560462082760531158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7560462082760531156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HouseKey: 112
+  CrabKey: 111
+  BubbleKey: 117
+  house: []
+  houseenable: 0
+  crab: []
+  crabenable: 0
+  bubble:
+  - {fileID: 8376354196499171516, guid: 4854e48d8817ab84fa6031bb3d7d83ed, type: 3}
+  - {fileID: 4475297560902252855, guid: 26a6cd51ed95d084f980f067bf8a9c9a, type: 3}
+  - {fileID: 1045219833981748037, guid: 9ef82d47f86f8034ba8525938a47da25, type: 3}
+  - {fileID: 5306868179064046195, guid: a750109bd9e644344b1b4a238fc7d044, type: 3}
+  - {fileID: 8603896916359530858, guid: 9da82d22e1093584c80903e64d0633b2, type: 3}
+  - {fileID: 5860701754212358082, guid: 35737b21cc69c5b4da00b97aa1a3e5d2, type: 3}
+  bubbleenable: 1
+  pos: {fileID: 7560462082760531159}
+  x: 25
+  z: 25
+  k: 1
+  buildpertime: 10
+  housescale:
+  - 0
+  - 0
+  - 0
+  crabscale: []
+  bubblescale:
+  - 1
+  - 1.5
+  - 1.3
+  housecount: 0
+  offset: 0.1
+  buildarraytemp: []
+  blockhouseX: 
+  blockhouseZ: 

@@ -139,7 +139,7 @@ public class HouseArray : MonoBehaviour
 
                 if(buildarray[Xpos,Zpos] != 1)
                 {
-                    GameObject bubbles =Instantiate(bubble[rand], pos.localPosition + new Vector3 (Xpos*k + houseoffset, Zpos*k, -2.7f ), Quaternion.identity, pos);
+                    GameObject bubbles =Instantiate(bubble[rand], pos.localPosition + new Vector3 (Xpos*k + houseoffset, 0f, Zpos*k ), Quaternion.identity, pos);
                     bubbles.GetComponent<Rigidbody>().AddForce(new Vector3(0, rand+1, 0));
                     bubbles.transform.localScale = new Vector3(bubblescale[s], bubblescale[s], bubblescale[s]);
                     buildarray[Xpos,Zpos] = 1;
