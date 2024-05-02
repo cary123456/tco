@@ -11,6 +11,7 @@ public class HouseArray : MonoBehaviour
     public KeyCode CrabKey;
     public KeyCode BubbleKey;
     public KeyCode FishKey;
+    public KeyCode WordKey;
 
     public GameObject[] house;
     public bool houseenable =true;
@@ -20,7 +21,11 @@ public class HouseArray : MonoBehaviour
     public bool bubbleenable =false;
     public GameObject[] fish;
     public bool fishenable = false;
+    public GameObject[] word;
+    public bool wordenable = false;
+    public int wordselect;
     public Transform pos;
+    public Transform parentcanvas;
     public int x;
     public int z;
     public float k;
@@ -209,6 +214,37 @@ public class HouseArray : MonoBehaviour
                 }
             }
 
+        }
+        if(Input.GetKeyDown(WordKey) &&　flag && wordenable)
+        {
+            for(int i = 0; i < buildpertime; i++) 
+            {
+                
+                flag = false;
+
+                float houseoffset = Random.Range(-offset, offset);
+                int Xpos = Random.Range(0,x);
+                int Zpos = Random.Range(0,z);
+
+
+                if(buildarray[Xpos,Zpos] != 1)
+                {
+                    GameObject wordtemp = Instantiate(word[wordselect], pos.position + new Vector3 (Xpos*k + houseoffset, 0, Zpos*k), Quaternion.identity, parentcanvas);
+                    wordtemp.transform.Rotate(90 ,0 ,180);
+                    buildarray[Xpos,Zpos] = 1;
+                    buildarraytemp.Add( new Vector2(Xpos,Zpos));
+                    buildarraytemp.ToArray();
+                    housecount++;
+                }
+                else 
+                {   
+                    if(housecount < x*z-blockhouseZ.Length*x-blockhouseX.Length*z+blockhouseX.Length*blockhouseZ.Length)
+                        i--;
+                    if(housecount >= x*z-blockhouseZ.Length*x-blockhouseX.Length*z+blockhouseX.Length*blockhouseZ.Length)
+                        break;
+                }
+                
+            }
         }
 
         if (Input.GetKey(KeyCode.Escape))
