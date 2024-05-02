@@ -6,10 +6,13 @@ public class midtri : MonoBehaviour
 {
     public GameObject gesture;
     public GameObject[] players;
-    public float colddowntime;
-    public float runtime;
+    public float holdtime;
+    public float holdruntime;
     public bool allowtrigger;
+    public float colddownruntime;
+    public float colddowntime;
     public bool onetimetrigger;
+    public bool allow;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +23,15 @@ public class midtri : MonoBehaviour
     void Update()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
+        if (colddownruntime >= colddowntime)
+        {
+            colddownruntime = colddowntime;
+            allow = true;
+        }
+        colddownruntime += Time.deltaTime;
         if (allowtrigger)
         {
-            if (runtime >= colddowntime)
+            if (holdruntime >= holdtime)
             {
                 if (onetimetrigger == false)
                 {
@@ -33,29 +42,42 @@ public class midtri : MonoBehaviour
                         onetimetrigger = true;
                     }
                 }
-                runtime = colddowntime;
+                holdruntime = holdtime;
             }
-            runtime += Time.deltaTime;
+            holdruntime += Time.deltaTime;
         }
         
 
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "midfinger" && gesture.GetComponent<GestureDetector>().gesturesnumber == 1 && gesture.GetComponent<LGestureDetector>().gesturesnumber == 1)
+        if (other.tag == "midfinger" )
         {
-            allowtrigger = true;
-            this.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f, 0.34f);
-            other.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f, 0.34f);
+            if (allow)
+            {
+                allowtrigger = true;
+                this.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f, 0.34f);
+                other.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f, 0.34f);
+            }
+            
         }
 
 
+    }
+    void OnTriggerStay(Collider other)
+    {
+
+        if (other.tag == "midfinger")
+        {
+            colddownruntime = 0;
+        }
     }
     void OnTriggerExit(Collider other)
     {
         if (other.tag == "midfinger")
         {
-            runtime = 0;
+            colddownruntime = 0;
+            holdruntime = 0;
             onetimetrigger = false;
             allowtrigger = false;
             if (players.Length > 1)
@@ -63,7 +85,7 @@ public class midtri : MonoBehaviour
                 this.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(1f, 0f, 0f, 0.34f);
                 other.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(1f, 0f, 0f, 0.34f);
                 players[1].GetComponent<valuerecueve>().housevalue = false;
-                
+                allow = false;
             }
         }
         

@@ -38,6 +38,7 @@ public class HouseArray : MonoBehaviour
     public int[] blockhouseZ; 
     int [,] buildarray;
     public bool gesturetigger = false;
+    public bool flip = false;
 
     void Start() 
     {
@@ -113,13 +114,22 @@ public class HouseArray : MonoBehaviour
                 int Zpos = Random.Range(0,z);
                 int rand = Random.Range(0,fish.Length);
                 int speed = Random.Range(1,3);
-                
-                if(buildarray[Xpos,Zpos] != 0)
+
+                float fishspeedtemp = fishspeed;
+
+
+
+                if (buildarray[Xpos,Zpos] != 0)
                 {
                     GameObject fishman = Instantiate(fish[rand], pos.position + new Vector3 (Xpos*k + houseoffset, 0, Zpos*k), Quaternion.identity, pos);
+                    if (flip)
+                    {
+                        fishman.transform.Rotate(0, 180, 0);
+                        fishspeedtemp = -fishspeed;
+                    }
                     //buildarray[Xpos,Zpos] = 0;
                     //housecount++;
-                    fishman.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, speed * fishspeed);
+                    fishman.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, speed * fishspeedtemp);
                     Destroy(fishman, fishlifetime);
                     
                 }
@@ -145,10 +155,12 @@ public class HouseArray : MonoBehaviour
                 int Xpos = Random.Range(0,x);
                 int Zpos = Random.Range(0,z);
                 int rand = Random.Range(0,crab.Length);
+                int s = Random.Range(0, crabscale.Length);
 
-                if(buildarray[Xpos,Zpos] != 1)
+                if (buildarray[Xpos,Zpos] != 1)
                 {
-                    Instantiate(crab[rand], pos.localPosition + new Vector3 (Xpos*k + houseoffset, Zpos*k, -2.7f ), Quaternion.identity, pos);
+                    GameObject crabs = Instantiate(crab[rand], pos.localPosition + new Vector3 (Xpos*k + houseoffset, Zpos*k, -2.7f ), Quaternion.identity, pos);
+                    crabs.transform.localScale = new Vector3(crabscale[s], crabscale[s], crabscale[s]);
                     buildarray[Xpos,Zpos] = 1;
                     buildarraytemp.Add( new Vector2(Xpos,Zpos));
                     buildarraytemp.ToArray();

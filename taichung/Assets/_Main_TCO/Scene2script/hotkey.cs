@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class hotkey : MonoBehaviour
 {
     public GameObject crab;
@@ -24,6 +24,7 @@ public class hotkey : MonoBehaviour
     public int vfxcount;
     public GameObject mainncamera;
     public GameObject[] player;
+    public GameObject fish;
     // Start is called before the first frame update
     void Start()
     {
@@ -141,15 +142,28 @@ public class hotkey : MonoBehaviour
         }
         if(vfxcount == 0)
         {
-            Rvfx.SetActive(true);
+            if (Rvfx != null)
+            {
+                Rvfx.SetActive(true);
+            }
 
-            Lvfx.SetActive(true);
+            if (Lvfx != null)
+            {
+                Lvfx.SetActive(true);
+            }
         }
         if (vfxcount == 1)
         {
-            Rvfx.SetActive(false);
-
-            Lvfx.SetActive(false);
+            if(Rvfx != null)
+            {
+                Rvfx.SetActive(false);
+            }
+            
+            if(Lvfx != null)
+            {
+                Lvfx.SetActive(false);
+            }
+            
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
@@ -168,6 +182,17 @@ public class hotkey : MonoBehaviour
 
                 headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
             }
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            if (GameObject.FindWithTag("crab") != null)
+            {
+                Destroy(GameObject.FindWithTag("crab"));
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            fish.SetActive(true);
         }
         if (Input.GetKey(KeyCode.Escape))
         {
@@ -195,6 +220,10 @@ public class hotkey : MonoBehaviour
             {
                 Destroy(GameObject.FindWithTag("buildinglo"));
             }
+        }
+        if (Input.GetKeyUp(KeyCode.F1))
+        {
+            SceneManager.LoadScene("chapter4");
         }
         if (Input.GetKeyUp(KeyCode.Escape))
         {

@@ -128,7 +128,7 @@ public class LGestureDetector : MonoBehaviour
                         player[1].GetComponent<valuerecueve>().intLvalue = gesturesnumber;
                     }
                 }
-                else if (currentGesture.name == "house")
+                else if (currentGesture.name == "Crab")
                 {
                     gesturesnumber = 1;
                     if (player.Length > 1)
@@ -137,8 +137,7 @@ public class LGestureDetector : MonoBehaviour
                         player[1].GetComponent<valuerecueve>().intLvalue = gesturesnumber;
                     }
                 }
-
-                else if (currentGesture.name == "Crab")
+                else if (currentGesture.name == "buildoff")
                 {
                     gesturesnumber = 2;
                     if (player.Length > 1)
@@ -147,30 +146,12 @@ public class LGestureDetector : MonoBehaviour
                         player[1].GetComponent<valuerecueve>().intLvalue = gesturesnumber;
                     }
                 }
-                else if (currentGesture.name == "buildup")
+                else if (currentGesture.name == "man")
                 {
                     gesturesnumber = 3;
                     if (player.Length > 1)
                     {
                         gesturesnumber = 3;
-                        player[1].GetComponent<valuerecueve>().intLvalue = gesturesnumber;
-                    }
-                }
-                else if (currentGesture.name == "buildoff")
-                {
-                    gesturesnumber = 4;
-                    if (player.Length > 1)
-                    {
-                        gesturesnumber = 4;
-                        player[1].GetComponent<valuerecueve>().intLvalue = gesturesnumber;
-                    }
-                }
-                else if (currentGesture.name == "man")
-                {
-                    gesturesnumber = 5;
-                    if (player.Length > 1)
-                    {
-                        gesturesnumber = 5;
                         player[1].GetComponent<valuerecueve>().intLvalue = gesturesnumber;
                     }
                 }

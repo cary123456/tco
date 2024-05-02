@@ -292,109 +292,50 @@ public class valuerecueve : NetworkBehaviour
             onetime = false;
         }
 
-        if(handRvalue.Value == 3)
+        if(handRvalue.Value == 2)
         {
             Rruntime += Time.deltaTime;
-            if (buildR)
+            if (Rruntime >= 1)
             {
-                if (Rfirsttime)
+                if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
                 {
-                    Rbuildupfirstpositiony = handRy.Value;
-                    Rfirsttime = false;
-                }
-               
-                if((handRy.Value - Rbuildupfirstpositiony) >= 0.15f && Rruntime <= 1)
-                {
-                    Rsuccess = true;
-                    if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
-                    {
-                        
-                        headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
-                    }
-                    buildR = false;
-                }
-                
+                    headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
+                }               
             }
-            
-        }
-        if (handRvalue.Value == 4)
-        {
-            Rfirsttime = true;
-            Rruntime = 0;
-            Rsuccess = false;
-            buildR = true;
-
-        }
-        if (handLvalue.Value == 3)
-        {
-            Lruntime += Time.deltaTime;
-            if (buildL)
-            {
-                if (Lfirsttime)
-                {
-                    Lbuildupfirstpositiony = handLy.Value;
-                    Lfirsttime = false;
-                }
-
-                if ((handLy.Value - Lbuildupfirstpositiony) >= 0.15f && Lruntime <= 1)
-                {
-                    Lsuccess = true;
-                    if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
-                    {
-                        Lsuccess = true;
-                        headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
-                    }
-                    buildL = false;
-                }
-
-                
-            }
-
-        }
-        if (handLvalue.Value == 4)
-        {
-            Lfirsttime = true;
-            Lsuccess = false;
-            buildL = true;
-            Lruntime = 0;
-        }
-
-        if (handRvalue.Value == 5)
-        {
-            
-            if (fishonetime)
-            {
-                foreach (var midfinger in mid)
-                {
-                    // Can't do this:
-                    if (midfinger.name == "midfingerR")
-                    {
-                        Instantiate(fishtricube, midfinger.transform.position, Quaternion.identity);
-                        fishcolddownruntime = 0f;
-                    }
-                }
-                
-                fishonetime = false;
-            }
-            
-
 
         }
         else
         {
-            if(fishcolddownruntime >= 0.7f)
-            {
-                fishonetime = true;
-                fishcolddownruntime = 0.7f;
-            }
-            fishcolddownruntime += Time.deltaTime;
+            Rruntime = 0;
         }
 
-        
-        if(fishfloat.Value >= 6)
+        if (handLvalue.Value == 2)
         {
-            fishflok.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            Lruntime += Time.deltaTime;
+            if (Lruntime >= 1)
+            {
+               
+                if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
+                {
+                    
+                    headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
+                }
+                
+            }
+
         }
+        else
+        {
+            Lruntime = 0;
+        }
+
+
+        if (fishmantri.Value)
+        {
+
+        }
+
+      
 
         if (destroy.Value == true)
         {

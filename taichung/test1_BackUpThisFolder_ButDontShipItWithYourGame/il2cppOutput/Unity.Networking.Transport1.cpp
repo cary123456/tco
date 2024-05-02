@@ -52,7 +52,7 @@ struct InvokerActionInvoker4<T1, T2*, T3*, T4>
 	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1 p1, T2* p2, T3* p3, T4 p4)
 	{
 		void* params[4] = { &p1, p2, p3, &p4 };
-		method->invoker_method(methodPtr, method, obj, params, NULL);
+		method->invoker_method(methodPtr, method, obj, params, params[3]);
 	}
 };
 template <typename T1, typename T2, typename T3, typename T4>
@@ -61,7 +61,7 @@ struct InvokerActionInvoker4<T1*, T2*, T3*, T4>
 	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1* p1, T2* p2, T3* p3, T4 p4)
 	{
 		void* params[4] = { p1, p2, p3, &p4 };
-		method->invoker_method(methodPtr, method, obj, params, NULL);
+		method->invoker_method(methodPtr, method, obj, params, params[3]);
 	}
 };
 template <typename T1, typename T2, typename T3, typename T4, typename T5>
@@ -72,7 +72,7 @@ struct InvokerActionInvoker5<T1*, T2, T3*, T4*, T5>
 	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1* p1, T2 p2, T3* p3, T4* p4, T5 p5)
 	{
 		void* params[5] = { p1, &p2, p3, p4, &p5 };
-		method->invoker_method(methodPtr, method, obj, params, NULL);
+		method->invoker_method(methodPtr, method, obj, params, params[4]);
 	}
 };
 template <typename T1, typename T2, typename T3, typename T4, typename T5>
@@ -81,7 +81,7 @@ struct InvokerActionInvoker5<T1*, T2*, T3*, T4*, T5>
 	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1* p1, T2* p2, T3* p3, T4* p4, T5 p5)
 	{
 		void* params[5] = { p1, p2, p3, p4, &p5 };
-		method->invoker_method(methodPtr, method, obj, params, NULL);
+		method->invoker_method(methodPtr, method, obj, params, params[4]);
 	}
 };
 template <typename T1, typename T2, typename T3, typename T4, typename T5, typename T6, typename T7>
@@ -92,7 +92,7 @@ struct InvokerActionInvoker7<T1, T2*, T3, T4*, T5*, T6, T7*>
 	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1 p1, T2* p2, T3 p3, T4* p4, T5* p5, T6 p6, T7* p7)
 	{
 		void* params[7] = { &p1, p2, &p3, p4, p5, &p6, p7 };
-		method->invoker_method(methodPtr, method, obj, params, NULL);
+		method->invoker_method(methodPtr, method, obj, params, params[6]);
 	}
 };
 template <typename T1, typename T2, typename T3, typename T4, typename T5, typename T6, typename T7, typename T8>
@@ -103,7 +103,7 @@ struct InvokerActionInvoker8<T1*, T2, T3*, T4, T5*, T6*, T7, T8*>
 	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1* p1, T2 p2, T3* p3, T4 p4, T5* p5, T6* p6, T7 p7, T8* p8)
 	{
 		void* params[8] = { p1, &p2, p3, &p4, p5, p6, &p7, p8 };
-		method->invoker_method(methodPtr, method, obj, params, NULL);
+		method->invoker_method(methodPtr, method, obj, params, params[7]);
 	}
 };
 template <typename R, typename T1, typename T2>
@@ -159,16 +159,18 @@ struct InvokerFuncInvoker7<R, T1*, T2*, T3, T4*, T5*, T6*, T7>
 	}
 };
 
-// System.Func`2<System.Object,System.Boolean>
-struct Func_2_tE1F0D41563EE092E5E5540B061449FDE88F1DC00;
 // System.Func`2<Unity.Services.Relay.Models.RelayServerEndpoint,System.Boolean>
 struct Func_2_tE1F42EB84E1AA4DA3DF3343192BE7CE56838224F;
-// System.Collections.Generic.IEnumerable`1<System.Object>
-struct IEnumerable_1_tF95C9E01A913DD50575531C8305932628663D9E9;
+// System.Func`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,System.Boolean>
+struct Func_2_t19E50C11C3E1F20B5A8FDB85D7DD353B6DFF868B;
+// System.Func`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0;
 // System.Collections.Generic.IEnumerable`1<Unity.Services.Relay.Models.RelayServerEndpoint>
 struct IEnumerable_1_t6000028968D7BDD914A36380F0DB619811959FC8;
 // System.Collections.Generic.IEnumerable`1<System.String>
 struct IEnumerable_1_t349E66EC5F09B881A8E52EE40A1AB9EC60E08E44;
+// System.Collections.Generic.IEnumerable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct IEnumerable_1_t29E7244AE33B71FA0981E50D5BC73B7938F35C66;
 // System.Collections.Generic.List`1<Unity.Networking.Transport.INetworkInterface>
 struct List_1_tC673C156FBD962AEDC0C4957C82DD522010A9BC6;
 // System.Collections.Generic.List`1<Unity.Networking.Transport.INetworkProtocol>
@@ -181,6 +183,8 @@ struct UnsafeList_1_t5C65DCA6782B7C9860C859C2F0C07A2C497E822D;
 struct UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718;
 // Unity.Collections.LowLevel.Unsafe.UnsafeList`1<Unity.Networking.Transport.NetworkEvent>
 struct UnsafeList_1_tFD7DB6B00333C2C114D553F48DA91C512E033F99;
+// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>
+struct UnsafeList_1_t3A26A222433F7993EC942046A500D6EA3DCB97E6;
 // Unity.Collections.LowLevel.Unsafe.UnsafeList`1<Unity.Networking.Transport.NetworkDriver/Connection>
 struct UnsafeList_1_tF90CD1BACB3990B533D04C98C2C90161BD7F9C20;
 // Unity.Collections.LowLevel.Unsafe.UnsafeList`1<Unity.Networking.Transport.NetworkPipelineProcessor/PipelineImpl>
@@ -816,8 +820,30 @@ struct NativeArray_1_t1D84CFD52CE97F84261C9C154534A72B0EA66A15
 	int32_t ___m_AllocatorLabel_2;
 };
 
+// Unity.Collections.NativeArray`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>
+struct NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 
+{
+	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
+	void* ___m_Buffer_0;
+	// System.Int32 Unity.Collections.NativeArray`1::m_Length
+	int32_t ___m_Length_1;
+	// Unity.Collections.Allocator Unity.Collections.NativeArray`1::m_AllocatorLabel
+	int32_t ___m_AllocatorLabel_2;
+};
+
 // Unity.Collections.NativeQueue`1/ParallelWriter<Unity.Networking.Transport.QueuedSendMessage>
 struct ParallelWriter_tD2337D6A048735D05F7C0698B7FEEDAD7153DE97 
+{
+	// Unity.Collections.NativeQueueData* Unity.Collections.NativeQueue`1/ParallelWriter::m_Buffer
+	NativeQueueData_t61B94D7FE48C5715DD5D0C8CB574F73BF15C6E52* ___m_Buffer_0;
+	// Unity.Collections.NativeQueueBlockPoolData* Unity.Collections.NativeQueue`1/ParallelWriter::m_QueuePool
+	NativeQueueBlockPoolData_t3A0B3E1B852D995248D51AB68660D1B367D28E87* ___m_QueuePool_1;
+	// System.Int32 Unity.Collections.NativeQueue`1/ParallelWriter::m_ThreadIndex
+	int32_t ___m_ThreadIndex_2;
+};
+
+// Unity.Collections.NativeQueue`1/ParallelWriter<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>
+struct ParallelWriter_t2D1578AF94E5823813CF6A916C1C53C94EFEFEC5 
 {
 	// Unity.Collections.NativeQueueData* Unity.Collections.NativeQueue`1/ParallelWriter::m_Buffer
 	NativeQueueData_t61B94D7FE48C5715DD5D0C8CB574F73BF15C6E52* ___m_Buffer_0;
@@ -838,13 +864,6 @@ struct ParallelWriter_t55B873B53088E2C14EC0CE7DD3ECA37705CB04CC
 	int32_t ___m_ThreadIndex_2;
 };
 
-// Unity.Burst.SharedStatic`1<Unity.Burst.FunctionPointer`1<System.Object>>
-struct SharedStatic_1_tE6D7548D21D8ED69C6AC8ECAD846CDB43304B444 
-{
-	// System.Void* Unity.Burst.SharedStatic`1::_buffer
-	void* ____buffer_0;
-};
-
 // Unity.Burst.SharedStatic`1<Unity.Burst.FunctionPointer`1<Unity.TLS.LowLevel.Binding/unitytls_client_data_receive_callback>>
 struct SharedStatic_1_tB8E12BEEFE90AF4450BDCB3502FC8A0745B05C87 
 {
@@ -854,6 +873,13 @@ struct SharedStatic_1_tB8E12BEEFE90AF4450BDCB3502FC8A0745B05C87
 
 // Unity.Burst.SharedStatic`1<Unity.Burst.FunctionPointer`1<Unity.TLS.LowLevel.Binding/unitytls_client_data_send_callback>>
 struct SharedStatic_1_t47339D7DCF45ED555300835940E9AFFB859D37B1 
+{
+	// System.Void* Unity.Burst.SharedStatic`1::_buffer
+	void* ____buffer_0;
+};
+
+// Unity.Burst.SharedStatic`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>
+struct SharedStatic_1_t4FCF4588C706197A62B7B4C4DFA65B0457AB498C 
 {
 	// System.Void* Unity.Burst.SharedStatic`1::_buffer
 	void* ____buffer_0;
@@ -2412,6 +2438,13 @@ struct FunctionPointer_1_tE1DC1EC606FB2242FB50357BBA39BB4AEDECFCB2
 	intptr_t ____ptr_0;
 };
 
+// Unity.Burst.FunctionPointer`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA 
+{
+	// System.IntPtr Unity.Burst.FunctionPointer`1::_ptr
+	intptr_t ____ptr_0;
+};
+
 // Unity.Burst.FunctionPointer`1<Unity.TLS.LowLevel.Binding/unitytls_client_data_receive_callback>
 struct FunctionPointer_1_tA2FC39F25D07D293D943EDC747A8E0E7A70BDFC6 
 {
@@ -2558,6 +2591,15 @@ struct NativeList_1_t163E4B6B8B23750406A8688DA1D7FD433EF9EDC1
 	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___m_DeprecatedAllocator_1;
 };
 
+// Unity.Collections.NativeList`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>
+struct NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1 
+{
+	// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<T>* Unity.Collections.NativeList`1::m_ListData
+	UnsafeList_1_t3A26A222433F7993EC942046A500D6EA3DCB97E6* ___m_ListData_0;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Collections.NativeList`1::m_DeprecatedAllocator
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___m_DeprecatedAllocator_1;
+};
+
 // Unity.Collections.NativeList`1<Unity.Networking.Transport.NetworkDriver/Connection>
 struct NativeList_1_tD3715B1226B4E157D6FC09924FDC7EDC5FC0E8C9 
 {
@@ -2649,6 +2691,15 @@ struct UnsafeHashMap_2_tF7A9469DA8C5BBA8B491A7436DE7FD6D75DE130B
 
 // Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.Networking.Transport.NetworkInterfaceEndPoint,Unity.Networking.Transport.TLS.SecureClientState>
 struct UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77 
+{
+	// Unity.Collections.LowLevel.Unsafe.UnsafeHashMapData* Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2::m_Buffer
+	UnsafeHashMapData_t82AA009E447306C927002C4EED80392BD8D8E5B4* ___m_Buffer_0;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2::m_AllocatorLabel
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___m_AllocatorLabel_1;
+};
+
+// Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>
+struct UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65 
 {
 	// Unity.Collections.LowLevel.Unsafe.UnsafeHashMapData* Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2::m_Buffer
 	UnsafeHashMapData_t82AA009E447306C927002C4EED80392BD8D8E5B4* ___m_Buffer_0;
@@ -7160,6 +7211,13 @@ struct NativeHashMap_2_tCD58FF7DD75EEFB0E828AE808528187662F809FC
 	UnsafeHashMap_2_tF7A9469DA8C5BBA8B491A7436DE7FD6D75DE130B ___m_HashMapData_0;
 };
 
+// Unity.Collections.NativeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>
+struct NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1 
+{
+	// Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<TKey,TValue> Unity.Collections.NativeHashMap`2::m_HashMapData
+	UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65 ___m_HashMapData_0;
+};
+
 // Unity.Networking.Transport.TransportFunctionPointer`1<System.Object>
 struct TransportFunctionPointer_1_tA72106224B7FDE775C5A204F61EFF97167778993 
 {
@@ -8638,161 +8696,99 @@ struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB  : public RuntimeArr
 };
 
 
-// T Unity.Collections.NativeList`1<Unity.Networking.Transport.NetworkPipelineProcessor/PipelineImpl>::get_Item(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PipelineImpl_t422927EB35F759F18ECBA1C7B075AAC92918017E NativeList_1_get_Item_m5208461D89F3BE094239C04AAD7F156592C9BB52_gshared (NativeList_1_t7D0C4FADF421E663CFE4731E9B320F919701A66C* __this, int32_t ___index0, const RuntimeMethod* method) ;
-// Unity.Collections.NativeArray`1<T> Unity.Collections.NativeList`1<System.Byte>::op_Implicit(Unity.Collections.NativeList`1<T>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF NativeList_1_op_Implicit_m64669A7F746636C17E476126890C620180789514_gshared (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94 ___nativeList0, const RuntimeMethod* method) ;
-// System.Void* Unity.Collections.LowLevel.Unsafe.NativeArrayUnsafeUtility::GetUnsafeReadOnlyPtr<System.Byte>(Unity.Collections.NativeArray`1<T>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* NativeArrayUnsafeUtility_GetUnsafeReadOnlyPtr_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m3DF14FFECC3CE4E179B56AB77F3BCC0FF90E92BF_gshared (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF ___nativeArray0, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeList`1<Unity.Networking.Transport.NetworkPipelineProcessor/UpdatePipeline>::.ctor(System.Int32,Unity.Collections.AllocatorManager/AllocatorHandle)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1__ctor_mDAA2E94B71176E9C6621608FAA7FCDDEB7F38699_gshared (NativeList_1_t1869FE735F5176A07019C960A26F7477BA6142B3* __this, int32_t ___initialCapacity0, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator1, const RuntimeMethod* method) ;
-// T Unity.Collections.NativeList`1<Unity.Networking.Transport.NetworkPipelineProcessor/UpdatePipeline>::get_Item(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UpdatePipeline_t8D511DB7DDEC2170FC3349B879D1E46CD18C35D2 NativeList_1_get_Item_m5E60DA02913D85EE981579FD6033F84DA202BC42_gshared (NativeList_1_t1869FE735F5176A07019C960A26F7477BA6142B3* __this, int32_t ___index0, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeQueue`1/ParallelWriter<Unity.Networking.Transport.NetworkPipelineProcessor/UpdatePipeline>::Enqueue(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParallelWriter_Enqueue_mD81143975AA19DFE1D0DDA6B7E715250C3813993_gshared (ParallelWriter_t55B873B53088E2C14EC0CE7DD3ECA37705CB04CC* __this, UpdatePipeline_t8D511DB7DDEC2170FC3349B879D1E46CD18C35D2 ___value0, const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.NativeList`1<Unity.Networking.Transport.NetworkPipelineProcessor/UpdatePipeline>::get_Length()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeList_1_get_Length_mDCC082BC46F829CA36862DE9FB4F95657DEB418A_gshared (NativeList_1_t1869FE735F5176A07019C960A26F7477BA6142B3* __this, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeList`1<System.Int32>::.ctor(System.Int32,Unity.Collections.AllocatorManager/AllocatorHandle)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1__ctor_m5697273576B6FA770C7C26B21495B790E0D88EFA_gshared (NativeList_1_t0EA735A94E6EBF8FE7F3B79411C98BF692EA2213* __this, int32_t ___initialCapacity0, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator1, const RuntimeMethod* method) ;
-// T Unity.Collections.NativeList`1<System.Int32>::get_Item(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeList_1_get_Item_m963766393E6261D56BB3704947609551E7752A1C_gshared (NativeList_1_t0EA735A94E6EBF8FE7F3B79411C98BF692EA2213* __this, int32_t ___index0, const RuntimeMethod* method) ;
-// Unity.Collections.NativeArray`1<T> Unity.Collections.LowLevel.Unsafe.NativeArrayUnsafeUtility::ConvertExistingDataToNativeArray<System.Byte>(System.Void*,System.Int32,Unity.Collections.Allocator)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF NativeArrayUnsafeUtility_ConvertExistingDataToNativeArray_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m181D7F12EB826B7D6B73742BFD85A667D533BABA_gshared (void* ___dataPointer0, int32_t ___length1, int32_t ___allocator2, const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.NativeList`1<System.Int32>::get_Length()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeList_1_get_Length_m2327DF25C0CCD96DB5AB1F1500FBD411D60AC36B_gshared (NativeList_1_t0EA735A94E6EBF8FE7F3B79411C98BF692EA2213* __this, const RuntimeMethod* method) ;
-// System.Void* Unity.Collections.LowLevel.Unsafe.NativeListUnsafeUtility::GetUnsafeReadOnlyPtr<System.Byte>(Unity.Collections.NativeList`1<T>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* NativeListUnsafeUtility_GetUnsafeReadOnlyPtr_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mD4EC7E441E6EDC0AC875758B44AA8C647E309441_gshared (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94 ___list0, const RuntimeMethod* method) ;
-// T Unity.Burst.FunctionPointer`1<System.Object>::get_Invoke()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FunctionPointer_1_get_Invoke_m3E7098A72E4D4E432490A6F99AF8749B862ACF93_gshared (FunctionPointer_1_tE1DC1EC606FB2242FB50357BBA39BB4AEDECFCB2* __this, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeList`1<System.Int32>::Add(T&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1_Add_mD5F3F9AEDF81C4AE1F22A002348E5296010D0064_gshared (NativeList_1_t0EA735A94E6EBF8FE7F3B79411C98BF692EA2213* __this, int32_t* ___value0, const RuntimeMethod* method) ;
-// System.Boolean Unity.Collections.NativeList`1<System.Byte>::get_IsCreated()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeList_1_get_IsCreated_m0088506340DF8D71C5E8A04FD537552F82443F88_gshared (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94* __this, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeList`1<System.Byte>::.ctor(Unity.Collections.AllocatorManager/AllocatorHandle)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1__ctor_m349142F37467F69B508FD721185B93C8F107A4A1_gshared (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94* __this, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator0, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeHashMap`2<System.Int64,Unity.Networking.Transport.NetworkSettings/ParameterSlice>::.ctor(System.Int32,Unity.Collections.AllocatorManager/AllocatorHandle)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeHashMap_2__ctor_mCE05037A8E1B2F2D4F278FD4ED79928B4AB95233_gshared (NativeHashMap_2_tCD58FF7DD75EEFB0E828AE808528187662F809FC* __this, int32_t ___capacity0, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator1, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeList`1<System.Byte>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1_Dispose_mC0442A0F667EFDA4EAA6B6BAC0139B86A935AAD6_gshared (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94* __this, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeHashMap`2<System.Int64,Unity.Networking.Transport.NetworkSettings/ParameterSlice>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeHashMap_2_Dispose_m7E03D1E79F6D2C0088A287C90E406C210399F1F7_gshared (NativeHashMap_2_tCD58FF7DD75EEFB0E828AE808528187662F809FC* __this, const RuntimeMethod* method) ;
-// System.Void Unity.Networking.Transport.NetworkSettings::ValidateParameterOrError<System.Object>(T&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkSettings_ValidateParameterOrError_TisRuntimeObject_mB7E6292EF3A217A08493E67C717035E5A3892DC6_gshared (RuntimeObject** ___parameter0, const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.NativeList`1<System.Byte>::get_Length()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeList_1_get_Length_mCCFB8F09EBEF5EA454CEA11FDB7B6100AF908D61_gshared (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94* __this, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeHashMap`2<System.Int64,Unity.Networking.Transport.NetworkSettings/ParameterSlice>::Add(TKey,TValue)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeHashMap_2_Add_m52AD76B891E44F2CC2E37618BE85D034AD812A8A_gshared (NativeHashMap_2_tCD58FF7DD75EEFB0E828AE808528187662F809FC* __this, int64_t ___key0, ParameterSlice_t11C9B163EC6791F24FB25F285363BC41ECEBE899 ___item1, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeList`1<System.Byte>::Resize(System.Int32,Unity.Collections.NativeArrayOptions)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1_Resize_m234E62EC9CD8AC1D4BFA4B79E54AABC48C5FB59D_gshared (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94* __this, int32_t ___length0, int32_t ___options1, const RuntimeMethod* method) ;
-// System.Void* Unity.Collections.LowLevel.Unsafe.NativeListUnsafeUtility::GetUnsafePtr<System.Byte>(Unity.Collections.NativeList`1<T>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* NativeListUnsafeUtility_GetUnsafePtr_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mCE332CC7994DB38B04B6184C5A12241EEC4330C3_gshared (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94 ___list0, const RuntimeMethod* method) ;
-// System.Boolean Unity.Collections.NativeHashMap`2<System.Int64,Unity.Networking.Transport.NetworkSettings/ParameterSlice>::TryGetValue(TKey,TValue&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeHashMap_2_TryGetValue_mCFF29C458A20434135E7340D4DFB9AA13335CFE1_gshared (NativeHashMap_2_tCD58FF7DD75EEFB0E828AE808528187662F809FC* __this, int64_t ___key0, ParameterSlice_t11C9B163EC6791F24FB25F285363BC41ECEBE899* ___item1, const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.NetworkSettings/ObjectOffsetType>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_TisObjectOffsetType_t95C7C8F4835FBBC3E6990AF65847FCF9CA68A1A3_m6B93CC93F3944C70E45189F764FFF211EB43E587_gshared (const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.Utilities.FragmentationUtility/Parameters>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_TisParameters_t59B022551E59FBC1EA11D32A22CF7C3457682BAE_m8261C5FE8462D92CE3431D5D3CCECBC5EFCCE969_gshared (const RuntimeMethod* method) ;
+// T Unity.Collections.NativeList`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::get_Item(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1_get_Item_m4C9E1C7BB475457EAE88A496A68A77E3F7A64F92_gshared (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1* __this, int32_t ___index0, Il2CppFullySharedGenericStruct* il2cppRetVal, const RuntimeMethod* method) ;
+// Unity.Collections.NativeArray`1<T> Unity.Collections.NativeList`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::op_Implicit(Unity.Collections.NativeList`1<T>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 NativeList_1_op_Implicit_m92393B868D812C01DF36A63C0FD4BBFDCF65B18E_gshared (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1 ___nativeList0, const RuntimeMethod* method) ;
+// System.Void* Unity.Collections.LowLevel.Unsafe.NativeArrayUnsafeUtility::GetUnsafeReadOnlyPtr<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>(Unity.Collections.NativeArray`1<T>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* NativeArrayUnsafeUtility_GetUnsafeReadOnlyPtr_TisIl2CppFullySharedGenericStruct_m13C618FD69BBAB7D8C77632BF8A9116FCD17D234_gshared (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 ___nativeArray0, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeList`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::.ctor(System.Int32,Unity.Collections.AllocatorManager/AllocatorHandle)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1__ctor_mA1DFF4EEBED87ED011F318AEC145588B17212121_gshared (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1* __this, int32_t ___initialCapacity0, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator1, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeQueue`1/ParallelWriter<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::Enqueue(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParallelWriter_Enqueue_m0282574973A9EF17578D0D5579CDC68B7EC7A917_gshared (ParallelWriter_t2D1578AF94E5823813CF6A916C1C53C94EFEFEC5* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___value0, const RuntimeMethod* method) ;
+// System.Int32 Unity.Collections.NativeList`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::get_Length()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeList_1_get_Length_mBCE0D52E1FEFC40B5CFEE2F41B493C7FF6A07FA7_gshared (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1* __this, const RuntimeMethod* method) ;
+// Unity.Collections.NativeArray`1<T> Unity.Collections.LowLevel.Unsafe.NativeArrayUnsafeUtility::ConvertExistingDataToNativeArray<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>(System.Void*,System.Int32,Unity.Collections.Allocator)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 NativeArrayUnsafeUtility_ConvertExistingDataToNativeArray_TisIl2CppFullySharedGenericStruct_m6920C14D4E38FAB84BD2B5F148CE70DF7F224F52_gshared (void* ___dataPointer0, int32_t ___length1, int32_t ___allocator2, const RuntimeMethod* method) ;
+// System.Void* Unity.Collections.LowLevel.Unsafe.NativeListUnsafeUtility::GetUnsafeReadOnlyPtr<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>(Unity.Collections.NativeList`1<T>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* NativeListUnsafeUtility_GetUnsafeReadOnlyPtr_TisIl2CppFullySharedGenericStruct_mDCA2D331B8D098FC4F650B4CEC267080EBFF8F47_gshared (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1 ___list0, const RuntimeMethod* method) ;
+// T Unity.Burst.FunctionPointer`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Invoke()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FunctionPointer_1_get_Invoke_m552FD5AD590BE1F22C35842835DBC3FB96BACA44_gshared (FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeList`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::Add(T&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1_Add_m9BE8F632802CF4BA6110C86A3C1842F568C58DBB_gshared (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct* ___value0, const RuntimeMethod* method) ;
+// System.Boolean Unity.Collections.NativeList`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::get_IsCreated()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeList_1_get_IsCreated_m4E2356CCFFB361C91CBEFB528F727AC7C244043F_gshared (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1* __this, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeList`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::.ctor(Unity.Collections.AllocatorManager/AllocatorHandle)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1__ctor_mCF266C5F6762E110B7EAEAF5546388FDB3621BD8_gshared (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1* __this, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator0, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::.ctor(System.Int32,Unity.Collections.AllocatorManager/AllocatorHandle)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeHashMap_2__ctor_mAA3C0AC3AEF5600B8C6DA242A9EDFE8B883FA23F_gshared (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1* __this, int32_t ___capacity0, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator1, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeList`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1_Dispose_m42535264C7291A64741CA36B4F0567D15D7BDC2F_gshared (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1* __this, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeHashMap_2_Dispose_m870F88F2CA4E95C70D44708181BADD082451D1C6_gshared (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1* __this, const RuntimeMethod* method) ;
+// System.Void Unity.Networking.Transport.NetworkSettings::ValidateParameterOrError<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(T&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkSettings_ValidateParameterOrError_TisIl2CppFullySharedGenericAny_mF236C327B3FB12F57CA93774AEFA8F1E7D444FD2_gshared (/*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny* ___parameter0, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::Add(TKey,TValue)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeHashMap_2_Add_mE74E9833A58615B8A61692936F97AE77F1C21B0E_gshared (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___key0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___item1, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeList`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::Resize(System.Int32,Unity.Collections.NativeArrayOptions)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1_Resize_m84F443F6B9C92F2415832AF704F927D86166870C_gshared (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1* __this, int32_t ___length0, int32_t ___options1, const RuntimeMethod* method) ;
+// System.Void* Unity.Collections.LowLevel.Unsafe.NativeListUnsafeUtility::GetUnsafePtr<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>(Unity.Collections.NativeList`1<T>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* NativeListUnsafeUtility_GetUnsafePtr_TisIl2CppFullySharedGenericStruct_mE9C167B5E37C0635A71E22EBFB746FB93AA72EC0_gshared (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1 ___list0, const RuntimeMethod* method) ;
+// System.Boolean Unity.Collections.NativeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::TryGetValue(TKey,TValue&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeHashMap_2_TryGetValue_m76AEC24FD506266541AE43823590F7D44AAC3718_gshared (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___key0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct* ___item1, const RuntimeMethod* method) ;
+// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_gshared (const RuntimeMethod* method) ;
 // System.Void Unity.Networking.Transport.TransportFunctionPointer`1<System.Object>::.ctor(T)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransportFunctionPointer_1__ctor_mDFDCBE62DAAFA10648F4CEA771C756D0661FBFA8_gshared (TransportFunctionPointer_1_tA72106224B7FDE775C5A204F61EFF97167778993* __this, RuntimeObject* ___executeDelegate0, const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.Utilities.ReliableUtility/Parameters>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_TisParameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5_mBC5D14108A720E5CC9C9B3B87C3A9EA4F442735A_gshared (const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.Utilities.ReliableUtility/PacketHeader>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_TisPacketHeader_t97AC229C2B77881EA6A4AAA1D13C9B1276E21858_mF98DD06ACEE97AC6AEFB4D1A8CBB806910233A22_gshared (const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.Utilities.SimulatorUtility/Parameters>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_TisParameters_tA3860843BBE2D4923FE6901E43ABC3E1697F99F0_mDB11943BEF270C59AEE1C35D466C74E0A004568B_gshared (const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.Utilities.SimulatorUtility/DelayedPacket>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_TisDelayedPacket_t7AFEA508A61E8A02F06A3A81775436D15BEEFB81_m74D2F275F08D06BCB3E55494D0BCA36ED3D06BF0_gshared (const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.Utilities.SimulatorUtility/Context>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_TisContext_tE4EEAFC2FF451B45661D71813B703BB66C43AD24_m7E573B27D5A0CD2226E02FA4EACB72E03786AA8D_gshared (const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<System.Int32>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mED481D505BF43CBD96972069EDD4E3509BE84931_gshared (const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<System.UInt16>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_TisUInt16_tF4C148C876015C212FD72652D0B6ED8CC247A455_mEC9469DBD91362D6135B8F5A81E90486BF328075_gshared (const RuntimeMethod* method) ;
-// T& Unity.Burst.SharedStatic`1<Unity.Burst.FunctionPointer`1<System.Object>>::get_Data()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionPointer_1_tE1DC1EC606FB2242FB50357BBA39BB4AEDECFCB2* SharedStatic_1_get_Data_mB5F855CAE2B6F83A2D6A10DAABF9B29053B4F11F_gshared (SharedStatic_1_tE6D7548D21D8ED69C6AC8ECAD846CDB43304B444* __this, const RuntimeMethod* method) ;
-// System.IntPtr System.Runtime.InteropServices.Marshal::GetFunctionPointerForDelegate<System.Object>(TDelegate)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t Marshal_GetFunctionPointerForDelegate_TisRuntimeObject_m389A3417EF0CFE64A042AA7E53E8604F24458074_gshared (RuntimeObject* ___d0, const RuntimeMethod* method) ;
-// System.Void Unity.Burst.FunctionPointer`1<System.Object>::.ctor(System.IntPtr)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FunctionPointer_1__ctor_mE2BD136AA4DB860E4183D3293D3AE1A04B978DA3_gshared_inline (FunctionPointer_1_tE1DC1EC606FB2242FB50357BBA39BB4AEDECFCB2* __this, intptr_t ___ptr0, const RuntimeMethod* method) ;
-// Unity.Burst.SharedStatic`1<T> Unity.Burst.SharedStatic`1<Unity.Burst.FunctionPointer`1<System.Object>>::GetOrCreateUnsafe(System.UInt32,System.Int64,System.Int64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SharedStatic_1_tE6D7548D21D8ED69C6AC8ECAD846CDB43304B444 SharedStatic_1_GetOrCreateUnsafe_mAC5BCA72979FDF433F59E3B513067AFEBE675E5D_gshared (uint32_t ___alignment0, int64_t ___hashCode1, int64_t ___subHashCode2, const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.TLS.LowLevel.Binding/unitytls_client_config>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_Tisunitytls_client_config_t573FD029CCF308C0D922A8643773696C20726F4F_mB5C3FE2DC1AACE0DDBD3777316FBF67D9DED09BD_gshared (const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::AlignOf<Unity.TLS.LowLevel.Binding/unitytls_client_config>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_AlignOf_Tisunitytls_client_config_t573FD029CCF308C0D922A8643773696C20726F4F_m59D5E5DE33D7D644DA555FA3F7A1D8623361D326_gshared (const RuntimeMethod* method) ;
-// System.IntPtr Unity.Burst.FunctionPointer`1<System.Object>::get_Value()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR intptr_t FunctionPointer_1_get_Value_m71D7FF781C694A7C4EE28362DFC78D8DDFE9A105_gshared_inline (FunctionPointer_1_tE1DC1EC606FB2242FB50357BBA39BB4AEDECFCB2* __this, const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.TLS.SecureNetworkProtocolData>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_TisSecureNetworkProtocolData_tA3C3EB543E45487C8250364955DF2F444C3E4582_mD87AFEA55A4560FB415A7925E1F0285462A8EFD9_gshared (const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::AlignOf<Unity.Networking.Transport.TLS.SecureNetworkProtocolData>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_AlignOf_TisSecureNetworkProtocolData_tA3C3EB543E45487C8250364955DF2F444C3E4582_m2A0723994580C2ECBB82DAF6262E34EB6EA66581_gshared (const RuntimeMethod* method) ;
-// System.Void Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.Networking.Transport.NetworkInterfaceEndPoint,Unity.Networking.Transport.TLS.SecureClientState>::.ctor(System.Int32,Unity.Collections.AllocatorManager/AllocatorHandle)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeHashMap_2__ctor_m31E886D42092D529AC55246DA8F9E37C4A485613_gshared (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77* __this, int32_t ___capacity0, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator1, const RuntimeMethod* method) ;
-// Unity.Collections.NativeArray`1<TKey> Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.Networking.Transport.NetworkInterfaceEndPoint,Unity.Networking.Transport.TLS.SecureClientState>::GetKeyArray(Unity.Collections.AllocatorManager/AllocatorHandle)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeArray_1_tDF8469CB50B586533F70B614C38965EEBD6145B2 UnsafeHashMap_2_GetKeyArray_m5F34C4DF59F343A77EBFAD1EF1667A43A38781C8_gshared (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77* __this, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator0, const RuntimeMethod* method) ;
-// TValue Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.Networking.Transport.NetworkInterfaceEndPoint,Unity.Networking.Transport.TLS.SecureClientState>::get_Item(TKey)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SecureClientState_t347C5882049D4DC06AD28FFFC8C16ADD7D77EB54 UnsafeHashMap_2_get_Item_m82174E674180097766B6E5AF3AF439B95DB1DCAC_gshared (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77* __this, NetworkInterfaceEndPoint_t19ADA9DC012F2BEFFD7234FF77DA83DB8C8B7686 ___key0, const RuntimeMethod* method) ;
-// System.Boolean Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.Networking.Transport.NetworkInterfaceEndPoint,Unity.Networking.Transport.TLS.SecureClientState>::Remove(TKey)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UnsafeHashMap_2_Remove_m94BE3198B3A3508CB109FAC4EE568ED86407F71B_gshared (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77* __this, NetworkInterfaceEndPoint_t19ADA9DC012F2BEFFD7234FF77DA83DB8C8B7686 ___key0, const RuntimeMethod* method) ;
-// System.Boolean Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.Networking.Transport.NetworkInterfaceEndPoint,Unity.Networking.Transport.TLS.SecureClientState>::TryAdd(TKey,TValue)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UnsafeHashMap_2_TryAdd_mB425A45433A55B799577F14EFBE7C7379D37CF2E_gshared (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77* __this, NetworkInterfaceEndPoint_t19ADA9DC012F2BEFFD7234FF77DA83DB8C8B7686 ___key0, SecureClientState_t347C5882049D4DC06AD28FFFC8C16ADD7D77EB54 ___item1, const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.TLS.SecureUserData>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_TisSecureUserData_t7AF182ED8C0BA05FC7AB70D34FB6F8DDB5BA7D1B_m93E4445737BC86FE087B87E97CD00064A2CD9114_gshared (const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::AlignOf<Unity.Networking.Transport.TLS.SecureUserData>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_AlignOf_TisSecureUserData_t7AF182ED8C0BA05FC7AB70D34FB6F8DDB5BA7D1B_m42E37113A90B5272BE314C380722580DEF3E96F8_gshared (const RuntimeMethod* method) ;
-// System.Void Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.Networking.Transport.NetworkInterfaceEndPoint,Unity.Networking.Transport.TLS.SecureClientState>::set_Item(TKey,TValue)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeHashMap_2_set_Item_mA9D2E832C60A25C9C7F70B3F329AC7BF45D01288_gshared (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77* __this, NetworkInterfaceEndPoint_t19ADA9DC012F2BEFFD7234FF77DA83DB8C8B7686 ___key0, SecureClientState_t347C5882049D4DC06AD28FFFC8C16ADD7D77EB54 ___value1, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeArray`1<Unity.Networking.Transport.NetworkInterfaceEndPoint>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Dispose_mDDF671931CE60775804BC5073A9296DD06BD335F_gshared (NativeArray_1_tDF8469CB50B586533F70B614C38965EEBD6145B2* __this, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeArray`1<System.Byte>::.ctor(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArrayOptions)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1__ctor_m981CC7E27B6C9946024877F2696920951443B04F_gshared (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF* __this, int32_t ___length0, int32_t ___allocator1, int32_t ___options2, const RuntimeMethod* method) ;
-// System.Void* Unity.Collections.LowLevel.Unsafe.NativeArrayUnsafeUtility::GetUnsafePtr<System.Byte>(Unity.Collections.NativeArray`1<T>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* NativeArrayUnsafeUtility_GetUnsafePtr_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m8CFDB2DF56E810A2E2FB3686AF676FCAC65AFCC2_gshared (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF ___nativeArray0, const RuntimeMethod* method) ;
-// System.Void Unity.Networking.Transport.NetworkSettings::AddRawParameterStruct<Unity.Networking.Transport.TLS.SecureNetworkProtocolParameter>(T&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkSettings_AddRawParameterStruct_TisSecureNetworkProtocolParameter_tF39E59837ABC91C01156741EB769D49BFAFF5F97_m3E765836A687594FE5A5597C7A22712B6D99BDD2_gshared (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, SecureNetworkProtocolParameter_tF39E59837ABC91C01156741EB769D49BFAFF5F97* ___parameter0, const RuntimeMethod* method) ;
-// System.Boolean Unity.Networking.Transport.NetworkSettings::TryGet<Unity.Networking.Transport.TLS.SecureNetworkProtocolParameter>(T&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkSettings_TryGet_TisSecureNetworkProtocolParameter_tF39E59837ABC91C01156741EB769D49BFAFF5F97_mB2F1591010C6E88F9124C708EFF49FE9FF190D45_gshared (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, SecureNetworkProtocolParameter_tF39E59837ABC91C01156741EB769D49BFAFF5F97* ___parameter0, const RuntimeMethod* method) ;
-// System.Void Unity.Networking.Transport.NetworkSettings::AddRawParameterStruct<Unity.Networking.Transport.Relay.RelayNetworkParameter>(T&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkSettings_AddRawParameterStruct_TisRelayNetworkParameter_tE48AD3A6F0F2548B9929FE896969232D10FBC4B8_m14FFA28DDF0273DDE1DB82C5D7EDFD5F61B7CFA3_gshared (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, RelayNetworkParameter_tE48AD3A6F0F2548B9929FE896969232D10FBC4B8* ___parameter0, const RuntimeMethod* method) ;
-// System.Boolean Unity.Networking.Transport.NetworkSettings::TryGet<Unity.Networking.Transport.Relay.RelayNetworkParameter>(T&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkSettings_TryGet_TisRelayNetworkParameter_tE48AD3A6F0F2548B9929FE896969232D10FBC4B8_m2915D2DF811C81800CA3F27275A5D1F1C6FB371C_gshared (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, RelayNetworkParameter_tE48AD3A6F0F2548B9929FE896969232D10FBC4B8* ___parameter0, const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.Relay.RelayNetworkProtocol/RelayProtocolData>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_TisRelayProtocolData_tD57D421CA918D581F6E2314B53121386C617E66F_m3FFD617F4FF50F0299817A643B51550473E1A5F9_gshared (const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::AlignOf<Unity.Networking.Transport.Relay.RelayNetworkProtocol/RelayProtocolData>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_AlignOf_TisRelayProtocolData_tD57D421CA918D581F6E2314B53121386C617E66F_m1F90C43667A7F4543B0FF1CD95DBA6C1F92E94EC_gshared (const RuntimeMethod* method) ;
-// System.Boolean System.Linq.Enumerable::Contains<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>,TSource)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerable_Contains_TisRuntimeObject_mBCDB5870C52FC5BD2B6AE472A749FC03B9CF8958_gshared (RuntimeObject* ___source0, RuntimeObject* ___value1, const RuntimeMethod* method) ;
-// System.Void System.Func`2<System.Object,System.Boolean>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m13C0A7F33154D861E2A041B52E88461832DA1697_gshared (Func_2_tE1F0D41563EE092E5E5540B061449FDE88F1DC00* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// TSource System.Linq.Enumerable::First<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_First_TisRuntimeObject_mC6FA107934316BE28EA02DDB9EADA7AE8DD1916B_gshared (RuntimeObject* ___source0, Func_2_tE1F0D41563EE092E5E5540B061449FDE88F1DC00* ___predicate1, const RuntimeMethod* method) ;
-// System.Void Unity.Networking.Transport.NetworkSettings::AddRawParameterStruct<Unity.Networking.Transport.Utilities.FragmentationUtility/Parameters>(T&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkSettings_AddRawParameterStruct_TisParameters_t59B022551E59FBC1EA11D32A22CF7C3457682BAE_m39E38FA8D28BCCDCB95F18D1B3A27F3CBB685CA3_gshared (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, Parameters_t59B022551E59FBC1EA11D32A22CF7C3457682BAE* ___parameter0, const RuntimeMethod* method) ;
-// System.Boolean Unity.Networking.Transport.NetworkSettings::TryGet<Unity.Networking.Transport.Utilities.FragmentationUtility/Parameters>(T&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkSettings_TryGet_TisParameters_t59B022551E59FBC1EA11D32A22CF7C3457682BAE_mC5258ABE8D7C61CFE499332D7AEBE17451C38BA8_gshared (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, Parameters_t59B022551E59FBC1EA11D32A22CF7C3457682BAE* ___parameter0, const RuntimeMethod* method) ;
-// System.Void Unity.Networking.Transport.NetworkSettings::AddRawParameterStruct<Unity.Networking.Transport.Utilities.ReliableUtility/Parameters>(T&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkSettings_AddRawParameterStruct_TisParameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5_m7B98B5E718C88C3B250B07DBE04F1629947B2570_gshared (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, Parameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5* ___parameter0, const RuntimeMethod* method) ;
-// System.Boolean Unity.Networking.Transport.NetworkSettings::TryGet<Unity.Networking.Transport.Utilities.ReliableUtility/Parameters>(T&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkSettings_TryGet_TisParameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5_m1265A0047017C7EE05689AA051CCD6EC15B4A67F_gshared (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, Parameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5* ___parameter0, const RuntimeMethod* method) ;
-// System.Int32 Unity.Networking.Transport.Utilities.ReliableUtility::AlignedSizeOf<Unity.Networking.Transport.Utilities.ReliableUtility/PacketTimers>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ReliableUtility_AlignedSizeOf_TisPacketTimers_tE7D87EC02DA5C97DD3C39677ADFDFE7BB2BAB3D4_m9785E521127021B2207B6EF5E4B37CA3B3C2C617_gshared (const RuntimeMethod* method) ;
-// System.Int32 Unity.Networking.Transport.Utilities.ReliableUtility::AlignedSizeOf<Unity.Networking.Transport.Utilities.ReliableUtility/SharedContext>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ReliableUtility_AlignedSizeOf_TisSharedContext_t575CA37AEBD0F17E8E9C83FEF60ADBF9F718A9A0_mD98E333F02D354D9F0A02FA0C35C05AEE9B87739_gshared (const RuntimeMethod* method) ;
-// System.Int32 Unity.Networking.Transport.Utilities.ReliableUtility::AlignedSizeOf<Unity.Networking.Transport.Utilities.ReliableUtility/PacketInformation>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ReliableUtility_AlignedSizeOf_TisPacketInformation_t604624EEEDC7462F9A195751BEDA870DA1868BA2_mD6EDD07DCBAB2FCA68CA5BB60625D06BD7D7F19E_gshared (const RuntimeMethod* method) ;
-// System.Int32 Unity.Networking.Transport.Utilities.ReliableUtility::AlignedSizeOf<Unity.Networking.Transport.Utilities.ReliableUtility/Context>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ReliableUtility_AlignedSizeOf_TisContext_t99C75CF38B33BF89D1AF089C3466321489BEA99A_m7B68590F46CFFDE67D46991BA2B5EBB1C0AACF14_gshared (const RuntimeMethod* method) ;
-// System.Void Unity.Networking.Transport.NetworkSettings::AddRawParameterStruct<Unity.Networking.Transport.Utilities.SimulatorUtility/Parameters>(T&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkSettings_AddRawParameterStruct_TisParameters_tA3860843BBE2D4923FE6901E43ABC3E1697F99F0_m64F5FC84D20185A19D6601A04F52C50DA6DF4A54_gshared (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, Parameters_tA3860843BBE2D4923FE6901E43ABC3E1697F99F0* ___parameter0, const RuntimeMethod* method) ;
-// System.Boolean Unity.Networking.Transport.NetworkSettings::TryGet<Unity.Networking.Transport.Utilities.SimulatorUtility/Parameters>(T&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkSettings_TryGet_TisParameters_tA3860843BBE2D4923FE6901E43ABC3E1697F99F0_m25BF9D875AB182834BBE5DD10FB021D046288E5E_gshared (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, Parameters_tA3860843BBE2D4923FE6901E43ABC3E1697F99F0* ___parameter0, const RuntimeMethod* method) ;
-// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::AlignOf<System.Int32>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_AlignOf_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m274F833CD001C63E56A22D8F42C76CE8C6CC39DF_gshared (const RuntimeMethod* method) ;
+// T& Unity.Burst.SharedStatic`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::get_Data()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppFullySharedGenericStruct* SharedStatic_1_get_Data_m4D3D9A03646881BE9065C8939BF1CA28195FF262_gshared (SharedStatic_1_t4FCF4588C706197A62B7B4C4DFA65B0457AB498C* __this, const RuntimeMethod* method) ;
+// System.IntPtr System.Runtime.InteropServices.Marshal::GetFunctionPointerForDelegate<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(TDelegate)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t Marshal_GetFunctionPointerForDelegate_TisIl2CppFullySharedGenericAny_m04DF469F259D55E8A9421AD43B0727717659D363_gshared (/*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___d0, const RuntimeMethod* method) ;
+// System.Void Unity.Burst.FunctionPointer`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.IntPtr)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FunctionPointer_1__ctor_mC619E78A7A6A909670DFFE07825842FDA7D178F7_gshared_inline (FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA* __this, intptr_t ___ptr0, const RuntimeMethod* method) ;
+// Unity.Burst.SharedStatic`1<T> Unity.Burst.SharedStatic`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::GetOrCreateUnsafe(System.UInt32,System.Int64,System.Int64)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SharedStatic_1_t4FCF4588C706197A62B7B4C4DFA65B0457AB498C SharedStatic_1_GetOrCreateUnsafe_m160E81C99EC8BDE0A64547E1B34D7CE539082052_gshared (uint32_t ___alignment0, int64_t ___hashCode1, int64_t ___subHashCode2, const RuntimeMethod* method) ;
+// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::AlignOf<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_AlignOf_TisIl2CppFullySharedGenericStruct_m11D1023B182BE19CF0F1A57DBE826004A1B81A41_gshared (const RuntimeMethod* method) ;
+// System.IntPtr Unity.Burst.FunctionPointer`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Value()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR intptr_t FunctionPointer_1_get_Value_mA1F1CB8C8E8B4B8030D49BFBEF55560DEB03FDD5_gshared_inline (FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA* __this, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::.ctor(System.Int32,Unity.Collections.AllocatorManager/AllocatorHandle)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeHashMap_2__ctor_mAE62A20C509DEDD08752CE9091328B1D54A0D7ED_gshared (UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65* __this, int32_t ___capacity0, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator1, const RuntimeMethod* method) ;
+// Unity.Collections.NativeArray`1<TKey> Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::GetKeyArray(Unity.Collections.AllocatorManager/AllocatorHandle)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 UnsafeHashMap_2_GetKeyArray_m649EE086C3644FDC0E2B5DC3B8A242C6974174E5_gshared (UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65* __this, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator0, const RuntimeMethod* method) ;
+// TValue Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::get_Item(TKey)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeHashMap_2_get_Item_mDD352F446D95945BE6E14E1ED08F37B2CE1371B0_gshared (UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___key0, Il2CppFullySharedGenericStruct* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Boolean Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::Remove(TKey)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UnsafeHashMap_2_Remove_m5504D5CF9181F453DF230C0535DD29C891F9CD3B_gshared (UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___key0, const RuntimeMethod* method) ;
+// System.Boolean Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::TryAdd(TKey,TValue)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UnsafeHashMap_2_TryAdd_m7347F0AD0D1E22C5ABC54641B13ADBE1C371B9E0_gshared (UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___key0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___item1, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::set_Item(TKey,TValue)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeHashMap_2_set_Item_mB8C2EE802A3627A0A53AD087A0143A9164290F5B_gshared (UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___key0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___value1, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeArray`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Dispose_m365A262FA4CA431467F021D7732CECD68316AF80_gshared (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18* __this, const RuntimeMethod* method) ;
+// System.Void Unity.Collections.NativeArray`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>::.ctor(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArrayOptions)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1__ctor_m788DE0F85C4051DDF092DDF96484DE655ACFB6F1_gshared (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18* __this, int32_t ___length0, int32_t ___allocator1, int32_t ___options2, const RuntimeMethod* method) ;
+// System.Void* Unity.Collections.LowLevel.Unsafe.NativeArrayUnsafeUtility::GetUnsafePtr<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>(Unity.Collections.NativeArray`1<T>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* NativeArrayUnsafeUtility_GetUnsafePtr_TisIl2CppFullySharedGenericStruct_m4AB802D5B1B296D0F976C1E7631699B0C4A4D00F_gshared (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 ___nativeArray0, const RuntimeMethod* method) ;
+// System.Void Unity.Networking.Transport.NetworkSettings::AddRawParameterStruct<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>(T&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkSettings_AddRawParameterStruct_TisIl2CppFullySharedGenericStruct_mEE7DB15FA8289654B287C3B2F45E21477661ACFC_gshared (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct* ___parameter0, const RuntimeMethod* method) ;
+// System.Boolean Unity.Networking.Transport.NetworkSettings::TryGet<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>(T&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkSettings_TryGet_TisIl2CppFullySharedGenericStruct_m8144E87E9DA39DBF759EA2BC43BBDB21538CF6A4_gshared (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct* ___parameter0, const RuntimeMethod* method) ;
+// System.Boolean System.Linq.Enumerable::Contains<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<TSource>,TSource)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerable_Contains_TisIl2CppFullySharedGenericAny_m40E4F8989539AFEF3812EAC9D9AD165D258D5814_gshared (RuntimeObject* ___source0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___value1, const RuntimeMethod* method) ;
+// System.Void System.Func`2<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// TSource System.Linq.Enumerable::First<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerable_First_TisIl2CppFullySharedGenericAny_m08978D082DCBF739A9269BC79C5EA59C44E39877_gshared (RuntimeObject* ___source0, Func_2_t19E50C11C3E1F20B5A8FDB85D7DD353B6DFF868B* ___predicate1, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Int32 Unity.Networking.Transport.Utilities.ReliableUtility::AlignedSizeOf<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ReliableUtility_AlignedSizeOf_TisIl2CppFullySharedGenericStruct_mA19C452179C39DF40BF7E3CEAB86946A1689B8E6_gshared (const RuntimeMethod* method) ;
 
 // T Unity.Collections.NativeList`1<Unity.Networking.Transport.NetworkPipelineProcessor/PipelineImpl>::get_Item(System.Int32)
 inline PipelineImpl_t422927EB35F759F18ECBA1C7B075AAC92918017E NativeList_1_get_Item_m5208461D89F3BE094239C04AAD7F156592C9BB52 (NativeList_1_t7D0C4FADF421E663CFE4731E9B320F919701A66C* __this, int32_t ___index0, const RuntimeMethod* method)
 {
-	return ((  PipelineImpl_t422927EB35F759F18ECBA1C7B075AAC92918017E (*) (NativeList_1_t7D0C4FADF421E663CFE4731E9B320F919701A66C*, int32_t, const RuntimeMethod*))NativeList_1_get_Item_m5208461D89F3BE094239C04AAD7F156592C9BB52_gshared)(__this, ___index0, method);
+	PipelineImpl_t422927EB35F759F18ECBA1C7B075AAC92918017E il2cppRetVal;
+	((  void (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*, int32_t, Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NativeList_1_get_Item_m4C9E1C7BB475457EAE88A496A68A77E3F7A64F92_gshared)((NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)__this, ___index0, (Il2CppFullySharedGenericStruct*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Int32 Unity.Networking.Transport.NetworkPipelineProcessor/Concurrent::SendHeaderCapacity(Unity.Networking.Transport.NetworkPipeline)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Concurrent_SendHeaderCapacity_mC713CE10B4645E3FBA2684E40108320A3C4F0FB9 (Concurrent_t76D9AE05BA23B3FBC0B4C7AADEAA81E828C46673* __this, NetworkPipeline_t83BB00B4CE9811A2B75D37E50EFB85FD60044A69 ___pipeline0, const RuntimeMethod* method) ;
@@ -8803,12 +8799,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614
 // Unity.Collections.NativeArray`1<T> Unity.Collections.NativeList`1<System.Byte>::op_Implicit(Unity.Collections.NativeList`1<T>)
 inline NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF NativeList_1_op_Implicit_m64669A7F746636C17E476126890C620180789514 (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94 ___nativeList0, const RuntimeMethod* method)
 {
-	return ((  NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF (*) (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94, const RuntimeMethod*))NativeList_1_op_Implicit_m64669A7F746636C17E476126890C620180789514_gshared)(___nativeList0, method);
+	NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 il2cppRetVal = ((  NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1, const RuntimeMethod*))NativeList_1_op_Implicit_m92393B868D812C01DF36A63C0FD4BBFDCF65B18E_gshared)(il2cpp_codegen_cast_struct<NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1, NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94>(&___nativeList0), method);
+	return il2cpp_codegen_cast_struct<NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF, NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18>(&il2cppRetVal);
 }
 // System.Void* Unity.Collections.LowLevel.Unsafe.NativeArrayUnsafeUtility::GetUnsafeReadOnlyPtr<System.Byte>(Unity.Collections.NativeArray`1<T>)
 inline void* NativeArrayUnsafeUtility_GetUnsafeReadOnlyPtr_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m3DF14FFECC3CE4E179B56AB77F3BCC0FF90E92BF (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF ___nativeArray0, const RuntimeMethod* method)
 {
-	return ((  void* (*) (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF, const RuntimeMethod*))NativeArrayUnsafeUtility_GetUnsafeReadOnlyPtr_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m3DF14FFECC3CE4E179B56AB77F3BCC0FF90E92BF_gshared)(___nativeArray0, method);
+	return ((  void* (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18, const RuntimeMethod*))NativeArrayUnsafeUtility_GetUnsafeReadOnlyPtr_TisIl2CppFullySharedGenericStruct_m13C618FD69BBAB7D8C77632BF8A9116FCD17D234_gshared)(il2cpp_codegen_cast_struct<NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18, NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF>(&___nativeArray0), method);
 }
 // System.Int32 System.Threading.Interlocked::CompareExchange(System.Int32&,System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Interlocked_CompareExchange_mB06E8737D3DA41F9FFBC38A6D0583D515EFB5717 (int32_t* ___location10, int32_t ___value1, int32_t ___comparand2, const RuntimeMethod* method) ;
@@ -8817,7 +8814,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C
 // System.Void Unity.Collections.NativeList`1<Unity.Networking.Transport.NetworkPipelineProcessor/UpdatePipeline>::.ctor(System.Int32,Unity.Collections.AllocatorManager/AllocatorHandle)
 inline void NativeList_1__ctor_mDAA2E94B71176E9C6621608FAA7FCDDEB7F38699 (NativeList_1_t1869FE735F5176A07019C960A26F7477BA6142B3* __this, int32_t ___initialCapacity0, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator1, const RuntimeMethod* method)
 {
-	((  void (*) (NativeList_1_t1869FE735F5176A07019C960A26F7477BA6142B3*, int32_t, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148, const RuntimeMethod*))NativeList_1__ctor_mDAA2E94B71176E9C6621608FAA7FCDDEB7F38699_gshared)(__this, ___initialCapacity0, ___allocator1, method);
+	((  void (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*, int32_t, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148, const RuntimeMethod*))NativeList_1__ctor_mA1DFF4EEBED87ED011F318AEC145588B17212121_gshared)((NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)__this, ___initialCapacity0, ___allocator1, method);
 }
 // System.Int32 Unity.Networking.Transport.NetworkPipelineProcessor/Concurrent::ProcessPipelineSend(Unity.Networking.Transport.NetworkDriver/Concurrent,System.Int32,Unity.Networking.Transport.NetworkPipeline,Unity.Networking.Transport.NetworkConnection,Unity.Networking.Transport.NetworkInterfaceSendHandle,System.Int32,Unity.Collections.NativeList`1<Unity.Networking.Transport.NetworkPipelineProcessor/UpdatePipeline>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Concurrent_ProcessPipelineSend_m3C8F9F3FBBC1C54107A0F268011119D3E91215E2 (Concurrent_t76D9AE05BA23B3FBC0B4C7AADEAA81E828C46673* __this, Concurrent_t864CA014F22D93A77EF7CF00CF48D46518DD1D14 ___driver0, int32_t ___startStage1, NetworkPipeline_t83BB00B4CE9811A2B75D37E50EFB85FD60044A69 ___pipeline2, NetworkConnection_t0A1170D9665C62249582E5DAABC2EAF2D01DEDF4 ___connection3, NetworkInterfaceSendHandle_t0DDDEE6B24387948E786543B54C52A3F7B625CE3 ___sendHandle4, int32_t ___headerSize5, NativeList_1_t1869FE735F5176A07019C960A26F7477BA6142B3 ___currentUpdates6, const RuntimeMethod* method) ;
@@ -8826,17 +8823,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Interlocked_Exchange_m5810F59A9EF49D8
 // T Unity.Collections.NativeList`1<Unity.Networking.Transport.NetworkPipelineProcessor/UpdatePipeline>::get_Item(System.Int32)
 inline UpdatePipeline_t8D511DB7DDEC2170FC3349B879D1E46CD18C35D2 NativeList_1_get_Item_m5E60DA02913D85EE981579FD6033F84DA202BC42 (NativeList_1_t1869FE735F5176A07019C960A26F7477BA6142B3* __this, int32_t ___index0, const RuntimeMethod* method)
 {
-	return ((  UpdatePipeline_t8D511DB7DDEC2170FC3349B879D1E46CD18C35D2 (*) (NativeList_1_t1869FE735F5176A07019C960A26F7477BA6142B3*, int32_t, const RuntimeMethod*))NativeList_1_get_Item_m5E60DA02913D85EE981579FD6033F84DA202BC42_gshared)(__this, ___index0, method);
+	UpdatePipeline_t8D511DB7DDEC2170FC3349B879D1E46CD18C35D2 il2cppRetVal;
+	((  void (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*, int32_t, Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NativeList_1_get_Item_m4C9E1C7BB475457EAE88A496A68A77E3F7A64F92_gshared)((NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)__this, ___index0, (Il2CppFullySharedGenericStruct*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void Unity.Collections.NativeQueue`1/ParallelWriter<Unity.Networking.Transport.NetworkPipelineProcessor/UpdatePipeline>::Enqueue(T)
 inline void ParallelWriter_Enqueue_mD81143975AA19DFE1D0DDA6B7E715250C3813993 (ParallelWriter_t55B873B53088E2C14EC0CE7DD3ECA37705CB04CC* __this, UpdatePipeline_t8D511DB7DDEC2170FC3349B879D1E46CD18C35D2 ___value0, const RuntimeMethod* method)
 {
-	((  void (*) (ParallelWriter_t55B873B53088E2C14EC0CE7DD3ECA37705CB04CC*, UpdatePipeline_t8D511DB7DDEC2170FC3349B879D1E46CD18C35D2, const RuntimeMethod*))ParallelWriter_Enqueue_mD81143975AA19DFE1D0DDA6B7E715250C3813993_gshared)(__this, ___value0, method);
+	((  void (*) (ParallelWriter_t2D1578AF94E5823813CF6A916C1C53C94EFEFEC5*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, const RuntimeMethod*))ParallelWriter_Enqueue_m0282574973A9EF17578D0D5579CDC68B7EC7A917_gshared)((ParallelWriter_t2D1578AF94E5823813CF6A916C1C53C94EFEFEC5*)__this, (Il2CppFullySharedGenericStruct)&___value0, method);
 }
 // System.Int32 Unity.Collections.NativeList`1<Unity.Networking.Transport.NetworkPipelineProcessor/UpdatePipeline>::get_Length()
 inline int32_t NativeList_1_get_Length_mDCC082BC46F829CA36862DE9FB4F95657DEB418A (NativeList_1_t1869FE735F5176A07019C960A26F7477BA6142B3* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (NativeList_1_t1869FE735F5176A07019C960A26F7477BA6142B3*, const RuntimeMethod*))NativeList_1_get_Length_mDCC082BC46F829CA36862DE9FB4F95657DEB418A_gshared)(__this, method);
+	return ((  int32_t (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*, const RuntimeMethod*))NativeList_1_get_Length_mBCE0D52E1FEFC40B5CFEE2F41B493C7FF6A07FA7_gshared)((NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)__this, method);
 }
 // System.Int32 Unity.Networking.Transport.NetworkPipelineProcessor/Concurrent::Send(Unity.Networking.Transport.NetworkDriver/Concurrent,Unity.Networking.Transport.NetworkPipeline,Unity.Networking.Transport.NetworkConnection,Unity.Networking.Transport.NetworkInterfaceSendHandle,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Concurrent_Send_m7976CCA60542EF6AB4AE999B026AAEB88B413DEA (Concurrent_t76D9AE05BA23B3FBC0B4C7AADEAA81E828C46673* __this, Concurrent_t864CA014F22D93A77EF7CF00CF48D46518DD1D14 ___driver0, NetworkPipeline_t83BB00B4CE9811A2B75D37E50EFB85FD60044A69 ___pipeline1, NetworkConnection_t0A1170D9665C62249582E5DAABC2EAF2D01DEDF4 ___connection2, NetworkInterfaceSendHandle_t0DDDEE6B24387948E786543B54C52A3F7B625CE3 ___sendHandle3, int32_t ___headerSize4, const RuntimeMethod* method) ;
@@ -8845,7 +8844,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Concurrent_MaxProtocolHeaderSize_mD05
 // System.Void Unity.Collections.NativeList`1<System.Int32>::.ctor(System.Int32,Unity.Collections.AllocatorManager/AllocatorHandle)
 inline void NativeList_1__ctor_m5697273576B6FA770C7C26B21495B790E0D88EFA (NativeList_1_t0EA735A94E6EBF8FE7F3B79411C98BF692EA2213* __this, int32_t ___initialCapacity0, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator1, const RuntimeMethod* method)
 {
-	((  void (*) (NativeList_1_t0EA735A94E6EBF8FE7F3B79411C98BF692EA2213*, int32_t, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148, const RuntimeMethod*))NativeList_1__ctor_m5697273576B6FA770C7C26B21495B790E0D88EFA_gshared)(__this, ___initialCapacity0, ___allocator1, method);
+	((  void (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*, int32_t, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148, const RuntimeMethod*))NativeList_1__ctor_mA1DFF4EEBED87ED011F318AEC145588B17212121_gshared)((NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)__this, ___initialCapacity0, ___allocator1, method);
 }
 // System.Void* System.IntPtr::op_Explicit(System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* IntPtr_op_Explicit_m2728CBA081E79B97DDCF1D4FAD77B309CA1E94BF (intptr_t ___value0, const RuntimeMethod* method) ;
@@ -8854,12 +8853,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogError_mB00B2B4468EF3CAF041B038D
 // T Unity.Collections.NativeList`1<System.Int32>::get_Item(System.Int32)
 inline int32_t NativeList_1_get_Item_m963766393E6261D56BB3704947609551E7752A1C (NativeList_1_t0EA735A94E6EBF8FE7F3B79411C98BF692EA2213* __this, int32_t ___index0, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (NativeList_1_t0EA735A94E6EBF8FE7F3B79411C98BF692EA2213*, int32_t, const RuntimeMethod*))NativeList_1_get_Item_m963766393E6261D56BB3704947609551E7752A1C_gshared)(__this, ___index0, method);
+	int32_t il2cppRetVal;
+	((  void (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*, int32_t, Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NativeList_1_get_Item_m4C9E1C7BB475457EAE88A496A68A77E3F7A64F92_gshared)((NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)__this, ___index0, (Il2CppFullySharedGenericStruct*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // Unity.Collections.NativeArray`1<T> Unity.Collections.LowLevel.Unsafe.NativeArrayUnsafeUtility::ConvertExistingDataToNativeArray<System.Byte>(System.Void*,System.Int32,Unity.Collections.Allocator)
 inline NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF NativeArrayUnsafeUtility_ConvertExistingDataToNativeArray_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m181D7F12EB826B7D6B73742BFD85A667D533BABA (void* ___dataPointer0, int32_t ___length1, int32_t ___allocator2, const RuntimeMethod* method)
 {
-	return ((  NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF (*) (void*, int32_t, int32_t, const RuntimeMethod*))NativeArrayUnsafeUtility_ConvertExistingDataToNativeArray_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m181D7F12EB826B7D6B73742BFD85A667D533BABA_gshared)(___dataPointer0, ___length1, ___allocator2, method);
+	NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 il2cppRetVal = ((  NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 (*) (void*, int32_t, int32_t, const RuntimeMethod*))NativeArrayUnsafeUtility_ConvertExistingDataToNativeArray_TisIl2CppFullySharedGenericStruct_m6920C14D4E38FAB84BD2B5F148CE70DF7F224F52_gshared)(___dataPointer0, ___length1, ___allocator2, method);
+	return il2cpp_codegen_cast_struct<NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF, NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18>(&il2cppRetVal);
 }
 // System.Void Unity.Networking.Transport.DataStreamWriter::.ctor(Unity.Collections.NativeArray`1<System.Byte>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DataStreamWriter__ctor_m7F082E2DD39BC12DFDC452F6E15905294C7028D3 (DataStreamWriter_t58BB6BA9D4C598E54C1B1E6D5B7511625C8EF6EA* __this, NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF ___data0, const RuntimeMethod* method) ;
@@ -8900,26 +8902,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A
 // System.Int32 Unity.Collections.NativeList`1<System.Int32>::get_Length()
 inline int32_t NativeList_1_get_Length_m2327DF25C0CCD96DB5AB1F1500FBD411D60AC36B (NativeList_1_t0EA735A94E6EBF8FE7F3B79411C98BF692EA2213* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (NativeList_1_t0EA735A94E6EBF8FE7F3B79411C98BF692EA2213*, const RuntimeMethod*))NativeList_1_get_Length_m2327DF25C0CCD96DB5AB1F1500FBD411D60AC36B_gshared)(__this, method);
+	return ((  int32_t (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*, const RuntimeMethod*))NativeList_1_get_Length_mBCE0D52E1FEFC40B5CFEE2F41B493C7FF6A07FA7_gshared)((NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)__this, method);
 }
 // System.Void Unity.Networking.Transport.NetworkDriver/Concurrent::AbortSend(Unity.Networking.Transport.NetworkInterfaceSendHandle)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Concurrent_AbortSend_m3F87473B70EC17533EF9FD7AB2C4AEBBFE796469 (Concurrent_t864CA014F22D93A77EF7CF00CF48D46518DD1D14* __this, NetworkInterfaceSendHandle_t0DDDEE6B24387948E786543B54C52A3F7B625CE3 ___sendHandle0, const RuntimeMethod* method) ;
 // System.Void* Unity.Collections.LowLevel.Unsafe.NativeListUnsafeUtility::GetUnsafeReadOnlyPtr<System.Byte>(Unity.Collections.NativeList`1<T>)
 inline void* NativeListUnsafeUtility_GetUnsafeReadOnlyPtr_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mD4EC7E441E6EDC0AC875758B44AA8C647E309441 (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94 ___list0, const RuntimeMethod* method)
 {
-	return ((  void* (*) (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94, const RuntimeMethod*))NativeListUnsafeUtility_GetUnsafeReadOnlyPtr_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mD4EC7E441E6EDC0AC875758B44AA8C647E309441_gshared)(___list0, method);
+	return ((  void* (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1, const RuntimeMethod*))NativeListUnsafeUtility_GetUnsafeReadOnlyPtr_TisIl2CppFullySharedGenericStruct_mDCA2D331B8D098FC4F650B4CEC267080EBFF8F47_gshared)(il2cpp_codegen_cast_struct<NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1, NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94>(&___list0), method);
 }
 // T Unity.Burst.FunctionPointer`1<Unity.Networking.Transport.NetworkPipelineStage/SendDelegate>::get_Invoke()
 inline SendDelegate_tCAD0587122FBA21AD677D23C837BA04F61066361* FunctionPointer_1_get_Invoke_m1599DD8255260FD2DD061B1B401AF26538849A88 (FunctionPointer_1_tCDD6B82BADB3D595433A9F2B8A2D7D6043B10F21* __this, const RuntimeMethod* method)
 {
-	return ((  SendDelegate_tCAD0587122FBA21AD677D23C837BA04F61066361* (*) (FunctionPointer_1_tCDD6B82BADB3D595433A9F2B8A2D7D6043B10F21*, const RuntimeMethod*))FunctionPointer_1_get_Invoke_m3E7098A72E4D4E432490A6F99AF8749B862ACF93_gshared)(__this, method);
+	SendDelegate_tCAD0587122FBA21AD677D23C837BA04F61066361* il2cppRetVal;
+	((  void (*) (FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))FunctionPointer_1_get_Invoke_m552FD5AD590BE1F22C35842835DBC3FB96BACA44_gshared)((FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Int32 Unity.Networking.Transport.NetworkPipelineStage/SendDelegate::Invoke(Unity.Networking.Transport.NetworkPipelineContext&,Unity.Networking.Transport.InboundSendBuffer&,Unity.Networking.Transport.NetworkPipelineStage/Requests&,System.Int32)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t SendDelegate_Invoke_m52BBD7FBA7095BDBCC3426BD976D7E4971A0FF92_inline (SendDelegate_tCAD0587122FBA21AD677D23C837BA04F61066361* __this, NetworkPipelineContext_t8F3D91FC8F21E09B471629ACF6E92F903A1ED3DD* ___ctx0, InboundSendBuffer_t87526AA7D284BED0A1462C13268C07175DD5FDF2* ___inboundBuffer1, int32_t* ___requests2, int32_t ___systemHeadersSize3, const RuntimeMethod* method) ;
 // System.Void Unity.Collections.NativeList`1<System.Int32>::Add(T&)
 inline void NativeList_1_Add_mD5F3F9AEDF81C4AE1F22A002348E5296010D0064 (NativeList_1_t0EA735A94E6EBF8FE7F3B79411C98BF692EA2213* __this, int32_t* ___value0, const RuntimeMethod* method)
 {
-	((  void (*) (NativeList_1_t0EA735A94E6EBF8FE7F3B79411C98BF692EA2213*, int32_t*, const RuntimeMethod*))NativeList_1_Add_mD5F3F9AEDF81C4AE1F22A002348E5296010D0064_gshared)(__this, ___value0, method);
+	((  void (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NativeList_1_Add_m9BE8F632802CF4BA6110C86A3C1842F568C58DBB_gshared)((NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)__this, (Il2CppFullySharedGenericStruct*)___value0, method);
 }
 // System.Int32 Unity.Networking.Transport.NetworkProtocol::get_PaddingSize()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NetworkProtocol_get_PaddingSize_mB8B8F04B5E1C4B76302A483EF8396FBD7B782459 (NetworkProtocol_t817E46E6CEE8782B0BB83A0A95DFFD7ADCB84BC9* __this, const RuntimeMethod* method) ;
@@ -8932,19 +8936,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AsDataWithImplicitConnectionAccept_get_H
 // System.Boolean Unity.Collections.NativeList`1<System.Byte>::get_IsCreated()
 inline bool NativeList_1_get_IsCreated_m0088506340DF8D71C5E8A04FD537552F82443F88 (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94*, const RuntimeMethod*))NativeList_1_get_IsCreated_m0088506340DF8D71C5E8A04FD537552F82443F88_gshared)(__this, method);
+	return ((  bool (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*, const RuntimeMethod*))NativeList_1_get_IsCreated_m4E2356CCFFB361C91CBEFB528F727AC7C244043F_gshared)((NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)__this, method);
 }
 // System.Boolean Unity.Networking.Transport.NetworkSettings::get_IsCreated()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkSettings_get_IsCreated_m847CB6DF65228052B8A51BA669B4C7EDBC2935E1 (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, const RuntimeMethod* method) ;
 // System.Void Unity.Collections.NativeList`1<System.Byte>::.ctor(Unity.Collections.AllocatorManager/AllocatorHandle)
 inline void NativeList_1__ctor_m349142F37467F69B508FD721185B93C8F107A4A1 (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94* __this, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator0, const RuntimeMethod* method)
 {
-	((  void (*) (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94*, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148, const RuntimeMethod*))NativeList_1__ctor_m349142F37467F69B508FD721185B93C8F107A4A1_gshared)(__this, ___allocator0, method);
+	((  void (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148, const RuntimeMethod*))NativeList_1__ctor_mCF266C5F6762E110B7EAEAF5546388FDB3621BD8_gshared)((NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)__this, ___allocator0, method);
 }
 // System.Void Unity.Collections.NativeHashMap`2<System.Int64,Unity.Networking.Transport.NetworkSettings/ParameterSlice>::.ctor(System.Int32,Unity.Collections.AllocatorManager/AllocatorHandle)
 inline void NativeHashMap_2__ctor_mCE05037A8E1B2F2D4F278FD4ED79928B4AB95233 (NativeHashMap_2_tCD58FF7DD75EEFB0E828AE808528187662F809FC* __this, int32_t ___capacity0, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator1, const RuntimeMethod* method)
 {
-	((  void (*) (NativeHashMap_2_tCD58FF7DD75EEFB0E828AE808528187662F809FC*, int32_t, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148, const RuntimeMethod*))NativeHashMap_2__ctor_mCE05037A8E1B2F2D4F278FD4ED79928B4AB95233_gshared)(__this, ___capacity0, ___allocator1, method);
+	((  void (*) (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*, int32_t, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148, const RuntimeMethod*))NativeHashMap_2__ctor_mAA3C0AC3AEF5600B8C6DA242A9EDFE8B883FA23F_gshared)((NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*)__this, ___capacity0, ___allocator1, method);
 }
 // System.Boolean Unity.Networking.Transport.NetworkSettings::EnsureInitializedOrError()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkSettings_EnsureInitializedOrError_mB914F925D4A389C339FFFAEA48EA6EBDE7255029 (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, const RuntimeMethod* method) ;
@@ -8953,12 +8957,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkSettings__ctor_mA6470D24077F1464F
 // System.Void Unity.Collections.NativeList`1<System.Byte>::Dispose()
 inline void NativeList_1_Dispose_mC0442A0F667EFDA4EAA6B6BAC0139B86A935AAD6 (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94* __this, const RuntimeMethod* method)
 {
-	((  void (*) (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94*, const RuntimeMethod*))NativeList_1_Dispose_mC0442A0F667EFDA4EAA6B6BAC0139B86A935AAD6_gshared)(__this, method);
+	((  void (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*, const RuntimeMethod*))NativeList_1_Dispose_m42535264C7291A64741CA36B4F0567D15D7BDC2F_gshared)((NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)__this, method);
 }
 // System.Void Unity.Collections.NativeHashMap`2<System.Int64,Unity.Networking.Transport.NetworkSettings/ParameterSlice>::Dispose()
 inline void NativeHashMap_2_Dispose_m7E03D1E79F6D2C0088A287C90E406C210399F1F7 (NativeHashMap_2_tCD58FF7DD75EEFB0E828AE808528187662F809FC* __this, const RuntimeMethod* method)
 {
-	((  void (*) (NativeHashMap_2_tCD58FF7DD75EEFB0E828AE808528187662F809FC*, const RuntimeMethod*))NativeHashMap_2_Dispose_m7E03D1E79F6D2C0088A287C90E406C210399F1F7_gshared)(__this, method);
+	((  void (*) (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*, const RuntimeMethod*))NativeHashMap_2_Dispose_m870F88F2CA4E95C70D44708181BADD082451D1C6_gshared)((NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*)__this, method);
 }
 // System.Void Unity.Networking.Transport.NetworkSettings::Dispose()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkSettings_Dispose_m2D73A6555834E52D4631863324D4FA79F1B696FD (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, const RuntimeMethod* method) ;
@@ -8971,31 +8975,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Type_op_Equality_m99930A0E44E420A685FABA
 // System.Void Unity.Networking.Transport.NetworkSettings::ValidateParameterOrError<Unity.Networking.Transport.INetworkParameter>(T&)
 inline void NetworkSettings_ValidateParameterOrError_TisINetworkParameter_t7DE080C57D199B23035AFC72727D06B620B06628_m0451A7CAB826E6578D7B140B6CDF8B9A34082FA8 (RuntimeObject** ___parameter0, const RuntimeMethod* method)
 {
-	((  void (*) (RuntimeObject**, const RuntimeMethod*))NetworkSettings_ValidateParameterOrError_TisRuntimeObject_mB7E6292EF3A217A08493E67C717035E5A3892DC6_gshared)(___parameter0, method);
+	((  void (*) (/*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))NetworkSettings_ValidateParameterOrError_TisIl2CppFullySharedGenericAny_mF236C327B3FB12F57CA93774AEFA8F1E7D444FD2_gshared)((Il2CppFullySharedGenericAny*)___parameter0, method);
 }
 // System.Int64 Unity.Burst.BurstRuntime::GetHashCode64(System.Type)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t BurstRuntime_GetHashCode64_m0B34A53C0967727211E985563628DD61084977D9 (Type_t* ___type0, const RuntimeMethod* method) ;
 // System.Int32 Unity.Collections.NativeList`1<System.Byte>::get_Length()
 inline int32_t NativeList_1_get_Length_mCCFB8F09EBEF5EA454CEA11FDB7B6100AF908D61 (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94*, const RuntimeMethod*))NativeList_1_get_Length_mCCFB8F09EBEF5EA454CEA11FDB7B6100AF908D61_gshared)(__this, method);
+	return ((  int32_t (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*, const RuntimeMethod*))NativeList_1_get_Length_mBCE0D52E1FEFC40B5CFEE2F41B493C7FF6A07FA7_gshared)((NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)__this, method);
 }
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf(System.Type)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_m8495884C739B0E573EDD53047B8F259F9A15BD46 (Type_t* ___type0, const RuntimeMethod* method) ;
 // System.Void Unity.Collections.NativeHashMap`2<System.Int64,Unity.Networking.Transport.NetworkSettings/ParameterSlice>::Add(TKey,TValue)
 inline void NativeHashMap_2_Add_m52AD76B891E44F2CC2E37618BE85D034AD812A8A (NativeHashMap_2_tCD58FF7DD75EEFB0E828AE808528187662F809FC* __this, int64_t ___key0, ParameterSlice_t11C9B163EC6791F24FB25F285363BC41ECEBE899 ___item1, const RuntimeMethod* method)
 {
-	((  void (*) (NativeHashMap_2_tCD58FF7DD75EEFB0E828AE808528187662F809FC*, int64_t, ParameterSlice_t11C9B163EC6791F24FB25F285363BC41ECEBE899, const RuntimeMethod*))NativeHashMap_2_Add_m52AD76B891E44F2CC2E37618BE85D034AD812A8A_gshared)(__this, ___key0, ___item1, method);
+	((  void (*) (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, const RuntimeMethod*))NativeHashMap_2_Add_mE74E9833A58615B8A61692936F97AE77F1C21B0E_gshared)((NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*)__this, (Il2CppFullySharedGenericStruct)&___key0, (Il2CppFullySharedGenericStruct)&___item1, method);
 }
 // System.Void Unity.Collections.NativeList`1<System.Byte>::Resize(System.Int32,Unity.Collections.NativeArrayOptions)
 inline void NativeList_1_Resize_m234E62EC9CD8AC1D4BFA4B79E54AABC48C5FB59D (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94* __this, int32_t ___length0, int32_t ___options1, const RuntimeMethod* method)
 {
-	((  void (*) (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94*, int32_t, int32_t, const RuntimeMethod*))NativeList_1_Resize_m234E62EC9CD8AC1D4BFA4B79E54AABC48C5FB59D_gshared)(__this, ___length0, ___options1, method);
+	((  void (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*, int32_t, int32_t, const RuntimeMethod*))NativeList_1_Resize_m84F443F6B9C92F2415832AF704F927D86166870C_gshared)((NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)__this, ___length0, ___options1, method);
 }
 // System.Void* Unity.Collections.LowLevel.Unsafe.NativeListUnsafeUtility::GetUnsafePtr<System.Byte>(Unity.Collections.NativeList`1<T>)
 inline void* NativeListUnsafeUtility_GetUnsafePtr_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mCE332CC7994DB38B04B6184C5A12241EEC4330C3 (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94 ___list0, const RuntimeMethod* method)
 {
-	return ((  void* (*) (NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94, const RuntimeMethod*))NativeListUnsafeUtility_GetUnsafePtr_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mCE332CC7994DB38B04B6184C5A12241EEC4330C3_gshared)(___list0, method);
+	return ((  void* (*) (NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1, const RuntimeMethod*))NativeListUnsafeUtility_GetUnsafePtr_TisIl2CppFullySharedGenericStruct_mE9C167B5E37C0635A71E22EBFB746FB93AA72EC0_gshared)(il2cpp_codegen_cast_struct<NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1, NativeList_1_tEEE3A07B710DA14F96F06ECF1D5D8D7353698B94>(&___list0), method);
 }
 // System.Void* Unity.Collections.LowLevel.Unsafe.UnsafeUtility::PinGCObjectAndGetAddress(System.Object,System.UInt64&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* UnsafeUtility_PinGCObjectAndGetAddress_mC2A08F13A34EFFB2DD2696C7743062F6CDD25956 (RuntimeObject* ___target0, uint64_t* ___gcHandle1, const RuntimeMethod* method) ;
@@ -9006,7 +9010,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeUtility_ReleaseGCObject_m5FA3E69C3
 // System.Boolean Unity.Collections.NativeHashMap`2<System.Int64,Unity.Networking.Transport.NetworkSettings/ParameterSlice>::TryGetValue(TKey,TValue&)
 inline bool NativeHashMap_2_TryGetValue_mCFF29C458A20434135E7340D4DFB9AA13335CFE1 (NativeHashMap_2_tCD58FF7DD75EEFB0E828AE808528187662F809FC* __this, int64_t ___key0, ParameterSlice_t11C9B163EC6791F24FB25F285363BC41ECEBE899* ___item1, const RuntimeMethod* method)
 {
-	return ((  bool (*) (NativeHashMap_2_tCD58FF7DD75EEFB0E828AE808528187662F809FC*, int64_t, ParameterSlice_t11C9B163EC6791F24FB25F285363BC41ECEBE899*, const RuntimeMethod*))NativeHashMap_2_TryGetValue_mCFF29C458A20434135E7340D4DFB9AA13335CFE1_gshared)(__this, ___key0, ___item1, method);
+	return ((  bool (*) (NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NativeHashMap_2_TryGetValue_m76AEC24FD506266541AE43823590F7D44AAC3718_gshared)((NativeHashMap_2_t3B459BB3716CA0B5BAC3FB0C214A42B976C1BED1*)__this, (Il2CppFullySharedGenericStruct)&___key0, (Il2CppFullySharedGenericStruct*)___item1, method);
 }
 // System.Object System.Activator::CreateInstance(System.Type)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Activator_CreateInstance_mFF030428C64FDDFACC74DFAC97388A1C628BFBCF (Type_t* ___type0, const RuntimeMethod* method) ;
@@ -9015,7 +9019,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkSettings_TryGet_m980FA36E453BF266
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.NetworkSettings/ObjectOffsetType>()
 inline int32_t UnsafeUtility_SizeOf_TisObjectOffsetType_t95C7C8F4835FBBC3E6990AF65847FCF9CA68A1A3_m6B93CC93F3944C70E45189F764FFF211EB43E587 (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisObjectOffsetType_t95C7C8F4835FBBC3E6990AF65847FCF9CA68A1A3_m6B93CC93F3944C70E45189F764FFF211EB43E587_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_gshared)(method);
 }
 // System.Int32 Unity.Networking.Transport.FragmentationPipelineStage::Send(Unity.Networking.Transport.NetworkPipelineContext&,Unity.Networking.Transport.InboundSendBuffer&,Unity.Networking.Transport.NetworkPipelineStage/Requests&,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FragmentationPipelineStage_Send_m371D83ABF5F657F48C1C953FD7F4FC17EE9AFB5F (NetworkPipelineContext_t8F3D91FC8F21E09B471629ACF6E92F903A1ED3DD* ___ctx0, InboundSendBuffer_t87526AA7D284BED0A1462C13268C07175DD5FDF2* ___inboundBuffer1, int32_t* ___requests2, int32_t ___systemHeaderSize3, const RuntimeMethod* method) ;
@@ -9038,7 +9042,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Parameters_t59B022551E59FBC1EA11D32A22CF7C345
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.Utilities.FragmentationUtility/Parameters>()
 inline int32_t UnsafeUtility_SizeOf_TisParameters_t59B022551E59FBC1EA11D32A22CF7C3457682BAE_m8261C5FE8462D92CE3431D5D3CCECBC5EFCCE969 (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisParameters_t59B022551E59FBC1EA11D32A22CF7C3457682BAE_m8261C5FE8462D92CE3431D5D3CCECBC5EFCCE969_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_gshared)(method);
 }
 // System.Void Unity.Networking.Transport.NetworkPipelineStage::.ctor(Unity.Networking.Transport.TransportFunctionPointer`1<Unity.Networking.Transport.NetworkPipelineStage/ReceiveDelegate>,Unity.Networking.Transport.TransportFunctionPointer`1<Unity.Networking.Transport.NetworkPipelineStage/SendDelegate>,Unity.Networking.Transport.TransportFunctionPointer`1<Unity.Networking.Transport.NetworkPipelineStage/InitializeConnectionDelegate>,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkPipelineStage__ctor_mD42D087808BEA5D1DAC95F8E72052A7B9F67EBC8 (NetworkPipelineStage_tEF17CBE5C7F718292F2E9F3E51D727D672A0400E* __this, TransportFunctionPointer_1_t511C3C8E675E5CB219FF3A1D96C2427B3FE67093 ___Receive0, TransportFunctionPointer_1_t501B8E9B93C30C95A92F8DF78ACF94988E45A4B9 ___Send1, TransportFunctionPointer_1_t6BF5E81E0840B90172D9CF46B2C509613517ECEB ___InitializeConnection2, int32_t ___ReceiveCapacity3, int32_t ___SendCapacity4, int32_t ___HeaderCapacity5, int32_t ___SharedStateCapacity6, int32_t ___PayloadCapacity7, const RuntimeMethod* method) ;
@@ -9088,14 +9092,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Parameters_tF86D75FA18B8304AD7743BB4ACA3DC712
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.Utilities.ReliableUtility/Parameters>()
 inline int32_t UnsafeUtility_SizeOf_TisParameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5_mBC5D14108A720E5CC9C9B3B87C3A9EA4F442735A (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisParameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5_mBC5D14108A720E5CC9C9B3B87C3A9EA4F442735A_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_gshared)(method);
 }
 // System.Int32 Unity.Networking.Transport.Utilities.ReliableUtility::ProcessCapacityNeeded(Unity.Networking.Transport.Utilities.ReliableUtility/Parameters)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ReliableUtility_ProcessCapacityNeeded_mBB1217FF168816E29F164AF46A1AB866B306AA53 (Parameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5 ___param0, const RuntimeMethod* method) ;
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.Utilities.ReliableUtility/PacketHeader>()
 inline int32_t UnsafeUtility_SizeOf_TisPacketHeader_t97AC229C2B77881EA6A4AAA1D13C9B1276E21858_mF98DD06ACEE97AC6AEFB4D1A8CBB806910233A22 (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisPacketHeader_t97AC229C2B77881EA6A4AAA1D13C9B1276E21858_mF98DD06ACEE97AC6AEFB4D1A8CBB806910233A22_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_gshared)(method);
 }
 // System.Int32 Unity.Networking.Transport.Utilities.ReliableUtility::SharedCapacityNeeded(Unity.Networking.Transport.Utilities.ReliableUtility/Parameters)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ReliableUtility_SharedCapacityNeeded_m96D0D85CF1F30F060CA45DA242F8FDD78A24D5A5 (Parameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5 ___param0, const RuntimeMethod* method) ;
@@ -9146,17 +9150,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Parameters_tA3860843BBE2D4923FE6901E43ABC3E16
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.Utilities.SimulatorUtility/Parameters>()
 inline int32_t UnsafeUtility_SizeOf_TisParameters_tA3860843BBE2D4923FE6901E43ABC3E1697F99F0_mDB11943BEF270C59AEE1C35D466C74E0A004568B (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisParameters_tA3860843BBE2D4923FE6901E43ABC3E1697F99F0_mDB11943BEF270C59AEE1C35D466C74E0A004568B_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_gshared)(method);
 }
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.Utilities.SimulatorUtility/DelayedPacket>()
 inline int32_t UnsafeUtility_SizeOf_TisDelayedPacket_t7AFEA508A61E8A02F06A3A81775436D15BEEFB81_m74D2F275F08D06BCB3E55494D0BCA36ED3D06BF0 (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisDelayedPacket_t7AFEA508A61E8A02F06A3A81775436D15BEEFB81_m74D2F275F08D06BCB3E55494D0BCA36ED3D06BF0_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_gshared)(method);
 }
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.Utilities.SimulatorUtility/Context>()
 inline int32_t UnsafeUtility_SizeOf_TisContext_tE4EEAFC2FF451B45661D71813B703BB66C43AD24_m7E573B27D5A0CD2226E02FA4EACB72E03786AA8D (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisContext_tE4EEAFC2FF451B45661D71813B703BB66C43AD24_m7E573B27D5A0CD2226E02FA4EACB72E03786AA8D_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_gshared)(method);
 }
 // Unity.Networking.Transport.NetworkPipelineStage Unity.Networking.Transport.SimulatorPipelineStage::StaticInitialize(System.Byte*,System.Int32,Unity.Networking.Transport.NetworkSettings)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkPipelineStage_tEF17CBE5C7F718292F2E9F3E51D727D672A0400E SimulatorPipelineStage_StaticInitialize_mD9ED37443F6A14E145D6E68918F20D87A43BA67F (SimulatorPipelineStage_t8716306836063338A91F9A19441327935FDAE218* __this, uint8_t* ___staticInstanceBuffer0, int32_t ___staticInstanceBufferLength1, NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0 ___settings2, const RuntimeMethod* method) ;
@@ -9193,12 +9197,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnreliableSequencedPipelineStage_Initial
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<System.Int32>()
 inline int32_t UnsafeUtility_SizeOf_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mED481D505BF43CBD96972069EDD4E3509BE84931 (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mED481D505BF43CBD96972069EDD4E3509BE84931_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_gshared)(method);
 }
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<System.UInt16>()
 inline int32_t UnsafeUtility_SizeOf_TisUInt16_tF4C148C876015C212FD72652D0B6ED8CC247A455_mEC9469DBD91362D6135B8F5A81E90486BF328075 (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisUInt16_tF4C148C876015C212FD72652D0B6ED8CC247A455_mEC9469DBD91362D6135B8F5A81E90486BF328075_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_gshared)(method);
 }
 // Unity.Networking.Transport.NetworkPipelineStage Unity.Networking.Transport.UnreliableSequencedPipelineStage::StaticInitialize(System.Byte*,System.Int32,Unity.Networking.Transport.NetworkSettings)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkPipelineStage_tEF17CBE5C7F718292F2E9F3E51D727D672A0400E UnreliableSequencedPipelineStage_StaticInitialize_mF2E9AE83E0774F28402DFD528C9EC48321E2166A (UnreliableSequencedPipelineStage_t625184725960F7CD0FC7FF99316E91B304E581AC* __this, uint8_t* ___staticInstanceBuffer0, int32_t ___staticInstanceBufferLength1, NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0 ___settings2, const RuntimeMethod* method) ;
@@ -9346,14 +9350,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnityTransportProtocol_WriteSendMessa
 // T Unity.Burst.FunctionPointer`1<Unity.Networking.Transport.NetworkSendInterface/EndSendMessageDelegate>::get_Invoke()
 inline EndSendMessageDelegate_tCA4D3D136AE26FE2B671C22F4765E9B2C28025ED* FunctionPointer_1_get_Invoke_mFEE8AD2F13BFB25522EFCA2233290EF5A4BBCE32 (FunctionPointer_1_tD15B3870776AA5A42DBB36B9CCA6AA930B9628DE* __this, const RuntimeMethod* method)
 {
-	return ((  EndSendMessageDelegate_tCA4D3D136AE26FE2B671C22F4765E9B2C28025ED* (*) (FunctionPointer_1_tD15B3870776AA5A42DBB36B9CCA6AA930B9628DE*, const RuntimeMethod*))FunctionPointer_1_get_Invoke_m3E7098A72E4D4E432490A6F99AF8749B862ACF93_gshared)(__this, method);
+	EndSendMessageDelegate_tCA4D3D136AE26FE2B671C22F4765E9B2C28025ED* il2cppRetVal;
+	((  void (*) (FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))FunctionPointer_1_get_Invoke_m552FD5AD590BE1F22C35842835DBC3FB96BACA44_gshared)((FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Int32 Unity.Networking.Transport.NetworkSendInterface/EndSendMessageDelegate::Invoke(Unity.Networking.Transport.NetworkInterfaceSendHandle&,Unity.Networking.Transport.NetworkInterfaceEndPoint&,System.IntPtr,Unity.Networking.Transport.NetworkSendQueueHandle&)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t EndSendMessageDelegate_Invoke_m13088C10AA0AD56CAD443B995E262A65BAC6C54F_inline (EndSendMessageDelegate_tCA4D3D136AE26FE2B671C22F4765E9B2C28025ED* __this, NetworkInterfaceSendHandle_t0DDDEE6B24387948E786543B54C52A3F7B625CE3* ___handle0, NetworkInterfaceEndPoint_t19ADA9DC012F2BEFFD7234FF77DA83DB8C8B7686* ___address1, intptr_t ___userData2, NetworkSendQueueHandle_t9F11BEB70EFEEE4BCD9CD241BB758B11F25D5090* ___sendQueue3, const RuntimeMethod* method) ;
 // T Unity.Burst.FunctionPointer`1<Unity.Networking.Transport.NetworkSendInterface/BeginSendMessageDelegate>::get_Invoke()
 inline BeginSendMessageDelegate_t55D0469152EC11CCF544924363F1C12F13CF2FE1* FunctionPointer_1_get_Invoke_mB99A6DFFF953B5843576414230D5153BAD08925B (FunctionPointer_1_t5E2F5FC9CFE7FBBBECA6EB73BABFA0CD5F645155* __this, const RuntimeMethod* method)
 {
-	return ((  BeginSendMessageDelegate_t55D0469152EC11CCF544924363F1C12F13CF2FE1* (*) (FunctionPointer_1_t5E2F5FC9CFE7FBBBECA6EB73BABFA0CD5F645155*, const RuntimeMethod*))FunctionPointer_1_get_Invoke_m3E7098A72E4D4E432490A6F99AF8749B862ACF93_gshared)(__this, method);
+	BeginSendMessageDelegate_t55D0469152EC11CCF544924363F1C12F13CF2FE1* il2cppRetVal;
+	((  void (*) (FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))FunctionPointer_1_get_Invoke_m552FD5AD590BE1F22C35842835DBC3FB96BACA44_gshared)((FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Int32 Unity.Networking.Transport.NetworkSendInterface/BeginSendMessageDelegate::Invoke(Unity.Networking.Transport.NetworkInterfaceSendHandle&,System.IntPtr,System.Int32)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t BeginSendMessageDelegate_Invoke_m616D28C5DFFFB30E1F1392F14F6C6EB3B7EC99CD_inline (BeginSendMessageDelegate_t55D0469152EC11CCF544924363F1C12F13CF2FE1* __this, NetworkInterfaceSendHandle_t0DDDEE6B24387948E786543B54C52A3F7B625CE3* ___handle0, intptr_t ___userData1, int32_t ___requiredPayloadSize2, const RuntimeMethod* method) ;
@@ -9362,7 +9370,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnityTransportProtocol_WriteConnectio
 // T Unity.Burst.FunctionPointer`1<Unity.Networking.Transport.NetworkSendInterface/AbortSendMessageDelegate>::get_Invoke()
 inline AbortSendMessageDelegate_t6FBF6C859A8E442AC6D2CC1FEF00CD4D9815FB0D* FunctionPointer_1_get_Invoke_m1965484420A5DD87DA5E45901A90553CB43CF904 (FunctionPointer_1_t605FCD8E1E05F041A75BCDAE5CE44D9A201BFAA1* __this, const RuntimeMethod* method)
 {
-	return ((  AbortSendMessageDelegate_t6FBF6C859A8E442AC6D2CC1FEF00CD4D9815FB0D* (*) (FunctionPointer_1_t605FCD8E1E05F041A75BCDAE5CE44D9A201BFAA1*, const RuntimeMethod*))FunctionPointer_1_get_Invoke_m3E7098A72E4D4E432490A6F99AF8749B862ACF93_gshared)(__this, method);
+	AbortSendMessageDelegate_t6FBF6C859A8E442AC6D2CC1FEF00CD4D9815FB0D* il2cppRetVal;
+	((  void (*) (FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))FunctionPointer_1_get_Invoke_m552FD5AD590BE1F22C35842835DBC3FB96BACA44_gshared)((FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void Unity.Networking.Transport.NetworkSendInterface/AbortSendMessageDelegate::Invoke(Unity.Networking.Transport.NetworkInterfaceSendHandle&,System.IntPtr)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AbortSendMessageDelegate_Invoke_m60B3BB8663C28583542B560731BE31828023A7CD_inline (AbortSendMessageDelegate_t6FBF6C859A8E442AC6D2CC1FEF00CD4D9815FB0D* __this, NetworkInterfaceSendHandle_t0DDDEE6B24387948E786543B54C52A3F7B625CE3* ___handle0, intptr_t ___userData1, const RuntimeMethod* method) ;
@@ -9379,32 +9389,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void unitytls_client_data_receive_callback__c
 // T& Unity.Burst.SharedStatic`1<Unity.Burst.FunctionPointer`1<Unity.TLS.LowLevel.Binding/unitytls_client_data_send_callback>>::get_Data()
 inline FunctionPointer_1_tF917A6CBC8E241E4F555974CCF4507F08B71041A* SharedStatic_1_get_Data_m0E24869D29188E83B6F4BF368F46108CFB1B6FB1 (SharedStatic_1_t47339D7DCF45ED555300835940E9AFFB859D37B1* __this, const RuntimeMethod* method)
 {
-	return ((  FunctionPointer_1_tF917A6CBC8E241E4F555974CCF4507F08B71041A* (*) (SharedStatic_1_t47339D7DCF45ED555300835940E9AFFB859D37B1*, const RuntimeMethod*))SharedStatic_1_get_Data_mB5F855CAE2B6F83A2D6A10DAABF9B29053B4F11F_gshared)(__this, method);
+	Il2CppFullySharedGenericStruct* il2cppRetVal = ((  Il2CppFullySharedGenericStruct* (*) (SharedStatic_1_t4FCF4588C706197A62B7B4C4DFA65B0457AB498C*, const RuntimeMethod*))SharedStatic_1_get_Data_m4D3D9A03646881BE9065C8939BF1CA28195FF262_gshared)((SharedStatic_1_t4FCF4588C706197A62B7B4C4DFA65B0457AB498C*)__this, method);
+	return (FunctionPointer_1_tF917A6CBC8E241E4F555974CCF4507F08B71041A*)il2cppRetVal;
 }
 // System.IntPtr System.Runtime.InteropServices.Marshal::GetFunctionPointerForDelegate<Unity.TLS.LowLevel.Binding/unitytls_client_data_send_callback>(TDelegate)
 inline intptr_t Marshal_GetFunctionPointerForDelegate_Tisunitytls_client_data_send_callback_tB5FB8708A9D65A75EAE308331AF01EC223ADEC0D_mA730202CAC3AA87076B60876B5D250C8D711A231 (unitytls_client_data_send_callback_tB5FB8708A9D65A75EAE308331AF01EC223ADEC0D* ___d0, const RuntimeMethod* method)
 {
-	return ((  intptr_t (*) (unitytls_client_data_send_callback_tB5FB8708A9D65A75EAE308331AF01EC223ADEC0D*, const RuntimeMethod*))Marshal_GetFunctionPointerForDelegate_TisRuntimeObject_m389A3417EF0CFE64A042AA7E53E8604F24458074_gshared)(___d0, method);
+	return ((  intptr_t (*) (/*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Marshal_GetFunctionPointerForDelegate_TisIl2CppFullySharedGenericAny_m04DF469F259D55E8A9421AD43B0727717659D363_gshared)((Il2CppFullySharedGenericAny)___d0, method);
 }
 // System.Void Unity.Burst.FunctionPointer`1<Unity.TLS.LowLevel.Binding/unitytls_client_data_send_callback>::.ctor(System.IntPtr)
 inline void FunctionPointer_1__ctor_m2C14C57FBCC0E5F421D2075EF65CAC85951F0E84_inline (FunctionPointer_1_tF917A6CBC8E241E4F555974CCF4507F08B71041A* __this, intptr_t ___ptr0, const RuntimeMethod* method)
 {
-	((  void (*) (FunctionPointer_1_tF917A6CBC8E241E4F555974CCF4507F08B71041A*, intptr_t, const RuntimeMethod*))FunctionPointer_1__ctor_mE2BD136AA4DB860E4183D3293D3AE1A04B978DA3_gshared_inline)(__this, ___ptr0, method);
+	((  void (*) (FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*, intptr_t, const RuntimeMethod*))FunctionPointer_1__ctor_mC619E78A7A6A909670DFFE07825842FDA7D178F7_gshared_inline)((FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*)__this, ___ptr0, method);
 }
 // T& Unity.Burst.SharedStatic`1<Unity.Burst.FunctionPointer`1<Unity.TLS.LowLevel.Binding/unitytls_client_data_receive_callback>>::get_Data()
 inline FunctionPointer_1_tA2FC39F25D07D293D943EDC747A8E0E7A70BDFC6* SharedStatic_1_get_Data_m42E67BC10BCF19DA2EF4E13CEFBA6D7E4228F91C (SharedStatic_1_tB8E12BEEFE90AF4450BDCB3502FC8A0745B05C87* __this, const RuntimeMethod* method)
 {
-	return ((  FunctionPointer_1_tA2FC39F25D07D293D943EDC747A8E0E7A70BDFC6* (*) (SharedStatic_1_tB8E12BEEFE90AF4450BDCB3502FC8A0745B05C87*, const RuntimeMethod*))SharedStatic_1_get_Data_mB5F855CAE2B6F83A2D6A10DAABF9B29053B4F11F_gshared)(__this, method);
+	Il2CppFullySharedGenericStruct* il2cppRetVal = ((  Il2CppFullySharedGenericStruct* (*) (SharedStatic_1_t4FCF4588C706197A62B7B4C4DFA65B0457AB498C*, const RuntimeMethod*))SharedStatic_1_get_Data_m4D3D9A03646881BE9065C8939BF1CA28195FF262_gshared)((SharedStatic_1_t4FCF4588C706197A62B7B4C4DFA65B0457AB498C*)__this, method);
+	return (FunctionPointer_1_tA2FC39F25D07D293D943EDC747A8E0E7A70BDFC6*)il2cppRetVal;
 }
 // System.IntPtr System.Runtime.InteropServices.Marshal::GetFunctionPointerForDelegate<Unity.TLS.LowLevel.Binding/unitytls_client_data_receive_callback>(TDelegate)
 inline intptr_t Marshal_GetFunctionPointerForDelegate_Tisunitytls_client_data_receive_callback_tECB295DCE81436DB820825B50A360D64B4195637_mA2BE3117B02AF1D3E4BB983A8D37AD4231457CD7 (unitytls_client_data_receive_callback_tECB295DCE81436DB820825B50A360D64B4195637* ___d0, const RuntimeMethod* method)
 {
-	return ((  intptr_t (*) (unitytls_client_data_receive_callback_tECB295DCE81436DB820825B50A360D64B4195637*, const RuntimeMethod*))Marshal_GetFunctionPointerForDelegate_TisRuntimeObject_m389A3417EF0CFE64A042AA7E53E8604F24458074_gshared)(___d0, method);
+	return ((  intptr_t (*) (/*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Marshal_GetFunctionPointerForDelegate_TisIl2CppFullySharedGenericAny_m04DF469F259D55E8A9421AD43B0727717659D363_gshared)((Il2CppFullySharedGenericAny)___d0, method);
 }
 // System.Void Unity.Burst.FunctionPointer`1<Unity.TLS.LowLevel.Binding/unitytls_client_data_receive_callback>::.ctor(System.IntPtr)
 inline void FunctionPointer_1__ctor_m5CC710D14C71364457A98C2B92699248FE30D51B_inline (FunctionPointer_1_tA2FC39F25D07D293D943EDC747A8E0E7A70BDFC6* __this, intptr_t ___ptr0, const RuntimeMethod* method)
 {
-	((  void (*) (FunctionPointer_1_tA2FC39F25D07D293D943EDC747A8E0E7A70BDFC6*, intptr_t, const RuntimeMethod*))FunctionPointer_1__ctor_mE2BD136AA4DB860E4183D3293D3AE1A04B978DA3_gshared_inline)(__this, ___ptr0, method);
+	((  void (*) (FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*, intptr_t, const RuntimeMethod*))FunctionPointer_1__ctor_mC619E78A7A6A909670DFFE07825842FDA7D178F7_gshared_inline)((FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*)__this, ___ptr0, method);
 }
 // System.UInt32 System.UIntPtr::ToUInt32()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t UIntPtr_ToUInt32_mAD7A6CD8C254052CAC60B29546BE796360E0B965 (uintptr_t* __this, const RuntimeMethod* method) ;
@@ -9413,12 +9425,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t UIntPtr_ToUInt64_m7789E1D758F7AA7B1A
 // Unity.Burst.SharedStatic`1<T> Unity.Burst.SharedStatic`1<Unity.Burst.FunctionPointer`1<Unity.TLS.LowLevel.Binding/unitytls_client_data_send_callback>>::GetOrCreateUnsafe(System.UInt32,System.Int64,System.Int64)
 inline SharedStatic_1_t47339D7DCF45ED555300835940E9AFFB859D37B1 SharedStatic_1_GetOrCreateUnsafe_m850E4BF2126D155B48FCE292990810C8A0A46DD5 (uint32_t ___alignment0, int64_t ___hashCode1, int64_t ___subHashCode2, const RuntimeMethod* method)
 {
-	return ((  SharedStatic_1_t47339D7DCF45ED555300835940E9AFFB859D37B1 (*) (uint32_t, int64_t, int64_t, const RuntimeMethod*))SharedStatic_1_GetOrCreateUnsafe_mAC5BCA72979FDF433F59E3B513067AFEBE675E5D_gshared)(___alignment0, ___hashCode1, ___subHashCode2, method);
+	SharedStatic_1_t4FCF4588C706197A62B7B4C4DFA65B0457AB498C il2cppRetVal = ((  SharedStatic_1_t4FCF4588C706197A62B7B4C4DFA65B0457AB498C (*) (uint32_t, int64_t, int64_t, const RuntimeMethod*))SharedStatic_1_GetOrCreateUnsafe_m160E81C99EC8BDE0A64547E1B34D7CE539082052_gshared)(___alignment0, ___hashCode1, ___subHashCode2, method);
+	return il2cpp_codegen_cast_struct<SharedStatic_1_t47339D7DCF45ED555300835940E9AFFB859D37B1, SharedStatic_1_t4FCF4588C706197A62B7B4C4DFA65B0457AB498C>(&il2cppRetVal);
 }
 // Unity.Burst.SharedStatic`1<T> Unity.Burst.SharedStatic`1<Unity.Burst.FunctionPointer`1<Unity.TLS.LowLevel.Binding/unitytls_client_data_receive_callback>>::GetOrCreateUnsafe(System.UInt32,System.Int64,System.Int64)
 inline SharedStatic_1_tB8E12BEEFE90AF4450BDCB3502FC8A0745B05C87 SharedStatic_1_GetOrCreateUnsafe_m7DF87F4C8099C3DEB3E90B884652EB3A71D3B4C3 (uint32_t ___alignment0, int64_t ___hashCode1, int64_t ___subHashCode2, const RuntimeMethod* method)
 {
-	return ((  SharedStatic_1_tB8E12BEEFE90AF4450BDCB3502FC8A0745B05C87 (*) (uint32_t, int64_t, int64_t, const RuntimeMethod*))SharedStatic_1_GetOrCreateUnsafe_mAC5BCA72979FDF433F59E3B513067AFEBE675E5D_gshared)(___alignment0, ___hashCode1, ___subHashCode2, method);
+	SharedStatic_1_t4FCF4588C706197A62B7B4C4DFA65B0457AB498C il2cppRetVal = ((  SharedStatic_1_t4FCF4588C706197A62B7B4C4DFA65B0457AB498C (*) (uint32_t, int64_t, int64_t, const RuntimeMethod*))SharedStatic_1_GetOrCreateUnsafe_m160E81C99EC8BDE0A64547E1B34D7CE539082052_gshared)(___alignment0, ___hashCode1, ___subHashCode2, method);
+	return il2cpp_codegen_cast_struct<SharedStatic_1_tB8E12BEEFE90AF4450BDCB3502FC8A0745B05C87, SharedStatic_1_t4FCF4588C706197A62B7B4C4DFA65B0457AB498C>(&il2cppRetVal);
 }
 // System.Int32 Unity.Networking.Transport.TLS.SecureNetworkProtocol::ComputePacketOverhead(Unity.Networking.Transport.NetworkDriver/Connection&,System.Int32&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SecureNetworkProtocol_ComputePacketOverhead_m23FF3AD571738B5BBBC31F0DC7A1BADFB3C4B12A (Connection_t57B7A8186502E304AD87933A0FFD76FDF0972D70* ___connection0, int32_t* ___dataOffset1, const RuntimeMethod* method) ;
@@ -9443,24 +9457,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR unitytls_client_t24835A1F9F3B994DE3AE5B3B8479
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.TLS.LowLevel.Binding/unitytls_client_config>()
 inline int32_t UnsafeUtility_SizeOf_Tisunitytls_client_config_t573FD029CCF308C0D922A8643773696C20726F4F_mB5C3FE2DC1AACE0DDBD3777316FBF67D9DED09BD (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_Tisunitytls_client_config_t573FD029CCF308C0D922A8643773696C20726F4F_mB5C3FE2DC1AACE0DDBD3777316FBF67D9DED09BD_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_gshared)(method);
 }
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::AlignOf<Unity.TLS.LowLevel.Binding/unitytls_client_config>()
 inline int32_t UnsafeUtility_AlignOf_Tisunitytls_client_config_t573FD029CCF308C0D922A8643773696C20726F4F_m59D5E5DE33D7D644DA555FA3F7A1D8623361D326 (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_AlignOf_Tisunitytls_client_config_t573FD029CCF308C0D922A8643773696C20726F4F_m59D5E5DE33D7D644DA555FA3F7A1D8623361D326_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_AlignOf_TisIl2CppFullySharedGenericStruct_m11D1023B182BE19CF0F1A57DBE826004A1B81A41_gshared)(method);
 }
 // System.Void Unity.TLS.LowLevel.Binding::unitytls_client_init_config(Unity.TLS.LowLevel.Binding/unitytls_client_config*)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Binding_unitytls_client_init_config_m82074495EA2A17758484F4A7FF1C6BB2EFE198B5 (unitytls_client_config_t573FD029CCF308C0D922A8643773696C20726F4F* ___config0, const RuntimeMethod* method) ;
 // System.IntPtr Unity.Burst.FunctionPointer`1<Unity.TLS.LowLevel.Binding/unitytls_client_data_send_callback>::get_Value()
 inline intptr_t FunctionPointer_1_get_Value_m5016AF7AD65D91AA6D0456BEB6ED3A9D3AD8B9A5_inline (FunctionPointer_1_tF917A6CBC8E241E4F555974CCF4507F08B71041A* __this, const RuntimeMethod* method)
 {
-	return ((  intptr_t (*) (FunctionPointer_1_tF917A6CBC8E241E4F555974CCF4507F08B71041A*, const RuntimeMethod*))FunctionPointer_1_get_Value_m71D7FF781C694A7C4EE28362DFC78D8DDFE9A105_gshared_inline)(__this, method);
+	return ((  intptr_t (*) (FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*, const RuntimeMethod*))FunctionPointer_1_get_Value_mA1F1CB8C8E8B4B8030D49BFBEF55560DEB03FDD5_gshared_inline)((FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*)__this, method);
 }
 // System.IntPtr Unity.Burst.FunctionPointer`1<Unity.TLS.LowLevel.Binding/unitytls_client_data_receive_callback>::get_Value()
 inline intptr_t FunctionPointer_1_get_Value_mD9253C9B8BD4ED226D78C76033424F14A1BFC366_inline (FunctionPointer_1_tA2FC39F25D07D293D943EDC747A8E0E7A70BDFC6* __this, const RuntimeMethod* method)
 {
-	return ((  intptr_t (*) (FunctionPointer_1_tA2FC39F25D07D293D943EDC747A8E0E7A70BDFC6*, const RuntimeMethod*))FunctionPointer_1_get_Value_m71D7FF781C694A7C4EE28362DFC78D8DDFE9A105_gshared_inline)(__this, method);
+	return ((  intptr_t (*) (FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*, const RuntimeMethod*))FunctionPointer_1_get_Value_mA1F1CB8C8E8B4B8030D49BFBEF55560DEB03FDD5_gshared_inline)((FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA*)__this, method);
 }
 // System.Void Unity.Networking.Transport.TLS.ManagedSecureFunctions::Initialize()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManagedSecureFunctions_Initialize_m3EC45C8144F2303167F7AF87B68CEBE6A08956D8 (const RuntimeMethod* method) ;
@@ -9469,19 +9483,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SecureNetworkProtocolParameter_tF39E59837ABC9
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.TLS.SecureNetworkProtocolData>()
 inline int32_t UnsafeUtility_SizeOf_TisSecureNetworkProtocolData_tA3C3EB543E45487C8250364955DF2F444C3E4582_mD87AFEA55A4560FB415A7925E1F0285462A8EFD9 (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisSecureNetworkProtocolData_tA3C3EB543E45487C8250364955DF2F444C3E4582_mD87AFEA55A4560FB415A7925E1F0285462A8EFD9_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_gshared)(method);
 }
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::AlignOf<Unity.Networking.Transport.TLS.SecureNetworkProtocolData>()
 inline int32_t UnsafeUtility_AlignOf_TisSecureNetworkProtocolData_tA3C3EB543E45487C8250364955DF2F444C3E4582_m2A0723994580C2ECBB82DAF6262E34EB6EA66581 (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_AlignOf_TisSecureNetworkProtocolData_tA3C3EB543E45487C8250364955DF2F444C3E4582_m2A0723994580C2ECBB82DAF6262E34EB6EA66581_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_AlignOf_TisIl2CppFullySharedGenericStruct_m11D1023B182BE19CF0F1A57DBE826004A1B81A41_gshared)(method);
 }
 // System.IntPtr System.IntPtr::op_Explicit(System.Void*)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t IntPtr_op_Explicit_mE2CEC14C61FD5E2159A03EA2AD97F5CDC5BB9F4D (void* ___value0, const RuntimeMethod* method) ;
 // System.Void Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.Networking.Transport.NetworkInterfaceEndPoint,Unity.Networking.Transport.TLS.SecureClientState>::.ctor(System.Int32,Unity.Collections.AllocatorManager/AllocatorHandle)
 inline void UnsafeHashMap_2__ctor_m31E886D42092D529AC55246DA8F9E37C4A485613 (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77* __this, int32_t ___capacity0, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator1, const RuntimeMethod* method)
 {
-	((  void (*) (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77*, int32_t, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148, const RuntimeMethod*))UnsafeHashMap_2__ctor_m31E886D42092D529AC55246DA8F9E37C4A485613_gshared)(__this, ___capacity0, ___allocator1, method);
+	((  void (*) (UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65*, int32_t, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148, const RuntimeMethod*))UnsafeHashMap_2__ctor_mAE62A20C509DEDD08752CE9091328B1D54A0D7ED_gshared)((UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65*)__this, ___capacity0, ___allocator1, method);
 }
 // System.Void Unity.Networking.Transport.TLS.SecureNetworkProtocol::Initialize(Unity.Networking.Transport.NetworkSettings)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SecureNetworkProtocol_Initialize_mF5865F808C4FB0306850F1C9660679CC8B050E29 (SecureNetworkProtocol_tDCD28385092B8A160046A42E8DA1E5C78A938581* __this, NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0 ___settings0, const RuntimeMethod* method) ;
@@ -9494,19 +9508,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Binding_unitytls_client_destroy_m3454EE8
 // Unity.Collections.NativeArray`1<TKey> Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.Networking.Transport.NetworkInterfaceEndPoint,Unity.Networking.Transport.TLS.SecureClientState>::GetKeyArray(Unity.Collections.AllocatorManager/AllocatorHandle)
 inline NativeArray_1_tDF8469CB50B586533F70B614C38965EEBD6145B2 UnsafeHashMap_2_GetKeyArray_m5F34C4DF59F343A77EBFAD1EF1667A43A38781C8 (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77* __this, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___allocator0, const RuntimeMethod* method)
 {
-	return ((  NativeArray_1_tDF8469CB50B586533F70B614C38965EEBD6145B2 (*) (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77*, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148, const RuntimeMethod*))UnsafeHashMap_2_GetKeyArray_m5F34C4DF59F343A77EBFAD1EF1667A43A38781C8_gshared)(__this, ___allocator0, method);
+	NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 il2cppRetVal = ((  NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 (*) (UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65*, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148, const RuntimeMethod*))UnsafeHashMap_2_GetKeyArray_m649EE086C3644FDC0E2B5DC3B8A242C6974174E5_gshared)((UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65*)__this, ___allocator0, method);
+	return il2cpp_codegen_cast_struct<NativeArray_1_tDF8469CB50B586533F70B614C38965EEBD6145B2, NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18>(&il2cppRetVal);
 }
 // TValue Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.Networking.Transport.NetworkInterfaceEndPoint,Unity.Networking.Transport.TLS.SecureClientState>::get_Item(TKey)
 inline SecureClientState_t347C5882049D4DC06AD28FFFC8C16ADD7D77EB54 UnsafeHashMap_2_get_Item_m82174E674180097766B6E5AF3AF439B95DB1DCAC (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77* __this, NetworkInterfaceEndPoint_t19ADA9DC012F2BEFFD7234FF77DA83DB8C8B7686 ___key0, const RuntimeMethod* method)
 {
-	return ((  SecureClientState_t347C5882049D4DC06AD28FFFC8C16ADD7D77EB54 (*) (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77*, NetworkInterfaceEndPoint_t19ADA9DC012F2BEFFD7234FF77DA83DB8C8B7686, const RuntimeMethod*))UnsafeHashMap_2_get_Item_m82174E674180097766B6E5AF3AF439B95DB1DCAC_gshared)(__this, ___key0, method);
+	SecureClientState_t347C5882049D4DC06AD28FFFC8C16ADD7D77EB54 il2cppRetVal;
+	((  void (*) (UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, Il2CppFullySharedGenericStruct*, const RuntimeMethod*))UnsafeHashMap_2_get_Item_mDD352F446D95945BE6E14E1ED08F37B2CE1371B0_gshared)((UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65*)__this, (Il2CppFullySharedGenericStruct)&___key0, (Il2CppFullySharedGenericStruct*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void Unity.Networking.Transport.TLS.SecureNetworkProtocol::DisposeSecureClient(Unity.Networking.Transport.TLS.SecureClientState&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SecureNetworkProtocol_DisposeSecureClient_mB349E3980ACCB847640BCE87AA1319627170B17D (SecureClientState_t347C5882049D4DC06AD28FFFC8C16ADD7D77EB54* ___state0, const RuntimeMethod* method) ;
 // System.Boolean Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.Networking.Transport.NetworkInterfaceEndPoint,Unity.Networking.Transport.TLS.SecureClientState>::Remove(TKey)
 inline bool UnsafeHashMap_2_Remove_m94BE3198B3A3508CB109FAC4EE568ED86407F71B (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77* __this, NetworkInterfaceEndPoint_t19ADA9DC012F2BEFFD7234FF77DA83DB8C8B7686 ___key0, const RuntimeMethod* method)
 {
-	return ((  bool (*) (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77*, NetworkInterfaceEndPoint_t19ADA9DC012F2BEFFD7234FF77DA83DB8C8B7686, const RuntimeMethod*))UnsafeHashMap_2_Remove_m94BE3198B3A3508CB109FAC4EE568ED86407F71B_gshared)(__this, ___key0, method);
+	return ((  bool (*) (UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, const RuntimeMethod*))UnsafeHashMap_2_Remove_m5504D5CF9181F453DF230C0535DD29C891F9CD3B_gshared)((UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65*)__this, (Il2CppFullySharedGenericStruct)&___key0, method);
 }
 // System.Void Unity.Networking.Transport.TLS.SecureNetworkProtocol::Dispose()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SecureNetworkProtocol_Dispose_m8CF7827AE167471FBC0126F15EBDF9437C62A4C8 (SecureNetworkProtocol_tDCD28385092B8A160046A42E8DA1E5C78A938581* __this, const RuntimeMethod* method) ;
@@ -9523,7 +9540,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkProtocol_t817E46E6CEE8782B0BB83A0A95DF
 // System.Boolean Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.Networking.Transport.NetworkInterfaceEndPoint,Unity.Networking.Transport.TLS.SecureClientState>::TryAdd(TKey,TValue)
 inline bool UnsafeHashMap_2_TryAdd_mB425A45433A55B799577F14EFBE7C7379D37CF2E (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77* __this, NetworkInterfaceEndPoint_t19ADA9DC012F2BEFFD7234FF77DA83DB8C8B7686 ___key0, SecureClientState_t347C5882049D4DC06AD28FFFC8C16ADD7D77EB54 ___item1, const RuntimeMethod* method)
 {
-	return ((  bool (*) (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77*, NetworkInterfaceEndPoint_t19ADA9DC012F2BEFFD7234FF77DA83DB8C8B7686, SecureClientState_t347C5882049D4DC06AD28FFFC8C16ADD7D77EB54, const RuntimeMethod*))UnsafeHashMap_2_TryAdd_mB425A45433A55B799577F14EFBE7C7379D37CF2E_gshared)(__this, ___key0, ___item1, method);
+	return ((  bool (*) (UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, const RuntimeMethod*))UnsafeHashMap_2_TryAdd_m7347F0AD0D1E22C5ABC54641B13ADBE1C371B9E0_gshared)((UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65*)__this, (Il2CppFullySharedGenericStruct)&___key0, (Il2CppFullySharedGenericStruct)&___item1, method);
 }
 // Unity.TLS.LowLevel.Binding/unitytls_client_config* Unity.Networking.Transport.TLS.SecureNetworkProtocol::GetSecureClientConfig(Unity.Networking.Transport.TLS.SecureNetworkProtocolData*)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR unitytls_client_config_t573FD029CCF308C0D922A8643773696C20726F4F* SecureNetworkProtocol_GetSecureClientConfig_m1EB7EDB53869DD1C0A75D2D8CEF81BDBC3BFE4C7 (SecureNetworkProtocolData_tA3C3EB543E45487C8250364955DF2F444C3E4582* ___protocolData0, const RuntimeMethod* method) ;
@@ -9532,12 +9549,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SecureNetworkProtocol_CreateSecureClient
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.TLS.SecureUserData>()
 inline int32_t UnsafeUtility_SizeOf_TisSecureUserData_t7AF182ED8C0BA05FC7AB70D34FB6F8DDB5BA7D1B_m93E4445737BC86FE087B87E97CD00064A2CD9114 (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisSecureUserData_t7AF182ED8C0BA05FC7AB70D34FB6F8DDB5BA7D1B_m93E4445737BC86FE087B87E97CD00064A2CD9114_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_gshared)(method);
 }
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::AlignOf<Unity.Networking.Transport.TLS.SecureUserData>()
 inline int32_t UnsafeUtility_AlignOf_TisSecureUserData_t7AF182ED8C0BA05FC7AB70D34FB6F8DDB5BA7D1B_m42E37113A90B5272BE314C380722580DEF3E96F8 (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_AlignOf_TisSecureUserData_t7AF182ED8C0BA05FC7AB70D34FB6F8DDB5BA7D1B_m42E37113A90B5272BE314C380722580DEF3E96F8_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_AlignOf_TisIl2CppFullySharedGenericStruct_m11D1023B182BE19CF0F1A57DBE826004A1B81A41_gshared)(method);
 }
 // System.Boolean Unity.Collections.FixedString32Bytes::op_Inequality(Unity.Collections.FixedString32Bytes&,Unity.Collections.FixedString32Bytes&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FixedString32Bytes_op_Inequality_m79C9EBDDD8ACA515FEE668E2C49C5F0CD4B2AD16 (FixedString32Bytes_t0FB200DC482825CC1EF24B4640201CC039631824* ___a0, FixedString32Bytes_t0FB200DC482825CC1EF24B4640201CC039631824* ___b1, const RuntimeMethod* method) ;
@@ -9556,7 +9573,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Binding_unitytls_client_init_m4A2D0AE
 // System.Void Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2<Unity.Networking.Transport.NetworkInterfaceEndPoint,Unity.Networking.Transport.TLS.SecureClientState>::set_Item(TKey,TValue)
 inline void UnsafeHashMap_2_set_Item_mA9D2E832C60A25C9C7F70B3F329AC7BF45D01288 (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77* __this, NetworkInterfaceEndPoint_t19ADA9DC012F2BEFFD7234FF77DA83DB8C8B7686 ___key0, SecureClientState_t347C5882049D4DC06AD28FFFC8C16ADD7D77EB54 ___value1, const RuntimeMethod* method)
 {
-	((  void (*) (UnsafeHashMap_2_t3AFF32975843284D4BDD5FD1254D6BC4EAC54F77*, NetworkInterfaceEndPoint_t19ADA9DC012F2BEFFD7234FF77DA83DB8C8B7686, SecureClientState_t347C5882049D4DC06AD28FFFC8C16ADD7D77EB54, const RuntimeMethod*))UnsafeHashMap_2_set_Item_mA9D2E832C60A25C9C7F70B3F329AC7BF45D01288_gshared)(__this, ___key0, ___value1, method);
+	((  void (*) (UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, const RuntimeMethod*))UnsafeHashMap_2_set_Item_mB8C2EE802A3627A0A53AD087A0143A9164290F5B_gshared)((UnsafeHashMap_2_t29918F65345B5F995F512065B8A0FC573C8BEF65*)__this, (Il2CppFullySharedGenericStruct)&___key0, (Il2CppFullySharedGenericStruct)&___value1, method);
 }
 // System.UInt32 Unity.TLS.LowLevel.Binding::unitytls_client_get_role(Unity.TLS.LowLevel.Binding/unitytls_client*)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Binding_unitytls_client_get_role_m1F838334033B29D9251DDD0153303DEE21B6C8EB (unitytls_client_t24835A1F9F3B994DE3AE5B3B84792289F563AC80* ___clientInstance0, const RuntimeMethod* method) ;
@@ -9575,7 +9592,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Binding_unitytls_client_get_state_mF
 // System.Void Unity.Collections.NativeArray`1<Unity.Networking.Transport.NetworkInterfaceEndPoint>::Dispose()
 inline void NativeArray_1_Dispose_mDDF671931CE60775804BC5073A9296DD06BD335F (NativeArray_1_tDF8469CB50B586533F70B614C38965EEBD6145B2* __this, const RuntimeMethod* method)
 {
-	((  void (*) (NativeArray_1_tDF8469CB50B586533F70B614C38965EEBD6145B2*, const RuntimeMethod*))NativeArray_1_Dispose_mDDF671931CE60775804BC5073A9296DD06BD335F_gshared)(__this, method);
+	((  void (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*, const RuntimeMethod*))NativeArray_1_Dispose_m365A262FA4CA431467F021D7732CECD68316AF80_gshared)((NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*)__this, method);
 }
 // System.Boolean Unity.Networking.Transport.TLS.SecureNetworkProtocol::CreateNewSecureClientState(Unity.Networking.Transport.NetworkInterfaceEndPoint&,System.UInt32,Unity.Networking.Transport.TLS.SecureNetworkProtocolData*,Unity.Networking.Transport.SessionIdToken)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SecureNetworkProtocol_CreateNewSecureClientState_mAA5DDF2BA684C99D2BC6C5DA03B3DB14DBDF726B (NetworkInterfaceEndPoint_t19ADA9DC012F2BEFFD7234FF77DA83DB8C8B7686* ___endpoint0, uint32_t ___tlsRole1, SecureNetworkProtocolData_tA3C3EB543E45487C8250364955DF2F444C3E4582* ___protocolData2, SessionIdToken_tC99CC2FCFBDC94BA4D4A024CF8863DA9971F1672 ___receiveToken3, const RuntimeMethod* method) ;
@@ -9588,12 +9605,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SecureNetworkProtocol_SendConnectionRequ
 // System.Void Unity.Collections.NativeArray`1<System.Byte>::.ctor(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArrayOptions)
 inline void NativeArray_1__ctor_m981CC7E27B6C9946024877F2696920951443B04F (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF* __this, int32_t ___length0, int32_t ___allocator1, int32_t ___options2, const RuntimeMethod* method)
 {
-	((  void (*) (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF*, int32_t, int32_t, int32_t, const RuntimeMethod*))NativeArray_1__ctor_m981CC7E27B6C9946024877F2696920951443B04F_gshared)(__this, ___length0, ___allocator1, ___options2, method);
+	((  void (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*, int32_t, int32_t, int32_t, const RuntimeMethod*))NativeArray_1__ctor_m788DE0F85C4051DDF092DDF96484DE655ACFB6F1_gshared)((NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*)__this, ___length0, ___allocator1, ___options2, method);
 }
 // System.Void* Unity.Collections.LowLevel.Unsafe.NativeArrayUnsafeUtility::GetUnsafePtr<System.Byte>(Unity.Collections.NativeArray`1<T>)
 inline void* NativeArrayUnsafeUtility_GetUnsafePtr_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m8CFDB2DF56E810A2E2FB3686AF676FCAC65AFCC2 (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF ___nativeArray0, const RuntimeMethod* method)
 {
-	return ((  void* (*) (NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF, const RuntimeMethod*))NativeArrayUnsafeUtility_GetUnsafePtr_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m8CFDB2DF56E810A2E2FB3686AF676FCAC65AFCC2_gshared)(___nativeArray0, method);
+	return ((  void* (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18, const RuntimeMethod*))NativeArrayUnsafeUtility_GetUnsafePtr_TisIl2CppFullySharedGenericStruct_m4AB802D5B1B296D0F976C1E7631699B0C4A4D00F_gshared)(il2cpp_codegen_cast_struct<NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18, NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF>(&___nativeArray0), method);
 }
 // System.UInt32 Unity.TLS.LowLevel.Binding::unitytls_client_read_data(Unity.TLS.LowLevel.Binding/unitytls_client*,System.Byte*,System.UIntPtr,System.UIntPtr*)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Binding_unitytls_client_read_data_mF232A9B9C2DB17E25ACB540144CB2C4CD3D67C2F (unitytls_client_t24835A1F9F3B994DE3AE5B3B84792289F563AC80* ___clientInstance0, uint8_t* ___buffer1, uintptr_t ___bufferLen2, uintptr_t* ___bytesRead3, const RuntimeMethod* method) ;
@@ -9612,7 +9629,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SecureNetworkProtocolParameter_Validate_
 // System.Void Unity.Networking.Transport.NetworkSettings::AddRawParameterStruct<Unity.Networking.Transport.TLS.SecureNetworkProtocolParameter>(T&)
 inline void NetworkSettings_AddRawParameterStruct_TisSecureNetworkProtocolParameter_tF39E59837ABC91C01156741EB769D49BFAFF5F97_m3E765836A687594FE5A5597C7A22712B6D99BDD2 (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, SecureNetworkProtocolParameter_tF39E59837ABC91C01156741EB769D49BFAFF5F97* ___parameter0, const RuntimeMethod* method)
 {
-	((  void (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, SecureNetworkProtocolParameter_tF39E59837ABC91C01156741EB769D49BFAFF5F97*, const RuntimeMethod*))NetworkSettings_AddRawParameterStruct_TisSecureNetworkProtocolParameter_tF39E59837ABC91C01156741EB769D49BFAFF5F97_m3E765836A687594FE5A5597C7A22712B6D99BDD2_gshared)(__this, ___parameter0, method);
+	((  void (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NetworkSettings_AddRawParameterStruct_TisIl2CppFullySharedGenericStruct_mEE7DB15FA8289654B287C3B2F45E21477661ACFC_gshared)((NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*)__this, (Il2CppFullySharedGenericStruct*)___parameter0, method);
 }
 // System.Void Unity.Collections.FixedString32Bytes::.ctor(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FixedString32Bytes__ctor_m1C1C73C55B3D020EA211DE2E9E6C7CF0400C6408 (FixedString32Bytes_t0FB200DC482825CC1EF24B4640201CC039631824* __this, String_t* ___source0, const RuntimeMethod* method) ;
@@ -9631,7 +9648,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkSettings_tF4E51C6335E296671D0F783AF949
 // System.Boolean Unity.Networking.Transport.NetworkSettings::TryGet<Unity.Networking.Transport.TLS.SecureNetworkProtocolParameter>(T&)
 inline bool NetworkSettings_TryGet_TisSecureNetworkProtocolParameter_tF39E59837ABC91C01156741EB769D49BFAFF5F97_mB2F1591010C6E88F9124C708EFF49FE9FF190D45 (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, SecureNetworkProtocolParameter_tF39E59837ABC91C01156741EB769D49BFAFF5F97* ___parameter0, const RuntimeMethod* method)
 {
-	return ((  bool (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, SecureNetworkProtocolParameter_tF39E59837ABC91C01156741EB769D49BFAFF5F97*, const RuntimeMethod*))NetworkSettings_TryGet_TisSecureNetworkProtocolParameter_tF39E59837ABC91C01156741EB769D49BFAFF5F97_mB2F1591010C6E88F9124C708EFF49FE9FF190D45_gshared)(__this, ___parameter0, method);
+	return ((  bool (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NetworkSettings_TryGet_TisIl2CppFullySharedGenericStruct_m8144E87E9DA39DBF759EA2BC43BBDB21538CF6A4_gshared)((NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*)__this, (Il2CppFullySharedGenericStruct*)___parameter0, method);
 }
 // System.Void System.InvalidOperationException::.ctor(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162 (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* __this, String_t* ___message0, const RuntimeMethod* method) ;
@@ -9670,12 +9687,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RelayHMACKey_t8A1480D4E69892635FBA3B1408C0947
 // System.Void Unity.Networking.Transport.NetworkSettings::AddRawParameterStruct<Unity.Networking.Transport.Relay.RelayNetworkParameter>(T&)
 inline void NetworkSettings_AddRawParameterStruct_TisRelayNetworkParameter_tE48AD3A6F0F2548B9929FE896969232D10FBC4B8_m14FFA28DDF0273DDE1DB82C5D7EDFD5F61B7CFA3 (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, RelayNetworkParameter_tE48AD3A6F0F2548B9929FE896969232D10FBC4B8* ___parameter0, const RuntimeMethod* method)
 {
-	((  void (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, RelayNetworkParameter_tE48AD3A6F0F2548B9929FE896969232D10FBC4B8*, const RuntimeMethod*))NetworkSettings_AddRawParameterStruct_TisRelayNetworkParameter_tE48AD3A6F0F2548B9929FE896969232D10FBC4B8_m14FFA28DDF0273DDE1DB82C5D7EDFD5F61B7CFA3_gshared)(__this, ___parameter0, method);
+	((  void (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NetworkSettings_AddRawParameterStruct_TisIl2CppFullySharedGenericStruct_mEE7DB15FA8289654B287C3B2F45E21477661ACFC_gshared)((NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*)__this, (Il2CppFullySharedGenericStruct*)___parameter0, method);
 }
 // System.Boolean Unity.Networking.Transport.NetworkSettings::TryGet<Unity.Networking.Transport.Relay.RelayNetworkParameter>(T&)
 inline bool NetworkSettings_TryGet_TisRelayNetworkParameter_tE48AD3A6F0F2548B9929FE896969232D10FBC4B8_m2915D2DF811C81800CA3F27275A5D1F1C6FB371C (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, RelayNetworkParameter_tE48AD3A6F0F2548B9929FE896969232D10FBC4B8* ___parameter0, const RuntimeMethod* method)
 {
-	return ((  bool (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, RelayNetworkParameter_tE48AD3A6F0F2548B9929FE896969232D10FBC4B8*, const RuntimeMethod*))NetworkSettings_TryGet_TisRelayNetworkParameter_tE48AD3A6F0F2548B9929FE896969232D10FBC4B8_m2915D2DF811C81800CA3F27275A5D1F1C6FB371C_gshared)(__this, ___parameter0, method);
+	return ((  bool (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NetworkSettings_TryGet_TisIl2CppFullySharedGenericStruct_m8144E87E9DA39DBF759EA2BC43BBDB21538CF6A4_gshared)((NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*)__this, (Il2CppFullySharedGenericStruct*)___parameter0, method);
 }
 // System.Boolean Unity.Networking.Transport.NetworkEndPoint::op_Equality(Unity.Networking.Transport.NetworkEndPoint,Unity.Networking.Transport.NetworkEndPoint)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkEndPoint_op_Equality_m2A780F04EB0AA4CFE9BFF0718B6F850A48401CD3 (NetworkEndPoint_t40D02F3956B78E8C6115ED188912FBCE35437F63 ___lhs0, NetworkEndPoint_t40D02F3956B78E8C6115ED188912FBCE35437F63 ___rhs1, const RuntimeMethod* method) ;
@@ -9708,12 +9725,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkConfigParameter_t2AA94683DFCAE075DB530
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf<Unity.Networking.Transport.Relay.RelayNetworkProtocol/RelayProtocolData>()
 inline int32_t UnsafeUtility_SizeOf_TisRelayProtocolData_tD57D421CA918D581F6E2314B53121386C617E66F_m3FFD617F4FF50F0299817A643B51550473E1A5F9 (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisRelayProtocolData_tD57D421CA918D581F6E2314B53121386C617E66F_m3FFD617F4FF50F0299817A643B51550473E1A5F9_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_gshared)(method);
 }
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::AlignOf<Unity.Networking.Transport.Relay.RelayNetworkProtocol/RelayProtocolData>()
 inline int32_t UnsafeUtility_AlignOf_TisRelayProtocolData_tD57D421CA918D581F6E2314B53121386C617E66F_m1F90C43667A7F4543B0FF1CD95DBA6C1F92E94EC (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_AlignOf_TisRelayProtocolData_tD57D421CA918D581F6E2314B53121386C617E66F_m1F90C43667A7F4543B0FF1CD95DBA6C1F92E94EC_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_AlignOf_TisIl2CppFullySharedGenericStruct_m11D1023B182BE19CF0F1A57DBE826004A1B81A41_gshared)(method);
 }
 // System.Void Unity.Networking.Transport.Relay.RelayNetworkProtocol::Initialize(Unity.Networking.Transport.NetworkSettings)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RelayNetworkProtocol_Initialize_m0A33A964C44694B69D2FAECB5893EABAE925F5ED (RelayNetworkProtocol_tD7EB1F41E6E4E1E3F12A681F08030C24245E867B* __this, NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0 ___settings0, const RuntimeMethod* method) ;
@@ -9792,7 +9809,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB
 // System.Boolean System.Linq.Enumerable::Contains<System.String>(System.Collections.Generic.IEnumerable`1<TSource>,TSource)
 inline bool Enumerable_Contains_TisString_t_m903B1A64070B00925A8E4E7979330AA7D7B0FB33 (RuntimeObject* ___source0, String_t* ___value1, const RuntimeMethod* method)
 {
-	return ((  bool (*) (RuntimeObject*, String_t*, const RuntimeMethod*))Enumerable_Contains_TisRuntimeObject_mBCDB5870C52FC5BD2B6AE472A749FC03B9CF8958_gshared)(___source0, ___value1, method);
+	return ((  bool (*) (RuntimeObject*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))Enumerable_Contains_TisIl2CppFullySharedGenericAny_m40E4F8989539AFEF3812EAC9D9AD165D258D5814_gshared)((RuntimeObject*)___source0, (Il2CppFullySharedGenericAny)___value1, method);
 }
 // System.String System.String::Concat(System.String,System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B (String_t* ___str00, String_t* ___str11, String_t* ___str22, const RuntimeMethod* method) ;
@@ -9803,12 +9820,14 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t2312067CBBF8C43EDBB74AEE2
 // System.Void System.Func`2<Unity.Services.Relay.Models.RelayServerEndpoint,System.Boolean>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m44AC3E85816BFDCBE17A558A89A9C40996C190C5 (Func_2_tE1F42EB84E1AA4DA3DF3343192BE7CE56838224F* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_2_tE1F42EB84E1AA4DA3DF3343192BE7CE56838224F*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m13C0A7F33154D861E2A041B52E88461832DA1697_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F5DD19B4170C027D5367001F7BC95A0658A2169_gshared)((Func_2_t7F5F5324CE2DDB7001B68FFE29A5D9F907139FB0*)__this, ___object0, ___method1, method);
 }
 // TSource System.Linq.Enumerable::First<Unity.Services.Relay.Models.RelayServerEndpoint>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
 inline RelayServerEndpoint_t4B2E1E842195AC4A8C4EEB52B1B6BB39390B7842* Enumerable_First_TisRelayServerEndpoint_t4B2E1E842195AC4A8C4EEB52B1B6BB39390B7842_m41E3191216F85E1EEBC389B8BB9F4CAADA11B64E (RuntimeObject* ___source0, Func_2_tE1F42EB84E1AA4DA3DF3343192BE7CE56838224F* ___predicate1, const RuntimeMethod* method)
 {
-	return ((  RelayServerEndpoint_t4B2E1E842195AC4A8C4EEB52B1B6BB39390B7842* (*) (RuntimeObject*, Func_2_tE1F42EB84E1AA4DA3DF3343192BE7CE56838224F*, const RuntimeMethod*))Enumerable_First_TisRuntimeObject_mC6FA107934316BE28EA02DDB9EADA7AE8DD1916B_gshared)(___source0, ___predicate1, method);
+	RelayServerEndpoint_t4B2E1E842195AC4A8C4EEB52B1B6BB39390B7842* il2cppRetVal;
+	((  void (*) (RuntimeObject*, Func_2_t19E50C11C3E1F20B5A8FDB85D7DD353B6DFF868B*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerable_First_TisIl2CppFullySharedGenericAny_m08978D082DCBF739A9269BC79C5EA59C44E39877_gshared)((RuntimeObject*)___source0, (Func_2_t19E50C11C3E1F20B5A8FDB85D7DD353B6DFF868B*)___predicate1, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.String Unity.Services.Relay.Models.RelayServerEndpoint::get_Host()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* RelayServerEndpoint_get_Host_mD25BAF7CC654248EA689CD7643A0D4BFB2F17B73_inline (RelayServerEndpoint_t4B2E1E842195AC4A8C4EEB52B1B6BB39390B7842* __this, const RuntimeMethod* method) ;
@@ -9863,12 +9882,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_op_Equality_m030E1B219352228970A0
 // System.Void Unity.Networking.Transport.NetworkSettings::AddRawParameterStruct<Unity.Networking.Transport.Utilities.FragmentationUtility/Parameters>(T&)
 inline void NetworkSettings_AddRawParameterStruct_TisParameters_t59B022551E59FBC1EA11D32A22CF7C3457682BAE_m39E38FA8D28BCCDCB95F18D1B3A27F3CBB685CA3 (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, Parameters_t59B022551E59FBC1EA11D32A22CF7C3457682BAE* ___parameter0, const RuntimeMethod* method)
 {
-	((  void (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, Parameters_t59B022551E59FBC1EA11D32A22CF7C3457682BAE*, const RuntimeMethod*))NetworkSettings_AddRawParameterStruct_TisParameters_t59B022551E59FBC1EA11D32A22CF7C3457682BAE_m39E38FA8D28BCCDCB95F18D1B3A27F3CBB685CA3_gshared)(__this, ___parameter0, method);
+	((  void (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NetworkSettings_AddRawParameterStruct_TisIl2CppFullySharedGenericStruct_mEE7DB15FA8289654B287C3B2F45E21477661ACFC_gshared)((NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*)__this, (Il2CppFullySharedGenericStruct*)___parameter0, method);
 }
 // System.Boolean Unity.Networking.Transport.NetworkSettings::TryGet<Unity.Networking.Transport.Utilities.FragmentationUtility/Parameters>(T&)
 inline bool NetworkSettings_TryGet_TisParameters_t59B022551E59FBC1EA11D32A22CF7C3457682BAE_mC5258ABE8D7C61CFE499332D7AEBE17451C38BA8 (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, Parameters_t59B022551E59FBC1EA11D32A22CF7C3457682BAE* ___parameter0, const RuntimeMethod* method)
 {
-	return ((  bool (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, Parameters_t59B022551E59FBC1EA11D32A22CF7C3457682BAE*, const RuntimeMethod*))NetworkSettings_TryGet_TisParameters_t59B022551E59FBC1EA11D32A22CF7C3457682BAE_mC5258ABE8D7C61CFE499332D7AEBE17451C38BA8_gshared)(__this, ___parameter0, method);
+	return ((  bool (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NetworkSettings_TryGet_TisIl2CppFullySharedGenericStruct_m8144E87E9DA39DBF759EA2BC43BBDB21538CF6A4_gshared)((NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*)__this, (Il2CppFullySharedGenericStruct*)___parameter0, method);
 }
 // System.String System.String::Format(System.String,System.Object,System.Object,System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C (String_t* ___format0, RuntimeObject* ___arg01, RuntimeObject* ___arg12, RuntimeObject* ___arg23, const RuntimeMethod* method) ;
@@ -9877,32 +9896,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Parameters_Validate_mB30068775CFD4BB71CE
 // System.Void Unity.Networking.Transport.NetworkSettings::AddRawParameterStruct<Unity.Networking.Transport.Utilities.ReliableUtility/Parameters>(T&)
 inline void NetworkSettings_AddRawParameterStruct_TisParameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5_m7B98B5E718C88C3B250B07DBE04F1629947B2570 (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, Parameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5* ___parameter0, const RuntimeMethod* method)
 {
-	((  void (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, Parameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5*, const RuntimeMethod*))NetworkSettings_AddRawParameterStruct_TisParameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5_m7B98B5E718C88C3B250B07DBE04F1629947B2570_gshared)(__this, ___parameter0, method);
+	((  void (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NetworkSettings_AddRawParameterStruct_TisIl2CppFullySharedGenericStruct_mEE7DB15FA8289654B287C3B2F45E21477661ACFC_gshared)((NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*)__this, (Il2CppFullySharedGenericStruct*)___parameter0, method);
 }
 // System.Boolean Unity.Networking.Transport.NetworkSettings::TryGet<Unity.Networking.Transport.Utilities.ReliableUtility/Parameters>(T&)
 inline bool NetworkSettings_TryGet_TisParameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5_m1265A0047017C7EE05689AA051CCD6EC15B4A67F (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, Parameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5* ___parameter0, const RuntimeMethod* method)
 {
-	return ((  bool (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, Parameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5*, const RuntimeMethod*))NetworkSettings_TryGet_TisParameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5_m1265A0047017C7EE05689AA051CCD6EC15B4A67F_gshared)(__this, ___parameter0, method);
+	return ((  bool (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NetworkSettings_TryGet_TisIl2CppFullySharedGenericStruct_m8144E87E9DA39DBF759EA2BC43BBDB21538CF6A4_gshared)((NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*)__this, (Il2CppFullySharedGenericStruct*)___parameter0, method);
 }
 // System.Int32 Unity.Networking.Transport.Utilities.ReliableUtility::AlignedSizeOf<Unity.Networking.Transport.Utilities.ReliableUtility/PacketTimers>()
 inline int32_t ReliableUtility_AlignedSizeOf_TisPacketTimers_tE7D87EC02DA5C97DD3C39677ADFDFE7BB2BAB3D4_m9785E521127021B2207B6EF5E4B37CA3B3C2C617 (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))ReliableUtility_AlignedSizeOf_TisPacketTimers_tE7D87EC02DA5C97DD3C39677ADFDFE7BB2BAB3D4_m9785E521127021B2207B6EF5E4B37CA3B3C2C617_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))ReliableUtility_AlignedSizeOf_TisIl2CppFullySharedGenericStruct_mA19C452179C39DF40BF7E3CEAB86946A1689B8E6_gshared)(method);
 }
 // System.Int32 Unity.Networking.Transport.Utilities.ReliableUtility::AlignedSizeOf<Unity.Networking.Transport.Utilities.ReliableUtility/SharedContext>()
 inline int32_t ReliableUtility_AlignedSizeOf_TisSharedContext_t575CA37AEBD0F17E8E9C83FEF60ADBF9F718A9A0_mD98E333F02D354D9F0A02FA0C35C05AEE9B87739 (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))ReliableUtility_AlignedSizeOf_TisSharedContext_t575CA37AEBD0F17E8E9C83FEF60ADBF9F718A9A0_mD98E333F02D354D9F0A02FA0C35C05AEE9B87739_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))ReliableUtility_AlignedSizeOf_TisIl2CppFullySharedGenericStruct_mA19C452179C39DF40BF7E3CEAB86946A1689B8E6_gshared)(method);
 }
 // System.Int32 Unity.Networking.Transport.Utilities.ReliableUtility::AlignedSizeOf<Unity.Networking.Transport.Utilities.ReliableUtility/PacketInformation>()
 inline int32_t ReliableUtility_AlignedSizeOf_TisPacketInformation_t604624EEEDC7462F9A195751BEDA870DA1868BA2_mD6EDD07DCBAB2FCA68CA5BB60625D06BD7D7F19E (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))ReliableUtility_AlignedSizeOf_TisPacketInformation_t604624EEEDC7462F9A195751BEDA870DA1868BA2_mD6EDD07DCBAB2FCA68CA5BB60625D06BD7D7F19E_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))ReliableUtility_AlignedSizeOf_TisIl2CppFullySharedGenericStruct_mA19C452179C39DF40BF7E3CEAB86946A1689B8E6_gshared)(method);
 }
 // System.Int32 Unity.Networking.Transport.Utilities.ReliableUtility::AlignedSizeOf<Unity.Networking.Transport.Utilities.ReliableUtility/Context>()
 inline int32_t ReliableUtility_AlignedSizeOf_TisContext_t99C75CF38B33BF89D1AF089C3466321489BEA99A_m7B68590F46CFFDE67D46991BA2B5EBB1C0AACF14 (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))ReliableUtility_AlignedSizeOf_TisContext_t99C75CF38B33BF89D1AF089C3466321489BEA99A_m7B68590F46CFFDE67D46991BA2B5EBB1C0AACF14_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))ReliableUtility_AlignedSizeOf_TisIl2CppFullySharedGenericStruct_mA19C452179C39DF40BF7E3CEAB86946A1689B8E6_gshared)(method);
 }
 // System.Int32 Unity.Networking.Transport.Utilities.ReliableUtility::InitializeProcessContext(System.Byte*,System.Int32,Unity.Networking.Transport.Utilities.ReliableUtility/Parameters)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ReliableUtility_InitializeProcessContext_mC2B15D02CD6EBDC10DDEF0BA297875B08BC3A7A0 (uint8_t* ___buffer0, int32_t ___bufferLength1, Parameters_tF86D75FA18B8304AD7743BB4ACA3DC712AD331C5 ___param2, const RuntimeMethod* method) ;
@@ -9967,12 +9986,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Parameters_Validate_mC66FB923EB53B65BDC6
 // System.Void Unity.Networking.Transport.NetworkSettings::AddRawParameterStruct<Unity.Networking.Transport.Utilities.SimulatorUtility/Parameters>(T&)
 inline void NetworkSettings_AddRawParameterStruct_TisParameters_tA3860843BBE2D4923FE6901E43ABC3E1697F99F0_m64F5FC84D20185A19D6601A04F52C50DA6DF4A54 (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, Parameters_tA3860843BBE2D4923FE6901E43ABC3E1697F99F0* ___parameter0, const RuntimeMethod* method)
 {
-	((  void (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, Parameters_tA3860843BBE2D4923FE6901E43ABC3E1697F99F0*, const RuntimeMethod*))NetworkSettings_AddRawParameterStruct_TisParameters_tA3860843BBE2D4923FE6901E43ABC3E1697F99F0_m64F5FC84D20185A19D6601A04F52C50DA6DF4A54_gshared)(__this, ___parameter0, method);
+	((  void (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NetworkSettings_AddRawParameterStruct_TisIl2CppFullySharedGenericStruct_mEE7DB15FA8289654B287C3B2F45E21477661ACFC_gshared)((NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*)__this, (Il2CppFullySharedGenericStruct*)___parameter0, method);
 }
 // System.Boolean Unity.Networking.Transport.NetworkSettings::TryGet<Unity.Networking.Transport.Utilities.SimulatorUtility/Parameters>(T&)
 inline bool NetworkSettings_TryGet_TisParameters_tA3860843BBE2D4923FE6901E43ABC3E1697F99F0_m25BF9D875AB182834BBE5DD10FB021D046288E5E (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0* __this, Parameters_tA3860843BBE2D4923FE6901E43ABC3E1697F99F0* ___parameter0, const RuntimeMethod* method)
 {
-	return ((  bool (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, Parameters_tA3860843BBE2D4923FE6901E43ABC3E1697F99F0*, const RuntimeMethod*))NetworkSettings_TryGet_TisParameters_tA3860843BBE2D4923FE6901E43ABC3E1697F99F0_m25BF9D875AB182834BBE5DD10FB021D046288E5E_gshared)(__this, ___parameter0, method);
+	return ((  bool (*) (NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, const RuntimeMethod*))NetworkSettings_TryGet_TisIl2CppFullySharedGenericStruct_m8144E87E9DA39DBF759EA2BC43BBDB21538CF6A4_gshared)((NetworkSettings_tF4E51C6335E296671D0F783AF9497052A3D903E0*)__this, (Il2CppFullySharedGenericStruct*)___parameter0, method);
 }
 // System.Void Unity.Mathematics.Random::InitState(System.UInt32)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Random_InitState_mCDAC36582272DAF59478FEA71F1307CF0E58716D_inline (Random_tF24B964D3D5DE57D52CCDBF2E91ACE60F01F5F37* __this, uint32_t ___seed0, const RuntimeMethod* method) ;
@@ -9995,7 +10014,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UnsafeAtomicFreeList_get_IsCreated_mBAE6
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::AlignOf<System.Int32>()
 inline int32_t UnsafeUtility_AlignOf_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m274F833CD001C63E56A22D8F42C76CE8C6CC39DF (const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_AlignOf_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m274F833CD001C63E56A22D8F42C76CE8C6CC39DF_gshared)(method);
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_AlignOf_TisIl2CppFullySharedGenericStruct_m11D1023B182BE19CF0F1A57DBE826004A1B81A41_gshared)(method);
 }
 // System.Void Unity.Collections.LowLevel.Unsafe.UnsafeUtility::MemClear(System.Void*,System.Int64)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeUtility_MemClear_m6C4377117084A11A667A567BC2F5E606A632A7C1 (void* ___destination0, int64_t ___size1, const RuntimeMethod* method) ;
@@ -32096,7 +32115,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UnsafeAtomicFreeList_get_
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FunctionPointer_1__ctor_mE2BD136AA4DB860E4183D3293D3AE1A04B978DA3_gshared_inline (FunctionPointer_1_tE1DC1EC606FB2242FB50357BBA39BB4AEDECFCB2* __this, intptr_t ___ptr0, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FunctionPointer_1__ctor_mC619E78A7A6A909670DFFE07825842FDA7D178F7_gshared_inline (FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA* __this, intptr_t ___ptr0, const RuntimeMethod* method) 
 {
 	{
 		// _ptr = ptr;
@@ -32106,7 +32125,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FunctionPointer_1__ctor_mE2B
 		return;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR intptr_t FunctionPointer_1_get_Value_m71D7FF781C694A7C4EE28362DFC78D8DDFE9A105_gshared_inline (FunctionPointer_1_tE1DC1EC606FB2242FB50357BBA39BB4AEDECFCB2* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR intptr_t FunctionPointer_1_get_Value_mA1F1CB8C8E8B4B8030D49BFBEF55560DEB03FDD5_gshared_inline (FunctionPointer_1_t45E67205E6D22523A4FEF46DC7A859C5C14566BA* __this, const RuntimeMethod* method) 
 {
 	{
 		// public IntPtr Value => _ptr;

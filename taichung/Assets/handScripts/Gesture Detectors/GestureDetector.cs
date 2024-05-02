@@ -108,10 +108,10 @@ public class GestureDetector : MonoBehaviour
                 // we change another boolean to avoid a loop of event
                 done = true;
                 //Debug.Log("New found :" + currentGesture.name + "  fishcount :" + player[1].GetComponent<valuerecueve>().fishcount);
-               
+                text.text = currentGesture.name;
                 if (player.Length > 1)
                 {
-                    text.text = currentGesture.name + "  fishcount :" + player[1].GetComponent<valuerecueve>().fishvalue;
+                   // + "  fishcount :" + player[1].GetComponent<valuerecueve>().fishvalue;
                     if (player[1].GetComponent<valuerecueve>().Rsuccess == true && text.text == "buildup")
                     {
                         text.text = currentGesture.name + " " + "success ";
@@ -128,8 +128,8 @@ public class GestureDetector : MonoBehaviour
                         gesturesnumber = 0;
                         player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
                     }
-                }
-                else if (currentGesture.name == "house")
+                }               
+                else if (currentGesture.name == "Crab")
                 {
                     gesturesnumber = 1;
                     if (player.Length > 1)
@@ -137,8 +137,8 @@ public class GestureDetector : MonoBehaviour
                         gesturesnumber = 1;
                         player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
                     }
-                }
-                else if (currentGesture.name == "Crab")
+                }          
+                else if (currentGesture.name == "buildoff")
                 {
                     gesturesnumber = 2;
                     if (player.Length > 1)
@@ -147,7 +147,7 @@ public class GestureDetector : MonoBehaviour
                         player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
                     }
                 }
-                else if (currentGesture.name == "buildup")
+                else if (currentGesture.name == "fish")
                 {
                     gesturesnumber = 3;
                     if (player.Length > 1)
@@ -156,33 +156,7 @@ public class GestureDetector : MonoBehaviour
                         player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
                     }
                 }
-                else if (currentGesture.name == "buildoff")
-                {
-                    gesturesnumber = 4;
-                    if (player.Length > 1)
-                    {
-                        gesturesnumber = 4;
-                        player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
-                    }
-                }
-                else if (currentGesture.name == "fish")
-                {
-                    gesturesnumber = 5;
-                    if (player.Length > 1)
-                    {
-                        gesturesnumber = 5;
-                        player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
-                    }
-                }
-                else if (currentGesture.name == "start")
-                {
-                    gesturesnumber = 6;
-                    if (player.Length > 1)
-                    {
-                        gesturesnumber = 6;
-                        player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
-                    }
-                }
+               
                 // after that i will invoke what put in the Event if is present
                 currentGesture.onRecognized?.Invoke();
             }

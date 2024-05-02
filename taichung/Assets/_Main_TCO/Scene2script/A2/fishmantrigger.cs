@@ -22,7 +22,7 @@ public class fishmantrigger : MonoBehaviour
     {
         if (allowtrigger)
         {
-            if (other.tag == "thumb" && gesture.GetComponent<GestureDetector>().gesturesnumber == 5 && gesture.GetComponent<LGestureDetector>().gesturesnumber == 5)
+            if (other.tag == "thumb" && (gesture.GetComponent<GestureDetector>().gesturesnumber == 3 || gesture.GetComponent<LGestureDetector>().gesturesnumber == 3))
             {
                 if (players.Length > 1)
                 {
@@ -33,17 +33,7 @@ public class fishmantrigger : MonoBehaviour
 
             }
         }
-        if (other.tag == "fishtrigger" )
-        {
-            if (players.Length > 1)
-            {
-                players[1].GetComponent<valuerecueve>().fishvalue += 1;
-                
-                other.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f, 0.34f);
-            }
-            
-            
-        }
+
 
     }
 

@@ -115,16 +115,16 @@ struct Dictionary_2_t9FA6D82CAFC18769F7515BB51D1C56DAE09381C3;
 struct Dictionary_2_tE1603CE612C16451D1E56FF4D4859D4FE4087C28;
 // System.Collections.Generic.Dictionary`2<System.String,System.Int32>
 struct Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588;
-// System.EventHandler`1<System.Object>
-struct EventHandler_1_tD8C4A5BE1F7C91B1A7E99AE87AFD2F5432C38746;
 // System.EventHandler`1<System.Xml.Linq.XObjectChangeEventArgs>
 struct EventHandler_1_tE0D84DF4C8C855490459A777E36FC3EABB3BDED3;
-// System.Xml.Linq.XHashtable`1/ExtractKeyDelegate<System.Object>
-struct ExtractKeyDelegate_t9BADAD4BDEEE5FEB8CBD095F1EA307C3DA921583;
+// System.EventHandler`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct EventHandler_1_t5629179164803EFAE40F6023484C1674B4493577;
 // System.Xml.Linq.XHashtable`1/ExtractKeyDelegate<System.WeakReference>
 struct ExtractKeyDelegate_tF846F349E00D201712A8EEA75D152D36A0BA7FEB;
 // System.Xml.Linq.XHashtable`1/ExtractKeyDelegate<System.Xml.Linq.XName>
 struct ExtractKeyDelegate_t2CB1F734FE7BBA8353A1EB62ED27544C812D4424;
+// System.Xml.Linq.XHashtable`1/ExtractKeyDelegate<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct ExtractKeyDelegate_t0FCB0690B76E40F52DC9D05708A8FC488624E3CD;
 // System.Collections.Generic.IEnumerable`1<System.Xml.Linq.XAttribute>
 struct IEnumerable_1_t148EAB2068C5F48E82A9E0C643BB154B8BB34257;
 // System.Collections.Generic.IEnumerable`1<System.Xml.Linq.XNode>
@@ -139,12 +139,12 @@ struct List_1_t43EC7C138A17FAAD7120408F039923082A70301A;
 struct XHashtableState_tFAC50B260A012F2C1081F1809F2C832FC6D37766;
 // System.Xml.Linq.XHashtable`1/XHashtableState<System.Xml.Linq.XName>
 struct XHashtableState_tE5B2A2A8CF765BB629E8F6A37F5847751D6CA93C;
-// System.Xml.Linq.XHashtable`1<System.Object>
-struct XHashtable_1_t4C208624C5DAFD8858B7794DF15C5747BE4B3072;
 // System.Xml.Linq.XHashtable`1<System.WeakReference>
 struct XHashtable_1_t2CF715088068F7F6D5D06152C3D4A892E5B07E46;
 // System.Xml.Linq.XHashtable`1<System.Xml.Linq.XName>
 struct XHashtable_1_t2D08921459BE574EC1B2D723734AB79BE4CBE4B5;
+// System.Xml.Linq.XHashtable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0;
 // System.Byte[]
 struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
 // System.Char[]
@@ -165,6 +165,8 @@ struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
 struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
 // System.Xml.XmlAttribute[]
 struct XmlAttributeU5BU5D_tFC0CF817A6D2131D94AB6387E4EAE7D97B3FFC40;
+// Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType[]
+struct __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC;
 // System.ArgumentException
 struct ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263;
 // System.ArgumentNullException
@@ -1756,13 +1758,13 @@ struct XElement_t545ABA4BFF2045168A2E472A68FE2FCAA5E1F909  : public XContainer_t
 	XAttribute_tA7C325029CA82AA067080AEA6BDDC52E08987FDF* ___lastAttr_5;
 };
 
-// System.EventHandler`1<System.Object>
-struct EventHandler_1_tD8C4A5BE1F7C91B1A7E99AE87AFD2F5432C38746  : public MulticastDelegate_t
+// System.EventHandler`1<System.Xml.Linq.XObjectChangeEventArgs>
+struct EventHandler_1_tE0D84DF4C8C855490459A777E36FC3EABB3BDED3  : public MulticastDelegate_t
 {
 };
 
-// System.EventHandler`1<System.Xml.Linq.XObjectChangeEventArgs>
-struct EventHandler_1_tE0D84DF4C8C855490459A777E36FC3EABB3BDED3  : public MulticastDelegate_t
+// System.EventHandler`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct EventHandler_1_t5629179164803EFAE40F6023484C1674B4493577  : public MulticastDelegate_t
 {
 };
 
@@ -1862,20 +1864,20 @@ IL2CPP_EXTERN_C void NamespaceResolver_tD689E47F9BD1966D743E2401E5C7D387FC5A4E46
 
 // T System.Xml.Linq.XDocument::GetFirstNode<System.Object>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocument_GetFirstNode_TisRuntimeObject_mB6611AFC4A5D605253FE7A3ABB8BFCB6250CA705_gshared (XDocument_tFD643046CAF39623C3D8AA1693390D5EE08E82F1* __this, const RuntimeMethod* method) ;
-// System.Void System.Xml.Linq.XHashtable`1/ExtractKeyDelegate<System.Object>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExtractKeyDelegate__ctor_m71776A39921DB2D04FFE7A628E616EB1A27D7CA4_gshared (ExtractKeyDelegate_t9BADAD4BDEEE5FEB8CBD095F1EA307C3DA921583* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Void System.Xml.Linq.XHashtable`1<System.Object>::.ctor(System.Xml.Linq.XHashtable`1/ExtractKeyDelegate<TValue>,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XHashtable_1__ctor_m9D005D3C7669B409F1E1B4F0863596FD91DB335C_gshared (XHashtable_1_t4C208624C5DAFD8858B7794DF15C5747BE4B3072* __this, ExtractKeyDelegate_t9BADAD4BDEEE5FEB8CBD095F1EA307C3DA921583* ___extractKey0, int32_t ___capacity1, const RuntimeMethod* method) ;
-// System.Boolean System.Xml.Linq.XHashtable`1<System.Object>::TryGetValue(System.String,System.Int32,System.Int32,TValue&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XHashtable_1_TryGetValue_mB91947F216CD72CEE9C38FA8EF56137E42817080_gshared (XHashtable_1_t4C208624C5DAFD8858B7794DF15C5747BE4B3072* __this, String_t* ___key0, int32_t ___index1, int32_t ___count2, RuntimeObject** ___value3, const RuntimeMethod* method) ;
-// TValue System.Xml.Linq.XHashtable`1<System.Object>::Add(TValue)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XHashtable_1_Add_m4CE3AB9A64E8EBADEC48510932751F7C6D5581A0_gshared (XHashtable_1_t4C208624C5DAFD8858B7794DF15C5747BE4B3072* __this, RuntimeObject* ___value0, const RuntimeMethod* method) ;
+// System.Void System.Xml.Linq.XHashtable`1/ExtractKeyDelegate<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExtractKeyDelegate__ctor_m5E13E9801D274AB1B35D7859F4ED656AA3BD1593_gshared (ExtractKeyDelegate_t0FCB0690B76E40F52DC9D05708A8FC488624E3CD* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// System.Void System.Xml.Linq.XHashtable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Xml.Linq.XHashtable`1/ExtractKeyDelegate<TValue>,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XHashtable_1__ctor_m76AD29BB3D4A65A3071FDFCC0AD7F927FC6051B7_gshared (XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0* __this, ExtractKeyDelegate_t0FCB0690B76E40F52DC9D05708A8FC488624E3CD* ___extractKey0, int32_t ___capacity1, const RuntimeMethod* method) ;
+// System.Boolean System.Xml.Linq.XHashtable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::TryGetValue(System.String,System.Int32,System.Int32,TValue&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XHashtable_1_TryGetValue_m2AE37A0F57ADCA202E17A64CCAF4D0F37A070A24_gshared (XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0* __this, String_t* ___key0, int32_t ___index1, int32_t ___count2, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny* ___value3, const RuntimeMethod* method) ;
+// TValue System.Xml.Linq.XHashtable`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Add(TValue)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XHashtable_1_Add_mB4B8BF6CA81EE97D92FEE9D365A8FFB15168AE00_gshared (XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___value0, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
 // T System.Xml.Linq.XObject::Annotation<System.Object>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XObject_Annotation_TisRuntimeObject_mA59EF6437D825A65AED4C032B09C4AAEAD53631E_gshared (XObject_t1E867FBE626AA0DC878BDDFC1ABCF19F1A4B5C29* __this, const RuntimeMethod* method) ;
-// System.Void System.Array::Resize<System.Object>(T[]&,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Resize_TisRuntimeObject_mE8D92C287251BAF8256D85E5829F749359EC334E_gshared (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918** ___array0, int32_t ___newSize1, const RuntimeMethod* method) ;
-// System.Void System.EventHandler`1<System.Object>::Invoke(System.Object,TEventArgs)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EventHandler_1_Invoke_mBD72C04FF5A08A2EA93DFD21037CD1C27A48D07A_gshared_inline (EventHandler_1_tD8C4A5BE1F7C91B1A7E99AE87AFD2F5432C38746* __this, RuntimeObject* ___sender0, RuntimeObject* ___e1, const RuntimeMethod* method) ;
+// System.Void System.Array::Resize<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(T[]&,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Resize_TisIl2CppFullySharedGenericAny_m263FC41C8DB989397C43C86556D63CEBE13F4712_gshared (__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC** ___array0, int32_t ___newSize1, const RuntimeMethod* method) ;
+// System.Void System.EventHandler`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Invoke(System.Object,TEventArgs)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EventHandler_1_Invoke_mB8EBD394BCA1574F4FE9C1C05A4F246099C4DA48_gshared_inline (EventHandler_1_t5629179164803EFAE40F6023484C1674B4493577* __this, RuntimeObject* ___sender0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___e1, const RuntimeMethod* method) ;
 
 // System.Globalization.CultureInfo System.Globalization.CultureInfo::get_InvariantCulture()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* CultureInfo_get_InvariantCulture_mD1E96DC845E34B10F78CB744B0CB5D7D63CEB1E6 (const RuntimeMethod* method) ;
@@ -2165,19 +2167,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlatformNotSupportedException__ctor_mD5D
 // System.Void System.Xml.Linq.XHashtable`1/ExtractKeyDelegate<System.Xml.Linq.XName>::.ctor(System.Object,System.IntPtr)
 inline void ExtractKeyDelegate__ctor_m4BC044526C0E86F46ECECDB20498B945328ABDC4 (ExtractKeyDelegate_t2CB1F734FE7BBA8353A1EB62ED27544C812D4424* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (ExtractKeyDelegate_t2CB1F734FE7BBA8353A1EB62ED27544C812D4424*, RuntimeObject*, intptr_t, const RuntimeMethod*))ExtractKeyDelegate__ctor_m71776A39921DB2D04FFE7A628E616EB1A27D7CA4_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (ExtractKeyDelegate_t0FCB0690B76E40F52DC9D05708A8FC488624E3CD*, RuntimeObject*, intptr_t, const RuntimeMethod*))ExtractKeyDelegate__ctor_m5E13E9801D274AB1B35D7859F4ED656AA3BD1593_gshared)((ExtractKeyDelegate_t0FCB0690B76E40F52DC9D05708A8FC488624E3CD*)__this, ___object0, ___method1, method);
 }
 // System.Void System.Xml.Linq.XHashtable`1<System.Xml.Linq.XName>::.ctor(System.Xml.Linq.XHashtable`1/ExtractKeyDelegate<TValue>,System.Int32)
 inline void XHashtable_1__ctor_m2BF64564E1E2591557C43E6257A7C5A27C315CC3 (XHashtable_1_t2D08921459BE574EC1B2D723734AB79BE4CBE4B5* __this, ExtractKeyDelegate_t2CB1F734FE7BBA8353A1EB62ED27544C812D4424* ___extractKey0, int32_t ___capacity1, const RuntimeMethod* method)
 {
-	((  void (*) (XHashtable_1_t2D08921459BE574EC1B2D723734AB79BE4CBE4B5*, ExtractKeyDelegate_t2CB1F734FE7BBA8353A1EB62ED27544C812D4424*, int32_t, const RuntimeMethod*))XHashtable_1__ctor_m9D005D3C7669B409F1E1B4F0863596FD91DB335C_gshared)(__this, ___extractKey0, ___capacity1, method);
+	((  void (*) (XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0*, ExtractKeyDelegate_t0FCB0690B76E40F52DC9D05708A8FC488624E3CD*, int32_t, const RuntimeMethod*))XHashtable_1__ctor_m76AD29BB3D4A65A3071FDFCC0AD7F927FC6051B7_gshared)((XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0*)__this, (ExtractKeyDelegate_t0FCB0690B76E40F52DC9D05708A8FC488624E3CD*)___extractKey0, ___capacity1, method);
 }
 // System.Xml.Linq.XNamespace System.Xml.Linq.XNamespace::EnsureNamespace(System.WeakReference&,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XNamespace_t86B6F8515F5E20D387B83EBDE0890C4559A4012C* XNamespace_EnsureNamespace_mFBE191305CF760E4F2FC15B3E3DA1BFAD147A55C (WeakReference_tD4B0518CE911FFD9FAAB3FCD492644A354312D8E** ___refNmsp0, String_t* ___namespaceName1, const RuntimeMethod* method) ;
 // System.Boolean System.Xml.Linq.XHashtable`1<System.Xml.Linq.XName>::TryGetValue(System.String,System.Int32,System.Int32,TValue&)
 inline bool XHashtable_1_TryGetValue_mE089B0005F28691948D766336F3F88084BBF1519 (XHashtable_1_t2D08921459BE574EC1B2D723734AB79BE4CBE4B5* __this, String_t* ___key0, int32_t ___index1, int32_t ___count2, XName_tAF6D9533A7D11AC27118F656985AC325C2A50E5C** ___value3, const RuntimeMethod* method)
 {
-	return ((  bool (*) (XHashtable_1_t2D08921459BE574EC1B2D723734AB79BE4CBE4B5*, String_t*, int32_t, int32_t, XName_tAF6D9533A7D11AC27118F656985AC325C2A50E5C**, const RuntimeMethod*))XHashtable_1_TryGetValue_mB91947F216CD72CEE9C38FA8EF56137E42817080_gshared)(__this, ___key0, ___index1, ___count2, ___value3, method);
+	return ((  bool (*) (XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0*, String_t*, int32_t, int32_t, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))XHashtable_1_TryGetValue_m2AE37A0F57ADCA202E17A64CCAF4D0F37A070A24_gshared)((XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0*)__this, ___key0, ___index1, ___count2, (Il2CppFullySharedGenericAny*)___value3, method);
 }
 // System.String System.String::Substring(System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Substring_mB1D94F47935D22E130FF2C01DBB6A4135FBB76CE (String_t* __this, int32_t ___startIndex0, int32_t ___length1, const RuntimeMethod* method) ;
@@ -2186,22 +2188,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XName__ctor_mA1D99FDB997DE7A0178011EB30E
 // TValue System.Xml.Linq.XHashtable`1<System.Xml.Linq.XName>::Add(TValue)
 inline XName_tAF6D9533A7D11AC27118F656985AC325C2A50E5C* XHashtable_1_Add_m9A73638569B4DE63ED5184845B303BC6B3AA24D1 (XHashtable_1_t2D08921459BE574EC1B2D723734AB79BE4CBE4B5* __this, XName_tAF6D9533A7D11AC27118F656985AC325C2A50E5C* ___value0, const RuntimeMethod* method)
 {
-	return ((  XName_tAF6D9533A7D11AC27118F656985AC325C2A50E5C* (*) (XHashtable_1_t2D08921459BE574EC1B2D723734AB79BE4CBE4B5*, XName_tAF6D9533A7D11AC27118F656985AC325C2A50E5C*, const RuntimeMethod*))XHashtable_1_Add_m4CE3AB9A64E8EBADEC48510932751F7C6D5581A0_gshared)(__this, ___value0, method);
+	XName_tAF6D9533A7D11AC27118F656985AC325C2A50E5C* il2cppRetVal;
+	((  void (*) (XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny*, const RuntimeMethod*))XHashtable_1_Add_mB4B8BF6CA81EE97D92FEE9D365A8FFB15168AE00_gshared)((XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0*)__this, (Il2CppFullySharedGenericAny)___value0, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Xml.Linq.XHashtable`1/ExtractKeyDelegate<System.WeakReference>::.ctor(System.Object,System.IntPtr)
 inline void ExtractKeyDelegate__ctor_mD091E7D1BD644B5AD183EEC9A59091552A22C99F (ExtractKeyDelegate_tF846F349E00D201712A8EEA75D152D36A0BA7FEB* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (ExtractKeyDelegate_tF846F349E00D201712A8EEA75D152D36A0BA7FEB*, RuntimeObject*, intptr_t, const RuntimeMethod*))ExtractKeyDelegate__ctor_m71776A39921DB2D04FFE7A628E616EB1A27D7CA4_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (ExtractKeyDelegate_t0FCB0690B76E40F52DC9D05708A8FC488624E3CD*, RuntimeObject*, intptr_t, const RuntimeMethod*))ExtractKeyDelegate__ctor_m5E13E9801D274AB1B35D7859F4ED656AA3BD1593_gshared)((ExtractKeyDelegate_t0FCB0690B76E40F52DC9D05708A8FC488624E3CD*)__this, ___object0, ___method1, method);
 }
 // System.Void System.Xml.Linq.XHashtable`1<System.WeakReference>::.ctor(System.Xml.Linq.XHashtable`1/ExtractKeyDelegate<TValue>,System.Int32)
 inline void XHashtable_1__ctor_m2BB5A3D4757552F324DEF1DA25BF2AA0E1350B35 (XHashtable_1_t2CF715088068F7F6D5D06152C3D4A892E5B07E46* __this, ExtractKeyDelegate_tF846F349E00D201712A8EEA75D152D36A0BA7FEB* ___extractKey0, int32_t ___capacity1, const RuntimeMethod* method)
 {
-	((  void (*) (XHashtable_1_t2CF715088068F7F6D5D06152C3D4A892E5B07E46*, ExtractKeyDelegate_tF846F349E00D201712A8EEA75D152D36A0BA7FEB*, int32_t, const RuntimeMethod*))XHashtable_1__ctor_m9D005D3C7669B409F1E1B4F0863596FD91DB335C_gshared)(__this, ___extractKey0, ___capacity1, method);
+	((  void (*) (XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0*, ExtractKeyDelegate_t0FCB0690B76E40F52DC9D05708A8FC488624E3CD*, int32_t, const RuntimeMethod*))XHashtable_1__ctor_m76AD29BB3D4A65A3071FDFCC0AD7F927FC6051B7_gshared)((XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0*)__this, (ExtractKeyDelegate_t0FCB0690B76E40F52DC9D05708A8FC488624E3CD*)___extractKey0, ___capacity1, method);
 }
 // System.Boolean System.Xml.Linq.XHashtable`1<System.WeakReference>::TryGetValue(System.String,System.Int32,System.Int32,TValue&)
 inline bool XHashtable_1_TryGetValue_m6DCEE793F3BC47A51E07360869AC2BB4A4A8D554 (XHashtable_1_t2CF715088068F7F6D5D06152C3D4A892E5B07E46* __this, String_t* ___key0, int32_t ___index1, int32_t ___count2, WeakReference_tD4B0518CE911FFD9FAAB3FCD492644A354312D8E** ___value3, const RuntimeMethod* method)
 {
-	return ((  bool (*) (XHashtable_1_t2CF715088068F7F6D5D06152C3D4A892E5B07E46*, String_t*, int32_t, int32_t, WeakReference_tD4B0518CE911FFD9FAAB3FCD492644A354312D8E**, const RuntimeMethod*))XHashtable_1_TryGetValue_mB91947F216CD72CEE9C38FA8EF56137E42817080_gshared)(__this, ___key0, ___index1, ___count2, ___value3, method);
+	return ((  bool (*) (XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0*, String_t*, int32_t, int32_t, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType&*/Il2CppFullySharedGenericAny*, const RuntimeMethod*))XHashtable_1_TryGetValue_m2AE37A0F57ADCA202E17A64CCAF4D0F37A070A24_gshared)((XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0*)__this, ___key0, ___index1, ___count2, (Il2CppFullySharedGenericAny*)___value3, method);
 }
 // System.Int32 System.String::CompareOrdinal(System.String,System.Int32,System.String,System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t String_CompareOrdinal_m8940CFAE90021ED8DA3F2DF8226941C9EEB2E32D (String_t* ___strA0, int32_t ___indexA1, String_t* ___strB2, int32_t ___indexB3, int32_t ___length4, const RuntimeMethod* method) ;
@@ -2216,7 +2220,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakReference__ctor_m5F9E2F970CD85965A00
 // TValue System.Xml.Linq.XHashtable`1<System.WeakReference>::Add(TValue)
 inline WeakReference_tD4B0518CE911FFD9FAAB3FCD492644A354312D8E* XHashtable_1_Add_m63A04BAFB51DFCB75B2A3C728413D5BA90546D03 (XHashtable_1_t2CF715088068F7F6D5D06152C3D4A892E5B07E46* __this, WeakReference_tD4B0518CE911FFD9FAAB3FCD492644A354312D8E* ___value0, const RuntimeMethod* method)
 {
-	return ((  WeakReference_tD4B0518CE911FFD9FAAB3FCD492644A354312D8E* (*) (XHashtable_1_t2CF715088068F7F6D5D06152C3D4A892E5B07E46*, WeakReference_tD4B0518CE911FFD9FAAB3FCD492644A354312D8E*, const RuntimeMethod*))XHashtable_1_Add_m4CE3AB9A64E8EBADEC48510932751F7C6D5581A0_gshared)(__this, ___value0, method);
+	WeakReference_tD4B0518CE911FFD9FAAB3FCD492644A354312D8E* il2cppRetVal;
+	((  void (*) (XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny*, const RuntimeMethod*))XHashtable_1_Add_mB4B8BF6CA81EE97D92FEE9D365A8FFB15168AE00_gshared)((XHashtable_1_t781B821CC6AC13BED190536310819EB7FD1463D0*)__this, (Il2CppFullySharedGenericAny)___value0, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Boolean System.Xml.Linq.XNamespace::op_Inequality(System.Xml.Linq.XNamespace,System.Xml.Linq.XNamespace)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XNamespace_op_Inequality_m72707CE08FC24456A262D7C72ECC042531A1918C (XNamespace_t86B6F8515F5E20D387B83EBDE0890C4559A4012C* ___left0, XNamespace_t86B6F8515F5E20D387B83EBDE0890C4559A4012C* ___right1, const RuntimeMethod* method) ;
@@ -2242,7 +2248,7 @@ inline BaseUriAnnotation_t3E8EF7050D4B9D097C974B45CF5AB93DDC04A350* XObject_Anno
 // System.Void System.Array::Resize<System.Object>(T[]&,System.Int32)
 inline void Array_Resize_TisRuntimeObject_mE8D92C287251BAF8256D85E5829F749359EC334E (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918** ___array0, int32_t ___newSize1, const RuntimeMethod* method)
 {
-	((  void (*) (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918**, int32_t, const RuntimeMethod*))Array_Resize_TisRuntimeObject_mE8D92C287251BAF8256D85E5829F749359EC334E_gshared)(___array0, ___newSize1, method);
+	((  void (*) (__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC**, int32_t, const RuntimeMethod*))Array_Resize_TisIl2CppFullySharedGenericAny_m263FC41C8DB989397C43C86556D63CEBE13F4712_gshared)((__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC**)___array0, ___newSize1, method);
 }
 // System.Type System.Object::GetType()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3 (RuntimeObject* __this, const RuntimeMethod* method) ;
@@ -2261,7 +2267,7 @@ inline XObjectChangeAnnotation_t15A3BFA1AFCED540C4FDE5CD931F282377BD5AE5* XObjec
 // System.Void System.EventHandler`1<System.Xml.Linq.XObjectChangeEventArgs>::Invoke(System.Object,TEventArgs)
 inline void EventHandler_1_Invoke_m3965D4B8E60E8C8AFE3565DF3E9081B3834E46AA_inline (EventHandler_1_tE0D84DF4C8C855490459A777E36FC3EABB3BDED3* __this, RuntimeObject* ___sender0, XObjectChangeEventArgs_tD06978690A72B3D2B986EBA7E166B736F909B55F* ___e1, const RuntimeMethod* method)
 {
-	((  void (*) (EventHandler_1_tE0D84DF4C8C855490459A777E36FC3EABB3BDED3*, RuntimeObject*, XObjectChangeEventArgs_tD06978690A72B3D2B986EBA7E166B736F909B55F*, const RuntimeMethod*))EventHandler_1_Invoke_mBD72C04FF5A08A2EA93DFD21037CD1C27A48D07A_gshared_inline)(__this, ___sender0, ___e1, method);
+	((  void (*) (EventHandler_1_t5629179164803EFAE40F6023484C1674B4493577*, RuntimeObject*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))EventHandler_1_Invoke_mB8EBD394BCA1574F4FE9C1C05A4F246099C4DA48_gshared_inline)((EventHandler_1_t5629179164803EFAE40F6023484C1674B4493577*)__this, ___sender0, (Il2CppFullySharedGenericAny)___e1, method);
 }
 // System.Void System.Xml.Linq.BaseUriAnnotation::.ctor(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseUriAnnotation__ctor_m63EAC1E4CB30B2C91C25D20C36FE9821D6F02865 (BaseUriAnnotation_t3E8EF7050D4B9D097C974B45CF5AB93DDC04A350* __this, String_t* ___baseUri0, const RuntimeMethod* method) ;
@@ -13388,8 +13394,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t XmlWriterSettings_get_Nam
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EventHandler_1_Invoke_mBD72C04FF5A08A2EA93DFD21037CD1C27A48D07A_gshared_inline (EventHandler_1_tD8C4A5BE1F7C91B1A7E99AE87AFD2F5432C38746* __this, RuntimeObject* ___sender0, RuntimeObject* ___e1, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EventHandler_1_Invoke_mB8EBD394BCA1574F4FE9C1C05A4F246099C4DA48_gshared_inline (EventHandler_1_t5629179164803EFAE40F6023484C1674B4493577* __this, RuntimeObject* ___sender0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___e1, const RuntimeMethod* method) 
 {
-	typedef void (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
+	typedef void (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___sender0, ___e1, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
 }

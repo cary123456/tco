@@ -17,6 +17,7 @@ public class followlerp : MonoBehaviour
         if (target.activeSelf == false)
         {
             this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            this.gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
             Debug.Log("true");
         }
         else

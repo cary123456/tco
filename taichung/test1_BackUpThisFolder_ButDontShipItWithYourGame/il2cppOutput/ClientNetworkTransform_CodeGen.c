@@ -29,10 +29,10 @@ static Il2CppMethodPointer s_methodPointers[4] =
 };
 static const int32_t s_InvokerIndices[4] = 
 {
-	12756,
-	12756,
-	12756,
-	12570,
+	4803,
+	4803,
+	4803,
+	4703,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_ClientNetworkTransform_CodeGenModule;
 const Il2CppCodeGenModule g_ClientNetworkTransform_CodeGenModule = 

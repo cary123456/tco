@@ -83,6 +83,7 @@ public class OVRMeshRenderer : MonoBehaviour
     public GameObject mL;
     public GameObject mR;
     public GameObject pR;
+    public GameObject pL;
     public GameObject[] player;
     private void Awake()
     {
@@ -189,6 +190,8 @@ public class OVRMeshRenderer : MonoBehaviour
 
         pR.transform.parent = pinky[1].gameObject.transform;
         pR.transform.localPosition = new Vector3(0, 0, 0);
+        pL.transform.parent = pinky[3].gameObject.transform;
+        pL.transform.localPosition = new Vector3(0, 0, 0);
         _skinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
         if (!_skinnedMeshRenderer)
         {
