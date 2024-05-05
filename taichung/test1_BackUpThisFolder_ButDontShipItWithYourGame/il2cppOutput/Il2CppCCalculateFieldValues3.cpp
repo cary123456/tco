@@ -34055,58 +34055,68 @@ struct HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D  : public MonoBehavi
 	int32_t ___BubbleKey_6;
 	// UnityEngine.KeyCode HouseArray::FishKey
 	int32_t ___FishKey_7;
+	// UnityEngine.KeyCode HouseArray::WordKey
+	int32_t ___WordKey_8;
 	// UnityEngine.GameObject[] HouseArray::house
-	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___house_8;
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___house_9;
 	// System.Boolean HouseArray::houseenable
-	bool ___houseenable_9;
+	bool ___houseenable_10;
 	// UnityEngine.GameObject[] HouseArray::crab
-	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___crab_10;
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___crab_11;
 	// System.Boolean HouseArray::crabenable
-	bool ___crabenable_11;
+	bool ___crabenable_12;
 	// UnityEngine.GameObject[] HouseArray::bubble
-	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___bubble_12;
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___bubble_13;
 	// System.Boolean HouseArray::bubbleenable
-	bool ___bubbleenable_13;
+	bool ___bubbleenable_14;
 	// UnityEngine.GameObject[] HouseArray::fish
-	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___fish_14;
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___fish_15;
 	// System.Boolean HouseArray::fishenable
-	bool ___fishenable_15;
+	bool ___fishenable_16;
+	// UnityEngine.GameObject[] HouseArray::word
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___word_17;
+	// System.Boolean HouseArray::wordenable
+	bool ___wordenable_18;
+	// System.Int32 HouseArray::wordselect
+	int32_t ___wordselect_19;
 	// UnityEngine.Transform HouseArray::pos
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___pos_16;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___pos_20;
+	// UnityEngine.Transform HouseArray::parentcanvas
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___parentcanvas_21;
 	// System.Int32 HouseArray::x
-	int32_t ___x_17;
+	int32_t ___x_22;
 	// System.Int32 HouseArray::z
-	int32_t ___z_18;
+	int32_t ___z_23;
 	// System.Single HouseArray::k
-	float ___k_19;
+	float ___k_24;
 	// System.Int32 HouseArray::buildpertime
-	int32_t ___buildpertime_20;
+	int32_t ___buildpertime_25;
 	// System.Single[] HouseArray::housescale
-	SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* ___housescale_21;
+	SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* ___housescale_26;
 	// System.Single[] HouseArray::crabscale
-	SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* ___crabscale_22;
+	SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* ___crabscale_27;
 	// System.Single[] HouseArray::bubblescale
-	SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* ___bubblescale_23;
+	SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* ___bubblescale_28;
 	// System.Single HouseArray::fishspeed
-	float ___fishspeed_24;
+	float ___fishspeed_29;
 	// System.Single HouseArray::fishlifetime
-	float ___fishlifetime_25;
+	float ___fishlifetime_30;
 	// System.Int32 HouseArray::housecount
-	int32_t ___housecount_26;
+	int32_t ___housecount_31;
 	// System.Single HouseArray::offset
-	float ___offset_27;
+	float ___offset_32;
 	// System.Collections.Generic.List`1<UnityEngine.Vector2> HouseArray::buildarraytemp
-	List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* ___buildarraytemp_28;
+	List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* ___buildarraytemp_33;
 	// System.Int32[] HouseArray::blockhouseX
-	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___blockhouseX_29;
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___blockhouseX_34;
 	// System.Int32[] HouseArray::blockhouseZ
-	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___blockhouseZ_30;
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___blockhouseZ_35;
 	// System.Int32[,] HouseArray::buildarray
-	Int32U5BU2CU5D_t46F2694E7DAD7B2B05C940EC5B9DE04E40D0516F* ___buildarray_31;
+	Int32U5BU2CU5D_t46F2694E7DAD7B2B05C940EC5B9DE04E40D0516F* ___buildarray_36;
 	// System.Boolean HouseArray::gesturetigger
-	bool ___gesturetigger_32;
+	bool ___gesturetigger_37;
 	// System.Boolean HouseArray::flip
-	bool ___flip_33;
+	bool ___flip_38;
 };
 
 // OculusSampleFramework.Interactable
@@ -36681,14 +36691,26 @@ struct move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C  : public MonoBehaviour_t
 	float ___speed_7;
 	// System.Single move2::acceleration
 	float ___acceleration_8;
-	// System.Boolean move2::test
-	bool ___test_9;
-	// System.Single move2::value
-	float ___value_10;
-	// System.Boolean move2::mouseopen
-	bool ___mouseopen_11;
-	// UnityEngine.Transform move2::a
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___a_12;
+	// UnityEngine.KeyCode move2::speedUp
+	int32_t ___speedUp_9;
+	// UnityEngine.KeyCode move2::moveUp
+	int32_t ___moveUp_10;
+	// UnityEngine.KeyCode move2::moveDown
+	int32_t ___moveDown_11;
+	// UnityEngine.KeyCode move2::mouseLock
+	int32_t ___mouseLock_12;
+	// UnityEngine.KeyCode move2::moveForward
+	int32_t ___moveForward_13;
+	// UnityEngine.KeyCode move2::moveBackward
+	int32_t ___moveBackward_14;
+	// UnityEngine.KeyCode move2::moveLeft
+	int32_t ___moveLeft_15;
+	// UnityEngine.KeyCode move2::moveRight
+	int32_t ___moveRight_16;
+	// System.Boolean move2::locked
+	bool ___locked_17;
+	// System.Int32 move2::i
+	int32_t ___i_18;
 };
 
 // movment
@@ -40846,15 +40868,15 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9383[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9384[21] = 
 {
 	static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___crab_4)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___crabposition_5)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___crabmanager_6)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___crabs_7)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___crabb_8)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___SummonCrabs_9)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___crabfollow_10)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___onetime_11)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___crabcount_12)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___headset_13)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___raycast_14)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___VRcam_15)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___maincamera_16)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___fadeui_17)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___lookcount_18)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___Rvfx_19)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___Lvfx_20)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___vfxcount_21)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___mainncamera_22)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___player_23)),static_cast<int32_t>(offsetof(hotkey_t240AB166F662E39FDC00DB4EA2FAF20C9D387F16, ___fish_24)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9385[30] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9385[35] = 
 {
-	static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___HouseKey_4)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___CrabKey_5)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___BubbleKey_6)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___FishKey_7)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___house_8)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___houseenable_9)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___crab_10)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___crabenable_11)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___bubble_12)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___bubbleenable_13)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___fish_14)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___fishenable_15)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___pos_16)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___x_17)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___z_18)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___k_19)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___buildpertime_20)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___housescale_21)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___crabscale_22)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___bubblescale_23)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___fishspeed_24)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___fishlifetime_25)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___housecount_26)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___offset_27)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___buildarraytemp_28)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___blockhouseX_29)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___blockhouseZ_30)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___buildarray_31)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___gesturetigger_32)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___flip_33)),};
+	static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___HouseKey_4)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___CrabKey_5)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___BubbleKey_6)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___FishKey_7)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___WordKey_8)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___house_9)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___houseenable_10)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___crab_11)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___crabenable_12)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___bubble_13)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___bubbleenable_14)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___fish_15)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___fishenable_16)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___word_17)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___wordenable_18)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___wordselect_19)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___pos_20)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___parentcanvas_21)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___x_22)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___z_23)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___k_24)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___buildpertime_25)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___housescale_26)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___crabscale_27)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___bubblescale_28)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___fishspeed_29)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___fishlifetime_30)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___housecount_31)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___offset_32)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___buildarraytemp_33)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___blockhouseX_34)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___blockhouseZ_35)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___buildarray_36)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___gesturetigger_37)),static_cast<int32_t>(offsetof(HouseArray_t14F12C5549533D2D3E45D2B7858DA53844F3827D, ___flip_38)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9387[2] = 
 {
 	static_cast<int32_t>(offsetof(lookat_t87E175E2932AB606C66DFAFEB6B56DF8F5914305, ___target_4)),static_cast<int32_t>(offsetof(lookat_t87E175E2932AB606C66DFAFEB6B56DF8F5914305, ___look_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9388[9] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9388[15] = 
 {
-	static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___turn_4)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___sensitivity_5)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___deltaMove_6)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___speed_7)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___acceleration_8)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___test_9)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___value_10)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___mouseopen_11)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___a_12)),};
+	static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___turn_4)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___sensitivity_5)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___deltaMove_6)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___speed_7)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___acceleration_8)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___speedUp_9)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___moveUp_10)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___moveDown_11)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___mouseLock_12)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___moveForward_13)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___moveBackward_14)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___moveLeft_15)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___moveRight_16)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___locked_17)),static_cast<int32_t>(offsetof(move2_tCE0090017EB6E8EF3C714441F4493184B31DB16C, ___i_18)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9389[13] = 
 {
 	static_cast<int32_t>(offsetof(movment_t92CF0F14B5EA5FD53D6668220CC2A95FE6014DC2, ___speed_4)),static_cast<int32_t>(offsetof(movment_t92CF0F14B5EA5FD53D6668220CC2A95FE6014DC2, ___acceleration_5)),static_cast<int32_t>(offsetof(movment_t92CF0F14B5EA5FD53D6668220CC2A95FE6014DC2, ___rotationSpeed_6)),static_cast<int32_t>(offsetof(movment_t92CF0F14B5EA5FD53D6668220CC2A95FE6014DC2, ___boostMultiplier_7)),static_cast<int32_t>(offsetof(movment_t92CF0F14B5EA5FD53D6668220CC2A95FE6014DC2, ___xRotationSpeed_8)),static_cast<int32_t>(offsetof(movment_t92CF0F14B5EA5FD53D6668220CC2A95FE6014DC2, ___yRotationSpeed_9)),static_cast<int32_t>(offsetof(movment_t92CF0F14B5EA5FD53D6668220CC2A95FE6014DC2, ___zRotationSpeed_10)),static_cast<int32_t>(offsetof(movment_t92CF0F14B5EA5FD53D6668220CC2A95FE6014DC2, ___objectToRotate_11)),static_cast<int32_t>(offsetof(movment_t92CF0F14B5EA5FD53D6668220CC2A95FE6014DC2, ___ball_12)),static_cast<int32_t>(offsetof(movment_t92CF0F14B5EA5FD53D6668220CC2A95FE6014DC2, ___flag_13)),static_cast<int32_t>(offsetof(movment_t92CF0F14B5EA5FD53D6668220CC2A95FE6014DC2, ___smooth_14)),static_cast<int32_t>(offsetof(movment_t92CF0F14B5EA5FD53D6668220CC2A95FE6014DC2, ___vox_15)),static_cast<int32_t>(offsetof(movment_t92CF0F14B5EA5FD53D6668220CC2A95FE6014DC2, ___voy_16)),};

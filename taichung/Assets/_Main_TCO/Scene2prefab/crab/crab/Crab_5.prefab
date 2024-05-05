@@ -296,7 +296,7 @@ VisualEffect:
       - m_Value: 1500
         m_Name: amount(ora)
         m_Overridden: 1
-      - m_Value: 2
+      - m_Value: 3
         m_Name: Size
         m_Overridden: 1
       - m_Value: 0.2

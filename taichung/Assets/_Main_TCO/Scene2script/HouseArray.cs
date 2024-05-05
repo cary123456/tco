@@ -36,6 +36,8 @@ public class HouseArray : MonoBehaviour
     public float[] bubblescale;
     public float fishspeed;
     public float fishlifetime;
+    public float[] wordscale;
+    public Vector3 wordrotate;
     public int housecount;
     public float offset;
     public List<Vector2> buildarraytemp;
@@ -88,8 +90,9 @@ public class HouseArray : MonoBehaviour
 
                 if(buildarray[Xpos,Zpos] != 1)
                 {
-                    Instantiate(house[rand], pos.position + new Vector3 (Xpos*k + houseoffset, 0, Zpos*k), Quaternion.identity, pos);
+                    GameObject houses = Instantiate(house[rand], pos.position + new Vector3 (Xpos*k + houseoffset, 0, Zpos*k), Quaternion.identity, parentcanvas);
                     buildarray[Xpos,Zpos] = 1;
+                    houses.transform.Rotate(wordrotate);
                     buildarraytemp.Add( new Vector2(Xpos,Zpos));
                     buildarraytemp.ToArray();
                     housecount++;
@@ -118,7 +121,7 @@ public class HouseArray : MonoBehaviour
                 int Xpos = Random.Range(0,x);
                 int Zpos = Random.Range(0,z);
                 int rand = Random.Range(0,fish.Length);
-                int speed = Random.Range(1,3);
+                //int speed = Random.Range(1,3);
 
                 float fishspeedtemp = fishspeed;
 
@@ -134,7 +137,7 @@ public class HouseArray : MonoBehaviour
                     }
                     //buildarray[Xpos,Zpos] = 0;
                     //housecount++;
-                    fishman.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, speed * fishspeedtemp);
+                    fishman.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, fishspeedtemp);
                     Destroy(fishman, fishlifetime);
                     
                 }
@@ -225,12 +228,15 @@ public class HouseArray : MonoBehaviour
                 float houseoffset = Random.Range(-offset, offset);
                 int Xpos = Random.Range(0,x);
                 int Zpos = Random.Range(0,z);
+                int rand = Random.Range(0, word.Length);
+                int s = Random.Range(0, wordscale.Length);
 
 
-                if(buildarray[Xpos,Zpos] != 1)
+                if (buildarray[Xpos,Zpos] != 1)
                 {
-                    GameObject wordtemp = Instantiate(word[wordselect], pos.position + new Vector3 (Xpos*k + houseoffset, 0, Zpos*k), Quaternion.identity, parentcanvas);
-                    wordtemp.transform.Rotate(90 ,0 ,180);
+                    GameObject wordtemp = Instantiate(word[rand], pos.position + new Vector3 (0, Xpos*k + houseoffset, Zpos*k ), Quaternion.identity, parentcanvas);
+                    wordtemp.transform.Rotate(wordrotate);
+                    wordtemp.transform.localScale = new Vector3(wordscale[s], wordscale[s], wordscale[s]);
                     buildarray[Xpos,Zpos] = 1;
                     buildarraytemp.Add( new Vector2(Xpos,Zpos));
                     buildarraytemp.ToArray();

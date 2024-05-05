@@ -20,5 +20,6 @@ public class test2 : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, camTarget.position, pLerp);
         transform.rotation = Quaternion.Lerp(transform.rotation, camTarget.rotation, rLerp);
 
+        Debug.Log(camTarget.rotation);
     }
 }

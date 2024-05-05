@@ -208,18 +208,21 @@ public class hotkey : MonoBehaviour
             {
                 Destroy(GameObject.FindWithTag("crabs"));
             }
-            if (GameObject.FindWithTag("building"))
+            if (GameObject.FindWithTag("building") != null)
             {
                 Destroy(GameObject.FindWithTag("building"));
             }
-            if (GameObject.FindWithTag("ball"))
+            if (GameObject.FindWithTag("ball") != null)
             {
                 Destroy(GameObject.FindWithTag("ball"));
             }
-            if (GameObject.FindWithTag("buildinglo"))
+            if (GameObject.FindWithTag("buildinglo") != null)
             {
                 Destroy(GameObject.FindWithTag("buildinglo"));
             }
+            fish.SetActive(false);
+ 
+            
         }
         if (Input.GetKeyUp(KeyCode.F1))
         {

@@ -74,7 +74,7 @@ public class midtri : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
-        if (other.tag == "midfinger")
+        if (other.tag == "midfinger" || (gesture.GetComponent<GestureDetector>().gesturesnumber == 0 || gesture.GetComponent<LGestureDetector>().gesturesnumber == 0))
         {
             colddownruntime = 0;
             holdruntime = 0;

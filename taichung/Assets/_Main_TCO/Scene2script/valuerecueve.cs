@@ -297,36 +297,48 @@ public class valuerecueve : NetworkBehaviour
             Rruntime += Time.deltaTime;
             if (Rruntime >= 1)
             {
-                if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
+                if (buildR)
                 {
-                    headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
-                }               
+                    if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
+                    {
+                        headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
+                    }
+                    buildR = false;
+                }
+                              
             }
 
         }
         else
         {
             Rruntime = 0;
+            buildR = true;
         }
 
         if (handLvalue.Value == 2)
         {
             Lruntime += Time.deltaTime;
-            if (Lruntime >= 1)
+            if (buildL)
             {
-               
-                if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
+                if (Lruntime >= 1)
                 {
-                    
-                    headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
+
+                    if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
+                    {
+
+                        headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
+                    }
+
                 }
-                
+                buildL = false;
             }
+           
 
         }
         else
         {
             Lruntime = 0;
+            buildL = true;
         }
 
 
@@ -354,6 +366,10 @@ public class valuerecueve : NetworkBehaviour
             if (GameObject.FindWithTag("buildinglo"))
             {
                 Destroy(GameObject.FindWithTag("buildinglo"));
+            }
+            if (GameObject.FindWithTag("fish"))
+            {
+                GameObject.FindWithTag("fish").SetActive(false);
             }
         }
 

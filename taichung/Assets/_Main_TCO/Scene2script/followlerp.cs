@@ -23,6 +23,7 @@ public class followlerp : MonoBehaviour
         else
         {
             this.gameObject.GetComponent<MeshRenderer>().enabled = true;
+            this.gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
             this.transform.position = Vector3.Lerp(this.transform.position, target.transform.position, 0.05f);
 
         }

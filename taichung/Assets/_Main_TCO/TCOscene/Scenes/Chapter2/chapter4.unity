@@ -156,15 +156,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0836471
+      value: 1.8115329
       objectReference: {fileID: 0}
     - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.0836471
+      value: 1.8115329
       objectReference: {fileID: 0}
     - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.0836471
+      value: 1.8115329
       objectReference: {fileID: 0}
     - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -253,15 +253,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0836471
+      value: 1.811533
       objectReference: {fileID: 0}
     - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.0836471
+      value: 1.81153
       objectReference: {fileID: 0}
     - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.0836471
+      value: 1.81153
       objectReference: {fileID: 0}
     - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183067697}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb27afb025760344bb40beba5627b5a3, type: 3}
   m_Name: 
@@ -434,6 +434,7 @@ Transform:
   - {fileID: 579312179}
   - {fileID: 1666714832}
   - {fileID: 861150205}
+  - {fileID: 1798320470}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -849,7 +850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &861150205
 Transform:
   m_ObjectHideFlags: 0
@@ -881,6 +882,7 @@ MonoBehaviour:
   CrabKey: 0
   BubbleKey: 0
   FishKey: 121
+  WordKey: 0
   house: []
   houseenable: 1
   crab: []
@@ -890,7 +892,11 @@ MonoBehaviour:
   fish:
   - {fileID: 3242274951957915121, guid: 959c72680235c9644999b65d4027a78c, type: 3}
   fishenable: 1
+  word: []
+  wordenable: 0
+  wordselect: 0
   pos: {fileID: 861150205}
+  parentcanvas: {fileID: 0}
   x: 40
   z: 7
   k: 2
@@ -900,6 +906,8 @@ MonoBehaviour:
   bubblescale: []
   fishspeed: 1
   fishlifetime: 10
+  wordscale: []
+  wordrotate: {x: 0, y: 0, z: 0}
   housecount: 0
   offset: 0
   buildarraytemp: []
@@ -938,25 +946,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   udpPort: 6000
   humanModel:
-  - {fileID: 190928722}
-  - {fileID: 1585629699}
-  - {fileID: 190928722}
-  - {fileID: 1585629699}
-  - {fileID: 190928722}
-  - {fileID: 1585629699}
-  - {fileID: 190928722}
-  - {fileID: 1585629699}
-  - {fileID: 190928722}
-  - {fileID: 1585629699}
+  - {fileID: 183067697}
+  - {fileID: 1265960360}
   humanModelLastUpdateTime:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
   - 0
   - 0
   x: {fileID: 0}
@@ -969,12 +961,13 @@ MonoBehaviour:
   mmwave: {fileID: 967268047}
   a: 0
   b: 0
-  scalex: -1
-  scaley: 1
+  scalex: -2.14
+  scaley: 2
   scalextext: {fileID: 0}
   scaleytext: {fileID: 0}
   rotationAngle: 0
   rotatedPoint: {x: 0, y: 0, z: 0}
+  lerp: 0.2
 --- !u!4 &967268049
 Transform:
   m_ObjectHideFlags: 0
@@ -983,7 +976,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967268047}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.53, y: 0, z: -2.28}
+  m_LocalPosition: {x: -12.5, y: 0, z: -7.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1212,7 +1205,7 @@ Camera:
     m_Bits: 2147483647
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 1
+  m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
@@ -1228,7 +1221,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049740050}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 7.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1236,7 +1229,7 @@ Transform:
   - {fileID: 2132342805}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1089026476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1291,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265960360}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb27afb025760344bb40beba5627b5a3, type: 3}
   m_Name: 
@@ -1320,7 +1313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1319827878
 Transform:
   m_ObjectHideFlags: 0
@@ -1352,6 +1345,7 @@ MonoBehaviour:
   CrabKey: 111
   BubbleKey: 0
   FishKey: 0
+  WordKey: 0
   house:
   - {fileID: 8398855273896792897, guid: 1c5b676292a899540901c205af00abef, type: 3}
   - {fileID: 8398855273896792897, guid: 9208d3615aa6f5b46ac8830090bb2f83, type: 3}
@@ -1370,7 +1364,11 @@ MonoBehaviour:
   bubbleenable: 0
   fish: []
   fishenable: 0
+  word: []
+  wordenable: 0
+  wordselect: 0
   pos: {fileID: 1319827878}
+  parentcanvas: {fileID: 0}
   x: 25
   z: 7
   k: 2
@@ -1386,6 +1384,8 @@ MonoBehaviour:
   bubblescale: []
   fishspeed: 0
   fishlifetime: 0
+  wordscale: []
+  wordrotate: {x: 0, y: 0, z: 0}
   housecount: 0
   offset: 0.3
   buildarraytemp: []
@@ -1551,7 +1551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1571979384
 Transform:
   m_ObjectHideFlags: 0
@@ -1583,6 +1583,7 @@ MonoBehaviour:
   CrabKey: 0
   BubbleKey: 0
   FishKey: 0
+  WordKey: 0
   house:
   - {fileID: 8398855273896792897, guid: 1c5b676292a899540901c205af00abef, type: 3}
   - {fileID: 8398855273896792897, guid: 9208d3615aa6f5b46ac8830090bb2f83, type: 3}
@@ -1597,7 +1598,11 @@ MonoBehaviour:
   bubbleenable: 0
   fish: []
   fishenable: 0
+  word: []
+  wordenable: 0
+  wordselect: 0
   pos: {fileID: 1571979384}
+  parentcanvas: {fileID: 0}
   x: 40
   z: 7
   k: 2
@@ -1610,6 +1615,8 @@ MonoBehaviour:
   bubblescale: []
   fishspeed: 0
   fishlifetime: 0
+  wordscale: []
+  wordrotate: {x: 0, y: 0, z: 0}
   housecount: 0
   offset: 0.3
   buildarraytemp: []
@@ -1883,7 +1890,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1666714832
 Transform:
   m_ObjectHideFlags: 0
@@ -1915,6 +1922,7 @@ MonoBehaviour:
   CrabKey: 0
   BubbleKey: 0
   FishKey: 121
+  WordKey: 0
   house: []
   houseenable: 1
   crab: []
@@ -1924,7 +1932,11 @@ MonoBehaviour:
   fish:
   - {fileID: 3242274951957915121, guid: 959c72680235c9644999b65d4027a78c, type: 3}
   fishenable: 1
+  word: []
+  wordenable: 0
+  wordselect: 0
   pos: {fileID: 1666714832}
+  parentcanvas: {fileID: 0}
   x: 40
   z: 7
   k: 2
@@ -1934,10 +1946,113 @@ MonoBehaviour:
   bubblescale: []
   fishspeed: 1
   fishlifetime: 10
+  wordscale: []
+  wordrotate: {x: 0, y: 0, z: 0}
   housecount: 0
   offset: 0
   buildarraytemp: []
   blockhouseX: 24000000230000000d0000000e000000
+  blockhouseZ: 
+  gesturetigger: 0
+  flip: 0
+--- !u!1 &1798320469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1798320470}
+  - component: {fileID: 1798320471}
+  m_Layer: 0
+  m_Name: HouseArray (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1798320470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798320469}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.16, y: 0, z: -5.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 356160660}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1798320471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798320469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HouseKey: 107
+  CrabKey: 111
+  BubbleKey: 117
+  FishKey: 0
+  WordKey: 107
+  house:
+  - {fileID: 942065458720007527, guid: 4b577fcc9a54c724db38c690f9c1c6af, type: 3}
+  - {fileID: 4286927921934427985, guid: f0319980492e5a5419a8cba130e396b1, type: 3}
+  - {fileID: 4286927921934427985, guid: 9b59aed1718b15d45a0ac9ee78b24f99, type: 3}
+  houseenable: 1
+  crab: []
+  crabenable: 0
+  bubble:
+  - {fileID: 7560986564674398035, guid: df985b7e886629b45aa9e0729c0cf7c3, type: 3}
+  - {fileID: 7560986564674398035, guid: d6db1a37b3f087b43b1bebc7210882ab, type: 3}
+  - {fileID: 7560986564674398035, guid: f78f02debd0e7504f80d79632215a1ee, type: 3}
+  - {fileID: 7560986564674398035, guid: d5c6499b55a5cde479647081bfbe3c8b, type: 3}
+  - {fileID: 7560986564674398035, guid: 255290e15e1d14845b5c6867a6c6501e, type: 3}
+  - {fileID: 7560986564674398035, guid: 447037d8c8806104098b6800603c5a91, type: 3}
+  bubbleenable: 0
+  fish: []
+  fishenable: 0
+  word:
+  - {fileID: 942065458720007527, guid: 4b577fcc9a54c724db38c690f9c1c6af, type: 3}
+  - {fileID: 4286927921934427985, guid: f0319980492e5a5419a8cba130e396b1, type: 3}
+  - {fileID: 4286927921934427985, guid: 9b59aed1718b15d45a0ac9ee78b24f99, type: 3}
+  wordenable: 0
+  wordselect: 0
+  pos: {fileID: 1798320470}
+  parentcanvas: {fileID: 517158421}
+  x: 10
+  z: 7
+  k: 2
+  buildpertime: 1
+  housescale:
+  - 1
+  - 1.3
+  - 0.8
+  crabscale: []
+  bubblescale:
+  - 1
+  - 1.3
+  - 1
+  fishspeed: 0
+  fishlifetime: 0
+  wordscale:
+  - 1
+  - 1.3
+  - 0.8
+  wordrotate: {x: 90, y: 180, z: 0}
+  housecount: 0
+  offset: 0.1
+  buildarraytemp: []
+  blockhouseX: 
   blockhouseZ: 
   gesturetigger: 0
   flip: 0
@@ -2032,8 +2147,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810790330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2017121, y: 1.2762042, z: 0.67169183}
+  m_LocalPosition: {x: 0.063635, y: 0, z: -0.046308}
+  m_LocalScale: {x: 1.4778656, y: 1.5694759, z: 0.8260466}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1576929229}
@@ -2053,6 +2168,10 @@ PrefabInstance:
     - target: {fileID: 7560462082760531156, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: m_Name
       value: HouseArray (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531156, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: bubble.Array.data[0]
@@ -2233,6 +2352,7 @@ MonoBehaviour:
   CrabKey: 111
   BubbleKey: 117
   FishKey: 0
+  WordKey: 0
   house: []
   houseenable: 0
   crab: []
@@ -2247,7 +2367,11 @@ MonoBehaviour:
   bubbleenable: 1
   fish: []
   fishenable: 0
+  word: []
+  wordenable: 0
+  wordselect: 0
   pos: {fileID: 2054776254}
+  parentcanvas: {fileID: 0}
   x: 26
   z: 14
   k: 0.56
@@ -2263,6 +2387,8 @@ MonoBehaviour:
   - 1
   fishspeed: 0
   fishlifetime: 0
+  wordscale: []
+  wordrotate: {x: 0, y: 0, z: 0}
   housecount: 0
   offset: 0.1
   buildarraytemp: []
@@ -2451,6 +2577,7 @@ MonoBehaviour:
   CrabKey: 111
   BubbleKey: 117
   FishKey: 0
+  WordKey: 0
   house:
   - {fileID: 942065458720007527, guid: 4b577fcc9a54c724db38c690f9c1c6af, type: 3}
   - {fileID: 4286927921934427985, guid: f0319980492e5a5419a8cba130e396b1, type: 3}
@@ -2468,7 +2595,11 @@ MonoBehaviour:
   bubbleenable: 0
   fish: []
   fishenable: 0
+  word: []
+  wordenable: 0
+  wordselect: 0
   pos: {fileID: 7560462082782760866}
+  parentcanvas: {fileID: 0}
   x: 9
   z: 5
   k: 1
@@ -2482,6 +2613,8 @@ MonoBehaviour:
   - 1
   fishspeed: 0
   fishlifetime: 0
+  wordscale: []
+  wordrotate: {x: 0, y: 0, z: 0}
   housecount: 0
   offset: 0.1
   buildarraytemp: []

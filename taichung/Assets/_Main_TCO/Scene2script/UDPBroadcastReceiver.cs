@@ -38,6 +38,7 @@ public class UDPBroadcastReceiver : MonoBehaviour
     public Text scaleytext;
     public float rotationAngle = 45f;
     public Vector3 rotatedPoint;
+    public float lerp;
     Color defaultColor = new Color(0.4f, 0.4f, 0.4f);
 
     // Start is called before the first frame update
@@ -142,14 +143,14 @@ public class UDPBroadcastReceiver : MonoBehaviour
 
                         
                         float angleInRadians = rotationAngle * Mathf.Deg2Rad;
-                        newPos.x =  -px;
-                        newPos.z =  py;
+                        newPos.x =  -px*scalex;
+                        newPos.z =  py * scaley;
                         rotatedPoint.x = newPos.x * Mathf.Cos(angleInRadians) - newPos.z * Mathf.Sin(angleInRadians);
                         rotatedPoint.z = newPos.x * Mathf.Sin(angleInRadians) + newPos.z * Mathf.Cos(angleInRadians);
                         newPos.x = a + rotatedPoint.x;
                         newPos.z = b + rotatedPoint.z;
                         
-                        humanModel[id].transform.position = newPos;
+                        humanModel[id].transform.position = Vector3.Lerp(humanModel[id].transform.position, newPos, lerp);
                         // Update object direction based on velocity
                         double vd = -Mathf.Atan2(-vx, vy) * Mathf.Rad2Deg;
                         humanModel[id].transform.rotation =  Quaternion.Euler(0, -(float)vd, 0);
