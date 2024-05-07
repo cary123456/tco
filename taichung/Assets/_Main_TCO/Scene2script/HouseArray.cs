@@ -25,7 +25,9 @@ public class HouseArray : MonoBehaviour
     public bool wordenable = false;
     public int wordselect;
     public Transform pos;
+    public Transform parenttrans;
     public Transform parentcanvas;
+    public GameObject wordIO;
     public int x;
     public int z;
     public float k;
@@ -34,6 +36,7 @@ public class HouseArray : MonoBehaviour
     public float[] housescale;
     public float[] crabscale;
     public float[] bubblescale;
+    public Transform playerbubble;
     public float fishspeed;
     public float fishlifetime;
     public float[] wordscale;
@@ -44,6 +47,7 @@ public class HouseArray : MonoBehaviour
     public int[] blockhouseX; 
     public int[] blockhouseZ; 
     int [,] buildarray;
+    public bool bubbleflag = false;
     public bool gesturetigger = false;
     public bool flip = false;
 
@@ -90,7 +94,7 @@ public class HouseArray : MonoBehaviour
 
                 if(buildarray[Xpos,Zpos] != 1)
                 {
-                    GameObject houses = Instantiate(house[rand], pos.position + new Vector3 (Xpos*k + houseoffset, 0, Zpos*k), Quaternion.identity, parentcanvas);
+                    GameObject houses = Instantiate(house[rand], pos.position + new Vector3 (Xpos*k + houseoffset, 0, Zpos*k), Quaternion.identity, parenttrans);
                     buildarray[Xpos,Zpos] = 1;
                     houses.transform.Rotate(wordrotate);
                     buildarraytemp.Add( new Vector2(Xpos,Zpos));
@@ -185,11 +189,12 @@ public class HouseArray : MonoBehaviour
 
         }
 
-        if(Input.GetKeyDown(BubbleKey) &&　flag && bubbleenable)
+        if(Input.GetKeyDown(BubbleKey) &&　flag && bubbleenable || bubbleflag)
         {
             for(int i = 0; i < buildpertime; i++) 
             {
-                
+
+                bubbleflag = false;
                 flag = false;
 
                 float houseoffset = Random.Range(-offset, offset);
@@ -201,7 +206,7 @@ public class HouseArray : MonoBehaviour
                 if(buildarray[Xpos,Zpos] != 1)
                 {
                     GameObject bubbles =Instantiate(bubble[rand], pos.localPosition + new Vector3 (Xpos*k + houseoffset, 0f, Zpos*k ), Quaternion.identity, pos);
-                    bubbles.GetComponent<Rigidbody>().AddForce(new Vector3(0, rand+1, 0));
+                    bubbles.GetComponent<Rigidbody>().AddForce(playerbubble.position - bubbles.transform.position);
                     bubbles.transform.localScale = new Vector3(bubblescale[s], bubblescale[s], bubblescale[s]);
                     buildarray[Xpos,Zpos] = 1;
                     buildarraytemp.Add( new Vector2(Xpos,Zpos));
@@ -234,7 +239,7 @@ public class HouseArray : MonoBehaviour
 
                 if (buildarray[Xpos,Zpos] != 1)
                 {
-                    GameObject wordtemp = Instantiate(word[rand], pos.position + new Vector3 (0, Xpos*k + houseoffset, Zpos*k ), Quaternion.identity, parentcanvas);
+                    GameObject wordtemp = Instantiate(word[rand], pos.position + new Vector3 (Xpos*k,0+ houseoffset ,Zpos*k ), Quaternion.identity, parentcanvas);
                     wordtemp.transform.Rotate(wordrotate);
                     wordtemp.transform.localScale = new Vector3(wordscale[s], wordscale[s], wordscale[s]);
                     buildarray[Xpos,Zpos] = 1;
@@ -257,6 +262,7 @@ public class HouseArray : MonoBehaviour
         {
             if(housecount > 0)
             {
+                wordIO.SetActive(true);
                 housecount--;
                 buildarray[(int)buildarraytemp[housecount].x,(int)buildarraytemp[housecount].y] = 0;
                 
@@ -269,10 +275,7 @@ public class HouseArray : MonoBehaviour
         
     }
 
-    public void buildfunc()
-    {
 
-    }
     void OnDrawGizmosSelected()
     {
         // Draw a semitransparent red cube at the transforms position

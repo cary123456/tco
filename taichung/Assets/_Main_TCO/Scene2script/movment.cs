@@ -63,11 +63,11 @@ public class movment : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Keypad1))
         {
-            vox = Vector3.Lerp(vox, new Vector3(speed,0,0) , 1f/smooth/Time.deltaTime);
+            vox = Vector3.Lerp(vox, new Vector3(-speed,0,0) , 1f/smooth/Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.Keypad3))
         {
-           vox = Vector3.Lerp(vox, new Vector3(-speed,0,0) , 1f/smooth/Time.deltaTime);
+           vox = Vector3.Lerp(vox, new Vector3(speed,0,0) , 1f/smooth/Time.deltaTime);
         }
         else
         {
@@ -76,18 +76,18 @@ public class movment : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Keypad5))
         {
-            voy = Vector3.Lerp(voy, new Vector3(0,speed,0) , 1f/smooth/Time.deltaTime);
+            voy = Vector3.Lerp(voy, new Vector3(0,0,speed) , 1f/smooth/Time.deltaTime);
         }
 
         else if (Input.GetKey(KeyCode.Keypad2))
         {
-            voy = Vector3.Lerp(voy, new Vector3(0,-speed,0) , 1f/smooth/Time.deltaTime);
+            voy = Vector3.Lerp(voy, new Vector3(0,0,-speed) , 1f/smooth/Time.deltaTime);
         } 
         else
         {
              voy = Vector3.Lerp(voy, new Vector3(0,0,0) , 1f/smooth/Time.deltaTime);
         }
-        ball.GetComponent<Rigidbody>().velocity = new Vector3(vox.x , voy.y, 0f);
+        ball.GetComponent<Rigidbody>().velocity = new Vector3(vox.x , 0f, voy.z);
 
 
 

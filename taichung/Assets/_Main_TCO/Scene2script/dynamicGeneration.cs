@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.VFX;
 
@@ -18,6 +19,13 @@ public class dynamicGeneration : MonoBehaviour
     public float[] crabsFallSpeed;
     public float[] CrabScale = {1f, 2f, 3f};
     public float[] particleRed = {50f, 500f, 2000f};
+    public HouseArray bubble;
+    public int counter =0;
+    public int prethreshold;
+    public int threshold;
+    public bool iswall = false;
+    public Transform playerbubble;
+    public float rebound;
 
     public GameObject[] SummonCrab()
     {
@@ -37,4 +45,40 @@ public class dynamicGeneration : MonoBehaviour
         return crabc;   //Return summoned crab GameObject array
 
     }
+
+    void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.tag == "ball" && !iswall)
+        {
+            int thresholdtemp = threshold;
+            counter++;
+
+            if (bubble.buildpertime < 10)
+                thresholdtemp = prethreshold;
+
+
+            if(counter % thresholdtemp == 0)
+            {
+                bubble.bubbleflag = true;
+                bubble.buildpertime += 1;
+            }
+            else if(bubble.housecount >= bubble.x * bubble.z )
+            {
+                counter = 0;
+                bubble.buildpertime = 1;
+            }
+            
+        }
+        
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "ball" && iswall)
+        {
+            other.rigidbody.GetComponent<Rigidbody>().AddForce((playerbubble.position - other.transform.position) * rebound);
+            Debug.Log("rebound");
+        }
+    }
+
 }
