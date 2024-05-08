@@ -26,18 +26,8 @@ public class spin2 : MonoBehaviour
     {
         if (Input.GetKeyDown(objmoveKey))
         {
+           
             StartMoving();
-        }
-
-        if (Input.GetKeyDown(increaseRadius))
-        {
-            targetRadius += 0.5f;
-        }
-        else if (Input.GetKeyDown(decreaseRadius))
-        {
-            targetRadius -= 0.5f;
-            if (targetRadius < 0f)
-                targetRadius = 0f;
         }
         moveableObjects = GameObject.FindGameObjectsWithTag(objectTag);
         moveableTransforms = new Transform[moveableObjects.Length];
@@ -50,11 +40,23 @@ public class spin2 : MonoBehaviour
             }
 
         }
+        if (Input.GetKeyDown(increaseRadius))
+        {
+            targetRadius += 0.5f;
+        }
+        else if (Input.GetKeyDown(decreaseRadius))
+        {
+            targetRadius -= 0.5f;
+            if (targetRadius < 0f)
+                targetRadius = 0f;
+        }
+
         if (end)
         {
             Debug.Log("do something.");
             foreach (var crabs in moveableObjects)
             {
+                crabs.GetComponent<crabfloat>().enabled = false;
                 crabs.GetComponent<Animator>().SetBool("C2S", true);
             }
             //end = false;

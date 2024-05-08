@@ -208,6 +208,10 @@ public class hotkey : MonoBehaviour
             {
                 Destroy(GameObject.FindWithTag("crabs"));
             }
+            if (GameObject.FindWithTag("crabsed") != null)
+            {
+                Destroy(GameObject.FindWithTag("crabsed"));
+            }
             if (GameObject.FindWithTag("building") != null)
             {
                 Destroy(GameObject.FindWithTag("building"));
@@ -220,7 +224,11 @@ public class hotkey : MonoBehaviour
             {
                 Destroy(GameObject.FindWithTag("buildinglo"));
             }
-            fish.SetActive(false);
+            if(fish != null)
+            {
+                fish.SetActive(false);
+            }
+            
  
             
         }

@@ -27,7 +27,7 @@ public class crabfloat : MonoBehaviour
      void Update()
     {
         ApplyRandomForce();
-
+        //this.gameObject.transform.rotation = Quaternion.Euler(0, 180, this.gameObject.transform.rotation.z);
         if (small)
         {
             if (this.gameObject.transform.position.y <= ancor.transform.position.y)

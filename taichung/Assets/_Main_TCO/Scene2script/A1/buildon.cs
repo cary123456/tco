@@ -39,4 +39,9 @@ public class buildon : MonoBehaviour
 
         //buildings[0].GetComponent<growvalue>().up = true;
     }
+    public void crabed()
+    {
+
+        this.gameObject.tag = "crabsed";
+    }
 }

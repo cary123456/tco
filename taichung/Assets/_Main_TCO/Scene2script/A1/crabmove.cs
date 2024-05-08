@@ -41,7 +41,7 @@ public class crabmove : MonoBehaviour
                 midfinger.GetComponent<midtri>().allowtrigger = true;
             }
             */
-            this.gameObject.tag = "crabsed";
+           
             this.GetComponent<Animator>().enabled = true;
             this.GetComponent<Animator>().SetBool("C2B", true);
             if (one)

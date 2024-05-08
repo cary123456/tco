@@ -359,6 +359,10 @@ public class valuerecueve : NetworkBehaviour
             {
                 Destroy(GameObject.FindWithTag("crabs"));
             }
+            if (GameObject.FindWithTag("crabsed") != null)
+            {
+                Destroy(GameObject.FindWithTag("crabsed"));
+            }
             if (GameObject.FindWithTag("building"))
             {
                 Destroy(GameObject.FindWithTag("building"));

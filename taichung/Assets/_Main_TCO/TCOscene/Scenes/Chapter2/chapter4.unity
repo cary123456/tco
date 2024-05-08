@@ -123,107 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &24352626
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 331158732853246603, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_Mass
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246603, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_Constraints
-      value: 116
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246603, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246605, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246605, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 53ed917bf4364e647ac04808acc8561e, type: 2}
-    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.8115329
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.8115329
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.8115329
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246607, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246609, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_Name
-      value: mmwaveplayer2
-      objectReference: {fileID: 0}
-    - target: {fileID: 331158732853246609, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6348839193659287469, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e7c2ac25fd82c554287a86c50c0407f1, type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
 --- !u!1001 &183067696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -335,6 +234,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 190928722}
+--- !u!4 &183067699 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+  m_PrefabInstance: {fileID: 183067696}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &183067700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183067697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f49e464bfcc5849a0715b61d30aaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headset: {fileID: 0}
+  CrabPrefab: {fileID: 0}
+  CrabVFX: {fileID: 0}
+  crabb: []
+  crabs: []
+  SummonCrabsCount: 0
+  SummonPosOffset: []
+  crabsFallSpeed: []
+  CrabScale:
+  - 1
+  - 2
+  - 3
+  particleRed:
+  - 50
+  - 500
+  - 2000
+  bubble: {fileID: 2054776253}
+  counter: 0
+  prethreshold: 3
+  threshold: 10
+  iswall: 0
+  playerbubble: {fileID: 183067699}
+  rebound: 5
 --- !u!1 &190928722
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +303,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &356160658
 GameObject:
@@ -436,7 +375,7 @@ Transform:
   - {fileID: 861150205}
   - {fileID: 1798320470}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390943658
 GameObject:
@@ -450,6 +389,7 @@ GameObject:
   - component: {fileID: 390943662}
   - component: {fileID: 390943661}
   - component: {fileID: 390943660}
+  - component: {fileID: 390943663}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -535,6 +475,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390943658}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &390943663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390943658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f49e464bfcc5849a0715b61d30aaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headset: {fileID: 0}
+  CrabPrefab: {fileID: 0}
+  CrabVFX: {fileID: 0}
+  crabb: []
+  crabs: []
+  SummonCrabsCount: 0
+  SummonPosOffset: []
+  crabsFallSpeed: []
+  CrabScale:
+  - 1
+  - 2
+  - 3
+  particleRed:
+  - 50
+  - 500
+  - 2000
+  bubble: {fileID: 2054776253}
+  counter: 0
+  prethreshold: 0
+  threshold: 0
+  iswall: 1
+  playerbubble: {fileID: 183067699}
+  rebound: 10
 --- !u!1 &517158417
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +603,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -647,6 +622,7 @@ GameObject:
   - component: {fileID: 573073879}
   - component: {fileID: 573073878}
   - component: {fileID: 573073877}
+  - component: {fileID: 573073880}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -732,6 +708,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573073875}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &573073880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573073875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f49e464bfcc5849a0715b61d30aaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headset: {fileID: 0}
+  CrabPrefab: {fileID: 0}
+  CrabVFX: {fileID: 0}
+  crabb: []
+  crabs: []
+  SummonCrabsCount: 0
+  SummonPosOffset: []
+  crabsFallSpeed: []
+  CrabScale:
+  - 1
+  - 2
+  - 3
+  particleRed:
+  - 50
+  - 500
+  - 2000
+  bubble: {fileID: 2054776253}
+  counter: 0
+  prethreshold: 0
+  threshold: 0
+  iswall: 1
+  playerbubble: {fileID: 183067699}
+  rebound: 10
 --- !u!4 &579312179 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7560462082760531159, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
@@ -749,6 +760,7 @@ GameObject:
   - component: {fileID: 661764481}
   - component: {fileID: 661764480}
   - component: {fileID: 661764479}
+  - component: {fileID: 661764482}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -834,6 +846,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661764477}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &661764482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661764477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f49e464bfcc5849a0715b61d30aaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headset: {fileID: 0}
+  CrabPrefab: {fileID: 0}
+  CrabVFX: {fileID: 0}
+  crabb: []
+  crabs: []
+  SummonCrabsCount: 0
+  SummonPosOffset: []
+  crabsFallSpeed: []
+  CrabScale:
+  - 1
+  - 2
+  - 3
+  particleRed:
+  - 50
+  - 500
+  - 2000
+  bubble: {fileID: 2054776253}
+  counter: 0
+  prethreshold: 0
+  threshold: 0
+  iswall: 1
+  playerbubble: {fileID: 183067699}
+  rebound: 10
 --- !u!1 &861150204
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +943,9 @@ MonoBehaviour:
   wordenable: 0
   wordselect: 0
   pos: {fileID: 861150205}
+  parenttrans: {fileID: 0}
   parentcanvas: {fileID: 0}
+  wordIO: {fileID: 0}
   x: 40
   z: 7
   k: 2
@@ -904,6 +953,7 @@ MonoBehaviour:
   housescale: []
   crabscale: []
   bubblescale: []
+  playerbubble: {fileID: 0}
   fishspeed: 1
   fishlifetime: 10
   wordscale: []
@@ -913,6 +963,7 @@ MonoBehaviour:
   buildarraytemp: []
   blockhouseX: 24000000230000000d0000000e000000
   blockhouseZ: 
+  bubbleflag: 0
   gesturetigger: 0
   flip: 1
 --- !u!1 &967268047
@@ -947,9 +998,7 @@ MonoBehaviour:
   udpPort: 6000
   humanModel:
   - {fileID: 183067697}
-  - {fileID: 1265960360}
   humanModelLastUpdateTime:
-  - 0
   - 0
   x: {fileID: 0}
   y: {fileID: 0}
@@ -981,7 +1030,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1049740050
 GameObject:
@@ -1120,7 +1169,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 0.80236626, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1228,7 +1277,7 @@ Transform:
   m_Children:
   - {fileID: 2132342805}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1089026476
 GameObject:
@@ -1277,26 +1326,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1265960360 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 331158732853246609, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-  m_PrefabInstance: {fileID: 24352626}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1265960361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265960360}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb27afb025760344bb40beba5627b5a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1585629699}
 --- !u!1 &1319827877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,7 +1399,9 @@ MonoBehaviour:
   wordenable: 0
   wordselect: 0
   pos: {fileID: 1319827878}
+  parenttrans: {fileID: 0}
   parentcanvas: {fileID: 0}
+  wordIO: {fileID: 0}
   x: 25
   z: 7
   k: 2
@@ -1382,6 +1415,7 @@ MonoBehaviour:
   - 2.3
   - 1.8
   bubblescale: []
+  playerbubble: {fileID: 0}
   fishspeed: 0
   fishlifetime: 0
   wordscale: []
@@ -1391,6 +1425,7 @@ MonoBehaviour:
   buildarraytemp: []
   blockhouseX: 
   blockhouseZ: 
+  bubbleflag: 0
   gesturetigger: 0
   flip: 0
 --- !u!1 &1321578398
@@ -1459,7 +1494,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1563832033
 GameObject:
@@ -1520,6 +1555,13 @@ MonoBehaviour:
   - 50
   - 500
   - 2000
+  bubble: {fileID: 0}
+  counter: 0
+  prethreshold: 0
+  threshold: 0
+  iswall: 0
+  playerbubble: {fileID: 0}
+  rebound: 0
 --- !u!4 &1563832035
 Transform:
   m_ObjectHideFlags: 0
@@ -1602,7 +1644,9 @@ MonoBehaviour:
   wordenable: 0
   wordselect: 0
   pos: {fileID: 1571979384}
+  parenttrans: {fileID: 0}
   parentcanvas: {fileID: 0}
+  wordIO: {fileID: 0}
   x: 40
   z: 7
   k: 2
@@ -1613,6 +1657,7 @@ MonoBehaviour:
   - 1.5
   crabscale: []
   bubblescale: []
+  playerbubble: {fileID: 0}
   fishspeed: 0
   fishlifetime: 0
   wordscale: []
@@ -1622,6 +1667,7 @@ MonoBehaviour:
   buildarraytemp: []
   blockhouseX: 24000000230000000d0000000e000000
   blockhouseZ: 03000000
+  bubbleflag: 0
   gesturetigger: 0
   flip: 0
 --- !u!1 &1576929228
@@ -1636,6 +1682,7 @@ GameObject:
   - component: {fileID: 1576929232}
   - component: {fileID: 1576929231}
   - component: {fileID: 1576929230}
+  - component: {fileID: 1576929233}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1721,6 +1768,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576929228}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1576929233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576929228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f49e464bfcc5849a0715b61d30aaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headset: {fileID: 0}
+  CrabPrefab: {fileID: 0}
+  CrabVFX: {fileID: 0}
+  crabb: []
+  crabs: []
+  SummonCrabsCount: 0
+  SummonPosOffset: []
+  crabsFallSpeed: []
+  CrabScale:
+  - 1
+  - 2
+  - 3
+  particleRed:
+  - 50
+  - 500
+  - 2000
+  bubble: {fileID: 2054776253}
+  counter: 0
+  prethreshold: 0
+  threshold: 0
+  iswall: 1
+  playerbubble: {fileID: 183067699}
+  rebound: 10
 --- !u!1 &1585629699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,7 +1832,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1617396359
 GameObject:
@@ -1867,7 +1949,7 @@ RectTransform:
   m_Children:
   - {fileID: 2031696128}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1936,7 +2018,9 @@ MonoBehaviour:
   wordenable: 0
   wordselect: 0
   pos: {fileID: 1666714832}
+  parenttrans: {fileID: 0}
   parentcanvas: {fileID: 0}
+  wordIO: {fileID: 0}
   x: 40
   z: 7
   k: 2
@@ -1944,6 +2028,7 @@ MonoBehaviour:
   housescale: []
   crabscale: []
   bubblescale: []
+  playerbubble: {fileID: 0}
   fishspeed: 1
   fishlifetime: 10
   wordscale: []
@@ -1953,6 +2038,7 @@ MonoBehaviour:
   buildarraytemp: []
   blockhouseX: 24000000230000000d0000000e000000
   blockhouseZ: 
+  bubbleflag: 0
   gesturetigger: 0
   flip: 0
 --- !u!1 &1798320469
@@ -2028,7 +2114,9 @@ MonoBehaviour:
   wordenable: 0
   wordselect: 0
   pos: {fileID: 1798320470}
+  parenttrans: {fileID: 0}
   parentcanvas: {fileID: 517158421}
+  wordIO: {fileID: 0}
   x: 10
   z: 7
   k: 2
@@ -2042,6 +2130,7 @@ MonoBehaviour:
   - 1
   - 1.3
   - 1
+  playerbubble: {fileID: 0}
   fishspeed: 0
   fishlifetime: 0
   wordscale:
@@ -2054,6 +2143,7 @@ MonoBehaviour:
   buildarraytemp: []
   blockhouseX: 
   blockhouseZ: 
+  bubbleflag: 0
   gesturetigger: 0
   flip: 0
 --- !u!1 &1810790330
@@ -2156,7 +2246,7 @@ Transform:
   - {fileID: 390943659}
   - {fileID: 661764478}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1999957268
 PrefabInstance:
@@ -2371,11 +2461,13 @@ MonoBehaviour:
   wordenable: 0
   wordselect: 0
   pos: {fileID: 2054776254}
+  parenttrans: {fileID: 2054776254}
   parentcanvas: {fileID: 0}
+  wordIO: {fileID: 0}
   x: 26
   z: 14
   k: 0.56
-  buildpertime: 10
+  buildpertime: 1
   housescale:
   - 0
   - 0
@@ -2385,6 +2477,7 @@ MonoBehaviour:
   - 0.5
   - 0.8
   - 1
+  playerbubble: {fileID: 183067699}
   fishspeed: 0
   fishlifetime: 0
   wordscale: []
@@ -2394,6 +2487,7 @@ MonoBehaviour:
   buildarraytemp: []
   blockhouseX: 
   blockhouseZ: 
+  bubbleflag: 0
   gesturetigger: 0
   flip: 0
 --- !u!4 &2054776254
@@ -2409,7 +2503,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2117063034
 GameObject:
@@ -2529,96 +2623,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &7560462082782760865
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7560462082782760866}
-  - component: {fileID: 7560462082782760867}
-  m_Layer: 0
-  m_Name: HouseArray (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7560462082782760866
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7560462082782760865}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.09, y: 0, z: -1.93}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7560462082782760867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7560462082782760865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HouseKey: 112
-  CrabKey: 111
-  BubbleKey: 117
-  FishKey: 0
-  WordKey: 0
-  house:
-  - {fileID: 942065458720007527, guid: 4b577fcc9a54c724db38c690f9c1c6af, type: 3}
-  - {fileID: 4286927921934427985, guid: f0319980492e5a5419a8cba130e396b1, type: 3}
-  - {fileID: 4286927921934427985, guid: 9b59aed1718b15d45a0ac9ee78b24f99, type: 3}
-  houseenable: 1
-  crab: []
-  crabenable: 0
-  bubble:
-  - {fileID: 7560986564674398035, guid: df985b7e886629b45aa9e0729c0cf7c3, type: 3}
-  - {fileID: 7560986564674398035, guid: d6db1a37b3f087b43b1bebc7210882ab, type: 3}
-  - {fileID: 7560986564674398035, guid: f78f02debd0e7504f80d79632215a1ee, type: 3}
-  - {fileID: 7560986564674398035, guid: d5c6499b55a5cde479647081bfbe3c8b, type: 3}
-  - {fileID: 7560986564674398035, guid: 255290e15e1d14845b5c6867a6c6501e, type: 3}
-  - {fileID: 7560986564674398035, guid: 447037d8c8806104098b6800603c5a91, type: 3}
-  bubbleenable: 0
-  fish: []
-  fishenable: 0
-  word: []
-  wordenable: 0
-  wordselect: 0
-  pos: {fileID: 7560462082782760866}
-  parentcanvas: {fileID: 0}
-  x: 9
-  z: 5
-  k: 1
-  buildpertime: 10
-  housescale:
-  - 1
-  crabscale: []
-  bubblescale:
-  - 1
-  - 1.3
-  - 1
-  fishspeed: 0
-  fishlifetime: 0
-  wordscale: []
-  wordrotate: {x: 0, y: 0, z: 0}
-  housecount: 0
-  offset: 0.1
-  buildarraytemp: []
-  blockhouseX: 
-  blockhouseZ: 
-  gesturetigger: 0
-  flip: 0
