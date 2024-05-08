@@ -76,6 +76,7 @@ public class OVRHand : MonoBehaviour,
     public float HandScale { get; private set; }
     public TrackingConfidence HandConfidence { get; private set; }
     public bool IsDominantHand { get; private set; }
+    public GameObject[] colliders;
 
     private void Awake()
     {
@@ -92,6 +93,22 @@ public class OVRHand : MonoBehaviour,
     private void Update()
     {
         GetHandState(OVRPlugin.Step.Render);
+        if(IsTracked == true)
+        {
+            //Debug.Log("hi");
+            foreach (var co in colliders)
+            {
+                co.GetComponent<Collider>().enabled = true;
+            }
+
+        }
+        else
+        {
+            foreach (var co in colliders)
+            {
+                co.GetComponent<Collider>().enabled = false;
+            }
+        }
     }
 
     private void FixedUpdate()

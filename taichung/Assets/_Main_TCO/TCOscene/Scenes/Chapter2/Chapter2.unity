@@ -848,7 +848,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gesture: {fileID: 1078957770}
   players: []
+  holdtime: 0.3
+  holdruntime: 0
   allowtrigger: 0
+  colddownruntime: 0
+  colddowntime: 0.7
+  onetimetrigger: 0
+  allow: 0
 --- !u!65 &58766022
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -876,7 +882,7 @@ Transform:
   m_Children:
   - {fileID: 164597956}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &59317842
 PrefabInstance:
@@ -961,6 +967,34 @@ PrefabInstance:
       propertyPath: m_showState
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114428879332287356, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: colliders.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428879332287356, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: colliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 425750107}
+    - target: {fileID: 114428879332287356, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: colliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 847414481}
+    - target: {fileID: 114428879332287356, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: colliders.Array.data[2]
+      value: 
+      objectReference: {fileID: 1731184491}
+    - target: {fileID: 114428879332287356, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: colliders.Array.data[3]
+      value: 
+      objectReference: {fileID: 644006168}
+    - target: {fileID: 114428879332287356, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: colliders.Array.data[4]
+      value: 
+      objectReference: {fileID: 658269508}
+    - target: {fileID: 114428879332287356, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: colliders.Array.data[5]
+      value: 
+      objectReference: {fileID: 58766020}
     - target: {fileID: 137619227449585070, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3521,7 +3555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5268,7 +5302,7 @@ GameObject:
   - component: {fileID: 296274539}
   - component: {fileID: 296274540}
   m_Layer: 0
-  m_Name: HouseArray (1)
+  m_Name: HouseArray (crab)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12603,7 +12637,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gesture: {fileID: 1078957770}
   players: []
+  holdtime: 0.3
+  holdruntime: 0
   allowtrigger: 0
+  colddownruntime: 0
+  colddowntime: 0.7
+  onetimetrigger: 0
+  allow: 0
 --- !u!1 &662099159
 GameObject:
   m_ObjectHideFlags: 0
@@ -15493,7 +15533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1859743739202422552, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1859743739202422565, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: InitialModule.startColor.maxGradient.key0.b
@@ -16007,7 +16047,7 @@ GameObject:
   - component: {fileID: 850491507}
   - component: {fileID: 850491508}
   m_Layer: 0
-  m_Name: HouseArray (3)
+  m_Name: HouseArray (fish)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17977,7 +18017,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 2.08867, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -19386,32 +19426,32 @@ MonoBehaviour:
     onRecognized:
       m_PersistentCalls:
         m_Calls: []
-  - name: fish
+  - name: man
     fingerDatas:
-    - {x: -0.000000052434373, y: -0.00000016437006, z: 0.00000006961254}
-    - {x: -0.000000052434373, y: -0.00000016437006, z: 0.00000006961254}
-    - {x: -0.020069014, y: -0.011554088, z: -0.010496978}
-    - {x: -0.03626995, y: -0.019836858, z: -0.027425319}
-    - {x: -0.064691596, y: -0.022816308, z: -0.042930808}
-    - {x: -0.09810219, y: -0.025831005, z: -0.04700705}
-    - {x: -0.09599624, y: -0.007316417, z: -0.023550631}
-    - {x: -0.119456194, y: -0.036342133, z: -0.016796831}
-    - {x: -0.13425203, y: -0.055055633, z: -0.012154354}
-    - {x: -0.095646605, y: -0.0025430927, z: -0.0017258705}
-    - {x: -0.11958894, y: -0.038086616, z: 0.00075328944}
-    - {x: -0.13501328, y: -0.060839053, z: 0.0025956756}
-    - {x: -0.0886938, y: -0.0065292637, z: 0.017465275}
-    - {x: -0.111881934, y: -0.037858646, z: 0.018675895}
-    - {x: -0.12741739, y: -0.05939917, z: 0.019576525}
-    - {x: -0.034073524, y: -0.009419964, z: 0.02299854}
-    - {x: -0.07789578, y: -0.013691291, z: 0.035053983}
-    - {x: -0.09958377, y: -0.034860853, z: 0.030031841}
-    - {x: -0.113577254, y: -0.04947935, z: 0.0282897}
-    - {x: -0.12201175, y: -0.030129565, z: -0.051015172}
-    - {x: -0.1499504, y: -0.06977999, z: -0.005988529}
-    - {x: -0.15256198, y: -0.07839157, z: 0.0055264104}
-    - {x: -0.14353493, y: -0.07769028, z: 0.019850379}
-    - {x: -0.13015187, y: -0.06341206, z: 0.024645053}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069001, y: -0.01155401, z: -0.010497007}
+    - {x: -0.034479667, y: -0.016046122, z: -0.030240301}
+    - {x: -0.05773901, y: -0.025271416, z: -0.05100052}
+    - {x: -0.08581369, y: -0.032726612, z: -0.068269014}
+    - {x: -0.09599623, y: -0.0073164576, z: -0.023550706}
+    - {x: -0.103560306, y: -0.044341426, z: -0.02032377}
+    - {x: -0.07970708, y: -0.048972934, z: -0.020812042}
+    - {x: -0.0956466, y: -0.0025431525, z: -0.0017259113}
+    - {x: -0.09966287, y: -0.045281596, z: -0.0015820978}
+    - {x: -0.07265066, y: -0.04917512, z: -0.005344995}
+    - {x: -0.08869378, y: -0.006529319, z: 0.017465208}
+    - {x: -0.09529962, y: -0.044886995, z: 0.0150687415}
+    - {x: -0.07046244, y: -0.051075485, z: 0.007929951}
+    - {x: -0.034073547, y: -0.009419829, z: 0.022998562}
+    - {x: -0.0778958, y: -0.013691164, z: 0.035054058}
+    - {x: -0.10462927, y: -0.027498327, z: 0.04125298}
+    - {x: -0.119907916, y: -0.04034291, z: 0.04501205}
+    - {x: -0.10202066, y: -0.038161386, z: -0.08598932}
+    - {x: -0.059575673, y: -0.03920711, z: -0.021596234}
+    - {x: -0.05210204, y: -0.035709076, z: -0.009933453}
+    - {x: -0.049968403, y: -0.039317492, z: 0.001916863}
+    - {x: -0.13786921, y: -0.052729763, z: 0.047479272}
     onRecognized:
       m_PersistentCalls:
         m_Calls: []
@@ -25713,7 +25753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1859743739202422552, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1859743739289401752, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: m_Enabled
@@ -25970,6 +26010,10 @@ PrefabInstance:
     - target: {fileID: 5225741777381344869, guid: 42c19a6540c66e942b896440e9dddda4, type: 3}
       propertyPath: m_Name
       value: SeaGrass 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225741777381344869, guid: 42c19a6540c66e942b896440e9dddda4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6394748136496069651, guid: 42c19a6540c66e942b896440e9dddda4, type: 3}
       propertyPath: m_RootOrder
@@ -27993,7 +28037,7 @@ GameObject:
   - component: {fileID: 1483120752}
   - component: {fileID: 1483120753}
   m_Layer: 0
-  m_Name: HouseArray (5)
+  m_Name: HouseArray (word)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30216,7 +30260,7 @@ GameObject:
   - component: {fileID: 1587057817}
   - component: {fileID: 1587057818}
   m_Layer: 0
-  m_Name: HouseArray
+  m_Name: HouseArray(house)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32640,6 +32684,34 @@ PrefabInstance:
       propertyPath: m_showState
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114428879332287356, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: colliders.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428879332287356, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: colliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 425750107}
+    - target: {fileID: 114428879332287356, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: colliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 847414481}
+    - target: {fileID: 114428879332287356, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: colliders.Array.data[2]
+      value: 
+      objectReference: {fileID: 1731184491}
+    - target: {fileID: 114428879332287356, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: colliders.Array.data[3]
+      value: 
+      objectReference: {fileID: 644006168}
+    - target: {fileID: 114428879332287356, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: colliders.Array.data[4]
+      value: 
+      objectReference: {fileID: 658269508}
+    - target: {fileID: 114428879332287356, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: colliders.Array.data[5]
+      value: 
+      objectReference: {fileID: 58766020}
     - target: {fileID: 114567484643301796, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
       propertyPath: _skeletonType
       value: 1
@@ -34782,8 +34854,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gesture: {fileID: 1078957770}
   players: []
-  holdtime: 0
-  holdruntime: 0.3
+  holdtime: 0.3
+  holdruntime: 0
   allowtrigger: 0
   colddownruntime: 0
   colddowntime: 0.7
@@ -35068,8 +35140,8 @@ GameObject:
   - component: {fileID: 1742784273}
   - component: {fileID: 1742784274}
   m_Layer: 0
-  m_Name: HouseArray (4)
-  m_TagString: Untagged
+  m_Name: HouseArray (fish)
+  m_TagString: fishmanager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35251,7 +35323,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7560462082760531156, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: m_Name
-      value: HouseArray (2)
+      value: HouseArray (bubble)
       objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: bubble.Array.data[0]
@@ -36068,7 +36140,6 @@ GameObject:
   - component: {fileID: 1777987215}
   - component: {fileID: 1777987219}
   - component: {fileID: 1777987218}
-  - component: {fileID: 1777987217}
   - component: {fileID: 1777987216}
   m_Layer: 0
   m_Name: cameratarget
@@ -36117,19 +36188,6 @@ MonoBehaviour:
   moveLeft: 97
   moveRight: 100
   locked: 0
---- !u!65 &1777987217
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1777987214}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1777987218
 MeshRenderer:
   m_ObjectHideFlags: 0

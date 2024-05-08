@@ -6,7 +6,13 @@ public class fishmantrigger : MonoBehaviour
 {
     public GameObject gesture;
     public GameObject[] players;
+    public float holdtime;
+    public float holdruntime;
     public bool allowtrigger;
+    public float colddownruntime;
+    public float colddowntime;
+    public bool onetimetrigger;
+    public bool allow;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,22 +23,62 @@ public class fishmantrigger : MonoBehaviour
     void Update()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
+        if (colddownruntime >= colddowntime)
+        {
+            colddownruntime = colddowntime;
+            allow = true;
+        }
+        colddownruntime += Time.deltaTime;
+        if (allowtrigger)
+        {
+            if (holdruntime >= holdtime)
+            {
+                if (onetimetrigger == false)
+                {
+                    if (players.Length > 1)
+                    {
+
+                        players[1].GetComponent<valuerecueve>().fishmanvalue = true;
+                        onetimetrigger = true;
+                    }
+                }
+                holdruntime = holdtime;
+            }
+            holdruntime += Time.deltaTime;
+        }
     }
     void OnTriggerEnter(Collider other)
     {
-        if (allowtrigger)
+        if (other.tag == "thumb" && (gesture.GetComponent<GestureDetector>().gesturesnumber == 3 || gesture.GetComponent<LGestureDetector>().gesturesnumber == 3))
         {
-            if (other.tag == "thumb" && (gesture.GetComponent<GestureDetector>().gesturesnumber == 3 || gesture.GetComponent<LGestureDetector>().gesturesnumber == 3))
+            if (allow)
             {
-                if (players.Length > 1)
-                {
+                allowtrigger = true;
+                this.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f, 0.34f);
+                other.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f, 0.34f);
+            }
 
-                    players[1].GetComponent<valuerecueve>().fishmanvalue = true;
+        }
 
-                }
 
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "thumb")
+        {
+            colddownruntime = 0;
+            holdruntime = 0;
+            onetimetrigger = false;
+            allowtrigger = false;
+            if (players.Length > 1)
+            {
+                this.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(1f, 0f, 0f, 0.34f);
+                other.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(1f, 0f, 0f, 0.34f);
+                players[1].GetComponent<valuerecueve>().fishmanvalue = false;
+                allow = false;
             }
         }
+
 
 
     }

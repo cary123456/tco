@@ -147,7 +147,7 @@ public class GestureDetector : MonoBehaviour
                         player[1].GetComponent<valuerecueve>().intvalue = gesturesnumber;
                     }
                 }
-                else if (currentGesture.name == "fish")
+                else if (currentGesture.name == "man")
                 {
                     gesturesnumber = 3;
                     if (player.Length > 1)

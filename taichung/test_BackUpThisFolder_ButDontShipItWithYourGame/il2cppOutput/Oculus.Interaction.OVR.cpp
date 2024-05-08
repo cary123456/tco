@@ -178,6 +178,8 @@ struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
 struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
 // System.Delegate[]
 struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+// UnityEngine.GameObject[]
+struct GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF;
 // Oculus.Interaction.Input.HandSkeleton[]
 struct HandSkeletonU5BU5D_tFA06444E9B00A9A2A0BCEBD88AD4E1BCAFAB30C8;
 // Oculus.Interaction.Input.HandSkeletonJoint[]
@@ -2390,6 +2392,8 @@ struct OVRHand_t2AB8992EC24012BFAB01C897FA6CF80B0A3AC509  : public MonoBehaviour
 	int32_t ___U3CHandConfidenceU3Ek__BackingField_16;
 	// System.Boolean OVRHand::<IsDominantHand>k__BackingField
 	bool ___U3CIsDominantHandU3Ek__BackingField_17;
+	// UnityEngine.GameObject[] OVRHand::colliders
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___colliders_18;
 };
 
 // Oculus.Interaction.Input.OVRInputDeviceActiveState

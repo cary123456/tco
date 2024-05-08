@@ -169,6 +169,8 @@ public class valuerecueve : NetworkBehaviour
     public GameObject fishflok;
     public float fishcolddownruntime;
     public GameObject fishtricube;
+
+    public GameObject fishmanager;
     
     // Start is called before the first frame update
     void Start()
@@ -185,7 +187,7 @@ public class valuerecueve : NetworkBehaviour
         righthand = GameObject.FindGameObjectWithTag("Rhand");
         uiman = GameObject.FindGameObjectWithTag("uiman");
         fishflok = GameObject.FindGameObjectWithTag("fish");
-        
+        fishmanager = GameObject.FindGameObjectWithTag("fishmanager");
     }
 
     // Update is called once per frame
@@ -255,6 +257,7 @@ public class valuerecueve : NetworkBehaviour
                 {
                     crabs.GetComponent<VisualEffect>().enabled = false;
                     crabs.transform.GetChild(0).gameObject.SetActive(true);
+                    crabs.transform.GetChild(1).gameObject.SetActive(false);
                 }
                 onetimetrigger = true;
             }
@@ -344,7 +347,11 @@ public class valuerecueve : NetworkBehaviour
 
         if (fishmantri.Value)
         {
-
+            if (fishmanager != null)
+            {
+                fishmanager.GetComponent<HouseArray>().gesturetigger = true;
+            }
+            
         }
 
       

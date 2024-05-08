@@ -6017,6 +6017,8 @@ struct OVRHand_t2AB8992EC24012BFAB01C897FA6CF80B0A3AC509  : public MonoBehaviour
 	int32_t ___U3CHandConfidenceU3Ek__BackingField_16;
 	// System.Boolean OVRHand::<IsDominantHand>k__BackingField
 	bool ___U3CIsDominantHandU3Ek__BackingField_17;
+	// UnityEngine.GameObject[] OVRHand::colliders
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___colliders_18;
 };
 
 // OVRManager

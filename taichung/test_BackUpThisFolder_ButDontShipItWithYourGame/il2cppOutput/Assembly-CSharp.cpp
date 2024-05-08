@@ -875,7 +875,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral03DF2B28EA11DFEE9E3FCE3DF07079477F123E22
 IL2CPP_EXTERN_C String_t* _stringLiteral0F07C789C56F65511D26D2E4B8621E41FA310592;
 IL2CPP_EXTERN_C String_t* _stringLiteral1168E92C164109D6220480DEDA987085B2A21155;
 IL2CPP_EXTERN_C String_t* _stringLiteral12165B8D20AD5CB27221FFE353CCEBD1D1928934;
-IL2CPP_EXTERN_C String_t* _stringLiteral12C4A6F0B4F9EE4A6121FEE9C3844D940F9402F3;
 IL2CPP_EXTERN_C String_t* _stringLiteral132B0B98F5269F7208406F6A2C8F8E073D9CDFC9;
 IL2CPP_EXTERN_C String_t* _stringLiteral1447AA674D032FE398F9538E3CC2439CFD209D72;
 IL2CPP_EXTERN_C String_t* _stringLiteral148DCCD013D0B24A2E8B6F069A6B5698A6CE1F40;
@@ -6110,6 +6109,8 @@ struct valuerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF  : public NetworkB
 	float ___fishcolddownruntime_149;
 	// UnityEngine.GameObject valuerecueve::fishtricube
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___fishtricube_150;
+	// UnityEngine.GameObject valuerecueve::fishmanager
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___fishmanager_151;
 };
 
 // UnityEngine.UI.Button
@@ -10044,13 +10045,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GestureDetector_Update_m8173C43DDD73C990
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_Tisvaluerecueve_t532A3EB85049F40E544E28A9CDD71054BA8A45CF_mE937B11ED75ACBD8CDD298748BFBA9E82ABE65D2_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral12C4A6F0B4F9EE4A6121FEE9C3844D940F9402F3);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2308FD2DF18257BF4A6390ECBB7217343EEF19AD);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2BF368E3102D505B8EB6D5C02F5C869B4FECE8D4);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral583B87F3DAC72F0B7A1F9B6616FE78947FAFD1D0);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB1A5FEA8E4407503584345F68A0AC06862539008);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC1BFC58E20E04295A0D6494EC1CDCBB538F22667);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCAF8804297181FF007CA835529DD4477CFD94A70);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE4DE096E0FCBB4FAEC390CA1ECCA822DD729EE1E);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFDFD1D8703EAEDE8C9230E7C98FFD6D8F6C0342F);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -10298,11 +10299,11 @@ IL_016d:
 
 IL_01b2:
 	{
-		// else if (currentGesture.name == "fish")
+		// else if (currentGesture.name == "man")
 		Gesture_t99843787CBE75CA35550D7CA86F9775D49A814A1 L_55 = V_0;
 		String_t* L_56 = L_55.___name_0;
 		bool L_57;
-		L_57 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_56, _stringLiteral12C4A6F0B4F9EE4A6121FEE9C3844D940F9402F3, NULL);
+		L_57 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_56, _stringLiteralE4DE096E0FCBB4FAEC390CA1ECCA822DD729EE1E, NULL);
 		if (!L_57)
 		{
 			goto IL_01f5;
