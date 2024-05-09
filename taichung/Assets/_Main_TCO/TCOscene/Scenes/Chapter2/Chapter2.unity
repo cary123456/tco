@@ -11532,7 +11532,7 @@ MonoBehaviour:
   MessageBufferSize: 5120
   MaxConnections: 100
   MaxSentMessageQueueSize: 128
-  ConnectAddress: 10.120.2.128
+  ConnectAddress: 192.168.50.120
   ConnectPort: 7777
   ServerListenPort: 7777
   MessageSendMode: 0
@@ -18052,7 +18052,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7445128, y: 1}
+    m_SensorSize: {x: 1.6106133, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
