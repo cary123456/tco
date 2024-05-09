@@ -51,6 +51,7 @@ public class HouseArray : MonoBehaviour
     public bool gesturetigger = false;
     public bool flip = false;
 
+    public GameObject[] players;
     void Start() 
     {
         buildarray = new int[x+1,z+1];
@@ -76,8 +77,8 @@ public class HouseArray : MonoBehaviour
     void Update()
     {
         bool flag = true;
-
-        if(Input.GetKeyDown(HouseKey) &&　flag && houseenable)
+        players = GameObject.FindGameObjectsWithTag("Player");
+        if (Input.GetKeyDown(HouseKey) &&　flag && houseenable)
         {
             for(int i = 0; i < buildpertime; i++) 
             {
@@ -120,7 +121,11 @@ public class HouseArray : MonoBehaviour
                 
                 flag = false;
                 gesturetigger = false;
-
+                if (players.Length > 1)
+                {
+                    players[1].GetComponent<valuerecueve>().fishmanvalue = gesturetigger;
+                    
+                }
                 float houseoffset = Random.Range(-offset, offset);
                 int Xpos = Random.Range(0,x);
                 int Zpos = Random.Range(0,z);

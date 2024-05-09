@@ -280,7 +280,7 @@ public class valuerecueve : NetworkBehaviour
         {
             if (!onetime)
             {
-                if (headset.GetComponent<nearest>().closestEnemy.GetComponent<crabmove>() != null || headset.GetComponent<nearest>().closestEnemy != null)
+                if (headset.GetComponent<nearest>().closestEnemy.GetComponent<crabmove>() != null)
                 {
                     
                     headset.GetComponent<nearest>().closestEnemy.GetComponent<crabmove>().move = true;
