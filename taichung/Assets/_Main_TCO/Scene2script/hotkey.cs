@@ -85,9 +85,9 @@ public class hotkey : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            if (GameObject.FindWithTag("crab") != null)
+            if (GameObject.FindWithTag("crabsed") != null)
             {
-                Destroy(GameObject.FindWithTag("crab"));
+                Destroy(GameObject.FindWithTag("crabsed"));
             }
             
         }

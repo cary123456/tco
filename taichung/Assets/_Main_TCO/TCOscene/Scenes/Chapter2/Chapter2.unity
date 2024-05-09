@@ -11532,7 +11532,7 @@ MonoBehaviour:
   MessageBufferSize: 5120
   MaxConnections: 100
   MaxSentMessageQueueSize: 128
-  ConnectAddress: 192.168.50.120
+  ConnectAddress: 10.120.2.128
   ConnectPort: 7777
   ServerListenPort: 7777
   MessageSendMode: 0
@@ -18052,6 +18052,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     m_SensorSize: {x: 1.6106133, y: 1}
 =======
@@ -18061,6 +18062,9 @@ MonoBehaviour:
     m_SensorSize: {x: 1.6106133, y: 1}
 >>>>>>> 15d480bdecc39d464afa6a2fb3bfd322ff158bb8
 >>>>>>> Stashed changes
+=======
+    m_SensorSize: {x: 1.7445128, y: 1}
+>>>>>>> parent of 15d480bd (5/9)
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
