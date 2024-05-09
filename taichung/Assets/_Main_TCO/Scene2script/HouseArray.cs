@@ -50,6 +50,7 @@ public class HouseArray : MonoBehaviour
     public bool bubbleflag = false;
     public bool gesturetigger = false;
     public bool flip = false;
+    public bool fishflag;
 
     void Start() 
     {
@@ -113,11 +114,15 @@ public class HouseArray : MonoBehaviour
 
         }
 
-        if((Input.GetKeyDown(FishKey) &&　flag && fishenable) || gesturetigger)
+        
+
+        if((Input.GetKeyDown(FishKey) &&　flag && fishenable && fishflag) || gesturetigger)
         {
+            fishflag = false;
+            StartCoroutine("Fishtimer");
+            
             for(int i = 0; i < buildpertime; i++) 
             {
-                
                 flag = false;
                 gesturetigger = false;
 
@@ -257,7 +262,8 @@ public class HouseArray : MonoBehaviour
                 
             // }
             int rand = Random.Range(0,word.Length);
-            float houseoffset = Random.Range(-offset, offset);
+            float houseoffset = Random.Range(0, offset*50);
+            
 
             if(housecount > 0)
             {
@@ -294,6 +300,11 @@ public class HouseArray : MonoBehaviour
         
     }
 
+    IEnumerator Fishtimer()
+    {
+        yield return new WaitForSeconds(0.7f);
+        fishflag = true;
+    }
 
     void OnDrawGizmosSelected()
     {
