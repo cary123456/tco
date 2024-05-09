@@ -18052,7 +18052,15 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
+<<<<<<< Updated upstream
     m_SensorSize: {x: 1.6106133, y: 1}
+=======
+<<<<<<< HEAD
+    m_SensorSize: {x: 1.6346555, y: 1}
+=======
+    m_SensorSize: {x: 1.6106133, y: 1}
+>>>>>>> 15d480bdecc39d464afa6a2fb3bfd322ff158bb8
+>>>>>>> Stashed changes
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -19686,7 +19694,7 @@ MonoBehaviour:
   playersInGameText: {fileID: 189727566}
   joinCodeInput: {fileID: 0}
   executePhysicsButton: {fileID: 951523241}
-  VR: 1
+  VR: 0
 --- !u!1 &1112859804
 GameObject:
   m_ObjectHideFlags: 0

@@ -9094,5 +9094,5 @@ const Il2CppGenericMethodFunctionsDefinitions g_Il2CppGenericMethodFunctions[908
 { 22421, 9078, 7666, -1},
 { 22422, 9079, 7278, -1},
 { 22427, 9080, 6005, -1},
-{ 35500, 0, 0, -1},
+{ 35499, 0, 0, -1},
 };
