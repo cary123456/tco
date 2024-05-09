@@ -83,9 +83,9 @@ public class hotkey : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            if(raycast.GetComponent<raycast>().build.GetComponent<growvalue>() != null)
+            if (GameObject.FindWithTag("crabsed") != null)
             {
-                raycast.GetComponent<raycast>().build.GetComponent<growvalue>().grow = true;
+                Destroy(GameObject.FindWithTag("crabsed"));
             }
             
         }

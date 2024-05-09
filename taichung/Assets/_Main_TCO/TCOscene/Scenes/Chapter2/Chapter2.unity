@@ -11530,7 +11530,11 @@ MonoBehaviour:
   MessageBufferSize: 5120
   MaxConnections: 100
   MaxSentMessageQueueSize: 128
+<<<<<<< HEAD
   ConnectAddress: 192.168.50.246
+=======
+  ConnectAddress: 10.120.2.128
+>>>>>>> parent of 15d480bd (5/9)
   ConnectPort: 7777
   ServerListenPort: 7777
   MessageSendMode: 0
@@ -18019,6 +18023,7 @@ MonoBehaviour:
     GateFit: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     m_SensorSize: {x: 1.6106133, y: 1}
 =======
@@ -18034,6 +18039,9 @@ MonoBehaviour:
 =======
     m_SensorSize: {x: 2.08867, y: 1}
 >>>>>>> parent of d9c3327d (5/9 test)
+=======
+    m_SensorSize: {x: 1.7445128, y: 1}
+>>>>>>> parent of 15d480bd (5/9)
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
