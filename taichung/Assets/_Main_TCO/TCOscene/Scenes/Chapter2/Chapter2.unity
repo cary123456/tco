@@ -10364,6 +10364,8 @@ MonoBehaviour:
   mainncamera: {fileID: 963194225}
   player: []
   fish: {fileID: 532911484}
+  staw: {fileID: 1221706640}
+  back: {fileID: 680042732}
 --- !u!1 &562258741
 GameObject:
   m_ObjectHideFlags: 0
@@ -11530,7 +11532,7 @@ MonoBehaviour:
   MessageBufferSize: 5120
   MaxConnections: 100
   MaxSentMessageQueueSize: 128
-  ConnectAddress: 192.168.50.246
+  ConnectAddress: 10.120.2.128
   ConnectPort: 7777
   ServerListenPort: 7777
   MessageSendMode: 0
@@ -13053,6 +13055,7 @@ GameObject:
   - component: {fileID: 680042735}
   - component: {fileID: 680042734}
   - component: {fileID: 680042733}
+  - component: {fileID: 680042736}
   m_Layer: 0
   m_Name: SDF_Background
   m_TagString: Untagged
@@ -13116,7 +13119,19 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 0
+        m_Name: amount(Color1)
+        m_Overridden: 1
+      - m_Value: 0
+        m_Name: amount(Color2)
+        m_Overridden: 1
+      - m_Value: 0.6
+        m_Name: Max1
+        m_Overridden: 1
+      - m_Value: 0.1
+        m_Name: Min1
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
@@ -13152,6 +13167,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &680042736
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680042732}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 90b6837743d014041af4e8a75636995c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &680885113
 GameObject:
   m_ObjectHideFlags: 0
@@ -18017,7 +18052,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.08867, y: 1}
+    m_SensorSize: {x: 1.7445128, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -19651,7 +19686,7 @@ MonoBehaviour:
   playersInGameText: {fileID: 189727566}
   joinCodeInput: {fileID: 0}
   executePhysicsButton: {fileID: 951523241}
-  VR: 0
+  VR: 1
 --- !u!1 &1112859804
 GameObject:
   m_ObjectHideFlags: 0
@@ -21217,6 +21252,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217713269}
   m_Mesh: {fileID: 7511999720002767034, guid: 64d681c206edb4f4681bf45f103573f2, type: 3}
+--- !u!1 &1221706640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5225741777381344869, guid: 42c19a6540c66e942b896440e9dddda4, type: 3}
+  m_PrefabInstance: {fileID: 1426444421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1221706641
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221706640}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 735ad53ede71fab468b72baf01c474f0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1222905753
 GameObject:
   m_ObjectHideFlags: 0
@@ -26013,23 +26073,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5225741777381344869, guid: 42c19a6540c66e942b896440e9dddda4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6394748136496069651, guid: 42c19a6540c66e942b896440e9dddda4, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6394748136496069651, guid: 42c19a6540c66e942b896440e9dddda4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0042115697
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394748136496069651, guid: 42c19a6540c66e942b896440e9dddda4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0042115697
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394748136496069651, guid: 42c19a6540c66e942b896440e9dddda4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0042115697
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394748136496069651, guid: 42c19a6540c66e942b896440e9dddda4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53
+      value: 0.22569
       objectReference: {fileID: 0}
     - target: {fileID: 6394748136496069651, guid: 42c19a6540c66e942b896440e9dddda4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.1
+      value: -0.27
       objectReference: {fileID: 0}
     - target: {fileID: 6394748136496069651, guid: 42c19a6540c66e942b896440e9dddda4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 99.9
+      value: 0.49126
       objectReference: {fileID: 0}
     - target: {fileID: 6394748136496069651, guid: 42c19a6540c66e942b896440e9dddda4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30297,7 +30369,7 @@ MonoBehaviour:
   CrabKey: 0
   BubbleKey: 0
   FishKey: 0
-  WordKey: 0
+  WordKey: 107
   house:
   - {fileID: 8398855273896792897, guid: 1c5b676292a899540901c205af00abef, type: 3}
   - {fileID: 8398855273896792897, guid: 9208d3615aa6f5b46ac8830090bb2f83, type: 3}
@@ -30312,13 +30384,20 @@ MonoBehaviour:
   bubbleenable: 0
   fish: []
   fishenable: 0
-  word: []
-  wordenable: 0
+  word:
+  - {fileID: 5492883532013112885, guid: 3e44d8f3fc9def04c917452121a3da06, type: 3}
+  - {fileID: 5492883532013112885, guid: ac4f54b821a05f148ab8e508cb1d9585, type: 3}
+  - {fileID: 5492883532013112885, guid: ce31b8677b134c247afc2d40291c3697, type: 3}
+  - {fileID: 5492883532013112885, guid: 456170c935a30e945835c60d7c717117, type: 3}
+  - {fileID: 5492883532013112885, guid: 405dfb1b3994fb54292ac346900b2a5c, type: 3}
+  - {fileID: 5492883532013112885, guid: be6927bd54762974d8ca2391b7ee1cfb, type: 3}
+  - {fileID: 5492883532013112885, guid: 8e8ec283b2826d34286c3ce3d6bc63b9, type: 3}
+  wordenable: 1
   wordselect: 0
   pos: {fileID: 1587057817}
-  parenttrans: {fileID: 0}
-  parentcanvas: {fileID: 0}
-  wordIO: {fileID: 0}
+  parenttrans: {fileID: 1587057817}
+  parentcanvas: {fileID: 868587038}
+  wordIO: {fileID: 868587037}
   x: 40
   z: 7
   k: 2
@@ -30333,7 +30412,7 @@ MonoBehaviour:
   fishspeed: 0
   fishlifetime: 0
   wordscale: []
-  wordrotate: {x: 0, y: 0, z: 0}
+  wordrotate: {x: 0, y: 90, z: 0}
   housecount: 0
   offset: 0.3
   buildarraytemp: []
@@ -36156,7 +36235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777987214}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: -0.52, z: 5.28}
+  m_LocalPosition: {x: 0, y: -0.52, z: 5.445}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36655,7 +36734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1790015747
 MonoBehaviour:
   m_ObjectHideFlags: 0

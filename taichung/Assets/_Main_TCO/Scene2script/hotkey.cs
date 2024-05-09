@@ -25,6 +25,8 @@ public class hotkey : MonoBehaviour
     public GameObject mainncamera;
     public GameObject[] player;
     public GameObject fish;
+    public GameObject staw;
+    public GameObject back;
     // Start is called before the first frame update
     void Start()
     {
@@ -83,23 +85,35 @@ public class hotkey : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            if(raycast.GetComponent<raycast>().build.GetComponent<growvalue>() != null)
+            if (GameObject.FindWithTag("crabsed") != null)
             {
-                raycast.GetComponent<raycast>().build.GetComponent<growvalue>().grow = true;
+                Destroy(GameObject.FindWithTag("crabsed"));
             }
             
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-
+            if(back != null)
+            {
+                back.SetActive(true);              
+            }
+            
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-           
+            if(staw != null)
+            {
+                staw.GetComponent<Animator>().SetBool("up",true);  
+                staw.GetComponent<Animator>().SetBool("down",false);              
+            }
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
-            
+            if(staw != null)
+            {
+                staw.GetComponent<Animator>().SetBool("up",false); 
+                staw.GetComponent<Animator>().SetBool("down",true);              
+            }
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {

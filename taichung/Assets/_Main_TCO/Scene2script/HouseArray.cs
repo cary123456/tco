@@ -256,7 +256,7 @@ public class HouseArray : MonoBehaviour
             //     }
                 
             // }
-            int rand = Random.Range(0,fish.Length);
+            int rand = Random.Range(0,word.Length);
             float houseoffset = Random.Range(-offset, offset);
 
             if(housecount > 0)
