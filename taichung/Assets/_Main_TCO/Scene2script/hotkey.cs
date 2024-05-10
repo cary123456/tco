@@ -238,6 +238,10 @@ public class hotkey : MonoBehaviour
             {
                 Destroy(GameObject.FindWithTag("buildinglo"));
             }
+            if (GameObject.FindWithTag("word") != null)
+            {
+                Destroy(GameObject.FindWithTag("word"));
+            }
             if(fish != null)
             {
                 fish.SetActive(false);
