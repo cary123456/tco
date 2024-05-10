@@ -63,10 +63,10 @@ public class hotkey : MonoBehaviour
                 GameObject[] crabs = SummonCrabs.SummonCrab();
                 crabb = crabs;
             }
-            for (int i = 0; i < crabb.Length; i++)
-            {
-                //crabb[i].transform.position = Vector3.Lerp(crabb[i].transform.position, headset.transform.position, 0.05f);     //Every summoned crabs can follow
-            }
+            // for (int i = 0; i < crabb.Length; i++)
+            // {
+            //     //crabb[i].transform.position = Vector3.Lerp(crabb[i].transform.position, headset.transform.position, 0.05f);     //Every summoned crabs can follow
+            // }
         }
         else
         {

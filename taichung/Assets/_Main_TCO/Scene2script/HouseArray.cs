@@ -279,6 +279,11 @@ public class HouseArray : MonoBehaviour
                 {
                     Destroy(GameObject.FindWithTag("building"));
                 }
+                
+                if (GameObject.FindWithTag("buildinglo") != null)
+                {
+                    Destroy(GameObject.FindWithTag("buildinglo"));
+                }
 
             }
         }

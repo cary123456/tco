@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 4753514383172712589}
   - component: {fileID: 1783191028120103173}
   - component: {fileID: -1095103592912576264}
-  - component: {fileID: 6837552683693199483}
   - component: {fileID: 2587400591059769513}
   - component: {fileID: 7575020093509517095}
+  - component: {fileID: 7551635155448141311}
   m_Layer: 0
   m_Name: Crab1_hotkey
   m_TagString: crabs
@@ -78,6 +78,9 @@ VisualEffect:
         m_Overridden: 1
       - m_Value: 400
         m_Name: amount(Color2)
+        m_Overridden: 1
+      - m_Value: 2
+        m_Name: frequency
         m_Overridden: 1
     m_Vector2f:
       m_Array: []
@@ -220,35 +223,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16470a2ba35d4cf4299176c63f1b948d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Thrust: 0.005
-  maxTorque: 0.1
+  m_Thrust: 0.58
+  maxTorque: 0.5
   ancor: {fileID: 0}
   speed: 0.025
-  small: 0
---- !u!114 &6837552683693199483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123923147506414471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d65a018c25b95da4188b815a10d1f617, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  move: 0
-  crabs: []
-  buildings: []
-  runtime: 0
-  timemove: 2
-  midfinger: {fileID: 0}
-  duration: 3
-  one: 0
-  VRheadset: {fileID: 0}
-  crabcount: 0
-  onrtime: 0
-  headsetposition: {x: 0, y: 0, z: 0}
+  small: 1
+  minRotationSpeed: -0.2
+  maxRotationSpeed: 0.2
+  rotationSpeed: 0
 --- !u!114 &2587400591059769513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,3 +261,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 48
   m_CollisionDetection: 0
+--- !u!114 &7551635155448141311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123923147506414471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65a018c25b95da4188b815a10d1f617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move: 0
+  crabs: []
+  buildings: []
+  runtime: 0
+  timemove: 2
+  midfinger: {fileID: 0}
+  duration: 3
+  one: 0
+  VRheadset: {fileID: 0}
+  crabcount: 0
+  onrtime: 0
+  headsetposition: {x: 0, y: 0, z: 0}

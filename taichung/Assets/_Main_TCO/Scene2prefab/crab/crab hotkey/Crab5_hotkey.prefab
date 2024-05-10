@@ -91,6 +91,9 @@ VisualEffect:
       - m_Value: 1500
         m_Name: amount(Color1)
         m_Overridden: 1
+      - m_Value: 2
+        m_Name: frequency
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
@@ -209,7 +212,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6305365181422716240}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fdd186841afcf75458b41f7c7aa6870a, type: 3}
   m_Name: 
@@ -232,11 +235,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16470a2ba35d4cf4299176c63f1b948d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Thrust: 0.01
-  maxTorque: 0.1
+  m_Thrust: 0.58
+  maxTorque: 0.5
   ancor: {fileID: 0}
   speed: 0.025
-  small: 0
+  small: 1
+  minRotationSpeed: -0.2
+  maxRotationSpeed: 0.2
+  rotationSpeed: 0
 --- !u!114 &7804729415481830911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +250,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6305365181422716240}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d65a018c25b95da4188b815a10d1f617, type: 3}
   m_Name: 

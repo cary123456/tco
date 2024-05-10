@@ -4206,7 +4206,12 @@ MonoBehaviour:
   CrabPrefab: {fileID: 4262914510834770975, guid: 9554d56db027c004cbee841b76451df5, type: 3}
   CrabVFX: {fileID: 5539329455881767613, guid: 4a1af3ffd2d25cf4f872540061315f3e, type: 3}
   crabb: []
-  crabs: []
+  crabs:
+  - {fileID: 123923147506414471, guid: c32823af10c4c274c876143f52840af8, type: 3}
+  - {fileID: 2852902099044335350, guid: f509e38057180044ea1a11ed3034b98b, type: 3}
+  - {fileID: 5792839285151883588, guid: 63e8a2372e427224c98741739e6d911c, type: 3}
+  - {fileID: 2655429697686084108, guid: 12ff10db160f35c4fb69a728fffc40d3, type: 3}
+  - {fileID: 6305365181422716240, guid: da4eabc96c0fa354283c813bed038183, type: 3}
   SummonCrabsCount: 4
   SummonPosOffset:
   - {x: 2.85, y: 0, z: -1}
@@ -5316,7 +5321,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296274538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24, y: 0, z: -24.5}
+  m_LocalPosition: {x: -24, y: 0, z: -14.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5348,11 +5353,11 @@ MonoBehaviour:
   - {fileID: 8398855273896792897, guid: 3e07d7a9cc6722d42b02959689d2ab2a, type: 3}
   houseenable: 0
   crab:
-  - {fileID: 123923147506414471, guid: 8cd5fc17e2c9a0f45bc8fdd41b9d1830, type: 3}
-  - {fileID: 2852902099044335350, guid: 63effbec7f9646f47a70be8a0cbb6570, type: 3}
-  - {fileID: 5792839285151883588, guid: 7b9dfd70c9e5fc247b6908a6a6440aee, type: 3}
-  - {fileID: 2655429697686084108, guid: 0b6836a29d6459743bda2150b59125ed, type: 3}
-  - {fileID: 6305365181422716240, guid: c464b05a4b24cf74eb953d8fd5562081, type: 3}
+  - {fileID: 123923147506414471, guid: c32823af10c4c274c876143f52840af8, type: 3}
+  - {fileID: 2852902099044335350, guid: f509e38057180044ea1a11ed3034b98b, type: 3}
+  - {fileID: 5792839285151883588, guid: 63e8a2372e427224c98741739e6d911c, type: 3}
+  - {fileID: 2655429697686084108, guid: 12ff10db160f35c4fb69a728fffc40d3, type: 3}
+  - {fileID: 6305365181422716240, guid: da4eabc96c0fa354283c813bed038183, type: 3}
   crabenable: 1
   bubble: []
   bubbleenable: 0
@@ -5391,6 +5396,7 @@ MonoBehaviour:
   bubbleflag: 0
   gesturetigger: 0
   flip: 0
+  fishflag: 0
 --- !u!1001 &305170193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15568,7 +15574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1859743739202422552, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1859743739202422565, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: InitialModule.startColor.maxGradient.key0.b
@@ -15648,11 +15654,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8111455648178925855, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8587817307095751624, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 839703476, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
@@ -16096,7 +16102,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850491506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -67.4, y: 0, z: -15.4}
+  m_LocalPosition: {x: -68.5, y: 0, z: -15.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16137,8 +16143,8 @@ MonoBehaviour:
   parentcanvas: {fileID: 0}
   wordIO: {fileID: 0}
   x: 40
-  z: 7
-  k: 2
+  z: 1
+  k: 4
   buildpertime: 1
   housescale: []
   crabscale: []
@@ -16156,6 +16162,7 @@ MonoBehaviour:
   bubbleflag: 0
   gesturetigger: 0
   flip: 0
+  fishflag: 0
 --- !u!1 &854107328
 GameObject:
   m_ObjectHideFlags: 0
@@ -17979,7 +17986,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: -0.52, z: 5.47}
+  m_LocalPosition: {x: -0.36, y: -0.18, z: 5.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18052,7 +18059,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6106133, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -19686,7 +19693,7 @@ MonoBehaviour:
   playersInGameText: {fileID: 189727566}
   joinCodeInput: {fileID: 0}
   executePhysicsButton: {fileID: 951523241}
-  VR: 1
+  VR: 0
 --- !u!1 &1112859804
 GameObject:
   m_ObjectHideFlags: 0
@@ -25813,7 +25820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1859743739202422552, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1859743739289401752, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: m_Enabled
@@ -25889,11 +25896,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8111455648178925855, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8587817307095751624, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 839703476, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
@@ -26073,7 +26080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5225741777381344869, guid: 42c19a6540c66e942b896440e9dddda4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6394748136496069651, guid: 42c19a6540c66e942b896440e9dddda4, type: 3}
       propertyPath: m_RootOrder
@@ -28114,7 +28121,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1483120752
 Transform:
   m_ObjectHideFlags: 0
@@ -28198,6 +28205,7 @@ MonoBehaviour:
   bubbleflag: 0
   gesturetigger: 0
   flip: 0
+  fishflag: 0
 --- !u!1 &1489982483
 GameObject:
   m_ObjectHideFlags: 0
@@ -30400,7 +30408,7 @@ MonoBehaviour:
   wordIO: {fileID: 868587037}
   x: 40
   z: 7
-  k: 2
+  k: 4
   buildpertime: 6
   housescale:
   - 1
@@ -30421,6 +30429,7 @@ MonoBehaviour:
   bubbleflag: 0
   gesturetigger: 0
   flip: 0
+  fishflag: 0
 --- !u!1 &1593852959
 GameObject:
   m_ObjectHideFlags: 0
@@ -35233,7 +35242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742784272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -67.4, y: 0, z: -15.4}
+  m_LocalPosition: {x: -66, y: 0, z: 6.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35274,8 +35283,8 @@ MonoBehaviour:
   parentcanvas: {fileID: 0}
   wordIO: {fileID: 0}
   x: 40
-  z: 7
-  k: 2
+  z: 1
+  k: 4
   buildpertime: 1
   housescale: []
   crabscale: []
@@ -35293,6 +35302,7 @@ MonoBehaviour:
   bubbleflag: 0
   gesturetigger: 0
   flip: 1
+  fishflag: 0
 --- !u!1 &1743383026
 GameObject:
   m_ObjectHideFlags: 0
@@ -36235,7 +36245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777987214}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: -0.52, z: 5.445}
+  m_LocalPosition: {x: -0.36, y: -0.18, z: 5.445}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36734,7 +36744,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1790015747
 MonoBehaviour:
   m_ObjectHideFlags: 0
