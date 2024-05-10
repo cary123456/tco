@@ -10,7 +10,11 @@ public class move2 : MonoBehaviour
     public float speed = 5;
     public float acceleration = 10f;
 
+    public float slow = 1f;
+
     public KeyCode speedUp = KeyCode.LeftShift;
+    public KeyCode slowdown = KeyCode.LeftControl;
+
     public KeyCode moveUp = KeyCode.Mouse0;
     public KeyCode moveDown = KeyCode.Mouse1;
     public KeyCode mouseLock = KeyCode.Q;
@@ -19,7 +23,6 @@ public class move2 : MonoBehaviour
     public KeyCode moveBackward = KeyCode.S;
     public KeyCode moveLeft = KeyCode.A;
     public KeyCode moveRight = KeyCode.D;
-
     public bool locked = false;
     private int i = 0;
 
@@ -51,7 +54,14 @@ public class move2 : MonoBehaviour
         }
         if (locked)
         {
-            float currentSpeed = (Input.GetKey(speedUp)) ? acceleration : speed;
+            // float currentSpeed = (Input.GetKey(speedUp)) ? acceleration : speed;
+            float currentSpeed = speed;
+            if(Input.GetKey(speedUp)){
+                currentSpeed = acceleration;
+            }
+            else if(Input.GetKey(slowdown)){
+                currentSpeed = slow;
+            }
 
             turn.y += Input.GetAxis("Mouse Y") * sensitivity;
             turn.x += Input.GetAxis("Mouse X") * sensitivity;

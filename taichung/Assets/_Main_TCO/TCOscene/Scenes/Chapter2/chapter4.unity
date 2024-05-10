@@ -269,7 +269,7 @@ MonoBehaviour:
   - 2000
   bubble: {fileID: 2054776253}
   counter: 0
-  prethreshold: 3
+  prethreshold: 1
   threshold: 10
   iswall: 0
   playerbubble: {fileID: 183067699}
@@ -1302,7 +1302,9 @@ MonoBehaviour:
   sensitivity: 0.5
   speed: 4
   acceleration: 10
+  slow: 1
   speedUp: 304
+  slowdown: 306
   moveUp: 119
   moveDown: 324
   mouseLock: 113
@@ -1368,14 +1370,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892657987}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.14, y: 9.97, z: -1.2049994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &892657992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1388,7 +1390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020061be8864f834ba20af5591248a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turn: {x: 180, y: 270}
+  turn: {x: 0, y: 270}
   sensitivity: 0.5
   speed: 4
   acceleration: 10
@@ -1433,7 +1435,13 @@ MonoBehaviour:
   udpPort: 6000
   humanModel:
   - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
   humanModelLastUpdateTime:
+  - 0
+  - 0
+  - 0
   - 0
   x: {fileID: 0}
   y: {fileID: 0}
@@ -1653,7 +1661,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 4.0566945, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1754,7 +1762,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204531616}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.14, y: 9.97, z: -1.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1764,7 +1772,7 @@ Transform:
   - {fileID: 1658696597}
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!4 &1296901603 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7816375564385254655, guid: 9bc2de8eb849d1a4aa9d08fbf5984e50, type: 3}
@@ -3086,10 +3094,10 @@ MonoBehaviour:
   pos: {fileID: 2054776254}
   parenttrans: {fileID: 2054776254}
   parentcanvas: {fileID: 0}
-  wordIO: {fileID: 0}
-  x: 26
-  z: 14
-  k: 0.56
+  wordIO: {fileID: 517158417}
+  x: 20
+  z: 15
+  k: 0.2
   buildpertime: 1
   housescale:
   - 0
@@ -3097,7 +3105,7 @@ MonoBehaviour:
   - 0
   crabscale: []
   bubblescale:
-  - 0.5
+  - 0.75
   - 0.8
   - 1
   playerbubble: {fileID: 183067699}
@@ -3122,7 +3130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054776252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.18, y: 0, z: -3.85}
+  m_LocalPosition: {x: -3.6, y: 0, z: 0.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

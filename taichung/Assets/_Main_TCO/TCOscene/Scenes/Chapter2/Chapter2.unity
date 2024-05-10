@@ -15008,7 +15008,9 @@ MonoBehaviour:
   sensitivity: 0.5
   speed: 5
   acceleration: 10
+  slow: 1
   speedUp: 304
+  slowdown: 306
   moveUp: 323
   moveDown: 324
   mouseLock: 113
@@ -18151,7 +18153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camTarget: {fileID: 1777987215}
   pLerp: 0.02
-  rLerp: 0.01
+  rLerp: 0.02
 --- !u!1 &963664976
 GameObject:
   m_ObjectHideFlags: 0
@@ -36266,9 +36268,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turn: {x: 180, y: 0}
   sensitivity: 0.5
-  speed: 4
-  acceleration: 10
+  speed: 3
+  acceleration: 8
+  slow: 0.5
   speedUp: 304
+  slowdown: 306
   moveUp: 323
   moveDown: 324
   mouseLock: 113

@@ -60,7 +60,7 @@ public class dynamicGeneration : MonoBehaviour
             if(counter % thresholdtemp == 0)
             {
                 bubble.bubbleflag = true;
-                bubble.buildpertime += 1;
+                bubble.buildpertime = 1;
             }
             else if(bubble.housecount >= bubble.x * bubble.z )
             {
