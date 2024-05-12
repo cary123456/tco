@@ -51,6 +51,9 @@ public class HouseArray : MonoBehaviour
     public bool gesturetigger = false;
     public bool flip = false;
     public bool fishflag;
+    public bool houseflag;
+    public bool keepbuild;
+
 
     void Start() 
     {
@@ -78,8 +81,13 @@ public class HouseArray : MonoBehaviour
     {
         bool flag = true;
 
-        if(Input.GetKeyDown(HouseKey) &&　flag && houseenable)
+        if((Input.GetKeyDown(HouseKey) &&　flag && houseenable) || (keepbuild && houseflag))
         {
+
+            keepbuild = true;
+            houseflag =false;
+            StartCoroutine("Housetimer");
+
             for(int i = 0; i < buildpertime; i++) 
             {
                 
@@ -109,7 +117,10 @@ public class HouseArray : MonoBehaviour
                     if(housecount >= x*z-blockhouseZ.Length*x-blockhouseX.Length*z+blockhouseX.Length*blockhouseZ.Length)
                         break;
                 }
-                Debug.Log( x*z-blockhouseZ.Length*x-blockhouseX.Length*z+blockhouseX.Length*blockhouseZ.Length);
+                if(housecount >= x*z-blockhouseZ.Length*x-blockhouseX.Length*z+blockhouseX.Length*blockhouseZ.Length)
+                {
+                    keepbuild =false;
+                }
             }
 
         }
@@ -309,6 +320,11 @@ public class HouseArray : MonoBehaviour
     {
         yield return new WaitForSeconds(0.7f);
         fishflag = true;
+    }
+    IEnumerator Housetimer()
+    {
+        yield return new WaitForSeconds(0.5f);
+        houseflag = true;
     }
 
     void OnDrawGizmosSelected()
