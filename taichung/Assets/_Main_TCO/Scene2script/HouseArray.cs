@@ -83,7 +83,6 @@ public class HouseArray : MonoBehaviour
 
         if((Input.GetKeyDown(HouseKey) &&　flag && houseenable) || (keepbuild && houseflag))
         {
-
             keepbuild = true;
             houseflag =false;
             StartCoroutine("Housetimer");
