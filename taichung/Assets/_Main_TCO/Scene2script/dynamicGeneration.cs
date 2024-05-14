@@ -48,7 +48,34 @@ public class dynamicGeneration : MonoBehaviour
 
     void OnCollisionExit(Collision other)
     {
-        if (other.gameObject.tag == "ball" && !iswall)
+        // if (other.gameObject.tag == "ball" && !iswall)
+        // {
+        //     int thresholdtemp = threshold;
+        //     counter++;
+
+        //     if (bubble.buildpertime < 10)
+        //         thresholdtemp = prethreshold;
+
+
+        //     if(counter % thresholdtemp == 0)
+        //     {
+        //         bubble.bubbleflag = true;
+        //         bubble.bubbles.transform.position = other.transform.position;
+        //         bubble.buildpertime = 1;
+        //     }
+        //     else if(bubble.housecount >= bubble.x * bubble.z )
+        //     {
+        //         counter = 0;
+        //         bubble.buildpertime = 1;
+        //     }
+            
+        // }
+        
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+         if (other.gameObject.tag == "ball" && !iswall)
         {
             int thresholdtemp = threshold;
             counter++;
@@ -59,7 +86,9 @@ public class dynamicGeneration : MonoBehaviour
 
             if(counter % thresholdtemp == 0)
             {
+                bubble.bubblepos = other.transform.position;
                 bubble.bubbleflag = true;
+                Debug.Log(other.transform.position);
                 bubble.buildpertime = 1;
             }
             else if(bubble.housecount >= bubble.x * bubble.z )
@@ -69,15 +98,10 @@ public class dynamicGeneration : MonoBehaviour
             }
             
         }
-        
-    }
 
-    void OnCollisionEnter(Collision other)
-    {
         if (other.gameObject.tag == "ball" && iswall)
         {
             other.rigidbody.GetComponent<Rigidbody>().AddForce((playerbubble.position - other.transform.position) * rebound);
-            Debug.Log("rebound");
         }
     }
 

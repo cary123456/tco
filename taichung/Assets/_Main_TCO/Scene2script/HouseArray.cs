@@ -36,6 +36,7 @@ public class HouseArray : MonoBehaviour
     public float[] housescale;
     public float[] crabscale;
     public float[] bubblescale;
+    public float bubbleforce;
     public Transform playerbubble;
     public float fishspeed;
     public float fishlifetime;
@@ -53,6 +54,7 @@ public class HouseArray : MonoBehaviour
     public bool fishflag;
     public bool houseflag;
     public bool keepbuild;
+    public Vector3 bubblepos;
 
 
     void Start() 
@@ -209,7 +211,7 @@ public class HouseArray : MonoBehaviour
             for(int i = 0; i < buildpertime; i++) 
             {
 
-                bubbleflag = false;
+                
                 flag = false;
 
                 float houseoffset = Random.Range(-offset, offset);
@@ -218,10 +220,18 @@ public class HouseArray : MonoBehaviour
                 int rand = Random.Range(0,bubble.Length);
                 int s = Random.Range(0,bubblescale.Length);
 
+                if(!bubbleflag)
+                {
+                    bubblepos = pos.localPosition + new Vector3 (Xpos*k + houseoffset, 0f, Zpos*k );
+                    Debug.Log("A");
+                }
+
+                bubbleflag = false;
+
                 if(buildarray[Xpos,Zpos] != 1)
                 {
-                    GameObject bubbles =Instantiate(bubble[rand], pos.localPosition + new Vector3 (Xpos*k + houseoffset, 0f, Zpos*k ), Quaternion.identity, pos);
-                    bubbles.GetComponent<Rigidbody>().AddForce(playerbubble.position - bubbles.transform.position);
+                    GameObject bubbles =Instantiate(bubble[rand], bubblepos, Quaternion.identity, pos);
+                    bubbles.GetComponent<Rigidbody>().AddForce((playerbubble.position - bubbles.transform.position) * bubbleforce);
                     bubbles.transform.localScale = new Vector3(bubblescale[s], bubblescale[s], bubblescale[s]);
                     buildarray[Xpos,Zpos] = 1;
                     buildarraytemp.Add( new Vector2(Xpos,Zpos));
