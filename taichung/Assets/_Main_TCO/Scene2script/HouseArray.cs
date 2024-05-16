@@ -53,6 +53,7 @@ public class HouseArray : MonoBehaviour
     public bool flip = false;
     public bool fishflag;
     public bool houseflag;
+    public bool bubbletimerflag;
     public bool keepbuild;
     public Vector3 bubblepos;
 
@@ -206,12 +207,14 @@ public class HouseArray : MonoBehaviour
 
         }
 
-        if(Input.GetKeyDown(BubbleKey) &&　flag && bubbleenable || bubbleflag)
+        if(Input.GetKeyDown(BubbleKey) &&　flag && bubbleenable || (bubbleflag && bubbletimerflag))
         {
+            bubbletimerflag = false;
+            StartCoroutine("Bubbletimer");
+
             for(int i = 0; i < buildpertime; i++) 
             {
 
-                
                 flag = false;
 
                 float houseoffset = Random.Range(-offset, offset);
@@ -334,6 +337,11 @@ public class HouseArray : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         houseflag = true;
+    }
+    IEnumerator Bubbletimer()
+    {
+        yield return new WaitForSeconds(0.3f);
+        bubbletimerflag = true;
     }
 
     void OnDrawGizmosSelected()
