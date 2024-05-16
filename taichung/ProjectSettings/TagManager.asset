@@ -36,6 +36,7 @@ TagManager:
   - fishtrigger
   - ball
   - word
+  - inside
   layers:
   - Default
   - TransparentFX

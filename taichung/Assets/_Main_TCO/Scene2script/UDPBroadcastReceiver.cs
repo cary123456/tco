@@ -99,7 +99,7 @@ public class UDPBroadcastReceiver : MonoBehaviour
             {
                 for (int i = 0; i < humanModel.Length; i++)
                 {
-                    humanModel[i].SetActive(false);
+                    //humanModel[i].SetActive(false);
                 }
 
                 if (data == "0")
@@ -113,7 +113,7 @@ public class UDPBroadcastReceiver : MonoBehaviour
                         }
                         else
                         {
-                            humanModel[i].SetActive(false);
+                            //humanModel[i].SetActive(false);
                         }
                         
                     }

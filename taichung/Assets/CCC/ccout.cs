@@ -48,7 +48,7 @@ public class ccout : MonoBehaviour
 
             // 应用值到你想要的地方，例如改变物体的颜色、大小等等
             // 这里仅作示例，你可以根据你的需要进行修改
-            Debug.Log("Current value: " + value);
+            //Debug.Log("Current value: " + value);
             if (Input.GetKeyUp(KeyCode.S))
             {
                 timer = 0;

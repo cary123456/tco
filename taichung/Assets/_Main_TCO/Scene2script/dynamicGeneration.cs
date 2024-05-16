@@ -19,13 +19,14 @@ public class dynamicGeneration : MonoBehaviour
     public float[] crabsFallSpeed;
     public float[] CrabScale = {1f, 2f, 3f};
     public float[] particleRed = {50f, 500f, 2000f};
-    public HouseArray bubble;
+    public HouseArray[] bubble;
     public int counter =0;
     public int prethreshold;
     public int threshold;
     public bool iswall = false;
     public Transform playerbubble;
     public float rebound;
+    public int i = 0;
 
     public GameObject[] SummonCrab()
     {
@@ -80,21 +81,23 @@ public class dynamicGeneration : MonoBehaviour
             int thresholdtemp = threshold;
             counter++;
 
-            if (bubble.buildpertime < 10)
+            if (bubble[i].buildpertime < 10)
                 thresholdtemp = prethreshold;
 
 
             if(counter % thresholdtemp == 0)
             {
-                bubble.bubblepos = other.transform.position;
-                bubble.bubbleflag = true;
+                bubble[i].bubblepos = other.transform.position;
+                bubble[i].bubbleflag = true;
                 Debug.Log(other.transform.position);
-                bubble.buildpertime = 1;
+                bubble[i].buildpertime = 1;
             }
-            else if(bubble.housecount >= bubble.x * bubble.z )
+            if(bubble[i].housecount >= bubble[i].x * bubble[i].z )
             {
                 counter = 0;
-                bubble.buildpertime = 1;
+                if(i<3)
+                    i++;
+                bubble[i].buildpertime = 1;
             }
             
         }

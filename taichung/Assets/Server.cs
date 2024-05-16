@@ -3,55 +3,29 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using UnityEngine;
-
+using System.IO;
 public class Server : MonoBehaviour
 {
-    private TcpListener listener;
-    private TcpClient client;
-
-    private void Start()
+    private const int port = 8888;
+    private UdpClient server;
+    
+    void Start()
     {
-        StartServer();
+        server = new UdpClient(port);
+        Debug.Log("Server is listening on port " + port);
+        
+        // Start listening for incoming data
+        server.BeginReceive(new AsyncCallback(ReceiveData), null);
     }
-
-    private void StartServer()
+    
+    private void ReceiveData(IAsyncResult result)
     {
-        listener = new TcpListener(IPAddress.Any, 8888); // 監聽所有IP的8888埠
-        listener.Start();
-
-        Debug.Log("Server is listening...");
-
-        AcceptClient();
-    }
-
-    private async void AcceptClient()
-    {
-        client = await listener.AcceptTcpClientAsync();
-        Debug.Log("Client connected.");
-
-        ReceiveMessage();
-    }
-
-    private async void ReceiveMessage()
-    {
-        NetworkStream stream = client.GetStream();
-
-        byte[] buffer = new byte[1024];
-        int byteCount;
-
-        while ((byteCount = await stream.ReadAsync(buffer, 0, buffer.Length)) > 0)
-        {
-            string message = Encoding.UTF8.GetString(buffer, 0, byteCount);
-            Debug.Log("Received message: " + message);
-        }
-    }
-
-    private void OnDestroy()
-    {
-        if (client != null)
-            client.Close();
-
-        if (listener != null)
-            listener.Stop();
+        IPEndPoint clientEndPoint = new IPEndPoint(IPAddress.Any, port);
+        byte[] receivedBytes = server.EndReceive(result, ref clientEndPoint);
+        string receivedData = Encoding.ASCII.GetString(receivedBytes);
+        Debug.Log("Received data from client: " + receivedData);
+        
+        // Continue listening for more data
+        server.BeginReceive(new AsyncCallback(ReceiveData), null);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class hotkey : MonoBehaviour
 {
     public GameObject crab;
+    public KeyCode crabkey;
     public GameObject crabposition;
     public GameObject crabmanager;
     public GameObject[] crabs;
@@ -26,7 +27,12 @@ public class hotkey : MonoBehaviour
     public GameObject[] player;
     public GameObject fish;
     public GameObject staw;
+    public GameObject staw_2;
     public GameObject back;
+    public GameObject bubblebackup;
+    public int bubblecount;
+    bool stawflag = false;
+    bool stawflag_2 = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +45,7 @@ public class hotkey : MonoBehaviour
         crabs = GameObject.FindGameObjectsWithTag("crab");
         player = GameObject.FindGameObjectsWithTag("Player");
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(crabkey))
         {
             crabfollow = true;
             //Instantiate(crab,headset.transform.position , Quaternion.Euler(new Vector3(0, 0, 0)));
@@ -47,7 +53,7 @@ public class hotkey : MonoBehaviour
 
 
         }
-        if (Input.GetKeyUp(KeyCode.Alpha1))
+        if (Input.GetKeyUp(crabkey))
         {
             crabfollow = false;
              //Instantiate(crab,headset.transform.position , Quaternion.Euler(new Vector3(0, 0, 0)));
@@ -103,17 +109,43 @@ public class hotkey : MonoBehaviour
         {
             if(staw != null)
             {
-                staw.GetComponent<Animator>().SetBool("up",true);  
-                staw.GetComponent<Animator>().SetBool("down",false);              
+                stawflag = !stawflag;
+                staw.GetComponent<Animator>().SetBool("up",stawflag);  
+                //staw.GetComponent<Animator>().SetBool("down",false);              
             }
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
             if(staw != null)
             {
-                staw.GetComponent<Animator>().SetBool("up",false); 
-                staw.GetComponent<Animator>().SetBool("down",true);              
+                stawflag_2 = !stawflag_2;
+                staw_2.GetComponent<Animator>().SetBool("up",stawflag_2); 
+                //staw.GetComponent<Animator>().SetBool("down",true);              
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            bubblecount += 1;
+            if(bubblecount > 1)
+            {
+                bubblecount = 0;
+            }
+        }
+        if(bubblecount == 1)
+        {
+            if(bubblebackup != null)
+            {
+                bubblebackup.SetActive(true);
+            }
+           
+        }
+        if(bubblecount == 0)
+        {
+            if(bubblebackup != null)
+            {
+                bubblebackup.SetActive(false);
+            }
+            
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
