@@ -195,7 +195,7 @@ public class HouseArray : MonoBehaviour
                     GameObject crabs = Instantiate(crab[rand], pos.localPosition + new Vector3 (Xpos*k + houseoffset, -2.7f, Zpos*k ), Quaternion.identity, pos);
                     crabs.transform.localScale = new Vector3(crabscale[s], crabscale[s], crabscale[s]);
                     crabs.transform.Rotate(0, 0, 180);
-                    crabs.GetComponent<Rigidbody>().AddForce(new Vector3(speed, 0, 0));
+                    crabs.GetComponent<Rigidbody>().velocity = new Vector3(speed, 0, 0);
 
                     //buildarray[Xpos,Zpos] = 1;
                     buildarraytemp.Add( new Vector2(Xpos,Zpos));

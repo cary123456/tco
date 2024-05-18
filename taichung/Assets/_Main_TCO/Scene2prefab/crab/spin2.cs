@@ -29,6 +29,7 @@ public class spin2 : MonoBehaviour
            
             StartMoving();
         }
+     
         moveableObjects = GameObject.FindGameObjectsWithTag(objectTag);
         moveableTransforms = new Transform[moveableObjects.Length];
 

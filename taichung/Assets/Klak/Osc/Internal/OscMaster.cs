@@ -43,7 +43,7 @@ namespace Klak.Osc
         static OscServer ServerInstance {
             get {
                 if (_server == null) {
-                    _server = new OscServer(1234);
+                    _server = new OscServer(1233);
                     _server.Start();
                 }
                 return _server;

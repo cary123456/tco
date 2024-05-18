@@ -223,13 +223,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16470a2ba35d4cf4299176c63f1b948d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Thrust: 0.02
+  m_Thrust: 0.01
   maxTorque: 0.5
   ancor: {fileID: 0}
   speed: 0.025
   small: 0
-  minRotationSpeed: -0.2
-  maxRotationSpeed: 0.2
+  minRotationSpeed: -0.05
+  maxRotationSpeed: 0.05
   rotationSpeed: 0
 --- !u!114 &6837552683693199483
 MonoBehaviour:
