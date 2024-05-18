@@ -60,5 +60,5 @@ Material:
     - _Speed: 0.05
     m_Colors:
     - _AlphaStretch: {r: 2, g: 0.65, b: 0, a: 0}
-    - _Color: {r: 1.9433962, g: 0.9086219, b: 0.6722438, a: 0}
+    - _Color: {r: 2.7840595, g: 1.1091871, b: 0.72097164, a: 0}
   m_BuildTextureStacks: []
