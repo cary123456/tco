@@ -35,6 +35,7 @@ public class HouseArray : MonoBehaviour
     public int buildpertime = 1;
     public float[] housescale;
     public float[] crabscale;
+    public float crabspeed;
     public float[] bubblescale;
     public float bubbleforce;
     public Transform playerbubble;
@@ -186,15 +187,20 @@ public class HouseArray : MonoBehaviour
                 int Zpos = Random.Range(0,z);
                 int rand = Random.Range(0,crab.Length);
                 int s = Random.Range(0, crabscale.Length);
+                float speed = flip? crabspeed : -crabspeed;
+                
 
                 if (buildarray[Xpos,Zpos] != 1)
                 {
-                    GameObject crabs = Instantiate(crab[rand], pos.localPosition + new Vector3 (Xpos*k + houseoffset, Zpos*k, -2.7f ), Quaternion.identity, pos);
+                    GameObject crabs = Instantiate(crab[rand], pos.localPosition + new Vector3 (Xpos*k + houseoffset, -2.7f, Zpos*k ), Quaternion.identity, pos);
                     crabs.transform.localScale = new Vector3(crabscale[s], crabscale[s], crabscale[s]);
-                    buildarray[Xpos,Zpos] = 1;
+                    crabs.transform.Rotate(0, 0, 180);
+                    crabs.GetComponent<Rigidbody>().AddForce(new Vector3(speed, 0, 0));
+
+                    //buildarray[Xpos,Zpos] = 1;
                     buildarraytemp.Add( new Vector2(Xpos,Zpos));
                     buildarraytemp.ToArray();
-                    housecount++;
+                    //housecount++;
                 }
                 else 
                 {   
