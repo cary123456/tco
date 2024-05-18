@@ -67,7 +67,7 @@ MonoBehaviour:
     m_InternalValue: 0
   housetri:
     m_InternalValue: 0
-  fishtri:
+  fishfloat:
     m_InternalValue: 0
   fishmantri:
     m_InternalValue: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   netbool: 0
   nethousebool: 0
   netfishmanbool: 0
-  netfishbool: 0
+  netfishfloat: 0
   netdestorybool: 0
   nethandRx: 0
   nethandRy: 0
@@ -183,10 +183,10 @@ MonoBehaviour:
   righthand: {fileID: 0}
   crab:
   - {fileID: 123923147506414471, guid: 8cd5fc17e2c9a0f45bc8fdd41b9d1830, type: 3}
-  - {fileID: 2852902099044335350, guid: 63effbec7f9646f47a70be8a0cbb6570, type: 3}
-  - {fileID: 5792839285151883588, guid: 7b9dfd70c9e5fc247b6908a6a6440aee, type: 3}
-  - {fileID: 2655429697686084108, guid: 0b6836a29d6459743bda2150b59125ed, type: 3}
   - {fileID: 6305365181422716240, guid: c464b05a4b24cf74eb953d8fd5562081, type: 3}
+  - {fileID: 2655429697686084108, guid: 0b6836a29d6459743bda2150b59125ed, type: 3}
+  - {fileID: 2655429697686084108, guid: 0b6836a29d6459743bda2150b59125ed, type: 3}
+  - {fileID: 123923147506414471, guid: 8cd5fc17e2c9a0f45bc8fdd41b9d1830, type: 3}
   crabs: []
   crabsamount: 0
   onetimetrigger: 0
@@ -209,6 +209,7 @@ MonoBehaviour:
   fishflok: {fileID: 0}
   fishcolddownruntime: 0
   fishtricube: {fileID: 5549924288004740092, guid: 2d0755e53e633754eae317f0de3eaede, type: 3}
+  fishmanager: {fileID: 0}
 --- !u!114 &1072218067991891256
 MonoBehaviour:
   m_ObjectHideFlags: 0

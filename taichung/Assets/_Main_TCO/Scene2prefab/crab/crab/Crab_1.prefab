@@ -34,8 +34,8 @@ Transform:
   m_GameObject: {fileID: 123923147506414471}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.32, y: 2.32, z: 2.32}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 568606948263186013}
   - {fileID: 7807422237080075494}
@@ -74,10 +74,10 @@ VisualEffect:
       - m_Value: 2
         m_Name: Drag
         m_Overridden: 1
-      - m_Value: 2000
+      - m_Value: 1000
         m_Name: amount(Color1)
         m_Overridden: 1
-      - m_Value: 400
+      - m_Value: 500
         m_Name: amount(Color2)
         m_Overridden: 1
       - m_Value: 2
@@ -86,7 +86,7 @@ VisualEffect:
       - m_Value: 0.35
         m_Name: Min1
         m_Overridden: 1
-      - m_Value: 0.6
+      - m_Value: 0.4
         m_Name: Max1
         m_Overridden: 1
       - m_Value: 0.02

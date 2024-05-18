@@ -22,6 +22,8 @@ public class hotkey : MonoBehaviour
     private int lookcount;
     public GameObject Rvfx;
     public GameObject Lvfx;
+    public GameObject RLine;
+    public GameObject LLine;
     public int vfxcount;
     public GameObject mainncamera;
     public GameObject[] player;
@@ -163,19 +165,7 @@ public class hotkey : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.B))
         {
-            lookcount += 1;
-            if(lookcount > 1)
-            {
-                lookcount = 0;
-            }
-            if(lookcount == 0)
-            {
-                maincamera.GetComponent<lookat>().look = false;
-            }
-            else if(lookcount == 1)
-            {
-                maincamera.GetComponent<lookat>().look = true;
-            }
+
             
         }
         if (Input.GetKeyDown(KeyCode.V))
@@ -192,7 +182,14 @@ public class hotkey : MonoBehaviour
             {
                 Rvfx.SetActive(true);
             }
-
+            if(RLine != null)
+            {
+                RLine.SetActive(false);
+            }
+            if(LLine != null)
+            {
+                LLine.SetActive(false);
+            }
             if (Lvfx != null)
             {
                 Lvfx.SetActive(true);
@@ -208,6 +205,14 @@ public class hotkey : MonoBehaviour
             if(Lvfx != null)
             {
                 Lvfx.SetActive(false);
+            }
+             if(RLine != null)
+            {
+                RLine.SetActive(true);
+            }
+            if(LLine != null)
+            {
+                LLine.SetActive(true);
             }
             
         }

@@ -35,7 +35,7 @@ public class voixetest : MonoBehaviour
         {
             rend = bubble.GetComponent<Renderer>();
             //rend.material.shader = Shader.Find("Inside");
-            rend.material.SetFloat("_NoiseScale", _pickup*5 );
+            rend.material.SetFloat("_NoiseScale", _pickup*8 );
         }
         
     }

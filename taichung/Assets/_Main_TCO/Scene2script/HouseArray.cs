@@ -229,10 +229,10 @@ public class HouseArray : MonoBehaviour
                     Debug.Log("A");
                 }
 
-                bubbleflag = false;
 
                 if(buildarray[Xpos,Zpos] != 1)
                 {
+                    bubbleflag = false;
                     GameObject bubbles =Instantiate(bubble[rand], bubblepos, Quaternion.identity, pos);
                     bubbles.GetComponent<Rigidbody>().AddForce((playerbubble.position - bubbles.transform.position) * bubbleforce);
                     bubbles.transform.localScale = new Vector3(bubblescale[s], bubblescale[s], bubblescale[s]);
