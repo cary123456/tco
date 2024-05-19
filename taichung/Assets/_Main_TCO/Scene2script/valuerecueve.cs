@@ -52,6 +52,8 @@ public class valuerecueve : NetworkBehaviour
     private NetworkVariable<float> handLroy = new NetworkVariable<float>();
     [SerializeField]
     private NetworkVariable<float> handLroz = new NetworkVariable<float>();
+    [SerializeField]
+    private NetworkVariable<bool> ball = new NetworkVariable<bool>();
 
 
     //public GameObject[] center;
@@ -85,6 +87,7 @@ public class valuerecueve : NetworkBehaviour
     public float handLroxvalue;
     public float handLroyvalue;
     public float handLrozvalue;
+    public bool ballvalue;
 
     public bool netbool;
     public bool nethousebool;
@@ -108,7 +111,7 @@ public class valuerecueve : NetworkBehaviour
     public float nethandLroz;
     public int netint;
     public int netLint;
-
+    public bool netball;
 
     public bool oldinput;
     public bool oldhouseinput;
@@ -132,6 +135,7 @@ public class valuerecueve : NetworkBehaviour
     public float oldhandLrox;
     public float oldhandLroy;
     public float oldhandLroz;
+    public bool oldball;
 
     public GameObject building;
     public GameObject lefthand;
@@ -171,7 +175,9 @@ public class valuerecueve : NetworkBehaviour
     public GameObject fishtricube;
 
     public GameObject fishmanager;
-    
+    public KeyCode objmoveKey;
+
+    public GameObject[] midfinger;
     // Start is called before the first frame update
     void Start()
     {
@@ -188,6 +194,11 @@ public class valuerecueve : NetworkBehaviour
         uiman = GameObject.FindGameObjectWithTag("uiman");
         fishflok = GameObject.FindGameObjectWithTag("fish");
         fishmanager = GameObject.FindGameObjectWithTag("fishmanager");
+        midfinger = GameObject.FindGameObjectsWithTag("midfinger");
+        foreach (var mid in midfinger)
+        {
+            mid.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -353,8 +364,15 @@ public class valuerecueve : NetworkBehaviour
             }
             
         }
+        if (ball.Value == true)
+        {
+            foreach (var mid in midfinger)
+            {
+                mid.gameObject.SetActive(true);
+            }
 
-      
+        }
+
 
         if (destroy.Value == true)
         {
@@ -408,7 +426,7 @@ public class valuerecueve : NetworkBehaviour
         nethandLrox = handLrox.Value;
         nethandLroy = handLroy.Value;
         nethandLroz = handLroz.Value;
-
+        netball = ball.Value;
 
     }
 
@@ -416,7 +434,7 @@ public class valuerecueve : NetworkBehaviour
     {
         if (oldinput != boolvalue || oldhouseinput != housevalue || oldfishinput != fishvalue || oldfishmaninput != fishmanvalue || oldintinput != intvalue || oldintLinput != intLvalue || oldhandRx != handRxvalue || oldhandRy != handRyvalue || oldhandRz != handRzvalue 
             || oldhandLx != handLxvalue || oldhandLy != handLyvalue || oldhandLz != handLzvalue || oldheadx != headxvalue || oldheady != headyvalue || oldheadz != headzvalue || oldhandRrox != handRroxvalue || oldhandRroy != handRroyvalue || oldhandRroz != handRrozvalue ||
-           oldhandLrox != handLroxvalue || oldhandLroy != handLroyvalue || oldhandLroz != handLrozvalue || olddestoryinput != destoryvalue)
+           oldhandLrox != handLroxvalue || oldhandLroy != handLroyvalue || oldhandLroz != handLrozvalue || olddestoryinput != destoryvalue || oldball != ballvalue)
         {
             oldinput = boolvalue;
             oldhouseinput = housevalue;
@@ -440,13 +458,14 @@ public class valuerecueve : NetworkBehaviour
             oldhandLrox = handLroxvalue;
             oldhandLroy = handLroyvalue;
             oldhandLroz = handLrozvalue;
+            oldball = ballvalue;
             UpdateClientPositionAndRotationServerRpc(boolvalue , housevalue, fishmanvalue,fishvalue ,intvalue , intLvalue, handRxvalue, handRyvalue, handRzvalue, handLxvalue, handLyvalue, handLzvalue, headxvalue, headyvalue, headzvalue,
-                handRroxvalue, handRroyvalue, handRrozvalue, handLroxvalue, handLroyvalue, handLrozvalue,destoryvalue);
+                handRroxvalue, handRroyvalue, handRrozvalue, handLroxvalue, handLroyvalue, handLrozvalue,destoryvalue,ballvalue);
 
         }
     }
     [ServerRpc]
-    public void UpdateClientPositionAndRotationServerRpc(bool value,bool houseval , bool fishval ,float fishva,int invalue,int intLvalue, float hrx,float hry,float hrz, float hlx, float hly, float hlz, float hdx, float hdy, float hdz, float hrrox, float hrroy, float hrroz, float hlrox, float hlroy, float hlroz,bool des)
+    public void UpdateClientPositionAndRotationServerRpc(bool value,bool houseval , bool fishval ,float fishva,int invalue,int intLvalue, float hrx,float hry,float hrz, float hlx, float hly, float hlz, float hdx, float hdy, float hdz, float hrrox, float hrroy, float hrroz, float hlrox, float hlroy, float hlroz,bool des ,bool bal)
     {
         seeornot.Value = value;
         housetri.Value = houseval;
@@ -470,7 +489,7 @@ public class valuerecueve : NetworkBehaviour
         handLrox.Value = hlrox;
         handLroy.Value = hlroy;
         handLroz.Value = hlroz;
-
+        ball.Value = bal;
     }
 
 }

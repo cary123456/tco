@@ -17,6 +17,7 @@ public class spin2 : MonoBehaviour
     private Transform[] moveableTransforms;
     public bool end = false;
     public GameObject[] moveableObjects;
+    public GameObject[] players;
     void Start()
     {
         
@@ -24,6 +25,7 @@ public class spin2 : MonoBehaviour
 
     void Update()
     {
+        players = GameObject.FindGameObjectsWithTag("Player");
         if (Input.GetKeyDown(objmoveKey))
         {
            
@@ -55,10 +57,12 @@ public class spin2 : MonoBehaviour
         if (end)
         {
             Debug.Log("do something.");
+            players[0].GetComponent<valuerecueve>().ballvalue = true;
             foreach (var crabs in moveableObjects)
             {
                 crabs.GetComponent<crabfloat>().enabled = false;
                 crabs.GetComponent<Animator>().SetBool("C2S", true);
+
             }
             //end = false;
         }
