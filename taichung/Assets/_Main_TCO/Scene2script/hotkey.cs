@@ -33,8 +33,10 @@ public class hotkey : MonoBehaviour
     public GameObject back;
     public GameObject bubblebackup;
     public int bubblecount;
+    public int lookatcount;
     bool stawflag = false;
     bool stawflag_2 = false;
+    public GameObject center;
     // Start is called before the first frame update
     void Start()
     {
@@ -165,8 +167,19 @@ public class hotkey : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.B))
         {
-
-            
+            lookatcount += 1;
+            if(lookatcount > 1)
+            {
+                lookatcount = 0;
+            }
+        }
+        if(lookatcount ==1)
+        {
+            if(center != null)
+            {
+                maincamera.transform.LookAt(center.transform);
+            }
+           
         }
         if (Input.GetKeyDown(KeyCode.V))
         {
