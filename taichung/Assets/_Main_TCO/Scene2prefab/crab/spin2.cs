@@ -13,7 +13,7 @@ public class spin2 : MonoBehaviour
     public float moveTime = 2f;
     public float targetRadius = 1f;
 
-    private bool isMoving = false;
+    public bool isMoving = false;
     private Transform[] moveableTransforms;
     public bool end = false;
     public GameObject[] moveableObjects;
@@ -28,21 +28,23 @@ public class spin2 : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         if (Input.GetKeyDown(objmoveKey))
         {
-           
-            StartMoving();
-        }
-     
-        moveableObjects = GameObject.FindGameObjectsWithTag(objectTag);
-        moveableTransforms = new Transform[moveableObjects.Length];
+            moveableObjects = GameObject.FindGameObjectsWithTag(objectTag);
+            moveableTransforms = new Transform[moveableObjects.Length];
 
-        for (int i = 0; i < moveableObjects.Length; i++)
-        {
-            if (moveableObjects.Length > 0)
+            for (int i = 0; i < moveableObjects.Length; i++)
             {
-                moveableTransforms[i] = moveableObjects[i].transform;
+                if (moveableObjects.Length > 0)
+                {
+                    moveableTransforms[i] = moveableObjects[i].transform;
+                }
+
             }
 
+            StartMoving();
+
         }
+     
+        
         if (Input.GetKeyDown(increaseRadius))
         {
             targetRadius += 0.5f;
@@ -57,14 +59,22 @@ public class spin2 : MonoBehaviour
         if (end)
         {
             Debug.Log("do something.");
-            players[0].GetComponent<valuerecueve>().ballvalue = true;
+            if(players.Length > 0)
+            {
+                players[0].GetComponent<valuerecueve>().ballvalue = true;
+            }
+          
             foreach (var crabs in moveableObjects)
             {
-                crabs.GetComponent<crabfloat>().enabled = false;
-                crabs.GetComponent<Animator>().SetBool("C2S", true);
+                if(crabs!= null)
+                {
+                    crabs.GetComponent<crabfloat>().enabled = false;
+                    crabs.GetComponent<Animator>().SetBool("C2S", true);
+                }
+                
 
             }
-            //end = false;
+            end = false;
         }
     }
 
@@ -72,6 +82,7 @@ public class spin2 : MonoBehaviour
     {
         isMoving = true;
         StartCoroutine(MoveObjects());
+        
     }
 
     IEnumerator MoveObjects()
@@ -110,7 +121,9 @@ public class spin2 : MonoBehaviour
             }
 
             end = true;
+            
             yield return null;
         }
+        
     }
 }
