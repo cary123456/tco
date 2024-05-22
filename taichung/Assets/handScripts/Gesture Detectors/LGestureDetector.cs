@@ -107,7 +107,7 @@ public class LGestureDetector : MonoBehaviour
             {
                 // we change another boolean to avoid a loop of event
                 done = true;
-                Debug.Log("New found :" + currentGesture.name);
+                //Debug.Log("New found :" + currentGesture.name);
                 text.text = currentGesture.name;
 
                 if (player.Length > 1)

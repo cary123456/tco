@@ -193,7 +193,9 @@ public class hotkey : MonoBehaviour
         {
             if (Rvfx != null)
             {
-                Rvfx.SetActive(true);
+                Rvfx.GetComponent<Animator>().SetBool("off", false);
+                Rvfx.GetComponent<Animator>().SetBool("on", true);
+
             }
             if(RLine != null)
             {
@@ -205,19 +207,23 @@ public class hotkey : MonoBehaviour
             }
             if (Lvfx != null)
             {
-                Lvfx.SetActive(true);
+                Lvfx.GetComponent<Animator>().SetBool("off", false);
+                Lvfx.GetComponent<Animator>().SetBool("on", true);
+                
             }
         }
         if (vfxcount == 1)
         {
             if(Rvfx != null)
             {
-                Rvfx.SetActive(false);
+                Rvfx.GetComponent<Animator>().SetBool("off", true);
+                Rvfx.GetComponent<Animator>().SetBool("on", false);
             }
             
             if(Lvfx != null)
             {
-                Lvfx.SetActive(false);
+                Lvfx.GetComponent<Animator>().SetBool("off",true);
+                Lvfx.GetComponent<Animator>().SetBool("on", false);
             }
              if(RLine != null)
             {
