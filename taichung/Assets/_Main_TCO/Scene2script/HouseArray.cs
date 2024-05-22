@@ -130,9 +130,10 @@ public class HouseArray : MonoBehaviour
 
         
 
-        if((Input.GetKeyDown(FishKey) &&　flag && fishenable && fishflag) || gesturetigger)
+        if((Input.GetKeyDown(FishKey) &&　flag && fishenable && fishflag) || gesturetigger || (fishflag && keepbuild))
         {
             fishflag = false;
+            keepbuild = true;
             StartCoroutine("Fishtimer");
             
             for(int i = 0; i < buildpertime; i++) 
