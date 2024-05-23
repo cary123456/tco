@@ -12,6 +12,7 @@ public class HouseArray : MonoBehaviour
     public KeyCode BubbleKey;
     public KeyCode FishKey;
     public KeyCode WordKey;
+    public KeyCode WordSwitch;
 
     public GameObject[] house;
     public bool houseenable =true;
@@ -57,6 +58,7 @@ public class HouseArray : MonoBehaviour
     public bool bubbletimerflag;
     public bool keepbuild;
     public Vector3 bubblepos;
+    public bool wordswitch;
 
 
     void Start() 
@@ -129,8 +131,9 @@ public class HouseArray : MonoBehaviour
         }
 
         
-
-        if((Input.GetKeyDown(FishKey) &&　flag && fishenable && fishflag) || gesturetigger)
+        if(Input.GetKeyDown(FishKey))
+            keepbuild = !keepbuild;
+        if((Input.GetKeyDown(FishKey) &&　flag && fishenable && fishflag) || gesturetigger || (fishflag && keepbuild))
         {
             fishflag = false;
             StartCoroutine("Fishtimer");
@@ -212,7 +215,12 @@ public class HouseArray : MonoBehaviour
             }
 
         }
+        if(Input.GetKeyDown(WordSwitch))
+        {
+            wordswitch = true;
+            Debug.Log("on");
 
+        }
         if(Input.GetKeyDown(BubbleKey) &&　flag && bubbleenable || (bubbleflag && bubbletimerflag))
         {
             bubbletimerflag = false;
@@ -255,7 +263,8 @@ public class HouseArray : MonoBehaviour
                         break;
                 }
             }
-
+        
+       
         }
         if(Input.GetKey(WordKey) &&　flag && wordenable)
         {
@@ -290,7 +299,10 @@ public class HouseArray : MonoBehaviour
             //     }
                 
             // }
-            int rand = Random.Range(0,word.Length);
+            int rand = Random.Range(0,7);
+            if(wordswitch)
+                rand = Random.Range(7,13);
+            
             float houseoffset = Random.Range(0, offset*50);
             
 

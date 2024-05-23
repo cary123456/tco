@@ -107,6 +107,8 @@ MonoBehaviour:
     m_InternalValue: 0
   handLroz:
     m_InternalValue: 0
+  ball:
+    m_InternalValue: 0
   center: []
   centerarray: []
   onetime: 0
@@ -134,6 +136,7 @@ MonoBehaviour:
   handLroxvalue: 0
   handLroyvalue: 0
   handLrozvalue: 0
+  ballvalue: 0
   netbool: 0
   nethousebool: 0
   netfishmanbool: 0
@@ -156,6 +159,7 @@ MonoBehaviour:
   nethandLroz: 0
   netint: 0
   netLint: 0
+  netball: 0
   oldinput: 0
   oldhouseinput: 0
   oldfishmaninput: 0
@@ -178,6 +182,7 @@ MonoBehaviour:
   oldhandLrox: 0
   oldhandLroy: 0
   oldhandLroz: 0
+  oldball: 0
   building: {fileID: 0}
   lefthand: {fileID: 0}
   righthand: {fileID: 0}
@@ -185,8 +190,8 @@ MonoBehaviour:
   - {fileID: 123923147506414471, guid: 8cd5fc17e2c9a0f45bc8fdd41b9d1830, type: 3}
   - {fileID: 6305365181422716240, guid: c464b05a4b24cf74eb953d8fd5562081, type: 3}
   - {fileID: 2655429697686084108, guid: 0b6836a29d6459743bda2150b59125ed, type: 3}
-  - {fileID: 2655429697686084108, guid: 0b6836a29d6459743bda2150b59125ed, type: 3}
-  - {fileID: 123923147506414471, guid: 8cd5fc17e2c9a0f45bc8fdd41b9d1830, type: 3}
+  - {fileID: 5792839285151883588, guid: 7b9dfd70c9e5fc247b6908a6a6440aee, type: 3}
+  - {fileID: 2852902099044335350, guid: 63effbec7f9646f47a70be8a0cbb6570, type: 3}
   crabs: []
   crabsamount: 0
   onetimetrigger: 0
@@ -210,6 +215,8 @@ MonoBehaviour:
   fishcolddownruntime: 0
   fishtricube: {fileID: 5549924288004740092, guid: 2d0755e53e633754eae317f0de3eaede, type: 3}
   fishmanager: {fileID: 0}
+  objmoveKey: 0
+  midfinger: []
 --- !u!114 &1072218067991891256
 MonoBehaviour:
   m_ObjectHideFlags: 0

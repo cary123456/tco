@@ -85,4 +85,7 @@ public class move2 : MonoBehaviour
             transform.Translate(0, moveUpDown, 0, Space.World);
         }
     }
+    void stop(){
+        this.gameObject.GetComponent<Animator>().enabled = false;
+    }
 }

@@ -37,6 +37,10 @@ public class hotkey : MonoBehaviour
     bool stawflag = false;
     bool stawflag_2 = false;
     public GameObject center;
+    public bool growbool;
+    public float growruntime;
+    public float growtime;
+    public GameObject target;
     // Start is called before the first frame update
     void Start()
     {
@@ -247,18 +251,30 @@ public class hotkey : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
-            {
-
-                headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
-            }
+            growbool = true;
         }
+        if(growbool)
+        {
+            if(growruntime >= growtime)
+            {
+                if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
+                {
+                
+                    headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
+                    growruntime = 0;
+                }
+            }
+            growruntime += Time.deltaTime;
+        }
+        
         if (Input.GetKeyDown(KeyCode.L))
         {
-            if (GameObject.FindWithTag("crab") != null)
-            {
-                Destroy(GameObject.FindWithTag("crab"));
-            }
+            target.GetComponent<Animator>().enabled = true;
+            target.GetComponent<Animator>().SetBool("around",true);
+        }
+        if (Input.GetKeyUp(KeyCode.L))
+        {
+            target.GetComponent<Animator>().SetBool("around",false);
         }
         if (Input.GetKeyDown(KeyCode.F))
         {

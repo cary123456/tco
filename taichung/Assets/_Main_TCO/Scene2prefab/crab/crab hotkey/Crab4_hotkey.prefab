@@ -35,8 +35,8 @@ Transform:
   m_GameObject: {fileID: 2655429697686084108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,7 +61,7 @@ VisualEffect:
       - m_Value: 1500
         m_Name: amount(ora)
         m_Overridden: 1
-      - m_Value: 2
+      - m_Value: 3
         m_Name: Size
         m_Overridden: 1
       - m_Value: 0.2
@@ -201,7 +201,7 @@ SphereCollider:
   m_GameObject: {fileID: 2655429697686084108}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.56
   m_Center: {x: 0, y: 0, z: 0}
@@ -235,13 +235,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16470a2ba35d4cf4299176c63f1b948d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Thrust: 0.58
-  maxTorque: 0.5
+  m_Thrust: 0
+  maxTorque: 0
   ancor: {fileID: 0}
   speed: 0.025
   small: 1
-  minRotationSpeed: -0.2
-  maxRotationSpeed: 0.2
+  minRotationSpeed: -0.01
+  maxRotationSpeed: 0.01
   rotationSpeed: 0
 --- !u!114 &8278453319236976087
 MonoBehaviour:
