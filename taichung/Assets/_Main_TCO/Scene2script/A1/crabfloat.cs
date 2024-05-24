@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class crabfloat : MonoBehaviour
 {
-    // 最大推力和旋轉力
+    // 嚙諒大嚙踝蕭嚙瞌嚙瞎嚙踝蕭嚙踝蕭O
     public float m_Thrust ;
     public float maxTorque;
 
@@ -17,6 +17,7 @@ public class crabfloat : MonoBehaviour
     public float minRotationSpeed;
     public float maxRotationSpeed;
     public float rotationSpeed;
+    public float midifloat;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -29,12 +30,12 @@ public class crabfloat : MonoBehaviour
         {
             rotationSpeed = Random.Range(minRotationSpeed, maxRotationSpeed);
         }
-        // 隨機選擇旋轉的方向
+        // 嚙瘡嚙踝蕭嚙踝蕭亃嚙踝蕭鄋綽蕭嚙碾
         if (Random.value > 0.5f)
         {
             rotationSpeed *= -1f;
         }
-        // 將旋轉速度應用到物體的角速度上
+        // 嚙瞇嚙踝蕭嚙踝蕭t嚙踝蕭嚙踝蕭嚙諄到物嚙賡的嚙踝蕭嚙緣嚙論上
        
 
     }

@@ -37,6 +37,7 @@ TagManager:
   - ball
   - word
   - inside
+  - midi
   layers:
   - Default
   - TransparentFX

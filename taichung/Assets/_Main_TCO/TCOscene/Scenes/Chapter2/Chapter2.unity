@@ -21745,7 +21745,7 @@ GameObject:
   - component: {fileID: 1186306650}
   m_Layer: 0
   m_Name: midicc
-  m_TagString: Untagged
+  m_TagString: midi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21771,6 +21771,7 @@ MonoBehaviour:
   value: 0
   controllerNumber: 64
   vaa: 0
+  crabs: {fileID: 0}
   tri: 0
 --- !u!4 &1186306651
 Transform:

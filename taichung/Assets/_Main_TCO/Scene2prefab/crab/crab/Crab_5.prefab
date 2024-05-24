@@ -561,6 +561,7 @@ MonoBehaviour:
   minRotationSpeed: -0.05
   maxRotationSpeed: 0.05
   rotationSpeed: 0
+  midifloat: 1
 --- !u!114 &7804729415481830911
 MonoBehaviour:
   m_ObjectHideFlags: 0
