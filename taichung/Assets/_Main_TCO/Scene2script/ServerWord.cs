@@ -10,6 +10,8 @@ public class ServerWord : MonoBehaviour
     private TcpListener server;
     private TcpClient client;
     private NetworkStream stream;
+    public int receivedNum;
+
 
     void Start()
     {
@@ -49,6 +51,7 @@ public class ServerWord : MonoBehaviour
                 if (bytesRead > 0)
                 {
                     int receivedInt = BitConverter.ToInt32(buffer, 0);
+                    receivedNum = receivedInt;
                     Debug.Log("Received: " + receivedInt);
                 }
             }

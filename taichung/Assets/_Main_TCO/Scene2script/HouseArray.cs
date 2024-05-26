@@ -55,10 +55,14 @@ public class HouseArray : MonoBehaviour
     public bool flip = false;
     public bool fishflag;
     public bool houseflag;
+    public bool wordflag;
     public bool bubbletimerflag;
     public bool keepbuild;
     public Vector3 bubblepos;
     public bool wordswitch;
+    public nearest nearest;
+    public ServerWord serverWord;
+    public bool serverenable;
 
 
     void Start() 
@@ -93,6 +97,10 @@ public class HouseArray : MonoBehaviour
             houseflag =false;
             StartCoroutine("Housetimer");
 
+            if(housecount >= x*z-blockhouseZ.Length*x-blockhouseX.Length*z+blockhouseX.Length*blockhouseZ.Length)
+            {
+                keepbuild =false;
+            }
             for(int i = 0; i < buildpertime; i++) 
             {
                 
@@ -121,10 +129,6 @@ public class HouseArray : MonoBehaviour
                         i--;
                     if(housecount >= x*z-blockhouseZ.Length*x-blockhouseX.Length*z+blockhouseX.Length*blockhouseZ.Length)
                         break;
-                }
-                if(housecount >= x*z-blockhouseZ.Length*x-blockhouseX.Length*z+blockhouseX.Length*blockhouseZ.Length)
-                {
-                    keepbuild =false;
                 }
             }
 
@@ -343,8 +347,26 @@ public class HouseArray : MonoBehaviour
                
         }
 
-        
+        if(serverWord.receivedNum > 0 && serverenable)
+        {
+            if(nearest.closestbuilding && housecount > 0 && wordflag)
+            {
+
+                wordflag = false;
+                StartCoroutine("Wordtimer");
+
+                float houseoffset = Random.Range(0, offset*50);
+                Destroy(nearest.closestbuilding);
+                housecount--;
+                GameObject wordtemp = Instantiate(word[serverWord.receivedNum],new Vector3( nearest.closestbuilding.transform.position.x, nearest.closestbuilding.transform.position.y + houseoffset ,nearest.closestbuilding.transform.position.z) , Quaternion.identity, parentcanvas);
+                wordtemp.transform.Rotate(wordrotate);
+
+            }
+            
+        }
+
     }
+
 
     IEnumerator Fishtimer()
     {
@@ -360,6 +382,11 @@ public class HouseArray : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         bubbletimerflag = true;
+    }
+    IEnumerator Wordtimer()
+    {
+        yield return new WaitForSeconds(0.1f);
+        wordflag = true;
     }
 
     void OnDrawGizmosSelected()
