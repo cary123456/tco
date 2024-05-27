@@ -217,7 +217,7 @@ public class HouseArray : MonoBehaviour
         }
         if(Input.GetKeyDown(WordSwitch))
         {
-            wordswitch = true;
+            wordswitch = !wordswitch;
             Debug.Log("on");
 
         }

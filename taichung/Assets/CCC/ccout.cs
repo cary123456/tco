@@ -42,7 +42,10 @@ public class ccout : MonoBehaviour
         }
         else
         {
-            value = crabs.GetComponent<crabfloat>().midifloat;
+            if(crabs != null){
+                value = crabs.GetComponent<crabfloat>().midifloat;
+            }
+            
             MidiBridge.instance.Warmup();
             MidiOut.SendControlChange(channel, controllerNumber, value);
         }
