@@ -24,7 +24,16 @@ public class crabgen : MonoBehaviour
     void Update()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
+        if ((gesture.GetComponent<GestureDetector>().gesturesnumber == 2 || gesture.GetComponent<LGestureDetector>().gesturesnumber == 2))
+        {
+                holdruntime = 0;
+                players[1].GetComponent<valuerecueve>().boolvalue = false;
+                onetimetrigger = false;
+                trigger = false;
+                allow = false;
 
+
+        }
         if(colddownruntime >= colddowntime)
         {
             colddownruntime = colddowntime;
@@ -83,12 +92,13 @@ public class crabgen : MonoBehaviour
             {
                 this.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(1f, 0f, 0f, 0.34f);
                 other.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(1f, 0f, 0f, 0.34f);
+                /*
                 holdruntime = 0;
                 players[1].GetComponent<valuerecueve>().boolvalue = false;
                 onetimetrigger = false;
                 trigger = false;
                 allow = false;
-
+                */
             }
         }
     }
