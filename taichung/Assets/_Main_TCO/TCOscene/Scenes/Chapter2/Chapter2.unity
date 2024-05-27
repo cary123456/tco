@@ -5616,10 +5616,14 @@ MonoBehaviour:
   flip: 0
   fishflag: 0
   houseflag: 0
+  wordflag: 0
   bubbletimerflag: 0
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: {fileID: 0}
+  serverenable: 0
 --- !u!1001 &305170193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16650,10 +16654,14 @@ MonoBehaviour:
   flip: 0
   fishflag: 1
   houseflag: 0
+  wordflag: 0
   bubbletimerflag: 0
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: {fileID: 0}
+  serverenable: 0
 --- !u!1 &854107328
 GameObject:
   m_ObjectHideFlags: 0
@@ -16999,7 +17007,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &868587038
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20205,10 +20213,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1096450219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7151bf8304f2c84f820306301c5d562, type: 3}
+  m_Script: {fileID: 11500000, guid: 99469495e8f652d4f9e6a64cfc4a6543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   port: 6789
+  receivedNum: 0
 --- !u!1 &1112859804
 GameObject:
   m_ObjectHideFlags: 0
@@ -24434,10 +24443,14 @@ MonoBehaviour:
   flip: 1
   fishflag: 0
   houseflag: 0
+  wordflag: 0
   bubbletimerflag: 0
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: {fileID: 0}
+  serverenable: 0
 --- !u!1 &1308900039
 GameObject:
   m_ObjectHideFlags: 0
@@ -28950,10 +28963,14 @@ MonoBehaviour:
   flip: 0
   fishflag: 0
   houseflag: 0
+  wordflag: 0
   bubbletimerflag: 0
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: {fileID: 0}
+  serverenable: 0
 --- !u!1 &1489982483
 GameObject:
   m_ObjectHideFlags: 0
@@ -31188,10 +31205,14 @@ MonoBehaviour:
   flip: 0
   fishflag: 0
   houseflag: 0
+  wordflag: 1
   bubbletimerflag: 0
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
+  nearest: {fileID: 1936794508}
+  serverWord: {fileID: 1096450222}
+  serverenable: 1
 --- !u!1 &1593852959
 GameObject:
   m_ObjectHideFlags: 0
@@ -36064,10 +36085,14 @@ MonoBehaviour:
   flip: 1
   fishflag: 1
   houseflag: 0
+  wordflag: 0
   bubbletimerflag: 0
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: {fileID: 0}
+  serverenable: 0
 --- !u!1 &1743383026
 GameObject:
   m_ObjectHideFlags: 0
