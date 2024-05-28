@@ -349,7 +349,7 @@ public class HouseArray : MonoBehaviour
 
         if(serverWord.receivedNum > 0 && serverenable)
         {
-            if(nearest.closestbuilding && housecount > 0 && wordflag)
+            if(nearest.closestbuilding && wordflag)
             {
 
                 wordflag = false;
@@ -357,7 +357,8 @@ public class HouseArray : MonoBehaviour
 
                 float houseoffset = Random.Range(0, offset*50);
                 Destroy(nearest.closestbuilding);
-                housecount--;
+                if(housecount > 0)
+                    housecount--;
                 GameObject wordtemp = Instantiate(word[serverWord.receivedNum],new Vector3( nearest.closestbuilding.transform.position.x, nearest.closestbuilding.transform.position.y + houseoffset ,nearest.closestbuilding.transform.position.z) , Quaternion.identity, parentcanvas);
                 wordtemp.transform.Rotate(wordrotate);
 

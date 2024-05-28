@@ -5621,8 +5621,8 @@ MonoBehaviour:
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
-  nearest: {fileID: 0}
-  serverWord: {fileID: 0}
+  nearest: {fileID: 1936794508}
+  serverWord: {fileID: 1096450222}
   serverenable: 0
 --- !u!1001 &305170193
 PrefabInstance:
@@ -16540,8 +16540,8 @@ MonoBehaviour:
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
-  nearest: {fileID: 0}
-  serverWord: {fileID: 0}
+  nearest: {fileID: 1936794508}
+  serverWord: {fileID: 1096450222}
   serverenable: 0
 --- !u!1 &854107328
 GameObject:
@@ -18438,7 +18438,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -24246,8 +24246,8 @@ MonoBehaviour:
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
-  nearest: {fileID: 0}
-  serverWord: {fileID: 0}
+  nearest: {fileID: 1936794508}
+  serverWord: {fileID: 1096450222}
   serverenable: 0
 --- !u!1 &1308900039
 GameObject:
@@ -35815,8 +35815,8 @@ MonoBehaviour:
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
-  nearest: {fileID: 0}
-  serverWord: {fileID: 0}
+  nearest: {fileID: 1936794508}
+  serverWord: {fileID: 1096450222}
   serverenable: 0
 --- !u!1 &1743383026
 GameObject:
@@ -35929,6 +35929,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HouseArray (bubble)
       objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: nearest
+      value: 
+      objectReference: {fileID: 1936794508}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: serverWord
+      value: 
+      objectReference: {fileID: 1096450222}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: bubble.Array.data[0]
       value: 
