@@ -267,6 +267,10 @@ public class hotkey : MonoBehaviour
             growruntime += Time.deltaTime;
         }
         
+        if(headset.GetComponent<nearest>().allbuildings.Length == 0)
+        {
+            growbool = false;
+        }
         if (Input.GetKeyDown(KeyCode.L))
         {
             target.GetComponent<Animator>().enabled = true;
