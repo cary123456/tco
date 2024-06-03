@@ -13,7 +13,10 @@ public class NoteTrigger : MonoBehaviour
     public bool onetime;
     float scale;
 
-
+    public bool trigger2;
+    public bool onetime2;
+    public int noteNumber2 = 48;
+    public float velocity2 = 0.9f;
 
     void Update ()
     {
@@ -28,10 +31,17 @@ public class NoteTrigger : MonoBehaviour
             MidiOut.SendNoteOff(channel, noteNumber);
 
         }
-        else
+
+        if (trigger2)
         {
-            onetime = true;
-            
+            if (onetime2)
+            {
+                MidiOut.SendNoteOn(channel, noteNumber2, velocity2);
+                onetime = false;
+
+            }
+            MidiOut.SendNoteOff(channel, noteNumber2);
         }
+
     }
 }

@@ -18,6 +18,7 @@ public class spin2 : MonoBehaviour
     public bool end = false;
     public GameObject[] moveableObjects;
     public GameObject[] players;
+    public GameObject midicc;
     void Start()
     {
         
@@ -81,6 +82,11 @@ public class spin2 : MonoBehaviour
     void StartMoving()
     {
         isMoving = true;
+        if(midicc.GetComponent<NoteTrigger>().enabled == true)
+        {
+            midicc.GetComponent<NoteTrigger>().trigger2 = true;
+        }
+        
         StartCoroutine(MoveObjects());
         
     }

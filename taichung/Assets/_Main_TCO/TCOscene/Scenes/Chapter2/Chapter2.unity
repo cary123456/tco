@@ -21642,6 +21642,10 @@ MonoBehaviour:
   interval: 1
   trigger: 0
   onetime: 0
+  trigger2: 0
+  onetime2: 0
+  noteNumber2: 48
+  velocity2: 0.9
 --- !u!1 &1217713269
 GameObject:
   m_ObjectHideFlags: 0
@@ -37346,6 +37350,7 @@ MonoBehaviour:
   end: 0
   moveableObjects: []
   players: []
+  midicc: {fileID: 1186306649}
 --- !u!4 &1790015748
 Transform:
   m_ObjectHideFlags: 0
