@@ -6373,7 +6373,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &843922746
 MonoBehaviour:
@@ -7837,6 +7837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1186306651}
   - component: {fileID: 1186306650}
+  - component: {fileID: 1186306652}
   m_Layer: 0
   m_Name: midicc
   m_TagString: midi
@@ -7851,7 +7852,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186306649}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37cccbe0d3135fb4a97fe406e32e2852, type: 3}
   m_Name: 
@@ -12774,6 +12775,7 @@ MonoBehaviour:
   end: 0
   moveableObjects: []
   players: []
+  midicc: {fileID: 1186306649}
 --- !u!4 &1790015748
 Transform:
   m_ObjectHideFlags: 0
@@ -12787,7 +12789,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1790906117
 GameObject:

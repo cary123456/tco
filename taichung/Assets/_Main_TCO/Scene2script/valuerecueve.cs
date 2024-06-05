@@ -176,7 +176,7 @@ public class valuerecueve : NetworkBehaviour
 
     public GameObject fishmanager;
     public KeyCode objmoveKey;
-
+    public GameObject MIDI;
     public GameObject[] midfinger;
     // Start is called before the first frame update
     void Start()
@@ -199,6 +199,7 @@ public class valuerecueve : NetworkBehaviour
         {
             mid.gameObject.SetActive(false);
         }
+        MIDI = GameObject.FindGameObjectWithTag("midi");
     }
 
     // Update is called once per frame
@@ -261,6 +262,11 @@ public class valuerecueve : NetworkBehaviour
         {
             if (!onetimetrigger)
             {
+                if (MIDI != null)
+                {
+                    MIDI.GetComponent<NoteTrigger>().trigger = true;
+                }
+                
                 GameObject crabs =  Instantiate(crab[Random.Range(0,5)], righthand.transform.position, Quaternion.Euler(new Vector3(0, 180, 180)));
                 crabb = crabs;
                 crabb.GetComponent<handtrack>().follow = true;
