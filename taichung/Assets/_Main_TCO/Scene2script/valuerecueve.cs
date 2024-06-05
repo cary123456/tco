@@ -193,7 +193,7 @@ public class valuerecueve : NetworkBehaviour
         righthand = GameObject.FindGameObjectWithTag("Rhand");
         uiman = GameObject.FindGameObjectWithTag("uiman");
         fishflok = GameObject.FindGameObjectWithTag("fish");
-        fishmanager = GameObject.FindGameObjectWithTag("fishmanager");
+        fishmanager = GameObject.FindGameObjectWithTag("fishtrigger");
         midfinger = GameObject.FindGameObjectsWithTag("midfinger");
         foreach (var mid in midfinger)
         {
@@ -279,8 +279,10 @@ public class valuerecueve : NetworkBehaviour
         else
         {
             if (crabb != null)
-            {              
+            {    
+                crabb.GetComponent<VisualEffect>().SetFloat("rate", 100);          
                 crabb.GetComponent<handtrack>().follow = false;
+                
             }
             
             crabb = null;
