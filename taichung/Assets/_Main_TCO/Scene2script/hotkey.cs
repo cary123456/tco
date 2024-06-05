@@ -28,6 +28,10 @@ public class hotkey : MonoBehaviour
     public GameObject mainncamera;
     public GameObject[] player;
     public GameObject fish;
+    public GameObject fish2;
+    public GameObject fish3;
+    public int fishcount;
+    public bool fishbool;
     public GameObject staw;
     public GameObject staw_2;
     public GameObject back;
@@ -285,8 +289,34 @@ public class hotkey : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
+            if(fishbool == false)
+            {
+                fishcount += 1;
+                fishbool = true;
+            }
+            fishbool = false;
+            
+        }
+        if(fishcount == 1)
+        {
             fish.SetActive(true);
         }
+        if(fishcount == 2)
+        {
+            fish2.SetActive(true);
+        }
+        if (fishcount == 3)
+        {
+            fish3.SetActive(true);
+        }
+        if (fishcount >= 4)
+        {
+            fishcount = 0;
+            fish.SetActive(false);
+            fish2.SetActive(false);
+            fish3.SetActive(false);
+        }
+
         if (Input.GetKey(KeyCode.Escape))
         {
             if(player.Length > 0)
