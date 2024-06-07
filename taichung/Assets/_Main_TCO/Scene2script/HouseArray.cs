@@ -360,7 +360,7 @@ public class HouseArray : MonoBehaviour
             }
                
         }
-        if((serverWord[0] != null) && (serverWord[1] != null))
+        if((serverWord.Length > 0) && (serverWord[0] != null) && (serverWord[1] != null))
         {
 
             if(serverWord[0].receivedNum > 0  && serverenable )

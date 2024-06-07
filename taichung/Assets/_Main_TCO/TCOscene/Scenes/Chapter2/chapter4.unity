@@ -361,6 +361,10 @@ MonoBehaviour:
   mainncamera: {fileID: 0}
   player: []
   fish: {fileID: 0}
+  fish2: {fileID: 0}
+  fish3: {fileID: 0}
+  fishcount: 0
+  fishbool: 0
   staw: {fileID: 0}
   staw_2: {fileID: 0}
   back: {fileID: 0}
@@ -681,10 +685,14 @@ MonoBehaviour:
   flip: 0
   fishflag: 0
   houseflag: 0
+  wordflag: 0
   bubbletimerflag: 0
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: []
+  serverenable: 0
 --- !u!4 &442483407
 Transform:
   m_ObjectHideFlags: 0
@@ -1399,10 +1407,14 @@ MonoBehaviour:
   flip: 0
   fishflag: 0
   houseflag: 0
+  wordflag: 0
   bubbletimerflag: 0
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: []
+  serverenable: 0
 --- !u!4 &822345082
 Transform:
   m_ObjectHideFlags: 0
@@ -1595,10 +1607,14 @@ MonoBehaviour:
   flip: 1
   fishflag: 0
   houseflag: 0
+  wordflag: 0
   bubbletimerflag: 0
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: []
+  serverenable: 0
 --- !u!1001 &862388122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1830,7 +1846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ba5fea1e35b614cbf6b7627471fc43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  udpPort: 6000
+  udpPort: 6001
   humanModel:
   - {fileID: 183067697}
   - {fileID: 183067697}
@@ -2059,7 +2075,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.058233, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2281,10 +2297,14 @@ MonoBehaviour:
   flip: 0
   fishflag: 0
   houseflag: 0
+  wordflag: 0
   bubbletimerflag: 0
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: []
+  serverenable: 0
 --- !u!1 &1321578398
 GameObject:
   m_ObjectHideFlags: 0
@@ -2731,10 +2751,14 @@ MonoBehaviour:
   flip: 0
   fishflag: 0
   houseflag: 0
+  wordflag: 0
   bubbletimerflag: 0
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: []
+  serverenable: 0
 --- !u!1 &1576929228
 GameObject:
   m_ObjectHideFlags: 0
@@ -3143,10 +3167,14 @@ MonoBehaviour:
   flip: 0
   fishflag: 0
   houseflag: 0
+  wordflag: 0
   bubbletimerflag: 0
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: []
+  serverenable: 0
 --- !u!1 &1798320469
 GameObject:
   m_ObjectHideFlags: 0
@@ -3257,10 +3285,14 @@ MonoBehaviour:
   flip: 0
   fishflag: 0
   houseflag: 0
+  wordflag: 0
   bubbletimerflag: 0
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: []
+  serverenable: 0
 --- !u!1 &1810790330
 GameObject:
   m_ObjectHideFlags: 0
@@ -3445,10 +3477,14 @@ MonoBehaviour:
   flip: 0
   fishflag: 0
   houseflag: 0
+  wordflag: 0
   bubbletimerflag: 0
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: []
+  serverenable: 0
 --- !u!4 &1906787010
 Transform:
   m_ObjectHideFlags: 0
@@ -3707,10 +3743,14 @@ MonoBehaviour:
   flip: 0
   fishflag: 0
   houseflag: 0
+  wordflag: 0
   bubbletimerflag: 0
   keepbuild: 0
   bubblepos: {x: 0, y: 0, z: 0}
   wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: []
+  serverenable: 0
 --- !u!4 &2054776254
 Transform:
   m_ObjectHideFlags: 0

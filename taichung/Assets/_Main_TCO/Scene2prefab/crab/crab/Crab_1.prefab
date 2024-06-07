@@ -152,7 +152,7 @@ MonoBehaviour:
   ancor: {fileID: 0}
   speed: 0.03
   value: 0
-  duration: 5
+  duration: 10
   small: 0
   minRotationSpeed: -0.05
   maxRotationSpeed: 0.05

@@ -15,7 +15,7 @@ public class NoteTrigger : MonoBehaviour
 
     public bool trigger2;
     public bool onetime2;
-    public int noteNumber2 = 48;
+    public int noteNumber2 = 49;
     public float velocity2 = 0.9f;
 
     void Update ()

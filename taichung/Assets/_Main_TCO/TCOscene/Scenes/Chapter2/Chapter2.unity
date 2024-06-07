@@ -4563,7 +4563,7 @@ MonoBehaviour:
   MessageBufferSize: 5120
   MaxConnections: 100
   MaxSentMessageQueueSize: 128
-  ConnectAddress: 192.168.1.104
+  ConnectAddress: 192.168.50.120
   ConnectPort: 7777
   ServerListenPort: 7777
   MessageSendMode: 0
@@ -8466,8 +8466,8 @@ MonoBehaviour:
   onetime: 0
   trigger2: 0
   onetime2: 0
-  noteNumber2: 48
-  velocity2: 0.9
+  noteNumber2: 49
+  velocity2: 1
 --- !u!1 &1192974047
 GameObject:
   m_ObjectHideFlags: 0
@@ -10528,7 +10528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7816375564385254655, guid: 9bc2de8eb849d1a4aa9d08fbf5984e50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.71
+      value: -0.29
       objectReference: {fileID: 0}
     - target: {fileID: 7816375564385254655, guid: 9bc2de8eb849d1a4aa9d08fbf5984e50, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10536,7 +10536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7816375564385254655, guid: 9bc2de8eb849d1a4aa9d08fbf5984e50, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.74
+      value: -5.67
       objectReference: {fileID: 0}
     - target: {fileID: 7816375564385254655, guid: 9bc2de8eb849d1a4aa9d08fbf5984e50, type: 3}
       propertyPath: m_LocalRotation.w

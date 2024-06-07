@@ -79,7 +79,7 @@ public class crabfloat : MonoBehaviour
 
         if(melt)
         {
-
+            this.GetComponent<VisualEffect>().SetFloat("rate", 100);  
             // 更新计时器
             timer += Time.deltaTime;
 
@@ -87,7 +87,7 @@ public class crabfloat : MonoBehaviour
             float t = timer / duration;
 
             // 插值计算当前值
-            value = Mathf.Lerp(5f, 1f, t);
+            value = Mathf.Lerp(10f, 1f, t);
             
             // 输出当前值到控制台
             Debug.Log("Current Value: " + value);
