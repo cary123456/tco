@@ -144,7 +144,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2852902099044335356}
-  - component: {fileID: 2852902099044335357}
   - component: {fileID: 2852902099044335354}
   - component: {fileID: 2852902099044335355}
   - component: {fileID: 2852902099044335352}
@@ -152,6 +151,7 @@ GameObject:
   - component: {fileID: -5942784632414211798}
   - component: {fileID: -3893390622603003953}
   - component: {fileID: -2727190012656894400}
+  - component: {fileID: 2852902099044335357}
   - component: {fileID: 7391015590167870539}
   m_Layer: 0
   m_Name: Crab_2
@@ -177,82 +177,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!2083052967 &2852902099044335357
-VisualEffect:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2852902099044335350}
-  m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 7ef75f5a82f9470438da9cc4e6bffe14, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
-  m_StartSeed: 0
-  m_ResetSeedOnPlay: 1
-  m_ResourceVersion: 1
-  m_PropertySheet:
-    m_Float:
-      m_Array:
-      - m_Value: 1500
-        m_Name: amount(ora)
-        m_Overridden: 1
-      - m_Value: 3
-        m_Name: Size
-        m_Overridden: 1
-      - m_Value: 0.2
-        m_Name: Intensity
-        m_Overridden: 1
-      - m_Value: 800
-        m_Name: amount(Blue)
-        m_Overridden: 1
-      - m_Value: 2
-        m_Name: Drag
-        m_Overridden: 1
-      - m_Value: 500
-        m_Name: amount(Color2)
-        m_Overridden: 1
-      - m_Value: 2
-        m_Name: frequency
-        m_Overridden: 1
-      - m_Value: 0.35
-        m_Name: Min1
-        m_Overridden: 1
-      - m_Value: 0.4
-        m_Name: Max1
-        m_Overridden: 1
-      - m_Value: 0.02
-        m_Name: Min2
-        m_Overridden: 1
-      - m_Value: 0.15
-        m_Name: Max2
-        m_Overridden: 1
-      - m_Value: 0
-        m_Name: rate
-        m_Overridden: 1
-    m_Vector2f:
-      m_Array: []
-    m_Vector3f:
-      m_Array: []
-    m_Vector4f:
-      m_Array: []
-    m_Uint:
-      m_Array: []
-    m_Int:
-      m_Array: []
-    m_Matrix4x4f:
-      m_Array: []
-    m_AnimationCurve:
-      m_Array: []
-    m_Gradient:
-      m_Array: []
-    m_NamedObject:
-      m_Array:
-      - m_Value: {fileID: 11700000, guid: 5f926b5332cd20249a24d3ad2cd8637a, type: 2}
-        m_Name: SDF
-        m_Overridden: 1
-    m_Bool:
-      m_Array: []
 --- !u!73398921 &2852902099044335354
 VFXRenderer:
   serializedVersion: 1
@@ -362,11 +286,14 @@ MonoBehaviour:
   maxTorque: 0.5
   ancor: {fileID: 0}
   speed: 0.03
+  value: 0
+  duration: 5
   small: 0
   minRotationSpeed: -0.2
   maxRotationSpeed: 0.2
   rotationSpeed: 0
   midifloat: 1
+  melt: 0
 --- !u!114 &-3893390622603003953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,7 +312,6 @@ MonoBehaviour:
   runtime: 0
   timemove: 2
   midfinger: {fileID: 0}
-  duration: 3
   one: 0
   VRheadset: {fileID: 0}
   crabcount: 0
@@ -405,6 +331,82 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thumbR: {fileID: 0}
   follow: 0
+--- !u!2083052967 &2852902099044335357
+VisualEffect:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2852902099044335350}
+  m_Enabled: 1
+  m_Asset: {fileID: 8926484042661614526, guid: 7ef75f5a82f9470438da9cc4e6bffe14, type: 3}
+  m_InitialEventName: OnPlay
+  m_InitialEventNameOverriden: 0
+  m_StartSeed: 0
+  m_ResetSeedOnPlay: 1
+  m_ResourceVersion: 1
+  m_PropertySheet:
+    m_Float:
+      m_Array:
+      - m_Value: 1500
+        m_Name: amount(ora)
+        m_Overridden: 1
+      - m_Value: 3
+        m_Name: Size
+        m_Overridden: 0
+      - m_Value: 0.2
+        m_Name: Intensity
+        m_Overridden: 1
+      - m_Value: 800
+        m_Name: amount(Blue)
+        m_Overridden: 1
+      - m_Value: 2
+        m_Name: Drag
+        m_Overridden: 1
+      - m_Value: 500
+        m_Name: amount(Color2)
+        m_Overridden: 1
+      - m_Value: 2
+        m_Name: frequency
+        m_Overridden: 1
+      - m_Value: 0.35
+        m_Name: Min1
+        m_Overridden: 1
+      - m_Value: 0.4
+        m_Name: Max1
+        m_Overridden: 1
+      - m_Value: 0.02
+        m_Name: Min2
+        m_Overridden: 1
+      - m_Value: 0.15
+        m_Name: Max2
+        m_Overridden: 1
+      - m_Value: 0
+        m_Name: rate
+        m_Overridden: 1
+    m_Vector2f:
+      m_Array: []
+    m_Vector3f:
+      m_Array: []
+    m_Vector4f:
+      m_Array: []
+    m_Uint:
+      m_Array: []
+    m_Int:
+      m_Array: []
+    m_Matrix4x4f:
+      m_Array: []
+    m_AnimationCurve:
+      m_Array: []
+    m_Gradient:
+      m_Array: []
+    m_NamedObject:
+      m_Array:
+      - m_Value: {fileID: 11700000, guid: 5f926b5332cd20249a24d3ad2cd8637a, type: 2}
+        m_Name: SDF
+        m_Overridden: 1
+    m_Bool:
+      m_Array: []
 --- !u!54 &7391015590167870539
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -10,12 +10,13 @@ public class crabmove : MonoBehaviour
     public float runtime;
     public float timemove;
     public GameObject midfinger;
-    public float duration = 3f;
+
     public bool one;
     public GameObject VRheadset;
     public int crabcount;
 
     public bool onrtime;
+   
     public Vector3 headsetposition;
     // Start is called before the first frame update
     void Start()
@@ -71,7 +72,7 @@ public class crabmove : MonoBehaviour
             runtime = 0;
             one = true;
         }
-        
+ 
 
     }
 

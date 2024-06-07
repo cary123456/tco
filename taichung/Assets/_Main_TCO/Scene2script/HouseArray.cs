@@ -61,7 +61,7 @@ public class HouseArray : MonoBehaviour
     public Vector3 bubblepos;
     public bool wordswitch;
     public nearest nearest;
-    public ServerWord serverWord;
+    public ServerWord[] serverWord;
     public bool serverenable;
 
 
@@ -360,10 +360,10 @@ public class HouseArray : MonoBehaviour
             }
                
         }
-        if(serverWord != null)
+        if((serverWord[0] != null) && (serverWord[1] != null))
         {
 
-            if(serverWord.receivedNum > 0 && serverenable )
+            if(serverWord[0].receivedNum > 0  && serverenable )
             {
                 if(nearest.closestbuilding && housecount > 0 && wordflag)
                 {
@@ -375,10 +375,11 @@ public class HouseArray : MonoBehaviour
                     if(nearest.closestbuildinglo.tag == "building" || nearest.closestbuildinglo.tag == "buildinglo")
                         Destroy(nearest.closestbuildinglo);
                     housecount--;
-                    GameObject wordtemp = Instantiate(word[serverWord.receivedNum],new Vector3( nearest.closestbuildinglo.transform.position.x, nearest.closestbuildinglo.transform.position.y + houseoffset ,nearest.closestbuildinglo.transform.position.z) , Quaternion.identity, parentcanvas);
+                    GameObject wordtemp = Instantiate(word[serverWord[0].receivedNum - 1],new Vector3( nearest.closestbuildinglo.transform.position.x, nearest.closestbuildinglo.transform.position.y + houseoffset ,nearest.closestbuildinglo.transform.position.z) , Quaternion.identity, parentcanvas);
                     wordtemp.transform.Rotate(wordrotate);
 
                 }
+                
                 else if(nearest.closestbuilding && housecount == 0 && wordflag)
                 {
 
@@ -388,11 +389,42 @@ public class HouseArray : MonoBehaviour
                     float houseoffset = Random.Range(0, offset*50);
                     if(nearest.closestbuildinglo.tag== "building" || nearest.closestbuildinglo.tag == "buildinglo")
                         Destroy(nearest.closestbuildinglo);
-                    GameObject wordtemp = Instantiate(word[serverWord.receivedNum],new Vector3( nearest.closestbuilding.transform.position.x, nearest.closestbuilding.transform.position.y + houseoffset ,nearest.closestbuilding.transform.position.z) , Quaternion.identity, parentcanvas);
+                    GameObject wordtemp = Instantiate(word[serverWord[0].receivedNum],new Vector3( nearest.closestbuilding.transform.position.x, nearest.closestbuilding.transform.position.y + houseoffset ,nearest.closestbuilding.transform.position.z) , Quaternion.identity, parentcanvas);
                     wordtemp.transform.Rotate(wordrotate);
 
                 }
                 
+            }
+            if(serverWord[1].receivedNum > 0  && serverenable )
+            {
+                if(nearest.closestbuilding && housecount > 0 && wordflag)
+                {
+
+                    wordflag = false;
+                    StartCoroutine("Wordtimer");
+
+                    float houseoffset = Random.Range(0, offset*50);
+                    if(nearest.closestbuildinglo.tag == "building" || nearest.closestbuildinglo.tag == "buildinglo")
+                        Destroy(nearest.closestbuildinglo);
+                    housecount--;
+                    GameObject wordtemp = Instantiate(word[serverWord[1].receivedNum - 1],new Vector3( nearest.closestbuildinglo.transform.position.x, nearest.closestbuildinglo.transform.position.y + houseoffset ,nearest.closestbuildinglo.transform.position.z) , Quaternion.identity, parentcanvas);
+                    wordtemp.transform.Rotate(wordrotate);
+
+                }
+                
+                else if(nearest.closestbuilding && housecount == 0 && wordflag)
+                {
+
+                    wordflag = false;
+                    StartCoroutine("Wordtimer");
+
+                    float houseoffset = Random.Range(0, offset*50);
+                    if(nearest.closestbuildinglo.tag== "building" || nearest.closestbuildinglo.tag == "buildinglo")
+                        Destroy(nearest.closestbuildinglo);
+                    GameObject wordtemp = Instantiate(word[serverWord[1].receivedNum],new Vector3( nearest.closestbuilding.transform.position.x, nearest.closestbuilding.transform.position.y + houseoffset ,nearest.closestbuilding.transform.position.z) , Quaternion.identity, parentcanvas);
+                    wordtemp.transform.Rotate(wordrotate);
+
+                }
             }
         }
 

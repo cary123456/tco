@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.VFX;
 public class crabfloat : MonoBehaviour
 {
     // �̤j���O�M����O
@@ -12,16 +12,26 @@ public class crabfloat : MonoBehaviour
 
     private Rigidbody rb;
     public float speed ;
+            // 变量初始化为3
+    public float value ;
+
+    // 目标值
+    private float targetValue = 1f;
+
+    // 计时器变量
+    private float timer = 0f;
+    public float duration ;
     float timeCount = 0.0f;
     public bool small;
     public float minRotationSpeed;
     public float maxRotationSpeed;
     public float rotationSpeed;
     public float midifloat;
+    public bool melt;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
+        value = 3;
         
 
         ancor = GameObject.FindGameObjectWithTag("crabancor");
@@ -67,7 +77,33 @@ public class crabfloat : MonoBehaviour
             }
         }
 
-       
+        if(melt)
+        {
+
+            // 更新计时器
+            timer += Time.deltaTime;
+
+            // 计算当前时间比例
+            float t = timer / duration;
+
+            // 插值计算当前值
+            value = Mathf.Lerp(5f, 1f, t);
+            
+            // 输出当前值到控制台
+            Debug.Log("Current Value: " + value);
+            this.gameObject.GetComponent<VisualEffect>().SetFloat("scale",value);
+            // 如果达到目标时间，停止更新
+            if (timer >= duration)
+            {
+                // 确保值精确设置为目标值
+                timer = duration;
+                value = targetValue;
+                Debug.Log("Final Value: " + value);
+
+                // 禁用Update方法中的更改以防止重复更改
+                //this.enabled = false;
+            }
+        }
         
     }
 
