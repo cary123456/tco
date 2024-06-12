@@ -6657,6 +6657,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 839703476, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
+--- !u!1 &839703474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1859743738274157975, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
+  m_PrefabInstance: {fileID: 839703473}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &843922743
 GameObject:
   m_ObjectHideFlags: 0
@@ -8413,7 +8418,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186306649}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37cccbe0d3135fb4a97fe406e32e2852, type: 3}
   m_Name: 
@@ -8427,7 +8432,7 @@ MonoBehaviour:
   value: 1
   controllerNumber: 64
   vaa: 0
-  crabs: {fileID: 0}
+  hand: {fileID: 839703474}
   tri: 0
 --- !u!4 &1186306651
 Transform:
@@ -8451,7 +8456,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186306649}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c12f8ba5a3b944c9bbc7d2da14a237c, type: 3}
   m_Name: 
@@ -10680,7 +10685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587057816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -67.4, y: 0, z: -15.4}
+  m_LocalPosition: {x: -67.4, y: 0, z: -22.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10739,9 +10744,9 @@ MonoBehaviour:
   parenttrans: {fileID: 1587057817}
   parentcanvas: {fileID: 868587038}
   wordIO: {fileID: 868587037}
-  x: 40
+  x: 41
   z: 7
-  k: 4
+  k: 6.79
   buildpertime: 6
   housescale:
   - 1.2

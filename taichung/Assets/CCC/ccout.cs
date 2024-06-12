@@ -14,13 +14,12 @@ public class ccout : MonoBehaviour
     private float timer = 0f; // 计时器
     public float vaa;
     float scale;
-    public GameObject crabs;
+    public GameObject hand;
     public bool tri;
 
     public void Update()
     {
-        crabs = GameObject.FindGameObjectWithTag("crab");
-        // 更新计时器
+        
         if (tri)
         {
             timer += Time.deltaTime;
@@ -42,8 +41,8 @@ public class ccout : MonoBehaviour
         }
         else
         {
-            if(crabs != null){
-                value = crabs.GetComponent<crabfloat>().midifloat;
+            if(hand != null){
+                value = hand.GetComponent<handpartrack>().midifloat;
             }
             
             MidiBridge.instance.Warmup();
