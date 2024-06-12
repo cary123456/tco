@@ -26,7 +26,7 @@ public class crabfloat : MonoBehaviour
     public float minRotationSpeed;
     public float maxRotationSpeed;
     public float rotationSpeed;
-    public float midifloat;
+    
     public bool melt;
     void Start()
     {

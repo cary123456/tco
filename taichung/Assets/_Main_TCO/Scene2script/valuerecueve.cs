@@ -286,7 +286,7 @@ public class valuerecueve : NetworkBehaviour
         {
             if (crabb != null)
             {    
-                crabb.GetComponent<VisualEffect>().SetFloat("rate", 100);  
+                
                 crabb.GetComponent<crabfloat>().melt = true;        
                 crabb.GetComponent<handtrack>().follow = false;
                 
