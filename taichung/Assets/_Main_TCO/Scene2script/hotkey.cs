@@ -49,15 +49,14 @@ public class hotkey : MonoBehaviour
     public float growruntime;
     public float growtime;
     public GameObject target;
-    public Material fishm;
-    public float currentValue = 0.3f;
-    public float duration = 3.0f;
-    public float decrementAmount;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         crabcount = -1;
-        decrementAmount = currentValue / duration;
+
     }
 
     // Update is called once per frame
@@ -320,10 +319,9 @@ public class hotkey : MonoBehaviour
         }
         if (fishcount >= 4)
         {
-
-            
-            
-            fishcount = 0;         
+            fish.GetComponent<Animator>().SetBool("out", true);
+            fish2.GetComponent<Animator>().SetBool("out", true);
+            fish3.GetComponent<Animator>().SetBool("out", true);
         }
         
         if (Input.GetKey(KeyCode.Escape))

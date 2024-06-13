@@ -2288,6 +2288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 287605501}
   - component: {fileID: 287605502}
+  - component: {fileID: 287605503}
   m_Layer: 0
   m_Name: fish2
   m_TagString: Untagged
@@ -2331,6 +2332,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &287605503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287605500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dfa04c68efadb5468f04ba68293fd5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hotkey: {fileID: 559380027}
 --- !u!1 &293042791
 GameObject:
   m_ObjectHideFlags: 0
@@ -4223,10 +4237,6 @@ MonoBehaviour:
   growruntime: 0
   growtime: 0.05
   target: {fileID: 1777987214}
-  fishm: {fileID: 2100000, guid: a6b9458c09708fa418d763bace8cb976, type: 2}
-  currentValue: 0.3
-  duration: 1
-  decrementAmount: 0
 --- !u!1 &581448327 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 165006a9efbe91c4cbc735e4a6041764, type: 3}
@@ -7791,6 +7801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1104161545}
   - component: {fileID: 1104161546}
+  - component: {fileID: 1104161547}
   m_Layer: 0
   m_Name: fish1
   m_TagString: Untagged
@@ -7834,6 +7845,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1104161547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104161544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dfa04c68efadb5468f04ba68293fd5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hotkey: {fileID: 559380027}
 --- !u!1 &1121366517
 GameObject:
   m_ObjectHideFlags: 0
@@ -10864,7 +10888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7816375564385254655, guid: 9bc2de8eb849d1a4aa9d08fbf5984e50, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.67
+      value: -5.64
       objectReference: {fileID: 0}
     - target: {fileID: 7816375564385254655, guid: 9bc2de8eb849d1a4aa9d08fbf5984e50, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12731,6 +12755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1702033736}
   - component: {fileID: 1702033737}
+  - component: {fileID: 1702033738}
   m_Layer: 0
   m_Name: fish3
   m_TagString: Untagged
@@ -12775,6 +12800,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1702033738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702033735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dfa04c68efadb5468f04ba68293fd5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hotkey: {fileID: 559380027}
 --- !u!1 &1704795156
 GameObject:
   m_ObjectHideFlags: 0
