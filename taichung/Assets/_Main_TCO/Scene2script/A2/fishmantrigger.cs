@@ -35,12 +35,8 @@ public class fishmantrigger : MonoBehaviour
             {
                 if (onetimetrigger == false)
                 {
-                    if (players.Length > 1)
-                    {
-
-                        players[1].GetComponent<valuerecueve>().fishmanvalue = true;
-                        onetimetrigger = true;
-                    }
+                    allowtrigger = false;
+                    onetimetrigger = true;
                 }
                 holdruntime = holdtime;
             }
@@ -54,6 +50,12 @@ public class fishmantrigger : MonoBehaviour
             if (allow)
             {
                 allowtrigger = true;
+                if (players.Length > 1)
+                {
+
+                    players[1].GetComponent<valuerecueve>().fishmanvalue = true;
+                    
+                }
                 this.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f, 0.34f);
                 other.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f, 0.34f);
             }
@@ -69,7 +71,7 @@ public class fishmantrigger : MonoBehaviour
             colddownruntime = 0;
             holdruntime = 0;
             onetimetrigger = false;
-            allowtrigger = false;
+            
             if (players.Length > 1)
             {
                 this.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material.color = new Color(1f, 0f, 0f, 0.34f);
