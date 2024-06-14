@@ -322,6 +322,7 @@ public class hotkey : MonoBehaviour
             fish.GetComponent<Animator>().SetBool("out", true);
             fish2.GetComponent<Animator>().SetBool("out", true);
             fish3.GetComponent<Animator>().SetBool("out", true);
+
         }
         
         if (Input.GetKey(KeyCode.Escape))

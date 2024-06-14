@@ -87,7 +87,7 @@ public class crabfloat : MonoBehaviour
             float t = timer / duration;
 
             // 插值计算当前值
-            value = Mathf.Lerp(10f, 1f, t);
+            value = Mathf.Lerp(value, 1f, t);
             
             // 输出当前值到控制台
             Debug.Log("Current Value: " + value);

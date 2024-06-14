@@ -13,6 +13,7 @@ public class nearest : MonoBehaviour
 
     public GameObject[] allbuildinglos;
     public GameObject closestbuildinglo;
+    public GameObject maincamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -85,7 +86,7 @@ public class nearest : MonoBehaviour
         foreach (var enemy in allbuildinglos)
         {
 
-            float distanceHer = Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(enemy.transform.position.x, 0, enemy.transform.position.z));
+            float distanceHer = Vector3.Distance(new Vector3(maincamera.transform.position.x, 0, maincamera.transform.position.z), new Vector3(enemy.transform.position.x, 0, enemy.transform.position.z));
             if (distanceHer <= leastDistance)
             {
                 leastDistance = distanceHer;
