@@ -31,7 +31,7 @@ public class crabfloat : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        value = 3;
+        value = 4.5f;
         
 
         ancor = GameObject.FindGameObjectWithTag("crabancor");
