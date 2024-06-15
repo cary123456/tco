@@ -80,7 +80,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u516D\n\u96D9\n\u773C\n\u775B"
+  m_Text: "\u6709\n\u516D\n\u96D9\n\u773C\n\u775B"
 --- !u!95 &-9027936316252899327
 Animator:
   serializedVersion: 4
