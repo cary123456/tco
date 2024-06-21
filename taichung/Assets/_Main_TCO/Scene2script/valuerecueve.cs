@@ -409,6 +409,10 @@ public class valuerecueve : NetworkBehaviour
             {
                 GameObject.FindWithTag("fish").SetActive(false);
             }
+            foreach (var mid in midfinger)
+            {
+                mid.gameObject.SetActive(false);
+            }
         }
 
     }

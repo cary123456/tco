@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ServerWord : MonoBehaviour
 {
-    public int port = 1234;
+    public int port;
     private TcpListener server;
     private TcpClient client;
     private NetworkStream stream;
@@ -15,6 +15,7 @@ public class ServerWord : MonoBehaviour
 
     void Start()
     {
+         CloseConnection();
         StartCoroutine(StartServerCoroutine());
     }
 

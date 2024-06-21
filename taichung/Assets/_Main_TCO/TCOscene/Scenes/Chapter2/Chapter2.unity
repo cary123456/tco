@@ -4118,7 +4118,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &493785133
 RectTransform:
@@ -4234,6 +4234,7 @@ MonoBehaviour:
   back: {fileID: 680042732}
   bubblebackup: {fileID: 0}
   bubblecount: 0
+  bubble: {fileID: 0}
   lookatcount: 0
   center: {fileID: 1790015746}
   growbool: 0
@@ -11523,7 +11524,7 @@ MonoBehaviour:
   wordscale: []
   wordrotate: {x: 0, y: 90, z: 0}
   housecount: 0
-  offset: 1.05
+  offset: 0.35
   buildarraytemp: []
   blockhouseX: 24000000230000000d0000000e000000
   blockhouseZ: 03000000

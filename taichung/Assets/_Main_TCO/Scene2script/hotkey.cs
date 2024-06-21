@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class hotkey : MonoBehaviour
@@ -41,6 +42,7 @@ public class hotkey : MonoBehaviour
     public GameObject back;
     public GameObject bubblebackup;
     public int bubblecount;
+    public GameObject bubble;
     public int lookatcount;
     bool stawflag = false;
     bool stawflag_2 = false;
@@ -153,17 +155,25 @@ public class hotkey : MonoBehaviour
         }
         if(bubblecount == 1)
         {
-            if(bubblebackup != null)
+            if(bubblebackup != null && bubble !=null)
             {
-                bubblebackup.SetActive(true);
+                bubblebackup.GetComponent<UDPBroadcastReceiver>().enabled = false;
+                Vector3 pos = Camera.main.WorldToScreenPoint(bubble.transform.position);
+                //讓滑鼠的螢幕坐标的Z軸等于目前物體的螢幕坐标的Z軸，也就是相隔的距離
+                Vector3 m_MousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, pos.z);
+                //将正确的滑鼠螢幕坐标換成世界坐标交給物體
+                bubble.transform.position = Camera.main.ScreenToWorldPoint(m_MousePos);
+
             }
            
         }
         if(bubblecount == 0)
         {
-            if(bubblebackup != null)
+            if(bubblebackup != null )
             {
-                bubblebackup.SetActive(false);
+                bubblebackup.GetComponent<UDPBroadcastReceiver>().enabled = true;
+                 //首先擷取到目前物體的螢幕坐标
+
             }
             
         }
