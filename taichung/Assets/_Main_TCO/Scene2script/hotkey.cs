@@ -103,13 +103,7 @@ public class hotkey : MonoBehaviour
             SummonCrabs.crabb.Clear();
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            if (VRcam.GetComponent<nearest>().closestEnemy.GetComponent<crabmove>() != null)
-            {
-                VRcam.GetComponent<nearest>().closestEnemy.GetComponent<crabmove>().move = true;
-            }
-        }
+
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -119,14 +113,7 @@ public class hotkey : MonoBehaviour
             }
             
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            if(back != null)
-            {
-                back.SetActive(true);              
-            }
-            
-        }
+
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             if(staw != null)
@@ -191,22 +178,8 @@ public class hotkey : MonoBehaviour
             fadeui.GetComponent<Animator>().SetBool("fadeout",true);
             fadeui.GetComponent<Animator>().SetBool("fadein", false);        
         }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            lookatcount += 1;
-            if(lookatcount > 1)
-            {
-                lookatcount = 0;
-            }
-        }
-        if(lookatcount ==1)
-        {
-            if(center != null)
-            {
-                maincamera.transform.LookAt(center.transform);
-            }
-           
-        }
+
+
         if (Input.GetKeyDown(KeyCode.V))
         {
             vfxcount += 1;
@@ -261,16 +234,7 @@ public class hotkey : MonoBehaviour
             }
             
         }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            maincamera.transform.position = new Vector3(0, -1.27f, 5.47f);
-            maincamera.transform.rotation = Quaternion.Euler(185, 0, 180);
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            maincamera.transform.position = new Vector3(0, 5.57f, -0.32f);
-            maincamera.transform.rotation = Quaternion.Euler(90, 0, 180);
-        }
+
         if (Input.GetKeyDown(KeyCode.Z))
         {
             growbool = true;

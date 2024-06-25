@@ -9,6 +9,10 @@ public class voixetest : MonoBehaviour
     
     public Renderer rend;
     public GameObject bubble;
+    public bool auto;
+    public float volume;
+    public float AdjustSpeed = 1;
+    public float RamdonNoise;
     public float Pickup
     {
         get { return _pickup; }
@@ -31,12 +35,34 @@ public class voixetest : MonoBehaviour
     void Update()
     {
         bubble = GameObject.FindGameObjectWithTag("inside");
-        if(bubble != null)
+        if(Input.GetKeyDown(KeyCode.Alpha8))
+            auto = !auto;
+        if(auto)
         {
-            rend = bubble.GetComponent<Renderer>();
-            //rend.material.shader = Shader.Find("Inside");
-            rend.material.SetFloat("_NoiseScale", _pickup*8 );
+            if(bubble != null)
+            {
+                rend = bubble.GetComponent<Renderer>();
+                        //rend.material.shader = Shader.Find("Inside");
+                rend.material.SetFloat("_NoiseScale", _pickup*8 );
+            }
         }
+        else
+        {
+            float rand = Random.Range(-RamdonNoise,RamdonNoise);
+            if(Input.GetKey(KeyCode.UpArrow))
+            {
+                volume += AdjustSpeed;
+                volume = Mathf.Clamp(volume, 0f, 2.5f) + rand;
+            }
+            if(Input.GetKey(KeyCode.DownArrow))
+            {
+                volume -= AdjustSpeed;
+                volume = Mathf.Clamp(volume, 0f, 2.5f);
+                volume = Mathf.Clamp(volume, 0f, 2.5f) + rand;
+            }
+            rend.material.SetFloat("_NoiseScale", volume);
+        }
+        
         
     }
 }

@@ -1535,6 +1535,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 152857264, guid: a0523636f1c9cea42bac9fd6ec429ac1, type: 3}
+      propertyPath: auto
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 152857264, guid: a0523636f1c9cea42bac9fd6ec429ac1, type: 3}
+      propertyPath: smooth
+      value: 93
+      objectReference: {fileID: 0}
+    - target: {fileID: 152857264, guid: a0523636f1c9cea42bac9fd6ec429ac1, type: 3}
+      propertyPath: AdjustSpeed
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 152857264, guid: a0523636f1c9cea42bac9fd6ec429ac1, type: 3}
+      propertyPath: RamdonNoise
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 152857265, guid: a0523636f1c9cea42bac9fd6ec429ac1, type: 3}
       propertyPath: _address
       value: /chan1
@@ -1988,7 +2004,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3526448, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
