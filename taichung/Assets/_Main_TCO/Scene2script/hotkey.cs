@@ -162,7 +162,7 @@ public class hotkey : MonoBehaviour
                 //讓滑鼠的螢幕坐标的Z軸等于目前物體的螢幕坐标的Z軸，也就是相隔的距離
                 Vector3 m_MousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, pos.z);
                 //将正确的滑鼠螢幕坐标換成世界坐标交給物體
-                bubble.transform.position = Camera.main.ScreenToWorldPoint(m_MousePos);
+                bubble.transform.position =  Vector3.Lerp(bubble.transform.position, Camera.main.ScreenToWorldPoint(m_MousePos), 0.02f); 
 
             }
            
@@ -337,6 +337,10 @@ public class hotkey : MonoBehaviour
         
         if (Input.GetKey(KeyCode.Escape))
         {
+            if(player.Length > 0)
+            {
+                player[0].GetComponent<valuerecueve>().ballvalue = false;
+            }
             if(player.Length > 0)
             {
                 player[0].GetComponent<valuerecueve>().destoryvalue = true;

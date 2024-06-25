@@ -75,7 +75,11 @@ public class spin2 : MonoBehaviour
                 
 
             }
+            
             end = false;
+        }
+        else{
+            
         }
     }
 
@@ -97,33 +101,41 @@ public class spin2 : MonoBehaviour
         {
             float startTime = Time.time;
             Vector3[] startPositions = new Vector3[moveableTransforms.Length];
-
-            for (int i = 0; i < moveableTransforms.Length; i++)
+            if(moveableTransforms.Length > 0)
             {
-                startPositions[i] = moveableTransforms[i].position;
+                for (int i = 0; i < moveableTransforms.Length; i++)
+                {
+                    startPositions[i] = moveableTransforms[i].position;
+                }
             }
+
 
             while (Time.time - startTime < moveTime)
             {
                 float t = (Time.time - startTime) / moveTime;
-
-                for (int i = 0; i < moveableTransforms.Length; i++)
+                if(moveableTransforms.Length >0)
                 {
-                    if(moveableTransforms.Length > 0)
+                    for (int i = 0; i < moveableTransforms.Length; i++)
                     {
-                        Vector3 targetPosition = targetPoint.position + (moveableTransforms[i].position - targetPoint.position).normalized * targetRadius;
-                        moveableTransforms[i].position = Vector3.Lerp(startPositions[i], targetPosition, t);
-                    }
+                        if(moveableTransforms.Length > 0)
+                        {
+                            Vector3 targetPosition = targetPoint.position + (moveableTransforms[i].position - targetPoint.position).normalized * targetRadius;
+                            moveableTransforms[i].position = Vector3.Lerp(startPositions[i], targetPosition, t);
+                        }
                     
+                    }
                 }
+                
 
                 yield return null;
             }
-
-            for (int i = 0; i < moveableTransforms.Length; i++)
+            if(moveableTransforms.LongLength >0)
             {
-                Vector3 targetPosition = targetPoint.position + (moveableTransforms[i].position - targetPoint.position).normalized * targetRadius;
-                moveableTransforms[i].position = targetPosition;
+                for (int i = 0; i < moveableTransforms.Length; i++)
+                {
+                    Vector3 targetPosition = targetPoint.position + (moveableTransforms[i].position - targetPoint.position).normalized * targetRadius;
+                    moveableTransforms[i].position = targetPosition;
+                }
             }
 
             end = true;

@@ -306,7 +306,7 @@ public class HouseArray : MonoBehaviour
             //     }
                 
             // }
-            int rand = Random.Range(0,7);
+            int rand = Random.Range(0,word.Length);
             if(wordswitch)
                 rand = Random.Range(7,13);
             
@@ -381,6 +381,9 @@ public class HouseArray : MonoBehaviour
                         for(int i = 0; i < word1.Length ; i ++)
                         {
                             float houseoffset = Random.Range(0, offset*30);
+                            int id = nearest.closestbuildinglo.transform.GetSiblingIndex();
+                            buildarray[(int)buildarraytemp[id].x,(int)buildarraytemp[id].y] = 0;
+                            buildarraytemp.RemoveAt(id);
                             if(nearest.closestbuildinglo.tag == "building" || nearest.closestbuildinglo.tag == "buildinglo")
                                 Destroy(nearest.closestbuildinglo);
                             housecount--;
@@ -394,6 +397,9 @@ public class HouseArray : MonoBehaviour
                         for(int i = 0; i < word2.Length ; i ++)
                         {
                             float houseoffset = Random.Range(0, offset*30);
+                            int id = nearest.closestbuildinglo.transform.GetSiblingIndex();
+                            buildarray[(int)buildarraytemp[id].x,(int)buildarraytemp[id].y] = 0;
+                            buildarraytemp.RemoveAt(id);
                             if(nearest.closestbuildinglo.tag == "building" || nearest.closestbuildinglo.tag == "buildinglo")
                                 Destroy(nearest.closestbuildinglo);
                             housecount--;
@@ -407,6 +413,9 @@ public class HouseArray : MonoBehaviour
                         for(int i = 0; i < word3.Length ; i ++)
                         {
                             float houseoffset = Random.Range(0, offset*30);
+                            int id = nearest.closestbuildinglo.transform.GetSiblingIndex();
+                            buildarray[(int)buildarraytemp[id].x,(int)buildarraytemp[id].y] = 0;
+                            buildarraytemp.RemoveAt(id);
                             if(nearest.closestbuildinglo.tag == "building" || nearest.closestbuildinglo.tag == "buildinglo")
                                 Destroy(nearest.closestbuildinglo);
                             housecount--;
@@ -437,9 +446,8 @@ public class HouseArray : MonoBehaviour
                             float houseoffset = Random.Range(0, offset*30);
                             if(nearest.closestbuildinglo.tag == "building" || nearest.closestbuildinglo.tag == "buildinglo")
                                 Destroy(nearest.closestbuildinglo);
-                           
-                            GameObject wordtemp = Instantiate(word1[i],new Vector3( nearest.closestbuildinglo.transform.position.x, nearest.closestbuildinglo.transform.position.y + houseoffset ,nearest.closestbuildinglo.transform.position.z) , Quaternion.identity, parentcanvas);
-                            wordtemp.transform.Rotate(wordrotate);
+                            //GameObject wordtemp = Instantiate(word1[i],new Vector3( nearest.closestbuildinglo.transform.position.x, nearest.closestbuildinglo.transform.position.y + houseoffset ,nearest.closestbuildinglo.transform.position.z) , Quaternion.identity, parentcanvas);
+                            //wordtemp.transform.Rotate(wordrotate);
                         } 
                     }
                     if(serverWord[0].receivedNum == 2)
@@ -451,8 +459,8 @@ public class HouseArray : MonoBehaviour
                             if(nearest.closestbuildinglo.tag == "building" || nearest.closestbuildinglo.tag == "buildinglo")
                                 Destroy(nearest.closestbuildinglo);
                             
-                            GameObject wordtemp = Instantiate(word2[i],new Vector3( nearest.closestbuildinglo.transform.position.x, nearest.closestbuildinglo.transform.position.y + houseoffset ,nearest.closestbuildinglo.transform.position.z) , Quaternion.identity, parentcanvas);
-                            wordtemp.transform.Rotate(wordrotate);
+                            //GameObject wordtemp = Instantiate(word2[i],new Vector3( nearest.closestbuildinglo.transform.position.x, nearest.closestbuildinglo.transform.position.y + houseoffset ,nearest.closestbuildinglo.transform.position.z) , Quaternion.identity, parentcanvas);
+                            //wordtemp.transform.Rotate(wordrotate);
                         } 
                     }
                     if(serverWord[0].receivedNum == 3)
@@ -464,8 +472,8 @@ public class HouseArray : MonoBehaviour
                             if(nearest.closestbuildinglo.tag == "building" || nearest.closestbuildinglo.tag == "buildinglo")
                                 Destroy(nearest.closestbuildinglo);
                             
-                            GameObject wordtemp = Instantiate(word3[i],new Vector3( nearest.closestbuildinglo.transform.position.x, nearest.closestbuildinglo.transform.position.y + houseoffset ,nearest.closestbuildinglo.transform.position.z) , Quaternion.identity, parentcanvas);
-                            wordtemp.transform.Rotate(wordrotate);
+                            //GameObject wordtemp = Instantiate(word3[i],new Vector3( nearest.closestbuildinglo.transform.position.x, nearest.closestbuildinglo.transform.position.y + houseoffset ,nearest.closestbuildinglo.transform.position.z) , Quaternion.identity, parentcanvas);
+                            //wordtemp.transform.Rotate(wordrotate);
                         } 
                     }
 
@@ -480,12 +488,15 @@ public class HouseArray : MonoBehaviour
                     wordflag = false;
                     StartCoroutine("Wordtimer");
 
-                    if(serverWord[0].receivedNum == 1)
+                    if(serverWord[1].receivedNum == 1)
                     {
                         
                         for(int i = 0; i < word1.Length ; i ++)
                         {
                             float houseoffset = Random.Range(0, offset*30);
+                            int id = nearest.closestbuildinglo.transform.GetSiblingIndex();
+                            buildarray[(int)buildarraytemp[id].x,(int)buildarraytemp[id].y] = 0;
+                            buildarraytemp.RemoveAt(id);
                             if(nearest.closestbuildinglo.tag == "building" || nearest.closestbuildinglo.tag == "buildinglo")
                                 Destroy(nearest.closestbuildinglo);
                             housecount--;
@@ -493,12 +504,15 @@ public class HouseArray : MonoBehaviour
                             wordtemp.transform.Rotate(wordrotate);
                         } 
                     }
-                    if(serverWord[0].receivedNum == 2)
+                    if(serverWord[1].receivedNum == 2)
                     {
                         
                         for(int i = 0; i < word2.Length ; i ++)
                         {
                             float houseoffset = Random.Range(0, offset*30);
+                            int id = nearest.closestbuildinglo.transform.GetSiblingIndex();
+                            buildarray[(int)buildarraytemp[id].x,(int)buildarraytemp[id].y] = 0;
+                            buildarraytemp.RemoveAt(id);
                             if(nearest.closestbuildinglo.tag == "building" || nearest.closestbuildinglo.tag == "buildinglo")
                                 Destroy(nearest.closestbuildinglo);
                             housecount--;
@@ -506,12 +520,15 @@ public class HouseArray : MonoBehaviour
                             wordtemp.transform.Rotate(wordrotate);
                         } 
                     }
-                    if(serverWord[0].receivedNum == 3)
+                    if(serverWord[1].receivedNum == 3)
                     {
                         
                         for(int i = 0; i < word3.Length ; i ++)
                         {
                             float houseoffset = Random.Range(0, offset*30);
+                            int id = nearest.closestbuildinglo.transform.GetSiblingIndex();
+                            buildarray[(int)buildarraytemp[id].x,(int)buildarraytemp[id].y] = 0;
+                            buildarraytemp.RemoveAt(id);
                             if(nearest.closestbuildinglo.tag == "building" || nearest.closestbuildinglo.tag == "buildinglo")
                                 Destroy(nearest.closestbuildinglo);
                             housecount--;
@@ -528,7 +545,7 @@ public class HouseArray : MonoBehaviour
                     wordflag = false;
                     StartCoroutine("Wordtimer");
 
-                    if(serverWord[0].receivedNum == 1)
+                    if(serverWord[1].receivedNum == 1)
                     {
                         
                         for(int i = 0; i < word1.Length ; i ++)
@@ -536,12 +553,11 @@ public class HouseArray : MonoBehaviour
                             float houseoffset = Random.Range(0, offset*30);
                             if(nearest.closestbuildinglo.tag == "building" || nearest.closestbuildinglo.tag == "buildinglo")
                                 Destroy(nearest.closestbuildinglo);
-                            
-                            GameObject wordtemp = Instantiate(word1[i],new Vector3( nearest.closestbuildinglo.transform.position.x, nearest.closestbuildinglo.transform.position.y + houseoffset ,nearest.closestbuildinglo.transform.position.z) , Quaternion.identity, parentcanvas);
-                            wordtemp.transform.Rotate(wordrotate);
+                            //GameObject wordtemp = Instantiate(word1[i],new Vector3( nearest.closestbuildinglo.transform.position.x, nearest.closestbuildinglo.transform.position.y + houseoffset ,nearest.closestbuildinglo.transform.position.z) , Quaternion.identity, parentcanvas);
+                            //wordtemp.transform.Rotate(wordrotate);
                         } 
                     }
-                    if(serverWord[0].receivedNum == 2)
+                    if(serverWord[1].receivedNum == 2)
                     {
                         
                         for(int i = 0; i < word2.Length ; i ++)
@@ -549,12 +565,11 @@ public class HouseArray : MonoBehaviour
                             float houseoffset = Random.Range(0, offset*30);
                             if(nearest.closestbuildinglo.tag == "building" || nearest.closestbuildinglo.tag == "buildinglo")
                                 Destroy(nearest.closestbuildinglo);
-                            
-                            GameObject wordtemp = Instantiate(word2[i],new Vector3( nearest.closestbuildinglo.transform.position.x, nearest.closestbuildinglo.transform.position.y + houseoffset ,nearest.closestbuildinglo.transform.position.z) , Quaternion.identity, parentcanvas);
-                            wordtemp.transform.Rotate(wordrotate);
+                            //GameObject wordtemp = Instantiate(word2[i],new Vector3( nearest.closestbuildinglo.transform.position.x, nearest.closestbuildinglo.transform.position.y + houseoffset ,nearest.closestbuildinglo.transform.position.z) , Quaternion.identity, parentcanvas);
+                            //wordtemp.transform.Rotate(wordrotate);
                         } 
                     }
-                    if(serverWord[0].receivedNum == 3)
+                    if(serverWord[1].receivedNum == 3)
                     {
                         
                         for(int i = 0; i < word3.Length ; i ++)
@@ -562,9 +577,8 @@ public class HouseArray : MonoBehaviour
                             float houseoffset = Random.Range(0, offset*30);
                             if(nearest.closestbuildinglo.tag == "building" || nearest.closestbuildinglo.tag == "buildinglo")
                                 Destroy(nearest.closestbuildinglo);
-                            
-                            GameObject wordtemp = Instantiate(word3[i],new Vector3( nearest.closestbuildinglo.transform.position.x, nearest.closestbuildinglo.transform.position.y + houseoffset ,nearest.closestbuildinglo.transform.position.z) , Quaternion.identity, parentcanvas);
-                            wordtemp.transform.Rotate(wordrotate);
+                            //GameObject wordtemp = Instantiate(word3[i],new Vector3( nearest.closestbuildinglo.transform.position.x, nearest.closestbuildinglo.transform.position.y + houseoffset ,nearest.closestbuildinglo.transform.position.z) , Quaternion.identity, parentcanvas);
+                            //wordtemp.transform.Rotate(wordrotate);
                         } 
                     }
 
