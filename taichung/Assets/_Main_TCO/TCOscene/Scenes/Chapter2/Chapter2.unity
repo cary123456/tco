@@ -2479,11 +2479,11 @@ MonoBehaviour:
   WordKey: 0
   WordSwitch: 0
   house:
-  - {fileID: 8398855273896792897, guid: 1c5b676292a899540901c205af00abef, type: 3}
-  - {fileID: 8398855273896792897, guid: 9208d3615aa6f5b46ac8830090bb2f83, type: 3}
-  - {fileID: 8398855273896792897, guid: ce6e28b231c816e4ca7551cf5366f8e8, type: 3}
-  - {fileID: 8398855273896792897, guid: 75611253f7c9e6b4e8492f82f045674f, type: 3}
-  - {fileID: 8398855273896792897, guid: 3e07d7a9cc6722d42b02959689d2ab2a, type: 3}
+  - {fileID: 123923147506414471, guid: c32823af10c4c274c876143f52840af8, type: 3}
+  - {fileID: 2852902099044335350, guid: f509e38057180044ea1a11ed3034b98b, type: 3}
+  - {fileID: 5792839285151883588, guid: 63e8a2372e427224c98741739e6d911c, type: 3}
+  - {fileID: 2655429697686084108, guid: 12ff10db160f35c4fb69a728fffc40d3, type: 3}
+  - {fileID: 6305365181422716240, guid: da4eabc96c0fa354283c813bed038183, type: 3}
   houseenable: 0
   crab:
   - {fileID: 123923147506414471, guid: c32823af10c4c274c876143f52840af8, type: 3}
@@ -4426,7 +4426,7 @@ MonoBehaviour:
   MessageBufferSize: 5120
   MaxConnections: 100
   MaxSentMessageQueueSize: 128
-  ConnectAddress: 192.168.50.120
+  ConnectAddress: 192.168.50.246
   ConnectPort: 7777
   ServerListenPort: 7777
   MessageSendMode: 0
@@ -9306,11 +9306,11 @@ MonoBehaviour:
   WordKey: 0
   WordSwitch: 0
   house:
-  - {fileID: 8398855273896792897, guid: 1c5b676292a899540901c205af00abef, type: 3}
-  - {fileID: 8398855273896792897, guid: 9208d3615aa6f5b46ac8830090bb2f83, type: 3}
-  - {fileID: 8398855273896792897, guid: ce6e28b231c816e4ca7551cf5366f8e8, type: 3}
-  - {fileID: 8398855273896792897, guid: 75611253f7c9e6b4e8492f82f045674f, type: 3}
-  - {fileID: 8398855273896792897, guid: 3e07d7a9cc6722d42b02959689d2ab2a, type: 3}
+  - {fileID: 123923147506414471, guid: c32823af10c4c274c876143f52840af8, type: 3}
+  - {fileID: 2852902099044335350, guid: f509e38057180044ea1a11ed3034b98b, type: 3}
+  - {fileID: 5792839285151883588, guid: 63e8a2372e427224c98741739e6d911c, type: 3}
+  - {fileID: 2655429697686084108, guid: 12ff10db160f35c4fb69a728fffc40d3, type: 3}
+  - {fileID: 6305365181422716240, guid: da4eabc96c0fa354283c813bed038183, type: 3}
   houseenable: 0
   crab:
   - {fileID: 123923147506414471, guid: c32823af10c4c274c876143f52840af8, type: 3}
@@ -11453,11 +11453,7 @@ MonoBehaviour:
   WordKey: 107
   WordSwitch: 48
   house:
-  - {fileID: 8398855273896792897, guid: 1c5b676292a899540901c205af00abef, type: 3}
-  - {fileID: 8398855273896792897, guid: 9208d3615aa6f5b46ac8830090bb2f83, type: 3}
-  - {fileID: 8398855273896792897, guid: ce6e28b231c816e4ca7551cf5366f8e8, type: 3}
-  - {fileID: 8398855273896792897, guid: 75611253f7c9e6b4e8492f82f045674f, type: 3}
-  - {fileID: 8398855273896792897, guid: 3e07d7a9cc6722d42b02959689d2ab2a, type: 3}
+  - {fileID: 7176764871059821109, guid: d926b672293861f4eafe332da94e1da3, type: 3}
   houseenable: 1
   crab: []
   crabenable: 0
