@@ -1540,6 +1540,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 152857264, guid: a0523636f1c9cea42bac9fd6ec429ac1, type: 3}
+      propertyPath: bubble
+      value: 
+      objectReference: {fileID: 1279387878}
+    - target: {fileID: 152857264, guid: a0523636f1c9cea42bac9fd6ec429ac1, type: 3}
       propertyPath: smooth
       value: 93
       objectReference: {fileID: 0}
@@ -2004,7 +2008,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8686131, y: 1}
+    m_SensorSize: {x: 1.7937255, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2116,6 +2120,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1279387878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1956327720331576704, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+  m_PrefabInstance: {fileID: 183067696}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1296901603 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7816375564385254655, guid: 9bc2de8eb849d1a4aa9d08fbf5984e50, type: 3}

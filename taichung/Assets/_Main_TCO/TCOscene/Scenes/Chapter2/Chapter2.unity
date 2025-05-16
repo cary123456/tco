@@ -4389,6 +4389,7 @@ GameObject:
   - component: {fileID: 626551818}
   - component: {fileID: 626551820}
   - component: {fileID: 626551819}
+  - component: {fileID: 626551821}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -4469,6 +4470,19 @@ MonoBehaviour:
     LoadSceneTimeOut: 120
     SpawnTimeout: 1
     EnableNetworkLogs: 1
+--- !u!114 &626551821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626551817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f60a696e921670409f01199a7e19655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Notes: "VR\u982D\u76D4\u9023\u7DDA\u8A2D\u5B9A"
 --- !u!1001 &630199995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6519,6 +6533,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1859743738274157975, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
   m_PrefabInstance: {fileID: 839703473}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &839703475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839703474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f60a696e921670409f01199a7e19655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Notes: "Build VR\u7684\u6642\u5019\u8981\u95DC\u6389\u9019\u5169\u500BGameObject"
 --- !u!1 &843922743
 GameObject:
   m_ObjectHideFlags: 0
@@ -7868,6 +7895,7 @@ GameObject:
   - component: {fileID: 1096450220}
   - component: {fileID: 1096450221}
   - component: {fileID: 1096450222}
+  - component: {fileID: 1096450223}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: uiman
@@ -7924,6 +7952,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   port: 6789
   receivedNum: 0
+--- !u!114 &1096450223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096450219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f60a696e921670409f01199a7e19655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Notes: "\u5982\u679C\u8981build\u982D\u76D4\u8981\u628AUIManager\u7684VR set true"
 --- !u!1 &1104161544
 GameObject:
   m_ObjectHideFlags: 0
@@ -9902,6 +9943,24 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 839703476, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
+--- !u!1 &1410351035 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1859743738274157975, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
+  m_PrefabInstance: {fileID: 1410351034}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1410351036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410351035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f60a696e921670409f01199a7e19655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Notes: "Build VR\u7684\u6642\u5019\u8981\u95DC\u6389\u9019\u5169\u500BGameObject"
 --- !u!1 &1413770300
 GameObject:
   m_ObjectHideFlags: 0
