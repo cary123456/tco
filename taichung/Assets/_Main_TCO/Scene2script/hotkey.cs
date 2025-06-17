@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 public class hotkey : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class hotkey : MonoBehaviour
     public GameObject raycast;
     public GameObject VRcam;
     public GameObject maincamera;
-    public GameObject fadeui;
+    public GameObject[] fadeui;
     private int lookcount;
     public GameObject Rvfx;
     public GameObject Lvfx;
@@ -51,6 +52,9 @@ public class hotkey : MonoBehaviour
     public float growruntime;
     public float growtime;
     public GameObject target;
+    public GameObject Sea;
+    public float SeaUpSpeed;
+    public KeyCode SeaUpKey;
 
 
 
@@ -58,6 +62,7 @@ public class hotkey : MonoBehaviour
     void Start()
     {
         crabcount = -1;
+
 
     }
 
@@ -78,7 +83,7 @@ public class hotkey : MonoBehaviour
         if (Input.GetKeyUp(crabkey))
         {
             crabfollow = false;
-             //Instantiate(crab,headset.transform.position , Quaternion.Euler(new Vector3(0, 0, 0)));
+            //Instantiate(crab,headset.transform.position , Quaternion.Euler(new Vector3(0, 0, 0)));
             //Instantiate(crab, new Vector3(crabposition.transform.position.x + Random.Range(-4.5f, 4.5f), crabposition.transform.position.y , crabposition.transform.position.z + Random.Range(-2.5f, 2.5f)), Quaternion.Euler(new Vector3(0, 0, 0)));
 
 
@@ -111,84 +116,92 @@ public class hotkey : MonoBehaviour
             {
                 Destroy(GameObject.FindWithTag("crab"));
             }
-            
+
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            if(staw != null)
+            if (staw != null)
             {
                 stawflag = !stawflag;
-                staw.GetComponent<Animator>().SetBool("up",stawflag);  
+                staw.GetComponent<Animator>().SetBool("up", stawflag);
                 //staw.GetComponent<Animator>().SetBool("down",false);              
             }
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
-            if(staw != null)
+            if (staw != null)
             {
                 stawflag_2 = !stawflag_2;
-                staw_2.GetComponent<Animator>().SetBool("up",stawflag_2); 
+                staw_2.GetComponent<Animator>().SetBool("up", stawflag_2);
                 //staw.GetComponent<Animator>().SetBool("down",true);              
             }
         }
         if (Input.GetKeyDown(KeyCode.Alpha7))
         {
             bubblecount += 1;
-            if(bubblecount > 1)
+            if (bubblecount > 1)
             {
                 bubblecount = 0;
             }
         }
-        if(bubblecount == 1)
+        if (bubblecount == 1)
         {
-            if(bubblebackup != null && bubble !=null)
+            if (bubblebackup != null && bubble != null)
             {
                 bubblebackup.GetComponent<UDPBroadcastReceiver>().enabled = false;
                 Vector3 pos = Camera.main.WorldToScreenPoint(bubble.transform.position);
                 //讓滑鼠的螢幕坐标的Z軸等于目前物體的螢幕坐标的Z軸，也就是相隔的距離
                 Vector3 m_MousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, pos.z);
                 //将正确的滑鼠螢幕坐标換成世界坐标交給物體
-                bubble.transform.position =  Vector3.Lerp(bubble.transform.position, Camera.main.ScreenToWorldPoint(m_MousePos), 0.02f); 
+                bubble.transform.position = Vector3.Lerp(bubble.transform.position, Camera.main.ScreenToWorldPoint(m_MousePos), 0.02f);
 
             }
-           
+
         }
-        if(bubblecount == 0)
+        if (bubblecount == 0)
         {
-            if(bubblebackup != null )
+            if (bubblebackup != null)
             {
                 bubblebackup.GetComponent<UDPBroadcastReceiver>().enabled = true;
-                 //首先擷取到目前物體的螢幕坐标
+                //首先擷取到目前物體的螢幕坐标
 
             }
-            
+
         }
+
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
-            fadeui.GetComponent<Animator>().enabled = true;
-            fadeui.GetComponent<Animator>().SetBool("fadein", true);
-            fadeui.GetComponent<Animator>().SetBool("fadeout", false);
-            
+            int i;
+            if (fadeui[0].GetComponent<Animator>().GetBool("fadein") == false)
+                i = 0;
+            else
+                i = 1;
+
+            fadeui[i].GetComponent<Animator>().enabled = true;
+            fadeui[i].GetComponent<Animator>().SetBool("fadein", true);
+            fadeui[i].GetComponent<Animator>().SetBool("fadeout", false);
+
         }
         if (Input.GetKeyDown(KeyCode.N))
         {
-            
-            fadeui.GetComponent<Animator>().SetBool("fadeout",true);
-            fadeui.GetComponent<Animator>().SetBool("fadein", false);        
+            fadeui[0].GetComponent<Animator>().SetBool("fadeout", true);
+            fadeui[0].GetComponent<Animator>().SetBool("fadein", false);
+            fadeui[1].GetComponent<Animator>().SetBool("fadeout", true);
+            fadeui[1].GetComponent<Animator>().SetBool("fadein", false);
         }
 
 
         if (Input.GetKeyDown(KeyCode.V))
         {
             vfxcount += 1;
-            if(vfxcount > 1)
+            if (vfxcount > 1)
             {
                 vfxcount = 0;
             }
         }
-        if(vfxcount == 0)
+        if (vfxcount == 0)
         {
             if (Rvfx != null)
             {
@@ -196,11 +209,11 @@ public class hotkey : MonoBehaviour
                 Rvfx.GetComponent<Animator>().SetBool("on", true);
 
             }
-            if(RLine != null)
+            if (RLine != null)
             {
                 RLine.SetActive(false);
             }
-            if(LLine != null)
+            if (LLine != null)
             {
                 LLine.SetActive(false);
             }
@@ -208,82 +221,82 @@ public class hotkey : MonoBehaviour
             {
                 Lvfx.GetComponent<Animator>().SetBool("off", false);
                 Lvfx.GetComponent<Animator>().SetBool("on", true);
-                
+
             }
         }
         if (vfxcount == 1)
         {
-            if(Rvfx != null)
+            if (Rvfx != null)
             {
                 Rvfx.GetComponent<Animator>().SetBool("off", true);
                 Rvfx.GetComponent<Animator>().SetBool("on", false);
             }
-            
-            if(Lvfx != null)
+
+            if (Lvfx != null)
             {
-                Lvfx.GetComponent<Animator>().SetBool("off",true);
+                Lvfx.GetComponent<Animator>().SetBool("off", true);
                 Lvfx.GetComponent<Animator>().SetBool("on", false);
             }
-             if(RLine != null)
+            if (RLine != null)
             {
                 RLine.SetActive(true);
             }
-            if(LLine != null)
+            if (LLine != null)
             {
                 LLine.SetActive(true);
             }
-            
+
         }
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
             growbool = true;
         }
-        if(growbool)
+        if (growbool)
         {
-            if(growruntime >= growtime)
+            if (growruntime >= growtime)
             {
                 if (headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>() != null && headset.GetComponent<nearest>().closestbuilding != null)
                 {
-                
+
                     headset.GetComponent<nearest>().closestbuilding.GetComponent<growvalue>().grow = true;
                     growruntime = 0;
                 }
             }
             growruntime += Time.deltaTime;
         }
-        if(headset != null)
+        if (headset != null)
         {
-            if(headset.GetComponent<nearest>().allbuildings.Length == 0)
+            if (headset.GetComponent<nearest>().allbuildings.Length == 0)
             {
                 growbool = false;
             }
         }
-        
+
         if (Input.GetKeyDown(KeyCode.L))
         {
             target.GetComponent<Animator>().enabled = true;
-            target.GetComponent<Animator>().SetBool("around",true);
+            target.GetComponent<Animator>().SetBool("around", true);
         }
         if (Input.GetKeyUp(KeyCode.L))
         {
-            target.GetComponent<Animator>().SetBool("around",false);
+            target.GetComponent<Animator>().SetBool("around", false);
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if(fishbool == false)
+            if (fishbool == false)
             {
                 fishcount += 1;
                 fishbool = true;
             }
             fishbool = false;
-            
+
         }
-        if(fishcount == 1)
+        if (fishcount == 1)
         {
             fish.SetActive(true);
         }
-        if(fishcount == 2)
+        if (fishcount == 2)
         {
             fish2.SetActive(true);
         }
@@ -298,14 +311,14 @@ public class hotkey : MonoBehaviour
             fish3.GetComponent<Animator>().SetBool("out", true);
 
         }
-        
+
         if (Input.GetKey(KeyCode.Escape))
         {
-            if(player.Length > 0)
+            if (player.Length > 0)
             {
                 player[0].GetComponent<valuerecueve>().ballvalue = false;
             }
-            if(player.Length > 0)
+            if (player.Length > 0)
             {
                 player[0].GetComponent<valuerecueve>().destoryvalue = true;
             }
@@ -337,13 +350,13 @@ public class hotkey : MonoBehaviour
             {
                 Destroy(GameObject.FindWithTag("word"));
             }
-            if(fish != null)
+            if (fish != null)
             {
                 fish.SetActive(false);
             }
-            
- 
-            
+
+
+
         }
         if (Input.GetKeyUp(KeyCode.F1))
         {
@@ -356,6 +369,16 @@ public class hotkey : MonoBehaviour
                 player[0].GetComponent<valuerecueve>().destoryvalue = false;
             }
         }
+        if (Input.GetKey(SeaUpKey))
+        {
+            SeaUp();
+        }
 
+    }
+
+    public void SeaUp()
+    {
+        Vector3 vec = Vector3.Slerp(Vector3.zero, Vector3.up * Time.deltaTime * SeaUpSpeed, 0.05f);
+        Sea.transform.Translate(vec);
     }
 }
