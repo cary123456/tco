@@ -24,7 +24,7 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _BlendPower: 0.648
+    - _BlendPower: 0.06
     - _HorizonBlend: 50
     - _NadirBlend: 100
     - _ZenithBlend: 1.5
@@ -33,7 +33,7 @@ Material:
     - _Color: {r: 0.05549389, g: 0.14150941, b: 0.03804734, a: 0}
     - _GroundColor: {r: 0, g: 0.25966638, b: 0.4716981, a: 0}
     - _HorizonColor: {r: 1, g: 0, b: 0, a: 0}
-    - _SkyColor: {r: 0, g: 0.21239126, b: 0.4716981, a: 0}
+    - _SkyColor: {r: 0.0042719753, g: 0.18361016, b: 0.3018868, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6434545897882813344
 MonoBehaviour:

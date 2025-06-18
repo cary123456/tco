@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.002338763, g: 0.023084022, b: 0.042873036, a: 1}
+  m_IndirectSpecularColor: {r: 0.0028181938, g: 0.05369558, b: 0.089298956, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4489,7 +4489,7 @@ MonoBehaviour:
   growtime: 0.05
   target: {fileID: 1777987214}
   Sea: {fileID: 332830880}
-  SeaUpSpeed: 50
+  SeaUpSpeed: 20
   SeaUpKey: 273
 --- !u!1 &581448327 stripped
 GameObject:
@@ -7675,7 +7675,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.4481869, y: 1}
+    m_SensorSize: {x: 1.9087049, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -15481,7 +15481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1859498073
 Animator:
   serializedVersion: 4
@@ -17357,7 +17357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &2074646480
 Animator:
   serializedVersion: 4
@@ -17417,7 +17417,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &2074646483
 Canvas:
   m_ObjectHideFlags: 0
