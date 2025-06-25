@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -53,8 +54,12 @@ public class hotkey : MonoBehaviour
     public float growtime;
     public GameObject target;
     public GameObject Sea;
+    public Material SkyBox;
     public float SeaUpSpeed;
     public KeyCode SeaUpKey;
+    public KeyCode SeaDownKey;
+    public float smooth;
+    Vector3 vec;
 
 
 
@@ -371,14 +376,28 @@ public class hotkey : MonoBehaviour
         }
         if (Input.GetKey(SeaUpKey))
         {
-            SeaUp();
+            SeaMove(1);
+        }
+        if (Input.GetKey(SeaDownKey))
+        {
+            SeaMove(-1);
         }
 
     }
 
-    public void SeaUp()
+    public void SeaMove(int Direct)
     {
-        Vector3 vec = Vector3.Slerp(Vector3.zero, Vector3.up * Time.deltaTime * SeaUpSpeed, 0.05f);
+        float value = SkyBox.GetFloat("_BlendPower");
+
+        if ((vec.y * Direct) < 0)
+        {
+            vec = Vector3.zero;
+        }
+
+        value = Mathf.Lerp(value, Direct * 0.4f, 1 / smooth);
+        value = Mathf.Clamp(value, 0.06f, 1);
+        SkyBox.SetFloat("_BlendPower", value);
+        vec = Vector3.Lerp(vec, Vector3.up * Time.deltaTime * SeaUpSpeed * Direct, 1/smooth);
         Sea.transform.Translate(vec);
     }
 }
