@@ -352,7 +352,9 @@ MonoBehaviour:
   raycast: {fileID: 0}
   VRcam: {fileID: 0}
   maincamera: {fileID: 0}
-  fadeui: {fileID: 1617396359}
+  fadeui:
+  - {fileID: 1617396359}
+  - {fileID: 1617396359}
   Rvfx: {fileID: 0}
   Lvfx: {fileID: 0}
   RLine: {fileID: 0}
@@ -381,6 +383,13 @@ MonoBehaviour:
   growruntime: 0
   growtime: 0
   target: {fileID: 0}
+  Sea: {fileID: 0}
+  SkyBox: {fileID: 0}
+  SeaUpSpeed: 0
+  SeaUpKey: 0
+  SeaDownKey: 0
+  smooth: 0
+  SkyBoxSmooth: 0
 --- !u!4 &356160660
 Transform:
   m_ObjectHideFlags: 0
@@ -2008,7 +2017,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7937255, y: 1}
+    m_SensorSize: {x: 2.0317461, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

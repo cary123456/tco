@@ -59,6 +59,7 @@ public class hotkey : MonoBehaviour
     public KeyCode SeaUpKey;
     public KeyCode SeaDownKey;
     public float smooth;
+    public float SkyBoxSmooth;
     Vector3 vec;
 
 
@@ -394,7 +395,7 @@ public class hotkey : MonoBehaviour
             vec = Vector3.zero;
         }
 
-        value = Mathf.Lerp(value, Direct * 0.4f, 1 / smooth);
+        value = Mathf.Lerp(value, Direct * 0.4f, 1 / SkyBoxSmooth);
         value = Mathf.Clamp(value, 0.06f, 1);
         SkyBox.SetFloat("_BlendPower", value);
         vec = Vector3.Lerp(vec, Vector3.up * Time.deltaTime * SeaUpSpeed * Direct, 1/smooth);
