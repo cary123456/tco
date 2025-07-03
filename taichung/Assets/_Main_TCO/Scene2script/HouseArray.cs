@@ -4,15 +4,11 @@ using JetBrains.Annotations;
 //using Meta.XR.BuildingBlocks.Editor;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class HouseArray : MonoBehaviour
 {
-    public KeyCode HouseKey;
-    public KeyCode CrabKey;
-    public KeyCode BubbleKey;
-    public KeyCode FishKey;
-    public KeyCode WordKey;
-    public KeyCode WordSwitch;
+    [Header("Uncategorized / 未整理")]
 
     public GameObject[] house;
     public bool houseenable =true;
@@ -67,6 +63,50 @@ public class HouseArray : MonoBehaviour
     public ServerWord[] serverWord;
     public bool serverenable;
 
+    [Header("Categorized / 整理")]
+    public InputAction I_house;
+    bool houseInput = false;
+    public InputAction I_crab;
+    bool crabInput = false;
+    public InputAction I_bubble;
+    bool bubbleInput = false;
+    public InputAction I_fish;
+    bool fishInput = false;
+    public InputAction I_word;
+    bool wordInput = false;
+    public InputAction I_wordSwitch;
+
+    private void OnEnable()
+    {
+        I_house.Enable();
+        I_crab.Enable();
+        I_bubble.Enable();
+        I_fish.Enable();
+        I_word.Enable();
+        I_wordSwitch.Enable();
+        I_house.performed -= OnHousePressed;
+        I_house.canceled -= OnHouseReleased;
+        I_crab.performed -= OnCrabPressed;
+        I_crab.canceled -= OnCrabReleased;
+        I_bubble.performed -= OnBubbleInputPressed;
+        I_bubble.canceled -= OnBubbleInputReleased;
+        I_fish.performed -= OnFishPressed;
+        I_fish.canceled -= OnFishReleased;
+        I_word.performed -= OnWordPressed;
+        I_word.canceled -= OnWordReleased;
+        I_wordSwitch.performed -= OnWordswitchPressed;
+    }
+
+    private void OnDisable()
+    {
+        I_house.Disable();
+        I_crab.Disable();
+        I_bubble.Disable();
+        I_fish.Disable();
+        I_word.Disable();
+        I_wordSwitch.Disable();
+
+    }
 
     void Start() 
     {
@@ -94,7 +134,7 @@ public class HouseArray : MonoBehaviour
     {
         bool flag = true;
 
-        if((Input.GetKeyDown(HouseKey) &&　flag && houseenable) || (keepbuild && houseflag))
+        if((houseInput &&　flag && houseenable) || (keepbuild && houseflag))
         {
             keepbuild = true;
             houseflag =false;
@@ -137,10 +177,8 @@ public class HouseArray : MonoBehaviour
 
         }
 
-        
-        if(Input.GetKeyDown(FishKey))
-            keepbuild = !keepbuild;
-        if((Input.GetKeyDown(FishKey) &&　flag && fishenable && fishflag) || gesturetigger || (fishflag && keepbuild))
+
+        if((fishInput &&　flag && fishenable && fishflag) || gesturetigger || (fishflag && keepbuild))
         {
             fishflag = false;
             StartCoroutine("Fishtimer");
@@ -185,7 +223,7 @@ public class HouseArray : MonoBehaviour
 
         }
 
-        if(Input.GetKeyDown(CrabKey) &&　flag && crabenable)
+        if(crabInput &&　flag && crabenable)
         {
             for(int i = 0; i < buildpertime; i++) 
             {
@@ -222,13 +260,8 @@ public class HouseArray : MonoBehaviour
             }
 
         }
-        if(Input.GetKeyDown(WordSwitch))
-        {
-            wordswitch = !wordswitch;
-            Debug.Log("on");
 
-        }
-        if(Input.GetKeyDown(BubbleKey) &&　flag && bubbleenable || (bubbleflag && bubbletimerflag))
+        if(bubbleInput &&　flag && bubbleenable || (bubbleflag && bubbletimerflag))
         {
             bubbletimerflag = false;
             StartCoroutine("Bubbletimer");
@@ -273,7 +306,7 @@ public class HouseArray : MonoBehaviour
         
        
         }
-        if(Input.GetKey(WordKey) &&　flag && wordenable)
+        if(wordInput &&　flag && wordenable)
         {
             // for(int i = 0; i < buildpertime; i++) 
             // {
@@ -615,5 +648,48 @@ public class HouseArray : MonoBehaviour
         // Draw a semitransparent red cube at the transforms position
         Gizmos.color = new Color(1, 0, 0, 0.5f);
         Gizmos.DrawCube(pos.position + new Vector3((x-1)*k/2, 0, (z-1)*k/2) , new Vector3(x*k, 1, z*k));
+    }
+
+    void OnHousePressed(InputAction.CallbackContext ctx) {
+        houseInput = true;
+    }
+    void OnHouseReleased(InputAction.CallbackContext ctx) {
+        houseInput = false;
+    }
+    void OnFishPressed(InputAction.CallbackContext ctx)
+    {
+        keepbuild = !keepbuild;
+        fishInput = true;
+    }
+    void OnFishReleased(InputAction.CallbackContext ctx)
+    {
+        fishInput = false;
+    }
+    void OnCrabPressed(InputAction.CallbackContext ctx) {
+        crabInput = true;
+    }
+    void OnCrabReleased(InputAction.CallbackContext ctx) {
+        crabInput = false;
+    }
+    void OnWordswitchPressed(InputAction.CallbackContext ctx)
+    {
+        wordswitch = !wordswitch;
+        Debug.Log("on");
+    }
+    void OnBubbleInputPressed(InputAction.CallbackContext ctx) 
+    {
+        bubbleInput = true;
+    }
+    void OnBubbleInputReleased(InputAction.CallbackContext ctx) 
+    {
+        bubbleInput = false;
+    }
+    void OnWordPressed(InputAction.CallbackContext ctx) 
+    {
+        wordInput = true;
+    }
+    void OnWordReleased(InputAction.CallbackContext ctx) 
+    {
+        wordInput = false;
     }
 }

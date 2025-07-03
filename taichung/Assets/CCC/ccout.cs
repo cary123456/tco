@@ -16,10 +16,17 @@ public class ccout : MonoBehaviour
     float scale;
     public GameObject hand;
     public bool tri;
+    public bool isTriggered = false;
+    public float VelocetyThreashold;
+    VelocetyData V_Data;
 
+    public void Start()
+    {
+        V_Data = hand.GetComponent<VelocetyData>();
+    }
     public void Update()
     {
-        
+
         if (tri)
         {
             timer += Time.deltaTime;
@@ -41,17 +48,29 @@ public class ccout : MonoBehaviour
         }
         else
         {
-            if(hand != null){
+            if (hand != null)
+            {
                 value = hand.GetComponent<handpartrack>().midifloat;
             }
-            
+
             MidiBridge.instance.Warmup();
             MidiOut.SendControlChange(channel, controllerNumber, value);
         }
 
+        if (V_Data && !isTriggered)
+        {
+            if (V_Data.Velocety > VelocetyThreashold)
+            {
+                Debug.Log(VelocetyThreashold);
+                MidiBridge.instance.Warmup();
+                MidiOut.SendControlChange(channel, controllerNumber, VelocetyThreashold);
+                isTriggered = true;
+            }
+        }
 
 
-        
+
+
     }
    
 }
