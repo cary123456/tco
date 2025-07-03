@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0026184174, g: 0.035829365, b: 0.060063805, a: 1}
+  m_IndirectSpecularColor: {r: 0.0025784844, g: 0.032258797, b: 0.054221246, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4661,7 +4661,15 @@ MonoBehaviour:
     m_Id: fd107025-0897-4518-8e46-947b7973fd2c
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 4c4f3793-1175-4af0-b4b2-eed30228b9d1
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Fade UI_In
+      m_Flags: 0
     m_Flags: 0
   I_FadeUI_Out:
     m_Name: I_Fade UI_Out
@@ -4670,7 +4678,15 @@ MonoBehaviour:
     m_Id: a4a9a22b-bf34-40e3-b05e-0c183e609a10
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: a764757a-432c-469d-bb26-9a7a60aecdeb
+      m_Path: <Keyboard>/n
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Fade UI_Out
+      m_Flags: 0
     m_Flags: 0
   I_vfx:
     m_Name: I_vfx
@@ -4733,7 +4749,15 @@ MonoBehaviour:
     m_Id: 0a683c51-9c07-4ee5-90e5-45a05cb74894
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: a9de61b9-416d-4ce5-8c60-90b529487860
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Sea Up
+      m_Flags: 0
     m_Flags: 0
   I_SeaDown:
     m_Name: I_Sea Down
@@ -4742,7 +4766,15 @@ MonoBehaviour:
     m_Id: 5aa12de8-16ce-4c47-bb97-efd3dd64e287
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: ba484c32-66bc-48f3-9534-3beac33cbcc5
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Sea Down
+      m_Flags: 0
     m_Flags: 0
 --- !u!1 &581448327 stripped
 GameObject:
@@ -8000,7 +8032,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 1.8088531, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
