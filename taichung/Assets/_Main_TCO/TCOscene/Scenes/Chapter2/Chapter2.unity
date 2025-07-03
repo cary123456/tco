@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 20557290}
   - component: {fileID: 20557289}
   m_Layer: 0
-  m_Name: ACC
+  m_Name: VelocetyDetect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b79cf4586a55ef4ba82415450849a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocetyData_L: {fileID: 839703477}
+  velocetyData_L: {fileID: 1410351038}
   velocetyData_R: {fileID: 839703477}
   LeftControllerVelocity: 0
   RightControllerVelocity: 0
@@ -7238,6 +7238,19 @@ MonoBehaviour:
   Timing: 0
   DeltaTime: 0.1
   Velocety: 0
+--- !u!114 &839703478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839703474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92173765e542c1a48b0981c768faeb5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HandTrail_vfx: {fileID: 154545747}
 --- !u!1 &843922743
 GameObject:
   m_ObjectHideFlags: 0
@@ -8032,7 +8045,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8088531, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -11358,6 +11371,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1859743738274157973, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
   m_PrefabInstance: {fileID: 1410351034}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1410351038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410351035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e622c053cdfe4774fa9c1f579d108eb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Position: {x: 0, y: 0, z: 0}
+  LastPosition: {x: 0, y: 0, z: 0}
+  Timing: 0
+  DeltaTime: 0.1
+  Velocety: 0
+--- !u!114 &1410351040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410351035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92173765e542c1a48b0981c768faeb5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HandTrail_vfx: {fileID: 884042479}
 --- !u!1 &1413770300
 GameObject:
   m_ObjectHideFlags: 0
@@ -17768,7 +17811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 316, y: 235}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2039622125
