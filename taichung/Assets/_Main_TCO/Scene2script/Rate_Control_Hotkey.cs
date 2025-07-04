@@ -22,6 +22,10 @@ public class Rate_Control_Hotkey : MonoBehaviour
         
             switch(toggle)
             {
+            case -1:
+                HandTrail_vfx.SetFloat(Rate, 5000);
+                HandTrail_vfx.SetFloat(MaxRadius, 0.5f);
+                break;
             case 0:
                 HandTrail_vfx.SetFloat(Rate, 2000);
                 break;
@@ -38,7 +42,12 @@ public class Rate_Control_Hotkey : MonoBehaviour
             default:
                 break;
             }
-            toggle+=1;
+            if(toggle>=3){
+                toggle=-1;
+            }
+            else{
+                toggle+=1;
+            }
             
         }
     }

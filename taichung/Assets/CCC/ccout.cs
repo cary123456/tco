@@ -23,6 +23,7 @@ public class ccout : MonoBehaviour
     public void Start()
     {
         V_Data = hand.GetComponent<VelocetyData>();
+        MidiBridge.instance.Warmup();
     }
     public void Update()
     {
@@ -43,8 +44,8 @@ public class ccout : MonoBehaviour
             {
                 timer = 10f;
             }
-            MidiBridge.instance.Warmup();
-            MidiOut.SendControlChange(channel, controllerNumber, value);
+            //MidiBridge.instance.Warmup();
+            //MidiOut.SendControlChange(channel, controllerNumber, value);
         }
         else
         {
@@ -53,20 +54,20 @@ public class ccout : MonoBehaviour
                 value = hand.GetComponent<handpartrack>().midifloat;
             }
 
-            MidiBridge.instance.Warmup();
-            MidiOut.SendControlChange(channel, controllerNumber, value);
+            //MidiBridge.instance.Warmup();
+            //MidiOut.SendControlChange(channel, controllerNumber, value);
         }
 
         if (V_Data && !isTriggered)
         {
             if (V_Data.Velocety > VelocetyThreashold)
             {
-                Debug.Log(VelocetyThreashold);
-                MidiBridge.instance.Warmup();
-                MidiOut.SendControlChange(channel, controllerNumber, VelocetyThreashold);
                 isTriggered = true;
+                MidiOut.SendControlChange(channel, controllerNumber, VelocetyThreashold);
             }
         }
+        // Debug.Log(VelocetyThreashold);
+         
 
 
 
