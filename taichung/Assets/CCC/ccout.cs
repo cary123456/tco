@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Meta.WitAi.Events;
 
+public enum VelocetyState
+{
+    High,
+    Low
+}
 public class ccout : MonoBehaviour
 {
     public MidiChannel channel = MidiChannel.Ch1;
@@ -16,7 +22,7 @@ public class ccout : MonoBehaviour
     float scale;
     public GameObject hand;
     public bool tri;
-    public bool isTriggered = false;
+    public VelocetyState velocetyState = new VelocetyState();
     public float VelocetyThreashold;
     VelocetyData V_Data;
 
@@ -58,20 +64,25 @@ public class ccout : MonoBehaviour
             //MidiOut.SendControlChange(channel, controllerNumber, value);
         }
 
-        if (V_Data && !isTriggered)
+        if (V_Data)
         {
-            if (V_Data.Velocety > VelocetyThreashold)
+            if ((V_Data.Velocety > VelocetyThreashold) && (velocetyState == VelocetyState.Low))
             {
-                isTriggered = true;
+                velocetyState = VelocetyState.High;
                 MidiOut.SendControlChange(channel, controllerNumber, VelocetyThreashold);
             }
+            else if ((V_Data.Velocety < VelocetyThreashold) && (velocetyState == VelocetyState.High))
+            {
+                velocetyState = VelocetyState.Low;
+                MidiOut.SendControlChange(channel, controllerNumber, 0);
+            }
         }
-        // Debug.Log(VelocetyThreashold);
-         
+
+
 
 
 
 
     }
-   
+
 }
