@@ -9473,7 +9473,7 @@ MonoBehaviour:
   vaa: 0
   hand: {fileID: 839703474}
   tri: 0
-  isTriggered: 0
+  velocetyState: 0
   VelocetyThreashold: 5
 --- !u!4 &1186306651
 Transform:

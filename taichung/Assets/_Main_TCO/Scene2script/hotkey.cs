@@ -502,8 +502,171 @@ public class hotkey : MonoBehaviour
     }
 
 
-    //TODO :25.7.3 之後嘗試用模組化的寫法
-    //void OnInputPressed 按下瞬間的偵測
-    //void OnInputReleased 放開瞬間的偵測
-    //void OnInputPressing 按著的偵測
+
+    /// <summary>
+    /// 處理輸入開始的事件，根據不同的輸入動作進行相應的操作。
+    /// </summary>
+    /// <param name="ctx">新的輸入系統的輸入值</param>
+    void OnInputStarted(InputAction.CallbackContext ctx)
+    {
+        if (ctx.action == I_crab)
+            crabfollow = true;
+        else if (ctx.action == I_DelCrab)
+        {
+            if (GameObject.FindWithTag("crab") != null)
+            {
+                Destroy(GameObject.FindWithTag("crab"));
+            }
+        }
+        else if (ctx.action == I_staw)
+        {
+            if (staw != null)
+            {
+                stawflag = !stawflag;
+                staw.GetComponent<Animator>().SetBool("up", stawflag);
+            }
+        }
+        else if (ctx.action == I_staw_2) 
+        {
+            if (staw != null)
+            {
+                stawflag_2 = !stawflag_2;
+                staw_2.GetComponent<Animator>().SetBool("up", stawflag_2);
+            }
+        }
+        else if (ctx.action == I_bubble)
+        {
+            bubblecount += 1;
+            if (bubblecount > 1)
+            {
+                bubblecount = 0;
+            }
+        }
+        else if (ctx.action == I_FadeUI_In)
+        {
+            int i;
+            if (fadeui[0].GetComponent<Animator>().GetBool("fadein") == false)
+                i = 0;
+            else
+                i = 1;
+            fadeui[i].GetComponent<Animator>().enabled = true;
+            fadeui[i].GetComponent<Animator>().SetBool("fadein", true);
+            fadeui[i].GetComponent<Animator>().SetBool("fadeout", false);
+        }
+        else if (ctx.action == I_FadeUI_Out)
+        {
+            fadeui[0].GetComponent<Animator>().SetBool("fadeout", true);
+            fadeui[0].GetComponent<Animator>().SetBool("fadein", false);
+            fadeui[1].GetComponent<Animator>().SetBool("fadeout", true);
+            fadeui[1].GetComponent<Animator>().SetBool("fadein", false);
+        }
+        else if (ctx.action == I_vfx)
+        {
+            vfxcount += 1;
+            if (vfxcount > 1)
+            {
+                vfxcount = 0;
+            }
+        }
+        else if (ctx.action == I_grow)
+        {
+            growbool = true;
+        }
+        else if (ctx.action == I_around)
+        {
+            target.GetComponent<Animator>().enabled = true;
+            target.GetComponent<Animator>().SetBool("around", true);
+        }
+        else if (ctx.action == I_fish)
+        {
+            if (fishbool == false)
+            {
+                fishcount += 1;
+                fishbool = true;
+            }
+            fishbool = false;
+        }
+        else if (ctx.action == I_Reset)
+        {
+            ESC_Reset();
+        }
+        else if (ctx.action == I_LoadCh4)
+        {
+            SceneManager.LoadScene("chapter4");
+        }
+        else if (ctx.action == I_SeaUp)
+        {
+            SeaIsPressed = 1; // 往上
+        }
+        else if (ctx.action == I_SeaDown)
+        {
+            SeaIsPressed = -1; // 往下
+        }
+
+    }
+
+    void OnInputReleased(InputAction.CallbackContext ctx)
+    {
+        if (ctx.action == I_crab)
+            crabfollow = false;
+        else if (ctx.action == I_around)
+        {
+            target.GetComponent<Animator>().SetBool("around", false);
+        }
+        else if (ctx.action == I_grow)
+        {
+            growbool = false;
+        }
+        else if (ctx.action == I_SeaUp || ctx.action == I_SeaDown)
+        {
+            SeaIsPressed = 0; // 停止移動
+        }
+    }
+
+    /// <summary>
+    /// 重設函式，會清除所有玩家的值，並銷毀場景中的特定物件。
+    /// </summary>
+    private void ESC_Reset()
+    {
+        if (player.Length > 0)
+        {
+            player[0].GetComponent<valuerecueve>().ballvalue = false;
+        }
+        if (player.Length > 0)
+        {
+            player[0].GetComponent<valuerecueve>().destoryvalue = true;
+        }
+        if (GameObject.FindWithTag("crab") != null)
+        {
+            Destroy(GameObject.FindWithTag("crab"));
+        }
+        if (GameObject.FindWithTag("crabs") != null)
+        {
+            Destroy(GameObject.FindWithTag("crabs"));
+        }
+        if (GameObject.FindWithTag("crabsed") != null)
+        {
+            Destroy(GameObject.FindWithTag("crabsed"));
+        }
+        if (GameObject.FindWithTag("building") != null)
+        {
+            Destroy(GameObject.FindWithTag("building"));
+        }
+        if (GameObject.FindWithTag("ball") != null)
+        {
+            Destroy(GameObject.FindWithTag("ball"));
+        }
+        if (GameObject.FindWithTag("buildinglo") != null)
+        {
+            Destroy(GameObject.FindWithTag("buildinglo"));
+        }
+        if (GameObject.FindWithTag("word") != null)
+        {
+            Destroy(GameObject.FindWithTag("word"));
+        }
+        if (fish != null)
+        {
+            fish.SetActive(false);
+        }
+    }
 }
