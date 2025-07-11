@@ -493,7 +493,7 @@ public class hotkey : MonoBehaviour
         if(ctx.action == I_SeaUp)
             SeaIsPressed = 1; // 往上
         else if(ctx.action == I_SeaDown)
-            SeaIsPressed = -1; // 往下
+            SeaIsPressed = -10; // 往下
     }
 
     void OnSeaReleased(InputAction.CallbackContext ctx)

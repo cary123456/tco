@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.002596845, g: 0.03390157, b: 0.056908797, a: 1}
+  m_IndirectSpecularColor: {r: 0.0025756375, g: 0.032004587, b: 0.05380528, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7403,7 +7403,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850491506}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
   m_Name: 
@@ -7465,7 +7465,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 5bc5fb83-aa95-42fb-8226-2fbaa6fa6315
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -7474,7 +7474,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: e30d1b59-508a-4ee1-9bad-35bd03bcad41
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -7483,7 +7483,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 678d028d-b7de-42ef-a1f4-68a0ad890ad3
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -7492,7 +7492,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: f1144581-8c4b-4749-a6fc-11fcffd95998
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -7501,7 +7501,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 2b2246c7-97f3-4a01-8af2-14d196466194
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -7510,7 +7510,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 9016b843-c7a9-44b1-859f-5ff4a079ab64
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -9469,12 +9469,12 @@ MonoBehaviour:
   length: 0.1
   interval: 1
   value: 1
-  controllerNumber: 64
+  controllerNumber: 43
   vaa: 0
   hand: {fileID: 839703474}
   tri: 0
-  velocetyState: 0
-  VelocetyThreashold: 5
+  velocetyState: 1
+  VelocetyThreashold: 1.5
 --- !u!4 &1186306651
 Transform:
   m_ObjectHideFlags: 0
@@ -15288,7 +15288,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742784272}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
   m_Name: 
@@ -15350,7 +15350,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 5bc5fb83-aa95-42fb-8226-2fbaa6fa6315
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -15359,7 +15359,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: e30d1b59-508a-4ee1-9bad-35bd03bcad41
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -15368,7 +15368,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 678d028d-b7de-42ef-a1f4-68a0ad890ad3
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -15377,7 +15377,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: f1144581-8c4b-4749-a6fc-11fcffd95998
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -15386,7 +15386,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 2b2246c7-97f3-4a01-8af2-14d196466194
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -15395,7 +15395,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 9016b843-c7a9-44b1-859f-5ff4a079ab64
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -16075,7 +16075,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1859498073
 Animator:
   serializedVersion: 4
@@ -17955,7 +17955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &2074646480
 Animator:
   serializedVersion: 4

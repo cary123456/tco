@@ -69,12 +69,12 @@ public class ccout : MonoBehaviour
             if ((V_Data.Velocety > VelocetyThreashold) && (velocetyState == VelocetyState.Low))
             {
                 velocetyState = VelocetyState.High;
-                MidiOut.SendControlChange(channel, controllerNumber, VelocetyThreashold);
+                MidiOut.SendNoteOn(channel, controllerNumber, 43);
             }
             else if ((V_Data.Velocety < VelocetyThreashold) && (velocetyState == VelocetyState.High))
             {
                 velocetyState = VelocetyState.Low;
-                MidiOut.SendControlChange(channel, controllerNumber, 0);
+                MidiOut.SendNoteOff(channel, controllerNumber);
             }
         }
 
