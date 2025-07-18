@@ -1660,7 +1660,13 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 5000
+        m_Name: Rate
+        m_Overridden: 1
+      - m_Value: 0.5
+        m_Name: MaxRadius
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
@@ -7245,12 +7251,55 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839703474}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92173765e542c1a48b0981c768faeb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HandTrail_vfx: {fileID: 154545747}
+--- !u!114 &839703479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839703474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244d509fc9690c4499beaa231f51cdf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxSource: {fileID: 154545747}
+  vfxRateParamName: Rate
+  vfxRadiusParamName: MaxRadius
+  rateMin: 0
+  rateMax: 5000
+  radiusMin: 0.2
+  radiusMax: 0.5
+  I_Slider_VFXCtrl:
+    m_Name: I_Slider_VFX Ctrl
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 80c5a851-f9e6-4f80-a01f-7b923024846a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: ddc2d850-60e9-4174-943c-ab16c5a90d1e
+      m_Path: <MidiDevice>/control000
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Slider_VFX Ctrl
+      m_Flags: 0
+    m_Flags: 0
+  Slider_VFXCtrl_MinThreshold: 0.008
+  Slider_VFXCtrl_MaxThreshold: 1
+  isDebug: 1
+  RateInspect: 0
+  RadiusInspect: 0
+  Midi_Slider_Input_Inspect: 0
+  Midi_Slider_Fixed: 0
 --- !u!1 &843922743
 GameObject:
   m_ObjectHideFlags: 0
@@ -7670,7 +7719,13 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 5000
+        m_Name: Rate
+        m_Overridden: 1
+      - m_Value: 0.5
+        m_Name: MaxRadius
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
@@ -8045,7 +8100,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 1.6008968, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -11395,12 +11450,55 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410351035}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92173765e542c1a48b0981c768faeb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HandTrail_vfx: {fileID: 884042479}
+--- !u!114 &1410351041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410351035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244d509fc9690c4499beaa231f51cdf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxSource: {fileID: 884042479}
+  vfxRateParamName: Rate
+  vfxRadiusParamName: MaxRadius
+  rateMin: 0
+  rateMax: 5000
+  radiusMin: 0.2
+  radiusMax: 0.5
+  I_Slider_VFXCtrl:
+    m_Name: I_Slider_VFX Ctrl
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 2de2a993-ebfa-45a8-b8c6-2be8705bca25
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 5f37e50e-289f-491d-b5e8-460787339d3c
+      m_Path: <MidiDevice>/control000
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Slider_VFX Ctrl
+      m_Flags: 0
+    m_Flags: 0
+  Slider_VFXCtrl_MinThreshold: 0.008
+  Slider_VFXCtrl_MaxThreshold: 1
+  isDebug: 0
+  RateInspect: 0
+  RadiusInspect: 0
+  Midi_Slider_Input_Inspect: 0
+  Midi_Slider_Fixed: 0
 --- !u!1 &1413770300
 GameObject:
   m_ObjectHideFlags: 0
