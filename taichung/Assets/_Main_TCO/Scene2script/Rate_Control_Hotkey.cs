@@ -24,7 +24,11 @@ public class Rate_Control_Hotkey : MonoBehaviour
             {
             case -1:
                 HandTrail_vfx.SetFloat(Rate, 5000);
+                //5000(MAX) ~ 0(min), Slider0
                 HandTrail_vfx.SetFloat(MaxRadius, 0.5f);
+                //0.2(min) ~ 0.5(MAX), Slider0 (same as above)
+                //要求：一個MIDI滑軌控制兩個參數，Rate及MaxRadius，皆線性，最大最小值如上述
+                
                 break;
             case 0:
                 HandTrail_vfx.SetFloat(Rate, 2000);
