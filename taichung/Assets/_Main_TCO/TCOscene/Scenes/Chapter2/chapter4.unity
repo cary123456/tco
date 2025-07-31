@@ -307,7 +307,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &356160658
 GameObject:
@@ -390,6 +390,157 @@ MonoBehaviour:
   SeaDownKey: 0
   smooth: 0
   SkyBoxSmooth: 0
+  I_crab:
+    m_Name: I_crab
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a32860e5-405a-40ce-8f35-9671a90eb2bf
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_DelCrab:
+    m_Name: I_Del Crab
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6e59ba58-102d-40ec-aac5-b1b8cda6bc19
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_staw:
+    m_Name: I_staw
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 8dddbdda-420f-4a68-a8b7-441cd0c0b76c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_staw_2:
+    m_Name: I_staw_2
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 8495a4a9-139c-4056-b491-a3b3d787695c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_bubble:
+    m_Name: I_bubble
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f597babc-f227-4ea0-ae55-a85dee1a7755
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_FadeUI_In:
+    m_Name: I_Fade UI_In
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 811f3f21-23ca-447b-98a5-deca8bb203d5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: dfeef88c-662e-4338-9976-6ae5f41a0a5b
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Fade UI_In
+      m_Flags: 0
+    m_Flags: 0
+  I_FadeUI_Out:
+    m_Name: I_Fade UI_Out
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 979012e9-4dc3-4d87-a3b6-417d3bf844b6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 4e64e978-9c0b-46d0-b0f5-53880f527f4d
+      m_Path: <Keyboard>/n
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Fade UI_Out
+      m_Flags: 0
+    m_Flags: 0
+  I_vfx:
+    m_Name: I_vfx
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 8f51451e-6913-4bb1-9b3d-080f9d0217ec
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_grow:
+    m_Name: I_grow
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b70a5fcc-07c9-4506-b9d7-72fbc76d2d9d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_around:
+    m_Name: I_around
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 325adc52-f56e-4331-a36f-2c8427c0fb26
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_fish:
+    m_Name: I_fish
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 412e334c-963c-4077-9b07-5eef70236779
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_Reset:
+    m_Name: I_Reset
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e4eb51eb-8a33-4b33-a9cd-10899f7824f4
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_LoadCh4:
+    m_Name: I_Load Ch 4
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 95d38753-dcf3-4b06-ab65-f43a0b4f16ab
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_SeaUp:
+    m_Name: I_Sea Up
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d7281b25-b33e-4c02-b589-dffdbf566544
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_SeaDown:
+    m_Name: I_Sea Down
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: cf7c6bba-48c0-48b4-bd94-06ec524f582a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!4 &356160660
 Transform:
   m_ObjectHideFlags: 0
@@ -411,7 +562,7 @@ Transform:
   - {fileID: 861150205}
   - {fileID: 1798320470}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390943658
 GameObject:
@@ -646,12 +797,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HouseKey: 112
-  CrabKey: 111
-  BubbleKey: 104
-  FishKey: 0
-  WordKey: 0
-  WordSwitch: 0
   house: []
   houseenable: 0
   crab: []
@@ -710,6 +855,60 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
+  I_house:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_crab:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_bubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_fish:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_word:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_wordSwitch:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!4 &442483407
 Transform:
   m_ObjectHideFlags: 0
@@ -723,7 +922,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &514582322
 GameObject:
@@ -850,7 +1049,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1270,12 +1469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HouseKey: 112
-  CrabKey: 111
-  BubbleKey: 106
-  FishKey: 0
-  WordKey: 0
-  WordSwitch: 0
   house: []
   houseenable: 0
   crab: []
@@ -1334,6 +1527,60 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
+  I_house:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_crab:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_bubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_fish:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_word:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_wordSwitch:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!4 &822345082
 Transform:
   m_ObjectHideFlags: 0
@@ -1347,7 +1594,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &842914581
 GameObject:
@@ -1480,12 +1727,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HouseKey: 0
-  CrabKey: 0
-  BubbleKey: 0
-  FishKey: 121
-  WordKey: 0
-  WordSwitch: 0
   house: []
   houseenable: 1
   crab: []
@@ -1537,6 +1778,60 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
+  I_house:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 36d6686c-01c9-4238-80e7-50878c9769b5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_crab:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: ba744b71-b0f6-44a9-bb93-6d5af47ba14b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_bubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e5ca7659-c096-4b45-a3a3-76dc1846d2e3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_fish:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: cbe67cec-84f7-43a0-94b9-38bab416d1fe
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_word:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7491122b-d5b1-4d0d-bf85-d24e8a4e3f15
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_wordSwitch:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: add4a99f-75b8-4152-8784-05abc14d064b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1001 &862388122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1578,7 +1873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5682742648683954434, guid: a0523636f1c9cea42bac9fd6ec429ac1, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5682742648683954434, guid: a0523636f1c9cea42bac9fd6ec429ac1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1732,7 +2027,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &892657992
 MonoBehaviour:
@@ -1791,7 +2086,7 @@ MonoBehaviour:
   udpPort: 6000
   humanModel:
   - {fileID: 183067697}
-  - {fileID: 183067697}
+  - {fileID: 1223726239}
   - {fileID: 183067697}
   - {fileID: 183067697}
   humanModelLastUpdateTime:
@@ -1829,8 +2124,113 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1004351249
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 331158732853246603, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246603, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246603, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246605, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246605, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f3ae4e54d228de44ae7fd09e09fd50a, type: 2}
+    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.811533
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.81153
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.81153
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.193
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246607, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246609, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_Name
+      value: mmwaveplayer1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 331158732853246609, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956327720331576704, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_TagString
+      value: inside
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348839193659287469, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a1c5d7b9efce4a14ab495839f3d80670, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
 --- !u!1 &1089026476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,7 +2278,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1204531616
 GameObject:
@@ -2017,7 +2417,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0317461, y: 1}
+    m_SensorSize: {x: 1.8879056, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2127,8 +2527,13 @@ Transform:
   - {fileID: 514582323}
   - {fileID: 1658696597}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1223726239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 331158732853246609, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+  m_PrefabInstance: {fileID: 1004351249}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1279387878 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1956327720331576704, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
@@ -2183,12 +2588,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HouseKey: 0
-  CrabKey: 111
-  BubbleKey: 0
-  FishKey: 0
-  WordKey: 0
-  WordSwitch: 0
   house:
   - {fileID: 8398855273896792897, guid: 1c5b676292a899540901c205af00abef, type: 3}
   - {fileID: 8398855273896792897, guid: 9208d3615aa6f5b46ac8830090bb2f83, type: 3}
@@ -2255,6 +2654,60 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
+  I_house:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 4f5e0015-c737-4259-8003-77bb1aea80d2
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_crab:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 68286441-a832-43b8-acb3-b9cd067bfead
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_bubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: bf024976-ace0-473d-8f4c-293c72098012
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_fish:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6197920e-7986-40e8-860c-4c93fc136a08
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_word:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 00c86287-f778-43ff-861d-02038ca4f270
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_wordSwitch:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: df3762ac-3fbe-424e-b1f1-cc93eb6a7fc7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &1321578398
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,7 +2774,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1382331937
 PrefabInstance:
@@ -2597,12 +3050,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HouseKey: 112
-  CrabKey: 0
-  BubbleKey: 0
-  FishKey: 0
-  WordKey: 0
-  WordSwitch: 0
   house:
   - {fileID: 8398855273896792897, guid: 1c5b676292a899540901c205af00abef, type: 3}
   - {fileID: 8398855273896792897, guid: 9208d3615aa6f5b46ac8830090bb2f83, type: 3}
@@ -2662,6 +3109,60 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
+  I_house:
+    m_Name: I_house
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: bddd3f4c-9605-47a8-9cd3-39ec5e597e48
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_crab:
+    m_Name: I_crab
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f781f9da-4f92-4cc1-a056-b2cf1bc69b1e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_bubble:
+    m_Name: I_bubble
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 8f9362f7-d6b8-420f-8919-f5155e366b81
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_fish:
+    m_Name: I_fish
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 27efbb3e-0732-4db9-8d7e-81be95e7f57a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_word:
+    m_Name: I_word
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 2ae09131-08a5-45e2-b60f-f579949a6609
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_wordSwitch:
+    m_Name: I_word Switch
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 0f257ff1-bd61-4ee1-8d6a-b55b4a09ccfd
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &1576929228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2826,7 +3327,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1617396359
 GameObject:
@@ -2943,7 +3444,7 @@ RectTransform:
   m_Children:
   - {fileID: 2031696128}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3024,12 +3525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HouseKey: 0
-  CrabKey: 0
-  BubbleKey: 0
-  FishKey: 121
-  WordKey: 0
-  WordSwitch: 0
   house: []
   houseenable: 1
   crab: []
@@ -3081,6 +3576,60 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
+  I_house:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d17cf6b6-a6fa-4290-8749-d457df3dba94
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_crab:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 91247d76-9dd9-4a82-bfea-d3dc611c0351
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_bubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 949535bb-21a8-4d21-af39-1c27f57c7eb4
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_fish:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 792d52e4-37a2-4628-996e-d6169feb307f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_word:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b5c39dc0-20b8-4bce-9273-506b4fc101f9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_wordSwitch:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: ef4103c9-8bf5-49e0-8620-04c9bdb93886
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &1798320469
 GameObject:
   m_ObjectHideFlags: 0
@@ -3125,12 +3674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HouseKey: 107
-  CrabKey: 111
-  BubbleKey: 117
-  FishKey: 0
-  WordKey: 107
-  WordSwitch: 0
   house:
   - {fileID: 942065458720007527, guid: 4b577fcc9a54c724db38c690f9c1c6af, type: 3}
   - {fileID: 4286927921934427985, guid: f0319980492e5a5419a8cba130e396b1, type: 3}
@@ -3202,6 +3745,60 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
+  I_house:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: c5fce7fd-0d81-4023-9931-82b658ba86d9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_crab:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7d771fe3-eced-47ab-8d30-ee2a5ac8348e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_bubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: cad0064c-0e28-4f7d-b9b7-afd4a6383c81
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_fish:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 24ffa8f2-1183-4b20-8bc9-2fdc4e1c8b32
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_word:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1839b32a-553d-43f6-b17e-0ef22d805347
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_wordSwitch:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 4b86cb1d-7c1a-4d19-a16d-aaa0b092c265
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &1810790330
 GameObject:
   m_ObjectHideFlags: 0
@@ -3302,7 +3899,7 @@ Transform:
   - {fileID: 390943659}
   - {fileID: 661764478}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1906787008
 GameObject:
@@ -3333,12 +3930,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HouseKey: 112
-  CrabKey: 111
-  BubbleKey: 107
-  FishKey: 0
-  WordKey: 0
-  WordSwitch: 0
   house: []
   houseenable: 0
   crab: []
@@ -3397,6 +3988,60 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
+  I_house:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_crab:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_bubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_fish:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_word:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_wordSwitch:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!4 &1906787010
 Transform:
   m_ObjectHideFlags: 0
@@ -3410,7 +4055,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1999957268
 PrefabInstance:
@@ -3426,6 +4071,30 @@ PrefabInstance:
     - target: {fileID: 7560462082760531156, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_crab.m_Name
+      value: I_crab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_fish.m_Name
+      value: I_fish
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_word.m_Name
+      value: I_word
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_house.m_Name
+      value: I_house
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_bubble.m_Name
+      value: I_bubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_wordSwitch.m_Name
+      value: I_word Switch
       objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: bubble.Array.data[0]
@@ -3451,6 +4120,22 @@ PrefabInstance:
       propertyPath: bubble.Array.data[5]
       value: 
       objectReference: {fileID: 7560986564674398035, guid: 447037d8c8806104098b6800603c5a91, type: 3}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_bubble.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_bubble.m_SingletonActionBindings.Array.data[0].m_Id
+      value: fd68c55e-9ce2-4730-b421-3c4bf0742147
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_bubble.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/u
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_bubble.m_SingletonActionBindings.Array.data[0].m_Action
+      value: I_bubble
+      objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531159, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3602,12 +4287,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HouseKey: 112
-  CrabKey: 111
-  BubbleKey: 117
-  FishKey: 0
-  WordKey: 0
-  WordSwitch: 0
   house: []
   houseenable: 0
   crab: []
@@ -3666,6 +4345,60 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
+  I_house:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f5eeb6e3-64b3-44af-9ee3-34b3a7c151de
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_crab:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a577e2c9-2ab3-419c-b521-f3210f54f57c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_bubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9d8b5bd2-0983-41e8-9119-02d6d33ab5c5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_fish:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: dd5be71b-27af-441c-9c77-3c9cdb240c7e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_word:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 18bb3d51-7ed1-4e28-9a85-12fc1ce15144
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_wordSwitch:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f4b72f5f-fa1b-42bd-83a5-d0e3e0ee6a17
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!4 &2054776254
 Transform:
   m_ObjectHideFlags: 0
@@ -3679,7 +4412,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2081046070 stripped
 Transform:
