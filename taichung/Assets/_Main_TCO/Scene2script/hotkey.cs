@@ -80,6 +80,24 @@ public class hotkey : MonoBehaviour
     public InputAction I_fish;
     public InputAction I_Reset;
     public InputAction I_LoadCh4;
+    [Tooltip("控制海平面上下的滑桿")]
+    public InputAction I_SeaSlider;
+    [Tooltip("開啟滑桿控制海平面絕對位置\n" +
+        "ex. 若滑桿最低=海平面設定最低值; 滑桿中間=海平面中間")]
+    public bool SliderAbsolutePosition = false; // 是否使用絕對位置控制海平面
+    [Tooltip("海平面最低位置，海平面在畫面中間的參考值:2")]
+    public float SeaMinY = 0f;
+    [Tooltip("海平面最高位置，海平面在畫面外的參考值:20")]
+    public float SeaMaxY = 10f;     // 海面の最上位置
+    [Tooltip("海平面緩速")]
+    public float SeaLerpSpeed = 2f;
+    [Tooltip("監控用，顯示海平面要移動到的目標Y軸")]
+    [SerializeField] float targetSeaY = 0f;  // 目標Y座標
+    [Tooltip("監控用，顯示目前海平面的Y軸座標，可用於微調海平面最大小值")]
+    [SerializeField] float currentSeaY = 0f; // 當前Y座標
+    [SerializeField] float skyboxMultiplier = 0.4f; // SkyBoxのBlendPower乘數
+    float SeaSliderReading;
+    [Space]
     public InputAction I_SeaUp;
     //.isPressed
     public InputAction I_SeaDown;
@@ -102,6 +120,7 @@ public class hotkey : MonoBehaviour
         I_LoadCh4.Enable();
         I_SeaUp.Enable();
         I_SeaDown.Enable();
+        I_SeaSlider.Enable();
         I_crab.performed += OnCrabPressed;
         I_crab.canceled += OnCrabReleased;
         I_DelCrab.performed += OnDelCrabPressed;
@@ -121,6 +140,7 @@ public class hotkey : MonoBehaviour
         I_SeaDown.performed += OnSeaPressed;
         I_SeaUp.canceled += OnSeaReleased;
         I_SeaDown.canceled += OnSeaReleased;
+        I_SeaSlider.performed += OnSeaPressed;
     }
 
     private void OnDisable()
@@ -140,6 +160,7 @@ public class hotkey : MonoBehaviour
         I_LoadCh4.Disable();
         I_SeaUp.Disable();
         I_SeaDown.Disable();
+        I_SeaSlider.Disable();
         I_crab.performed -= OnCrabPressed;
         I_crab.canceled -= OnCrabReleased;
         I_DelCrab.performed -= OnDelCrabPressed;
@@ -159,6 +180,7 @@ public class hotkey : MonoBehaviour
         I_SeaDown.performed -= OnSeaPressed;
         I_SeaUp.canceled -= OnSeaReleased;
         I_SeaDown.canceled -= OnSeaReleased;
+        I_SeaSlider.performed -= OnSeaPressed;
     }
 
 
@@ -320,7 +342,13 @@ public class hotkey : MonoBehaviour
         {
             SeaMove(SeaIsPressed);
         }
-        
+
+        if (SliderAbsolutePosition)
+        {
+            
+            SeaMoveBySlider(SeaSliderReading);
+        }
+
 
     }
 
@@ -338,6 +366,24 @@ public class hotkey : MonoBehaviour
         SkyBox.SetFloat("_BlendPower", value);
         vec = Vector3.Lerp(vec, Vector3.up * Time.deltaTime * SeaUpSpeed * Direct, 1 / smooth);
         Sea.transform.Translate(vec);
+    }
+
+
+    public void SeaMoveBySlider(float sliderValue)
+    {
+        // スライダー値を海面Y座標にマッピング
+        targetSeaY = Mathf.Lerp(SeaMinY, SeaMaxY, sliderValue);
+
+        // 現在の海面位置
+        Vector3 currentPos = Sea.transform.position;
+
+        // 目標位置へ滑らかに移動（加減速）
+        float newY = Mathf.Lerp(currentPos.y, targetSeaY, Time.deltaTime * SeaLerpSpeed);
+        Sea.transform.position = new Vector3(currentPos.x, newY, currentPos.z);
+
+        // SkyBoxのBlendPowerもスライダー値に応じて調整
+        float blendValue = Mathf.Lerp(0.06f, 1f, sliderValue * skyboxMultiplier);
+        SkyBox.SetFloat("_BlendPower", blendValue);
     }
 
     void OnCrabPressed(InputAction.CallbackContext ctx)
@@ -490,16 +536,22 @@ public class hotkey : MonoBehaviour
 
     void OnSeaPressed(InputAction.CallbackContext ctx)
     {
-        if(ctx.action == I_SeaUp)
+        if (ctx.action == I_SeaUp)
             SeaIsPressed = 1; // 往上
-        else if(ctx.action == I_SeaDown)
+        else if (ctx.action == I_SeaDown)
             SeaIsPressed = -10; // 往下
+        else if (ctx.action == I_SeaSlider)
+        {
+            SeaSliderReading = ctx.ReadValue<float>();
+            //SeaIsPressed = (int)Remapping(sliderReading, 0f, 1f, -10f, 1f);
+        }
     }
 
     void OnSeaReleased(InputAction.CallbackContext ctx)
     {
         SeaIsPressed = 0; // 停止移動
     }
+
 
 
 
@@ -668,5 +720,19 @@ public class hotkey : MonoBehaviour
         {
             fish.SetActive(false);
         }
+    }
+
+    /// <summary>
+    /// 將一個值從一個範圍映射到另一個範圍
+    /// </summary>
+    /// <param name="value">原生範圍的輸入值，變動值</param>
+    /// <param name="from1">原生範圍的最小值，固定值</param>
+    /// <param name="to1">原生範圍的最大值，固定值</param>
+    /// <param name="from2">對應映射範圍的最小值，固定值</param>
+    /// <param name="to2">對應映射範圍的最大值，固定值</param>
+    /// <returns>返回映射計算結果</returns>
+    public float Remapping(float value, float from1, float to1, float from2, float to2)
+    {
+        return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
     }
 }
