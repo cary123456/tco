@@ -24,7 +24,7 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _BlendPower: 0.2594585
+    - _BlendPower: 0.38139373
     - _HorizonBlend: 50
     - _NadirBlend: 100
     - _ZenithBlend: 1.5

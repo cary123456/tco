@@ -44,7 +44,7 @@ Material:
     - _cut: 1.55
     - _speed: 0
     m_Colors:
-    - _Color: {r: 0.051886775, g: 0.50183904, b: 1, a: 1}
+    - _Color: {r: 0, g: 0.47520638, b: 1, a: 1}
     - _Color_1: {r: 6.781063, g: 23.26785, b: 75.662415, a: 0}
     - _glow_color: {r: 0, g: 7.056498, b: 17.50378, a: 1}
     - _texture_tiling: {r: 1, g: 3, b: 0, a: 0}
