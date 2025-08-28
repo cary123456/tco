@@ -292,7 +292,6 @@ MonoBehaviour:
   minRotationSpeed: -0.2
   maxRotationSpeed: 0.2
   rotationSpeed: 0
-  midifloat: 1
   melt: 0
 --- !u!114 &-3893390622603003953
 MonoBehaviour:
@@ -354,7 +353,7 @@ VisualEffect:
       - m_Value: 3
         m_Name: Size
         m_Overridden: 0
-      - m_Value: 0.2
+      - m_Value: 0.1
         m_Name: Intensity
         m_Overridden: 1
       - m_Value: 800
@@ -389,7 +388,10 @@ VisualEffect:
     m_Vector3f:
       m_Array: []
     m_Vector4f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 0.01161446, y: 0.026150985, z: 0.084905684, w: 1}
+        m_Name: New Color 2
+        m_Overridden: 1
     m_Uint:
       m_Array: []
     m_Int:
@@ -399,7 +401,38 @@ VisualEffect:
     m_AnimationCurve:
       m_Array: []
     m_Gradient:
-      m_Array: []
+      m_Array:
+      - m_Value:
+          serializedVersion: 2
+          key0: {r: 0, g: 0.5019608, b: 0.39215687, a: 1}
+          key1: {r: 0.047058824, g: 0, b: 0.5019608, a: 1}
+          key2: {r: 0, g: 0, b: 0, a: 0}
+          key3: {r: 0, g: 0, b: 0, a: 0}
+          key4: {r: 0, g: 0, b: 0, a: 0}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
+          ctime0: 192
+          ctime1: 65535
+          ctime2: 0
+          ctime3: 0
+          ctime4: 0
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
+          atime0: 0
+          atime1: 65535
+          atime2: 0
+          atime3: 0
+          atime4: 0
+          atime5: 0
+          atime6: 0
+          atime7: 0
+          m_Mode: 0
+          m_NumColorKeys: 2
+          m_NumAlphaKeys: 2
+        m_Name: Color_Bright
+        m_Overridden: 1
     m_NamedObject:
       m_Array:
       - m_Value: {fileID: 11700000, guid: 5f926b5332cd20249a24d3ad2cd8637a, type: 2}

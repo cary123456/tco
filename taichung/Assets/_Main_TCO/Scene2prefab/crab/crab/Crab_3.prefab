@@ -764,7 +764,6 @@ MonoBehaviour:
   minRotationSpeed: -0.2
   maxRotationSpeed: 0.2
   rotationSpeed: 0
-  midifloat: 1
   melt: 0
 --- !u!114 &5507848278421059355
 MonoBehaviour:
@@ -826,15 +825,15 @@ VisualEffect:
       - m_Value: 3
         m_Name: Size
         m_Overridden: 0
-      - m_Value: 0.2
+      - m_Value: 0.1
         m_Name: Intensity
-        m_Overridden: 1
+        m_Overridden: 0
       - m_Value: 800
         m_Name: amount(Blue)
         m_Overridden: 1
       - m_Value: 2
         m_Name: Drag
-        m_Overridden: 1
+        m_Overridden: 0
       - m_Value: 0.4
         m_Name: Max2
         m_Overridden: 1
@@ -855,7 +854,7 @@ VisualEffect:
         m_Overridden: 1
       - m_Value: 2
         m_Name: frequency
-        m_Overridden: 1
+        m_Overridden: 0
       - m_Value: 0
         m_Name: rate
         m_Overridden: 1
