@@ -630,7 +630,15 @@ MonoBehaviour:
     m_Id: 95d38753-dcf3-4b06-ab65-f43a0b4f16ab
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 19b32a39-e58a-408c-9462-f43e6ccf262d
+      m_Path: <Keyboard>/f4
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Load Ch 4
+      m_Flags: 0
     m_Flags: 0
   I_SeaSlider:
     m_Name: I_Sea Slider
@@ -3433,7 +3441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1617396360
 Animator:
   serializedVersion: 4

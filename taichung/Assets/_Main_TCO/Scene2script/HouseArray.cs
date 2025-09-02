@@ -84,6 +84,27 @@ public class HouseArray : MonoBehaviour
         I_fish.Enable();
         I_word.Enable();
         I_wordSwitch.Enable();
+        I_house.performed += OnHousePressed;
+        I_house.canceled += OnHouseReleased;
+        I_crab.performed += OnCrabPressed;
+        I_crab.canceled += OnCrabReleased;
+        I_bubble.performed += OnBubbleInputPressed;
+        I_bubble.canceled += OnBubbleInputReleased;
+        I_fish.performed += OnFishPressed;
+        I_fish.canceled += OnFishReleased;
+        I_word.performed += OnWordPressed;
+        I_word.canceled += OnWordReleased;
+        I_wordSwitch.performed += OnWordswitchPressed;
+    }
+
+    private void OnDisable()
+    {
+        I_house.Disable();
+        I_crab.Disable();
+        I_bubble.Disable();
+        I_fish.Disable();
+        I_word.Disable();
+        I_wordSwitch.Disable();
         I_house.performed -= OnHousePressed;
         I_house.canceled -= OnHouseReleased;
         I_crab.performed -= OnCrabPressed;
@@ -95,17 +116,6 @@ public class HouseArray : MonoBehaviour
         I_word.performed -= OnWordPressed;
         I_word.canceled -= OnWordReleased;
         I_wordSwitch.performed -= OnWordswitchPressed;
-    }
-
-    private void OnDisable()
-    {
-        I_house.Disable();
-        I_crab.Disable();
-        I_bubble.Disable();
-        I_fish.Disable();
-        I_word.Disable();
-        I_wordSwitch.Disable();
-
     }
 
     void Start() 
@@ -261,7 +271,7 @@ public class HouseArray : MonoBehaviour
 
         }
 
-        if(bubbleInput &&　flag && bubbleenable || (bubbleflag && bubbletimerflag))
+        if(bubbleInput && flag && bubbleenable || (bubbleflag && bubbletimerflag))
         {
             bubbletimerflag = false;
             StartCoroutine("Bubbletimer");
