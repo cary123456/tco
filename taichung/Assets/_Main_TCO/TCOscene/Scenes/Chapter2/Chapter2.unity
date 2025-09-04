@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.002585495, g: 0.03288638, b: 0.055247944, a: 1}
+  m_IndirectSpecularColor: {r: 0.0025799256, g: 0.03238716, b: 0.054431073, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1527,7 +1527,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154545744}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -4879,7 +4879,15 @@ MonoBehaviour:
     m_Id: 8f888fef-4b2d-4f15-a7f5-446dacbb13c0
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 492c747f-123b-427b-b20a-66e0064a2699
+      m_Path: <Keyboard>/backquote
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Reset
+      m_Flags: 0
     m_Flags: 0
   I_LoadCh4:
     m_Name: I_Load Ch 4
@@ -5518,7 +5526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!73398921 &680042733
 VFXRenderer:
   serializedVersion: 1
@@ -5527,7 +5535,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680042732}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -6471,7 +6479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1859743738274157975, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1859743739202422552, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: m_IsActive
@@ -7161,7 +7169,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884042476}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -10310,7 +10318,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: e0f9222a-1468-43c4-bf08-2ab408bcdb54
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -10319,7 +10327,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 5ce56c35-21a3-409e-9747-1a641eb36c0a
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -10328,7 +10336,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: f5773ef3-1d4e-410b-8814-52817249014a
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -10337,7 +10345,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 35ed51db-4a2a-4f14-88aa-8d1f804aa3c0
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -10346,7 +10354,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 976c3a95-c839-41ab-824f-86ae6018b44d
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -10355,7 +10363,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: bd3c286c-d8f7-40d8-bf77-d2599a539216
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -10652,7 +10660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1859743738274157975, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1859743739202422552, guid: 4999ff69fe6d8b34088b2f1c386961df, type: 3}
       propertyPath: m_IsActive
@@ -12680,7 +12688,7 @@ MonoBehaviour:
   fishspeed: 0
   fishlifetime: 0
   wordscale: []
-  wordrotate: {x: 0, y: 90, z: 0}
+  wordrotate: {x: 0, y: 0, z: 90}
   housecount: 0
   offset: 0.35
   buildarraytemp: []
@@ -12702,16 +12710,24 @@ MonoBehaviour:
   - {fileID: 1192974049}
   serverenable: 1
   I_house:
-    m_Name: 
+    m_Name: I_house
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 2e520b38-f4e4-45e2-b8bc-7d96e9d2f6cf
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: f9ebc852-a304-448e-8adb-85683f4817a5
+      m_Path: <Keyboard>/b
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_house
+      m_Flags: 0
     m_Flags: 0
   I_crab:
-    m_Name: 
+    m_Name: I_crab
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: b08ef5dc-c2e7-4208-9612-e62497ff83e3
@@ -12720,7 +12736,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_bubble:
-    m_Name: 
+    m_Name: I_bubble
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 0d0f9cd4-d68a-4361-b22a-f5a64b9e4b85
@@ -12729,7 +12745,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_fish:
-    m_Name: 
+    m_Name: I_fish
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 7b06f34d-4529-4228-873a-50299e119ee6
@@ -12738,7 +12754,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_word:
-    m_Name: 
+    m_Name: I_word
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 8375f128-8fa5-4109-88e3-f7465c45acc4
@@ -12747,7 +12763,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_wordSwitch:
-    m_Name: 
+    m_Name: I_word Switch
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: d1c55ceb-7d46-4f7d-87e5-7633929f434d
@@ -15356,7 +15372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1859498073
 Animator:
   serializedVersion: 4
@@ -17236,7 +17252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &2074646480
 Animator:
   serializedVersion: 4
@@ -17296,7 +17312,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &2074646483
 Canvas:
   m_ObjectHideFlags: 0
