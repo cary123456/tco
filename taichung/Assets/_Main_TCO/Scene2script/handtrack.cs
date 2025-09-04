@@ -19,6 +19,10 @@ public class handtrack : MonoBehaviour
         {
             this.transform.position = Vector3.Lerp(this.transform.position, thumbR.transform.position, 0.05f);
         }
+        else
+        {
+            this.gameObject.GetComponent<Animator>().SetBool("C2P", true);
+        }
         
     }
 }

@@ -59,6 +59,7 @@ public class crabfloat : MonoBehaviour
         {
             if (this.gameObject.transform.position.y <= ancor.transform.position.y)
             {
+                this.gameObject.GetComponent<Animator>().SetBool("C2P", true);
                 Destroy(this.gameObject,5);
                 this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, ancor.transform.position.y, this.gameObject.transform.position.z);
 

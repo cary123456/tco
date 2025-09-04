@@ -44,7 +44,7 @@ public class crabmove : MonoBehaviour
             */
            
             this.GetComponent<Animator>().enabled = true;
-            this.GetComponent<Animator>().SetBool("C2B", true);
+            this.GetComponent<Animator>().SetBool("C2P", true);
             if (one)
             {
                 headsetposition = new Vector3(VRheadset.transform.position.x, 0, VRheadset.transform.position.z);
