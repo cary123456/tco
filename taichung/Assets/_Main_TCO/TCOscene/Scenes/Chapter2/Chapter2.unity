@@ -2463,6 +2463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 272935318}
+  - component: {fileID: 272935319}
   m_Layer: 0
   m_Name: RoundParent
   m_TagString: Untagged
@@ -2486,6 +2487,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &272935319
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272935317}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b7adecd99e1b97749be897790d8ff527, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &287605500
 GameObject:
   m_ObjectHideFlags: 0
@@ -5354,7 +5375,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3177561019868206287, guid: e6f4652931990b844ac434d2caa02950, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e6f4652931990b844ac434d2caa02950, type: 3}
 --- !u!4 &625915822 stripped
 Transform:
@@ -8823,6 +8845,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1088916988}
+  - component: {fileID: 1088916989}
   m_Layer: 0
   m_Name: FlatParent
   m_TagString: Untagged
@@ -8846,6 +8869,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1088916989
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088916987}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 91a1be5c2f4bf1a429d5e24f24511613, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1096450219
 GameObject:
   m_ObjectHideFlags: 0
@@ -9242,7 +9285,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8726352877880579588, guid: f54f612c1ab12ad42a155d2c036869d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f54f612c1ab12ad42a155d2c036869d1, type: 3}
 --- !u!1 &1166768152
 GameObject:
@@ -10541,6 +10585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1277678676}
+  - component: {fileID: 1277678677}
   m_Layer: 0
   m_Name: TowerTwinsParent
   m_TagString: Untagged
@@ -10564,6 +10609,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1277678677
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277678675}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b73f9f2b67ac7984ca4d4bd383095a11, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1293047487 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
@@ -10836,7 +10901,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8745330410366495562, guid: 618a0bf112b846948be4b70abfc5bd4c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9139807852170153123, guid: 618a0bf112b846948be4b70abfc5bd4c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 618a0bf112b846948be4b70abfc5bd4c, type: 3}
 --- !u!4 &1310834039 stripped
 Transform:
@@ -14721,7 +14791,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8978736847847260350, guid: 27b07236ff51dbe4595433e486f0a38e, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8867685428423616339, guid: 27b07236ff51dbe4595433e486f0a38e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 27b07236ff51dbe4595433e486f0a38e, type: 3}
 --- !u!4 &1680673825 stripped
 Transform:
@@ -16095,6 +16170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1870883115}
+  - component: {fileID: 1870883116}
   m_Layer: 0
   m_Name: TowerParent
   m_TagString: Untagged
@@ -16118,6 +16194,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1870883116
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870883114}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c00f995f87ff39c4f9a8ea7c90861c81, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1890820155 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 459718, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
