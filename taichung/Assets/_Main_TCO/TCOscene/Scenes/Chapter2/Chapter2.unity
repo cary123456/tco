@@ -12673,10 +12673,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   house:
   - {fileID: 7176764871059821109, guid: d926b672293861f4eafe332da94e1da3, type: 3}
-  - {fileID: 6307213733069247598, guid: 08b02bc5cf781954c99d33b556d7b18b, type: 3}
-  - {fileID: 2101936504813573970, guid: 07f4dfcfecc92ad45ace76eb87481e27, type: 3}
-  - {fileID: 8205717196195122498, guid: 136b5c5fb855494469312583f95a847b, type: 3}
-  - {fileID: 3064550030547611652, guid: 700233775bbce0d47bb68c21a2917cf0, type: 3}
+  - {fileID: 4918534715631370783, guid: bd29889c1419b8743b80738d74865a1f, type: 3}
+  - {fileID: 8649835409487559210, guid: 5b9dfcc8043012141890c1f6b7be1d81, type: 3}
+  - {fileID: 2640930999173566496, guid: d5d56a1a5a1b95343af162d2cfaf23a6, type: 3}
+  - {fileID: 3334807176898796786, guid: 65c9cba0e3eaf88478dc46a9fb5fa9d0, type: 3}
+  - {fileID: 1725988099679781872, guid: a5e3d0c82d21ef2499c5e7e158b62be8, type: 3}
   houseenable: 1
   crab: []
   crabenable: 0
