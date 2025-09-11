@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.002555598, g: 0.030212648, b: 0.05087314, a: 1}
+  m_IndirectSpecularColor: {r: 0.0028181938, g: 0.05369558, b: 0.089298956, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4851,7 +4851,15 @@ MonoBehaviour:
     m_Id: 7321d8c6-a111-4d1f-abef-93db795cffcc
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: fd4aff25-2f78-4362-8287-d59560e59d4e
+      m_Path: <Keyboard>/z
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_grow
+      m_Flags: 0
     m_Flags: 0
   I_around:
     m_Name: I_around
@@ -4963,6 +4971,24 @@ MonoBehaviour:
       m_Action: I_Sea Down
       m_Flags: 0
     m_Flags: 0
+  I_NewBuildingGrow:
+    m_Name: I_New Building Grow
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 505f263f-9345-46ea-bdc1-e6afdb7dff53
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 67dabb4f-ebe3-41f8-a237-92dc7282a8a1
+      m_Path: <Keyboard>/g
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_New Building Grow
+      m_Flags: 0
+    m_Flags: 0
+  buildingAnimationControls: []
 --- !u!1 &581448327 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 165006a9efbe91c4cbc735e4a6041764, type: 3}
@@ -7046,7 +7072,7 @@ MonoBehaviour:
   - {fileID: 1192974049}
   serverenable: 0
   I_house:
-    m_Name: 
+    m_Name: I_house
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 5bc5fb83-aa95-42fb-8226-2fbaa6fa6315
@@ -7055,7 +7081,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_crab:
-    m_Name: 
+    m_Name: I_crab
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: e30d1b59-508a-4ee1-9bad-35bd03bcad41
@@ -7064,7 +7090,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_bubble:
-    m_Name: 
+    m_Name: I_bubble
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 678d028d-b7de-42ef-a1f4-68a0ad890ad3
@@ -7073,7 +7099,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_fish:
-    m_Name: 
+    m_Name: I_fish
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: f1144581-8c4b-4749-a6fc-11fcffd95998
@@ -7082,7 +7108,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_word:
-    m_Name: 
+    m_Name: I_word
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 2b2246c7-97f3-4a01-8af2-14d196466194
@@ -7091,7 +7117,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_wordSwitch:
-    m_Name: 
+    m_Name: I_word Switch
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 9016b843-c7a9-44b1-859f-5ff4a079ab64
@@ -12646,6 +12672,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   house:
   - {fileID: 7176764871059821109, guid: d926b672293861f4eafe332da94e1da3, type: 3}
+  - {fileID: 4918534715631370783, guid: bd29889c1419b8743b80738d74865a1f, type: 3}
+  - {fileID: 8649835409487559210, guid: 5b9dfcc8043012141890c1f6b7be1d81, type: 3}
+  - {fileID: 2640930999173566496, guid: d5d56a1a5a1b95343af162d2cfaf23a6, type: 3}
+  - {fileID: 3334807176898796786, guid: 65c9cba0e3eaf88478dc46a9fb5fa9d0, type: 3}
+  - {fileID: 1725988099679781872, guid: a5e3d0c82d21ef2499c5e7e158b62be8, type: 3}
   houseenable: 1
   crab: []
   crabenable: 0
@@ -14727,6 +14758,54 @@ PrefabInstance:
       propertyPath: serverWord
       value: 
       objectReference: {fileID: 1096450222}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_crab.m_Id
+      value: 41481963-ed7e-40b7-b50a-ad44c7955f73
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_fish.m_Id
+      value: 0d986efd-25c0-4f9d-ad28-3155376f911a
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_word.m_Id
+      value: 6639e5ae-f558-41eb-813a-6267d27fcf4f
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_house.m_Id
+      value: ee38bca4-69f4-42af-8f16-675fdd6fd5a5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_bubble.m_Id
+      value: ea2a3f70-088a-4e61-8c8d-b0ab6ce3e11c
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_crab.m_Name
+      value: I_crab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_fish.m_Name
+      value: I_fish
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_word.m_Name
+      value: I_word
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_house.m_Name
+      value: I_house
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_bubble.m_Name
+      value: I_bubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_wordSwitch.m_Id
+      value: 25c7d07d-fbd0-4e7c-b9d2-23bf7ba4f376
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_wordSwitch.m_Name
+      value: I_word Switch
+      objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: bubble.Array.data[0]
       value: 

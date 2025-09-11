@@ -102,6 +102,11 @@ public class hotkey : MonoBehaviour
     //.isPressed
     public InputAction I_SeaDown;
     int SeaIsPressed = 0; // 0 = 未按下, 1 = 往上, -1 = 往下
+    [Space]
+    [Tooltip("針對9/11新增的建築物的動畫進行觸發" +
+        "\n按下該按鍵後將對所有有掛BuildingAnimationControl.cs場景上的建築物播放動畫")]
+    [SerializeField] InputAction I_NewBuildingGrow;
+    [SerializeField] BuildingAnimationControl[] buildingAnimationControls;
 
     private void OnEnable()
     {
@@ -121,6 +126,7 @@ public class hotkey : MonoBehaviour
         I_SeaUp.Enable();
         I_SeaDown.Enable();
         I_SeaSlider.Enable();
+        I_NewBuildingGrow.Enable();
         I_crab.performed += OnCrabPressed;
         I_crab.canceled += OnCrabReleased;
         I_DelCrab.performed += OnDelCrabPressed;
@@ -141,6 +147,7 @@ public class hotkey : MonoBehaviour
         I_SeaUp.canceled += OnSeaReleased;
         I_SeaDown.canceled += OnSeaReleased;
         I_SeaSlider.performed += OnSeaPressed;
+        I_NewBuildingGrow.performed += OnInputStarted;
     }
 
     private void OnDisable()
@@ -161,6 +168,7 @@ public class hotkey : MonoBehaviour
         I_SeaUp.Disable();
         I_SeaDown.Disable();
         I_SeaSlider.Disable();
+        I_NewBuildingGrow.Disable();
         I_crab.performed -= OnCrabPressed;
         I_crab.canceled -= OnCrabReleased;
         I_DelCrab.performed -= OnDelCrabPressed;
@@ -181,6 +189,7 @@ public class hotkey : MonoBehaviour
         I_SeaUp.canceled -= OnSeaReleased;
         I_SeaDown.canceled -= OnSeaReleased;
         I_SeaSlider.performed -= OnSeaPressed;
+        I_NewBuildingGrow.performed -= OnInputStarted;
     }
 
 
@@ -578,7 +587,7 @@ public class hotkey : MonoBehaviour
                 staw.GetComponent<Animator>().SetBool("up", stawflag);
             }
         }
-        else if (ctx.action == I_staw_2) 
+        else if (ctx.action == I_staw_2)
         {
             if (staw != null)
             {
@@ -654,7 +663,15 @@ public class hotkey : MonoBehaviour
         {
             SeaIsPressed = -1; // 往下
         }
-
+        else if (ctx.action == I_NewBuildingGrow)
+        { 
+            // 找到所有的 BuildingAnimationControl 組件並觸發動畫
+            buildingAnimationControls = FindObjectsOfType<BuildingAnimationControl>();
+            foreach (var building in buildingAnimationControls)
+            {
+                building.PlayBuildingAnimation();
+            }
+        }
     }
 
     void OnInputReleased(InputAction.CallbackContext ctx)
