@@ -565,6 +565,16 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_NewBuildingGrow:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  buildingAnimationControls: []
 --- !u!4 &356160660
 Transform:
   m_ObjectHideFlags: 0
@@ -2123,10 +2133,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ba5fea1e35b614cbf6b7627471fc43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  udpPort: 6000
+  udpPort: 6666
   humanModel:
   - {fileID: 183067697}
-  - {fileID: 1223726239}
+  - {fileID: 183067697}
   - {fileID: 183067697}
   - {fileID: 183067697}
   humanModelLastUpdateTime:
@@ -2465,7 +2475,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.7851663, y: 1}
+    m_SensorSize: {x: 1.8281447, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2577,11 +2587,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &1223726239 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 331158732853246609, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
-  m_PrefabInstance: {fileID: 1004351249}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1223726245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
