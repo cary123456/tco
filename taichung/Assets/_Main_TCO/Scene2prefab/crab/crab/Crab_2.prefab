@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd186841afcf75458b41f7c7aa6870a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building: {fileID: 8398855273896792897, guid: 9208d3615aa6f5b46ac8830090bb2f83, type: 3}
+  building: {fileID: 7176764871059821109, guid: d926b672293861f4eafe332da94e1da3, type: 3}
   buildings: []
   buildingposition: []
   ancor: {fileID: 0}
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2852902099044335350}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16470a2ba35d4cf4299176c63f1b948d, type: 3}
   m_Name: 

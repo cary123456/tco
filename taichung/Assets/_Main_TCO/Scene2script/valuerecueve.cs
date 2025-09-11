@@ -197,7 +197,7 @@ public class valuerecueve : NetworkBehaviour
         midfinger = GameObject.FindGameObjectsWithTag("midfinger");
         foreach (var mid in midfinger)
         {
-            mid.gameObject.SetActive(false);
+            //mid.gameObject.SetActive(false);
         }
         MIDI = GameObject.FindGameObjectWithTag("midi");
     }
@@ -304,6 +304,7 @@ public class valuerecueve : NetworkBehaviour
                 {
                     
                     headset.GetComponent<nearest>().closestEnemy.GetComponent<crabmove>().move = true;
+                    headset.GetComponent<nearest>().closestEnemy.GetComponent<buildon>().buildingup();
 
                 }
                 onetime = true;
