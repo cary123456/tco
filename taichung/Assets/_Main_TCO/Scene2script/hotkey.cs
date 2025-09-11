@@ -107,6 +107,8 @@ public class hotkey : MonoBehaviour
         "\n按下該按鍵後將對所有有掛BuildingAnimationControl.cs場景上的建築物播放動畫")]
     [SerializeField] InputAction I_NewBuildingGrow;
     [SerializeField] BuildingAnimationControl[] buildingAnimationControls;
+    [Tooltip("清空所有(帶有\"building\"標籤的)建築物")]
+    [SerializeField] InputAction I_BuildingClear;
 
     private void OnEnable()
     {
@@ -127,6 +129,7 @@ public class hotkey : MonoBehaviour
         I_SeaDown.Enable();
         I_SeaSlider.Enable();
         I_NewBuildingGrow.Enable();
+        I_BuildingClear.Enable();
         I_crab.performed += OnCrabPressed;
         I_crab.canceled += OnCrabReleased;
         I_DelCrab.performed += OnDelCrabPressed;
@@ -148,6 +151,12 @@ public class hotkey : MonoBehaviour
         I_SeaDown.canceled += OnSeaReleased;
         I_SeaSlider.performed += OnSeaPressed;
         I_NewBuildingGrow.performed += OnInputStarted;
+        I_BuildingClear.performed += OnInputStarted;
+    }
+
+    private void I_BuildingClear_performed(InputAction.CallbackContext obj)
+    {
+        throw new System.NotImplementedException();
     }
 
     private void OnDisable()
@@ -169,6 +178,7 @@ public class hotkey : MonoBehaviour
         I_SeaDown.Disable();
         I_SeaSlider.Disable();
         I_NewBuildingGrow.Disable();
+        I_BuildingClear.Disable();
         I_crab.performed -= OnCrabPressed;
         I_crab.canceled -= OnCrabReleased;
         I_DelCrab.performed -= OnDelCrabPressed;
@@ -190,6 +200,7 @@ public class hotkey : MonoBehaviour
         I_SeaDown.canceled -= OnSeaReleased;
         I_SeaSlider.performed -= OnSeaPressed;
         I_NewBuildingGrow.performed -= OnInputStarted;
+        I_BuildingClear.performed -= OnInputStarted;
     }
 
 
@@ -670,6 +681,14 @@ public class hotkey : MonoBehaviour
             foreach (var building in buildingAnimationControls)
             {
                 building.PlayBuildingAnimation();
+            }
+        }
+        else if(ctx.action == I_BuildingClear)
+        {
+            GameObject[] taggedBuilding = GameObject.FindGameObjectsWithTag("building");
+            foreach(GameObject destroyTarget in taggedBuilding)
+            {
+                Destroy(destroyTarget);
             }
         }
     }
