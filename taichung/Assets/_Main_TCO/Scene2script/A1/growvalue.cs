@@ -46,7 +46,7 @@ public class growvalue : MonoBehaviour
 
         if (grow)
         {
-            this.transform.GetComponent<Animator>().SetBool("isTrigger",true);
+            this.transform.GetComponentInChildren<Animator>().SetBool("isTrigger",true);
             //timer += Time.deltaTime;
             this.gameObject.tag = "buildinglo";
         }

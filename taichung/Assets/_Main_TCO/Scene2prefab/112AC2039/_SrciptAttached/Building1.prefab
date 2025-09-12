@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2039783269154990577}
-  - component: {fileID: 2039783269154990576}
   - component: {fileID: 2039783269154990579}
+  - component: {fileID: 7233864667618539914}
   m_Layer: 0
   m_Name: Building1
   m_TagString: building
@@ -34,27 +34,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &2039783269154990576
-Animator:
-  serializedVersion: 4
+--- !u!114 &2039783269154990579
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039783269154990582}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 91a1be5c2f4bf1a429d5e24f24511613, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2039783269154990579
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e00d3811635c8e745b1fbf9c17a9504b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BuildingAnimator: {fileID: 0}
+  stateInfo: none
+--- !u!114 &7233864667618539914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,11 +57,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2039783269154990582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e00d3811635c8e745b1fbf9c17a9504b, type: 3}
+  m_Script: {fileID: 11500000, guid: 59e95afb104ab6b4087d44efa36b5678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuildingAnimator: {fileID: 0}
-  stateInfo: none
+  shininess: 0
+  vfxvalue: 0
+  gestureDetector: {fileID: 0}
+  up: 0
+  grow: 0
+  number: 0
+  timer: 0
+  UImanager: {fileID: 0}
 --- !u!1 &7755186638675505705
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 6977242972235212947}
   - component: {fileID: 6303911454041220918}
   - component: {fileID: 8115215329450546172}
+  - component: {fileID: 4303158935592651334}
   m_Layer: 0
   m_Name: ShortHouse
   m_TagString: Untagged
@@ -151,3 +152,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &4303158935592651334
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7755186638675505705}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 91a1be5c2f4bf1a429d5e24f24511613, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

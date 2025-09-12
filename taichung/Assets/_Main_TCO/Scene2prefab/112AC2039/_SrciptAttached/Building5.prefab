@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1360195187699834177}
   - component: {fileID: 2688571755270001380}
   - component: {fileID: 192333779276441134}
+  - component: {fileID: 3648037870104049822}
   m_Layer: 0
   m_Name: TowerTwin
   m_TagString: Untagged
@@ -83,6 +84,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &3648037870104049822
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849768874191030267}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b73f9f2b67ac7984ca4d4bd383095a11, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4135867358219730922
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1524330374582466908}
+  - component: {fileID: 2168357713312086195}
   m_Layer: 0
   m_Name: Building5
   m_TagString: building
@@ -108,10 +130,30 @@ Transform:
   m_GameObject: {fileID: 4135867358219730922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6, y: 2.6, z: 2.6}
+  m_LocalScale: {x: 3.2, y: 3.2, z: 3.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1360195187699834177}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2168357713312086195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4135867358219730922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e95afb104ab6b4087d44efa36b5678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shininess: 0
+  vfxvalue: 0
+  gestureDetector: {fileID: 0}
+  up: 0
+  grow: 0
+  number: 0
+  timer: 0
+  UImanager: {fileID: 0}

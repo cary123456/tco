@@ -112,7 +112,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948805124784709623}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e00d3811635c8e745b1fbf9c17a9504b, type: 3}
   m_Name: 
@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8054153331867672112}
-  - component: {fileID: 6313173766308017707}
+  - component: {fileID: 8894923007031129663}
   m_Layer: 0
   m_Name: Building3
   m_TagString: building
@@ -152,23 +152,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &6313173766308017707
-Animator:
-  serializedVersion: 4
+--- !u!114 &8894923007031129663
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4023711829914892742}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c00f995f87ff39c4f9a8ea7c90861c81, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e95afb104ab6b4087d44efa36b5678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shininess: 0
+  vfxvalue: 0
+  gestureDetector: {fileID: 0}
+  up: 0
+  grow: 0
+  number: 0
+  timer: 0
+  UImanager: {fileID: 0}

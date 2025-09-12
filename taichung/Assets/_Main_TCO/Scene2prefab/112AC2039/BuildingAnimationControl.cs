@@ -35,7 +35,7 @@ public class BuildingAnimationControl : MonoBehaviour
         if (BuildingAnimator != null)
         {
             BuildingAnimator.SetBool("isTrigger",true);
-            BuildingAnimator.SetBool("istrigger", true);
+            //BuildingAnimator.SetBool("istrigger", true);
             stateInfo = "動畫觸發";
         }
         else
