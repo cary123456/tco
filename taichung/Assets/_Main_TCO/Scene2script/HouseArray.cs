@@ -1,10 +1,11 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 //using Meta.XR.BuildingBlocks.Editor;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using system = System;
 
 public class HouseArray : MonoBehaviour
 {
@@ -701,5 +702,21 @@ public class HouseArray : MonoBehaviour
     void OnWordReleased(InputAction.CallbackContext ctx) 
     {
         wordInput = false;
+    }
+
+    /// <summary>
+    /// 公開函式，清除建築物生成相關的變數
+    /// </summary>
+    public void emptyBuildArray()
+    {
+        for (int i = 0; i < buildarray.GetLength(0); i++)
+        {
+            for (int j = 0; j < buildarray.GetLength(1); j++)
+            {
+                buildarray[i, j] = 0;
+            }
+        }
+        housecount = 0;
+        buildarraytemp.Clear();
     }
 }

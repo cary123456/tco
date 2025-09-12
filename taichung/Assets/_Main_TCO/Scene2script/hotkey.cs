@@ -107,6 +107,10 @@ public class hotkey : MonoBehaviour
         "\n按下該按鍵後將對所有有掛BuildingAnimationControl.cs場景上的建築物播放動畫")]
     [SerializeField] InputAction I_NewBuildingGrow;
     [SerializeField] BuildingAnimationControl[] buildingAnimationControls;
+    [Tooltip("清除建築物，預設為Del")]
+    [SerializeField] InputAction I_ClearBuilding;
+    [Tooltip("建築物生成之腳本，刪除場上建築物時使用")]
+    [SerializeField] HouseArray houseArray;
 
     private void OnEnable()
     {
@@ -127,6 +131,7 @@ public class hotkey : MonoBehaviour
         I_SeaDown.Enable();
         I_SeaSlider.Enable();
         I_NewBuildingGrow.Enable();
+        I_ClearBuilding.Enable();
         I_crab.performed += OnCrabPressed;
         I_crab.canceled += OnCrabReleased;
         I_DelCrab.performed += OnDelCrabPressed;
@@ -148,6 +153,7 @@ public class hotkey : MonoBehaviour
         I_SeaDown.canceled += OnSeaReleased;
         I_SeaSlider.performed += OnSeaPressed;
         I_NewBuildingGrow.performed += OnInputStarted;
+        I_ClearBuilding.performed += OnInputStarted;
     }
 
     private void OnDisable()
@@ -169,6 +175,7 @@ public class hotkey : MonoBehaviour
         I_SeaDown.Disable();
         I_SeaSlider.Disable();
         I_NewBuildingGrow.Disable();
+        I_ClearBuilding.Disable();
         I_crab.performed -= OnCrabPressed;
         I_crab.canceled -= OnCrabReleased;
         I_DelCrab.performed -= OnDelCrabPressed;
@@ -190,6 +197,7 @@ public class hotkey : MonoBehaviour
         I_SeaDown.canceled -= OnSeaReleased;
         I_SeaSlider.performed -= OnSeaPressed;
         I_NewBuildingGrow.performed -= OnInputStarted;
+        I_ClearBuilding.performed -= OnInputStarted;
     }
 
 
@@ -376,7 +384,7 @@ public class hotkey : MonoBehaviour
         vec = Vector3.Lerp(vec, Vector3.up * Time.deltaTime * SeaUpSpeed * Direct, 1 / smooth);
         Sea.transform.Translate(vec);
     }
-
+      
 
     public void SeaMoveBySlider(float sliderValue)
     {
@@ -671,6 +679,15 @@ public class hotkey : MonoBehaviour
             {
                 building.PlayBuildingAnimation();
             }
+        }
+        else if(ctx.action == I_ClearBuilding)
+        {
+            GameObject[] targetBuilding = GameObject.FindGameObjectsWithTag("building");
+            foreach (var building in targetBuilding)
+            {
+                Destroy(building);
+            }
+            houseArray.emptyBuildArray();
         }
     }
 
