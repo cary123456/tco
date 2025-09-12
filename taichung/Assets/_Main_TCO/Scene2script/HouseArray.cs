@@ -149,11 +149,13 @@ public class HouseArray : MonoBehaviour
         {
             keepbuild = true;
             houseflag = false;
+            houseenable = false;
             StartCoroutine("Housetimer");
 
             if (housecount >= x * z - blockhouseZ.Length * x - blockhouseX.Length * z + blockhouseX.Length * blockhouseZ.Length)
             {
                 keepbuild = false;
+                houseenable = true;
             }
             for (int i = 0; i < buildpertime; i++)
             {

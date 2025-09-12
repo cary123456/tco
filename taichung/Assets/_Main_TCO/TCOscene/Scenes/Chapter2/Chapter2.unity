@@ -8721,7 +8721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99469495e8f652d4f9e6a64cfc4a6543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  port: 6789
+  port: 12001
   receivedNum: 0
 --- !u!114 &1096450223
 MonoBehaviour:
@@ -12840,7 +12840,7 @@ MonoBehaviour:
   fishspeed: 0
   fishlifetime: 0
   wordscale: []
-  wordrotate: {x: 0, y: 0, z: 0}
+  wordrotate: {x: 0, y: 90, z: 0}
   housecount: 0
   offset: 0.35
   buildarraytemp: []
@@ -12912,7 +12912,15 @@ MonoBehaviour:
     m_Id: 8375f128-8fa5-4109-88e3-f7465c45acc4
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 17415cf0-d1c6-4222-8677-fe02518acb09
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_word
+      m_Flags: 0
     m_Flags: 0
   I_wordSwitch:
     m_Name: I_word Switch
