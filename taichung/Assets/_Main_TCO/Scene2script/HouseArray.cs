@@ -213,15 +213,15 @@ public class HouseArray : MonoBehaviour
 
                 if (buildarray[Xpos, Zpos] != 1)
                 {
-                    GameObject fishman = Instantiate(fish[rand], pos.position + new Vector3(Xpos * k + houseoffset, 0, Zpos * k), Quaternion.identity, pos);
+                    GameObject fishman = Instantiate(fish[rand], pos.position + new Vector3(Xpos * k + houseoffset, 0, Zpos * k), Quaternion.Euler(0, 90, 0), pos);
                     if (flip)
                     {
-                        fishman.transform.Rotate(0, 180, 0);
+                        fishman.transform.Rotate(0, -180, 0);
                         fishspeedtemp = -fishspeed;
                     }
                     //buildarray[Xpos,Zpos] = 0;
                     //housecount++;
-                    fishman.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, fishspeedtemp);
+                    fishman.GetComponent<Rigidbody>().velocity = new Vector3(fishspeedtemp,0 ,0);
                     Destroy(fishman, fishlifetime);
 
                 }
@@ -396,19 +396,19 @@ public class HouseArray : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            if (housecount > 0)
-            {
-                wordIO.SetActive(true);
-                housecount--;
-                buildarray[(int)buildarraytemp[0].x, (int)buildarraytemp[0].y] = 0;
+        // if (Input.GetKey(KeyCode.Escape))
+        // {
+        //     if (housecount > 0)
+        //     {
+        //         wordIO.SetActive(true);
+        //         housecount--;
+        //         buildarray[(int)buildarraytemp[0].x, (int)buildarraytemp[0].y] = 0;
 
-                buildarraytemp.RemoveAt(0);
+        //         buildarraytemp.RemoveAt(0);
 
-            }
+        //     }
 
-        }
+        // }
         if ((serverWord.Length > 0) && (serverWord[0] != null) && (serverWord[1] != null))
         {
 

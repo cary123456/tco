@@ -682,11 +682,10 @@ public class hotkey : MonoBehaviour
         }
         else if(ctx.action == I_ClearBuilding)
         {
-            GameObject[] targetBuilding = GameObject.FindGameObjectsWithTag("building");
-            foreach (var building in targetBuilding)
-            {
-                Destroy(building);
-            }
+            DeletTagedObjects("building");
+            DeletTagedObjects("buildinglo");
+            DeletTagedObjects("crabs");
+
             houseArray.emptyBuildArray();
         }
     }
@@ -753,6 +752,14 @@ public class hotkey : MonoBehaviour
         if (fish != null)
         {
             fish.SetActive(false);
+        }
+    }
+    public void DeletTagedObjects(string tagName)
+    {
+        GameObject[] allObjects = GameObject.FindGameObjectsWithTag(tagName);
+        foreach (var obj in allObjects)
+        {
+            Destroy(obj);
         }
     }
 
