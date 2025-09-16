@@ -266,8 +266,8 @@ public class valuerecueve : NetworkBehaviour
                 {
                     MIDI.GetComponent<NoteTrigger>().trigger = true;
                 }
-                
-                GameObject crabs =  Instantiate(crab[Random.Range(0,5)], righthand.transform.position, Quaternion.Euler(new Vector3(0, 180, 180)));
+                //Random.Range(0,5)
+                GameObject crabs =  Instantiate(crab[0], righthand.transform.position, Quaternion.Euler(new Vector3(0, 180, 180)));
                 crabb = crabs;
                 crabb.GetComponent<handtrack>().follow = true;
                 if (uiman.GetComponent<UIManager>().VR == true)

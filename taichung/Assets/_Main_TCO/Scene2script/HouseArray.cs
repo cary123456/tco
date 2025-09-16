@@ -72,6 +72,7 @@ public class HouseArray : MonoBehaviour
     public InputAction I_bubble;
     bool bubbleInput = false;
     public InputAction I_fish;
+    public GameObject lightObject;
     bool fishInput = false;
     public InputAction I_word;
     bool wordInput = false;
@@ -168,13 +169,13 @@ public class HouseArray : MonoBehaviour
                 int rand = Random.Range(0, house.Length);
                 int h = Random.Range(0, housescale.Length);
 
-                house[rand].transform.localScale = new Vector3(housescale[h], housescale[h], housescale[h]);
 
                 if (buildarray[Xpos, Zpos] != 1)
                 {
                     GameObject houses = Instantiate(house[rand], pos.position + new Vector3(Xpos * k + houseoffset, 0, Zpos * k), Quaternion.identity, parenttrans);
                     buildarray[Xpos, Zpos] = 1;
                     houses.transform.Rotate(wordrotate);
+                    houses.transform.localScale = new Vector3(housescale[h], housescale[h], housescale[h]);
                     buildarraytemp.Add(new Vector2(Xpos, Zpos));
                     buildarraytemp.ToArray();
                     housecount++;
@@ -666,6 +667,7 @@ public class HouseArray : MonoBehaviour
     void OnHousePressed(InputAction.CallbackContext ctx)
     {
         houseInput = true;
+        lightObject.SetActive(true);
     }
     void OnHouseReleased(InputAction.CallbackContext ctx)
     {

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2039783269154990577}
-  - component: {fileID: 2039783269154990579}
   - component: {fileID: 7233864667618539914}
   m_Layer: 0
   m_Name: Building1
@@ -27,27 +26,13 @@ Transform:
   m_GameObject: {fileID: 2039783269154990582}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6, y: 2.6, z: 2.6}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6977242972235212947}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2039783269154990579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039783269154990582}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e00d3811635c8e745b1fbf9c17a9504b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BuildingAnimator: {fileID: 0}
-  stateInfo: none
 --- !u!114 &7233864667618539914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +65,7 @@ GameObject:
   - component: {fileID: 6303911454041220918}
   - component: {fileID: 8115215329450546172}
   - component: {fileID: 4303158935592651334}
+  - component: {fileID: 6968574200410251378}
   m_Layer: 0
   m_Name: ShortHouse
   m_TagString: Untagged
@@ -172,3 +158,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6968574200410251378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7755186638675505705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e00d3811635c8e745b1fbf9c17a9504b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomIntensity:
+  - {r: 1.9766746, g: 1.9766746, b: 1.9766746, a: 1}
+  - {r: 1.3041189, g: 1.3041189, b: 1.3041189, a: 1}
+  - {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
+  BuildingAnimator: {fileID: 0}
+  targetMaterial: {fileID: 0}
+  stateInfo: none

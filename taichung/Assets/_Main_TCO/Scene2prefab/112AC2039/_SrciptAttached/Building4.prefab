@@ -112,12 +112,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126119401398678393}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e00d3811635c8e745b1fbf9c17a9504b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomIntensity:
+  - {r: 1.9766746, g: 1.9766746, b: 1.9766746, a: 1}
+  - {r: 1.3041189, g: 1.3041189, b: 1.3041189, a: 1}
+  - {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
   BuildingAnimator: {fileID: 0}
+  targetMaterial: {fileID: 0}
   stateInfo: <color=#ff9700>[C# BuildingAnimationControl]</color>
 --- !u!1 &246163179943520548
 GameObject:
@@ -145,8 +150,8 @@ Transform:
   m_GameObject: {fileID: 246163179943520548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.8, y: 2.8, z: 2.8}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 759912351793637827}
   m_Father: {fileID: 0}

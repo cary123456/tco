@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class handtrack : MonoBehaviour
 {
     public GameObject thumbR;
     public bool follow;
+    public VisualEffect CrabBurstVFX;
+    bool isPlayed = false;
+    public float burstDelayTime = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +26,19 @@ public class handtrack : MonoBehaviour
         else
         {
             this.gameObject.GetComponent<Animator>().SetBool("C2P", true);
+            if (!isPlayed)
+            {
+                StartCoroutine(timer(burstDelayTime));
+                isPlayed = true;
+            }
+
         }
-        
+
+    }
+    IEnumerator timer(float time)
+    {
+        yield return new WaitForSeconds(time);
+        CrabBurstVFX.gameObject.SetActive(true);
+        CrabBurstVFX.Play();
     }
 }

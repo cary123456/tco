@@ -61,6 +61,7 @@ public class hotkey : MonoBehaviour
     public KeyCode SeaDownKey;
     public float smooth;
     public float SkyBoxSmooth;
+    public GameObject lightObject;
     Vector3 vec;
 
     [Space]
@@ -671,21 +672,21 @@ public class hotkey : MonoBehaviour
         {
             SeaIsPressed = -1; // 往下
         }
-        else if (ctx.action == I_NewBuildingGrow)
-        { 
-            // 找到所有的 BuildingAnimationControl 組件並觸發動畫
-            buildingAnimationControls = FindObjectsOfType<BuildingAnimationControl>();
-            foreach (var building in buildingAnimationControls)
-            {
-                building.PlayBuildingAnimation();
-            }
-        }
+        // else if (ctx.action == I_NewBuildingGrow)
+        // { 
+        //     // 找到所有的 BuildingAnimationControl 組件並觸發動畫
+        //     buildingAnimationControls = FindObjectsOfType<BuildingAnimationControl>();
+        //     foreach (var building in buildingAnimationControls)
+        //     {
+        //         building.PlayBuildingAnimation();
+        //     }
+        // }
         else if(ctx.action == I_ClearBuilding)
         {
             DeletTagedObjects("building");
             DeletTagedObjects("buildinglo");
             DeletTagedObjects("crabs");
-
+            lightObject.SetActive(false);
             houseArray.emptyBuildArray();
         }
     }

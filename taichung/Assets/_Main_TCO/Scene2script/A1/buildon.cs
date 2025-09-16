@@ -9,8 +9,10 @@ public class buildon : MonoBehaviour
     public GameObject[] buildingposition;
     public GameObject ancor;
     public GameObject[] crab;
+    public Material firstBuildingMaterial;
+    public bool doMaterialAutoAppend = false;
     public bool one;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,14 +30,16 @@ public class buildon : MonoBehaviour
     }
     public void buildinghideoff()
     {
-        Destroy(this.gameObject,1);
+        Destroy(this.gameObject, 1);
     }
 
     public void buildingup()
     {
-        
-        GameObject buildings1 =  Instantiate(building,new Vector3( this.transform.position.x, ancor.transform.position.y, this.transform.position.z), Quaternion.Euler(0f, 0f, 0f));
+
+        GameObject buildings1 = Instantiate(building, new Vector3(this.transform.position.x, ancor.transform.position.y, this.transform.position.z), Quaternion.Euler(0f, 0f, 0f));
+        buildings1.transform.localScale = new(2, 2, 2);
         buildings1.GetComponent<growvalue>().up = true;
+
 
         //buildings[0].GetComponent<growvalue>().up = true;
     }
