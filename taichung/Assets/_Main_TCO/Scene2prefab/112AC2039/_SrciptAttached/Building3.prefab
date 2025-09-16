@@ -117,7 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00d3811635c8e745b1fbf9c17a9504b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomIntensity: []
+  randomIntensity:
+  - {r: 1.9766746, g: 1.9766746, b: 1.9766746, a: 1}
   BuildingAnimator: {fileID: 0}
   targetMaterial: {fileID: 0}
   stateInfo: <color=#ff9700>[C# BuildingAnimationControl]</color>
