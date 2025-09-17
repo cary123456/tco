@@ -175,7 +175,7 @@ public class HouseArray : MonoBehaviour
                     GameObject houses = Instantiate(house[rand], pos.position + new Vector3(Xpos * k + houseoffset, 0, Zpos * k), Quaternion.identity, parenttrans);
                     buildarray[Xpos, Zpos] = 1;
                     houses.transform.Rotate(wordrotate);
-                    houses.transform.localScale = new Vector3(housescale[h], housescale[h], housescale[h]);
+                    //houses.transform.localScale = new Vector3(housescale[h], housescale[h], housescale[h]);
                     buildarraytemp.Add(new Vector2(Xpos, Zpos));
                     buildarraytemp.ToArray();
                     housecount++;

@@ -131,7 +131,7 @@ Material:
     - _ZWriteControl: 0
     - _scale: 1.01
     - _speed: 0.05
-    - _strength: 2
+    - _strength: 1.3
     - _thickness: 1.19
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}

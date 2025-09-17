@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.002555598, g: 0.030212648, b: 0.05087314, a: 1}
+  m_IndirectSpecularColor: {r: 0.0028181938, g: 0.05369558, b: 0.089298956, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2605,10 +2605,7 @@ MonoBehaviour:
   z: 45
   k: 3
   buildpertime: 6
-  housescale:
-  - 1
-  - 0.8
-  - 1.5
+  housescale: []
   crabscale:
   - 2
   - 2.3
@@ -8012,7 +8009,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.4418368, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -10691,10 +10688,7 @@ MonoBehaviour:
   z: 45
   k: 3
   buildpertime: 6
-  housescale:
-  - 1
-  - 0.8
-  - 1.5
+  housescale: []
   crabscale:
   - 2
   - 2.3
@@ -11793,8 +11787,7 @@ MonoBehaviour:
   z: 7
   k: 1
   buildpertime: 1
-  housescale:
-  - 1
+  housescale: []
   crabscale: []
   crabspeed: 0
   bubblescale:
@@ -13096,10 +13089,7 @@ MonoBehaviour:
   z: 41
   k: 6.7
   buildpertime: 6
-  housescale:
-  - 2.8
-  - 3
-  - 3.6
+  housescale: []
   crabscale: []
   crabspeed: 0
   bubblescale: []
