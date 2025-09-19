@@ -304,9 +304,8 @@ public class valuerecueve : NetworkBehaviour
                 {
                     
                     headset.GetComponent<nearest>().closestEnemy.GetComponent<crabmove>().move = true;
-                    headset.GetComponent<nearest>().closestEnemy.GetComponent<buildon>().buildingup();
-
                 }
+                headset.GetComponent<nearest>().closestEnemy.GetComponent<buildon>().buildingup();
                 onetime = true;
             }
                      

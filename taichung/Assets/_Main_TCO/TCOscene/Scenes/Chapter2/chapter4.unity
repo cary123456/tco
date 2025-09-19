@@ -499,6 +499,7 @@ MonoBehaviour:
   SeaDownKey: 0
   smooth: 0
   SkyBoxSmooth: 0
+  lightObject: {fileID: 0}
   I_crab:
     m_Name: I_crab
     m_Type: 0
@@ -676,6 +677,16 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   buildingAnimationControls: []
+  I_ClearBuilding:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  houseArray: {fileID: 0}
 --- !u!4 &356160660
 Transform:
   m_ObjectHideFlags: 0
@@ -1034,6 +1045,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
     m_Type: 0
@@ -1714,6 +1726,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
     m_Type: 0
@@ -1965,6 +1978,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  lightObject: {fileID: 0}
   I_word:
     m_Name: 
     m_Type: 0
@@ -2234,10 +2248,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ba5fea1e35b614cbf6b7627471fc43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  udpPort: 6666
+  udpPort: 9090
   humanModel:
   - {fileID: 183067697}
-  - {fileID: 1254381871}
+  - {fileID: 183067697}
   - {fileID: 183067697}
   - {fileID: 183067697}
   - {fileID: 183067697}
@@ -2467,7 +2481,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8281447, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2785,6 +2799,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  lightObject: {fileID: 0}
   I_word:
     m_Name: 
     m_Type: 0
@@ -3240,6 +3255,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
     m_Type: 0
@@ -3707,6 +3723,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  lightObject: {fileID: 0}
   I_word:
     m_Name: 
     m_Type: 0
@@ -3876,6 +3893,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  lightObject: {fileID: 0}
   I_word:
     m_Name: 
     m_Type: 0
@@ -4127,6 +4145,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
     m_Type: 0
@@ -4492,6 +4511,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
     m_Type: 0

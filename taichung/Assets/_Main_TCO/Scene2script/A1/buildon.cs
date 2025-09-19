@@ -9,6 +9,7 @@ public class buildon : MonoBehaviour
     public GameObject[] buildingposition;
     public GameObject ancor;
     public GameObject[] crab;
+    public GameObject[] head;
     public Material firstBuildingMaterial;
     public bool doMaterialAutoAppend = false;
     public bool one;
@@ -19,6 +20,7 @@ public class buildon : MonoBehaviour
 
         ancor = GameObject.FindGameObjectWithTag("crabancor");
         buildingposition = GameObject.FindGameObjectsWithTag("buildinglo");
+        head = GameObject.FindGameObjectsWithTag("headset");
     }
 
     // Update is called once per frame
@@ -36,8 +38,8 @@ public class buildon : MonoBehaviour
     public void buildingup()
     {
 
-        GameObject buildings1 = Instantiate(building, new Vector3(this.transform.position.x, ancor.transform.position.y, this.transform.position.z), Quaternion.Euler(0f, 0f, 0f));
-        buildings1.transform.localScale = new(2, 2, 2);
+        GameObject buildings1 = Instantiate(building, new Vector3(head[0].transform.position.x, ancor.transform.position.y, head[0].transform.position.z), Quaternion.Euler(0f, 0f, 0f));
+        buildings1.transform.localScale = new(0.3f, 0.3f, 0.3f);
         buildings1.GetComponent<growvalue>().up = true;
 
 
