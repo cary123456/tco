@@ -65,8 +65,7 @@ public class HouseArray : MonoBehaviour
     public bool serverenable;
 
     [Header("Categorized / 整理")]
-    public InputAction I_house;
-    bool houseInput = false;
+    
     public InputAction I_crab;
     bool crabInput = false;
     public InputAction I_bubble;
@@ -77,17 +76,28 @@ public class HouseArray : MonoBehaviour
     public InputAction I_word;
     bool wordInput = false;
     public InputAction I_wordSwitch;
+    [Space]
+    [Tooltip("隨機生成房子")]
+    [SerializeField] InputAction I_house_random;
+    [Tooltip("以頭盔位置生成房子")]
+    [SerializeField] InputAction I_house_atVR;
+    [Tooltip("於指定位置生成房子")]
+    [SerializeField] InputAction I_house_atPoint;
+    bool houseInput = false;
 
     private void OnEnable()
     {
-        I_house.Enable();
+        I_house_random.Enable();
+        I_house_atVR.Enable();
+        I_house_atPoint.Enable();
         I_crab.Enable();
         I_bubble.Enable();
         I_fish.Enable();
         I_word.Enable();
         I_wordSwitch.Enable();
-        I_house.performed += OnHousePressed;
-        I_house.canceled += OnHouseReleased;
+        I_house_random.performed += OnHouseRandomPressed;
+        I_house_atVR.performed += OnHouseAtVRPressed;
+        I_house_atPoint.performed += OnHouseAtPointPressed;
         I_crab.performed += OnCrabPressed;
         I_crab.canceled += OnCrabReleased;
         I_bubble.performed += OnBubbleInputPressed;
@@ -101,14 +111,17 @@ public class HouseArray : MonoBehaviour
 
     private void OnDisable()
     {
-        I_house.Disable();
+        I_house_random.Disable();
+        I_house_atVR.Disable();
+        I_house_atPoint.Disable();
         I_crab.Disable();
         I_bubble.Disable();
         I_fish.Disable();
         I_word.Disable();
         I_wordSwitch.Disable();
-        I_house.performed -= OnHousePressed;
-        I_house.canceled -= OnHouseReleased;
+        I_house_random.performed -= OnHouseRandomPressed;
+        I_house_atVR.performed -= OnHouseAtVRPressed;
+        I_house_atPoint.performed -= OnHouseAtPointPressed;
         I_crab.performed -= OnCrabPressed;
         I_crab.canceled -= OnCrabReleased;
         I_bubble.performed -= OnBubbleInputPressed;
@@ -664,10 +677,23 @@ public class HouseArray : MonoBehaviour
         Gizmos.DrawCube(pos.position + new Vector3((x - 1) * k / 2, 0, (z - 1) * k / 2), new Vector3(x * k, 1, z * k));
     }
 
-    void OnHousePressed(InputAction.CallbackContext ctx)
+    void OnHouseRandomPressed(InputAction.CallbackContext ctx)
     {
+        // 處理隨機房子生成
         houseInput = true;
         lightObject.SetActive(true);
+    }
+
+    void OnHouseAtVRPressed(InputAction.CallbackContext ctx)
+    {
+        // 處理以頭盔位置生成房子
+
+    }
+
+    void OnHouseAtPointPressed(InputAction.CallbackContext ctx)
+    {
+        // 處理於指定位置生成房子
+
     }
     void OnHouseReleased(InputAction.CallbackContext ctx)
     {
