@@ -689,7 +689,6 @@ public class hotkey : MonoBehaviour
             DeletTagedObjects("building");
             DeletTagedObjects("buildinglo");
             DeletTagedObjects("crabs");
-            lightObject.SetActive(false);
             houseArray.emptyBuildArray();
         }
     }

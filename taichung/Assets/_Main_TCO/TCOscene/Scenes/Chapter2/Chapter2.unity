@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0028181938, g: 0.05369558, b: 0.089298956, a: 1}
+  m_IndirectSpecularColor: {r: 0.002555598, g: 0.030212648, b: 0.05087314, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2581,6 +2581,7 @@ MonoBehaviour:
   - {fileID: 6305365181422716240, guid: da4eabc96c0fa354283c813bed038183, type: 3}
   HousePosition: []
   Headset: {fileID: 0}
+  HousePosIndex: 0
   houseenable: 0
   crab:
   - {fileID: 123923147506414471, guid: c32823af10c4c274c876143f52840af8, type: 3}
@@ -4500,7 +4501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504835935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.8, y: 0, z: 199.1}
+  m_LocalPosition: {x: 22.8, y: 0, z: 10.500008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4531,7 +4532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548131848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.7, y: 0, z: 199.1}
+  m_LocalPosition: {x: 12.700001, y: 0, z: 10.500008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6216,7 +6217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800219301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.1, y: 0, z: 209}
+  m_LocalPosition: {x: 15.1, y: 0, z: 20.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7033,7 +7034,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850491506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.1, y: 0, z: -130.3}
+  m_LocalPosition: {x: -5.1, y: 0, z: -60.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7055,6 +7056,7 @@ MonoBehaviour:
   house: []
   HousePosition: []
   Headset: {fileID: 0}
+  HousePosIndex: 0
   houseenable: 1
   crab: []
   crabenable: 0
@@ -7074,7 +7076,7 @@ MonoBehaviour:
   parentcanvas: {fileID: 0}
   wordIO: {fileID: 868587037}
   x: 1
-  z: 10
+  z: 5
   k: 13.4
   buildpertime: 1
   housescale: []
@@ -7729,7 +7731,7 @@ MonoBehaviour:
   m_RenderPostProcessing: 1
   m_Antialiasing: 1
   m_AntialiasingQuality: 2
-  m_StopNaN: 0
+  m_StopNaN: 1
   m_Dithering: 0
   m_ClearDepth: 1
   m_AllowXRRendering: 1
@@ -10349,6 +10351,7 @@ MonoBehaviour:
   - {fileID: 6305365181422716240, guid: da4eabc96c0fa354283c813bed038183, type: 3}
   HousePosition: []
   Headset: {fileID: 0}
+  HousePosIndex: 0
   houseenable: 0
   crab:
   - {fileID: 123923147506414471, guid: c32823af10c4c274c876143f52840af8, type: 3}
@@ -11464,6 +11467,7 @@ MonoBehaviour:
   house: []
   HousePosition: []
   Headset: {fileID: 0}
+  HousePosIndex: 0
   houseenable: 0
   crab: []
   crabenable: 0
@@ -12785,6 +12789,7 @@ MonoBehaviour:
   - {fileID: 800219302}
   - {fileID: 504835936}
   Headset: {fileID: 0}
+  HousePosIndex: 0
   houseenable: 1
   crab: []
   crabenable: 0
@@ -14757,7 +14762,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742784272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5999999, y: 0, z: -118.66002}
+  m_LocalPosition: {x: 0.5999999, y: 0, z: -48.960007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14779,6 +14784,7 @@ MonoBehaviour:
   house: []
   HousePosition: []
   Headset: {fileID: 0}
+  HousePosIndex: 0
   houseenable: 1
   crab: []
   crabenable: 0
@@ -14798,7 +14804,7 @@ MonoBehaviour:
   parentcanvas: {fileID: 0}
   wordIO: {fileID: 868587037}
   x: 1
-  z: 10
+  z: 5
   k: 13.4
   buildpertime: 1
   housescale: []
@@ -15651,7 +15657,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1859498073
 Animator:
   serializedVersion: 4
@@ -17531,7 +17537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &2074646480
 Animator:
   serializedVersion: 4
@@ -17591,7 +17597,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &2074646483
 Canvas:
   m_ObjectHideFlags: 0

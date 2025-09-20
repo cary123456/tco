@@ -14,7 +14,7 @@ public class HouseArray : MonoBehaviour
     public GameObject[] house;
     public Transform[] HousePosition;
     public GameObject Headset;
-    int HousePosIndex = 0;
+    [SerializeField]int HousePosIndex = 0;
     public bool houseenable = true;
     public GameObject[] crab;
     public bool crabenable = false;
@@ -210,9 +210,10 @@ public class HouseArray : MonoBehaviour
         }
 
 
-        if ((fishInput && flag && fishenable && fishflag) || gesturetigger || (fishflag && keepbuild))
+        if ((fishInput && flag && fishenable && fishflag) || (gesturetigger && fishflag) || (fishflag && keepbuild))
         {
             fishflag = false;
+            gesturetigger = false;
             StartCoroutine("Fishtimer");
 
             for (int i = 0; i < buildpertime; i++)
@@ -702,7 +703,7 @@ public class HouseArray : MonoBehaviour
         int rand = Random.Range(0, house.Length);
         GameObject houses = Instantiate(house[rand], pos, Quaternion.identity, parenttrans);
         HousePosIndex++;
-        if (HousePosIndex > HousePosition.Length)
+        if (HousePosIndex >= HousePosition.Length)
         {
             HousePosIndex = 0;
         }

@@ -543,7 +543,15 @@ MonoBehaviour:
     m_Id: f597babc-f227-4ea0-ae55-a85dee1a7755
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 21a2133b-3883-4b38-9d1f-8f0f101bbd9e
+      m_Path: <Keyboard>/o
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_bubble
+      m_Flags: 0
     m_Flags: 0
   I_FadeUI_In:
     m_Name: I_Fade UI_In
@@ -671,7 +679,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 40a25397-cc35-486a-a0f1-57b6f990e0dc
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -681,12 +689,21 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 5e8e8525-90e6-4927-b082-c46c7eed7d11
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
   houseArray: {fileID: 0}
+  I_Light:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e4ee8823-d929-40e6-87db-fcb818d10df9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!4 &356160660
 Transform:
   m_ObjectHideFlags: 0
@@ -930,7 +947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &442483406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,6 +961,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   house: []
+  HousePosition: []
+  Headset: {fileID: 0}
+  HousePosIndex: 0
   houseenable: 0
   crab: []
   crabenable: 0
@@ -1001,15 +1021,6 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
-  I_house:
-    m_Name: I_house
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 6668a4a4-07c0-4f3b-9c39-50ed844ae35e
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   I_crab:
     m_Name: I_crab
     m_Type: 0
@@ -1026,15 +1037,7 @@ MonoBehaviour:
     m_Id: 977caec4-7233-49b7-8e87-e99c12a2fd83
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 68942474-2a0f-4fb2-94cc-e3895f9c8eb5
-      m_Path: <Keyboard>/7
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: I_bubble
-      m_Flags: 0
+    m_SingletonActionBindings: []
     m_Flags: 0
   I_fish:
     m_Name: I_fish
@@ -1060,6 +1063,33 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 5ec57eb6-5791-4991-a828-e65183fb905a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: I_house_random
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 546c1eba-fe57-4ee3-b690-3593bd858c28
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: I_house_at VR
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 02475aac-d453-45d3-84b3-eecc2c1b4a5c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: I_house_at Point
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: ad791277-42d8-4366-b08e-0c481cf578b1
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -1611,7 +1641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &822345081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1625,6 +1655,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   house: []
+  HousePosition: []
+  Headset: {fileID: 0}
+  HousePosIndex: 0
   houseenable: 0
   crab: []
   crabenable: 0
@@ -1682,15 +1715,6 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
-  I_house:
-    m_Name: I_house
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 60c113b5-d381-444b-865c-32cb86ee7259
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   I_crab:
     m_Name: I_crab
     m_Type: 0
@@ -1707,15 +1731,7 @@ MonoBehaviour:
     m_Id: 773f58f8-a49b-439d-b4a6-da83a0f78120
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 68942474-2a0f-4fb2-94cc-e3895f9c8eb5
-      m_Path: <Keyboard>/7
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: I_bubble
-      m_Flags: 0
+    m_SingletonActionBindings: []
     m_Flags: 0
   I_fish:
     m_Name: I_fish
@@ -1741,6 +1757,33 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 8010fcbf-8dab-4ab8-91fa-a84d95ee95c8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: I_house_random
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5930567f-c3ca-4297-bf1a-708c5ddda007
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: I_house_at VR
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: bf59fb02-65eb-4c90-8792-224938c48a77
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: I_house_at Point
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3b4b696c-a183-4584-a559-952475fde941
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -1892,6 +1935,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   house: []
+  HousePosition: []
+  Headset: {fileID: 0}
+  HousePosIndex: 0
   houseenable: 1
   crab: []
   crabenable: 0
@@ -1942,17 +1988,8 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
-  I_house:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 36d6686c-01c9-4238-80e7-50878c9769b5
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   I_crab:
-    m_Name: 
+    m_Name: I_crab
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: ba744b71-b0f6-44a9-bb93-6d5af47ba14b
@@ -1961,7 +1998,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_bubble:
-    m_Name: 
+    m_Name: I_bubble
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: e5ca7659-c096-4b45-a3a3-76dc1846d2e3
@@ -1970,7 +2007,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_fish:
-    m_Name: 
+    m_Name: I_fish
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: cbe67cec-84f7-43a0-94b9-38bab416d1fe
@@ -1980,7 +2017,7 @@ MonoBehaviour:
     m_Flags: 0
   lightObject: {fileID: 0}
   I_word:
-    m_Name: 
+    m_Name: I_word
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 7491122b-d5b1-4d0d-bf85-d24e8a4e3f15
@@ -1989,10 +2026,37 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_wordSwitch:
-    m_Name: 
+    m_Name: I_word Switch
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: add4a99f-75b8-4152-8784-05abc14d064b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: I_house_random
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d5e1e9f8-db91-4422-a868-3df511660c80
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: I_house_at VR
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 48eabcbf-0f60-46d4-94a9-876a9fbe86f9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 80d7dacf-26db-4fdd-bc77-a77fd2016825
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -2703,6 +2767,9 @@ MonoBehaviour:
   - {fileID: 8398855273896792897, guid: ce6e28b231c816e4ca7551cf5366f8e8, type: 3}
   - {fileID: 8398855273896792897, guid: 75611253f7c9e6b4e8492f82f045674f, type: 3}
   - {fileID: 8398855273896792897, guid: 3e07d7a9cc6722d42b02959689d2ab2a, type: 3}
+  HousePosition: []
+  Headset: {fileID: 0}
+  HousePosIndex: 0
   houseenable: 0
   crab:
   - {fileID: 123923147506414471, guid: 8cd5fc17e2c9a0f45bc8fdd41b9d1830, type: 3}
@@ -2763,17 +2830,8 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
-  I_house:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 4f5e0015-c737-4259-8003-77bb1aea80d2
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   I_crab:
-    m_Name: 
+    m_Name: I_crab
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 68286441-a832-43b8-acb3-b9cd067bfead
@@ -2814,6 +2872,33 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: df3762ac-3fbe-424e-b1f1-cc93eb6a7fc7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1bc3281f-4ffb-435b-ab90-f43120e6e854
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9c4fc1b8-a11b-449c-b187-ee43376b315b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6d346781-f0ee-48f4-91cc-c05a5a51053e
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -3166,6 +3251,9 @@ MonoBehaviour:
   - {fileID: 8398855273896792897, guid: ce6e28b231c816e4ca7551cf5366f8e8, type: 3}
   - {fileID: 8398855273896792897, guid: 75611253f7c9e6b4e8492f82f045674f, type: 3}
   - {fileID: 8398855273896792897, guid: 3e07d7a9cc6722d42b02959689d2ab2a, type: 3}
+  HousePosition: []
+  Headset: {fileID: 0}
+  HousePosIndex: 0
   houseenable: 1
   crab:
   - {fileID: 0}
@@ -3219,15 +3307,6 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
-  I_house:
-    m_Name: I_house
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: bddd3f4c-9605-47a8-9cd3-39ec5e597e48
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   I_crab:
     m_Name: I_crab
     m_Type: 0
@@ -3270,6 +3349,33 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 0f257ff1-bd61-4ee1-8d6a-b55b4a09ccfd
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d46262a0-f571-4ca8-865e-f3860162785d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b807952d-14a4-4bbb-bb69-03d060c6b7fa
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 0ca82222-65c8-4515-83bc-fa68bb3be5a9
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -3637,6 +3743,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   house: []
+  HousePosition: []
+  Headset: {fileID: 0}
+  HousePosIndex: 0
   houseenable: 1
   crab: []
   crabenable: 0
@@ -3687,17 +3796,8 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
-  I_house:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: d17cf6b6-a6fa-4290-8749-d457df3dba94
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   I_crab:
-    m_Name: 
+    m_Name: I_crab
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 91247d76-9dd9-4a82-bfea-d3dc611c0351
@@ -3706,7 +3806,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_bubble:
-    m_Name: 
+    m_Name: I_bubble
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 949535bb-21a8-4d21-af39-1c27f57c7eb4
@@ -3715,7 +3815,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_fish:
-    m_Name: 
+    m_Name: I_fish
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 792d52e4-37a2-4628-996e-d6169feb307f
@@ -3725,7 +3825,7 @@ MonoBehaviour:
     m_Flags: 0
   lightObject: {fileID: 0}
   I_word:
-    m_Name: 
+    m_Name: I_word
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: b5c39dc0-20b8-4bce-9273-506b4fc101f9
@@ -3734,10 +3834,37 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_wordSwitch:
-    m_Name: 
+    m_Name: I_word Switch
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: ef4103c9-8bf5-49e0-8620-04c9bdb93886
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: I_house_random
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b29a1a42-b5fc-42eb-80bc-447af642f50b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: I_house_at VR
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f5a7972e-fa32-4b1d-8cf4-a4f6c113f641
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b20b0ff8-7c80-4248-85c8-0c0e0f149ca4
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -3790,6 +3917,9 @@ MonoBehaviour:
   - {fileID: 942065458720007527, guid: 4b577fcc9a54c724db38c690f9c1c6af, type: 3}
   - {fileID: 4286927921934427985, guid: f0319980492e5a5419a8cba130e396b1, type: 3}
   - {fileID: 4286927921934427985, guid: 9b59aed1718b15d45a0ac9ee78b24f99, type: 3}
+  HousePosition: []
+  Headset: {fileID: 0}
+  HousePosIndex: 0
   houseenable: 1
   crab: []
   crabenable: 0
@@ -3857,17 +3987,8 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
-  I_house:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: c5fce7fd-0d81-4023-9931-82b658ba86d9
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   I_crab:
-    m_Name: 
+    m_Name: I_crab
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 7d771fe3-eced-47ab-8d30-ee2a5ac8348e
@@ -3876,7 +3997,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_bubble:
-    m_Name: 
+    m_Name: I_bubble
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: cad0064c-0e28-4f7d-b9b7-afd4a6383c81
@@ -3885,7 +4006,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_fish:
-    m_Name: 
+    m_Name: I_fish
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 24ffa8f2-1183-4b20-8bc9-2fdc4e1c8b32
@@ -3895,7 +4016,7 @@ MonoBehaviour:
     m_Flags: 0
   lightObject: {fileID: 0}
   I_word:
-    m_Name: 
+    m_Name: I_word
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 1839b32a-553d-43f6-b17e-0ef22d805347
@@ -3904,10 +4025,37 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_wordSwitch:
-    m_Name: 
+    m_Name: I_word Switch
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 4b86cb1d-7c1a-4d19-a16d-aaa0b092c265
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: I_house_random
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 990b50e2-03d6-4c4d-8b6a-eae507ee7fe1
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: I_house_at VR
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 55a0d35e-8213-4bfc-98a9-fcf7d8dfceca
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: I_house_at Point
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 449febb6-e081-40b2-af87-b7438cd663c8
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -4030,7 +4178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1906787009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4044,6 +4192,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   house: []
+  HousePosition: []
+  Headset: {fileID: 0}
+  HousePosIndex: 0
   houseenable: 0
   crab: []
   crabenable: 0
@@ -4101,15 +4252,6 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
-  I_house:
-    m_Name: I_house
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 358d9ac6-4dfc-48fb-a735-45c8792cf505
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   I_crab:
     m_Name: I_crab
     m_Type: 0
@@ -4126,15 +4268,7 @@ MonoBehaviour:
     m_Id: dc374f68-0668-4e3b-8bd3-7bae573812b1
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 68942474-2a0f-4fb2-94cc-e3895f9c8eb5
-      m_Path: <Keyboard>/7
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: I_bubble
-      m_Flags: 0
+    m_SingletonActionBindings: []
     m_Flags: 0
   I_fish:
     m_Name: I_fish
@@ -4160,6 +4294,33 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: f9e791f0-6abd-4826-8742-a765109b7a90
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: I_house_random
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: da24fd65-887b-465f-b999-c9b136bf4ad5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: I_house_at VR
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a9c618a8-43f8-496a-b3bd-ca128119ce20
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: I_house_at Point
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 04841adf-2d48-486d-a54c-c32776c8ffb6
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -4195,6 +4356,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_crab.m_Id
+      value: 97f78acc-ee81-4ce5-9004-cd6a95891572
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_fish.m_Id
+      value: ea5dcce9-a7e6-4c88-9f63-674178cc9171
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_word.m_Id
+      value: 8eae0af6-6859-44fb-b155-24eb90edd51b
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_bubble.m_Id
+      value: d86d2f0a-536b-42d7-abba-a3579e8c5da9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: I_crab.m_Name
       value: I_crab
       objectReference: {fileID: 0}
@@ -4215,8 +4392,28 @@ PrefabInstance:
       value: I_bubble
       objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_house_atVR.m_Id
+      value: 0761e63d-f5a1-403d-8345-65ea71dda1fe
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_wordSwitch.m_Id
+      value: e7461ac1-c06a-4a1b-ae60-89ae7422709b
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_house_atVR.m_Name
+      value: I_house_at VR
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_house_random.m_Id
+      value: b7e8b3a3-c48a-4e5a-8beb-32779ab9f9cc
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: I_wordSwitch.m_Name
       value: I_word Switch
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_house_atPoint.m_Id
+      value: df41c445-386a-4019-9bbf-76bd8e063fb8
       objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: bubble.Array.data[0]
@@ -4242,6 +4439,14 @@ PrefabInstance:
       propertyPath: bubble.Array.data[5]
       value: 
       objectReference: {fileID: 7560986564674398035, guid: 447037d8c8806104098b6800603c5a91, type: 3}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_house_random.m_Name
+      value: I_house_random
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_house_atPoint.m_Name
+      value: I_house_at Point
+      objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: I_bubble.m_SingletonActionBindings.Array.size
       value: 1
@@ -4410,6 +4615,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   house: []
+  HousePosition: []
+  Headset: {fileID: 0}
+  HousePosIndex: 0
   houseenable: 0
   crab: []
   crabenable: 0
@@ -4467,15 +4675,6 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
-  I_house:
-    m_Name: I_house
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: f5eeb6e3-64b3-44af-9ee3-34b3a7c151de
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   I_crab:
     m_Name: I_crab
     m_Type: 0
@@ -4526,6 +4725,33 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: f4b72f5f-fa1b-42bd-83a5-d0e3e0ee6a17
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: I_house_random
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 68109b12-66b0-435d-bd78-e79d08b0a19c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: I_house_at VR
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3d589ec2-1a5b-48c9-b06d-d4c5b3a0dc0f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: I_house_at Point
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 450c79ea-f474-49e5-9904-fc0cf21ea740
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
