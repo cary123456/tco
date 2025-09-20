@@ -12,6 +12,9 @@ public class HouseArray : MonoBehaviour
     [Header("Uncategorized / 未整理")]
 
     public GameObject[] house;
+    public Transform[] HousePosition;
+    public GameObject Headset;
+    int HousePosIndex = 0;
     public bool houseenable = true;
     public GameObject[] crab;
     public bool crabenable = false;
@@ -96,6 +99,7 @@ public class HouseArray : MonoBehaviour
         I_word.Enable();
         I_wordSwitch.Enable();
         I_house_random.performed += OnHouseRandomPressed;
+        I_house_random.canceled += OnHouseRandomPressedReleased;
         I_house_atVR.performed += OnHouseAtVRPressed;
         I_house_atPoint.performed += OnHouseAtPointPressed;
         I_crab.performed += OnCrabPressed;
@@ -152,6 +156,7 @@ public class HouseArray : MonoBehaviour
         //     }
         // }
         SetBlock();
+        Headset = GameObject.FindGameObjectWithTag("headset");
 
     }
 
@@ -681,21 +686,29 @@ public class HouseArray : MonoBehaviour
     {
         // 處理隨機房子生成
         houseInput = true;
-        lightObject.SetActive(true);
     }
 
     void OnHouseAtVRPressed(InputAction.CallbackContext ctx)
     {
         // 處理以頭盔位置生成房子
+        Headset.GetComponent<nearest>().closestEnemy.GetComponent<buildon>().buildingup();
 
     }
 
     void OnHouseAtPointPressed(InputAction.CallbackContext ctx)
     {
         // 處理於指定位置生成房子
+        Vector3 pos = HousePosition[HousePosIndex].position;
+        int rand = Random.Range(0, house.Length);
+        GameObject houses = Instantiate(house[rand], pos, Quaternion.identity, parenttrans);
+        HousePosIndex++;
+        if (HousePosIndex > HousePosition.Length)
+        {
+            HousePosIndex = 0;
+        }
 
     }
-    void OnHouseReleased(InputAction.CallbackContext ctx)
+    void OnHouseRandomPressedReleased(InputAction.CallbackContext ctx)
     {
         houseInput = false;
     }

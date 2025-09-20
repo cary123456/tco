@@ -742,6 +742,9 @@ MonoBehaviour:
   buildingposition: []
   ancor: {fileID: 0}
   crab: []
+  head: []
+  firstBuildingMaterial: {fileID: 0}
+  doMaterialAutoAppend: 0
   one: 0
 --- !u!114 &5701673986496032985
 MonoBehaviour:
@@ -804,6 +807,7 @@ MonoBehaviour:
   thumbR: {fileID: 0}
   follow: 0
   CrabBurstVFX: {fileID: 3271294144174374700}
+  burstDelayTime: 1
 --- !u!2083052967 &5792839285151883599
 VisualEffect:
   m_ObjectHideFlags: 0

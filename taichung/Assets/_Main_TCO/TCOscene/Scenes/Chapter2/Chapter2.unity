@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.002555598, g: 0.030212648, b: 0.05087314, a: 1}
+  m_IndirectSpecularColor: {r: 0.0028181938, g: 0.05369558, b: 0.089298956, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2579,6 +2579,8 @@ MonoBehaviour:
   - {fileID: 5792839285151883588, guid: 63e8a2372e427224c98741739e6d911c, type: 3}
   - {fileID: 2655429697686084108, guid: 12ff10db160f35c4fb69a728fffc40d3, type: 3}
   - {fileID: 6305365181422716240, guid: da4eabc96c0fa354283c813bed038183, type: 3}
+  HousePosition: []
+  Headset: {fileID: 0}
   houseenable: 0
   crab:
   - {fileID: 123923147506414471, guid: c32823af10c4c274c876143f52840af8, type: 3}
@@ -2639,15 +2641,6 @@ MonoBehaviour:
   - {fileID: 1096450222}
   - {fileID: 1192974049}
   serverenable: 0
-  I_house:
-    m_Name: I_house
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 11b464c7-1910-43a7-a8ca-123bae355205
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   I_crab:
     m_Name: I_crab
     m_Type: 0
@@ -2690,6 +2683,33 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 234f30ed-30c1-4ec9-93fb-fae8b1083ab5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5596915f-c39b-4ea2-88ae-0cc43dd049b2
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d58f3c13-fb03-4473-af9b-15d40ba4f8b6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7f637e78-afe9-49d7-99ea-903a97725e5a
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -4456,6 +4476,68 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &504835935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 504835936}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &504835936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504835935}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.8, y: 0, z: 199.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1587057817}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &548131848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 548131849}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &548131849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548131848}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.7, y: 0, z: 199.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1587057817}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &559380027
 GameObject:
   m_ObjectHideFlags: 0
@@ -4674,7 +4756,15 @@ MonoBehaviour:
     m_Id: ded1a77a-1b41-4267-a493-22aa9da3de1d
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 6391cce7-7f75-4e24-8f19-85a8518527d3
+      m_Path: <Keyboard>/p
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_around
+      m_Flags: 0
     m_Flags: 0
   I_fish:
     m_Name: I_fish
@@ -4813,6 +4903,23 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
   houseArray: {fileID: 1587057818}
+  I_Light:
+    m_Name: I_Light
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9f8f7ccd-877d-4997-816d-d32122d1399a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 2336058c-a1f6-4dfc-882e-9fc13d6fd2eb
+      m_Path: <Keyboard>/l
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Light
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &581448327 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 165006a9efbe91c4cbc735e4a6041764, type: 3}
@@ -6085,6 +6192,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7560462082760531159, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
   m_PrefabInstance: {fileID: 1743812894}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &800219301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 800219302}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &800219302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800219301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.1, y: 0, z: 209}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1587057817}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &804395307
 GameObject:
   m_ObjectHideFlags: 0
@@ -6803,6 +6941,7 @@ MonoBehaviour:
   buildingposition: []
   ancor: {fileID: 0}
   crab: []
+  head: []
   firstBuildingMaterial: {fileID: 0}
   doMaterialAutoAppend: 0
   one: 0
@@ -6894,7 +7033,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850491506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.1, y: 0, z: -535.5}
+  m_LocalPosition: {x: -5.1, y: 0, z: -130.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6914,6 +7053,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   house: []
+  HousePosition: []
+  Headset: {fileID: 0}
   houseenable: 1
   crab: []
   crabenable: 0
@@ -6933,7 +7074,7 @@ MonoBehaviour:
   parentcanvas: {fileID: 0}
   wordIO: {fileID: 868587037}
   x: 1
-  z: 40
+  z: 10
   k: 13.4
   buildpertime: 1
   housescale: []
@@ -6966,15 +7107,6 @@ MonoBehaviour:
   - {fileID: 1096450222}
   - {fileID: 1192974049}
   serverenable: 0
-  I_house:
-    m_Name: I_house
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 5bc5fb83-aa95-42fb-8226-2fbaa6fa6315
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   I_crab:
     m_Name: I_crab
     m_Type: 0
@@ -7025,6 +7157,33 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 9016b843-c7a9-44b1-859f-5ff4a079ab64
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: I_house_random
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5aa47b64-b59c-4bdc-a82a-31d2cf6c9a90
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: I_house_at VR
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 61d6597a-1706-419a-95f7-e87f9cc1dda6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: I_house_at Point
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: fcc91d8d-e9d3-40c7-a253-2eeb375087b4
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -7535,7 +7694,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -10188,6 +10347,8 @@ MonoBehaviour:
   - {fileID: 5792839285151883588, guid: 63e8a2372e427224c98741739e6d911c, type: 3}
   - {fileID: 2655429697686084108, guid: 12ff10db160f35c4fb69a728fffc40d3, type: 3}
   - {fileID: 6305365181422716240, guid: da4eabc96c0fa354283c813bed038183, type: 3}
+  HousePosition: []
+  Headset: {fileID: 0}
   houseenable: 0
   crab:
   - {fileID: 123923147506414471, guid: c32823af10c4c274c876143f52840af8, type: 3}
@@ -10248,15 +10409,6 @@ MonoBehaviour:
   - {fileID: 1096450222}
   - {fileID: 1192974049}
   serverenable: 0
-  I_house:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: e0f9222a-1468-43c4-bf08-2ab408bcdb54
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   I_crab:
     m_Name: 
     m_Type: 0
@@ -10299,6 +10451,33 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: bd3c286c-d8f7-40d8-bf77-d2599a539216
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: c0661315-aa99-4310-8b63-6bf1d9a5c66f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 68b622d7-e5b7-4568-a0c1-b8d3a61c6c8d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9b6d2aaf-493d-4670-8477-4aa396a50652
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -11283,6 +11462,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   house: []
+  HousePosition: []
+  Headset: {fileID: 0}
   houseenable: 0
   crab: []
   crabenable: 0
@@ -11347,20 +11528,11 @@ MonoBehaviour:
   nearest: {fileID: 0}
   serverWord: []
   serverenable: 0
-  I_house:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   I_crab:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: db1d7ac9-9661-4ba0-a88d-3a55a9cf93b2
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -11369,7 +11541,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 5162f0e3-4d40-4e85-b7e3-d3d357ef3d7a
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -11378,7 +11550,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 9f749ef6-c05f-41bb-acdb-8c928c829940
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -11388,7 +11560,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 1bcc24d1-3cdb-4c29-8a99-f8357c6c7b74
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -11397,7 +11569,34 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: f2093b01-07d1-4d17-baa9-38abb434790d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 2a58fbcd-70d3-42bc-9ad7-c607c7584221
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: eed7515a-5f59-4b46-8bc7-4211957e8b89
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f85ba706-8c92-4ec2-96ac-67641a62e5da
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -12553,10 +12752,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587057816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21, y: 0, z: -217.7}
+  m_LocalPosition: {x: -21, y: 0, z: -27.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 548131849}
+  - {fileID: 800219302}
+  - {fileID: 504835936}
   m_Father: {fileID: 559380029}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12578,6 +12780,11 @@ MonoBehaviour:
   - {fileID: 4023711829914892742, guid: e9fa62e35c6c52641b10d0a7065f3624, type: 3}
   - {fileID: 246163179943520548, guid: 5800a8b8ab5ef9d45b4f86bb4cf8b685, type: 3}
   - {fileID: 4135867358219730922, guid: 19631d13e5a9df24794fc425f98f37a0, type: 3}
+  HousePosition:
+  - {fileID: 548131849}
+  - {fileID: 800219302}
+  - {fileID: 504835936}
+  Headset: {fileID: 0}
   houseenable: 1
   crab: []
   crabenable: 0
@@ -12612,7 +12819,7 @@ MonoBehaviour:
   parentcanvas: {fileID: 868587038}
   wordIO: {fileID: 868587037}
   x: 7
-  z: 41
+  z: 6
   k: 6.7
   buildpertime: 6
   housescale: []
@@ -12629,7 +12836,7 @@ MonoBehaviour:
   offset: 0.35
   buildarraytemp: []
   blockhouseX: 03000000
-  blockhouseZ: 24000000230000000d0000000e000000
+  blockhouseZ: 
   bubbleflag: 0
   gesturetigger: 0
   flip: 0
@@ -12645,23 +12852,6 @@ MonoBehaviour:
   - {fileID: 1096450222}
   - {fileID: 1192974049}
   serverenable: 1
-  I_house:
-    m_Name: I_house
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 2e520b38-f4e4-45e2-b8bc-7d96e9d2f6cf
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: f9ebc852-a304-448e-8adb-85683f4817a5
-      m_Path: <Keyboard>/b
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: I_house
-      m_Flags: 0
-    m_Flags: 0
   I_crab:
     m_Name: I_crab
     m_Type: 0
@@ -12715,6 +12905,57 @@ MonoBehaviour:
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: I_house_random
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: c5254c72-c0a4-49ac-aa21-f54826919740
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: ed5dfe84-6aba-45c2-8491-0b2c18464ef2
+      m_Path: <Keyboard>/b
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_house_random
+      m_Flags: 0
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: I_house_at VR
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9fc2c34d-5a28-47ae-896e-48a89f0fe8d3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 6676da16-ea7c-4459-bd27-bae206588de1
+      m_Path: <Keyboard>/v
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_house_at VR
+      m_Flags: 0
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: I_house_at Point
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d7a6cace-b640-4f1d-8f89-279342f45de6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: fa19adac-47e7-4166-9295-d8a92ba3ac4e
+      m_Path: <Keyboard>/c
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_house_at Point
+      m_Flags: 0
     m_Flags: 0
 --- !u!1 &1595766407
 GameObject:
@@ -14516,7 +14757,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742784272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5999999, y: 0, z: -523.86}
+  m_LocalPosition: {x: 0.5999999, y: 0, z: -118.66002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14536,6 +14777,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   house: []
+  HousePosition: []
+  Headset: {fileID: 0}
   houseenable: 1
   crab: []
   crabenable: 0
@@ -14555,7 +14798,7 @@ MonoBehaviour:
   parentcanvas: {fileID: 0}
   wordIO: {fileID: 868587037}
   x: 1
-  z: 40
+  z: 10
   k: 13.4
   buildpertime: 1
   housescale: []
@@ -14588,15 +14831,6 @@ MonoBehaviour:
   - {fileID: 1096450222}
   - {fileID: 1192974049}
   serverenable: 0
-  I_house:
-    m_Name: I_house
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 5bc5fb83-aa95-42fb-8226-2fbaa6fa6315
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   I_crab:
     m_Name: I_crab
     m_Type: 0
@@ -14647,6 +14881,33 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 9016b843-c7a9-44b1-859f-5ff4a079ab64
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: I_house_random
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a9445e24-c4be-47e1-93c2-0186074af502
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: I_house_at VR
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 803ea49a-6683-46b7-9760-380c69ed420d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: I_house_at Point
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 40be4f2b-5a08-4ac2-b3ea-02eb6a0e050e
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -14715,12 +14976,24 @@ PrefabInstance:
       value: I_bubble
       objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_house_atVR.m_Id
+      value: 1dc58406-325c-447d-81df-dd5343e252d2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: I_wordSwitch.m_Id
       value: 25c7d07d-fbd0-4e7c-b9d2-23bf7ba4f376
       objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_house_random.m_Id
+      value: acd45806-dbea-4b23-8824-cbcf2f2d3207
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: I_wordSwitch.m_Name
       value: I_word Switch
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_house_atPoint.m_Id
+      value: 7b813229-f8c9-4c5c-94b2-1ca6652930a9
       objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: bubble.Array.data[0]
@@ -15378,7 +15651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1859498073
 Animator:
   serializedVersion: 4
@@ -17258,7 +17531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &2074646480
 Animator:
   serializedVersion: 4
@@ -17318,7 +17591,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &2074646483
 Canvas:
   m_ObjectHideFlags: 0

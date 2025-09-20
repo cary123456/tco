@@ -112,6 +112,7 @@ public class hotkey : MonoBehaviour
     [SerializeField] InputAction I_ClearBuilding;
     [Tooltip("建築物生成之腳本，刪除場上建築物時使用")]
     [SerializeField] HouseArray houseArray;
+    public InputAction I_Light;
 
     private void OnEnable()
     {
@@ -133,6 +134,7 @@ public class hotkey : MonoBehaviour
         I_SeaSlider.Enable();
         I_NewBuildingGrow.Enable();
         I_ClearBuilding.Enable();
+        I_Light.Enable();
         I_crab.performed += OnCrabPressed;
         I_crab.canceled += OnCrabReleased;
         I_DelCrab.performed += OnDelCrabPressed;
@@ -155,6 +157,7 @@ public class hotkey : MonoBehaviour
         I_SeaSlider.performed += OnSeaPressed;
         I_NewBuildingGrow.performed += OnInputStarted;
         I_ClearBuilding.performed += OnInputStarted;
+        I_Light.performed += OnLightPressed;
     }
 
     private void OnDisable()
@@ -762,6 +765,10 @@ public class hotkey : MonoBehaviour
         {
             Destroy(obj);
         }
+    }
+    public void OnLightPressed(InputAction.CallbackContext ctx)
+    {
+        lightObject.SetActive(!lightObject.activeSelf);
     }
 
     /// <summary>
