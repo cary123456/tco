@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.002555598, g: 0.030212648, b: 0.05087314, a: 1}
+  m_IndirectSpecularColor: {r: 0.0028181938, g: 0.05369558, b: 0.089298956, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2198,6 +2198,8 @@ MonoBehaviour:
   playerbubble: {fileID: 0}
   rebound: 0
   i: 0
+  EnablingCrabInstantiate: 1
+  hotkeyCS: {fileID: 0}
 --- !u!4 &191333790
 Transform:
   m_ObjectHideFlags: 0
@@ -2689,7 +2691,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_house_random:
-    m_Name: 
+    m_Name: I_house_random
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 5596915f-c39b-4ea2-88ae-0cc43dd049b2
@@ -2698,7 +2700,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_house_atVR:
-    m_Name: 
+    m_Name: I_house_at VR
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: d58f3c13-fb03-4473-af9b-15d40ba4f8b6
@@ -2707,7 +2709,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_house_atPoint:
-    m_Name: 
+    m_Name: I_house_at Point
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 7f637e78-afe9-49d7-99ea-903a97725e5a
@@ -2715,6 +2717,9 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
 --- !u!1 &297559813
 GameObject:
   m_ObjectHideFlags: 0
@@ -4908,19 +4913,68 @@ MonoBehaviour:
     m_Name: I_Light
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 9f8f7ccd-877d-4997-816d-d32122d1399a
+    m_Id: baf1df56-61bb-48fe-a840-18b995380612
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_EnablingBuildingInstantiate:
+    m_Name: I_Enabling Building Instantiate
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e12345c9-106a-41c6-96c8-fe8e6eb8fbd8
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 2336058c-a1f6-4dfc-882e-9fc13d6fd2eb
-      m_Path: <Keyboard>/l
+      m_Id: 4cad8cad-e862-4ec0-b63d-c49475d14668
+      m_Path: <MidiDevice>/note045
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: I_Light
+      m_Action: I_Enabling Building Instantiate
       m_Flags: 0
     m_Flags: 0
+  I_EnablingCrabInstantiate:
+    m_Name: I_Enabling Crab Instantiate
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 56c5afeb-e188-41f4-9a53-53c51f602ee0
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 7d4f0cdc-fa17-4acc-b8f3-70432bb6936e
+      m_Path: <MidiDevice>/note047
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Enabling Crab Instantiate
+      m_Flags: 0
+    m_Flags: 0
+  I_EnablingFishmanInstantiate:
+    m_Name: I_Enabling Fishman Instantiate
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 4a0ee8d0-34c7-4fe4-835d-fc2a6789d717
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 67ef9c2a-fd4e-41f3-b523-6c776339899b
+      m_Path: <MidiDevice>/note049
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Enabling Fishman Instantiate
+      m_Flags: 0
+    m_Flags: 0
+  EnablingBuildingInstantiate: 1
+  buildon_CS: []
+  EnablingCrabInstantiate: 1
+  dynamicGeneration_CS: {fileID: 191333789}
+  EnablingFishmanInstantiate: 1
+  houseArray_CS: []
 --- !u!1 &581448327 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 165006a9efbe91c4cbc735e4a6041764, type: 3}
@@ -6946,6 +7000,8 @@ MonoBehaviour:
   firstBuildingMaterial: {fileID: 0}
   doMaterialAutoAppend: 0
   one: 0
+  EnablingBuildingInstatiate: 1
+  hotkeyCS: {fileID: 0}
 --- !u!1 &847414481
 GameObject:
   m_ObjectHideFlags: 0
@@ -7190,6 +7246,9 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
 --- !u!1 &868587037
 GameObject:
   m_ObjectHideFlags: 0
@@ -10413,7 +10472,7 @@ MonoBehaviour:
   - {fileID: 1192974049}
   serverenable: 0
   I_crab:
-    m_Name: 
+    m_Name: I_crab
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 5ce56c35-21a3-409e-9747-1a641eb36c0a
@@ -10422,7 +10481,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_bubble:
-    m_Name: 
+    m_Name: I_bubble
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: f5773ef3-1d4e-410b-8814-52817249014a
@@ -10431,7 +10490,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_fish:
-    m_Name: 
+    m_Name: I_fish
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 35ed51db-4a2a-4f14-88aa-8d1f804aa3c0
@@ -10441,7 +10500,7 @@ MonoBehaviour:
     m_Flags: 0
   lightObject: {fileID: 0}
   I_word:
-    m_Name: 
+    m_Name: I_word
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 976c3a95-c839-41ab-824f-86ae6018b44d
@@ -10450,7 +10509,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_wordSwitch:
-    m_Name: 
+    m_Name: I_word Switch
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: bd3c286c-d8f7-40d8-bf77-d2599a539216
@@ -10459,7 +10518,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_house_random:
-    m_Name: 
+    m_Name: I_house_random
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: c0661315-aa99-4310-8b63-6bf1d9a5c66f
@@ -10468,7 +10527,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_house_atVR:
-    m_Name: 
+    m_Name: I_house_at VR
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 68b622d7-e5b7-4568-a0c1-b8d3a61c6c8d
@@ -10477,7 +10536,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_house_atPoint:
-    m_Name: 
+    m_Name: I_house_at Point
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 9b6d2aaf-493d-4670-8477-4aa396a50652
@@ -10485,6 +10544,9 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
 --- !u!1 &1326060590
 GameObject:
   m_ObjectHideFlags: 0
@@ -11605,6 +11667,9 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
 --- !u!4 &1487645967 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7816375564385254655, guid: 9bc2de8eb849d1a4aa9d08fbf5984e50, type: 3}
@@ -12784,10 +12849,7 @@ MonoBehaviour:
   - {fileID: 4023711829914892742, guid: e9fa62e35c6c52641b10d0a7065f3624, type: 3}
   - {fileID: 246163179943520548, guid: 5800a8b8ab5ef9d45b4f86bb4cf8b685, type: 3}
   - {fileID: 4135867358219730922, guid: 19631d13e5a9df24794fc425f98f37a0, type: 3}
-  HousePosition:
-  - {fileID: 548131849}
-  - {fileID: 800219302}
-  - {fileID: 504835936}
+  HousePosition: []
   Headset: {fileID: 0}
   HousePosIndex: 0
   houseenable: 1
@@ -12962,6 +13024,9 @@ MonoBehaviour:
       m_Action: I_house_at Point
       m_Flags: 0
     m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
 --- !u!1 &1595766407
 GameObject:
   m_ObjectHideFlags: 0
@@ -14918,6 +14983,9 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
 --- !u!1001 &1743812894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14990,6 +15058,10 @@ PrefabInstance:
       value: 25c7d07d-fbd0-4e7c-b9d2-23bf7ba4f376
       objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_house_atVR.m_Name
+      value: I_house_at VR
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: I_house_random.m_Id
       value: acd45806-dbea-4b23-8824-cbcf2f2d3207
       objectReference: {fileID: 0}
@@ -15026,8 +15098,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7560986564674398035, guid: 447037d8c8806104098b6800603c5a91, type: 3}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_house_random.m_Name
+      value: I_house_random
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: serverWord.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_house_atPoint.m_Name
+      value: I_house_at Point
       objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: serverWord.Array.data[0]

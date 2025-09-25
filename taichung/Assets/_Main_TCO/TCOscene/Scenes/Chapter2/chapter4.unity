@@ -387,6 +387,8 @@ MonoBehaviour:
   playerbubble: {fileID: 183067699}
   rebound: 5
   i: 0
+  EnablingCrabInstantiate: 1
+  hotkeyCS: {fileID: 0}
 --- !u!1 &190928722
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +678,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   I_NewBuildingGrow:
-    m_Name: 
+    m_Name: I_New Building Grow
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 40a25397-cc35-486a-a0f1-57b6f990e0dc
@@ -686,7 +688,7 @@ MonoBehaviour:
     m_Flags: 0
   buildingAnimationControls: []
   I_ClearBuilding:
-    m_Name: 
+    m_Name: I_Clear Building
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 5e8e8525-90e6-4927-b082-c46c7eed7d11
@@ -696,7 +698,7 @@ MonoBehaviour:
     m_Flags: 0
   houseArray: {fileID: 0}
   I_Light:
-    m_Name: 
+    m_Name: I_Light
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: e4ee8823-d929-40e6-87db-fcb818d10df9
@@ -704,6 +706,39 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_EnablingBuildingInstantiate:
+    m_Name: I_Enabling Building Instantiate
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: c00b9cd6-e237-4fd6-a3bb-57f6a763ddfb
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_EnablingCrabInstantiate:
+    m_Name: I_Enabling Crab Instantiate
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a30682d9-eb85-4d66-9a78-c01d2e3b5c33
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_EnablingFishmanInstantiate:
+    m_Name: I_Enabling Fishman Instantiate
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6e0f481e-2b0e-4456-b59d-7ff935ade472
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  EnablingBuildingInstantiate: 1
+  buildon_CS: []
+  EnablingCrabInstantiate: 1
+  dynamicGeneration_CS: {fileID: 0}
+  EnablingFishmanInstantiate: 1
+  houseArray_CS: []
 --- !u!4 &356160660
 Transform:
   m_ObjectHideFlags: 0
@@ -862,6 +897,8 @@ MonoBehaviour:
   playerbubble: {fileID: 183067699}
   rebound: 10
   i: 0
+  EnablingCrabInstantiate: 1
+  hotkeyCS: {fileID: 0}
 --- !u!1001 &393120311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1094,6 +1131,9 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
 --- !u!4 &442483407
 Transform:
   m_ObjectHideFlags: 0
@@ -1445,6 +1485,8 @@ MonoBehaviour:
   playerbubble: {fileID: 183067699}
   rebound: 10
   i: 0
+  EnablingCrabInstantiate: 1
+  hotkeyCS: {fileID: 0}
 --- !u!4 &579312179 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7560462082760531159, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
@@ -1590,6 +1632,8 @@ MonoBehaviour:
   playerbubble: {fileID: 183067699}
   rebound: 10
   i: 0
+  EnablingCrabInstantiate: 1
+  hotkeyCS: {fileID: 0}
 --- !u!1 &680104917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,6 +1832,9 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
 --- !u!4 &822345082
 Transform:
   m_ObjectHideFlags: 0
@@ -2061,6 +2108,9 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
 --- !u!1001 &862388122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2702,6 +2752,8 @@ MonoBehaviour:
   playerbubble: {fileID: 1254381878}
   rebound: 5
   i: 0
+  EnablingCrabInstantiate: 1
+  hotkeyCS: {fileID: 0}
 --- !u!4 &1254381878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
@@ -2903,6 +2955,9 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
 --- !u!1 &1321578398
 GameObject:
   m_ObjectHideFlags: 0
@@ -3186,6 +3241,8 @@ MonoBehaviour:
   playerbubble: {fileID: 0}
   rebound: 0
   i: 0
+  EnablingCrabInstantiate: 1
+  hotkeyCS: {fileID: 0}
 --- !u!4 &1563832035
 Transform:
   m_ObjectHideFlags: 0
@@ -3380,6 +3437,9 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
 --- !u!1 &1576929228
 GameObject:
   m_ObjectHideFlags: 0
@@ -3515,6 +3575,8 @@ MonoBehaviour:
   playerbubble: {fileID: 183067699}
   rebound: 10
   i: 0
+  EnablingCrabInstantiate: 1
+  hotkeyCS: {fileID: 0}
 --- !u!1 &1585629699
 GameObject:
   m_ObjectHideFlags: 0
@@ -3869,6 +3931,9 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
 --- !u!1 &1798320469
 GameObject:
   m_ObjectHideFlags: 0
@@ -4060,6 +4125,9 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
 --- !u!1 &1810790330
 GameObject:
   m_ObjectHideFlags: 0
@@ -4325,6 +4393,9 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
 --- !u!4 &1906787010
 Transform:
   m_ObjectHideFlags: 0
@@ -4756,6 +4827,9 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
 --- !u!4 &2054776254
 Transform:
   m_ObjectHideFlags: 0

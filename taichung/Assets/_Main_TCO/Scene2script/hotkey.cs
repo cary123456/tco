@@ -113,6 +113,29 @@ public class hotkey : MonoBehaviour
     [Tooltip("建築物生成之腳本，刪除場上建築物時使用")]
     [SerializeField] HouseArray houseArray;
     public InputAction I_Light;
+    [Space]
+    [Header("控制是否生成建築、螃蟹、漁人\n防止誤觸為目的，可同時監控狀態")]
+    [Tooltip("是否允許生成房子的按鍵")]
+    [SerializeField] InputAction I_EnablingBuildingInstantiate;
+    [Tooltip("是否允許生成螃蟹的按鍵")]
+    [SerializeField] InputAction I_EnablingCrabInstantiate;
+    [Tooltip("是否允許生成漁人的按鍵")]
+    [SerializeField] InputAction I_EnablingFishmanInstantiate;
+    [Space]
+    [Tooltip("是否允許生成房子")]
+    [SerializeField] public bool EnablingBuildingInstantiate = true;
+    [Tooltip("此腳本控制建築物生成，由於腳本會被動態生成，因次此腳本會動態抓取")]
+    [SerializeField] public buildon[] buildon_CS;
+    [Tooltip("是否允許生成螃蟹")]
+    [SerializeField] public bool EnablingCrabInstantiate = true;
+    [Tooltip("生成螃蟹的腳本")]
+    public dynamicGeneration dynamicGeneration_CS;
+    [Tooltip("是否允許生成漁人")]
+    [SerializeField] public bool EnablingFishmanInstantiate = true;
+    [Tooltip("生成漁人的腳本，此腳本會動態抓取")]
+    public HouseArray[] houseArray_CS;
+    
+
 
     private void OnEnable()
     {
@@ -135,6 +158,9 @@ public class hotkey : MonoBehaviour
         I_NewBuildingGrow.Enable();
         I_ClearBuilding.Enable();
         I_Light.Enable();
+        I_EnablingBuildingInstantiate.Enable();
+        I_EnablingCrabInstantiate.Enable();
+        I_EnablingFishmanInstantiate.Enable();
         I_crab.performed += OnCrabPressed;
         I_crab.canceled += OnCrabReleased;
         I_DelCrab.performed += OnDelCrabPressed;
@@ -158,6 +184,9 @@ public class hotkey : MonoBehaviour
         I_NewBuildingGrow.performed += OnInputStarted;
         I_ClearBuilding.performed += OnInputStarted;
         I_Light.performed += OnLightPressed;
+        I_EnablingBuildingInstantiate.started += OnInputStarted;
+        I_EnablingCrabInstantiate.started += OnInputStarted;
+        I_EnablingFishmanInstantiate.started += OnInputStarted;
     }
 
     private void OnDisable()
@@ -180,6 +209,9 @@ public class hotkey : MonoBehaviour
         I_SeaSlider.Disable();
         I_NewBuildingGrow.Disable();
         I_ClearBuilding.Disable();
+        I_EnablingBuildingInstantiate.Disable();
+        I_EnablingCrabInstantiate.Disable();
+        I_EnablingFishmanInstantiate.Disable();
         I_crab.performed -= OnCrabPressed;
         I_crab.canceled -= OnCrabReleased;
         I_DelCrab.performed -= OnDelCrabPressed;
@@ -202,6 +234,9 @@ public class hotkey : MonoBehaviour
         I_SeaSlider.performed -= OnSeaPressed;
         I_NewBuildingGrow.performed -= OnInputStarted;
         I_ClearBuilding.performed -= OnInputStarted;
+        I_EnablingBuildingInstantiate.started -= OnInputStarted;
+        I_EnablingCrabInstantiate.started -= OnInputStarted;
+        I_EnablingFishmanInstantiate.started -= OnInputStarted;
     }
 
 
@@ -209,6 +244,7 @@ public class hotkey : MonoBehaviour
     void Start()
     {
         crabcount = -1;
+        houseArray_CS = FindObjectsOfType<HouseArray>();
     }
 
     // Update is called once per frame
@@ -216,6 +252,8 @@ public class hotkey : MonoBehaviour
     {
         crabs = GameObject.FindGameObjectsWithTag("crab");
         player = GameObject.FindGameObjectsWithTag("Player");
+        buildon_CS = GameObject.FindObjectsOfType<buildon>();
+
 
         // crabfollow 控制已由 InputAction 處理
         if (crabfollow)
@@ -684,12 +722,41 @@ public class hotkey : MonoBehaviour
         //         building.PlayBuildingAnimation();
         //     }
         // }
-        else if(ctx.action == I_ClearBuilding)
+        else if (ctx.action == I_ClearBuilding)
         {
             DeletTagedObjects("building");
             DeletTagedObjects("buildinglo");
             DeletTagedObjects("crabs");
             houseArray.emptyBuildArray();
+        }
+        else if (ctx.action == I_EnablingBuildingInstantiate)
+        {
+            EnablingBuildingInstantiate = !EnablingBuildingInstantiate;
+            foreach (buildon buildonScripts in buildon_CS)
+            {
+                buildonScripts.EnablingBuildingInstatiate = EnablingBuildingInstantiate;
+            }
+            foreach(HouseArray houseArrays in houseArray_CS)
+            {
+                houseArrays.EnablingBuildingInstantiate = EnablingBuildingInstantiate;
+            }
+        }
+        else if (ctx.action == I_EnablingCrabInstantiate)
+        {
+            EnablingCrabInstantiate = !EnablingCrabInstantiate;
+            dynamicGeneration_CS.EnablingCrabInstantiate = EnablingCrabInstantiate;
+            foreach (HouseArray houseArrays in houseArray_CS)
+            {
+                houseArrays.EnablingCrabInstantiate = EnablingCrabInstantiate;
+            }
+        }
+        else if (ctx.action == I_EnablingFishmanInstantiate)
+        {
+            EnablingFishmanInstantiate = !EnablingFishmanInstantiate;
+            foreach (HouseArray houseArrays in houseArray_CS)
+            {
+                houseArrays.EnablingFishmanInstantiate = EnablingFishmanInstantiate;
+            }
         }
     }
 

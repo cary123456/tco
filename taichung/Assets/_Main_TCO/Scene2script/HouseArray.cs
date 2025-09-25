@@ -87,6 +87,17 @@ public class HouseArray : MonoBehaviour
     [Tooltip("於指定位置生成房子")]
     [SerializeField] InputAction I_house_atPoint;
     bool houseInput = false;
+    [Space]
+    [Tooltip("是否允許生成螃蟹")]
+    [SerializeField] public bool EnablingCrabInstantiate = true;
+    [Tooltip("是否允許生成漁人")]
+    [SerializeField] public bool EnablingFishmanInstantiate = true;
+    [Tooltip("是否允許生成房子")]
+    [SerializeField] public bool EnablingBuildingInstantiate = true;
+    hotkey hotkeyCS;
+    bool enablingBuildingInstantiate;
+    bool enablingCrabInstantiate;
+    bool enablingFishmanInstantiate;
 
     private void OnEnable()
     {
@@ -111,6 +122,9 @@ public class HouseArray : MonoBehaviour
         I_word.performed += OnWordPressed;
         I_word.canceled += OnWordReleased;
         I_wordSwitch.performed += OnWordswitchPressed;
+        hotkeyCS = FindObjectOfType<hotkey>();
+        if(hotkeyCS == null)
+            Debug.LogError("[HouseArray.cs] @ " +  this.name +" : hotkey.cs未被指定");
     }
 
     private void OnDisable()
@@ -158,140 +172,173 @@ public class HouseArray : MonoBehaviour
         SetBlock();
         Headset = GameObject.FindGameObjectWithTag("headset");
 
+        EnablingFishmanInstantiate = hotkeyCS.EnablingFishmanInstantiate;
+        EnablingCrabInstantiate = hotkeyCS.EnablingCrabInstantiate;
+        EnablingBuildingInstantiate = hotkeyCS.EnablingBuildingInstantiate;
+
+        enablingBuildingInstantiate = EnablingBuildingInstantiate;
+        enablingCrabInstantiate = EnablingCrabInstantiate;
+        enablingFishmanInstantiate = EnablingFishmanInstantiate;
     }
 
     void Update()
     {
         bool flag = true;
+        
 
-        if ((houseInput && flag && houseenable) || (keepbuild && houseflag))
+        if(enablingBuildingInstantiate != EnablingBuildingInstantiate)
         {
-            keepbuild = true;
-            houseflag = false;
-            houseenable = false;
-            StartCoroutine("Housetimer");
-
-            if (housecount >= x * z - blockhouseZ.Length * x - blockhouseX.Length * z + blockhouseX.Length * blockhouseZ.Length)
-            {
-                keepbuild = false;
-                houseenable = true;
-            }
-            for (int i = 0; i < buildpertime; i++)
-            {
-
-                flag = false;
-
-                float houseoffset = Random.Range(-offset, offset);
-                int Xpos = Random.Range(0, x);
-                int Zpos = Random.Range(0, z);
-                int rand = Random.Range(0, house.Length);
-                int h = Random.Range(0, housescale.Length);
-
-
-                if (buildarray[Xpos, Zpos] != 1)
-                {
-                    GameObject houses = Instantiate(house[rand], pos.position + new Vector3(Xpos * k + houseoffset, 0, Zpos * k), Quaternion.identity, parenttrans);
-                    buildarray[Xpos, Zpos] = 1;
-                    houses.transform.Rotate(wordrotate);
-                    //houses.transform.localScale = new Vector3(housescale[h], housescale[h], housescale[h]);
-                    buildarraytemp.Add(new Vector2(Xpos, Zpos));
-                    buildarraytemp.ToArray();
-                    housecount++;
-                }
-                else
-                {
-                    if (housecount < x * z - blockhouseZ.Length * x - blockhouseX.Length * z + blockhouseX.Length * blockhouseZ.Length)
-                        i--;
-                    if (housecount >= x * z - blockhouseZ.Length * x - blockhouseX.Length * z + blockhouseX.Length * blockhouseZ.Length)
-                        break;
-                }
-            }
-
+            hotkeyCS.EnablingBuildingInstantiate = EnablingBuildingInstantiate;
+            enablingBuildingInstantiate = EnablingBuildingInstantiate;
+        }
+        if (enablingCrabInstantiate != EnablingCrabInstantiate)
+        {
+            hotkeyCS.EnablingCrabInstantiate = EnablingCrabInstantiate;
+            enablingCrabInstantiate = EnablingCrabInstantiate;
+        }
+        if (enablingFishmanInstantiate != EnablingFishmanInstantiate)
+        {
+            hotkeyCS.EnablingFishmanInstantiate = EnablingFishmanInstantiate;
+            enablingFishmanInstantiate = EnablingFishmanInstantiate;
         }
 
-
-        if ((fishInput && flag && fishenable && fishflag) || (gesturetigger && fishflag) || (fishflag && keepbuild))
+        if (EnablingBuildingInstantiate)
         {
-            fishflag = false;
-            gesturetigger = false;
-            StartCoroutine("Fishtimer");
-
-            for (int i = 0; i < buildpertime; i++)
+            if ((houseInput && flag && houseenable) || (keepbuild && houseflag))
             {
-                flag = false;
-                gesturetigger = false;
+                keepbuild = true;
+                houseflag = false;
+                houseenable = false;
+                StartCoroutine("Housetimer");
 
-                float houseoffset = Random.Range(-offset, offset);
-                int Xpos = Random.Range(0, x);
-                int Zpos = Random.Range(0, z);
-                int rand = Random.Range(0, fish.Length);
-                //int speed = Random.Range(1,3);
-
-                float fishspeedtemp = fishspeed;
-
-
-
-                if (buildarray[Xpos, Zpos] != 1)
+                if (housecount >= x * z - blockhouseZ.Length * x - blockhouseX.Length * z + blockhouseX.Length * blockhouseZ.Length)
                 {
-                    GameObject fishman = Instantiate(fish[rand], pos.position + new Vector3(Xpos * k + houseoffset, 0, Zpos * k), Quaternion.Euler(0, 90, 0), pos);
-                    if (flip)
+                    keepbuild = false;
+                    houseenable = true;
+                }
+                for (int i = 0; i < buildpertime; i++)
+                {
+
+                    flag = false;
+
+                    float houseoffset = Random.Range(-offset, offset);
+                    int Xpos = Random.Range(0, x);
+                    int Zpos = Random.Range(0, z);
+                    int rand = Random.Range(0, house.Length);
+                    int h = Random.Range(0, housescale.Length);
+
+
+                    if (buildarray[Xpos, Zpos] != 1)
                     {
-                        fishman.transform.Rotate(0, -180, 0);
-                        fishspeedtemp = -fishspeed;
+                        GameObject houses = Instantiate(house[rand], pos.position + new Vector3(Xpos * k + houseoffset, 0, Zpos * k), Quaternion.identity, parenttrans);
+                        buildarray[Xpos, Zpos] = 1;
+                        houses.transform.Rotate(wordrotate);
+                        //houses.transform.localScale = new Vector3(housescale[h], housescale[h], housescale[h]);
+                        buildarraytemp.Add(new Vector2(Xpos, Zpos));
+                        buildarraytemp.ToArray();
+                        housecount++;
                     }
-                    //buildarray[Xpos,Zpos] = 0;
-                    //housecount++;
-                    fishman.GetComponent<Rigidbody>().velocity = new Vector3(fishspeedtemp,0 ,0);
-                    Destroy(fishman, fishlifetime);
+                    else
+                    {
+                        if (housecount < x * z - blockhouseZ.Length * x - blockhouseX.Length * z + blockhouseX.Length * blockhouseZ.Length)
+                            i--;
+                        if (housecount >= x * z - blockhouseZ.Length * x - blockhouseX.Length * z + blockhouseX.Length * blockhouseZ.Length)
+                            break;
+                    }
+                }
 
-                }
-                else
-                {
-                    if (housecount < blockhouseZ.Length * x + blockhouseX.Length * z - blockhouseX.Length * blockhouseZ.Length)
-                        i--;
-                    if (housecount >= blockhouseZ.Length * x + blockhouseX.Length * z - blockhouseX.Length * blockhouseZ.Length)
-                        break;
-                }
             }
-
         }
 
-        if (crabInput && flag && crabenable)
+
+        if (EnablingFishmanInstantiate)
         {
-            for (int i = 0; i < buildpertime; i++)
+            if ((fishInput && flag && fishenable && fishflag) || (gesturetigger && fishflag) || (fishflag && keepbuild))
             {
+                fishflag = false;
+                gesturetigger = false;
+                StartCoroutine("Fishtimer");
 
-                flag = false;
-
-                float houseoffset = Random.Range(-offset, offset);
-                int Xpos = Random.Range(0, x);
-                int Zpos = Random.Range(0, z);
-                int rand = Random.Range(0, crab.Length);
-                int s = Random.Range(0, crabscale.Length);
-                float speed = flip ? crabspeed : -crabspeed;
-
-
-                if (buildarray[Xpos, Zpos] != 1)
+                for (int i = 0; i < buildpertime; i++)
                 {
-                    GameObject crabs = Instantiate(crab[rand], pos.localPosition + new Vector3(Xpos * k + houseoffset, -2.7f, Zpos * k), Quaternion.identity, pos);
-                    crabs.transform.localScale = new Vector3(crabscale[s], crabscale[s], crabscale[s]);
-                    crabs.transform.Rotate(0, 0, 180);
-                    crabs.GetComponent<Rigidbody>().velocity = new Vector3(speed, 0, 0);
+                    flag = false;
+                    gesturetigger = false;
 
-                    //buildarray[Xpos,Zpos] = 1;
-                    buildarraytemp.Add(new Vector2(Xpos, Zpos));
-                    buildarraytemp.ToArray();
-                    //housecount++;
+                    float houseoffset = Random.Range(-offset, offset);
+                    int Xpos = Random.Range(0, x);
+                    int Zpos = Random.Range(0, z);
+                    int rand = Random.Range(0, fish.Length);
+                    //int speed = Random.Range(1,3);
+
+                    float fishspeedtemp = fishspeed;
+
+
+
+                    if (buildarray[Xpos, Zpos] != 1)
+                    {
+                        GameObject fishman = Instantiate(fish[rand], pos.position + new Vector3(Xpos * k + houseoffset, 0, Zpos * k), Quaternion.Euler(0, 90, 0), pos);
+                        if (flip)
+                        {
+                            fishman.transform.Rotate(0, -180, 0);
+                            fishspeedtemp = -fishspeed;
+                        }
+                        //buildarray[Xpos,Zpos] = 0;
+                        //housecount++;
+                        fishman.GetComponent<Rigidbody>().velocity = new Vector3(fishspeedtemp, 0, 0);
+                        Destroy(fishman, fishlifetime);
+
+                    }
+                    else
+                    {
+                        if (housecount < blockhouseZ.Length * x + blockhouseX.Length * z - blockhouseX.Length * blockhouseZ.Length)
+                            i--;
+                        if (housecount >= blockhouseZ.Length * x + blockhouseX.Length * z - blockhouseX.Length * blockhouseZ.Length)
+                            break;
+                    }
                 }
-                else
-                {
-                    if (housecount < x * z)
-                        i--;
-                    if (housecount >= x * z)
-                        break;
-                }
+
             }
+        }
 
+        if (EnablingCrabInstantiate)
+        {
+            if (crabInput && flag && crabenable)
+            {
+                for (int i = 0; i < buildpertime; i++)
+                {
+
+                    flag = false;
+
+                    float houseoffset = Random.Range(-offset, offset);
+                    int Xpos = Random.Range(0, x);
+                    int Zpos = Random.Range(0, z);
+                    int rand = Random.Range(0, crab.Length);
+                    int s = Random.Range(0, crabscale.Length);
+                    float speed = flip ? crabspeed : -crabspeed;
+
+
+                    if (buildarray[Xpos, Zpos] != 1)
+                    {
+                        GameObject crabs = Instantiate(crab[rand], pos.localPosition + new Vector3(Xpos * k + houseoffset, -2.7f, Zpos * k), Quaternion.identity, pos);
+                        crabs.transform.localScale = new Vector3(crabscale[s], crabscale[s], crabscale[s]);
+                        crabs.transform.Rotate(0, 0, 180);
+                        crabs.GetComponent<Rigidbody>().velocity = new Vector3(speed, 0, 0);
+
+                        //buildarray[Xpos,Zpos] = 1;
+                        buildarraytemp.Add(new Vector2(Xpos, Zpos));
+                        buildarraytemp.ToArray();
+                        //housecount++;
+                    }
+                    else
+                    {
+                        if (housecount < x * z)
+                            i--;
+                        if (housecount >= x * z)
+                            break;
+                    }
+                }
+
+            }
         }
 
         if (bubbleInput && flag && bubbleenable || (bubbleflag && bubbletimerflag))
@@ -651,7 +698,6 @@ public class HouseArray : MonoBehaviour
                 }
             }
         }
-
     }
 
 

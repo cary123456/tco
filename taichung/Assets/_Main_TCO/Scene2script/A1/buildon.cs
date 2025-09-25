@@ -13,14 +13,22 @@ public class buildon : MonoBehaviour
     public Material firstBuildingMaterial;
     public bool doMaterialAutoAppend = false;
     public bool one;
+    [Tooltip("ê•î€àÚãñê∂ê¨ñ[éq")]
+    public bool EnablingBuildingInstatiate = true;
+    public hotkey hotkeyCS;
+    bool enablingBuildingInstatiate;
+
 
     // Start is called before the first frame update
     void Start()
     {
-
         ancor = GameObject.FindGameObjectWithTag("crabancor");
         buildingposition = GameObject.FindGameObjectsWithTag("buildinglo");
         head = GameObject.FindGameObjectsWithTag("headset");
+        enablingBuildingInstatiate = EnablingBuildingInstatiate;
+        hotkeyCS = FindObjectOfType<hotkey>();
+        if (hotkeyCS == null)
+            Debug.LogError("[buildon.cs] @ " + this.name + " : hotkey.csñ¢îÌéwíË");
     }
 
     // Update is called once per frame
@@ -28,6 +36,11 @@ public class buildon : MonoBehaviour
     {
         crab = GameObject.FindGameObjectsWithTag("crab");
         buildings = GameObject.FindGameObjectsWithTag("building");
+        if(enablingBuildingInstatiate != EnablingBuildingInstatiate)
+        {
+            hotkeyCS.EnablingBuildingInstantiate = EnablingBuildingInstatiate;
+            enablingBuildingInstatiate = EnablingBuildingInstatiate;
+        }
 
     }
     public void buildinghideoff()
@@ -37,10 +50,13 @@ public class buildon : MonoBehaviour
 
     public void buildingup()
     {
-
-        GameObject buildings1 = Instantiate(building, new Vector3(head[0].transform.position.x, ancor.transform.position.y, head[0].transform.position.z), Quaternion.Euler(0f, 0f, 0f));
-        buildings1.transform.localScale = new(0.3f, 0.3f, 0.3f);
-        buildings1.GetComponent<growvalue>().up = true;
+        if (EnablingBuildingInstatiate)
+        {
+            GameObject buildings1 = Instantiate(building, new Vector3(head[0].transform.position.x, ancor.transform.position.y, head[0].transform.position.z), Quaternion.Euler(0f, 0f, 0f));
+            buildings1.transform.localScale = new(0.3f, 0.3f, 0.3f);
+            buildings1.GetComponent<growvalue>().up = true;
+        }
+        
 
 
         //buildings[0].GetComponent<growvalue>().up = true;

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
@@ -27,20 +27,46 @@ public class dynamicGeneration : MonoBehaviour
     public Transform playerbubble;
     public float rebound;
     public int i = 0;
+    [Header("生成允許管控")]
+    [Tooltip("是否允許生成螃蟹")]
+    [SerializeField] public bool EnablingCrabInstantiate = true;
+    bool enablingCrabInstantiate;
+    public hotkey hotkeyCS;
+
+    void Start()
+    {
+        enablingCrabInstantiate = EnablingCrabInstantiate;
+        hotkeyCS = FindObjectOfType<hotkey>();
+        if (hotkeyCS == null)
+            Debug.LogError("[dynamicGeneration.cs] @ " + this.name + " : hotkey.cs未被指定");
+    }
+
+    private void Update()
+    {
+        if(enablingCrabInstantiate != EnablingCrabInstantiate)
+        {
+            hotkeyCS.EnablingCrabInstantiate = EnablingCrabInstantiate;
+            enablingCrabInstantiate = EnablingCrabInstantiate;
+        }
+    }
 
     public GameObject[] SummonCrab()
     {
-        for (int i =0; i<SummonCrabsCount; i++)
+        if (EnablingCrabInstantiate)
+        {
+            for (int i = 0; i < SummonCrabsCount; i++)
             {
                 GameObject crabs = Instantiate(CrabPrefab, headset.transform.position + SummonPosOffset[i], Quaternion.Euler(new Vector3(0, 180, 180)));     //Summon crabs + Position offset
 
                 int rand = Random.Range(1, 10);
-                crabs.transform.localScale = new Vector3(CrabScale[rand%3], CrabScale[rand%3], CrabScale[rand%3]);  //Random Sacale in three variables
+                crabs.transform.localScale = new Vector3(CrabScale[rand % 3], CrabScale[rand % 3], CrabScale[rand % 3]);  //Random Sacale in three variables
                 crabs.GetComponent<Rigidbody>().AddForce(0, crabsFallSpeed[rand], 0);   //Random crab's drop speed in "crabsFallSpeed"
-                CrabVFX.SetFloat(Shader.PropertyToID("amount(ora)"),particleRed[rand%3]);    //Random red particle in three variables
+                CrabVFX.SetFloat(Shader.PropertyToID("amount(ora)"), particleRed[rand % 3]);    //Random red particle in three variables
 
                 crabb.Add(crabs);
             }
+        }
+        
 
         GameObject[] crabc = crabb.ToArray();
         return crabc;   //Return summoned crab GameObject array
