@@ -244,7 +244,7 @@ public class hotkey : MonoBehaviour
     void Start()
     {
         crabcount = -1;
-        houseArray_CS = FindObjectsOfType<HouseArray>();
+        houseArray_CS = FindObjectsOfType<HouseArray>();//HouseArray不會被動態生成
     }
 
     // Update is called once per frame
