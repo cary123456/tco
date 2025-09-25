@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using Newtonsoft.Json.Bson;
 using System.Collections;
 using System.Collections.Generic;
 //using Meta.XR.BuildingBlocks.Editor;
@@ -88,6 +89,15 @@ public class HouseArray : MonoBehaviour
     [SerializeField] InputAction I_house_atPoint;
     bool houseInput = false;
     [Space]
+    [SerializeField] public InputAction ClearBubble;
+    [SerializeField] float BubbleClearDelay = 0.5f;
+    bool doClearBubble = false;
+    float currentBubbleCountTime = 0;
+    public GameObject[] bubbles;
+    [SerializeField] public InputAction ClearAllBubble;
+    bool doClearAllBubble = false;
+
+    [Space]
     [Tooltip("是否允許生成螃蟹")]
     [SerializeField] public bool EnablingCrabInstantiate = true;
     [Tooltip("是否允許生成漁人")]
@@ -98,6 +108,7 @@ public class HouseArray : MonoBehaviour
     bool enablingBuildingInstantiate;
     bool enablingCrabInstantiate;
     bool enablingFishmanInstantiate;
+    
 
     private void OnEnable()
     {
@@ -109,6 +120,8 @@ public class HouseArray : MonoBehaviour
         I_fish.Enable();
         I_word.Enable();
         I_wordSwitch.Enable();
+        ClearBubble.Enable();
+        ClearAllBubble.Enable();
         I_house_random.performed += OnHouseRandomPressed;
         I_house_random.canceled += OnHouseRandomPressedReleased;
         I_house_atVR.performed += OnHouseAtVRPressed;
@@ -122,6 +135,9 @@ public class HouseArray : MonoBehaviour
         I_word.performed += OnWordPressed;
         I_word.canceled += OnWordReleased;
         I_wordSwitch.performed += OnWordswitchPressed;
+        ClearBubble.started += OnBubbleClearPressed;
+        ClearAllBubble.started += OnAllBubbleClearPressed;
+        ClearBubble.canceled += OnBubbleClearCancelled;
         hotkeyCS = FindObjectOfType<hotkey>();
         if(hotkeyCS == null)
             Debug.LogError("[HouseArray.cs] @ " +  this.name +" : hotkey.cs未被指定");
@@ -137,6 +153,8 @@ public class HouseArray : MonoBehaviour
         I_fish.Disable();
         I_word.Disable();
         I_wordSwitch.Disable();
+        ClearBubble.Disable();
+        ClearAllBubble.Disable();
         I_house_random.performed -= OnHouseRandomPressed;
         I_house_atVR.performed -= OnHouseAtVRPressed;
         I_house_atPoint.performed -= OnHouseAtPointPressed;
@@ -149,6 +167,9 @@ public class HouseArray : MonoBehaviour
         I_word.performed -= OnWordPressed;
         I_word.canceled -= OnWordReleased;
         I_wordSwitch.performed -= OnWordswitchPressed;
+        ClearBubble.started -= OnBubbleClearPressed;
+        ClearBubble.canceled -= OnBubbleClearCancelled;
+        ClearAllBubble.started -= OnAllBubbleClearPressed;
     }
 
     void Start()
@@ -698,6 +719,42 @@ public class HouseArray : MonoBehaviour
                 }
             }
         }
+
+        bubbles = GameObject.FindGameObjectsWithTag("ball");
+
+        if (doClearBubble)
+        {
+            if(bubbles.Length != 0)
+            {
+                currentBubbleCountTime += Time.deltaTime;
+                if (currentBubbleCountTime >= BubbleClearDelay)
+                {
+                    var delTarget = GameObject.FindGameObjectWithTag("ball");
+                    Destroy(delTarget);
+                    currentBubbleCountTime = 0;
+                }
+            }
+            else if(bubbles.Length == 0)
+            {
+                doClearBubble = false;
+            }
+        }
+
+        if (doClearAllBubble)
+        {
+            if (bubbles.Length != 0)
+            {
+                foreach(GameObject targetBubbles in bubbles)
+                {
+                    Destroy(targetBubbles);
+                }
+            }
+            else if (bubbles.Length == 0)
+            {
+                doClearAllBubble = false;
+            }
+        }
+
     }
 
 
@@ -796,6 +853,21 @@ public class HouseArray : MonoBehaviour
     void OnWordReleased(InputAction.CallbackContext ctx)
     {
         wordInput = false;
+    }
+
+    void OnBubbleClearPressed(InputAction.CallbackContext ctx)
+    {
+        doClearBubble = true;
+    }
+
+    void OnBubbleClearCancelled(InputAction.CallbackContext ctx)
+    {
+        doClearBubble = false;
+    }
+
+    void OnAllBubbleClearPressed(InputAction.CallbackContext ctx)
+    {
+        doClearAllBubble = true;
     }
 
     /// <summary>

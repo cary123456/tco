@@ -632,7 +632,15 @@ MonoBehaviour:
     m_Id: e4eb51eb-8a33-4b33-a9cd-10899f7824f4
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 2b877f5b-4beb-4126-8b9d-dfc6cc1f3325
+      m_Path: <Keyboard>/backquote
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Reset
+      m_Flags: 0
     m_Flags: 0
   I_LoadCh4:
     m_Name: I_Load Ch 4
@@ -1127,6 +1135,26 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: ad791277-42d8-4366-b08e-0c481cf578b1
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  ClearBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -1832,6 +1860,26 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  ClearBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   EnablingCrabInstantiate: 1
   EnablingFishmanInstantiate: 1
   EnablingBuildingInstantiate: 1
@@ -2108,6 +2156,26 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  ClearBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   EnablingCrabInstantiate: 1
   EnablingFishmanInstantiate: 1
   EnablingBuildingInstantiate: 1
@@ -2301,7 +2369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892657987}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.14, y: 9.97, z: -1.2049994}
+  m_LocalPosition: {x: -3.06, y: 9.97, z: -1.2049994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2362,8 +2430,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ba5fea1e35b614cbf6b7627471fc43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  udpPort: 9090
+  udpPort: 6668
   humanModel:
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
+  - {fileID: 183067697}
   - {fileID: 183067697}
   - {fileID: 183067697}
   - {fileID: 183067697}
@@ -2559,7 +2659,7 @@ MonoBehaviour:
   m_RenderPostProcessing: 1
   m_Antialiasing: 1
   m_AntialiasingQuality: 2
-  m_StopNaN: 0
+  m_StopNaN: 1
   m_Dithering: 0
   m_ClearDepth: 1
   m_AllowXRRendering: 1
@@ -2707,6 +2807,215 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1239113966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1239113968}
+  - component: {fileID: 1239113967}
+  m_Layer: 0
+  m_Name: HouseArray (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1239113967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239113966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  house: []
+  HousePosition: []
+  Headset: {fileID: 0}
+  HousePosIndex: 0
+  houseenable: 0
+  crab: []
+  crabenable: 0
+  bubble:
+  - {fileID: 7560986564674398035, guid: 32b307c5898da8047a1f14c1ae5d3018, type: 3}
+  - {fileID: 7560986564674398035, guid: 4febc6d8572cce9409e88f2b4ba8fa47, type: 3}
+  bubbleenable: 1
+  fish: []
+  fishenable: 0
+  word: []
+  word1: []
+  word2: []
+  word3: []
+  wordenable: 0
+  wordselect: 0
+  pos: {fileID: 1239113968}
+  parenttrans: {fileID: 1239113968}
+  parentcanvas: {fileID: 0}
+  wordIO: {fileID: 517158417}
+  x: 20
+  z: 10
+  k: 0.2
+  buildpertime: 1
+  housescale:
+  - 0
+  - 0
+  - 0
+  crabscale: []
+  crabspeed: 0
+  bubblescale:
+  - 0.75
+  - 0.8
+  - 1
+  bubbleforce: 1
+  playerbubble: {fileID: 183067699}
+  fishspeed: 0
+  fishlifetime: 0
+  wordscale: []
+  wordrotate: {x: 0, y: 0, z: 0}
+  housecount: 0
+  offset: 0.1
+  buildarraytemp: []
+  blockhouseX: 
+  blockhouseZ: 
+  bubbleflag: 0
+  gesturetigger: 0
+  flip: 0
+  fishflag: 0
+  houseflag: 0
+  wordflag: 0
+  bubbletimerflag: 0
+  keepbuild: 0
+  bubblepos: {x: 0, y: 0, z: 0}
+  wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: []
+  serverenable: 0
+  I_crab:
+    m_Name: I_crab
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a577e2c9-2ab3-419c-b521-f3210f54f57c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_bubble:
+    m_Name: I_bubble
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9d8b5bd2-0983-41e8-9119-02d6d33ab5c5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 68942474-2a0f-4fb2-94cc-e3895f9c8eb5
+      m_Path: <MidiDevice>/note042
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_bubble
+      m_Flags: 0
+    m_Flags: 0
+  I_fish:
+    m_Name: I_fish
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: dd5be71b-27af-441c-9c77-3c9cdb240c7e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  lightObject: {fileID: 0}
+  I_word:
+    m_Name: I_word
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 18bb3d51-7ed1-4e28-9a85-12fc1ce15144
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_wordSwitch:
+    m_Name: I_word Switch
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f4b72f5f-fa1b-42bd-83a5-d0e3e0ee6a17
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: I_house_random
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 68109b12-66b0-435d-bd78-e79d08b0a19c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: I_house_at VR
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3d589ec2-1a5b-48c9-b06d-d4c5b3a0dc0f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: I_house_at Point
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 450c79ea-f474-49e5-9904-fc0cf21ea740
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  ClearBubble:
+    m_Name: Clear Bubble
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7de1fd49-e663-4d8c-b2ba-e1f934e997a4
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 24012c06-5b16-4a46-861c-a1fb388db1a8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
+--- !u!4 &1239113968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239113966}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.4, y: 0, z: -0.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1254381871 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 331158732853246609, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
@@ -2769,6 +3078,215 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7816375564385254655, guid: 9bc2de8eb849d1a4aa9d08fbf5984e50, type: 3}
   m_PrefabInstance: {fileID: 566925629}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1304951981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1304951983}
+  - component: {fileID: 1304951982}
+  m_Layer: 0
+  m_Name: HouseArray (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1304951982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304951981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  house: []
+  HousePosition: []
+  Headset: {fileID: 0}
+  HousePosIndex: 0
+  houseenable: 0
+  crab: []
+  crabenable: 0
+  bubble:
+  - {fileID: 7560986564674398035, guid: 32b307c5898da8047a1f14c1ae5d3018, type: 3}
+  - {fileID: 7560986564674398035, guid: 4febc6d8572cce9409e88f2b4ba8fa47, type: 3}
+  bubbleenable: 1
+  fish: []
+  fishenable: 0
+  word: []
+  word1: []
+  word2: []
+  word3: []
+  wordenable: 0
+  wordselect: 0
+  pos: {fileID: 1304951983}
+  parenttrans: {fileID: 1304951983}
+  parentcanvas: {fileID: 0}
+  wordIO: {fileID: 517158417}
+  x: 20
+  z: 10
+  k: 0.2
+  buildpertime: 1
+  housescale:
+  - 0
+  - 0
+  - 0
+  crabscale: []
+  crabspeed: 0
+  bubblescale:
+  - 0.75
+  - 0.8
+  - 1
+  bubbleforce: 1
+  playerbubble: {fileID: 183067699}
+  fishspeed: 0
+  fishlifetime: 0
+  wordscale: []
+  wordrotate: {x: 0, y: 0, z: 0}
+  housecount: 0
+  offset: 0.1
+  buildarraytemp: []
+  blockhouseX: 
+  blockhouseZ: 
+  bubbleflag: 0
+  gesturetigger: 0
+  flip: 0
+  fishflag: 0
+  houseflag: 0
+  wordflag: 0
+  bubbletimerflag: 0
+  keepbuild: 0
+  bubblepos: {x: 0, y: 0, z: 0}
+  wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: []
+  serverenable: 0
+  I_crab:
+    m_Name: I_crab
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a577e2c9-2ab3-419c-b521-f3210f54f57c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_bubble:
+    m_Name: I_bubble
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9d8b5bd2-0983-41e8-9119-02d6d33ab5c5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 68942474-2a0f-4fb2-94cc-e3895f9c8eb5
+      m_Path: <MidiDevice>/note040
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_bubble
+      m_Flags: 0
+    m_Flags: 0
+  I_fish:
+    m_Name: I_fish
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: dd5be71b-27af-441c-9c77-3c9cdb240c7e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  lightObject: {fileID: 0}
+  I_word:
+    m_Name: I_word
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 18bb3d51-7ed1-4e28-9a85-12fc1ce15144
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_wordSwitch:
+    m_Name: I_word Switch
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f4b72f5f-fa1b-42bd-83a5-d0e3e0ee6a17
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: I_house_random
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 68109b12-66b0-435d-bd78-e79d08b0a19c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: I_house_at VR
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3d589ec2-1a5b-48c9-b06d-d4c5b3a0dc0f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: I_house_at Point
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 450c79ea-f474-49e5-9904-fc0cf21ea740
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  ClearBubble:
+    m_Name: Clear Bubble
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7de1fd49-e663-4d8c-b2ba-e1f934e997a4
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: Clear All Bubble
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: eb6db161-1804-4b6b-9311-56ca42a154dd
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
+--- !u!4 &1304951983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304951981}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.97, y: 0, z: -0.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1319827877
 GameObject:
   m_ObjectHideFlags: 0
@@ -2951,6 +3469,26 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 6d346781-f0ee-48f4-91cc-c05a5a51053e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  ClearBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -3433,6 +3971,26 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 0ca82222-65c8-4515-83bc-fa68bb3be5a9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  ClearBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -3931,9 +4489,238 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  ClearBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   EnablingCrabInstantiate: 1
   EnablingFishmanInstantiate: 1
   EnablingBuildingInstantiate: 1
+--- !u!1 &1779483641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1779483643}
+  - component: {fileID: 1779483642}
+  m_Layer: 0
+  m_Name: HouseArray (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1779483642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779483641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4de6ebffae4aa4f8ae85715aaf12bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  house: []
+  HousePosition: []
+  Headset: {fileID: 0}
+  HousePosIndex: 0
+  houseenable: 0
+  crab: []
+  crabenable: 0
+  bubble:
+  - {fileID: 7560986564674398035, guid: 32b307c5898da8047a1f14c1ae5d3018, type: 3}
+  - {fileID: 7560986564674398035, guid: 4febc6d8572cce9409e88f2b4ba8fa47, type: 3}
+  bubbleenable: 1
+  fish: []
+  fishenable: 0
+  word: []
+  word1: []
+  word2: []
+  word3: []
+  wordenable: 0
+  wordselect: 0
+  pos: {fileID: 1779483643}
+  parenttrans: {fileID: 1779483643}
+  parentcanvas: {fileID: 0}
+  wordIO: {fileID: 517158417}
+  x: 20
+  z: 10
+  k: 0.2
+  buildpertime: 1
+  housescale:
+  - 0
+  - 0
+  - 0
+  crabscale: []
+  crabspeed: 0
+  bubblescale:
+  - 0.75
+  - 0.8
+  - 1
+  bubbleforce: 1
+  playerbubble: {fileID: 183067699}
+  fishspeed: 0
+  fishlifetime: 0
+  wordscale: []
+  wordrotate: {x: 0, y: 0, z: 0}
+  housecount: 0
+  offset: 0.1
+  buildarraytemp: []
+  blockhouseX: 
+  blockhouseZ: 
+  bubbleflag: 0
+  gesturetigger: 0
+  flip: 0
+  fishflag: 0
+  houseflag: 0
+  wordflag: 0
+  bubbletimerflag: 0
+  keepbuild: 0
+  bubblepos: {x: 0, y: 0, z: 0}
+  wordswitch: 0
+  nearest: {fileID: 0}
+  serverWord: []
+  serverenable: 0
+  I_crab:
+    m_Name: I_crab
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a577e2c9-2ab3-419c-b521-f3210f54f57c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_bubble:
+    m_Name: I_bubble
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9d8b5bd2-0983-41e8-9119-02d6d33ab5c5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 68942474-2a0f-4fb2-94cc-e3895f9c8eb5
+      m_Path: <MidiDevice>/note038
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_bubble
+      m_Flags: 0
+    m_Flags: 0
+  I_fish:
+    m_Name: I_fish
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: dd5be71b-27af-441c-9c77-3c9cdb240c7e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  lightObject: {fileID: 0}
+  I_word:
+    m_Name: I_word
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 18bb3d51-7ed1-4e28-9a85-12fc1ce15144
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_wordSwitch:
+    m_Name: I_word Switch
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f4b72f5f-fa1b-42bd-83a5-d0e3e0ee6a17
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_random:
+    m_Name: I_house_random
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 68109b12-66b0-435d-bd78-e79d08b0a19c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atVR:
+    m_Name: I_house_at VR
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3d589ec2-1a5b-48c9-b06d-d4c5b3a0dc0f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  I_house_atPoint:
+    m_Name: I_house_at Point
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 450c79ea-f474-49e5-9904-fc0cf21ea740
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  ClearBubble:
+    m_Name: Clear Bubble
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7de1fd49-e663-4d8c-b2ba-e1f934e997a4
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f7240809-db3b-42ad-b1b6-a51b5327ffb3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  EnablingCrabInstantiate: 1
+  EnablingFishmanInstantiate: 1
+  EnablingBuildingInstantiate: 1
+--- !u!4 &1779483643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779483641}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.04, y: 0, z: -7.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1798320469
 GameObject:
   m_ObjectHideFlags: 0
@@ -4121,6 +4908,26 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 449febb6-e081-40b2-af87-b7438cd663c8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  ClearBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -4389,6 +5196,26 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 04841adf-2d48-486d-a54c-c32776c8ffb6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  ClearBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -4708,8 +5535,8 @@ MonoBehaviour:
   parenttrans: {fileID: 2054776254}
   parentcanvas: {fileID: 0}
   wordIO: {fileID: 517158417}
-  x: 10
-  z: 5
+  x: 20
+  z: 10
   k: 0.2
   buildpertime: 1
   housescale:
@@ -4722,7 +5549,7 @@ MonoBehaviour:
   - 0.75
   - 0.8
   - 1
-  bubbleforce: 5
+  bubbleforce: 1
   playerbubble: {fileID: 183067699}
   fishspeed: 0
   fishlifetime: 0
@@ -4766,6 +5593,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 68942474-2a0f-4fb2-94cc-e3895f9c8eb5
       m_Path: <Keyboard>/7
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_bubble
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 5feece11-58ef-4cf3-9b0c-d6c722f8504d
+      m_Path: <MidiDevice>/note036
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -4827,6 +5662,42 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  ClearBubble:
+    m_Name: Clear Bubble
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7de1fd49-e663-4d8c-b2ba-e1f934e997a4
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 6e72b946-deb1-4603-8353-9e5b56661b72
+      m_Path: <MidiDevice>/note044
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Clear Bubble
+      m_Flags: 0
+    m_Flags: 0
+  BubbleClearDelay: 0.2
+  bubbles: []
+  ClearAllBubble:
+    m_Name: Clear All Bubble
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 38d663f0-4e6d-43a2-837e-dca03ad4371d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: e41963b9-bd37-49da-b9d8-0d55543073d9
+      m_Path: <MidiDevice>/note046
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Clear All Bubble
+      m_Flags: 0
+    m_Flags: 0
   EnablingCrabInstantiate: 1
   EnablingFishmanInstantiate: 1
   EnablingBuildingInstantiate: 1
@@ -4838,7 +5709,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054776252}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.04, y: 0, z: 2.7599998}
+  m_LocalPosition: {x: -0.34, y: 0, z: 4.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
