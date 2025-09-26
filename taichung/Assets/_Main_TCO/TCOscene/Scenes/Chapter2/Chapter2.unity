@@ -2717,6 +2717,26 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  ClearBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   EnablingCrabInstantiate: 1
   EnablingFishmanInstantiate: 1
   EnablingBuildingInstantiate: 1
@@ -4928,7 +4948,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 4cad8cad-e862-4ec0-b63d-c49475d14668
-      m_Path: <MidiDevice>/note045
+      m_Path: <MidiDevice>/note037
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -4945,7 +4965,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 7d4f0cdc-fa17-4acc-b8f3-70432bb6936e
-      m_Path: <MidiDevice>/note047
+      m_Path: <MidiDevice>/note039
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -4962,7 +4982,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 67ef9c2a-fd4e-41f3-b523-6c776339899b
-      m_Path: <MidiDevice>/note049
+      m_Path: <MidiDevice>/note041
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -4973,6 +4993,7 @@ MonoBehaviour:
   buildon_CS: []
   EnablingCrabInstantiate: 1
   dynamicGeneration_CS: {fileID: 191333789}
+  valuerecueve_CS: []
   EnablingFishmanInstantiate: 1
   houseArray_CS: []
 --- !u!1 &581448327 stripped
@@ -7242,6 +7263,26 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: fcc91d8d-e9d3-40c7-a253-2eeb375087b4
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  ClearBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -10544,6 +10585,26 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  ClearBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   EnablingCrabInstantiate: 1
   EnablingFishmanInstantiate: 1
   EnablingBuildingInstantiate: 1
@@ -11663,6 +11724,26 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: f85ba706-8c92-4ec2-96ac-67641a62e5da
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  ClearBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -13023,6 +13104,26 @@ MonoBehaviour:
       m_Groups: 
       m_Action: I_house_at Point
       m_Flags: 0
+    m_Flags: 0
+  ClearBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a12bdab8-e7f8-4258-bf61-f2ce1d87a56b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: cf0ba088-5e6c-4808-88ea-aa635b5c4e24
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
     m_Flags: 0
   EnablingCrabInstantiate: 1
   EnablingFishmanInstantiate: 1
@@ -14979,6 +15080,26 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 40be4f2b-5a08-4ac2-b3ea-02eb6a0e050e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  ClearBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  BubbleClearDelay: 0.5
+  bubbles: []
+  ClearAllBubble:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []

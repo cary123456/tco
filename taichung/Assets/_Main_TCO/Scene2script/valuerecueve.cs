@@ -7,6 +7,11 @@ using UnityEngine.VFX;
 
 public class valuerecueve : NetworkBehaviour
 {
+    [Header("生成允許管控")]
+    public bool EnablingCrabInstantiate = true;
+    hotkey hotkeyCS;
+    bool enablingCrabInstantiate;
+    [Space]
     [SerializeField]
     private NetworkVariable<bool> seeornot = new NetworkVariable<bool>();
     [SerializeField]
@@ -147,7 +152,7 @@ public class valuerecueve : NetworkBehaviour
     public GameObject crabman;
     public GameObject crabb;
 
-    
+
     public float runtime;
     public float litime;
 
@@ -181,6 +186,7 @@ public class valuerecueve : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hotkeyCS = FindObjectOfType<hotkey>();
 
         //center = GameObject.Find("center");
         cam = GameObject.FindGameObjectWithTag("fishmanager");
@@ -205,13 +211,18 @@ public class valuerecueve : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(handRvalue.Value == 6)
+        if (enablingCrabInstantiate != EnablingCrabInstantiate)
+        {
+            hotkeyCS.EnablingCrabInstantiate = EnablingCrabInstantiate;
+            enablingCrabInstantiate = EnablingCrabInstantiate;
+        }
+
+        if (handRvalue.Value == 6)
         {
             ui.GetComponent<Animator>().enabled = true;
         }
 
-        
+
         if (IsServer)
         {
             UpdateServer();
@@ -221,7 +232,7 @@ public class valuerecueve : NetworkBehaviour
             ClientInput();
         }
 
-        if(righthand.GetComponent<handposition>().player.Length > 1)
+        if (righthand.GetComponent<handposition>().player.Length > 1)
         {
             if (this.gameObject == righthand.GetComponent<handposition>().player[1])
             {
@@ -258,64 +269,67 @@ public class valuerecueve : NetworkBehaviour
             }
         }
 
-        if (seeornot.Value)
+        if (EnablingCrabInstantiate)
         {
-            if (!onetimetrigger)
+            if (seeornot.Value)
             {
-                if (MIDI != null)
+                if (!onetimetrigger)
                 {
-                    MIDI.GetComponent<NoteTrigger>().trigger = true;
+                    if (MIDI != null)
+                    {
+                        MIDI.GetComponent<NoteTrigger>().trigger = true;
+                    }
+                    //Random.Range(0,5)
+                    GameObject crabs = Instantiate(crab[0], righthand.transform.position, Quaternion.Euler(new Vector3(0, 180, 180)));
+                    crabb = crabs;
+                    crabb.GetComponent<handtrack>().follow = true;
+                    if (uiman.GetComponent<UIManager>().VR == true)
+                    {
+                        crabs.GetComponent<VisualEffect>().enabled = false;
+                        crabs.transform.GetChild(0).gameObject.SetActive(true);
+                        crabs.transform.GetChild(1).gameObject.SetActive(false);
+                    }
+                    onetimetrigger = true;
                 }
-                //Random.Range(0,5)
-                GameObject crabs =  Instantiate(crab[0], righthand.transform.position, Quaternion.Euler(new Vector3(0, 180, 180)));
-                crabb = crabs;
-                crabb.GetComponent<handtrack>().follow = true;
-                if (uiman.GetComponent<UIManager>().VR == true)
-                {
-                    crabs.GetComponent<VisualEffect>().enabled = false;
-                    crabs.transform.GetChild(0).gameObject.SetActive(true);
-                    crabs.transform.GetChild(1).gameObject.SetActive(false);
-                }
-                onetimetrigger = true;
-            }
-           
-            
-            
-        }
-        else
-        {
-            if (crabb != null)
-            {    
-                
-                crabb.GetComponent<crabfloat>().melt = true;        
-                crabb.GetComponent<handtrack>().follow = false;
-                
-            }
-            
-            crabb = null;
-            onetimetrigger = false;
-        }
 
+
+
+            }
+            else
+            {
+                if (crabb != null)
+                {
+
+                    crabb.GetComponent<crabfloat>().melt = true;
+                    crabb.GetComponent<handtrack>().follow = false;
+
+                }
+
+                crabb = null;
+                onetimetrigger = false;
+            }
+
+        }
         if (housetri.Value)
         {
             if (!onetime)
             {
                 if (headset.GetComponent<nearest>().closestEnemy.GetComponent<crabmove>() != null || headset.GetComponent<nearest>().closestEnemy != null)
                 {
-                    
+
                     headset.GetComponent<nearest>().closestEnemy.GetComponent<crabmove>().move = true;
                 }
                 headset.GetComponent<nearest>().closestEnemy.GetComponent<buildon>().buildingup();
                 onetime = true;
             }
-                     
+
         }
         else
         {
             onetime = false;
         }
 
-        if(handRvalue.Value == 2)
+        if (handRvalue.Value == 2)
         {
             Rruntime += Time.deltaTime;
             if (Rruntime >= 1)
@@ -328,7 +342,7 @@ public class valuerecueve : NetworkBehaviour
                     }
                     buildR = false;
                 }
-                              
+
             }
 
         }
@@ -355,7 +369,7 @@ public class valuerecueve : NetworkBehaviour
                 }
                 buildL = false;
             }
-           
+
 
         }
         else
@@ -371,7 +385,7 @@ public class valuerecueve : NetworkBehaviour
             {
                 fishmanager.GetComponent<HouseArray>().gesturetigger = true;
             }
-            
+
         }
         if (ball.Value == true)
         {
@@ -385,11 +399,11 @@ public class valuerecueve : NetworkBehaviour
 
         if (destroy.Value == true)
         {
-            if(GameObject.FindWithTag("crab") != null)
+            if (GameObject.FindWithTag("crab") != null)
             {
                 Destroy(GameObject.FindWithTag("crab"));
             }
-            if(GameObject.FindWithTag("crabs") != null)
+            if (GameObject.FindWithTag("crabs") != null)
             {
                 Destroy(GameObject.FindWithTag("crabs"));
             }
@@ -418,7 +432,8 @@ public class valuerecueve : NetworkBehaviour
     }
     private void UpdateServer()
     {
-        netbool = seeornot.Value;
+        if(EnablingCrabInstantiate)
+            netbool = seeornot.Value;
         nethousebool = housetri.Value;
         netfishfloat = fishfloat.Value;
         netfishmanbool = fishmantri.Value;
@@ -445,7 +460,7 @@ public class valuerecueve : NetworkBehaviour
 
     public void ClientInput()
     {
-        if (oldinput != boolvalue || oldhouseinput != housevalue || oldfishinput != fishvalue || oldfishmaninput != fishmanvalue || oldintinput != intvalue || oldintLinput != intLvalue || oldhandRx != handRxvalue || oldhandRy != handRyvalue || oldhandRz != handRzvalue 
+        if (oldinput != boolvalue || oldhouseinput != housevalue || oldfishinput != fishvalue || oldfishmaninput != fishmanvalue || oldintinput != intvalue || oldintLinput != intLvalue || oldhandRx != handRxvalue || oldhandRy != handRyvalue || oldhandRz != handRzvalue
             || oldhandLx != handLxvalue || oldhandLy != handLyvalue || oldhandLz != handLzvalue || oldheadx != headxvalue || oldheady != headyvalue || oldheadz != headzvalue || oldhandRrox != handRroxvalue || oldhandRroy != handRroyvalue || oldhandRroz != handRrozvalue ||
            oldhandLrox != handLroxvalue || oldhandLroy != handLroyvalue || oldhandLroz != handLrozvalue || olddestoryinput != destoryvalue || oldball != ballvalue)
         {
@@ -472,15 +487,16 @@ public class valuerecueve : NetworkBehaviour
             oldhandLroy = handLroyvalue;
             oldhandLroz = handLrozvalue;
             oldball = ballvalue;
-            UpdateClientPositionAndRotationServerRpc(boolvalue , housevalue, fishmanvalue,fishvalue ,intvalue , intLvalue, handRxvalue, handRyvalue, handRzvalue, handLxvalue, handLyvalue, handLzvalue, headxvalue, headyvalue, headzvalue,
-                handRroxvalue, handRroyvalue, handRrozvalue, handLroxvalue, handLroyvalue, handLrozvalue,destoryvalue,ballvalue);
+            UpdateClientPositionAndRotationServerRpc(boolvalue, housevalue, fishmanvalue, fishvalue, intvalue, intLvalue, handRxvalue, handRyvalue, handRzvalue, handLxvalue, handLyvalue, handLzvalue, headxvalue, headyvalue, headzvalue,
+                handRroxvalue, handRroyvalue, handRrozvalue, handLroxvalue, handLroyvalue, handLrozvalue, destoryvalue, ballvalue);
 
         }
     }
     [ServerRpc]
-    public void UpdateClientPositionAndRotationServerRpc(bool value,bool houseval , bool fishval ,float fishva,int invalue,int intLvalue, float hrx,float hry,float hrz, float hlx, float hly, float hlz, float hdx, float hdy, float hdz, float hrrox, float hrroy, float hrroz, float hlrox, float hlroy, float hlroz,bool des ,bool bal)
+    public void UpdateClientPositionAndRotationServerRpc(bool value, bool houseval, bool fishval, float fishva, int invalue, int intLvalue, float hrx, float hry, float hrz, float hlx, float hly, float hlz, float hdx, float hdy, float hdz, float hrrox, float hrroy, float hrroz, float hlrox, float hlroy, float hlroz, bool des, bool bal)
     {
-        seeornot.Value = value;
+        if(EnablingCrabInstantiate)
+            seeornot.Value = value;
         housetri.Value = houseval;
         fishmantri.Value = fishval;
         fishfloat.Value = fishva;

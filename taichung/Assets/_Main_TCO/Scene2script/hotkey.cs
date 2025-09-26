@@ -130,6 +130,8 @@ public class hotkey : MonoBehaviour
     [SerializeField] public bool EnablingCrabInstantiate = true;
     [Tooltip("生成螃蟹的腳本")]
     public dynamicGeneration dynamicGeneration_CS;
+    [Tooltip("生成螃蟹的腳本，會動態抓取")]
+    public valuerecueve[] valuerecueve_CS;
     [Tooltip("是否允許生成漁人")]
     [SerializeField] public bool EnablingFishmanInstantiate = true;
     [Tooltip("生成漁人的腳本，此腳本會動態抓取")]
@@ -244,7 +246,8 @@ public class hotkey : MonoBehaviour
     void Start()
     {
         crabcount = -1;
-        houseArray_CS = FindObjectsOfType<HouseArray>();//HouseArray不會被動態生成
+        houseArray_CS = FindObjectsOfType<HouseArray>(); //HouseArray不會被動態生成
+        valuerecueve_CS = FindObjectsOfType<valuerecueve>();
     }
 
     // Update is called once per frame
@@ -253,6 +256,7 @@ public class hotkey : MonoBehaviour
         crabs = GameObject.FindGameObjectsWithTag("crab");
         player = GameObject.FindGameObjectsWithTag("Player");
         buildon_CS = GameObject.FindObjectsOfType<buildon>();
+        valuerecueve_CS = FindObjectsOfType<valuerecueve>();
 
 
         // crabfollow 控制已由 InputAction 處理
@@ -736,7 +740,7 @@ public class hotkey : MonoBehaviour
             {
                 buildonScripts.EnablingBuildingInstatiate = EnablingBuildingInstantiate;
             }
-            foreach(HouseArray houseArrays in houseArray_CS)
+            foreach (HouseArray houseArrays in houseArray_CS)
             {
                 houseArrays.EnablingBuildingInstantiate = EnablingBuildingInstantiate;
             }
@@ -748,6 +752,10 @@ public class hotkey : MonoBehaviour
             foreach (HouseArray houseArrays in houseArray_CS)
             {
                 houseArrays.EnablingCrabInstantiate = EnablingCrabInstantiate;
+            }
+            foreach (valuerecueve valuerecueves in valuerecueve_CS)
+            {
+                valuerecueves.EnablingCrabInstantiate = EnablingCrabInstantiate;
             }
         }
         else if (ctx.action == I_EnablingFishmanInstantiate)
