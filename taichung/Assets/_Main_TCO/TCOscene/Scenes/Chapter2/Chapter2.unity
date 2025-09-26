@@ -4834,6 +4834,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: I_Load Ch 4
       m_Flags: 0
+    - m_Name: 
+      m_Id: 3a2bc6f6-49f9-4122-bbed-e572fd766d19
+      m_Path: <MidiDevice>/note050
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Load Ch 4
+      m_Flags: 0
     m_Flags: 0
   I_SeaSlider:
     m_Name: I_Sea Slider
@@ -4929,6 +4937,24 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
   houseArray: {fileID: 1587057818}
+  I_LightControl:
+    m_Name: I_Light Control
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 85033eda-370d-41a6-b58e-21f3026575a6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: d513ce46-0b3b-46ca-9c9a-9b832942b923
+      m_Path: <MidiDevice>/note051
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Light Control
+      m_Flags: 0
+    m_Flags: 0
+  LightTurned: 0
   I_Light:
     m_Name: I_Light
     m_Type: 0

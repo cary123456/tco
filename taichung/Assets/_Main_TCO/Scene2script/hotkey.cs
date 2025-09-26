@@ -112,6 +112,8 @@ public class hotkey : MonoBehaviour
     [SerializeField] InputAction I_ClearBuilding;
     [Tooltip("建築物生成之腳本，刪除場上建築物時使用")]
     [SerializeField] HouseArray houseArray;
+    [SerializeField] InputAction I_LightControl;
+    [SerializeField] bool LightTurned = false;
     public InputAction I_Light;
     [Space]
     [Header("控制是否生成建築、螃蟹、漁人\n防止誤觸為目的，可同時監控狀態")]
@@ -136,7 +138,7 @@ public class hotkey : MonoBehaviour
     [SerializeField] public bool EnablingFishmanInstantiate = true;
     [Tooltip("生成漁人的腳本，此腳本會動態抓取")]
     public HouseArray[] houseArray_CS;
-    
+
 
 
     private void OnEnable()
@@ -163,6 +165,7 @@ public class hotkey : MonoBehaviour
         I_EnablingBuildingInstantiate.Enable();
         I_EnablingCrabInstantiate.Enable();
         I_EnablingFishmanInstantiate.Enable();
+        I_LightControl.Enable();
         I_crab.performed += OnCrabPressed;
         I_crab.canceled += OnCrabReleased;
         I_DelCrab.performed += OnDelCrabPressed;
@@ -189,6 +192,7 @@ public class hotkey : MonoBehaviour
         I_EnablingBuildingInstantiate.started += OnInputStarted;
         I_EnablingCrabInstantiate.started += OnInputStarted;
         I_EnablingFishmanInstantiate.started += OnInputStarted;
+        I_LightControl.started += OnInputStarted;
     }
 
     private void OnDisable()
@@ -214,6 +218,7 @@ public class hotkey : MonoBehaviour
         I_EnablingBuildingInstantiate.Disable();
         I_EnablingCrabInstantiate.Disable();
         I_EnablingFishmanInstantiate.Disable();
+        I_LightControl.Disable();
         I_crab.performed -= OnCrabPressed;
         I_crab.canceled -= OnCrabReleased;
         I_DelCrab.performed -= OnDelCrabPressed;
@@ -239,6 +244,7 @@ public class hotkey : MonoBehaviour
         I_EnablingBuildingInstantiate.started -= OnInputStarted;
         I_EnablingCrabInstantiate.started -= OnInputStarted;
         I_EnablingFishmanInstantiate.started -= OnInputStarted;
+        I_LightControl.started -= OnInputStarted;
     }
 
 
@@ -258,6 +264,7 @@ public class hotkey : MonoBehaviour
         buildon_CS = GameObject.FindObjectsOfType<buildon>();
         valuerecueve_CS = FindObjectsOfType<valuerecueve>();
 
+        lightObject.SetActive(LightTurned);
 
         // crabfollow 控制已由 InputAction 處理
         if (crabfollow)
@@ -765,6 +772,10 @@ public class hotkey : MonoBehaviour
             {
                 houseArrays.EnablingFishmanInstantiate = EnablingFishmanInstantiate;
             }
+        }
+        else if (ctx.action == I_LightControl)
+        {
+            LightTurned = !LightTurned; 
         }
     }
 

@@ -745,6 +745,7 @@ MonoBehaviour:
   buildon_CS: []
   EnablingCrabInstantiate: 1
   dynamicGeneration_CS: {fileID: 0}
+  valuerecueve_CS: []
   EnablingFishmanInstantiate: 1
   houseArray_CS: []
 --- !u!4 &356160660
@@ -4695,7 +4696,7 @@ MonoBehaviour:
   BubbleClearDelay: 0.5
   bubbles: []
   ClearAllBubble:
-    m_Name: 
+    m_Name: Clear All Bubble
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: f7240809-db3b-42ad-b1b6-a51b5327ffb3
