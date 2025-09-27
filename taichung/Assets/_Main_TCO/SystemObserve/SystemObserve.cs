@@ -1,14 +1,22 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SystemObserve : MonoBehaviour
 {
     [Header("Operation Output / 運行資訊輸出")]
     [SerializeField] OperationInfo_SO OperationInfo;
-    
+
+    [Header("Configuration / 設定")]
+    [Tooltip("毫米波的資料更新週期，預設10秒")]
+    [SerializeField] float mmWaveUpdateInterval = 10f;
+    float mmWaveUpdateTimer = 0f;
+
     [Header("Reference / 來源")]
+    [SerializeField] public SceneAsset Chapter4;
     [SerializeField] UDPBroadcastReceiver UDPBroadcastReceiver_CS;
     private string old_mmWaveInfo = "";
 
@@ -40,6 +48,20 @@ public class SystemObserve : MonoBehaviour
     {
         if (UDPBroadcastReceiver_CS)
         {
+            mmWaveUpdateTimer += Time.deltaTime;
+            if (mmWaveUpdateTimer >= mmWaveUpdateInterval)
+            {
+                mmWaveUpdateTimer = 0f;
+                old_mmWaveInfo = UDPBroadcastReceiver_CS.mmWaveInfo;
+                if (UDPBroadcastReceiver_CS.mmWaveConnected)
+                    operationalInformationPrintFormat("毫米波", "定期更新", UDPBroadcastReceiver_CS.mmWaveInfo);
+                else
+                {
+                    operationalInformationPrintFormat("毫米波", "錯誤", UDPBroadcastReceiver_CS.mmWaveInfo);
+                    OperationInfo.mmWaveDebugSuggest = UDPBroadcastReceiver_CS.mmWaveInfo;
+                }
+
+            }
             if (old_mmWaveInfo != UDPBroadcastReceiver_CS.mmWaveInfo)
             {
                 old_mmWaveInfo = UDPBroadcastReceiver_CS.mmWaveInfo;
@@ -51,6 +73,14 @@ public class SystemObserve : MonoBehaviour
                     OperationInfo.mmWaveDebugSuggest = UDPBroadcastReceiver_CS.mmWaveInfo;
                 }
             }
+        }
+        else if (!UDPBroadcastReceiver_CS)
+        {
+            OperationInfo.mmWaveScriptActive = false;
+            OperationInfo.mmWaveDebugSuggest = "無法抓取UDPBroadcastReceiver.cs腳本，請確認場景中有此腳本存在";
+            OperationInfo.mmWaveSettedPorts = "";
+            operationalInformationPrintFormat("毫米波", "C#", "無法抓取UDPBroadcastReceiver.cs腳本，請確認場景中有此腳本存在");
+
         }
     }
 

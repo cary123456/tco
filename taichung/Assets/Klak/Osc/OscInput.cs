@@ -129,6 +129,7 @@ namespace Klak.Osc
             if (!string.IsNullOrEmpty(_registeredAddress))
                 OscMaster.messageHandler.RemoveDataCallback(_registeredAddress, OscDataCallback);
             _registeredAddress = null;
+            OscMaster.StopServer();
         }
 
         void Update()

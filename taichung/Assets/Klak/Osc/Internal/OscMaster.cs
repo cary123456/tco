@@ -43,13 +43,48 @@ namespace Klak.Osc
         static OscServer ServerInstance {
             get {
                 if (_server == null) {
-                    _server = new OscServer(12012);
-                    _server.Start();
+                    int[] portsToTry = { 12012, 12013, 12014 }; // List of ports to try
+                    foreach (var port in portsToTry) {
+                        try {
+                            _server = new OscServer(port);
+                            _server.Start();
+                            break;
+                        } catch (System.Net.Sockets.SocketException) {
+                            _server = null; // Try the next port
+                        }
+                    }
+
+                    if (_server == null) {
+                        throw new Exception("Failed to bind to any of the specified ports.");
+                    }
                 }
                 return _server;
             }
         }
 
         #endregion
+
+        public static void StopServer()
+        {
+            if (_server != null)
+            {
+                try
+                {
+                    _server.Dispose();
+                }
+                catch (System.Net.Sockets.SocketException ex)
+                {
+                    UnityEngine.Debug.LogWarning($"[OscMaster] SocketException during server disposal: {ex.Message}");
+                }
+                catch (Exception ex)
+                {
+                    UnityEngine.Debug.LogWarning($"[OscMaster] Exception during server disposal: {ex.Message}");
+                }
+                finally
+                {
+                    _server = null;
+                }
+            }
+        }
     }
 }
