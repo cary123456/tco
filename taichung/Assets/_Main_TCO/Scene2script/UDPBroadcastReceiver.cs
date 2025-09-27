@@ -54,46 +54,46 @@ public class UDPBroadcastReceiver : MonoBehaviour
 
         a = mmwave.transform.position.x;
         b = mmwave.transform.position.z;
-        if(posxtext!= null)
+        if (posxtext != null)
         {
             posxtext.text = a.ToString();
         }
-        if(posytext!= null)
+        if (posytext != null)
         {
             posytext.text = b.ToString();
         }
-        
-        
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         a = mmwave.transform.position.x;
         b = mmwave.transform.position.z;
-        if(posxtext!= null)
+        if (posxtext != null)
         {
             posxtext.text = a.ToString();
         }
-        if(posytext!= null)
+        if (posytext != null)
         {
             posytext.text = b.ToString();
         }
-        if(scalextext!= null)
+        if (scalextext != null)
         {
             scalextext.text = scalex.ToString();
         }
-        if(scaleytext!= null)
+        if (scaleytext != null)
         {
-           scaleytext.text = scaley.ToString();
+            scaleytext.text = scaley.ToString();
         }
-        
-        
 
-        
 
-        if (listener.Available > 0 )
+
+
+
+        if (listener.Available > 0)
         {
             byte[] bytes = listener.Receive(ref groupEP);
             string data = Encoding.ASCII.GetString(bytes, 0, bytes.Length).Trim();
@@ -112,7 +112,7 @@ public class UDPBroadcastReceiver : MonoBehaviour
                     mmWaveConnected = true;
                     for (int i = 0; i < humanModel.Length; i++)
                     {
-                        if(disable == true)
+                        if (disable == true)
                         {
                             //humanModel[i].GetComponent<diss>().trigger = false;
                         }
@@ -120,7 +120,7 @@ public class UDPBroadcastReceiver : MonoBehaviour
                         {
                             //humanModel[i].SetActive(false);
                         }
-                        
+
                     }
                 }
                 else
@@ -143,24 +143,24 @@ public class UDPBroadcastReceiver : MonoBehaviour
                               ax = float.Parse(physicString[4]),
                               ay = float.Parse(physicString[5]);
                         //Debug.Log(id.ToString() + "@ " + string.Join("  ", physicString));
-                        
-                        // Update object position
-                        Vector3 newPos = humanModel[id].transform.position;                        
-                        
 
-                        
+                        // Update object position
+                        Vector3 newPos = humanModel[id].transform.position;
+
+
+
                         float angleInRadians = rotationAngle * Mathf.Deg2Rad;
-                        newPos.x =  -px*scalex;
-                        newPos.z =  py * scaley;
+                        newPos.x = -px * scalex;
+                        newPos.z = py * scaley;
                         rotatedPoint.x = newPos.x * Mathf.Cos(angleInRadians) - newPos.z * Mathf.Sin(angleInRadians);
                         rotatedPoint.z = newPos.x * Mathf.Sin(angleInRadians) + newPos.z * Mathf.Cos(angleInRadians);
                         newPos.x = a + rotatedPoint.x;
                         newPos.z = b + rotatedPoint.z;
-                        
+
                         humanModel[id].transform.position = Vector3.Lerp(humanModel[id].transform.position, newPos, lerp);
                         // Update object direction based on velocity
                         double vd = -Mathf.Atan2(-vx, vy) * Mathf.Rad2Deg;
-                        humanModel[id].transform.rotation =  Quaternion.Euler(0, -(float)vd, 0);
+                        humanModel[id].transform.rotation = Quaternion.Euler(0, -(float)vd, 0);
                         humanModel[id].SetActive(true);
                         //humanModel[id].GetComponent<diss>().trigger = true;
                         // obj updated, reset timer.
@@ -172,30 +172,45 @@ public class UDPBroadcastReceiver : MonoBehaviour
             {
                 Debug.Log(e.Message);
                 mmWaveConnected = false;
-                mmWaveInfo = "毫米波連線異常，請確定連線Port是否為" + udpPort.ToString() + "系統錯誤資訊如下\n" + e;
+                mmWaveInfo = "毫米波連線異常，請確定連線Port是否為" + udpPort.ToString() + "您也可以嘗試：\n" +
+                    "- 確立USB連線\n" +
+                    "- 重置毫米波(背面按鈕)\n" +
+                    "- 檢查軟體是否為綠色Running，若不是請按下Start\n" +
+                    "- 重開Unity。系統錯誤資訊如下\n" + e;
             }
             catch (Exception e)
             {
                 Debug.Log(e.Message);
                 mmWaveConnected = false;
-                mmWaveInfo = "毫米波異常，未能正確辨識錯誤，請手動排除錯誤，系統錯誤資訊如下：\n" + e;
+                mmWaveInfo = "毫米波異常，未能正確辨識錯誤，請手動排除錯誤。\n" +
+                    "您也可以嘗試：\n" +
+                    "- 確立USB連線\n" +
+                    "- 重置毫米波(背面按鈕)\n" +
+                    "- 檢查軟體是否為綠色Running，若不是請按下Start\n" +
+                    "- 重開Unity" +
+                    "系統錯誤資訊如下：\n" + e;
             }
         }
         else
         {
             mmWaveConnected = false;
-            mmWaveInfo = "毫米波沒有連接，請確定是否接上USB並且設定連線Port為" + udpPort.ToString();
+            mmWaveInfo = "毫米波沒有連接，請確定是否接上USB並且設定連線Port為" + udpPort.ToString() +
+                    "您也可以嘗試：\n" +
+                    "- 確立USB連線\n" +
+                    "- 重置毫米波(背面按鈕)\n" +
+                    "- 檢查軟體是否為綠色Running，若不是請按下Start\n" +
+                    "- 重開Unity";
         }
-      
+
     }
 
     public void scalecheck()
     {
         scalex = float.Parse(x.text);
         scaley = float.Parse(y.text);
-    } 
+    }
     public void positioncheck()
     {
-        this.transform.position = new Vector3(float.Parse(posx.text),this.transform.position.y,float.Parse(posy.text));
-    } 
+        this.transform.position = new Vector3(float.Parse(posx.text), this.transform.position.y, float.Parse(posy.text));
+    }
 }
