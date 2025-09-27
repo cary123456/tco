@@ -191,16 +191,16 @@ public class UDPBroadcastReceiver : MonoBehaviour
                     "系統錯誤資訊如下：\n" + e;
             }
         }
-        else
-        {
-            mmWaveConnected = false;
-            mmWaveInfo = "毫米波沒有連接，請確定是否接上USB並且設定連線Port為" + udpPort.ToString() +
-                    "您也可以嘗試：\n" +
-                    "- 確立USB連線\n" +
-                    "- 重置毫米波(背面按鈕)\n" +
-                    "- 檢查軟體是否為綠色Running，若不是請按下Start\n" +
-                    "- 重開Unity";
-        }
+        // else
+        // {
+        //     mmWaveConnected = false;
+        //     mmWaveInfo = "毫米波沒有連接，請確定是否接上USB並且設定連線Port為" + udpPort.ToString() +
+        //             "您也可以嘗試：\n" +
+        //             "- 確立USB連線\n" +
+        //             "- 重置毫米波(背面按鈕)\n" +
+        //             "- 檢查軟體是否為綠色Running，若不是請按下Start\n" +
+        //             "- 重開Unity";
+        // }
 
     }
 
