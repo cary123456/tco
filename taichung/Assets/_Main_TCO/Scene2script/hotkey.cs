@@ -264,7 +264,8 @@ public class hotkey : MonoBehaviour
         buildon_CS = GameObject.FindObjectsOfType<buildon>();
         valuerecueve_CS = FindObjectsOfType<valuerecueve>();
 
-        lightObject.SetActive(LightTurned);
+        if(lightObject != null)
+            lightObject.SetActive(LightTurned);
 
         // crabfollow 控制已由 InputAction 處理
         if (crabfollow)

@@ -28,6 +28,9 @@ public class UDPBroadcastReceiver : MonoBehaviour
     public Text posytext;
     public bool disable;
 
+    public string mmWaveInfo;
+    public bool mmWaveConnected = false;
+
     public GameObject mmwave;
 
     public float a;
@@ -105,6 +108,8 @@ public class UDPBroadcastReceiver : MonoBehaviour
                 if (data == "0")
                 {
                     Debug.Log("Nothing detected, clean up.");
+                    mmWaveInfo = "–¢žû‘ª”C‰½•¨é“";
+                    mmWaveConnected = true;
                     for (int i = 0; i < humanModel.Length; i++)
                     {
                         if(disable == true)
@@ -124,6 +129,8 @@ public class UDPBroadcastReceiver : MonoBehaviour
                     objectList = objectList.Where(x => !string.IsNullOrEmpty(x)).ToArray();
 
                     Debug.Log($"object Number: {objectList.Length}");
+                    mmWaveInfo = $"žû‘ª“ž {objectList.Length} ŒÂ•¨é“";
+                    mmWaveConnected = true;
                     for (int i = 0; i < objectList.Length; i++)
                     {
                         string[] subString = objectList[i].Split(':');
@@ -164,8 +171,22 @@ public class UDPBroadcastReceiver : MonoBehaviour
             catch (SocketException e)
             {
                 Debug.Log(e.Message);
+                mmWaveConnected = false;
+                mmWaveInfo = "Ÿ|•Ä”g˜AüˆÙíC¿Šm’è˜AüPort¥”Ûˆ×" + udpPort.ToString() + "Œn“öŒëŽ‘u”@‰º\n" + e;
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e.Message);
+                mmWaveConnected = false;
+                mmWaveInfo = "Ÿ|•Ä”gˆÙíC–¢”\³Šm™žŽ¯öŒëC¿Žè“®”rœöŒëCŒn“öŒëŽ‘u”@‰ºF\n" + e;
             }
         }
+        else
+        {
+            mmWaveConnected = false;
+            mmWaveInfo = "Ÿ|•Ä”gŸ“—L˜AÚC¿Šm’è¥”ÛÚãUSB•ÀŠŽÝ’è˜AüPortˆ×" + udpPort.ToString();
+        }
+      
     }
 
     public void scalecheck()

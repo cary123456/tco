@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595bb7d61dafd124f977c1e90832f56c, type: 3}
+  m_Name: Operation Info
+  m_EditorClassIdentifier: 
+  inOperation: 0
+  currentScene: 
+  operationInformation: "\u2192 16:18:01.167 [\u5834\u666F]\u96E2\u958B chapter4\n\u2192
+    16:17:41.509 [\u6BEB\u7C73\u6CE2]\u932F\u8AA4 \u6BEB\u7C73\u6CE2\u6C92\u6709\u9023\u63A5\uFF0C\u8ACB\u78BA\u5B9A\u662F\u5426\u63A5\u4E0AUSB\u4E26\u4E14\u8A2D\u5B9A\u9023\u7DDAPort\u70BA6668\n\u2192
+    16:17:40.538 [\u6BEB\u7C73\u6CE2]C# UDPBroadcastReceiver.cs\u8173\u672C\u5DF2\u6293\u53D6\n\u2192
+    16:17:40.534 [\u5834\u666F]\u9032\u5165 chapter4\n\u2192 16:16:36.090 [\u5834\u666F]\u96E2\u958B
+    chapter4\n\u2192 16:16:20.052 [\u6BEB\u7C73\u6CE2]\u932F\u8AA4 \u6BEB\u7C73\u6CE2\u6C92\u6709\u9023\u63A5\uFF0C\u8ACB\u78BA\u5B9A\u662F\u5426\u63A5\u4E0AUSB\u4E26\u4E14\u8A2D\u5B9A\u9023\u7DDAPort\u70BA6668\n\u2192
+    16:16:19.103 [\u6BEB\u7C73\u6CE2]C# UDPBroadcastReceiver.cs\u8173\u672C\u5DF2\u6293\u53D6\n16:16:19.099
+    [\u5834\u666F]\u9032\u5165 chapter4"
+  mmWaveScriptActive: 1
+  mmWaveSettedPorts: 6668
+  mmWaveInfo: 
+  mmWaveDebugSuggest: "\u6BEB\u7C73\u6CE2\u6C92\u6709\u9023\u63A5\uFF0C\u8ACB\u78BA\u5B9A\u662F\u5426\u63A5\u4E0AUSB\u4E26\u4E14\u8A2D\u5B9A\u9023\u7DDAPort\u70BA6668"
+  midiDebugSuggest: 
+  ObjectsControlInfo: 
+  EnablingBuildingInstantiate: 0
+  EnablingCrabInstantiate: 0
+  EnablingFishmanInstantiate: 0
