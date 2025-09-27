@@ -1,0 +1,1555 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hotkeyEnvROGNew
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: a5e4aec461cf4ec46b5bbde3197bbd92, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: crab
+    value: 
+    objectReference: {fileID: 4262914510834770975, guid: 9554d56db027c004cbee841b76451df5, type: 3}
+  - target: {fileID: 0}
+    propertyPath: crabkey
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: crabposition
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: crabmanager
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: crabs.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: crabb.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: SummonCrabs
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: crabfollow
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: onetime
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: crabcount
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: headset
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: raycast
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: VRcam
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: maincamera
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: fadeui.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: fadeui.Array.data[0]
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: fadeui.Array.data[1]
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Rvfx
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Lvfx
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: RLine
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: LLine
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: vfxcount
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: mainncamera
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: player.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: fish
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: fish2
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: fish3
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: fishflok
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: fishflok2
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: fishflok3
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: fishflok4
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: fishcount
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: fishbool
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: staw
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: staw_2
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: back
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: bubblebackup
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: bubblecount
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: bubble
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: lookatcount
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: center
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: growbool
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: growruntime
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: growtime
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: target
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Sea
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: SkyBox
+    value: 
+    objectReference: {fileID: 2100000, guid: 21abce3d8d053bc45aed8920641a49c2, type: 2}
+  - target: {fileID: 0}
+    propertyPath: SeaUpSpeed
+    value: 0.65
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: SeaUpKey
+    value: 273
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: SeaDownKey
+    value: 274
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: smooth
+    value: 100
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: SkyBoxSmooth
+    value: 1000
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: lightObject
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_crab.m_Name
+    value: I_crab
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_crab.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_crab.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_crab.m_Id
+    value: 36a20184-7461-43ad-a041-e2c91b646f8e
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_crab.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_crab.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_crab.m_SingletonActionBindings.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_crab.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_DelCrab.m_Name
+    value: I_Del Crab
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_DelCrab.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_DelCrab.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_DelCrab.m_Id
+    value: 0c0adf06-7615-41c7-bcff-a2af34f54cb2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_DelCrab.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_DelCrab.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_DelCrab.m_SingletonActionBindings.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_DelCrab.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw.m_Name
+    value: I_staw
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw.m_Id
+    value: 7060739c-4d33-4acd-8bd6-924d3ef6c85a
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw.m_SingletonActionBindings.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw_2.m_Name
+    value: I_staw_2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw_2.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw_2.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw_2.m_Id
+    value: 9b2bd63f-cf1d-4509-bc35-58515cc7f22f
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw_2.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw_2.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw_2.m_SingletonActionBindings.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_staw_2.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_bubble.m_Name
+    value: I_bubble
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_bubble.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_bubble.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_bubble.m_Id
+    value: e24dc3ad-1cfc-4973-82d7-7f43ed47e0ec
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_bubble.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_bubble.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_bubble.m_SingletonActionBindings.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_bubble.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_Name
+    value: I_Fade UI_In
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_Id
+    value: fd107025-0897-4518-8e46-947b7973fd2c
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_SingletonActionBindings.Array.data[0].m_Id
+    value: 4c4f3793-1175-4af0-b4b2-eed30228b9d1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <Keyboard>/space
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_Fade UI_In
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_In.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_Name
+    value: I_Fade UI_Out
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_Id
+    value: a4a9a22b-bf34-40e3-b05e-0c183e609a10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_SingletonActionBindings.Array.data[0].m_Id
+    value: a764757a-432c-469d-bb26-9a7a60aecdeb
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <Keyboard>/n
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_Fade UI_Out
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_FadeUI_Out.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_vfx.m_Name
+    value: I_vfx
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_vfx.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_vfx.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_vfx.m_Id
+    value: 5583c3e7-9c0e-4c87-89a2-e030ba73ac3e
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_vfx.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_vfx.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_vfx.m_SingletonActionBindings.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_vfx.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_Name
+    value: I_grow
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_Id
+    value: 7321d8c6-a111-4d1f-abef-93db795cffcc
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_SingletonActionBindings.Array.data[0].m_Id
+    value: fd4aff25-2f78-4362-8287-d59560e59d4e
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <Keyboard>/z
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_grow
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_grow.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_Name
+    value: I_around
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_Id
+    value: ded1a77a-1b41-4267-a493-22aa9da3de1d
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_SingletonActionBindings.Array.data[0].m_Id
+    value: 6391cce7-7f75-4e24-8f19-85a8518527d3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <Keyboard>/p
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_around
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_around.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_fish.m_Name
+    value: I_fish
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_fish.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_fish.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_fish.m_Id
+    value: 986b52e6-15e3-4b2d-9438-ffe6a7f24d55
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_fish.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_fish.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_fish.m_SingletonActionBindings.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_fish.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_Name
+    value: I_Reset
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_Id
+    value: 8f888fef-4b2d-4f15-a7f5-446dacbb13c0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_SingletonActionBindings.Array.data[0].m_Id
+    value: 492c747f-123b-427b-b20a-66e0064a2699
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <Keyboard>/backquote
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_Reset
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Reset.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_Name
+    value: I_Load Ch 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_Id
+    value: c63bd1d4-4eb5-4bad-9ab4-ff886ffe8e6d
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[0].m_Id
+    value: aa819fb2-f931-4a49-9449-5e6de29a708a
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <Keyboard>/f4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_Load Ch 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[1].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[1].m_Id
+    value: 3a2bc6f6-49f9-4122-bbed-e572fd766d19
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[1].m_Path
+    value: <MidiDevice>/note050
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[1].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[1].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[1].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[1].m_Action
+    value: I_Load Ch 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_SingletonActionBindings.Array.data[1].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LoadCh4.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_Name
+    value: I_Sea Slider
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_Id
+    value: 2a96e340-9704-4cab-8815-34c2c1f0edd2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_SingletonActionBindings.Array.data[0].m_Id
+    value: be86df08-bece-4777-8200-289df44b37b3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <MidiDevice>/control001
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_Sea Slider
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaSlider.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: SliderAbsolutePosition
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: SeaMinY
+    value: 2.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: SeaMaxY
+    value: 18
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: SeaLerpSpeed
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: targetSeaY
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: currentSeaY
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: skyboxMultiplier
+    value: 0.4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_Name
+    value: I_Sea Up
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_Id
+    value: 0a683c51-9c07-4ee5-90e5-45a05cb74894
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_SingletonActionBindings.Array.data[0].m_Id
+    value: a9de61b9-416d-4ce5-8c60-90b529487860
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <Keyboard>/upArrow
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_Sea Up
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaUp.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_Name
+    value: I_Sea Down
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_Id
+    value: 5aa12de8-16ce-4c47-bb97-efd3dd64e287
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_SingletonActionBindings.Array.data[0].m_Id
+    value: ba484c32-66bc-48f3-9534-3beac33cbcc5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <Keyboard>/downArrow
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_Sea Down
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_SeaDown.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_Name
+    value: I_New Building Grow
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_Id
+    value: 505f263f-9345-46ea-bdc1-e6afdb7dff53
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_SingletonActionBindings.Array.data[0].m_Id
+    value: 67dabb4f-ebe3-41f8-a237-92dc7282a8a1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <Keyboard>/g
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_New Building Grow
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_NewBuildingGrow.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: buildingAnimationControls.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_Name
+    value: I_Clear Building
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_Id
+    value: 85efa1cd-e740-444e-9f9a-bd57c5508a5d
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_SingletonActionBindings.Array.data[0].m_Id
+    value: 388fa1a0-b6a0-456f-9a64-c880c952a89e
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <Keyboard>/delete
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_Clear Building
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ClearBuilding.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: houseArray
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_Name
+    value: I_Light Control
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_Id
+    value: 85033eda-370d-41a6-b58e-21f3026575a6
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_SingletonActionBindings.Array.data[0].m_Id
+    value: d513ce46-0b3b-46ca-9c9a-9b832942b923
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <MidiDevice>/note051
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_Light Control
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LightControl.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: LightTurned
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Light.m_Name
+    value: I_Light
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Light.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Light.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Light.m_Id
+    value: baf1df56-61bb-48fe-a840-18b995380612
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Light.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Light.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Light.m_SingletonActionBindings.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_Light.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_Name
+    value: I_Enabling Building Instantiate
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_Id
+    value: e12345c9-106a-41c6-96c8-fe8e6eb8fbd8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_SingletonActionBindings.Array.data[0].m_Id
+    value: 4cad8cad-e862-4ec0-b63d-c49475d14668
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <MidiDevice>/note037
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_Enabling Building Instantiate
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingBuildingInstantiate.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_Name
+    value: I_Enabling Crab Instantiate
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_Id
+    value: 56c5afeb-e188-41f4-9a53-53c51f602ee0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_SingletonActionBindings.Array.data[0].m_Id
+    value: 7d4f0cdc-fa17-4acc-b8f3-70432bb6936e
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <MidiDevice>/note039
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_Enabling Crab Instantiate
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingCrabInstantiate.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_Name
+    value: I_Enabling Fishman Instantiate
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_Id
+    value: 4a0ee8d0-34c7-4fe4-835d-fc2a6789d717
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_SingletonActionBindings.Array.data[0].m_Id
+    value: 67ef9c2a-fd4e-41f3-b523-6c776339899b
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <MidiDevice>/note041
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_Enabling Fishman Instantiate
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_EnablingFishmanInstantiate.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: EnablingBuildingInstantiate
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: buildon_CS.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: EnablingCrabInstantiate
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: dynamicGeneration_CS
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: valuerecueve_CS.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: EnablingFishmanInstantiate
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: houseArray_CS.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []

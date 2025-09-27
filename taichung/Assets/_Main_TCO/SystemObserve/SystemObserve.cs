@@ -63,7 +63,6 @@ public class SystemObserve : MonoBehaviour
         OperationInfo.mmWaveScriptActive = false;
         OperationInfo.mmWaveSettedPorts = string.Empty;
         OperationInfo.mmWaveDebugSuggest = string.Empty;
-        OperationInfo.operationInformation = string.Empty;
         OperationInfo.ObjectsControlInfo = string.Empty;
         OperationInfo.EnablingBuildingInstantiate = false;
         OperationInfo.EnablingCrabInstantiate = false;

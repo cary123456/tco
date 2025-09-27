@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
@@ -108,7 +108,7 @@ public class UDPBroadcastReceiver : MonoBehaviour
                 if (data == "0")
                 {
                     Debug.Log("Nothing detected, clean up.");
-                    mmWaveInfo = "–¢žû‘ª”C‰½•¨é“";
+                    mmWaveInfo = "æœªæª¢æ¸¬ä»»ä½•ç‰©é«”";
                     mmWaveConnected = true;
                     for (int i = 0; i < humanModel.Length; i++)
                     {
@@ -129,7 +129,7 @@ public class UDPBroadcastReceiver : MonoBehaviour
                     objectList = objectList.Where(x => !string.IsNullOrEmpty(x)).ToArray();
 
                     Debug.Log($"object Number: {objectList.Length}");
-                    mmWaveInfo = $"žû‘ª“ž {objectList.Length} ŒÂ•¨é“";
+                    mmWaveInfo = $"æª¢æ¸¬åˆ° {objectList.Length} å€‹ç‰©é«”";
                     mmWaveConnected = true;
                     for (int i = 0; i < objectList.Length; i++)
                     {
@@ -172,19 +172,19 @@ public class UDPBroadcastReceiver : MonoBehaviour
             {
                 Debug.Log(e.Message);
                 mmWaveConnected = false;
-                mmWaveInfo = "Ÿ|•Ä”g˜AüˆÙíC¿Šm’è˜AüPort¥”Ûˆ×" + udpPort.ToString() + "Œn“öŒëŽ‘u”@‰º\n" + e;
+                mmWaveInfo = "æ¯«ç±³æ³¢é€£ç·šç•°å¸¸ï¼Œè«‹ç¢ºå®šé€£ç·šPortæ˜¯å¦ç‚º" + udpPort.ToString() + "ç³»çµ±éŒ¯èª¤è³‡è¨Šå¦‚ä¸‹\n" + e;
             }
             catch (Exception e)
             {
                 Debug.Log(e.Message);
                 mmWaveConnected = false;
-                mmWaveInfo = "Ÿ|•Ä”gˆÙíC–¢”\³Šm™žŽ¯öŒëC¿Žè“®”rœöŒëCŒn“öŒëŽ‘u”@‰ºF\n" + e;
+                mmWaveInfo = "æ¯«ç±³æ³¢ç•°å¸¸ï¼Œæœªèƒ½æ­£ç¢ºè¾¨è­˜éŒ¯èª¤ï¼Œè«‹æ‰‹å‹•æŽ’é™¤éŒ¯èª¤ï¼Œç³»çµ±éŒ¯èª¤è³‡è¨Šå¦‚ä¸‹ï¼š\n" + e;
             }
         }
         else
         {
             mmWaveConnected = false;
-            mmWaveInfo = "Ÿ|•Ä”gŸ“—L˜AÚC¿Šm’è¥”ÛÚãUSB•ÀŠŽÝ’è˜AüPortˆ×" + udpPort.ToString();
+            mmWaveInfo = "æ¯«ç±³æ³¢æ²’æœ‰é€£æŽ¥ï¼Œè«‹ç¢ºå®šæ˜¯å¦æŽ¥ä¸ŠUSBä¸¦ä¸”è¨­å®šé€£ç·šPortç‚º" + udpPort.ToString();
         }
       
     }
