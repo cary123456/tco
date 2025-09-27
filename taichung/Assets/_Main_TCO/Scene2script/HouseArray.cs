@@ -802,7 +802,9 @@ public class HouseArray : MonoBehaviour
     void OnHouseAtPointPressed(InputAction.CallbackContext ctx)
     {
         // 處理於指定位置生成房子
-        Vector3 pos = HousePosition[HousePosIndex].position;
+        if (HousePosition == null)
+            Debug.LogError("[HouseArray.cs]@" + this.name + " 請在HousePosition指定建築物的指定生成點(GameObject)");
+        Vector3 pos = HousePosition[HousePosIndex].position; //從GameObject的陣列HousePosition生成房子
         int rand = Random.Range(0, house.Length);
         GameObject houses = Instantiate(house[rand], pos, Quaternion.identity, parenttrans);
         HousePosIndex++;
