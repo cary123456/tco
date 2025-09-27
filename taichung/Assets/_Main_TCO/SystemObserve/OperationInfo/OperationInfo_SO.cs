@@ -16,15 +16,16 @@ public class OperationInfo_SO : ScriptableObject
     [Header("mmWave / 毫米波運行")]
     [Tooltip("毫米波連線的腳本是否存在並且成功抓取")]
     [ReadOnly][SerializeField] public bool mmWaveScriptActive = false;
+    [ReadOnly][SerializeField] public bool mmWaveMouseControl = false;
     [ReadOnly][SerializeField] public string mmWaveSettedPorts = "";
     [ReadOnly][SerializeField] public string mmWaveInfo = "";
     [TextArea(1,3)] public string mmWaveDebugSuggest = "";
 
     [Header("MIDI Communicate / MIDI傳輸運行")]
-    [SerializeField] public string midiDebugSuggest = "";
+    [SerializeField] public string MIDIDebugSuggest = "";
 
     [Header("MIDI Device / MIDI控制裝置運行狀況")]
-    [SerializeField] public string midiDeviceDebugSuggest = "";
+    [SerializeField] public string MIDIDeviceDebugSuggest = "";
 
     [Header("Objects Supervice / 物件控制狀況")]
     [Tooltip("物件控制的狀況，包含現在是否有腳本可控制物件開關")]

@@ -228,6 +228,52 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a1c5d7b9efce4a14ab495839f3d80670, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
+--- !u!1 &127677220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 127677222}
+  - component: {fileID: 127677221}
+  m_Layer: 0
+  m_Name: SystemInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &127677221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127677220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd89c410b7875ae409b95a278f64d5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OperationInfo: {fileID: 11400000, guid: c0c75567439b2d044ae3d3cd6332b4db, type: 2}
+  UDPBroadcastReceiver_CS: {fileID: 0}
+--- !u!4 &127677222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127677220}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.3940728, y: -3.1476989, z: -5.2822685}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &183067696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -705,6 +751,16 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   houseArray: {fileID: 0}
+  I_LightControl:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  LightTurned: 0
   I_Light:
     m_Name: I_Light
     m_Type: 0
@@ -2370,7 +2426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892657987}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -3.06, y: 9.97, z: -1.2049994}
+  m_LocalPosition: {x: 1.48, y: 9.97, z: -1.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2431,7 +2487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ba5fea1e35b614cbf6b7627471fc43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  udpPort: 6668
+  udpPort: 6669
   humanModel:
   - {fileID: 183067697}
   - {fileID: 183067697}
@@ -2485,6 +2541,8 @@ MonoBehaviour:
   posxtext: {fileID: 0}
   posytext: {fileID: 0}
   disable: 0
+  mmWaveInfo: 
+  mmWaveConnected: 0
   mmwave: {fileID: 967268047}
   a: 0
   b: 0
