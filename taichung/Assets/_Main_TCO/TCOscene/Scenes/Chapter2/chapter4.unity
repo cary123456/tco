@@ -356,8 +356,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OperationInfo: {fileID: 11400000, guid: dcb9716729f6d694987de20f4cbdc96b, type: 2}
   mmWaveUpdateInterval: 10
-  Chapter2: {fileID: 0}
-  Chapter4: {fileID: 0}
+  Chapter2: {fileID: 102900000, guid: e058855dd21e501469d925946c49af00, type: 3}
+  Chapter4: {fileID: 102900000, guid: 1f8cb0620d987884a83b5f1d86f4c865, type: 3}
   UDPBroadcastReceiver_CS: {fileID: 0}
   mmWaveManual_CS: {fileID: 0}
   hotkey_CS: {fileID: 0}
@@ -900,11 +900,14 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   EnablingBuildingInstantiate: 1
+  BuildingCount: 0
   buildon_CS: []
   EnablingCrabInstantiate: 1
+  CrabCount: 0
   dynamicGeneration_CS: {fileID: 0}
   valuerecueve_CS: []
   EnablingFishmanInstantiate: 1
+  FishmanCount: 0
   houseArray_CS: []
 --- !u!4 &356160660
 Transform:
@@ -2893,7 +2896,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.7451155, y: 1}
+    m_SensorSize: {x: 1.8879056, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3318,7 +3321,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 37634148-fc5d-42e9-8d33-e44b0bf058a3
-      m_Path: <Keyboard>/numpad1
+      m_Path: <Keyboard>/1
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -3333,7 +3336,15 @@ MonoBehaviour:
     m_Id: 235eb07c-3be6-4b0c-9550-8dd5f745fcf3
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 912e5833-5b24-437c-b494-0809cd55adef
+      m_Path: <MidiDevice>/control016
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Impact Pitch
+      m_Flags: 0
     m_Flags: 0
   impactPitch: 0
   pitch_NoiseScale_MinThreshold: 0

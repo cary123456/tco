@@ -20,7 +20,7 @@ public class SystemObserve : MonoBehaviour
     [Header("Reference / 來源")]
     [SerializeField] public SceneAsset Chapter2;
     [SerializeField] public SceneAsset Chapter4;
-    
+
     [Header("Auto Ref / 自動來源安裝")]
     [SerializeField] UDPBroadcastReceiver UDPBroadcastReceiver_CS;
     [SerializeField] mmWaveManual mmWaveManual_CS;
@@ -66,7 +66,14 @@ public class SystemObserve : MonoBehaviour
             operationalInformationPrintFormat("毫米波手動控制", "C#", "無法抓取mmWaveManual.cs腳本，請確認場景中有此腳本存在");
         }
         if (hotkey_CS)
+        {
+            if (OperationInfo.currentScene == Chapter4.name)
+            {
+                operationalInformationPrintFormat("物件生成控制", "場景非必要", "目前位於的場景不需要用到生成管控功能");
+            }
             operationalInformationPrintFormat("物件生成控制", "C#", "hotkey.cs腳本已抓取");
+
+        }
         else if (!hotkey_CS)
         {
             operationalInformationPrintFormat("物件生成控制", "C#", "無法抓取hotkey.cs腳本，請確認場景中有此腳本存在");
@@ -125,11 +132,17 @@ public class SystemObserve : MonoBehaviour
                     operationalInformationPrintFormat("毫米波", "定期更新", UDPBroadcastReceiver_CS.mmWaveInfo, UDPBroadcastReceiver_CS.name);
                     OperationInfo.mmWaveInfo = OperationInfo.mmWaveInfo + "\n" + UDPBroadcastReceiver_CS.mmWaveInfo;
                 }
+                else if (UDPBroadcastReceiver_CS.mmWaveInfo == "")
+                {
+                    operationalInformationPrintFormat("毫米波", "錯誤", "UDPBroadcastReciever.cs腳本錯誤偵測異常，可能是：\n毫米波尚未連接");
+                    OperationInfo.mmWaveDebugSuggest = "UDPBroadcastReciever.cs腳本錯誤偵測異常，可能是：\n毫米波尚未連接";
+                    OperationInfo.mmWaveInfo = "請檢察連線和Port";
+                }
                 else
                 {
                     operationalInformationPrintFormat("毫米波", "錯誤", UDPBroadcastReceiver_CS.mmWaveInfo, UDPBroadcastReceiver_CS.name);
                     OperationInfo.mmWaveDebugSuggest = UDPBroadcastReceiver_CS.mmWaveInfo;
-                    OperationInfo.mmWaveInfo = "";
+                    OperationInfo.mmWaveInfo = "請檢察連線和Port";
 
                 }
 
@@ -146,7 +159,7 @@ public class SystemObserve : MonoBehaviour
                 {
                     operationalInformationPrintFormat("毫米波", "錯誤", UDPBroadcastReceiver_CS.mmWaveInfo, UDPBroadcastReceiver_CS.name);
                     OperationInfo.mmWaveDebugSuggest = OperationInfo.mmWaveInfo + "\n" + UDPBroadcastReceiver_CS.mmWaveInfo;
-                    OperationInfo.mmWaveInfo = "";
+                    OperationInfo.mmWaveInfo = "請檢察連線和Port";
                 }
             }
         }
@@ -163,10 +176,18 @@ public class SystemObserve : MonoBehaviour
     {
         if (hotkey_CS)
         {
-            OperationInfo.ObjectsControlInfo = "生成管控中，建築物生成：" + (hotkey_CS.EnablingBuildingInstantiate ? hotkey_CS.BuildingCount : "X") + "，螃蟹生成：" + (hotkey_CS.EnablingCrabInstantiate ? hotkey_CS.CrabCount : "X") + "，漁人生成：" + (hotkey_CS.EnablingFishmanInstantiate ? hotkey_CS.FishmanCount : "X");
-            OperationInfo.EnablingBuildingInstantiate = hotkey_CS.EnablingBuildingInstantiate;
-            OperationInfo.EnablingCrabInstantiate = hotkey_CS.EnablingCrabInstantiate;
-            OperationInfo.EnablingFishmanInstantiate = hotkey_CS.EnablingFishmanInstantiate;
+            if (OperationInfo.currentScene == Chapter4.name)
+            {
+                OperationInfo.ObjectsControlInfo = "目前位於的場景不需要用到生成管控功能";
+            }
+            else
+            {
+                OperationInfo.ObjectsControlInfo = "生成管控中，建築物生成：" + (hotkey_CS.EnablingBuildingInstantiate ? hotkey_CS.BuildingCount : "X") + "，螃蟹生成：" + (hotkey_CS.EnablingCrabInstantiate ? hotkey_CS.CrabCount : "X") + "，漁人生成：" + (hotkey_CS.EnablingFishmanInstantiate ? hotkey_CS.FishmanCount : "X");
+                OperationInfo.EnablingBuildingInstantiate = hotkey_CS.EnablingBuildingInstantiate;
+                OperationInfo.EnablingCrabInstantiate = hotkey_CS.EnablingCrabInstantiate;
+                OperationInfo.EnablingFishmanInstantiate = hotkey_CS.EnablingFishmanInstantiate;
+            }
+
         }
     }
 

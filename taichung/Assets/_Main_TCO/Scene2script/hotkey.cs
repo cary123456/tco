@@ -119,11 +119,11 @@ public class hotkey : MonoBehaviour
     [Space]
     [Header("控制是否生成建築、螃蟹、漁人\n防止誤觸為目的，可同時監控狀態")]
     [Tooltip("是否允許生成房子的按鍵")]
-    [SerializeField] InputAction I_EnablingBuildingInstantiate;
+    [SerializeField] public InputAction I_EnablingBuildingInstantiate;
     [Tooltip("是否允許生成螃蟹的按鍵")]
-    [SerializeField] InputAction I_EnablingCrabInstantiate;
+    [SerializeField] public InputAction I_EnablingCrabInstantiate;
     [Tooltip("是否允許生成漁人的按鍵")]
-    [SerializeField] InputAction I_EnablingFishmanInstantiate;
+    [SerializeField] public InputAction I_EnablingFishmanInstantiate;
     [Space]
     [Tooltip("是否允許生成房子")]
     [SerializeField] public bool EnablingBuildingInstantiate = true;

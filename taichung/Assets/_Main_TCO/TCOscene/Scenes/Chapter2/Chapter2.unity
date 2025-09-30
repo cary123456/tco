@@ -4580,6 +4580,7 @@ MonoBehaviour:
   Chapter4: {fileID: 102900000, guid: 1f8cb0620d987884a83b5f1d86f4c865, type: 3}
   UDPBroadcastReceiver_CS: {fileID: 0}
   mmWaveManual_CS: {fileID: 0}
+  hotkey_CS: {fileID: 0}
 --- !u!4 &529658086
 Transform:
   m_ObjectHideFlags: 0
@@ -5078,11 +5079,14 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
   EnablingBuildingInstantiate: 1
+  BuildingCount: 0
   buildon_CS: []
   EnablingCrabInstantiate: 1
+  CrabCount: 0
   dynamicGeneration_CS: {fileID: 191333789}
   valuerecueve_CS: []
   EnablingFishmanInstantiate: 1
+  FishmanCount: 0
   houseArray_CS: []
 --- !u!1 &581448327 stripped
 GameObject:
@@ -7320,6 +7324,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 78e60eb5-af91-4330-8b20-b91bf0cf9594
       m_Path: <Keyboard>/numpad2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Fish Const Generation
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 2ff3f984-e7ab-42f7-b79a-92820af193ba
+      m_Path: <MidiDevice>/note048
       m_Interactions: 
       m_Processors: 
       m_Groups: 
