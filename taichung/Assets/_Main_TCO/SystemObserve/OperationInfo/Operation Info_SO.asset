@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595bb7d61dafd124f977c1e90832f56c, type: 3}
+  m_Name: Operation Info_SO
+  m_EditorClassIdentifier: 
+  inOperation: 0
+  currentScene: 
+  operationInformation: "\u2192 11:02:26.256 [\u5834\u666F]\u96E2\u958B Chapter2\n\u2192
+    11:02:11.902 [\u7269\u4EF6\u751F\u6210\u63A7\u5236]C# hotkey.cs\u8173\u672C\u5DF2\u6293\u53D6\n\u2192
+    11:02:11.902 [\u6BEB\u7C73\u6CE2\u624B\u52D5\u63A7\u5236]C# \u7121\u6CD5\u6293\u53D6mmWaveManual.cs\u8173\u672C\uFF0C\u8ACB\u78BA\u8A8D\u5834\u666F\u4E2D\u6709\u6B64\u8173\u672C\u5B58\u5728\n\u2192
+    11:02:11.902 [\u6BEB\u7C73\u6CE2]C# \u7121\u6CD5\u6293\u53D6UDPBroadcastReceiver.cs\u8173\u672C\uFF0C\u8ACB\u78BA\u8A8D\u5834\u666F\u4E2D\u6709\u6B64\u8173\u672C\u5B58\u5728\n\u2192
+    11:02:11.900 [\u5834\u666F]\u9032\u5165 Chapter2\n\u2192 10:51:53.549 [\u5834\u666F]\u96E2\u958B
+    chapter4\n\u2192 10:51:48.751 [\u6BEB\u7C73\u6CE2]\u932F\u8AA4 (@mmwave)\n\u2192
+    10:51:38.747 [\u6BEB\u7C73\u6CE2]\u932F\u8AA4 (@mmwave)\n\u2192 10:51:28.744
+    [\u6BEB\u7C73\u6CE2]\u932F\u8AA4 (@mmwave)\n\u2192 10:51:18.742 [\u6BEB\u7C73\u6CE2]\u932F\u8AA4
+    (@mmwave)\n\u2192 10:51:08.728 [\u6BEB\u7C73\u6CE2]\u932F\u8AA4 (@mmwave)\n\u2192
+    10:50:58.725 [\u6BEB\u7C73\u6CE2]\u932F\u8AA4 (@mmwave)\n\u2192 10:50:48.721
+    [\u6BEB\u7C73\u6CE2]\u932F\u8AA4 (@mmwave)\n\u2192 10:50:38.712 [\u6BEB\u7C73\u6CE2]\u932F\u8AA4
+    (@mmwave)\n\u2192 10:50:28.712 [\u6BEB\u7C73\u6CE2]\u932F\u8AA4 (@mmwave)\n\u2192
+    10:50:18.628 [\u7269\u4EF6\u751F\u6210\u63A7\u5236]C# hotkey.cs\u8173\u672C\u5DF2\u6293\u53D6\n\u2192
+    10:50:18.628 [\u6BEB\u7C73\u6CE2\u624B\u52D5\u63A7\u5236]C# mmWaveManual.cs\u8173\u672C\u5DF2\u6293\u53D6\n\u2192
+    10:50:18.628 [\u6BEB\u7C73\u6CE2]C# UDPBroadcastReceiver.cs\u8173\u672C\u5DF2\u6293\u53D6\n\u2192
+    10:50:18.628 [\u5834\u666F]\u9032\u5165 chapter4\n\u2192 10:50:18.614 [\u5834\u666F]\u96E2\u958B
+    Chapter2\n\u2192 10:49:50.055 [\u7269\u4EF6\u751F\u6210\u63A7\u5236]C# hotkey.cs\u8173\u672C\u5DF2\u6293\u53D6\n\u2192
+    10:49:50.055 [\u6BEB\u7C73\u6CE2\u624B\u52D5\u63A7\u5236]C# \u7121\u6CD5\u6293\u53D6mmWaveManual.cs\u8173\u672C\uFF0C\u8ACB\u78BA\u8A8D\u5834\u666F\u4E2D\u6709\u6B64\u8173\u672C\u5B58\u5728\n\u2192
+    10:49:50.055 [\u6BEB\u7C73\u6CE2]C# \u7121\u6CD5\u6293\u53D6UDPBroadcastReceiver.cs\u8173\u672C\uFF0C\u8ACB\u78BA\u8A8D\u5834\u666F\u4E2D\u6709\u6B64\u8173\u672C\u5B58\u5728\n10:49:50.052
+    [\u5834\u666F]\u9032\u5165 Chapter2"
+  currentInput: "\u9375\u76E4\u8F38\u5165\uFF1AFalse\nMIDI\u8F38\u5165\uFF1A"
+  mmWaveScriptActive: 0
+  mmWaveMouseControl: 0
+  mmWaveSettedPorts: 
+  mmWaveInfo: 
+  mmWaveDebugSuggest: 
+  MIDIDebugSuggest: 
+  MIDIDeviceDebugSuggest: 
+  ObjectsControlInfo: 
+  EnablingBuildingInstantiate: 0
+  EnablingCrabInstantiate: 0
+  EnablingFishmanInstantiate: 0

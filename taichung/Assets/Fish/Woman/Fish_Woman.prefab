@@ -1093,7 +1093,7 @@ GameObject:
   - component: {fileID: 9060838548595534646}
   m_Layer: 0
   m_Name: Fish_Woman
-  m_TagString: Untagged
+  m_TagString: Fishman
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

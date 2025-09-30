@@ -44,6 +44,9 @@ public class UDPBroadcastReceiver : MonoBehaviour
     public float lerp;
     Color defaultColor = new Color(0.4f, 0.4f, 0.4f);
 
+    [Header("Supervice Control / 外部操控")]
+    [SerializeField] public bool externalControl = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -156,8 +159,6 @@ public class UDPBroadcastReceiver : MonoBehaviour
                         // Update object position
                         Vector3 newPos = humanModel[id].transform.position;
 
-
-
                         float angleInRadians = rotationAngle * Mathf.Deg2Rad;
                         newPos.x = -px * scalex;
                         newPos.z = py * scaley;
@@ -166,14 +167,18 @@ public class UDPBroadcastReceiver : MonoBehaviour
                         newPos.x = a + rotatedPoint.x;
                         newPos.z = b + rotatedPoint.z;
 
-                        humanModel[id].transform.position = Vector3.Lerp(humanModel[id].transform.position, newPos, lerp);
-                        // Update object direction based on velocity
-                        double vd = -Mathf.Atan2(-vx, vy) * Mathf.Rad2Deg;
-                        humanModel[id].transform.rotation = Quaternion.Euler(0, -(float)vd, 0);
-                        humanModel[id].SetActive(true);
-                        //humanModel[id].GetComponent<diss>().trigger = true;
-                        // obj updated, reset timer.
-                        humanModelLastUpdateTime[id] = 0.0f;
+                        //若由mmWaveManual.cs外部操控，則不以此腳本進行位置更新
+                        if (!externalControl)
+                        {
+                            humanModel[id].transform.position = Vector3.Lerp(humanModel[id].transform.position, newPos, lerp);
+                            // Update object direction based on velocity
+                            double vd = -Mathf.Atan2(-vx, vy) * Mathf.Rad2Deg;
+                            humanModel[id].transform.rotation = Quaternion.Euler(0, -(float)vd, 0);
+                            humanModel[id].SetActive(true);
+                            //humanModel[id].GetComponent<diss>().trigger = true;
+                            // obj updated, reset timer.
+                            humanModelLastUpdateTime[id] = 0.0f;
+                        }
                     }
                 }
             }

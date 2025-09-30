@@ -123,6 +123,103 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &24274135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 24274136}
+  - component: {fileID: 24274139}
+  - component: {fileID: 24274138}
+  - component: {fileID: 24274137}
+  m_Layer: 0
+  m_Name: Inside_Manual
+  m_TagString: inside
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &24274136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24274135}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3395733, y: 0.3395733, z: 0.3395733}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 183067699}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &24274137
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24274135}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &24274138
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24274135}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 7f4fcf5841867384cbd03c4ad5e2cea2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &24274139
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24274135}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &119159238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -244,7 +341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &127677221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,8 +354,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd89c410b7875ae409b95a278f64d5b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OperationInfo: {fileID: 11400000, guid: c0c75567439b2d044ae3d3cd6332b4db, type: 2}
+  OperationInfo: {fileID: 11400000, guid: dcb9716729f6d694987de20f4cbdc96b, type: 2}
+  mmWaveUpdateInterval: 10
+  Chapter2: {fileID: 0}
+  Chapter4: {fileID: 0}
   UDPBroadcastReceiver_CS: {fileID: 0}
+  mmWaveManual_CS: {fileID: 0}
+  hotkey_CS: {fileID: 0}
 --- !u!4 &127677222
 Transform:
   m_ObjectHideFlags: 0
@@ -272,7 +374,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &183067696
 PrefabInstance:
@@ -327,7 +429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.193
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -752,10 +854,10 @@ MonoBehaviour:
     m_Flags: 0
   houseArray: {fileID: 0}
   I_LightControl:
-    m_Name: 
+    m_Name: I_Light Control
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: ccb4242b-6787-4fdb-9e39-9afa136db6f0
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -825,7 +927,7 @@ Transform:
   - {fileID: 861150205}
   - {fileID: 1798320470}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390943658
 GameObject:
@@ -1150,6 +1252,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
@@ -1871,6 +1985,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
@@ -2167,6 +2293,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
@@ -2277,7 +2415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5682742648683954434, guid: a0523636f1c9cea42bac9fd6ec429ac1, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5682742648683954434, guid: a0523636f1c9cea42bac9fd6ec429ac1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2431,7 +2569,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &892657992
 MonoBehaviour:
@@ -2440,7 +2578,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892657987}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 020061be8864f834ba20af5591248a8a, type: 3}
   m_Name: 
@@ -2553,6 +2691,7 @@ MonoBehaviour:
   rotationAngle: 0
   rotatedPoint: {x: 0, y: 0, z: 0}
   lerp: 0.2
+  externalControl: 0
 --- !u!4 &967268049
 Transform:
   m_ObjectHideFlags: 0
@@ -2754,7 +2893,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 2.7451155, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2864,7 +3003,7 @@ Transform:
   - {fileID: 514582323}
   - {fileID: 1658696597}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1239113966
 GameObject:
@@ -2991,6 +3130,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
@@ -3073,7 +3224,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1254381871 stripped
 GameObject:
@@ -3127,6 +3278,103 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 331158732853246606, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
   m_PrefabInstance: {fileID: 119159238}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1255547437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1255547439}
+  - component: {fileID: 1255547438}
+  m_Layer: 0
+  m_Name: mmWaveManual
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1255547438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255547437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8f620780d9b3549b7bc22126f26718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: "\u6B64\u8173\u672C\u7528\u65BC\u624B\u52D5\u63A7\u5236\u6BEB\u7C73\u6CE2\u76F8\u95DC\u529F\u80FD\u3002\u4E3B\u8981\u7531\u6ED1\u9F20\u63A7\u5236\u6BEB\u7C73\u6CE2\u6CE1\u6CE1\u4EE5\u53CA\u65CB\u9215\u63A7\u5236\u81A8\u8139"
+  I_LockMouse:
+    m_Name: I_Lock Mouse
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 21df32c2-fa41-4ac1-b985-c3ee19b95b18
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 37634148-fc5d-42e9-8d33-e44b0bf058a3
+      m_Path: <Keyboard>/numpad1
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Lock Mouse
+      m_Flags: 0
+    m_Flags: 0
+  isMouseLock: 0
+  I_ImpactPitch:
+    m_Name: I_Impact Pitch
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 235eb07c-3be6-4b0c-9550-8dd5f745fcf3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  impactPitch: 0
+  pitch_NoiseScale_MinThreshold: 0
+  pitch_NoiseScale_MaxThreshold: 1
+  doLerp: 1
+  lerpSpeed: 5
+  doMouseScrollAffectImpact: 1
+  doAbsoluteImpactPitch: 0
+  scrollResolution_ABS: 0.1
+  scrollResolution_DMP: 4
+  scrollDamping: 5
+  mmWaveBubble: {fileID: 183067697}
+  mmWaveBubbleInfo: "mmWaveInside\u70BA\u6CE1\u6CE1\u7684\u81A8\u8139\u6548\u679C\u4E4B\u4E3B\u9AD4\uFF0C\u5176\u4E2DmmWaveInside_Auto\u7531OscInput.cs\u81EA\u52D5\u63A7\u5236\u4E26\u4E14\u6703\u81EA\u52D5\u751F\u6210Instance\uFF0C\u70BA\u9632\u6B62\u885D\u7A81\uFF0C\u624B\u52D5\u5C07\u5207\u63DB\u70BA\u53E6\u4E00\u500BInside\u64CD\u63A7"
+  mmWaveInside_Auto: {fileID: 1279387878}
+  mmWaveInside_Manual: {fileID: 24274135}
+  mmWaveInside_Manual_Material: {fileID: 2100000, guid: 7f4fcf5841867384cbd03c4ad5e2cea2, type: 2}
+  UDPBroadcastReceiver_CS: {fileID: 967268048}
+  rawMousePos: {x: 0, y: 0, z: 0}
+  worldPos: {x: 0, y: 0, z: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  currentPos: {x: 0, y: 0, z: 0}
+  scrollData: {x: 0, y: 0}
+  proceedScrollData: 0
+  _scrollAmount: 0
+  Midi_Slider_Input_Inspect: 0
+  midi_Pitch_Fixed: 0
+--- !u!4 &1255547439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255547437}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.1982174, y: -7.909319, z: -27.957375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1279387878 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1956327720331576704, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
@@ -3262,6 +3510,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
@@ -3344,7 +3604,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1319827877
 GameObject:
@@ -3486,6 +3746,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: 
@@ -3988,6 +4260,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
@@ -4221,7 +4505,8 @@ Transform:
   m_LocalPosition: {x: 0.0005060211, y: 0, z: 0.19076128}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1617396364}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4333,18 +4618,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617396359}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.19076128}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2031696128}
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 1585629700}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.0005060211, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1658696596 stripped
@@ -4502,6 +4787,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
@@ -4696,6 +4993,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
@@ -4778,7 +5087,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1798320469
 GameObject:
@@ -4925,6 +5234,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
@@ -5213,6 +5534,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
@@ -5675,6 +6008,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: I_word

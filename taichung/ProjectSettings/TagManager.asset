@@ -38,6 +38,7 @@ TagManager:
   - word
   - inside
   - midi
+  - Fishman
   layers:
   - Default
   - TransparentFX

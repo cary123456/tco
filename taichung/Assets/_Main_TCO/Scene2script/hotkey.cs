@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Net.Sockets;
 using Unity.Mathematics;
 using UnityEngine;
@@ -126,16 +127,19 @@ public class hotkey : MonoBehaviour
     [Space]
     [Tooltip("是否允許生成房子")]
     [SerializeField] public bool EnablingBuildingInstantiate = true;
+    [SerializeField] public int BuildingCount = 0;
     [Tooltip("此腳本控制建築物生成，由於腳本會被動態生成，因次此腳本會動態抓取")]
     [SerializeField] public buildon[] buildon_CS;
     [Tooltip("是否允許生成螃蟹")]
     [SerializeField] public bool EnablingCrabInstantiate = true;
+    [SerializeField] public int CrabCount = 0;
     [Tooltip("生成螃蟹的腳本")]
     public dynamicGeneration dynamicGeneration_CS;
     [Tooltip("生成螃蟹的腳本，會動態抓取")]
     public valuerecueve[] valuerecueve_CS;
     [Tooltip("是否允許生成漁人")]
     [SerializeField] public bool EnablingFishmanInstantiate = true;
+    [SerializeField] public int FishmanCount = 0;
     [Tooltip("生成漁人的腳本，此腳本會動態抓取")]
     public HouseArray[] houseArray_CS;
 
@@ -254,6 +258,13 @@ public class hotkey : MonoBehaviour
         crabcount = -1;
         houseArray_CS = FindObjectsOfType<HouseArray>(); //HouseArray不會被動態生成
         valuerecueve_CS = FindObjectsOfType<valuerecueve>();
+
+        foreach (var binding in I_LoadCh4.bindings)
+        {
+            Debug.Log($"Path: {binding.path}");
+            Debug.Log($"Name: {binding.name}");
+            Debug.Log($"Effective Path: {binding.effectivePath}");
+        }
     }
 
     // Update is called once per frame
@@ -263,6 +274,10 @@ public class hotkey : MonoBehaviour
         player = GameObject.FindGameObjectsWithTag("Player");
         buildon_CS = GameObject.FindObjectsOfType<buildon>();
         valuerecueve_CS = FindObjectsOfType<valuerecueve>();
+
+        BuildingCount = GameObject.FindGameObjectsWithTag("building").Length;
+        CrabCount = GameObject.FindGameObjectsWithTag("crab").Length;
+        FishmanCount = GameObject.FindGameObjectsWithTag("Fishman").Length;
 
         if(lightObject != null)
             lightObject.SetActive(LightTurned);

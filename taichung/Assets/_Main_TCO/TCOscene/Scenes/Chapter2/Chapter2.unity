@@ -2671,6 +2671,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
@@ -4532,6 +4544,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1587057817}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &529658084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 529658086}
+  - component: {fileID: 529658085}
+  m_Layer: 0
+  m_Name: SystemObserve
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &529658085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529658084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd89c410b7875ae409b95a278f64d5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OperationInfo: {fileID: 11400000, guid: dcb9716729f6d694987de20f4cbdc96b, type: 2}
+  mmWaveUpdateInterval: 10
+  Chapter2: {fileID: 102900000, guid: e058855dd21e501469d925946c49af00, type: 3}
+  Chapter4: {fileID: 102900000, guid: 1f8cb0620d987884a83b5f1d86f4c865, type: 3}
+  UDPBroadcastReceiver_CS: {fileID: 0}
+  mmWaveManual_CS: {fileID: 0}
+--- !u!4 &529658086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529658084}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.8785086, y: -14.225851, z: -8.834773}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &548131848
 GameObject:
@@ -7137,7 +7199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850491506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.1, y: 0, z: -60.6}
+  m_LocalPosition: {x: -5.1, y: 0, z: -4.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7179,7 +7241,7 @@ MonoBehaviour:
   parentcanvas: {fileID: 0}
   wordIO: {fileID: 868587037}
   x: 1
-  z: 5
+  z: 1
   k: 13.4
   buildpertime: 1
   housescale: []
@@ -7247,6 +7309,26 @@ MonoBehaviour:
       m_Action: I_fish
       m_Flags: 0
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: I_Fish Const Generation
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1c68d25c-35d6-4b2d-9f9f-8df9b8952c4d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 78e60eb5-af91-4330-8b20-b91bf0cf9594
+      m_Path: <Keyboard>/numpad2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Fish Const Generation
+      m_Flags: 0
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 1841782584}
+  FishGenPointNearCamera_Opposite: {fileID: 1749982641}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
@@ -7294,10 +7376,10 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   ClearBubble:
-    m_Name: 
+    m_Name: Clear Bubble
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: adc2d267-b53b-44ed-a3f3-1a2902430951
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -7305,10 +7387,10 @@ MonoBehaviour:
   BubbleClearDelay: 0.5
   bubbles: []
   ClearAllBubble:
-    m_Name: 
+    m_Name: Clear All Bubble
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: cce3eaef-6dd2-4258-918e-cb7deec86e5a
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -7756,6 +7838,8 @@ Transform:
   - {fileID: 287605501}
   - {fileID: 1702033736}
   - {fileID: 2051076279}
+  - {fileID: 1841782585}
+  - {fileID: 1749982642}
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 180}
@@ -10565,6 +10649,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
@@ -11708,6 +11804,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: 
@@ -13053,6 +13161,18 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 403658329}
   I_word:
     m_Name: I_word
@@ -14954,7 +15074,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742784272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5999999, y: 0, z: -48.960007}
+  m_LocalPosition: {x: 0.5999999, y: 0, z: -4.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14996,7 +15116,7 @@ MonoBehaviour:
   parentcanvas: {fileID: 0}
   wordIO: {fileID: 868587037}
   x: 1
-  z: 5
+  z: 1
   k: 13.4
   buildpertime: 1
   housescale: []
@@ -15064,6 +15184,18 @@ MonoBehaviour:
       m_Action: I_fish
       m_Flags: 0
     m_Flags: 0
+  I_FishConstGeneration:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  FishGenPointNearCamera: {fileID: 0}
+  FishGenPointNearCamera_Opposite: {fileID: 0}
+  FishConstGenFlip: 0
   lightObject: {fileID: 0}
   I_word:
     m_Name: I_word
@@ -15111,10 +15243,10 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   ClearBubble:
-    m_Name: 
+    m_Name: Clear Bubble
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: b5f673d2-e05e-4bf7-b3d9-a37536373f5b
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -15125,7 +15257,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: e97ea288-4fd2-4026-8f64-49b199784123
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -15310,6 +15442,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+--- !u!1 &1749982641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749982642}
+  m_Layer: 0
+  m_Name: GenerationPointOpposite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1749982642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749982641}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 8.5, y: -2.5, z: 7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 963194228}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1760091806
 GameObject:
   m_ObjectHideFlags: 0
@@ -15865,6 +16028,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc2de8eb849d1a4aa9d08fbf5984e50, type: 3}
+--- !u!1 &1841782584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1841782585}
+  m_Layer: 0
+  m_Name: GenerationPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1841782585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841782584}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -8.5, y: -3.5, z: 7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 963194228}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1859498072
 GameObject:
   m_ObjectHideFlags: 0

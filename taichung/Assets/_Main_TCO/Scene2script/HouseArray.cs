@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 using system = System;
 
 public class HouseArray : MonoBehaviour
@@ -74,7 +75,15 @@ public class HouseArray : MonoBehaviour
     bool crabInput = false;
     public InputAction I_bubble;
     bool bubbleInput = false;
+    [Tooltip("舊版漁人生成按鍵")]
     public InputAction I_fish;
+    [Tooltip("新版固定位置漁人生成")]
+    public InputAction I_FishConstGeneration;
+    [Tooltip("新版漁人生成點，由於需求為靠近鏡頭之生成，因此在鏡頭的子物件新增兩個生成點，請幫定兩該點。\n" +
+        "若要相反方向生成請勾以下FishConstGenFlip")]
+    [SerializeField] GameObject FishGenPointNearCamera; //漁人生成點_靠近鏡頭
+    [SerializeField] GameObject FishGenPointNearCamera_Opposite; //漁人生成點_靠近鏡頭
+    public bool FishConstGenFlip = false;
     public GameObject lightObject;
     bool fishInput = false;
     public InputAction I_word;
@@ -122,6 +131,7 @@ public class HouseArray : MonoBehaviour
         I_wordSwitch.Enable();
         ClearBubble.Enable();
         ClearAllBubble.Enable();
+        I_FishConstGeneration.Enable();
         I_house_random.performed += OnHouseRandomPressed;
         I_house_random.canceled += OnHouseRandomPressedReleased;
         I_house_atVR.performed += OnHouseAtVRPressed;
@@ -138,6 +148,7 @@ public class HouseArray : MonoBehaviour
         ClearBubble.started += OnBubbleClearPressed;
         ClearAllBubble.started += OnAllBubbleClearPressed;
         ClearBubble.canceled += OnBubbleClearCancelled;
+        I_FishConstGeneration.performed += OnFishConstGenerationPressed;
         hotkeyCS = FindObjectOfType<hotkey>();
         if(hotkeyCS == null)
             Debug.LogError("[HouseArray.cs] @ " +  this.name +" : hotkey.cs未被指定");
@@ -155,6 +166,7 @@ public class HouseArray : MonoBehaviour
         I_wordSwitch.Disable();
         ClearBubble.Disable();
         ClearAllBubble.Disable();
+        I_FishConstGeneration.Disable();
         I_house_random.performed -= OnHouseRandomPressed;
         I_house_atVR.performed -= OnHouseAtVRPressed;
         I_house_atPoint.performed -= OnHouseAtPointPressed;
@@ -170,6 +182,7 @@ public class HouseArray : MonoBehaviour
         ClearBubble.started -= OnBubbleClearPressed;
         ClearBubble.canceled -= OnBubbleClearCancelled;
         ClearAllBubble.started -= OnAllBubbleClearPressed;
+        I_FishConstGeneration.performed -= OnFishConstGenerationPressed;
     }
 
     void Start()
@@ -870,6 +883,26 @@ public class HouseArray : MonoBehaviour
     void OnAllBubbleClearPressed(InputAction.CallbackContext ctx)
     {
         doClearAllBubble = true;
+    }
+
+    void OnFishConstGenerationPressed(InputAction.CallbackContext ctx)
+    {
+        float fishspeedtemp = fishspeed;
+        GameObject fishman;
+        if (FishConstGenFlip)
+        {
+            fishman = Instantiate(fish[0], FishGenPointNearCamera_Opposite.transform.position, FishGenPointNearCamera_Opposite.transform.rotation);
+            fishspeedtemp = fishspeed;
+            fishman.GetComponent<Rigidbody>().velocity = new Vector3(fishspeedtemp, 0, 0);
+            Destroy(fishman, fishlifetime);
+        }
+        else if (!FishConstGenFlip)
+        {
+            fishman = Instantiate(fish[0], FishGenPointNearCamera.transform.position, FishGenPointNearCamera.transform.rotation);
+            fishspeedtemp = -fishspeed;
+            fishman.GetComponent<Rigidbody>().velocity = new Vector3(fishspeedtemp, 0, 0);
+            Destroy(fishman, fishlifetime);
+        }
     }
 
     /// <summary>
