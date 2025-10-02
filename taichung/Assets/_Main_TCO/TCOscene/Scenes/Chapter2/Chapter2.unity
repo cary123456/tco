@@ -4910,14 +4910,6 @@ MonoBehaviour:
       m_Action: I_Load Ch 4
       m_Flags: 0
     - m_Name: 
-      m_Id: 3a2bc6f6-49f9-4122-bbed-e572fd766d19
-      m_Path: <MidiDevice>/note050
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: I_Load Ch 4
-      m_Flags: 0
-    - m_Name: 
       m_Id: 561adc0c-334b-4bb6-b631-834740b86395
       m_Path: <Keyboard>/o
       m_Interactions: 

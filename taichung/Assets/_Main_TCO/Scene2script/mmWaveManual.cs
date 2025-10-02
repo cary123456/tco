@@ -19,6 +19,8 @@ public class mmWaveManual : MonoBehaviour
     [SerializeField] InputAction I_LockMouse;
     [Tooltip("用於記錄目前鼠標是否被鎖定，可手動開啟")]
     [SerializeField] public bool isMouseLock = false;
+    [SerializeField] InputAction I_manualImpact;
+    [SerializeField] public bool manualControlImpact = false;
     [Space]
     [Tooltip("預設用途：以MIDI的旋鈕控制泡泡的膨脹尖刺")]
     [SerializeField] InputAction I_ImpactPitch;
@@ -88,16 +90,20 @@ public class mmWaveManual : MonoBehaviour
     {
         I_LockMouse.Enable();
         I_ImpactPitch.Enable();
+        I_manualImpact.Enable();
         I_ImpactPitch.performed += OnInputPerformed;
         I_LockMouse.started += OnInputStarted;
+        I_manualImpact.started += OnInputStarted;
     }
 
     private void OnDisable()
     {
         I_LockMouse.Disable();
         I_ImpactPitch.Disable();
+        I_manualImpact.Disable();
         I_ImpactPitch.performed -= OnInputPerformed;
         I_LockMouse.started -= OnInputStarted;
+        I_manualImpact.started -= OnInputStarted;
     }
 
     void Update()
@@ -106,7 +112,7 @@ public class mmWaveManual : MonoBehaviour
         if (!isMouseLock)
         {
             Cursor.lockState = CursorLockMode.None;
-
+            
             mmWaveInside_Auto.GetComponent<MeshRenderer>().enabled = true;
             mmWaveInside_Manual.SetActive(false);
         }
@@ -115,10 +121,19 @@ public class mmWaveManual : MonoBehaviour
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Confined;
             mmWaveInside_Auto.GetComponent<MeshRenderer>().enabled = false;
-            mmWaveInside_Manual.SetActive(true);
-            UDPBroadcastReceiver_CS.externalControl = true;
-            // 取得滑鼠位置
-            rawMousePos = Input.mousePosition;
+            if (manualControlImpact)
+            {
+                mmWaveInside_Manual.SetActive(true);
+                UDPBroadcastReceiver_CS.externalControl = true;
+            }
+            else if (!manualControlImpact)
+            {
+                mmWaveInside_Auto.GetComponent<MeshRenderer>().enabled = true;
+                mmWaveInside_Manual.SetActive(false);
+            }
+
+                // 取得滑鼠位置
+                rawMousePos = Input.mousePosition;
             // 將滑鼠位置轉換為世界座標
             worldPos = Camera.main.ScreenToWorldPoint(new Vector3(rawMousePos.x, rawMousePos.y, 10));
             // 設定目標位置
@@ -162,27 +177,35 @@ public class mmWaveManual : MonoBehaviour
         {
             isMouseLock = !isMouseLock;
         }
+
+        if (ctx.action == I_manualImpact)
+        {
+            manualControlImpact = !manualControlImpact;
+        }
     }
 
     void OnInputPerformed(InputAction.CallbackContext ctx)
     {
-        if (ctx.action == I_ImpactPitch)
+        if (manualControlImpact)
         {
-            Midi_Slider_Input_Inspect = ctx.ReadValue<float>();
+            if (ctx.action == I_ImpactPitch)
+            {
+                Midi_Slider_Input_Inspect = ctx.ReadValue<float>();
 
-            // MIDI值會有不達標的情形，此部分將MIDI輸入值經閥值判斷後鎖定在0或1
-            if (Midi_Slider_Input_Inspect <= pitch_NoiseScale_MinThreshold)
-                midi_Pitch_Fixed = 0f;
-            else if (Midi_Slider_Input_Inspect > pitch_NoiseScale_MinThreshold && Midi_Slider_Input_Inspect < pitch_NoiseScale_MaxThreshold)
-                midi_Pitch_Fixed = Midi_Slider_Input_Inspect;
-            else if (Midi_Slider_Input_Inspect >= pitch_NoiseScale_MaxThreshold)
-                midi_Pitch_Fixed = 1f;
+                // MIDI值會有不達標的情形，此部分將MIDI輸入值經閥值判斷後鎖定在0或1
+                if (Midi_Slider_Input_Inspect <= pitch_NoiseScale_MinThreshold)
+                    midi_Pitch_Fixed = 0f;
+                else if (Midi_Slider_Input_Inspect > pitch_NoiseScale_MinThreshold && Midi_Slider_Input_Inspect < pitch_NoiseScale_MaxThreshold)
+                    midi_Pitch_Fixed = Midi_Slider_Input_Inspect;
+                else if (Midi_Slider_Input_Inspect >= pitch_NoiseScale_MaxThreshold)
+                    midi_Pitch_Fixed = 1f;
 
-            var pitch_mapped = Remapping(midi_Pitch_Fixed, 0f, 1f, 0f, 8f);
+                var pitch_mapped = Remapping(midi_Pitch_Fixed, 0f, 1f, 0f, 8f);
 
-            impactPitch = pitch_mapped;
+                impactPitch = pitch_mapped;
 
-            mmWaveInside_Manual_Material.SetFloat("_NoiseScale", impactPitch);
+                mmWaveInside_Manual_Material.SetFloat("_NoiseScale", impactPitch);
+            }
         }
     }
 

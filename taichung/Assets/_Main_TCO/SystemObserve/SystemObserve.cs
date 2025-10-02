@@ -117,7 +117,7 @@ public class SystemObserve : MonoBehaviour
         {
             if (mmWaveManual_CS.isMouseLock)
             {
-                OperationInfo.mmWaveInfo = "毫米波手動控制中，滑鼠位置：" + mmWaveManual_CS.currentPos.ToString("F2") + " 滑鼠控制膨脹：" + mmWaveManual_CS.doMouseScrollAffectImpact + " 膨脹數值：" + mmWaveManual_CS.impactPitch.ToString();
+                OperationInfo.mmWaveInfo = "毫米波手動控制中，滑鼠位置：" + mmWaveManual_CS.currentPos.ToString("F2") + " 手控膨脹：" + mmWaveManual_CS.manualControlImpact + " 滑鼠控制膨脹：" + mmWaveManual_CS.doMouseScrollAffectImpact + " 膨脹數值：" + mmWaveManual_CS.impactPitch.ToString();
             }
             if (!mmWaveManual_CS.isMouseLock)
             {
