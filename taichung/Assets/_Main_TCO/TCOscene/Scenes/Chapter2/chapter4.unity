@@ -2567,7 +2567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892657987}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.48, y: 9.97, z: -1.55}
+  m_LocalPosition: {x: -0.22, y: 10.51, z: -2.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2896,7 +2896,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8879056, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3290,7 +3290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1255547439}
-  - component: {fileID: 1255547438}
+  - component: {fileID: 1255547440}
   m_Layer: 0
   m_Name: mmWaveManual
   m_TagString: Untagged
@@ -3298,7 +3298,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1255547438
+--- !u!4 &1255547439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255547437}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.1982174, y: -7.909319, z: -27.957375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1255547440
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3315,13 +3330,21 @@ MonoBehaviour:
     m_Name: I_Lock Mouse
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 21df32c2-fa41-4ac1-b985-c3ee19b95b18
+    m_Id: 80989d39-a9ce-473b-afc6-0222a10f1f57
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 37634148-fc5d-42e9-8d33-e44b0bf058a3
+      m_Id: 3c376b09-6b9d-4194-80cd-d7558fc39fa1
       m_Path: <Keyboard>/1
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Lock Mouse
+      m_Flags: 0
+    - m_Name: 
+      m_Id: e03aa132-f6d3-4861-a6d0-0423b51a1cd2
+      m_Path: <MidiDevice>/note049
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -3333,12 +3356,12 @@ MonoBehaviour:
     m_Name: I_Impact Pitch
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 235eb07c-3be6-4b0c-9550-8dd5f745fcf3
+    m_Id: db5152b2-c6d4-4dcd-83e4-89276f2ecfe1
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 912e5833-5b24-437c-b494-0809cd55adef
+      m_Id: 10a6fe81-308c-448b-ae5e-13bd0ec75c1c
       m_Path: <MidiDevice>/control016
       m_Interactions: 
       m_Processors: 
@@ -3351,13 +3374,13 @@ MonoBehaviour:
   pitch_NoiseScale_MaxThreshold: 1
   doLerp: 1
   lerpSpeed: 5
-  doMouseScrollAffectImpact: 1
-  doAbsoluteImpactPitch: 0
+  doMouseScrollAffectImpact: 0
+  doAbsoluteImpactPitch: 1
   scrollResolution_ABS: 0.1
   scrollResolution_DMP: 4
   scrollDamping: 5
   mmWaveBubble: {fileID: 183067697}
-  mmWaveBubbleInfo: "mmWaveInside\u70BA\u6CE1\u6CE1\u7684\u81A8\u8139\u6548\u679C\u4E4B\u4E3B\u9AD4\uFF0C\u5176\u4E2DmmWaveInside_Auto\u7531OscInput.cs\u81EA\u52D5\u63A7\u5236\u4E26\u4E14\u6703\u81EA\u52D5\u751F\u6210Instance\uFF0C\u70BA\u9632\u6B62\u885D\u7A81\uFF0C\u624B\u52D5\u5C07\u5207\u63DB\u70BA\u53E6\u4E00\u500BInside\u64CD\u63A7"
+  mmWaveBubbleInfo: "inside\u70BA\u6CE1\u6CE1\u7684\u81A8\u8139\u6548\u679C\u4E4B\u4E3B\u9AD4\uFF0C\u5176\u4E2DmmWaveInside_Auto\u7531OscInput.cs\u81EA\u52D5\u63A7\u5236\u4E26\u4E14\u6703\u81EA\u52D5\u751F\u6210Instance\uFF0C\u70BA\u9632\u6B62\u885D\u7A81\uFF0C\u624B\u52D5\u5C07\u5207\u63DB\u70BA\u53E6\u4E00\u500BInside\u64CD\u63A7"
   mmWaveInside_Auto: {fileID: 1279387878}
   mmWaveInside_Manual: {fileID: 24274135}
   mmWaveInside_Manual_Material: {fileID: 2100000, guid: 7f4fcf5841867384cbd03c4ad5e2cea2, type: 2}
@@ -3371,21 +3394,6 @@ MonoBehaviour:
   _scrollAmount: 0
   Midi_Slider_Input_Inspect: 0
   midi_Pitch_Fixed: 0
---- !u!4 &1255547439
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255547437}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.1982174, y: -7.909319, z: -27.957375}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1279387878 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1956327720331576704, guid: f08db81a944f2d843872b8a366b2b2dc, type: 3}
@@ -3525,7 +3533,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 521c1e48-9f55-4960-9d93-36671276989a
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []

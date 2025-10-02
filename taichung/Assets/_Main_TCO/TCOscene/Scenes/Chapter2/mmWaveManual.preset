@@ -1,0 +1,299 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: mmWaveManual
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 8b8f620780d9b3549b7bc22126f26718, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: info
+    value: "\u6B64\u8173\u672C\u7528\u65BC\u624B\u52D5\u63A7\u5236\u6BEB\u7C73\u6CE2\u76F8\u95DC\u529F\u80FD\u3002\u4E3B\u8981\u7531\u6ED1\u9F20\u63A7\u5236\u6BEB\u7C73\u6CE2\u6CE1\u6CE1\u4EE5\u53CA\u65CB\u9215\u63A7\u5236\u81A8\u8139"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_Name
+    value: I_Lock Mouse
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_Id
+    value: 80989d39-a9ce-473b-afc6-0222a10f1f57
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_SingletonActionBindings.Array.data[0].m_Id
+    value: 3c376b09-6b9d-4194-80cd-d7558fc39fa1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <Keyboard>/1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_Lock Mouse
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_LockMouse.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: isMouseLock
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_Name
+    value: I_Impact Pitch
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_Type
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_ExpectedControlType
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_Id
+    value: db5152b2-c6d4-4dcd-83e4-89276f2ecfe1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_SingletonActionBindings.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_SingletonActionBindings.Array.data[0].m_Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_SingletonActionBindings.Array.data[0].m_Id
+    value: 10a6fe81-308c-448b-ae5e-13bd0ec75c1c
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_SingletonActionBindings.Array.data[0].m_Path
+    value: <MidiDevice>/control016
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_SingletonActionBindings.Array.data[0].m_Interactions
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_SingletonActionBindings.Array.data[0].m_Processors
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_SingletonActionBindings.Array.data[0].m_Groups
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_SingletonActionBindings.Array.data[0].m_Action
+    value: I_Impact Pitch
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_SingletonActionBindings.Array.data[0].m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: I_ImpactPitch.m_Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: impactPitch
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pitch_NoiseScale_MinThreshold
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pitch_NoiseScale_MaxThreshold
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: doLerp
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: lerpSpeed
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: doMouseScrollAffectImpact
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: doAbsoluteImpactPitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: scrollResolution_ABS
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: scrollResolution_DMP
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: scrollDamping
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: mmWaveBubble
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: mmWaveBubbleInfo
+    value: "inside\u70BA\u6CE1\u6CE1\u7684\u81A8\u8139\u6548\u679C\u4E4B\u4E3B\u9AD4\uFF0C\u5176\u4E2DmmWaveInside_Auto\u7531OscInput.cs\u81EA\u52D5\u63A7\u5236\u4E26\u4E14\u6703\u81EA\u52D5\u751F\u6210Instance\uFF0C\u70BA\u9632\u6B62\u885D\u7A81\uFF0C\u624B\u52D5\u5C07\u5207\u63DB\u70BA\u53E6\u4E00\u500BInside\u64CD\u63A7"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: mmWaveInside_Auto
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: mmWaveInside_Manual
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: mmWaveInside_Manual_Material
+    value: 
+    objectReference: {fileID: 2100000, guid: 7f4fcf5841867384cbd03c4ad5e2cea2, type: 2}
+  - target: {fileID: 0}
+    propertyPath: UDPBroadcastReceiver_CS
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: rawMousePos.x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: rawMousePos.y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: rawMousePos.z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: worldPos.x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: worldPos.y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: worldPos.z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: targetPos.x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: targetPos.y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: targetPos.z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: currentPos.x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: currentPos.y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: currentPos.z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: scrollData.x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: scrollData.y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: proceedScrollData
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _scrollAmount
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Midi_Slider_Input_Inspect
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midi_Pitch_Fixed
+    value: 0
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []

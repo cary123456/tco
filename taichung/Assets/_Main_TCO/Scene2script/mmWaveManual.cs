@@ -10,7 +10,7 @@ using UnityEngine.InputSystem;
 public class mmWaveManual : MonoBehaviour
 {
     [Header("Info / 說明")]
-    [ReadOnly][TextArea(1, 2)] public string info = "此腳本用於手動控制毫米波相關功能。主要由滑鼠控制毫米波泡泡以及旋鈕控制膨脹";
+    [TextArea(1, 2)] public string info = "此腳本用於手動控制毫米波相關功能。主要由滑鼠控制毫米波泡泡以及旋鈕控制膨脹";
     [Space]
     [Space]
 
@@ -23,7 +23,7 @@ public class mmWaveManual : MonoBehaviour
     [Tooltip("預設用途：以MIDI的旋鈕控制泡泡的膨脹尖刺")]
     [SerializeField] InputAction I_ImpactPitch;
     [Tooltip("膨脹大小，僅供監控")]
-    [ReadOnly][Range(0, 8)] public float impactPitch = 0f;
+    [Range(0, 8)] public float impactPitch = 0f;
     [Tooltip("MIDI輸入會有非整數的情形，調整此閥值可以強制在MIDI輸入為此閥值以下時將MIDI輸入視為0\n " +
         "Ex: 期望在滑動到最底時數值為0，實際監測卻為0.00675等非整數\n" +
         "預設值: 0")]
@@ -56,7 +56,7 @@ public class mmWaveManual : MonoBehaviour
     [Header("Reference / 來源")]
     [Tooltip("欲控制之泡泡物件")]
     [SerializeField] GameObject mmWaveBubble;
-    [ReadOnly][TextArea(1, 2)] public string mmWaveBubbleInfo = "inside為泡泡的膨脹效果之主體，其中mmWaveInside_Auto由OscInput.cs自動控制並且會自動生成Instance，為防止衝突，手動將切換為另一個Inside操控";
+    [TextArea(1, 2)] public string mmWaveBubbleInfo = "inside為泡泡的膨脹效果之主體，其中mmWaveInside_Auto由OscInput.cs自動控制並且會自動生成Instance，為防止衝突，手動將切換為另一個Inside操控";
     [SerializeField] GameObject mmWaveInside_Auto;
     [SerializeField] GameObject mmWaveInside_Manual;
     [SerializeField] Material mmWaveInside_Manual_Material;
@@ -67,20 +67,20 @@ public class mmWaveManual : MonoBehaviour
     [Space]
 
     [Header("Debug / 除錯用")]
-    [ReadOnly] public Vector3 rawMousePos;
-    [ReadOnly][SerializeField] Vector3 worldPos;
-    [ReadOnly] public Vector3 targetPos;
-    [ReadOnly] public Vector3 currentPos;
+     public Vector3 rawMousePos;
+    [SerializeField] Vector3 worldPos;
+     public Vector3 targetPos;
+     public Vector3 currentPos;
     [Space]
-    [ReadOnly] public Vector2 scrollData; // 滑鼠滾輪數據
-    [ReadOnly] public float proceedScrollData;
+     public Vector2 scrollData; // 滑鼠滾輪數據
+     public float proceedScrollData;
     float dampedScrollData;
-    [ReadOnly] public float _scrollAmount = 0f;
+     public float _scrollAmount = 0f;
     [Space]
     [Tooltip("MIDI的輸入監控，未調整之原生輸入值")]
-    [ReadOnly] public float Midi_Slider_Input_Inspect;
+     public float Midi_Slider_Input_Inspect;
     [Tooltip("MIDI的輸入監控，經最大最小閥值鎖定調整之值")]
-    [ReadOnly] public float midi_Pitch_Fixed;
+     public float midi_Pitch_Fixed;
 
     private int i = 0;// 用於切換鼠標鎖定狀態的計數器
 

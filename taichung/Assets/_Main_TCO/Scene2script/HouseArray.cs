@@ -118,7 +118,8 @@ public class HouseArray : MonoBehaviour
     bool enablingCrabInstantiate;
     bool enablingFishmanInstantiate;
     
-
+float fishspeedtemp;
+    GameObject fishman;
     private void OnEnable()
     {
         I_house_random.Enable();
@@ -887,20 +888,23 @@ public class HouseArray : MonoBehaviour
 
     void OnFishConstGenerationPressed(InputAction.CallbackContext ctx)
     {
-        float fishspeedtemp = fishspeed;
-        GameObject fishman;
+
         if (FishConstGenFlip)
         {
             fishman = Instantiate(fish[0], FishGenPointNearCamera_Opposite.transform.position, FishGenPointNearCamera_Opposite.transform.rotation);
             fishspeedtemp = fishspeed;
-            fishman.GetComponent<Rigidbody>().velocity = new Vector3(fishspeedtemp, 0, 0);
+            
+            Vector3 moveDirection = Camera.main.transform.right.normalized * fishspeedtemp;
+            fishman.GetComponent<Rigidbody>().velocity = moveDirection;
             Destroy(fishman, fishlifetime);
         }
         else if (!FishConstGenFlip)
         {
             fishman = Instantiate(fish[0], FishGenPointNearCamera.transform.position, FishGenPointNearCamera.transform.rotation);
             fishspeedtemp = -fishspeed;
-            fishman.GetComponent<Rigidbody>().velocity = new Vector3(fishspeedtemp, 0, 0);
+            //fishman.transform.Translate(Vector3.forward * fishspeedtemp * Time.deltaTime);
+            Vector3 moveDirection = -Camera.main.transform.right.normalized * fishspeedtemp;
+            fishman.GetComponent<Rigidbody>().velocity = moveDirection;
             Destroy(fishman, fishlifetime);
         }
     }

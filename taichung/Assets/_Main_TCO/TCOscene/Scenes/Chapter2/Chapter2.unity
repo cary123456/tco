@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0028181938, g: 0.05369558, b: 0.089298956, a: 1}
+  m_IndirectSpecularColor: {r: 0.002555598, g: 0.030212648, b: 0.05087314, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1708,7 +1708,7 @@ Transform:
   m_GameObject: {fileID: 164597955}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.029546, y: 0.029546, z: 0.029546}
+  m_LocalScale: {x: 0.029545996, y: 0.029545996, z: 0.029545996}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 58766023}
@@ -1886,6 +1886,18 @@ PrefabInstance:
     - target: {fileID: 11400000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: expandMixedRealityCapturePropertySheet
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: externalCompositionBackdropColorRift.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: externalCompositionBackdropColorRift.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: externalCompositionBackdropColorRift.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: requestBodyTrackingPermissionOnStartup
@@ -2473,7 +2485,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293042791}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.029546, y: 0.029546, z: 0.029546}
   m_ConstrainProportionsScale: 0
@@ -4905,6 +4917,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: I_Load Ch 4
       m_Flags: 0
+    - m_Name: 
+      m_Id: 561adc0c-334b-4bb6-b631-834740b86395
+      m_Path: <Keyboard>/o
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: I_Load Ch 4
+      m_Flags: 0
     m_Flags: 0
   I_SeaSlider:
     m_Name: I_Sea Slider
@@ -5274,7 +5294,7 @@ MonoBehaviour:
   MessageBufferSize: 5120
   MaxConnections: 100
   MaxSentMessageQueueSize: 128
-  ConnectAddress: 192.168.50.254
+  ConnectAddress: 192.168.50.20
   ConnectPort: 7777
   ServerListenPort: 7777
   MessageSendMode: 0
@@ -7203,7 +7223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850491506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.1, y: 0, z: -4.46}
+  m_LocalPosition: {x: -5.1, y: 0, z: -49.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7245,7 +7265,7 @@ MonoBehaviour:
   parentcanvas: {fileID: 0}
   wordIO: {fileID: 868587037}
   x: 1
-  z: 1
+  z: 5
   k: 13.4
   buildpertime: 1
   housescale: []
@@ -13313,7 +13333,7 @@ Transform:
   m_GameObject: {fileID: 1595766407}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.029546, y: 0.029546, z: 0.029546}
+  m_LocalScale: {x: 0.029545996, y: 0.029545996, z: 0.029545996}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 658269510}
@@ -15086,7 +15106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742784272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5999999, y: 0, z: -4.68}
+  m_LocalPosition: {x: 0.5999999, y: 0, z: -32.520004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15128,7 +15148,7 @@ MonoBehaviour:
   parentcanvas: {fileID: 0}
   wordIO: {fileID: 868587037}
   x: 1
-  z: 1
+  z: 5
   k: 13.4
   buildpertime: 1
   housescale: []
@@ -15200,7 +15220,7 @@ MonoBehaviour:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 45215228-6241-4545-a1ff-fae06ba0adf0
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -15341,12 +15361,20 @@ PrefabInstance:
       value: I_bubble
       objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: ClearBubble.m_Id
+      value: d4dd82b8-7f9a-4446-98bd-9524964acb00
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: I_house_atVR.m_Id
       value: 1dc58406-325c-447d-81df-dd5343e252d2
       objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: I_wordSwitch.m_Id
       value: 25c7d07d-fbd0-4e7c-b9d2-23bf7ba4f376
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: ClearAllBubble.m_Id
+      value: 215543e9-ea80-460a-babf-0a09ee8846d0
       objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: I_house_atVR.m_Name
@@ -15408,6 +15436,10 @@ PrefabInstance:
       propertyPath: serverWord.Array.data[1]
       value: 
       objectReference: {fileID: 1192974049}
+    - target: {fileID: 7560462082760531158, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
+      propertyPath: I_FishConstGeneration.m_Id
+      value: 90bae44d-0571-4395-8239-9f13f5d3915f
+      objectReference: {fileID: 0}
     - target: {fileID: 7560462082760531159, guid: 81fc973376036d141acaf66ad22eeec4, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -15478,7 +15510,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749982641}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 8.5, y: -2.5, z: 7}
+  m_LocalPosition: {x: 8.5, y: -2.5, z: 6.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16064,7 +16096,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841782584}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -8.5, y: -3.5, z: 7}
+  m_LocalPosition: {x: -8.5, y: -3.5, z: 6.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

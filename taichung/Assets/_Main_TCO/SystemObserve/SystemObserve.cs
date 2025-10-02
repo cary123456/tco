@@ -16,10 +16,11 @@ public class SystemObserve : MonoBehaviour
     [Tooltip("毫米波的資料更新週期，預設10秒")]
     [SerializeField] float mmWaveUpdateInterval = 10f;
     float mmWaveUpdateTimer = 0f;
-
+#if UNITY_EDITOR
     [Header("Reference / 來源")]
     [SerializeField] public SceneAsset Chapter2;
     [SerializeField] public SceneAsset Chapter4;
+#endif
 
     [Header("Auto Ref / 自動來源安裝")]
     [SerializeField] UDPBroadcastReceiver UDPBroadcastReceiver_CS;
@@ -29,11 +30,11 @@ public class SystemObserve : MonoBehaviour
 
     private void OnEnable()
     {
-        InputSystem.onDeviceChange += OnDeviceChange;
         OperationInfo.inOperation = true;
-
+#if UNITY_EDITOR
         OperationInfo.currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         operationalInformationPrintFormat("場景", "進入", OperationInfo.currentScene);
+#endif
 
         UDPBroadcastReceiver_CS = FindObjectOfType<UDPBroadcastReceiver>();
         mmWaveManual_CS = FindObjectOfType<mmWaveManual>();
@@ -67,10 +68,12 @@ public class SystemObserve : MonoBehaviour
         }
         if (hotkey_CS)
         {
+#if UNITY_EDITOR
             if (OperationInfo.currentScene == Chapter4.name)
             {
                 operationalInformationPrintFormat("物件生成控制", "場景非必要", "目前位於的場景不需要用到生成管控功能");
             }
+#endif
             operationalInformationPrintFormat("物件生成控制", "C#", "hotkey.cs腳本已抓取");
 
         }
@@ -85,15 +88,16 @@ public class SystemObserve : MonoBehaviour
     private void Update()
     {
         mmWaveProcedure();
+#if UNITY_EDITOR
         ObjectSuperviceProcedeure();
-
+#endif
     }
 
     private void OnDisable()
     {
-        InputSystem.onDeviceChange -= OnDeviceChange;
-
+#if UNITY_EDITOR
         operationalInformationPrintFormat("場景", "離開", OperationInfo.currentScene);
+#endif
         OperationInfo.currentScene = string.Empty;
         OperationInfo.inOperation = false;
         OperationInfo.mmWaveInfo = string.Empty;
@@ -163,6 +167,7 @@ public class SystemObserve : MonoBehaviour
                 }
             }
         }
+#if UNITY_EDITOR
         else if (!UDPBroadcastReceiver_CS && (OperationInfo.currentScene == Chapter4.name))
         {
             OperationInfo.mmWaveScriptActive = false;
@@ -170,23 +175,17 @@ public class SystemObserve : MonoBehaviour
             OperationInfo.mmWaveSettedPorts = "";
             operationalInformationPrintFormat("毫米波", "C#", "無法抓取UDPBroadcastReceiver.cs腳本，請確認場景中有此腳本存在");
         }
+#endif
     }
 
     void ObjectSuperviceProcedeure()
     {
         if (hotkey_CS)
         {
-            if (OperationInfo.currentScene == Chapter4.name)
-            {
-                OperationInfo.ObjectsControlInfo = "目前位於的場景不需要用到生成管控功能";
-            }
-            else
-            {
-                OperationInfo.ObjectsControlInfo = "生成管控中，建築物生成：" + (hotkey_CS.EnablingBuildingInstantiate ? hotkey_CS.BuildingCount : "X") + "，螃蟹生成：" + (hotkey_CS.EnablingCrabInstantiate ? hotkey_CS.CrabCount : "X") + "，漁人生成：" + (hotkey_CS.EnablingFishmanInstantiate ? hotkey_CS.FishmanCount : "X");
-                OperationInfo.EnablingBuildingInstantiate = hotkey_CS.EnablingBuildingInstantiate;
-                OperationInfo.EnablingCrabInstantiate = hotkey_CS.EnablingCrabInstantiate;
-                OperationInfo.EnablingFishmanInstantiate = hotkey_CS.EnablingFishmanInstantiate;
-            }
+            OperationInfo.ObjectsControlInfo = "生成管控中，建築物生成：" + (hotkey_CS.EnablingBuildingInstantiate ? hotkey_CS.BuildingCount : "X") + "，螃蟹生成：" + (hotkey_CS.EnablingCrabInstantiate ? hotkey_CS.CrabCount : "X") + "，漁人生成：" + (hotkey_CS.EnablingFishmanInstantiate ? hotkey_CS.FishmanCount : "X");
+            OperationInfo.EnablingBuildingInstantiate = hotkey_CS.EnablingBuildingInstantiate;
+            OperationInfo.EnablingCrabInstantiate = hotkey_CS.EnablingCrabInstantiate;
+            OperationInfo.EnablingFishmanInstantiate = hotkey_CS.EnablingFishmanInstantiate;
 
         }
     }
@@ -209,14 +208,5 @@ public class SystemObserve : MonoBehaviour
                 OperationInfo.operationInformation = "→ " + DateTime.Now.ToString("HH:mm:ss.fff") + " [" + infoType + "]" + infoStatus + " " + description + "\n" + OperationInfo.operationInformation;
         }
 
-    }
-
-    void OnDeviceChange(InputDevice device, InputDeviceChange change)
-    {
-        var midiDevice = device as Minis.MidiDevice;
-        if (midiDevice == null) return;
-
-        Debug.Log($"MIDI Device {change} ({device.description.product})");
-        OperationInfo.connectedMIDIDevices = new();
     }
 }
